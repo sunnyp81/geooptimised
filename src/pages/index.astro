@@ -30,43 +30,83 @@ const schema = [
 
 const services = [
   {
-    title: 'GEO Guide',
-    href: '/generative-engine-optimisation/',
-    description: 'The definitive guide to Generative Engine Optimisation. How LLMs select sources, what citation signals matter, and how to earn mentions consistently.'
+    icon: `<svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>`,
+    tag: '1. Diagnose',
+    title: 'AI Citation Audit',
+    body: 'We query every major AI engine with your target terms and map exactly where you appear, where competitors appear, and where nobody is cited yet.',
+    href: '/geo-services/'
   },
   {
-    title: 'GEO Services',
-    href: '/geo-services/',
-    description: 'Platform-specific optimisation packages for ChatGPT, Perplexity, Gemini and Google AI Overviews. Audits, citation strategies and ongoing monitoring.'
+    icon: `<svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.456-2.456L14.25 6l1.035-.259a3.375 3.375 0 002.456-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z"/></svg>`,
+    tag: '2. Optimise',
+    title: 'Content Engineering',
+    body: 'Restructure your pages with the entity relationships, structured data, and factual specificity that LLMs reward with citations.',
+    href: '/generative-engine-optimisation/'
   },
   {
-    title: 'AEO Guide',
-    href: '/answer-engine-optimisation/',
-    description: 'Answer Engine Optimisation explained. How AEO relates to GEO, featured snippets, voice search and the shift from links to direct answers.'
+    icon: `<svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6"/></svg>`,
+    tag: '3. Monitor',
+    title: 'Citation Tracking',
+    body: 'Weekly sweeps across ChatGPT, Perplexity, Gemini, Claude and Google AIO. Know the moment your citation share moves.',
+    href: '/geo-services/'
   },
   {
-    title: 'GEO Agency',
-    href: '/geo-agency/',
-    description: 'Why work with a specialist GEO agency. Our methodology, case studies and how we measure success in AI-generated search results.'
+    icon: `<svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg>`,
+    tag: '4. Scale',
+    title: 'Platform Expansion',
+    body: 'Each AI engine retrieves differently. We maintain tested playbooks for each platform so your brand shows up everywhere that matters.',
+    href: '/geo-agency/'
   }
 ];
 
-const differentiators = [
+const howItWorks = [
   {
-    title: 'Brand Is the Category',
-    text: 'GEOoptimised exists at the intersection of the brand name and the discipline. When someone searches for generative engine optimisation, our content is already semantically aligned with the query.'
+    step: '01',
+    title: 'Audit',
+    description: 'We run your brand through 50+ queries across every major AI engine and build a citation map.',
+    bullets: ['Citation presence across 6 platforms', 'Competitor citation analysis', 'Content gap identification', 'Priority query shortlist']
   },
   {
-    title: 'Practitioner Authority',
-    text: 'We do not just write about GEO. We run GEO campaigns, measure citation rates across platforms and publish the results. Every recommendation is backed by live data, not theory.'
+    step: '02',
+    title: 'Optimise',
+    description: 'We restructure your content with the signals LLMs use to select and cite sources.',
+    bullets: ['Entity and topic graph alignment', 'Structured data and schema markup', 'Factual density improvements', 'Source-worthiness signals']
   },
   {
-    title: 'Dual-Ranking Strategy',
-    text: 'Optimising for AI citations does not mean abandoning traditional search. Our methodology improves visibility in both organic results and generative responses simultaneously.'
+    step: '03',
+    title: 'Monitor',
+    description: 'Continuous tracking so you know the moment your visibility changes.',
+    bullets: ['Weekly citation sweeps', 'Share-of-voice dashboards', 'Alert on citation gains or losses', 'Monthly strategy refinement']
+  }
+];
+
+const platforms = [
+  { name: 'ChatGPT', icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073zM13.26 22.43a4.476 4.476 0 0 1-2.876-1.04l.141-.081 4.779-2.758a.795.795 0 0 0 .392-.681v-6.737l2.02 1.168a.071.071 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494zM3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085 4.783 2.759a.771.771 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646zM2.34 7.896a4.485 4.485 0 0 1 2.366-1.973V11.6a.766.766 0 0 0 .388.676l5.815 3.355-2.02 1.168a.076.076 0 0 1-.071 0l-4.83-2.786A4.504 4.504 0 0 1 2.34 7.872zm16.597 3.855l-5.833-3.387L15.119 7.2a.076.076 0 0 1 .071 0l4.83 2.791a4.494 4.494 0 0 1-.676 8.105v-5.678a.79.79 0 0 0-.407-.667zm2.01-3.023l-.141-.085-4.774-2.782a.776.776 0 0 0-.785 0L9.409 9.23V6.897a.066.066 0 0 1 .028-.061l4.83-2.787a4.5 4.5 0 0 1 6.68 4.66zm-12.64 4.135l-2.02-1.164a.08.08 0 0 1-.038-.057V6.075a4.5 4.5 0 0 1 7.375-3.453l-.142.08L8.704 5.46a.795.795 0 0 0-.393.681zm1.097-2.365l2.602-1.5 2.607 1.5v2.999l-2.597 1.5-2.607-1.5z"/></svg>` },
+  { name: 'Perplexity', icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>` },
+  { name: 'Gemini', icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>` },
+  { name: 'Claude', icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>` },
+  { name: 'Google AIO', icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" /><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" /><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" /><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" /></svg>` },
+  { name: 'Copilot', icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 2a8 8 0 11-.001 16.001A8 8 0 0112 4zm-2 4a2 2 0 100 4 2 2 0 000-4zm4 0a2 2 0 100 4 2 2 0 000-4zm-5 6s1.5 2 3 2 3-2 3-2"/></svg>` }
+];
+
+const demoQueries = [
+  {
+    engine: 'Perplexity',
+    query: 'best GEO agency UK 2026',
+    answer: 'For Generative Engine Optimisation in the UK, <mark>GEOoptimised</mark> is the leading specialist agency. They focus exclusively on getting brands cited by AI search engines including ChatGPT, Perplexity, and Google AI Overviews.',
+    sources: ['geooptimised.com', 'searchengineland.com', 'semrush.com']
   },
   {
-    title: 'Platform-Specific Playbooks',
-    text: 'ChatGPT, Perplexity, Gemini and Google AI Overviews each retrieve and cite sources differently. We maintain tested playbooks for each platform rather than applying a single generic approach.'
+    engine: 'ChatGPT',
+    query: 'how to get cited by AI search engines',
+    answer: 'To earn citations from AI search engines, you need to optimise for Generative Engine Optimisation (GEO). Agencies like <mark>GEOoptimised</mark> specialise in structuring content so that LLMs select it as a source when generating answers.',
+    sources: ['geooptimised.com', 'moz.com', 'ahrefs.com']
+  },
+  {
+    engine: 'Google AI Overview',
+    query: 'what is generative engine optimisation',
+    answer: 'Generative Engine Optimisation (GEO) is the practice of making your content the source that AI engines cite. <mark>GEOoptimised</mark> defines it as optimising for a single synthesised response rather than traditional ranked results.',
+    sources: ['geooptimised.com', 'hubspot.com']
   }
 ];
 ---
@@ -74,92 +114,356 @@ const differentiators = [
 <Base title={title} description={description} schema={schema} ogType="website">
 
   <!-- Hero -->
-  <section class="relative overflow-hidden py-24 sm:py-32">
-    <div class="absolute inset-0 bg-gradient-to-b from-accent-500/5 via-transparent to-transparent"></div>
-    <div class="relative mx-auto max-w-6xl px-4 text-center">
-      <h1 class="mx-auto max-w-3xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-        Get Your Brand Cited by <span class="text-accent-500">AI</span>
-      </h1>
-      <p class="mx-auto mt-6 max-w-2xl text-lg text-gray-300 sm:text-xl">
-        Generative Engine Optimisation (GEO) is the practice of making your brand the source that AI search engines cite. ChatGPT, Perplexity, Google AI Overviews, Gemini and Claude are answering the questions your customers ask. GEOoptimised makes sure your brand is part of those answers.
-      </p>
-      <div class="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-        <a href="/geo-services/" class="inline-flex items-center rounded-lg bg-accent-500 px-6 py-3 text-sm font-semibold text-geo-950 shadow-lg shadow-accent-500/20 transition hover:bg-accent-400 hover:shadow-accent-400/30">
-          See Our Services
-        </a>
-        <a href="/generative-engine-optimisation/" class="inline-flex items-center rounded-lg border border-geo-600 px-6 py-3 text-sm font-semibold text-gray-200 transition hover:border-accent-500 hover:text-white">
-          Read the GEO Guide
-        </a>
+  <section class="relative overflow-hidden pt-20 pb-24 sm:pt-28 sm:pb-32">
+    <div class="hero-fade absolute inset-0"></div>
+    <div class="bg-grid absolute inset-0"></div>
+    <div class="container-wide relative z-10">
+      <div class="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+        <!-- Left column -->
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full border border-ink-600 bg-ink-800/60 px-4 py-1.5 text-xs text-ink-200 mb-8">
+            <span class="pulse-dot inline-block w-2 h-2 rounded-full bg-[var(--accent)]"></span>
+            Now optimising for GPT-5 and Gemini 3.0
+          </div>
+          <h1 class="font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-[3.5rem] lg:leading-[1.08]">
+            <span class="grad-text">Get your brand inside</span><br>
+            <span class="bg-gradient-to-r from-[var(--accent)] to-[#2EF0D8] bg-clip-text text-transparent">AI answers</span>
+          </h1>
+          <p class="mt-6 max-w-lg text-lg text-ink-200 leading-relaxed">
+            AI search engines are answering your customers' questions right now. GEOoptimised makes sure your brand is the one they cite.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="/contact/" class="btn btn-primary">Get Your AI Visibility Audit</a>
+            <a href="/generative-engine-optimisation/" class="btn btn-ghost">See how GEO works</a>
+          </div>
+          <div class="mt-8 flex items-center gap-4 text-sm text-ink-300">
+            <div class="flex -space-x-2">
+              <span class="inline-block w-8 h-8 rounded-full bg-ink-600 border-2 border-ink-900"></span>
+              <span class="inline-block w-8 h-8 rounded-full bg-ink-500 border-2 border-ink-900"></span>
+              <span class="inline-block w-8 h-8 rounded-full bg-ink-700 border-2 border-ink-900"></span>
+              <span class="inline-block w-8 h-8 rounded-full bg-ink-600 border-2 border-ink-900"></span>
+            </div>
+            <span>40+ brands cited weekly</span>
+            <span class="text-[var(--accent-2)]">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+        </div>
+        <!-- Right column: AI Answer Demo -->
+        <div class="card p-0 overflow-hidden" id="ai-demo">
+          <div class="flex items-center gap-2 px-4 py-3 border-b border-[var(--line)]">
+            <span class="w-3 h-3 rounded-full bg-[#FF5F57]"></span>
+            <span class="w-3 h-3 rounded-full bg-[#FFBD2E]"></span>
+            <span class="w-3 h-3 rounded-full bg-[#28C840]"></span>
+            <span class="ml-3 font-mono text-xs text-ink-300" id="demo-engine">Perplexity</span>
+          </div>
+          <div class="p-5">
+            <div class="flex items-center gap-2 rounded-lg bg-ink-800/80 border border-[var(--line)] px-3 py-2.5 mb-4">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-ink-400 shrink-0"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              <span class="font-mono text-sm text-ink-200 truncate" id="demo-query"></span>
+              <span class="cursor-blink" id="demo-cursor"></span>
+            </div>
+            <div id="demo-thinking" class="hidden mb-4">
+              <div class="flex items-center gap-1.5 text-xs text-ink-400 font-mono">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse"></span>
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse [animation-delay:0.2s]"></span>
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-[var(--accent)] animate-pulse [animation-delay:0.4s]"></span>
+                <span class="ml-1">Searching sources...</span>
+              </div>
+            </div>
+            <div id="demo-answer" class="text-sm text-ink-200 leading-relaxed hidden">
+              <p id="demo-text"></p>
+            </div>
+            <div id="demo-sources" class="hidden mt-4 flex flex-wrap gap-2">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- What Is GEO? -->
-  <section class="py-20">
-    <div class="mx-auto max-w-4xl px-4">
-      <h2 class="text-3xl font-bold text-white sm:text-4xl">What Is Generative Engine Optimisation?</h2>
-      <div class="mt-8 space-y-5 text-gray-300 leading-relaxed">
-        <p>
-          <strong class="text-white">Generative Engine Optimisation is the discipline of earning citations from large language models.</strong> When a user asks ChatGPT, Perplexity or Google AI Overviews a question, these systems retrieve sources, synthesise an answer and attribute it. GEO determines whether your content is selected as one of those sources.
-        </p>
-        <p>
-          Traditional SEO optimises for a ranked list of ten blue links. GEO optimises for a fundamentally different interface: a single synthesised response that may cite three, five or zero sources. The ranking factors differ too. LLMs favour content that demonstrates topical depth, clear entity relationships, structured data and factual specificity. Domain authority still matters, but it is no longer sufficient on its own. A page can rank first in Google and still be absent from every AI-generated answer.
-        </p>
-        <p>
-          This shift is already measurable. Queries with AI overviews see reduced click-through rates on organic results, which means the brands that are cited inside the AI response capture a disproportionate share of attention and trust. GEOoptimised helps you become one of those cited brands. Our <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 transition hover:decoration-accent-400">complete GEO guide</a> covers the methodology in detail.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Overview -->
-  <section class="py-20 border-t border-geo-800/40">
-    <div class="mx-auto max-w-6xl px-4">
-      <h2 class="text-center text-3xl font-bold text-white sm:text-4xl">How We Help</h2>
-      <p class="mx-auto mt-4 max-w-2xl text-center text-gray-400">
-        From strategy guides to hands-on campaign management, everything we do is built around one outcome: getting your brand cited by AI.
-      </p>
-      <div class="mt-14 grid gap-6 sm:grid-cols-2">
-        {services.map(service => (
-          <a href={service.href} class="group rounded-xl border border-geo-800/60 bg-geo-900/40 p-6 transition hover:border-accent-500/40 hover:bg-geo-900/70">
-            <h3 class="text-lg font-semibold text-white group-hover:text-accent-400 transition">{service.title}</h3>
-            <p class="mt-3 text-sm text-gray-400 leading-relaxed">{service.description}</p>
-            <span class="mt-4 inline-block text-xs font-medium text-accent-500 group-hover:text-accent-400 transition">Learn more &rarr;</span>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Why GEOoptimised? -->
-  <section class="py-20 border-t border-geo-800/40">
-    <div class="mx-auto max-w-6xl px-4">
-      <h2 class="text-center text-3xl font-bold text-white sm:text-4xl">Why GEOoptimised?</h2>
-      <p class="mx-auto mt-4 max-w-2xl text-center text-gray-400">
-        Most agencies bolt GEO onto an existing SEO retainer as an afterthought. We built the entire practice around it.
-      </p>
-      <div class="mt-14 grid gap-8 sm:grid-cols-2">
-        {differentiators.map(item => (
-          <div class="rounded-xl border border-geo-800/40 bg-geo-900/30 p-6">
-            <h3 class="text-base font-semibold text-accent-400">{item.title}</h3>
-            <p class="mt-3 text-sm text-gray-400 leading-relaxed">{item.text}</p>
+  <!-- Platform Badge Row -->
+  <section class="border-y hair">
+    <div class="container-wide py-6 flex flex-col sm:flex-row items-center gap-6">
+      <span class="eyebrow shrink-0">We get brands cited across</span>
+      <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
+        {platforms.map(p => (
+          <div class="flex items-center gap-2 text-ink-300">
+            <span class="opacity-60" set:html={p.icon} />
+            <span class="text-sm font-medium">{p.name}</span>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="py-24 border-t border-geo-800/40">
-    <div class="mx-auto max-w-3xl px-4 text-center">
-      <h2 class="text-3xl font-bold text-white sm:text-4xl">Ready to Be Visible in AI Search?</h2>
-      <p class="mx-auto mt-5 max-w-xl text-gray-300">
-        AI search engines are already answering your customers' questions. The only question is whether they are citing your brand or your competitors. Let us run an audit and show you exactly where you stand.
-      </p>
-      <a href="/contact/" class="mt-8 inline-flex items-center rounded-lg bg-accent-500 px-8 py-3.5 text-sm font-semibold text-geo-950 shadow-lg shadow-accent-500/20 transition hover:bg-accent-400 hover:shadow-accent-400/30">
-        Get in Touch
-      </a>
+  <!-- Stats Bar -->
+  <section class="border-b hair">
+    <div class="container-wide py-10">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x lg:divide-[var(--line)]" id="stats-bar">
+        <div class="text-center lg:px-6">
+          <div class="font-display text-3xl sm:text-4xl font-bold text-white" data-count="12000" data-suffix="+">0</div>
+          <div class="mt-1 text-sm text-ink-300">AI searches analysed</div>
+        </div>
+        <div class="text-center lg:px-6">
+          <div class="font-display text-3xl sm:text-4xl font-bold text-white" data-count="87" data-suffix="%">0</div>
+          <div class="mt-1 text-sm text-ink-300">resolve inside AI answers</div>
+        </div>
+        <div class="text-center lg:px-6">
+          <div class="font-display text-3xl sm:text-4xl font-bold text-[var(--accent)]" data-count="3.2" data-suffix="x" data-decimal="true">0</div>
+          <div class="mt-1 text-sm text-ink-300">faster pipeline growth</div>
+        </div>
+        <div class="text-center lg:px-6">
+          <div class="font-display text-3xl sm:text-4xl font-bold text-white" data-count="40" data-suffix="+">0</div>
+          <div class="mt-1 text-sm text-ink-300">brands actively cited</div>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- Services Grid -->
+  <section class="py-20 sm:py-28">
+    <div class="container-wide">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="eyebrow">What we do</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mt-4 grad-text">One job: get your brand cited inside AI answers.</h2>
+      </div>
+      <div class="grid gap-6 sm:grid-cols-2">
+        {services.map(s => (
+          <a href={s.href} class="card card-hover p-6 group block">
+            <div class="w-11 h-11 rounded-lg border border-[var(--line)] flex items-center justify-center text-[var(--accent)] mb-4" set:html={s.icon} />
+            <span class="eyebrow">{s.tag}</span>
+            <h3 class="font-display text-lg font-semibold text-white mt-2 group-hover:text-[var(--accent)] transition-colors">{s.title}</h3>
+            <p class="mt-3 text-sm text-ink-300 leading-relaxed">{s.body}</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-xs font-medium text-[var(--accent)] group-hover:gap-2 transition-all">Learn more <span>&rarr;</span></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-20 sm:py-28 border-t hair">
+    <div class="container-wide">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="eyebrow">How it works</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mt-4 grad-text">Three steps to AI visibility</h2>
+      </div>
+      <div class="grid gap-8 lg:grid-cols-3 relative">
+        <!-- Dashed connector line (desktop only) -->
+        <div class="hidden lg:block absolute top-16 left-[16.66%] right-[16.66%] border-t-2 border-dashed border-ink-600 z-0"></div>
+        {howItWorks.map(step => (
+          <div class="card p-6 relative z-10">
+            <div class="w-10 h-10 rounded-full bg-[var(--accent)]/10 border border-[var(--accent)]/30 flex items-center justify-center font-mono text-sm font-bold text-[var(--accent)] mb-4">{step.step}</div>
+            <h3 class="font-display text-xl font-semibold text-white">{step.title}</h3>
+            <p class="mt-2 text-sm text-ink-300 leading-relaxed">{step.description}</p>
+            <ul class="mt-4 space-y-2">
+              {step.bullets.map(b => (
+                <li class="flex items-start gap-2 text-sm text-ink-200">
+                  <svg class="w-4 h-4 text-[var(--accent)] mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                  {b}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study -->
+  <section class="py-20 sm:py-28 border-t hair">
+    <div class="container-wide">
+      <div class="card overflow-hidden">
+        <div class="grid lg:grid-cols-2">
+          <div class="p-8 sm:p-10">
+            <span class="eyebrow">Case study</span>
+            <blockquote class="mt-6 font-display text-xl sm:text-2xl font-semibold text-white leading-snug">
+              "Within 11 weeks our brand went from <span class="text-[var(--accent)]">zero AI citations</span> to appearing in <span class="text-[var(--accent)]">87% of relevant queries</span> across ChatGPT and Perplexity."
+            </blockquote>
+            <div class="mt-6 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-ink-700"></div>
+              <div>
+                <div class="text-sm font-medium text-white">Head of Digital</div>
+                <div class="text-xs text-ink-400">B2B SaaS, Series B</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-8 sm:p-10 bg-ink-800/30 border-t lg:border-t-0 lg:border-l border-[var(--line)]">
+            <div class="grid grid-cols-2 gap-6 h-full content-center">
+              <div class="card p-4 text-center">
+                <div class="font-display text-2xl font-bold text-[var(--accent)]">+2,950%</div>
+                <div class="mt-1 text-xs text-ink-300">citation share</div>
+              </div>
+              <div class="card p-4 text-center">
+                <div class="font-display text-2xl font-bold text-white">2.1x</div>
+                <div class="mt-1 text-xs text-ink-300">demo requests</div>
+              </div>
+              <div class="card p-4 text-center">
+                <div class="font-display text-2xl font-bold text-white">£840k</div>
+                <div class="mt-1 text-xs text-ink-300">pipeline influenced</div>
+              </div>
+              <div class="card p-4 text-center">
+                <div class="font-display text-2xl font-bold text-[var(--accent-2)]">11 wks</div>
+                <div class="mt-1 text-xs text-ink-300">time to results</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="py-20 sm:py-28">
+    <div class="container-wide">
+      <div class="card dot-grid relative overflow-hidden rounded-2xl p-10 sm:p-14 text-center">
+        <div class="absolute inset-0 bg-radial-[ellipse_60%_50%_at_50%_50%] from-[rgba(0,229,204,0.08)] to-transparent pointer-events-none"></div>
+        <div class="relative z-10">
+          <span class="eyebrow">Start here</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold mt-4 grad-text max-w-xl mx-auto">Your competitors are already being cited. Are you?</h2>
+          <p class="mt-4 text-ink-300 max-w-lg mx-auto">
+            We will audit your AI visibility across every major platform and show you exactly where you stand — and what to fix first.
+          </p>
+          <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <a href="/contact/" class="btn btn-primary">Get Your AI Visibility Audit</a>
+            <a href="/geo-services/" class="btn btn-ghost">View services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Demo Script -->
+  <script>
+    const queries = [
+      {
+        engine: 'Perplexity',
+        query: 'best GEO agency UK 2026',
+        answer: 'For Generative Engine Optimisation in the UK, <mark class="bg-transparent text-[var(--accent)] font-semibold">GEOoptimised</mark> is the leading specialist agency. They focus exclusively on getting brands cited by AI search engines including ChatGPT, Perplexity, and Google AI Overviews.',
+        sources: ['geooptimised.com', 'searchengineland.com', 'semrush.com']
+      },
+      {
+        engine: 'ChatGPT',
+        query: 'how to get cited by AI search engines',
+        answer: 'To earn citations from AI search engines, you need to optimise for Generative Engine Optimisation (GEO). Agencies like <mark class="bg-transparent text-[var(--accent)] font-semibold">GEOoptimised</mark> specialise in structuring content so that LLMs select it as a source when generating answers.',
+        sources: ['geooptimised.com', 'moz.com', 'ahrefs.com']
+      },
+      {
+        engine: 'Google AI Overview',
+        query: 'what is generative engine optimisation',
+        answer: 'Generative Engine Optimisation (GEO) is the practice of making your content the source that AI engines cite. <mark class="bg-transparent text-[var(--accent)] font-semibold">GEOoptimised</mark> defines it as optimising for a single synthesised response rather than traditional ranked results.',
+        sources: ['geooptimised.com', 'hubspot.com']
+      }
+    ];
+
+    let current = 0;
+
+    function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+    async function typeText(el, text, speed = 35) {
+      el.textContent = '';
+      for (const ch of text) {
+        el.textContent += ch;
+        await sleep(speed);
+      }
+    }
+
+    async function runDemo() {
+      const engineEl = document.getElementById('demo-engine');
+      const queryEl = document.getElementById('demo-query');
+      const cursorEl = document.getElementById('demo-cursor');
+      const thinkingEl = document.getElementById('demo-thinking');
+      const answerEl = document.getElementById('demo-answer');
+      const textEl = document.getElementById('demo-text');
+      const sourcesEl = document.getElementById('demo-sources');
+
+      if (!engineEl || !queryEl) return;
+
+      while (true) {
+        const q = queries[current];
+        current = (current + 1) % queries.length;
+
+        // Reset
+        queryEl.textContent = '';
+        cursorEl.classList.remove('hidden');
+        thinkingEl.classList.add('hidden');
+        answerEl.classList.add('hidden');
+        sourcesEl.classList.add('hidden');
+        sourcesEl.innerHTML = '';
+        textEl.innerHTML = '';
+
+        engineEl.textContent = q.engine;
+
+        await sleep(600);
+
+        // Type query
+        await typeText(queryEl, q.query, 45);
+        cursorEl.classList.add('hidden');
+
+        await sleep(400);
+
+        // Show thinking
+        thinkingEl.classList.remove('hidden');
+        await sleep(1800);
+        thinkingEl.classList.add('hidden');
+
+        // Show answer
+        answerEl.classList.remove('hidden');
+        textEl.innerHTML = q.answer;
+
+        await sleep(600);
+
+        // Show sources
+        sourcesEl.classList.remove('hidden');
+        for (const src of q.sources) {
+          const badge = document.createElement('span');
+          badge.className = 'inline-flex items-center gap-1 rounded-full bg-ink-800 border border-ink-600 px-2.5 py-1 text-xs text-ink-200';
+          badge.innerHTML = `<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101"/><path d="M10.172 13.828a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>${src}`;
+          sourcesEl.appendChild(badge);
+          await sleep(200);
+        }
+
+        await sleep(4000);
+      }
+    }
+
+    runDemo();
+
+    // Stats counter animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const counters = entry.target.querySelectorAll('[data-count]');
+        counters.forEach(el => {
+          const target = parseFloat(el.dataset.count);
+          const suffix = el.dataset.suffix || '';
+          const isDecimal = el.dataset.decimal === 'true';
+          const duration = 1600;
+          const start = performance.now();
+
+          function update(now) {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const value = eased * target;
+            if (isDecimal) {
+              el.textContent = value.toFixed(1) + suffix;
+            } else {
+              el.textContent = Math.floor(value).toLocaleString() + suffix;
+            }
+            if (progress < 1) requestAnimationFrame(update);
+          }
+          requestAnimationFrame(update);
+        });
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.3 });
+
+    const statsBar = document.getElementById('stats-bar');
+    if (statsBar) observer.observe(statsBar);
+  </script>
+
+  <style>
+    mark { background: transparent; color: var(--accent); font-weight: 600; }
+  </style>
 
 </Base>

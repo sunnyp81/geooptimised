@@ -16,7 +16,7 @@ const canonicalUrl = canonical || Astro.url.href;
 const siteName = 'GEOoptimised';
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -33,7 +33,7 @@ const siteName = 'GEOoptimised';
   <meta name="twitter:description" content={description} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   {schema && (
     Array.isArray(schema)
       ? schema.map(s => <script type="application/ld+json" set:html={JSON.stringify(s)} />)
@@ -41,7 +41,7 @@ const siteName = 'GEOoptimised';
   )}
 </head>
 <body>
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-accent-500 focus:text-geo-950 focus:px-4 focus:py-2 focus:rounded focus:z-50">Skip to content</a>
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-[var(--accent)] focus:text-ink-950 focus:px-4 focus:py-2 focus:rounded focus:z-50">Skip to content</a>
   <Header />
   <main id="main">
     <slot />

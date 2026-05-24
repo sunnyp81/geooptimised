@@ -24,7 +24,7 @@ const schema = [
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://geooptimised.com/" },
-      { "@type": "ListItem", "position": 2, "name": "GEO Services", "item": "https://geooptimised.com/geo-services/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://geooptimised.com/geo-services/" },
       { "@type": "ListItem", "position": 3, "name": "AEO Agency", "item": "https://geooptimised.com/aeo-agency/" }
     ]
   }
@@ -78,62 +78,84 @@ const steps = [
   { num: '03', title: 'Schema and Entity Markup', text: 'We implement FAQPage, HowTo, Article and organisation schema so that answer engines can identify your content type, authorship and topical relevance programmatically.' },
   { num: '04', title: 'Monitoring and Iteration', text: 'We track snippet ownership, AI overview citations and voice search appearances weekly. When a competitor displaces your answer, we respond within the same cycle.' }
 ];
+
+const faqs = [
+  {
+    q: 'What is answer engine optimisation?',
+    a: 'Answer engine optimisation is the practice of structuring content so that answer engines — featured snippets, AI overviews, voice assistants — select it as their cited source. It focuses on extractable, machine-readable formatting rather than traditional ranking factors.'
+  },
+  {
+    q: 'How does AEO differ from GEO?',
+    a: 'AEO is a subset of GEO. AEO targets the answer layer (featured snippets, People Also Ask, voice responses). GEO extends further into generative AI platforms like ChatGPT and Perplexity, where the output is a synthesised narrative rather than a single extracted answer.'
+  },
+  {
+    q: 'How long does AEO take to show results?',
+    a: 'Featured snippet wins can appear within 2-4 weeks of content restructuring. AI overview citations and voice search appearances typically follow within 60-90 days as search engines re-evaluate your content authority.'
+  },
+  {
+    q: 'Do we need AEO if we already do SEO?',
+    a: 'Yes. Traditional SEO targets ranked links. AEO targets the answer that appears above those links. A page ranking position one can still lose the click if a competitor owns the featured snippet or AI overview citation.'
+  },
+];
 ---
 
 <Base title={title} description={description} schema={schema} ogType="website">
 
   <!-- Breadcrumb -->
-  <nav class="mx-auto max-w-6xl px-4 pt-6" aria-label="Breadcrumb">
-    <ol class="flex items-center gap-2 text-sm text-gray-500">
-      <li><a href="/" class="transition hover:text-accent-400">Home</a></li>
-      <li class="before:content-['/'] before:mx-2"><a href="/geo-services/" class="transition hover:text-accent-400">GEO Services</a></li>
-      <li class="before:content-['/'] before:mx-2 text-gray-300">AEO Agency</li>
+  <nav class="container-wide pt-8" aria-label="Breadcrumb">
+    <ol class="flex items-center gap-1.5 text-sm text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-services/" class="transition hover:text-[var(--accent)]">Services</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">AEO Agency</li>
     </ol>
   </nav>
 
   <!-- Hero -->
-  <section class="relative overflow-hidden py-24 sm:py-32">
-    <div class="absolute inset-0 bg-gradient-to-b from-accent-500/5 via-transparent to-transparent"></div>
-    <div class="relative mx-auto max-w-4xl px-4 text-center">
-      <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-        Answer Engine Optimisation <span class="text-accent-500">Agency</span>
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14 text-center">
+      <span class="eyebrow">Service</span>
+      <h1 class="mx-auto mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        Answer Engine Optimisation Agency
       </h1>
-      <p class="mx-auto mt-6 max-w-2xl text-lg text-gray-300 sm:text-xl">
+      <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-200">
         An answer engine optimisation agency makes your brand the source that search engines, AI overviews and voice assistants cite when users ask a direct question. GEOoptimised is that agency. We engineer your content to appear as the definitive answer — not a ranked link, but the answer itself.
       </p>
     </div>
   </section>
 
   <!-- What an AEO Agency Does -->
-  <section class="py-20">
-    <div class="mx-auto max-w-4xl px-4">
-      <h2 class="text-3xl font-bold text-white sm:text-4xl">What an AEO Agency Does</h2>
-      <div class="mt-8 space-y-5 text-gray-300 leading-relaxed">
-        <p>
-          <strong class="text-white">Answer engine optimisation is the practice of structuring content so that answer engines select it as their cited source.</strong> Answer engines include Google featured snippets, Google AI Overviews, ChatGPT, Perplexity, Gemini, Alexa and Siri. Each retrieves content differently, but they share a common requirement: the source must provide a clear, well-structured, factually specific answer to the query.
-        </p>
-        <p>
-          Most websites are built for human readers browsing a list of results. An answer engine optimisation agency restructures that content for a different interface — one where a single synthesised response replaces the traditional results page. If your content is not formatted for extraction, it will not be cited, regardless of its quality or authority.
-        </p>
-        <p>
-          At GEOoptimised, <a href="/answer-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 transition hover:decoration-accent-400">answer engine optimisation</a> is a core discipline, not an add-on. We audit your current answer engine visibility, restructure content for citation, implement the schema that answer engines rely on and monitor results across every platform.
-        </p>
-      </div>
+  <section class="container-wide py-16">
+    <div class="max-w-3xl prose-dark">
+      <h2 id="what-aeo-does" class="anchor-top">What an AEO Agency Does</h2>
+      <p>
+        <strong>Answer engine optimisation is the practice of structuring content so that answer engines select it as their cited source.</strong> Answer engines include Google featured snippets, Google AI Overviews, ChatGPT, Perplexity, Gemini, Alexa and Siri. Each retrieves content differently, but they share a common requirement: the source must provide a clear, well-structured, factually specific answer to the query.
+      </p>
+      <p>
+        Most websites are built for human readers browsing a list of results. An answer engine optimisation agency restructures that content for a different interface — one where a single synthesised response replaces the traditional results page. If your content is not formatted for extraction, it will not be cited, regardless of its quality or authority.
+      </p>
+      <p>
+        At GEOoptimised, <a href="/answer-engine-optimisation/">answer engine optimisation</a> is a core discipline, not an add-on. We audit your current answer engine visibility, restructure content for citation, implement the schema that answer engines rely on and monitor results across every platform.
+      </p>
     </div>
   </section>
 
   <!-- AEO Services -->
-  <section class="py-20 border-t border-geo-800/40">
-    <div class="mx-auto max-w-6xl px-4">
-      <h2 class="text-center text-3xl font-bold text-white sm:text-4xl">AEO Services We Deliver</h2>
-      <p class="mx-auto mt-4 max-w-2xl text-center text-gray-400">
-        Every deliverable is designed around a single objective: making your content the answer that gets cited.
-      </p>
-      <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  <section class="border-t hair">
+    <div class="container-wide py-16">
+      <div class="text-center">
+        <span class="eyebrow">Deliverables</span>
+        <h2 class="mt-3 font-display text-3xl font-bold grad-text md:text-4xl">AEO Services We Deliver</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-ink-400">
+          Every deliverable is designed around a single objective: making your content the answer that gets cited.
+        </p>
+      </div>
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {services.map(service => (
-          <div class="rounded-xl border border-geo-800/60 bg-geo-900/40 p-6">
-            <h3 class="text-base font-semibold text-accent-400">{service.title}</h3>
-            <p class="mt-3 text-sm text-gray-400 leading-relaxed">{service.text}</p>
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">{service.title}</h3>
+            <p class="mt-3 text-sm text-ink-300 leading-relaxed">{service.text}</p>
           </div>
         ))}
       </div>
@@ -141,35 +163,38 @@ const steps = [
   </section>
 
   <!-- AEO vs GEO -->
-  <section class="py-20 border-t border-geo-800/40">
-    <div class="mx-auto max-w-4xl px-4">
-      <h2 class="text-3xl font-bold text-white sm:text-4xl">AEO Agency vs GEO Agency</h2>
-      <div class="mt-8 space-y-5 text-gray-300 leading-relaxed">
+  <section class="border-t hair">
+    <div class="container-wide py-16">
+      <div class="max-w-3xl prose-dark">
+        <h2 id="aeo-vs-geo" class="anchor-top">AEO Agency vs GEO Agency</h2>
         <p>
-          <strong class="text-white">Answer engine optimisation is a subset of <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 transition hover:decoration-accent-400">generative engine optimisation</a>.</strong> AEO focuses on the answer layer — featured snippets, People Also Ask boxes, voice search responses and direct answer panels. GEO encompasses AEO but extends further into generative AI platforms like ChatGPT, Perplexity and Gemini, where the output is a synthesised narrative rather than a single extracted answer.
+          <strong>Answer engine optimisation is a subset of <a href="/generative-engine-optimisation/">generative engine optimisation</a>.</strong> AEO focuses on the answer layer — featured snippets, People Also Ask boxes, voice search responses and direct answer panels. GEO encompasses AEO but extends further into generative AI platforms like ChatGPT, Perplexity and Gemini, where the output is a synthesised narrative rather than a single extracted answer.
         </p>
         <p>
           The distinction matters because the optimisation techniques differ. AEO prioritises concise, extractable formatting — definitions, numbered lists, comparison tables. GEO requires deeper topical authority, entity relationships and citation signals that LLMs evaluate during retrieval-augmented generation. A page optimised purely for AEO may win a featured snippet but fail to appear in a ChatGPT response.
         </p>
         <p>
-          GEOoptimised operates as both an AEO agency and a <a href="/geo-agency/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 transition hover:decoration-accent-400">GEO agency</a>. We treat AEO as the foundation — if your content cannot win a featured snippet, it is unlikely to be cited by a generative model — and layer GEO strategy on top. The result is visibility across both traditional answer engines and the generative platforms that are rapidly replacing them.
+          GEOoptimised operates as both an AEO agency and a <a href="/geo-agency/">GEO agency</a>. We treat AEO as the foundation — if your content cannot win a featured snippet, it is unlikely to be cited by a generative model — and layer GEO strategy on top. The result is visibility across both traditional answer engines and the generative platforms that are rapidly replacing them.
         </p>
       </div>
     </div>
   </section>
 
   <!-- Who Needs an AEO Agency -->
-  <section class="py-20 border-t border-geo-800/40">
-    <div class="mx-auto max-w-6xl px-4">
-      <h2 class="text-center text-3xl font-bold text-white sm:text-4xl">Who Needs an AEO Agency</h2>
-      <p class="mx-auto mt-4 max-w-2xl text-center text-gray-400">
-        Any business whose customers ask questions before they buy. If your audience searches with "what", "how", "best" or "vs", answer engines are already shaping their decisions.
-      </p>
-      <div class="mt-14 grid gap-6 sm:grid-cols-2">
+  <section class="border-t hair">
+    <div class="container-wide py-16">
+      <div class="text-center">
+        <span class="eyebrow">Audiences</span>
+        <h2 class="mt-3 font-display text-3xl font-bold grad-text md:text-4xl">Who Needs an AEO Agency</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-ink-400">
+          Any business whose customers ask questions before they buy. If your audience searches with "what", "how", "best" or "vs", answer engines are already shaping their decisions.
+        </p>
+      </div>
+      <div class="mt-12 grid gap-6 sm:grid-cols-2">
         {audiences.map(audience => (
-          <div class="rounded-xl border border-geo-800/40 bg-geo-900/30 p-6">
-            <h3 class="text-base font-semibold text-accent-400">{audience.title}</h3>
-            <p class="mt-3 text-sm text-gray-400 leading-relaxed">{audience.text}</p>
+          <div class="card card-hover p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">{audience.title}</h3>
+            <p class="mt-3 text-sm text-ink-300 leading-relaxed">{audience.text}</p>
           </div>
         ))}
       </div>
@@ -177,19 +202,22 @@ const steps = [
   </section>
 
   <!-- Our AEO Process -->
-  <section class="py-20 border-t border-geo-800/40">
-    <div class="mx-auto max-w-4xl px-4">
-      <h2 class="text-3xl font-bold text-white sm:text-4xl">Our AEO Process</h2>
-      <p class="mt-4 text-gray-400">
-        A four-stage methodology that moves your content from invisible to cited.
-      </p>
-      <div class="mt-12 space-y-8">
+  <section class="border-t hair">
+    <div class="container-wide py-16">
+      <div class="max-w-3xl">
+        <span class="eyebrow">Process</span>
+        <h2 class="mt-3 font-display text-3xl font-bold grad-text md:text-4xl">Our AEO Process</h2>
+        <p class="mt-4 text-ink-400">
+          A four-stage methodology that moves your content from invisible to cited.
+        </p>
+      </div>
+      <div class="mt-10 space-y-6 max-w-3xl">
         {steps.map(step => (
           <div class="flex gap-5">
-            <span class="shrink-0 text-2xl font-extrabold text-accent-500/40">{step.num}</span>
+            <span class="shrink-0 font-mono text-2xl font-bold text-[var(--accent)] opacity-40">{step.num}</span>
             <div>
-              <h3 class="text-base font-semibold text-white">{step.title}</h3>
-              <p class="mt-2 text-sm text-gray-400 leading-relaxed">{step.text}</p>
+              <h3 class="font-display text-base font-semibold text-white">{step.title}</h3>
+              <p class="mt-2 text-sm text-ink-300 leading-relaxed">{step.text}</p>
             </div>
           </div>
         ))}
@@ -197,22 +225,66 @@ const steps = [
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="py-24 border-t border-geo-800/40">
-    <div class="mx-auto max-w-3xl px-4 text-center">
-      <h2 class="text-3xl font-bold text-white sm:text-4xl">Start Winning Answers</h2>
-      <p class="mx-auto mt-5 max-w-xl text-gray-300">
-        Your competitors are already being cited by answer engines. We will audit your current visibility, identify the highest-value queries you are missing and build the content strategy that puts your brand in the answer. No retainer commitment required for the initial audit.
-      </p>
-      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-        <a href="/contact/" class="inline-flex items-center rounded-lg bg-accent-500 px-8 py-3.5 text-sm font-semibold text-geo-950 shadow-lg shadow-accent-500/20 transition hover:bg-accent-400 hover:shadow-accent-400/30">
-          Get Your AEO Audit
-        </a>
-        <a href="/geo-services/" class="inline-flex items-center rounded-lg border border-geo-600 px-6 py-3 text-sm font-semibold text-gray-200 transition hover:border-accent-500 hover:text-white">
-          View All Services
-        </a>
+  <!-- FAQ -->
+  <section class="border-t hair">
+    <div class="container-wide py-16">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="mt-3 font-display text-3xl font-bold grad-text md:text-4xl">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="mt-10 space-y-2" id="faq-accordion">
+          {faqs.map(faq => (
+            <div class="card overflow-hidden">
+              <button
+                type="button"
+                class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+                aria-expanded="false"
+              >
+                <span>{faq.q}</span>
+                <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+              </button>
+              <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+                <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair">
+    <div class="container-wide py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Start Winning Answers</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300">
+        Your competitors are already being cited by answer engines. We will audit your current visibility, identify the highest-value queries you are missing and build the content strategy that puts your brand in the answer. No retainer commitment required for the initial audit.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Get Your AEO Audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('#faq-accordion button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling;
+        const icon = btn.querySelector('.faq-icon');
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+  </script>
 
 </Base>

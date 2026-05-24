@@ -41,309 +41,472 @@ const schema = [
     ]
   }
 ];
+
+const services = [
+  {
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>`,
+    tag: 'Foundation',
+    title: 'AI Visibility Audit',
+    body: 'Baseline assessment of where your brand currently appears across ChatGPT, Perplexity, Gemini, Copilot, and Claude. Systematically query AI models with the prompts your customers use.',
+    href: '#ai-visibility-audit',
+  },
+  {
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`,
+    tag: 'Authority',
+    title: 'Entity & Knowledge Graph',
+    body: 'Strengthen your brand presence across Wikipedia, Wikidata, Google Knowledge Graph, and industry databases that LLMs treat as ground truth.',
+    href: '#entity-optimisation',
+  },
+  {
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l2-2v-3"/><path d="M8 18l-2-2v-3"/><path d="M12 2v10"/><path d="M12 12l4-4"/><path d="M12 12l-4-4"/><rect x="4" y="18" width="4" height="4" rx="1"/><rect x="16" y="18" width="4" height="4" rx="1"/><rect x="10" y="0" width="4" height="4" rx="1"/></svg>`,
+    tag: 'Technical',
+    title: 'Structured Data & Schema',
+    body: 'GEO-focused schema strategy: Service, FAQPage, HowTo, Person, and sameAs linking. Technically correct, semantically accurate, and aligned with your content.',
+    href: '#structured-data',
+  },
+  {
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>`,
+    tag: 'Content',
+    title: 'LLM Citation Optimisation',
+    body: 'Rewrite and restructure content so every paragraph is a self-contained, quotable unit of expertise that AI models choose to cite over competitors.',
+    href: '#content-optimisation',
+  },
+];
+
+const faqs = [
+  {
+    q: 'What is included in a GEO audit?',
+    a: 'A GEO audit maps your current AI visibility across all major platforms (ChatGPT, Perplexity, Gemini, Copilot, Claude), analyses competitor citations, assesses entity presence, reviews structured data, and produces a prioritised action plan. It typically takes two to three weeks.',
+  },
+  {
+    q: 'How long until I see results from GEO services?',
+    a: 'Most businesses see measurable changes in AI citation frequency within eight to twelve weeks of Phase 2 completion. Full competitive positioning typically takes four to six months, depending on your starting point and competitive landscape.',
+  },
+  {
+    q: 'Do I still need SEO if I invest in GEO?',
+    a: 'Yes. GEO and SEO are complementary. A strong SEO foundation makes GEO more effective, and GEO insights often improve SEO performance. The disciplines share DNA but address different problems with different methods.',
+  },
+  {
+    q: 'How much do GEO services cost?',
+    a: 'One-off audits typically range from GBP 2,000 to GBP 5,000. Ongoing retainers run GBP 2,000 to GBP 8,000 per month for continuous optimisation, monitoring, and content work. Enterprise programmes can exceed GBP 10,000 per month.',
+  },
+  {
+    q: 'Which AI platforms do you optimise for?',
+    a: 'We optimise for ChatGPT, Perplexity, Google Gemini, Microsoft Copilot, Claude, Google AI Overviews, and any sector-specific AI tools relevant to your industry. Each platform has different retrieval and citation behaviour.',
+  },
+];
+
+const relatedHubs = [
+  { title: 'GEO Agency', desc: 'End-to-end generative engine optimisation strategy and implementation.', href: '/geo-agency/' },
+  { title: 'AEO Agency', desc: 'Specialist answer engine optimisation for featured snippets and AI answers.', href: '/aeo-agency/' },
+  { title: 'Answer Engine Optimisation', desc: 'Complete guide to structuring content for answer engines.', href: '/answer-engine-optimisation/' },
+];
 ---
 
 <Base title={title} description={description} schema={schema} ogType="website">
 
   <!-- Breadcrumb -->
-  <nav aria-label="Breadcrumb" class="max-w-4xl mx-auto px-6 pt-8">
-    <ol class="flex items-center gap-2 text-sm text-gray-400">
-      <li><a href="/" class="hover:text-accent-500 transition-colors">Home</a></li>
-      <li aria-hidden="true">/</li>
-      <li class="text-gray-200">GEO Services</li>
+  <nav aria-label="Breadcrumb" class="container-wide pt-28">
+    <ol class="flex items-center gap-2 font-mono text-xs text-ink-400">
+      <li><a href="/" class="hover:text-[var(--accent)] transition-colors">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200">GEO Services</li>
     </ol>
   </nav>
 
   <!-- Hero -->
-  <header class="max-w-4xl mx-auto px-6 pt-12 pb-16">
-    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight mb-6">
-      GEO Services: What a Generative Engine Optimisation Agency Delivers
-    </h1>
-    <p class="text-xl text-gray-300 leading-relaxed max-w-3xl">
-      Generative engine optimisation is the practice of making your brand visible, quotable, and citable inside AI-generated answers. These are the services that make it happen.
-    </p>
+  <header class="hero-fade relative overflow-hidden">
+    <div class="container-wide grid gap-12 pt-12 pb-20 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-7">
+        <span class="eyebrow">GEO Services Hub</span>
+        <h1 class="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <span class="grad-text">GEO Services: What a Generative Engine Optimisation Agency Delivers</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-300">
+          Generative engine optimisation is the practice of making your brand visible, quotable, and citable inside AI-generated answers. These are the services that make it happen.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/contact/" class="btn btn-primary">Book a Consultation</a>
+          <a href="/geo-agency/" class="btn btn-ghost">Learn About Our Agency</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="card p-6">
+          <span class="eyebrow">At a glance</span>
+          <div class="mt-4 grid grid-cols-2 gap-6">
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">8</p>
+              <p class="mt-1 text-sm text-ink-400">Core service areas</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">6+</p>
+              <p class="mt-1 text-sm text-ink-400">AI platforms covered</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">8-12</p>
+              <p class="mt-1 text-sm text-ink-400">Weeks to first results</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">4</p>
+              <p class="mt-1 text-sm text-ink-400">Engagement phases</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <article class="max-w-4xl mx-auto px-6 pb-24 space-y-16">
+  <!-- Services Grid -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">What We Deliver</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Core Generative Engine Optimisation Services</h2>
+    <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed">
+      A credible GEO engagement covers eight interconnected service areas. Some are foundational and delivered early. Others are iterative and ongoing. All of them work together to increase the probability that AI models cite your brand when answering queries relevant to your business.
+    </p>
 
-    <!-- Section 1: Opening -->
-    <section>
-      <p class="text-lg text-gray-300 leading-relaxed mb-4">
-        When a potential customer asks ChatGPT for a recommendation, or Perplexity for a comparison, or Gemini for a shortlist, your brand is either in the answer or it is not. There is no page two. There is no "position eleven." Generative engine optimisation services exist to ensure you are present in those answers, cited with authority, and positioned ahead of competitors who have not yet adapted.
-      </p>
-      <p class="text-lg text-gray-300 leading-relaxed mb-4">
-        Unlike traditional search engine optimisation, which focuses on ranking web pages in a list of ten blue links, <a href="/generative-engine-optimisation/" class="text-accent-500 hover:text-accent-400 underline underline-offset-4">generative engine optimisation</a> targets a fundamentally different output: the synthesised, AI-generated response that large language models deliver to users. The mechanics are different. The signals are different. The services required to succeed are different.
-      </p>
-      <p class="text-lg text-gray-300 leading-relaxed">
-        This page sets out exactly what a specialist <a href="/geo-agency/" class="text-accent-500 hover:text-accent-400 underline underline-offset-4">GEO agency</a> delivers, how those services work, and what outcomes you should expect from each one. No ambiguity. No fluff. Just the scope of work that separates brands AI models talk about from those they ignore.
-      </p>
-    </section>
+    <div class="mt-12 grid gap-6 sm:grid-cols-2">
+      {services.map(s => (
+        <div class="card card-hover p-8 flex flex-col">
+          <div class="flex h-12 w-12 items-center justify-center rounded-lg border border-[var(--line)] text-[var(--accent)]">
+            <Fragment set:html={s.icon} />
+          </div>
+          <span class="eyebrow mt-5">{s.tag}</span>
+          <h3 class="mt-2 font-display text-xl font-semibold text-ink-50">{s.title}</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300 flex-1">{s.body}</p>
+          <a href={s.href} class="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-[var(--accent)] hover:underline underline-offset-4">
+            Learn more <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      ))}
+    </div>
+  </section>
 
-    <!-- Section 2: Core Service Areas -->
-    <section>
-      <h2 class="text-3xl font-bold text-white mb-8">Core Generative Engine Optimisation Services</h2>
-      <p class="text-gray-300 leading-relaxed mb-10">
-        A credible GEO engagement covers eight interconnected service areas. Some are foundational and delivered early. Others are iterative and ongoing. All of them work together to increase the probability that AI models cite your brand when answering queries relevant to your business.
-      </p>
+  <!-- Full Service Details -->
+  <section class="container-wide py-20">
+    <div class="prose-dark space-y-16">
+
+      <!-- Opening overview -->
+      <div class="grid gap-8 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <span class="eyebrow">Overview</span>
+          <h2 id="overview" class="anchor-top !mt-3">Why These Services Matter</h2>
+        </div>
+        <div class="lg:col-span-7">
+          <p>When a potential customer asks ChatGPT for a recommendation, or Perplexity for a comparison, or Gemini for a shortlist, your brand is either in the answer or it is not. There is no page two. There is no "position eleven." Generative engine optimisation services exist to ensure you are present in those answers, cited with authority, and positioned ahead of competitors who have not yet adapted.</p>
+          <p>Unlike traditional search engine optimisation, which focuses on ranking web pages in a list of ten blue links, <a href="/generative-engine-optimisation/">generative engine optimisation</a> targets a fundamentally different output: the synthesised, AI-generated response that large language models deliver to users. The mechanics are different. The signals are different. The services required to succeed are different.</p>
+          <p>This page sets out exactly what a specialist <a href="/geo-agency/">GEO agency</a> delivers, how those services work, and what outcomes you should expect from each one. No ambiguity. No fluff. Just the scope of work that separates brands AI models talk about from those they ignore.</p>
+        </div>
+      </div>
 
       <!-- Service 1 -->
-      <div class="border border-geo-700 rounded-xl p-8 mb-6 bg-geo-900/50">
-        <h3 class="text-xl font-semibold text-accent-500 mb-3">1. AI Visibility Audit</h3>
-        <p class="text-gray-300 leading-relaxed mb-3">
-          Every engagement begins with a baseline assessment. The AI visibility audit establishes where your brand currently appears (and where it does not) across the major generative platforms: ChatGPT, Perplexity, Gemini, Copilot, Claude, and any sector-specific AI tools relevant to your industry.
-        </p>
-        <p class="text-gray-300 leading-relaxed mb-3">
-          This is not a traditional SEO crawl. It involves systematically querying AI models with the prompts your prospective customers actually use, recording whether your brand is cited, how it is described, what competitors appear instead, and which sources the model draws upon to construct its answers.
-        </p>
-        <p class="text-gray-300 leading-relaxed">
-          The output is a visibility map: a clear picture of your current AI presence across platforms, query categories, and intent types. This map becomes the foundation for every subsequent service. Without it, optimisation is guesswork.
-        </p>
+      <div id="ai-visibility-audit" class="anchor-top">
+        <h2>1. AI Visibility Audit</h2>
+        <p>Every engagement begins with a baseline assessment. The AI visibility audit establishes where your brand currently appears (and where it does not) across the major generative platforms: ChatGPT, Perplexity, Gemini, Copilot, Claude, and any sector-specific AI tools relevant to your industry.</p>
+        <p>This is not a traditional SEO crawl. It involves systematically querying AI models with the prompts your prospective customers actually use, recording whether your brand is cited, how it is described, what competitors appear instead, and which sources the model draws upon to construct its answers.</p>
+        <p>The output is a visibility map: a clear picture of your current AI presence across platforms, query categories, and intent types. This map becomes the foundation for every subsequent service. Without it, optimisation is guesswork.</p>
       </div>
 
       <!-- Service 2 -->
-      <div class="border border-geo-700 rounded-xl p-8 mb-6 bg-geo-900/50">
-        <h3 class="text-xl font-semibold text-accent-500 mb-3">2. Entity and Knowledge Graph Optimisation</h3>
-        <p class="text-gray-300 leading-relaxed mb-3">
-          Large language models do not think in terms of web pages. They think in terms of entities: people, organisations, products, concepts, and the relationships between them. If your brand is not established as a distinct entity in the knowledge sources these models rely on, you are structurally invisible.
-        </p>
-        <p class="text-gray-300 leading-relaxed mb-3">
-          Entity optimisation involves strengthening your brand's presence across the knowledge bases that AI models consume during training and retrieval. This includes Wikipedia, Wikidata, Google's Knowledge Graph, Crunchbase, industry-specific databases, and authoritative third-party sources that models treat as ground truth.
-        </p>
-        <p class="text-gray-300 leading-relaxed">
-          The work is meticulous: ensuring consistent naming, accurate attributes, verified relationships with other entities, and sufficient third-party corroboration to establish notability. The goal is to make your brand an entity the model knows, not merely a string it has encountered.
-        </p>
+      <div id="entity-optimisation" class="anchor-top">
+        <h2>2. Entity and Knowledge Graph Optimisation</h2>
+        <p>Large language models do not think in terms of web pages. They think in terms of entities: people, organisations, products, concepts, and the relationships between them. If your brand is not established as a distinct entity in the knowledge sources these models rely on, you are structurally invisible.</p>
+        <p>Entity optimisation involves strengthening your brand's presence across the knowledge bases that AI models consume during training and retrieval. This includes Wikipedia, Wikidata, Google's Knowledge Graph, Crunchbase, industry-specific databases, and authoritative third-party sources that models treat as ground truth.</p>
+        <p>The work is meticulous: ensuring consistent naming, accurate attributes, verified relationships with other entities, and sufficient third-party corroboration to establish notability. The goal is to make your brand an entity the model knows, not merely a string it has encountered.</p>
       </div>
 
       <!-- Service 3 -->
-      <div class="border border-geo-700 rounded-xl p-8 mb-6 bg-geo-900/50">
-        <h3 class="text-xl font-semibold text-accent-500 mb-3">3. Structured Data and Schema Implementation</h3>
-        <p class="text-gray-300 leading-relaxed mb-3">
-          Structured data has always mattered for search. For generative engines, it matters more. When an AI model retrieves your page during a response, structured data provides the machine-readable context that determines how confidently the model can extract, attribute, and cite your content.
-        </p>
-        <p class="text-gray-300 leading-relaxed mb-3">
-          A GEO-focused schema strategy goes beyond basic Organisation and Breadcrumb markup. It includes detailed Service schemas, FAQPage and HowTo markup where appropriate, author and expertise signals via Person schema, and the precise use of sameAs to link your entity across platforms.
-        </p>
-        <p class="text-gray-300 leading-relaxed">
-          The implementation must be technically correct, semantically accurate, and aligned with what the content actually says. Over-marking or inaccurate schema is worse than none at all, because it sends conflicting signals to models that are increasingly sophisticated at detecting inconsistency.
-        </p>
+      <div id="structured-data" class="anchor-top">
+        <h2>3. Structured Data and Schema Implementation</h2>
+        <p>Structured data has always mattered for search. For generative engines, it matters more. When an AI model retrieves your page during a response, structured data provides the machine-readable context that determines how confidently the model can extract, attribute, and cite your content.</p>
+        <p>A GEO-focused schema strategy goes beyond basic Organisation and Breadcrumb markup. It includes detailed Service schemas, FAQPage and HowTo markup where appropriate, author and expertise signals via Person schema, and the precise use of sameAs to link your entity across platforms.</p>
+        <p>The implementation must be technically correct, semantically accurate, and aligned with what the content actually says. Over-marking or inaccurate schema is worse than none at all, because it sends conflicting signals to models that are increasingly sophisticated at detecting inconsistency.</p>
       </div>
 
       <!-- Service 4 -->
-      <div class="border border-geo-700 rounded-xl p-8 mb-6 bg-geo-900/50">
-        <h3 class="text-xl font-semibold text-accent-500 mb-3">4. Content Optimisation for LLM Citation</h3>
-        <p class="text-gray-300 leading-relaxed mb-3">
-          This is the core of generative engine optimisation and where most of the ongoing work concentrates. Content must be written, structured, and formatted so that large language models can easily extract factual claims, attribute them to your brand, and incorporate them into generated responses.
-        </p>
-        <p class="text-gray-300 leading-relaxed mb-3">
-          In practice, this means writing with explicit claims rather than implied ones, using clear attribution language, providing specific data points that models can quote, structuring content with logical hierarchies, and ensuring that each page's most important assertions appear in positions where retrieval-augmented generation systems are most likely to capture them.
-        </p>
-        <p class="text-gray-300 leading-relaxed">
-          This is not about keyword density or word count. It is about information architecture at the sentence level: making every paragraph a self-contained, quotable unit of expertise that an AI model would choose to cite over a competitor's vague equivalent.
-        </p>
+      <div id="content-optimisation" class="anchor-top">
+        <h2>4. Content Optimisation for LLM Citation</h2>
+        <p>This is the core of generative engine optimisation and where most of the ongoing work concentrates. Content must be written, structured, and formatted so that large language models can easily extract factual claims, attribute them to your brand, and incorporate them into generated responses.</p>
+        <p>In practice, this means writing with explicit claims rather than implied ones, using clear attribution language, providing specific data points that models can quote, structuring content with logical hierarchies, and ensuring that each page's most important assertions appear in positions where retrieval-augmented generation systems are most likely to capture them.</p>
+        <p>This is not about keyword density or word count. It is about information architecture at the sentence level: making every paragraph a self-contained, quotable unit of expertise that an AI model would choose to cite over a competitor's vague equivalent.</p>
       </div>
 
       <!-- Service 5 -->
-      <div class="border border-geo-700 rounded-xl p-8 mb-6 bg-geo-900/50">
-        <h3 class="text-xl font-semibold text-accent-500 mb-3">5. llms.txt Setup and AI Crawler Management</h3>
-        <p class="text-gray-300 leading-relaxed mb-3">
-          Just as robots.txt governs how traditional search engine crawlers interact with your site, llms.txt is emerging as the standard for communicating with AI crawlers. This file tells AI systems what your site is, what it offers, and how its content should be understood and used.
-        </p>
-        <p class="text-gray-300 leading-relaxed mb-3">
-          AI crawler management goes further. It involves configuring your server to handle requests from GPTBot, PerplexityBot, ClaudeBot, Google-Extended, and other AI crawlers appropriately. In some cases, you want to encourage crawling. In others, you may want to restrict access to certain content while permitting it for others.
-        </p>
-        <p class="text-gray-300 leading-relaxed">
-          The strategy here is nuanced: blanket blocking AI crawlers removes you from AI answers entirely, but unrestricted access may not serve your interests either. A GEO agency configures this on a case-by-case basis, balancing visibility against content protection.
-        </p>
+      <div id="llms-txt" class="anchor-top">
+        <h2>5. llms.txt Setup and AI Crawler Management</h2>
+        <p>Just as robots.txt governs how traditional search engine crawlers interact with your site, llms.txt is emerging as the standard for communicating with AI crawlers. This file tells AI systems what your site is, what it offers, and how its content should be understood and used.</p>
+        <p>AI crawler management goes further. It involves configuring your server to handle requests from GPTBot, PerplexityBot, ClaudeBot, Google-Extended, and other AI crawlers appropriately. In some cases, you want to encourage crawling. In others, you may want to restrict access to certain content while permitting it for others.</p>
+        <p>The strategy here is nuanced: blanket blocking AI crawlers removes you from AI answers entirely, but unrestricted access may not serve your interests either. A GEO agency configures this on a case-by-case basis, balancing visibility against content protection.</p>
       </div>
 
       <!-- Service 6 -->
-      <div class="border border-geo-700 rounded-xl p-8 mb-6 bg-geo-900/50">
-        <h3 class="text-xl font-semibold text-accent-500 mb-3">6. Platform-Specific Optimisation</h3>
-        <p class="text-gray-300 leading-relaxed mb-3">
-          ChatGPT, Perplexity, Gemini, and Copilot do not all work the same way. They use different retrieval mechanisms, draw on different source hierarchies, and weight different signals when deciding which brands and sources to cite. A strategy that works for one platform may underperform on another.
-        </p>
-        <p class="text-gray-300 leading-relaxed mb-3">
-          Platform-specific optimisation involves understanding these differences and tailoring your content, entity presence, and technical configuration accordingly. Perplexity, for example, relies heavily on real-time web retrieval and tends to cite sources with strong topical authority. ChatGPT with browsing draws from a broader range of sources but weights recency and direct relevance differently. Gemini integrates tightly with Google's own knowledge systems.
-        </p>
-        <p class="text-gray-300 leading-relaxed">
-          A competent GEO agency maintains current intelligence on how each platform's retrieval and citation behaviour works, and adjusts strategy as these systems evolve, which they do frequently.
-        </p>
+      <div id="platform-optimisation" class="anchor-top">
+        <h2>6. Platform-Specific Optimisation</h2>
+        <p>ChatGPT, Perplexity, Gemini, and Copilot do not all work the same way. They use different retrieval mechanisms, draw on different source hierarchies, and weight different signals when deciding which brands and sources to cite. A strategy that works for one platform may underperform on another.</p>
+        <p>Platform-specific optimisation involves understanding these differences and tailoring your content, entity presence, and technical configuration accordingly. Perplexity, for example, relies heavily on real-time web retrieval and tends to cite sources with strong topical authority. ChatGPT with browsing draws from a broader range of sources but weights recency and direct relevance differently. Gemini integrates tightly with Google's own knowledge systems.</p>
+        <p>A competent GEO agency maintains current intelligence on how each platform's retrieval and citation behaviour works, and adjusts strategy as these systems evolve, which they do frequently.</p>
       </div>
 
       <!-- Service 7 -->
-      <div class="border border-geo-700 rounded-xl p-8 mb-6 bg-geo-900/50">
-        <h3 class="text-xl font-semibold text-accent-500 mb-3">7. Monitoring and Reporting</h3>
-        <p class="text-gray-300 leading-relaxed mb-3">
-          You cannot optimise what you do not measure. GEO monitoring tracks your brand's citation frequency, sentiment, accuracy, and competitive position across AI platforms over time. This is fundamentally different from traditional rank tracking, because there are no fixed positions to monitor. Instead, the metrics focus on presence, prominence, and the quality of how your brand is represented.
-        </p>
-        <p class="text-gray-300 leading-relaxed mb-3">
-          Reporting typically includes citation tracking (how often your brand appears in AI answers for target queries), source attribution analysis (which of your pages or third-party mentions are being cited), competitive benchmarking (how your AI visibility compares to key competitors), and sentiment monitoring (whether AI models describe your brand accurately and favourably).
-        </p>
-        <p class="text-gray-300 leading-relaxed">
-          This data informs every iteration of the strategy. Without it, you are flying blind in a channel that changes faster than any other in digital marketing.
-        </p>
+      <div id="monitoring" class="anchor-top">
+        <h2>7. Monitoring and Reporting</h2>
+        <p>You cannot optimise what you do not measure. GEO monitoring tracks your brand's citation frequency, sentiment, accuracy, and competitive position across AI platforms over time. This is fundamentally different from traditional rank tracking, because there are no fixed positions to monitor. Instead, the metrics focus on presence, prominence, and the quality of how your brand is represented.</p>
+        <p>Reporting typically includes citation tracking (how often your brand appears in AI answers for target queries), source attribution analysis (which of your pages or third-party mentions are being cited), competitive benchmarking (how your AI visibility compares to key competitors), and sentiment monitoring (whether AI models describe your brand accurately and favourably).</p>
+        <p>This data informs every iteration of the strategy. Without it, you are flying blind in a channel that changes faster than any other in digital marketing.</p>
       </div>
 
       <!-- Service 8 -->
-      <div class="border border-geo-700 rounded-xl p-8 mb-6 bg-geo-900/50">
-        <h3 class="text-xl font-semibold text-accent-500 mb-3">8. Ongoing Optimisation and Iteration</h3>
-        <p class="text-gray-300 leading-relaxed mb-3">
-          Generative engine optimisation is not a one-time project. AI models update their training data, refine their retrieval systems, and change their citation behaviour regularly. The competitive landscape shifts as more brands invest in AI visibility. Content that earned citations last quarter may not earn them next quarter.
-        </p>
-        <p class="text-gray-300 leading-relaxed">
-          Ongoing optimisation involves continuous content refinement based on monitoring data, regular entity and schema audits, proactive adaptation to platform changes, and the creation of new content assets specifically designed to capture emerging query patterns. This iterative cycle is what separates a genuine GEO programme from a one-off audit that gathers dust.
-        </p>
+      <div id="ongoing-optimisation" class="anchor-top">
+        <h2>8. Ongoing Optimisation and Iteration</h2>
+        <p>Generative engine optimisation is not a one-time project. AI models update their training data, refine their retrieval systems, and change their citation behaviour regularly. The competitive landscape shifts as more brands invest in AI visibility. Content that earned citations last quarter may not earn them next quarter.</p>
+        <p>Ongoing optimisation involves continuous content refinement based on monitoring data, regular entity and schema audits, proactive adaptation to platform changes, and the creation of new content assets specifically designed to capture emerging query patterns. This iterative cycle is what separates a genuine GEO programme from a one-off audit that gathers dust.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Section 3: GEO vs SEO -->
-    <section>
-      <h2 class="text-3xl font-bold text-white mb-6">How GEO Services Differ from SEO Services</h2>
-      <p class="text-gray-300 leading-relaxed mb-4">
-        GEO and SEO are complementary, not competing. A strong SEO foundation makes GEO more effective, and GEO insights often improve SEO performance. But the services themselves address different problems with different methods.
-      </p>
+  <!-- Comparison Table -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">Side-by-side</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">How GEO Services Differ from SEO Services</h2>
+    <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed mb-10">
+      GEO and SEO are complementary, not competing. A strong SEO foundation makes GEO more effective, and GEO insights often improve SEO performance. But the services themselves address different problems with different methods.
+    </p>
 
-      <div class="overflow-x-auto mb-6">
-        <table class="w-full text-left border-collapse">
+    <div class="card overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
           <thead>
-            <tr class="border-b border-geo-700">
-              <th class="py-3 pr-6 text-accent-500 font-semibold">Dimension</th>
-              <th class="py-3 pr-6 text-accent-500 font-semibold">Traditional SEO</th>
-              <th class="py-3 text-accent-500 font-semibold">Generative Engine Optimisation</th>
+            <tr class="border-b border-[var(--line)]">
+              <th class="px-6 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Dimension</th>
+              <th class="px-6 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Traditional SEO</th>
+              <th class="px-6 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Generative Engine Optimisation</th>
             </tr>
           </thead>
-          <tbody class="text-gray-300">
-            <tr class="border-b border-geo-800">
-              <td class="py-3 pr-6 font-medium text-gray-200">Primary goal</td>
-              <td class="py-3 pr-6">Rank pages in search results</td>
-              <td class="py-3">Earn citations in AI-generated answers</td>
+          <tbody class="text-ink-300">
+            <tr class="border-b border-[var(--line-soft)]">
+              <td class="px-6 py-4 font-medium text-ink-100">Primary goal</td>
+              <td class="px-6 py-4">Rank pages in search results</td>
+              <td class="px-6 py-4">Earn citations in AI-generated answers</td>
             </tr>
-            <tr class="border-b border-geo-800">
-              <td class="py-3 pr-6 font-medium text-gray-200">Target output</td>
-              <td class="py-3 pr-6">Blue links, featured snippets</td>
-              <td class="py-3">Synthesised AI responses with source attribution</td>
+            <tr class="border-b border-[var(--line-soft)]">
+              <td class="px-6 py-4 font-medium text-ink-100">Target output</td>
+              <td class="px-6 py-4">Blue links, featured snippets</td>
+              <td class="px-6 py-4">
+                <span class="inline-flex items-center gap-1.5">
+                  <svg class="h-4 w-4 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Synthesised AI responses with source attribution
+                </span>
+              </td>
             </tr>
-            <tr class="border-b border-geo-800">
-              <td class="py-3 pr-6 font-medium text-gray-200">Key signals</td>
-              <td class="py-3 pr-6">Backlinks, technical health, content relevance</td>
-              <td class="py-3">Entity authority, structured data, citation-ready content</td>
+            <tr class="border-b border-[var(--line-soft)]">
+              <td class="px-6 py-4 font-medium text-ink-100">Key signals</td>
+              <td class="px-6 py-4">Backlinks, technical health, content relevance</td>
+              <td class="px-6 py-4">
+                <span class="inline-flex items-center gap-1.5">
+                  <svg class="h-4 w-4 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Entity authority, structured data, citation-ready content
+                </span>
+              </td>
             </tr>
-            <tr class="border-b border-geo-800">
-              <td class="py-3 pr-6 font-medium text-gray-200">Measurement</td>
-              <td class="py-3 pr-6">Rankings, clicks, impressions</td>
-              <td class="py-3">Citation frequency, brand sentiment, AI visibility share</td>
+            <tr class="border-b border-[var(--line-soft)]">
+              <td class="px-6 py-4 font-medium text-ink-100">Measurement</td>
+              <td class="px-6 py-4">Rankings, clicks, impressions</td>
+              <td class="px-6 py-4">
+                <span class="inline-flex items-center gap-1.5">
+                  <svg class="h-4 w-4 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Citation frequency, brand sentiment, AI visibility share
+                </span>
+              </td>
             </tr>
-            <tr class="border-b border-geo-800">
-              <td class="py-3 pr-6 font-medium text-gray-200">Content approach</td>
-              <td class="py-3 pr-6">Keyword-targeted, search intent-aligned</td>
-              <td class="py-3">Claim-based, quotable, entity-rich</td>
+            <tr class="border-b border-[var(--line-soft)]">
+              <td class="px-6 py-4 font-medium text-ink-100">Content approach</td>
+              <td class="px-6 py-4">Keyword-targeted, search intent-aligned</td>
+              <td class="px-6 py-4">
+                <span class="inline-flex items-center gap-1.5">
+                  <svg class="h-4 w-4 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  Claim-based, quotable, entity-rich
+                </span>
+              </td>
             </tr>
             <tr>
-              <td class="py-3 pr-6 font-medium text-gray-200">Competitive dynamic</td>
-              <td class="py-3 pr-6">Ten organic slots per query</td>
-              <td class="py-3">One answer, typically citing one to three sources</td>
+              <td class="px-6 py-4 font-medium text-ink-100">Competitive dynamic</td>
+              <td class="px-6 py-4">Ten organic slots per query</td>
+              <td class="px-6 py-4">
+                <span class="inline-flex items-center gap-1.5">
+                  <svg class="h-4 w-4 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                  One answer, typically citing one to three sources
+                </span>
+              </td>
+            </tr>
+            <tr class="border-t border-[var(--line)]">
+              <td class="px-6 py-4 font-medium text-ink-100">Typical pricing</td>
+              <td class="px-6 py-4 text-ink-400">GBP 500 - 5,000/mo</td>
+              <td class="px-6 py-4 font-medium text-[var(--accent)]">GBP 2,000 - 10,000+/mo</td>
             </tr>
           </tbody>
         </table>
       </div>
+    </div>
 
-      <p class="text-gray-300 leading-relaxed mb-4">
-        The most significant practical difference is competition density. In traditional search, ten brands share the first page. In a generative AI response, typically one to three sources are cited. The bar for inclusion is higher, but the reward for clearing it is disproportionately large. Being the cited source in an AI answer is closer to a featured snippet than a position-seven ranking.
-      </p>
-      <p class="text-gray-300 leading-relaxed">
-        Businesses that treat GEO as a bolt-on to existing SEO usually underperform. The disciplines share DNA, but the execution differs enough that specialist expertise matters. The best outcomes come from teams that understand both and can coordinate them, which is why <a href="/aeo-agency/" class="text-accent-500 hover:text-accent-400 underline underline-offset-4">answer engine optimisation</a> and GEO are increasingly delivered together as a unified visibility strategy.
-      </p>
-    </section>
+    <div class="prose-dark mt-10 max-w-3xl">
+      <p>The most significant practical difference is competition density. In traditional search, ten brands share the first page. In a generative AI response, typically one to three sources are cited. The bar for inclusion is higher, but the reward for clearing it is disproportionately large. Being the cited source in an AI answer is closer to a featured snippet than a position-seven ranking.</p>
+      <p>Businesses that treat GEO as a bolt-on to existing SEO usually underperform. The disciplines share DNA, but the execution differs enough that specialist expertise matters. The best outcomes come from teams that understand both and can coordinate them, which is why <a href="/aeo-agency/">answer engine optimisation</a> and GEO are increasingly delivered together as a unified visibility strategy.</p>
+    </div>
+  </section>
 
-    <!-- Section 4: Who Should Invest -->
-    <section>
-      <h2 class="text-3xl font-bold text-white mb-6">Who Should Invest in GEO Services</h2>
-      <p class="text-gray-300 leading-relaxed mb-4">
-        Generative engine optimisation is not equally urgent for every business. Some will see immediate returns. Others are better served by strengthening their SEO foundation first. Here is a candid assessment of where GEO investment makes the most sense right now.
-      </p>
-
-      <h3 class="text-xl font-semibold text-white mb-3">Strong fit</h3>
-      <ul class="list-disc list-inside text-gray-300 leading-relaxed mb-6 space-y-2">
-        <li><strong class="text-gray-100">B2B service businesses</strong> where buyers research solutions by asking AI tools for recommendations, comparisons, and shortlists. Consulting firms, SaaS companies, agencies, and professional services providers fall squarely here.</li>
-        <li><strong class="text-gray-100">E-commerce brands in considered-purchase categories</strong> where customers ask AI for buying advice before committing. Electronics, furniture, specialist equipment, and premium consumer goods.</li>
-        <li><strong class="text-gray-100">Brands with established authority</strong> that are being cited by AI models inconsistently or inaccurately. If models already know who you are but describe you wrongly, GEO fixes that.</li>
-        <li><strong class="text-gray-100">Businesses in competitive niches</strong> where competitors are beginning to appear in AI answers. Early movers in GEO build advantages that compound over time.</li>
-      </ul>
-
-      <h3 class="text-xl font-semibold text-white mb-3">Weaker fit (for now)</h3>
-      <ul class="list-disc list-inside text-gray-300 leading-relaxed mb-6 space-y-2">
-        <li><strong class="text-gray-100">Purely local businesses</strong> where customers search by proximity rather than by asking AI for recommendations. A corner shop does not need GEO. A regional law firm might.</li>
-        <li><strong class="text-gray-100">Businesses with no existing web presence.</strong> GEO amplifies authority that already exists. If you have no content, no backlinks, and no entity presence, build those first.</li>
-        <li><strong class="text-gray-100">Impulse-purchase categories</strong> where the buying decision happens too quickly for AI research to feature in the customer journey.</li>
-      </ul>
-
-      <h3 class="text-xl font-semibold text-white mb-3">Typical investment ranges</h3>
-      <p class="text-gray-300 leading-relaxed mb-4">
-        GEO services range from one-off audits (typically GBP 2,000 to GBP 5,000 for a comprehensive AI visibility assessment) through to ongoing retainers (GBP 2,000 to GBP 8,000 per month for continuous optimisation, monitoring, and content work). Enterprise programmes with multi-platform coverage and dedicated reporting can exceed GBP 10,000 per month.
-      </p>
-      <p class="text-gray-300 leading-relaxed">
-        The right investment level depends on your competitive landscape, the volume of AI-driven queries in your sector, and how much ground you need to make up. An initial audit is always the sensible starting point: it reveals whether the opportunity justifies ongoing investment.
-      </p>
-    </section>
-
-    <!-- Section 5: Engagement Process -->
-    <section>
-      <h2 class="text-3xl font-bold text-white mb-6">What to Expect: The Engagement Process</h2>
-      <p class="text-gray-300 leading-relaxed mb-8">
-        A well-structured GEO engagement moves through four distinct phases. Each phase has defined deliverables, measurable outcomes, and clear dependencies on the work that precedes it.
-      </p>
-
-      <div class="space-y-6">
-        <div class="border-l-4 border-accent-500 pl-6">
-          <h3 class="text-lg font-semibold text-white mb-2">Phase 1: Discovery and Audit (Weeks 1-3)</h3>
-          <p class="text-gray-300 leading-relaxed">
-            Comprehensive AI visibility audit across all major platforms. Competitor citation analysis. Entity presence assessment. Technical infrastructure review. The output is a detailed report mapping your current AI visibility, identifying gaps, and prioritising opportunities by estimated impact.
-          </p>
+  <!-- Who Should Invest -->
+  <section class="container-wide py-20">
+    <div class="prose-dark">
+      <div class="grid gap-8 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <span class="eyebrow">Fit assessment</span>
+          <h2 id="who-should-invest" class="anchor-top !mt-3">Who Should Invest in GEO Services</h2>
         </div>
-
-        <div class="border-l-4 border-accent-500 pl-6">
-          <h3 class="text-lg font-semibold text-white mb-2">Phase 2: Foundation (Weeks 3-8)</h3>
-          <p class="text-gray-300 leading-relaxed">
-            Structured data implementation and schema audit. Entity strengthening across knowledge bases. llms.txt configuration and AI crawler setup. Initial content optimisation of your highest-priority pages. This phase builds the technical and informational infrastructure that all subsequent optimisation relies on.
-          </p>
-        </div>
-
-        <div class="border-l-4 border-accent-500 pl-6">
-          <h3 class="text-lg font-semibold text-white mb-2">Phase 3: Optimisation (Weeks 8-16)</h3>
-          <p class="text-gray-300 leading-relaxed">
-            Systematic content optimisation across your site, prioritised by query volume and commercial value. Platform-specific adjustments based on initial monitoring data. Creation of new citation-target content where gaps exist. Third-party source development to strengthen entity corroboration.
-          </p>
-        </div>
-
-        <div class="border-l-4 border-accent-500 pl-6">
-          <h3 class="text-lg font-semibold text-white mb-2">Phase 4: Iteration (Ongoing)</h3>
-          <p class="text-gray-300 leading-relaxed">
-            Monthly monitoring and reporting. Continuous content refinement based on citation data. Proactive adaptation to platform changes. Competitive intelligence and response. Quarterly strategy reviews to realign priorities with business objectives and evolving AI platform behaviour.
-          </p>
+        <div class="lg:col-span-7">
+          <p>Generative engine optimisation is not equally urgent for every business. Some will see immediate returns. Others are better served by strengthening their SEO foundation first. Here is a candid assessment of where GEO investment makes the most sense right now.</p>
         </div>
       </div>
 
-      <p class="text-gray-300 leading-relaxed mt-8">
-        Most businesses begin to see measurable changes in AI citation frequency within eight to twelve weeks of Phase 2 completion. Full competitive positioning typically takes four to six months, depending on the starting point and the intensity of the competitive landscape. Patience and consistency matter more than speed.
-      </p>
-    </section>
+      <h3>Strong fit</h3>
+      <ul>
+        <li><strong>B2B service businesses</strong> where buyers research solutions by asking AI tools for recommendations, comparisons, and shortlists. Consulting firms, SaaS companies, agencies, and professional services providers fall squarely here.</li>
+        <li><strong>E-commerce brands in considered-purchase categories</strong> where customers ask AI for buying advice before committing. Electronics, furniture, specialist equipment, and premium consumer goods.</li>
+        <li><strong>Brands with established authority</strong> that are being cited by AI models inconsistently or inaccurately. If models already know who you are but describe you wrongly, GEO fixes that.</li>
+        <li><strong>Businesses in competitive niches</strong> where competitors are beginning to appear in AI answers. Early movers in GEO build advantages that compound over time.</li>
+      </ul>
 
-    <!-- Section 6: CTA -->
-    <section class="border border-geo-700 rounded-xl p-10 bg-geo-900/60 text-center">
-      <h2 class="text-2xl font-bold text-white mb-4">Ready to Make Your Brand Visible in AI Answers?</h2>
-      <p class="text-gray-300 leading-relaxed mb-8 max-w-2xl mx-auto">
-        Whether you need a one-off AI visibility audit or a full-service <a href="/answer-engine-optimisation/" class="text-accent-500 hover:text-accent-400 underline underline-offset-4">answer engine optimisation</a> programme, the first step is the same: understanding where you stand today. Get in touch to discuss your situation.
-      </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="/contact/" class="inline-block bg-accent-500 text-geo-950 font-semibold px-8 py-3 rounded-lg hover:bg-accent-400 transition-colors">
-          Book a Consultation
-        </a>
-        <a href="/geo-agency/" class="inline-block border border-accent-500 text-accent-500 font-semibold px-8 py-3 rounded-lg hover:bg-accent-500/10 transition-colors">
-          Learn About Our Agency
-        </a>
+      <h3>Weaker fit (for now)</h3>
+      <ul>
+        <li><strong>Purely local businesses</strong> where customers search by proximity rather than by asking AI for recommendations. A corner shop does not need GEO. A regional law firm might.</li>
+        <li><strong>Businesses with no existing web presence.</strong> GEO amplifies authority that already exists. If you have no content, no backlinks, and no entity presence, build those first.</li>
+        <li><strong>Impulse-purchase categories</strong> where the buying decision happens too quickly for AI research to feature in the customer journey.</li>
+      </ul>
+
+      <h3>Typical investment ranges</h3>
+      <p>GEO services range from one-off audits (typically GBP 2,000 to GBP 5,000 for a comprehensive AI visibility assessment) through to ongoing retainers (GBP 2,000 to GBP 8,000 per month for continuous optimisation, monitoring, and content work). Enterprise programmes with multi-platform coverage and dedicated reporting can exceed GBP 10,000 per month.</p>
+      <p>The right investment level depends on your competitive landscape, the volume of AI-driven queries in your sector, and how much ground you need to make up. An initial audit is always the sensible starting point: it reveals whether the opportunity justifies ongoing investment.</p>
+    </div>
+  </section>
+
+  <!-- Engagement Process -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">Process</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">What to Expect: The Engagement Process</h2>
+    <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed mb-12">
+      A well-structured GEO engagement moves through four distinct phases. Each phase has defined deliverables, measurable outcomes, and clear dependencies on the work that precedes it.
+    </p>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="card p-6 border-t-2 border-t-[var(--accent)]">
+        <span class="font-mono text-xs text-ink-500">Phase 1</span>
+        <h3 class="mt-2 font-display text-lg font-semibold text-ink-50">Discovery & Audit</h3>
+        <p class="mt-1 font-mono text-xs text-ink-500">Weeks 1-3</p>
+        <p class="mt-3 text-sm leading-relaxed text-ink-300">Comprehensive AI visibility audit across all major platforms. Competitor citation analysis. Entity presence assessment. Technical infrastructure review. The output is a detailed report mapping your current AI visibility, identifying gaps, and prioritising opportunities by estimated impact.</p>
       </div>
-    </section>
+      <div class="card p-6 border-t-2 border-t-[var(--accent)]">
+        <span class="font-mono text-xs text-ink-500">Phase 2</span>
+        <h3 class="mt-2 font-display text-lg font-semibold text-ink-50">Foundation</h3>
+        <p class="mt-1 font-mono text-xs text-ink-500">Weeks 3-8</p>
+        <p class="mt-3 text-sm leading-relaxed text-ink-300">Structured data implementation and schema audit. Entity strengthening across knowledge bases. llms.txt configuration and AI crawler setup. Initial content optimisation of your highest-priority pages. This phase builds the technical and informational infrastructure that all subsequent optimisation relies on.</p>
+      </div>
+      <div class="card p-6 border-t-2 border-t-[var(--accent)]">
+        <span class="font-mono text-xs text-ink-500">Phase 3</span>
+        <h3 class="mt-2 font-display text-lg font-semibold text-ink-50">Optimisation</h3>
+        <p class="mt-1 font-mono text-xs text-ink-500">Weeks 8-16</p>
+        <p class="mt-3 text-sm leading-relaxed text-ink-300">Systematic content optimisation across your site, prioritised by query volume and commercial value. Platform-specific adjustments based on initial monitoring data. Creation of new citation-target content where gaps exist. Third-party source development to strengthen entity corroboration.</p>
+      </div>
+      <div class="card p-6 border-t-2 border-t-[var(--accent)]">
+        <span class="font-mono text-xs text-ink-500">Phase 4</span>
+        <h3 class="mt-2 font-display text-lg font-semibold text-ink-50">Iteration</h3>
+        <p class="mt-1 font-mono text-xs text-ink-500">Ongoing</p>
+        <p class="mt-3 text-sm leading-relaxed text-ink-300">Monthly monitoring and reporting. Continuous content refinement based on citation data. Proactive adaptation to platform changes. Competitive intelligence and response. Quarterly strategy reviews to realign priorities with business objectives and evolving AI platform behaviour.</p>
+      </div>
+    </div>
 
-  </article>
+    <p class="mt-10 max-w-3xl text-ink-300 leading-relaxed">
+      Most businesses begin to see measurable changes in AI citation frequency within eight to twelve weeks of Phase 2 completion. Full competitive positioning typically takes four to six months, depending on the starting point and the intensity of the competitive landscape. Patience and consistency matter more than speed.
+    </p>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Frequently Asked Questions</h2>
+
+    <div class="mt-10 max-w-3xl divide-y divide-[var(--line)]">
+      {faqs.map(faq => (
+        <div class="faq-item">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors"
+            aria-expanded="false"
+          >
+            <span>{faq.q}</span>
+            <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+            </svg>
+          </button>
+          <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+            <p class="pb-5 text-ink-300 leading-relaxed">{faq.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="container-wide py-20">
+    <div class="relative overflow-hidden rounded-2xl dot-grid">
+      <div class="absolute inset-0 bg-gradient-to-br from-[rgba(var(--accent-glow),.12)] via-transparent to-transparent"></div>
+      <div class="relative px-8 py-16 text-center sm:px-16">
+        <span class="eyebrow">Get Started</span>
+        <h2 class="mt-4 font-display text-3xl font-bold text-ink-50 sm:text-4xl">Ready to Make Your Brand Visible in AI Answers?</h2>
+        <p class="mt-4 mx-auto max-w-2xl text-ink-300 leading-relaxed">
+          Whether you need a one-off AI visibility audit or a full-service <a href="/answer-engine-optimisation/" class="text-[var(--accent)] hover:underline underline-offset-4">answer engine optimisation</a> programme, the first step is the same: understanding where you stand today. Get in touch to discuss your situation.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact/" class="btn btn-primary">Book a Consultation</a>
+          <a href="/geo-agency/" class="btn btn-ghost">Learn About Our Agency</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Hubs -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">Related</span>
+    <h2 class="mt-3 font-display text-2xl font-bold text-ink-50">Explore More</h2>
+    <div class="mt-8 grid gap-6 sm:grid-cols-3">
+      {relatedHubs.map(hub => (
+        <a href={hub.href} class="card card-hover block p-6">
+          <h3 class="font-display text-lg font-semibold text-ink-50">{hub.title}</h3>
+          <p class="mt-2 text-sm text-ink-400 leading-relaxed">{hub.desc}</p>
+          <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">
+            Read more <span aria-hidden="true">&rarr;</span>
+          </span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = '0';
+            other.closest('.faq-item').querySelector('.faq-icon').style.transform = '';
+          }
+        });
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+        icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+      });
+    });
+  </script>
 
 </Base>

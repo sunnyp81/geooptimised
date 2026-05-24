@@ -23,7 +23,7 @@ const schema = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
-      { '@type': 'ListItem', position: 2, name: 'GEO Services', item: 'https://geooptimised.com/geo-services/' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://geooptimised.com/geo-services/' },
       { '@type': 'ListItem', position: 3, name: 'GEO Agency', item: 'https://geooptimised.com/geo-agency/' },
     ],
   },
@@ -63,147 +63,357 @@ const steps = [
   { label: 'Monitor', desc: 'Track citation frequency, brand mention accuracy, and competitive positioning in real time.' },
   { label: 'Iterate', desc: 'Refine strategy based on measured results. Generative engines evolve rapidly — your GEO programme must evolve faster.' },
 ];
+
+const tocItems = [
+  { id: 'what-geo-agency-does', label: 'What a GEO Agency Does' },
+  { id: 'why-specialist', label: 'Why Choose a Specialist' },
+  { id: 'our-approach', label: 'Our Approach' },
+  { id: 'results', label: 'Results We Focus On' },
+  { id: 'good-fit', label: 'Good Fit / Not a Fit' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const goodFit = [
+  'Your category is being reshaped by AI search',
+  'You have domain authority but zero AI citations',
+  'Competitors appear in ChatGPT / Perplexity and you do not',
+  'You need measurable citation KPIs, not vague "AI readiness"',
+  'You want a specialist, not a generalist bolting GEO onto SEO',
+];
+
+const notFit = [
+  'You need traditional SEO link building only',
+  'Your market has no AI search adoption yet',
+  'You want a single blog post, not a programme',
+  'Budget is under three months of engagement',
+  'You expect overnight results from a new discipline',
+];
+
+const faqs = [
+  {
+    q: 'How is GEO different from SEO?',
+    a: 'SEO targets search engine results pages. GEO targets the AI-generated answers that are replacing those results. The ranking signals, content structures, and measurement frameworks are fundamentally different.',
+  },
+  {
+    q: 'How long before we see results?',
+    a: 'Most clients see measurable changes in citation frequency within 60-90 days. Entity authority and cross-platform visibility compound over 6-12 months.',
+  },
+  {
+    q: 'Which AI platforms do you cover?',
+    a: 'ChatGPT, Perplexity, Gemini, Microsoft Copilot, and Google AI Overviews. We monitor all five and adjust strategy per platform.',
+  },
+  {
+    q: 'Do we still need traditional SEO?',
+    a: 'Yes. GEO builds on strong organic fundamentals. If your site has poor technical health or thin content, we address that first. GEO and SEO are complementary, not competing.',
+  },
+  {
+    q: 'What does a GEO audit include?',
+    a: 'A full citation map across all major generative engines, entity graph analysis, competitor citation benchmarking, and a prioritised action plan with estimated impact.',
+  },
+];
+
+const related = [
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'Everything you need to know about GEO — from first principles to advanced entity strategies.',
+    href: '/generative-engine-optimisation/',
+  },
+  {
+    tag: 'Service',
+    title: 'AEO Agency: Answer Engine Optimisation',
+    excerpt: 'How AEO fits within a broader GEO programme and when you need both.',
+    href: '/aeo-agency/',
+  },
+  {
+    tag: 'Services',
+    title: 'GEO Services Overview',
+    excerpt: 'The full range of generative engine optimisation services we deliver.',
+    href: '/geo-services/',
+  },
+];
 ---
 
 <Base title={title} description={description} schema={schema} ogType="website">
 
   <!-- Breadcrumb -->
-  <nav aria-label="Breadcrumb" class="mx-auto max-w-4xl px-4 pt-8 text-sm text-gray-400">
-    <ol class="flex items-center gap-1.5">
-      <li><a href="/" class="hover:text-accent-400 transition">Home</a></li>
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex items-center gap-1.5 text-sm text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
       <li aria-hidden="true">/</li>
-      <li><a href="/geo-services/" class="hover:text-accent-400 transition">GEO Services</a></li>
+      <li><a href="/geo-services/" class="transition hover:text-[var(--accent)]">Services</a></li>
       <li aria-hidden="true">/</li>
-      <li class="text-gray-200" aria-current="page">GEO Agency</li>
+      <li class="text-ink-200" aria-current="page">GEO Agency</li>
     </ol>
   </nav>
 
   <!-- Hero -->
-  <section class="mx-auto max-w-4xl px-4 pt-16 pb-12">
-    <h1 class="text-4xl font-extrabold leading-tight tracking-tight text-white md:text-5xl">
-      GEO Agency: Generative Engine Optimisation Experts
-    </h1>
-    <p class="mt-6 max-w-2xl text-lg leading-relaxed text-gray-300">
-      Traditional SEO targets search engine results pages. A <strong class="text-white">generative engine optimisation agency</strong> targets
-      something fundamentally different: the AI-generated answers that are replacing those results. When a user asks ChatGPT, Perplexity, or
-      Google's AI Overview for a recommendation, your brand is either cited or it is invisible. There is no page two — there is only the answer.
-    </p>
-    <p class="mt-4 max-w-2xl text-lg leading-relaxed text-gray-300">
-      GEOoptimised exists because this shift demands a new discipline. We do not bolt GEO onto an existing SEO retainer. We built the entire
-      agency around it — the tooling, the methodology, and the monitoring infrastructure — so that every recommendation we make is grounded in
-      how large language models actually select, rank, and cite sources.
-    </p>
-  </section>
-
-  <!-- What a GEO Agency Does -->
-  <section class="mx-auto max-w-4xl px-4 py-12">
-    <h2 class="text-3xl font-bold text-white">What a GEO Agency Does</h2>
-    <p class="mt-4 max-w-2xl text-gray-300 leading-relaxed">
-      A dedicated <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/40 hover:decoration-accent-400 transition">generative engine optimisation</a>
-      agency operates across six core capabilities. Each one addresses a specific mechanism that determines whether AI models cite your brand or a competitor's.
-    </p>
-    <div class="mt-10 grid gap-8 md:grid-cols-2">
-      {capabilities.map(cap => (
-        <div class="rounded-xl border border-geo-700/50 bg-geo-900/60 p-6">
-          <h3 class="text-lg font-semibold text-accent-400">{cap.title}</h3>
-          <p class="mt-3 text-sm leading-relaxed text-gray-300">{cap.text}</p>
-        </div>
-      ))}
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Service</span>
+        <span class="font-mono text-xs text-ink-400">25 May 2025</span>
+        <span class="font-mono text-xs text-ink-400">8 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO Agency: Generative Engine Optimisation Experts
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        Traditional SEO targets search engine results pages. A <strong class="text-white">generative engine optimisation agency</strong> targets
+        something fundamentally different: the AI-generated answers that are replacing those results. When a user asks ChatGPT, Perplexity, or
+        Google's AI Overview for a recommendation, your brand is either cited or it is invisible. There is no page two — there is only the answer.
+      </p>
     </div>
   </section>
 
-  <!-- Why Choose a Specialist GEO Agency -->
-  <section class="mx-auto max-w-4xl px-4 py-12">
-    <h2 class="text-3xl font-bold text-white">Why Choose a Specialist GEO Agency</h2>
-    <p class="mt-4 max-w-2xl text-gray-300 leading-relaxed">
-      Most digital marketing agencies now mention GEO on their services page. Few have built the infrastructure to deliver it. The difference
-      matters because generative engine optimisation is not a variation of SEO — it is a parallel discipline with its own signals, its own
-      measurement framework, and its own competitive dynamics.
-    </p>
-    <p class="mt-4 max-w-2xl text-gray-300 leading-relaxed">
-      A generalist agency will optimise your title tags and meta descriptions. A specialist GEO agency will audit your entity graph, map your
-      citation footprint across five AI platforms, and tell you exactly which content patterns are driving your competitor's mentions in
-      Perplexity while yours are absent.
-    </p>
-    <p class="mt-4 max-w-2xl text-gray-300 leading-relaxed">
-      We built GEOoptimised around this gap. Our team does not split time between PPC campaigns and GEO audits. Every process, every tool,
-      and every analyst is focused on one outcome: making your brand the source that AI models choose to cite.
-    </p>
-    <p class="mt-4 max-w-2xl text-gray-300 leading-relaxed">
-      If you are also exploring <a href="/answer-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/40 hover:decoration-accent-400 transition">answer engine optimisation</a>,
-      our approach covers that ground too. AEO and GEO share a common foundation — structuring content so that machines can extract and
-      present it accurately. The difference is scope: AEO targets featured snippets and voice assistants, while GEO targets the full
-      spectrum of generative AI platforms. A specialist <a href="/aeo-agency/" class="text-accent-400 underline decoration-accent-500/40 hover:decoration-accent-400 transition">AEO agency</a>
-      offering often sits within a broader GEO programme.
-    </p>
-  </section>
+  <!-- Two-column: TOC + Content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
 
-  <!-- Our Approach -->
-  <section class="mx-auto max-w-4xl px-4 py-12">
-    <h2 class="text-3xl font-bold text-white">Our Approach</h2>
-    <p class="mt-4 max-w-2xl text-gray-300 leading-relaxed">
-      Every GEO engagement follows a five-stage methodology designed to produce measurable results within the first 90 days, then compound
-      them over time.
-    </p>
-    <ol class="mt-10 space-y-6">
-      {steps.map((step, i) => (
-        <li class="flex gap-5">
-          <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-accent-500/40 bg-geo-900 text-sm font-bold text-accent-400">
-            {i + 1}
-          </span>
-          <div>
-            <h3 class="text-lg font-semibold text-white">{step.label}</h3>
-            <p class="mt-1 text-sm leading-relaxed text-gray-300">{step.desc}</p>
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>GEO is a parallel discipline to SEO, not a bolt-on — it requires specialist tooling, methodology, and monitoring.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>We track citation frequency, brand accuracy, and cross-platform reach as primary KPIs.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Most clients see measurable citation changes within 60-90 days.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Our five-stage methodology covers audit, strategy, implementation, monitoring, and iteration.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- What a GEO Agency Does -->
+      <div class="prose-dark">
+        <h2 id="what-geo-agency-does" class="anchor-top">What a GEO Agency Does</h2>
+        <p>
+          A dedicated <a href="/generative-engine-optimisation/">generative engine optimisation</a>
+          agency operates across six core capabilities. Each one addresses a specific mechanism that determines whether AI models cite your brand or a competitor's.
+        </p>
+      </div>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        {capabilities.map(cap => (
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">{cap.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">{cap.text}</p>
           </div>
-        </li>
-      ))}
-    </ol>
-  </section>
+        ))}
+      </div>
 
-  <!-- Results We Focus On -->
-  <section class="mx-auto max-w-4xl px-4 py-12">
-    <h2 class="text-3xl font-bold text-white">Results We Focus On</h2>
-    <p class="mt-4 max-w-2xl text-gray-300 leading-relaxed">
-      Vanity metrics do not pay invoices. We measure three outcomes that connect directly to commercial value:
-    </p>
-    <div class="mt-8 grid gap-6 md:grid-cols-3">
-      <div class="rounded-xl border border-geo-700/50 bg-geo-900/60 p-6 text-center">
-        <p class="text-3xl font-extrabold text-accent-400">Citation Frequency</p>
-        <p class="mt-3 text-sm text-gray-300">
-          How often AI engines cite your brand as a source when answering queries in your category. This is the primary KPI for any
-          <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/40 hover:decoration-accent-400 transition">GEO services</a> engagement.
+      <!-- Why Choose a Specialist GEO Agency -->
+      <div class="prose-dark mt-16">
+        <h2 id="why-specialist" class="anchor-top">Why Choose a Specialist GEO Agency</h2>
+        <p>
+          Most digital marketing agencies now mention GEO on their services page. Few have built the infrastructure to deliver it. The difference
+          matters because generative engine optimisation is not a variation of SEO — it is a parallel discipline with its own signals, its own
+          measurement framework, and its own competitive dynamics.
+        </p>
+        <p>
+          A generalist agency will optimise your title tags and meta descriptions. A specialist GEO agency will audit your entity graph, map your
+          citation footprint across five AI platforms, and tell you exactly which content patterns are driving your competitor's mentions in
+          Perplexity while yours are absent.
+        </p>
+        <p>
+          We built GEOoptimised around this gap. Our team does not split time between PPC campaigns and GEO audits. Every process, every tool,
+          and every analyst is focused on one outcome: making your brand the source that AI models choose to cite.
+        </p>
+        <p>
+          GEOoptimised exists because this shift demands a new discipline. We do not bolt GEO onto an existing SEO retainer. We built the entire
+          agency around it — the tooling, the methodology, and the monitoring infrastructure — so that every recommendation we make is grounded in
+          how large language models actually select, rank, and cite sources.
+        </p>
+        <p>
+          If you are also exploring <a href="/answer-engine-optimisation/">answer engine optimisation</a>,
+          our approach covers that ground too. AEO and GEO share a common foundation — structuring content so that machines can extract and
+          present it accurately. The difference is scope: AEO targets featured snippets and voice assistants, while GEO targets the full
+          spectrum of generative AI platforms. A specialist <a href="/aeo-agency/">AEO agency</a>
+          offering often sits within a broader GEO programme.
         </p>
       </div>
-      <div class="rounded-xl border border-geo-700/50 bg-geo-900/60 p-6 text-center">
-        <p class="text-3xl font-extrabold text-accent-400">Brand Accuracy</p>
-        <p class="mt-3 text-sm text-gray-300">
-          Whether AI-generated mentions represent your brand correctly — right name, right positioning, right facts. Inaccurate citations
-          can be worse than no citation at all.
+
+      <!-- Our Approach -->
+      <div class="prose-dark mt-16">
+        <h2 id="our-approach" class="anchor-top">Our Approach</h2>
+        <p>
+          Every GEO engagement follows a five-stage methodology designed to produce measurable results within the first 90 days, then compound
+          them over time.
         </p>
       </div>
-      <div class="rounded-xl border border-geo-700/50 bg-geo-900/60 p-6 text-center">
-        <p class="text-3xl font-extrabold text-accent-400">Cross-Platform Reach</p>
-        <p class="mt-3 text-sm text-gray-300">
-          Visibility across ChatGPT, Perplexity, Gemini, Copilot, and AI Overviews simultaneously. Dominance on one platform is not
-          enough when your customers use several.
+
+      <ol class="mt-8 space-y-6">
+        {steps.map((step, i) => (
+          <li class="flex gap-5">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border hair font-display text-sm font-bold text-[var(--accent)]">
+              {i + 1}
+            </span>
+            <div>
+              <h3 class="font-display text-lg font-semibold text-white">{step.label}</h3>
+              <p class="mt-1 text-sm leading-relaxed text-ink-300">{step.desc}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      <!-- Results We Focus On -->
+      <div class="prose-dark mt-16">
+        <h2 id="results" class="anchor-top">Results We Focus On</h2>
+        <p>
+          Vanity metrics do not pay invoices. We measure three outcomes that connect directly to commercial value:
         </p>
+      </div>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <div class="card p-6 text-center">
+          <p class="font-display text-2xl font-bold text-[var(--accent)]">Citation Frequency</p>
+          <p class="mt-3 text-sm text-ink-300">
+            How often AI engines cite your brand as a source when answering queries in your category. This is the primary KPI for any
+            <a href="/geo-services/" class="text-[var(--accent)] border-b border-[var(--accent)]/35 hover:border-[var(--accent)] transition">GEO services</a> engagement.
+          </p>
+        </div>
+        <div class="card p-6 text-center">
+          <p class="font-display text-2xl font-bold text-[var(--accent)]">Brand Accuracy</p>
+          <p class="mt-3 text-sm text-ink-300">
+            Whether AI-generated mentions represent your brand correctly — right name, right positioning, right facts. Inaccurate citations
+            can be worse than no citation at all.
+          </p>
+        </div>
+        <div class="card p-6 text-center">
+          <p class="font-display text-2xl font-bold text-[var(--accent)]">Cross-Platform Reach</p>
+          <p class="mt-3 text-sm text-ink-300">
+            Visibility across ChatGPT, Perplexity, Gemini, Copilot, and AI Overviews simultaneously. Dominance on one platform is not
+            enough when your customers use several.
+          </p>
+        </div>
+      </div>
+
+      <!-- Good Fit / Not a Fit -->
+      <div class="prose-dark mt-16">
+        <h2 id="good-fit" class="anchor-top">Good Fit / Not a Fit</h2>
+      </div>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        <div class="card p-6">
+          <h3 class="font-display text-base font-semibold text-[var(--accent)]">Good fit</h3>
+          <ul class="mt-4 space-y-3 text-sm text-ink-200">
+            {goodFit.map(item => (
+              <li class="flex items-start gap-2">
+                <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-display text-base font-semibold text-ink-300">Not a fit</h3>
+          <ul class="mt-4 space-y-3 text-sm text-ink-200">
+            {notFit.map(item => (
+              <li class="flex items-start gap-2">
+                <span class="mt-0.5 text-ink-400">&#10007;</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12">
+    <div class="container-wide py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Start With a GEO Audit</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Before we propose a strategy, we show you the data. Our GEO audit maps your current AI visibility, identifies the highest-value
+        gaps, and gives you a clear picture of what a specialist generative engine optimisation agency can change.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request your free GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all services</a>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="mx-auto max-w-4xl px-4 pt-12 pb-20 text-center">
-    <h2 class="text-3xl font-bold text-white">Start With a GEO Audit</h2>
-    <p class="mx-auto mt-4 max-w-xl text-gray-300 leading-relaxed">
-      Before we propose a strategy, we show you the data. Our GEO audit maps your current AI visibility, identifies the highest-value
-      gaps, and gives you a clear picture of what a specialist generative engine optimisation agency can change.
-    </p>
-    <a
-      href="/contact/"
-      class="mt-8 inline-block rounded-lg bg-accent-500 px-8 py-3.5 text-base font-semibold text-geo-950 shadow-lg shadow-accent-500/20 transition hover:bg-accent-400 hover:shadow-accent-400/30"
-    >
-      Request your free GEO audit
-    </a>
-  </section>
+  <script>
+    document.querySelectorAll('#faq-accordion button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling;
+        const icon = btn.querySelector('.faq-icon');
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+  </script>
 
 </Base>

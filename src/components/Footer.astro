@@ -1,38 +1,70 @@
 ---
 const year = new Date().getFullYear();
-const links = [
-  { href: '/generative-engine-optimisation/', label: 'GEO Guide' },
-  { href: '/geo-services/', label: 'Services' },
-  { href: '/geo-agency/', label: 'Agency' },
-  { href: '/answer-engine-optimisation/', label: 'AEO' },
-  { href: '/about/', label: 'About' },
-  { href: '/contact/', label: 'Contact' },
+const groups = [
+  {
+    title: 'Services',
+    links: [
+      { label: 'GEO Agency', href: '/geo-agency/' },
+      { label: 'AEO Agency', href: '/aeo-agency/' },
+      { label: 'GEO Services', href: '/geo-services/' },
+    ],
+  },
+  {
+    title: 'Learn',
+    links: [
+      { label: 'Generative Engine Optimisation', href: '/generative-engine-optimisation/' },
+      { label: 'Answer Engine Optimisation', href: '/answer-engine-optimisation/' },
+      { label: 'About', href: '/about/' },
+    ],
+  },
+  {
+    title: 'Company',
+    links: [
+      { label: 'Contact', href: '/contact/' },
+    ],
+  },
 ];
 ---
-<footer class="border-t border-geo-800/60 bg-geo-950 mt-24">
-  <div class="mx-auto max-w-6xl px-4 py-12">
-    <div class="grid gap-8 md:grid-cols-3">
-      <div>
-        <a href="/" class="text-lg font-bold text-white">GEO<span class="text-accent-500">optimised</span></a>
-        <p class="mt-3 text-sm text-gray-400 max-w-xs">Generative Engine Optimisation agency. We make brands visible in AI-generated search results.</p>
+<footer class="border-t hair mt-24 bg-ink-950">
+  <div class="container-wide pt-16 pb-10">
+    <div class="grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-5">
+        <a href="/" class="flex items-center gap-2.5">
+          <span class="relative inline-flex items-center justify-center w-8 h-8 rounded-lg" style="background: linear-gradient(135deg,#00E5CC 0%,#0BB29F 100%)">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#001a16" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3" />
+              <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/>
+            </svg>
+          </span>
+          <span class="font-display font-semibold text-[17px] tracking-[-0.018em] text-white">
+            GEO<span class="text-ink-300 font-medium">optimised</span>
+          </span>
+        </a>
+        <p class="mt-4 text-ink-300 text-[14px] leading-relaxed max-w-sm">
+          The agency that makes brands visible in AI-generated answers. We optimise for the engines people are actually asking — ChatGPT, Perplexity, Gemini, Claude, and Google AI Overview.
+        </p>
       </div>
-      <div>
-        <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Pages</h3>
-        <ul class="mt-3 space-y-2">
-          {links.map(link => (
-            <li><a href={link.href} class="text-sm text-gray-400 hover:text-accent-400 transition">{link.label}</a></li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Contact</h3>
-        <ul class="mt-3 space-y-2 text-sm text-gray-400">
-          <li><a href="mailto:hello@geooptimised.com" class="hover:text-accent-400 transition">hello@geooptimised.com</a></li>
-        </ul>
+      <div class="md:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-8">
+        {groups.map(g => (
+          <div>
+            <div class="eyebrow mb-3 !text-ink-300">{g.title}</div>
+            <ul class="flex flex-col gap-2">
+              {g.links.map(l => (
+                <li>
+                  <a href={l.href} class="text-[14px] text-ink-200 hover:text-white transition-colors">{l.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </div>
-    <div class="mt-10 border-t border-geo-800/60 pt-6 text-center text-xs text-gray-500">
-      &copy; {year} GEOoptimised. All rights reserved.
+    <div class="mt-14 pt-6 border-t hair-soft flex flex-col md:flex-row justify-between items-start md:items-center gap-3 text-[13px] text-ink-400">
+      <div>&copy; {year} GEOoptimised. All rights reserved.</div>
+      <div class="flex gap-5">
+        <a href="/contact/" class="hover:text-white transition-colors">Contact</a>
+        <span class="font-mono text-ink-500">v.2026.05</span>
+      </div>
     </div>
   </div>
 </footer>
