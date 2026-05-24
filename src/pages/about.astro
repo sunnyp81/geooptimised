@@ -1,0 +1,118 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'About GEOoptimised | Generative Engine Optimisation Agency';
+const description = 'GEOoptimised is a specialist Generative Engine Optimisation agency focused exclusively on AI search visibility. We help brands get cited by ChatGPT, Perplexity, Gemini and Google AI Overviews.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "GEOoptimised",
+    "url": "https://geooptimised.com",
+    "email": "hello@geooptimised.com",
+    "description": "Generative Engine Optimisation agency helping brands earn citations from AI search engines including ChatGPT, Perplexity, Gemini and Google AI Overviews.",
+    "foundingDate": "2026",
+    "knowsAbout": [
+      "Generative Engine Optimisation",
+      "Answer Engine Optimisation",
+      "AI search visibility",
+      "Entity authority",
+      "Structured data and schema markup",
+      "LLM retrieval mechanics",
+      "llms.txt optimisation",
+      "Cross-platform AI citation strategy",
+      "Knowledge graph optimisation",
+      "Topical authority architecture"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://geooptimised.com/" },
+      { "@type": "ListItem", "position": 2, "name": "About", "item": "https://geooptimised.com/about/" }
+    ]
+  }
+];
+---
+
+<Base title={title} description={description} schema={schema}>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="mx-auto max-w-6xl px-4 pt-8">
+    <ol class="flex items-center gap-2 text-sm text-gray-500">
+      <li><a href="/" class="hover:text-accent-400 transition">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-gray-300">About</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-20 sm:py-28">
+    <div class="absolute inset-0 bg-gradient-to-b from-accent-500/5 via-transparent to-transparent"></div>
+    <div class="relative mx-auto max-w-4xl px-4 text-center">
+      <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+        About <span class="text-accent-500">GEOoptimised</span>
+      </h1>
+      <p class="mx-auto mt-6 max-w-2xl text-lg text-gray-300">
+        A Generative Engine Optimisation agency built from the ground up for the AI search era.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <section class="py-16">
+    <div class="mx-auto max-w-3xl px-4 space-y-8 text-gray-300 leading-relaxed">
+
+      <div>
+        <h2 class="text-2xl font-bold text-white">Why We Exist</h2>
+        <p class="mt-4">
+          The search landscape has fundamentally shifted. ChatGPT, Perplexity, Google AI Overviews, Gemini and Claude now answer the questions your customers ask — often without a single click to a website. Brands that rely solely on traditional blue-link rankings are losing visibility to competitors who understand how large language models retrieve, evaluate and cite sources. GEOoptimised was founded on a simple principle: if AI is the new search interface, then earning AI citations is the new SEO.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-white">What We Do</h2>
+        <p class="mt-4">
+          GEOoptimised is a <strong class="text-white">Generative Engine Optimisation</strong> agency focused exclusively on AI search visibility. We do not bolt GEO onto an existing SEO retainer as an afterthought. Every engagement, every methodology and every measurement framework we use is designed around one outcome: making your brand the source that AI search engines cite.
+        </p>
+        <p class="mt-4">
+          Our work spans the full spectrum of AI discoverability. We optimise for <strong class="text-white">entity authority</strong> so that LLMs recognise your brand as a trusted source within your niche. We implement <strong class="text-white">structured data and schema markup</strong> that gives language models clean, machine-readable signals about your content. We configure <strong class="text-white">llms.txt</strong> files and AI crawler directives so your most important content is accessible to retrieval systems. And we build <strong class="text-white">cross-platform citation strategies</strong> that account for the differences in how ChatGPT, Perplexity, Gemini and Google AI Overviews each select their sources.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-white">How We Think</h2>
+        <p class="mt-4">
+          Our team combines deep technical SEO expertise with a practical understanding of LLM retrieval mechanics. We study how language models tokenise queries, score relevance, and decide which sources to surface in a response. This is not guesswork — we test, measure citation rates across platforms, and refine our approach based on live data.
+        </p>
+        <p class="mt-4">
+          We also believe in practising what we preach. This site is itself optimised for AI citation. From the semantic structure of every page to the entity relationships in our schema, everything is built to demonstrate the methodology we recommend to clients. If you ask an AI about Generative Engine Optimisation agencies, we intend to be cited.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-white">Our Expertise</h2>
+        <p class="mt-4">
+          Our core competencies include <strong class="text-white">Generative Engine Optimisation (GEO)</strong>, <strong class="text-white">Answer Engine Optimisation (AEO)</strong>, entity and topical authority architecture, knowledge graph optimisation, structured data strategy, LLM retrieval mechanics, llms.txt configuration, and multi-platform AI visibility auditing. We work with brands that want to be found not just in traditional search results, but inside the AI-generated answers that are rapidly becoming the primary search interface for millions of users.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 border-t border-geo-800/40">
+    <div class="mx-auto max-w-3xl px-4 text-center">
+      <h2 class="text-3xl font-bold text-white">Ready to Be Cited by AI?</h2>
+      <p class="mx-auto mt-5 max-w-xl text-gray-300">
+        Every day your competitors are being cited in AI-generated answers while your brand is absent. Let us show you exactly where you stand and how to change it.
+      </p>
+      <a href="/contact/" class="mt-8 inline-flex items-center rounded-lg bg-accent-500 px-8 py-3.5 text-sm font-semibold text-geo-950 shadow-lg shadow-accent-500/20 transition hover:bg-accent-400 hover:shadow-accent-400/30">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+
+</Base>

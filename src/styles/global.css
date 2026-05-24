@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-geo-950: #0a0e1a;
+  --color-geo-900: #0f1629;
+  --color-geo-800: #1a2340;
+  --color-geo-700: #253157;
+  --color-geo-600: #344580;
+  --color-geo-500: #4a5ea8;
+  --color-geo-400: #6b7ec4;
+  --color-geo-300: #94a3d8;
+  --color-geo-200: #bdc6e8;
+  --color-geo-100: #e0e4f4;
+  --color-geo-50: #f0f2fa;
+  --color-accent-500: #22d3ee;
+  --color-accent-400: #67e8f9;
+  --color-accent-300: #a5f3fc;
+  --color-accent-600: #0891b2;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-geo-950 text-gray-200 font-sans antialiased;
+}

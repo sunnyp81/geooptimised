@@ -1,0 +1,407 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Answer Engine Optimisation (AEO): The Complete Guide | GEOoptimised';
+const description = 'Answer Engine Optimisation (AEO) is the practice of structuring content so answer engines surface it as a direct response. Learn AEO strategy, best practices, and how it fits within GEO.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Answer Engine Optimisation (AEO): The Complete Guide",
+  "description": description,
+  "datePublished": "2026-05-24",
+  "dateModified": "2026-05-24",
+  "author": {
+    "@type": "Organization",
+    "name": "GEOoptimised",
+    "url": "https://geooptimised.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "GEOoptimised",
+    "url": "https://geooptimised.com/"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://geooptimised.com/answer-engine-optimisation/"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is answer engine optimisation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Answer engine optimisation (AEO) is the practice of structuring website content so that answer engines — including Google's featured snippets, AI Overviews, voice assistants, and AI chatbots — can extract and surface it as a direct response to user queries."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is AEO different from SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Traditional SEO optimises for ranking positions in a list of blue links. AEO optimises for selection as a direct answer. SEO targets click-through from search results pages; AEO targets zero-click visibility where the answer engine presents your content directly to the user."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is AEO part of GEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. AEO is a subset of Generative Engine Optimisation (GEO). AEO focuses specifically on answer-box and direct-answer interfaces, while GEO encompasses the broader discipline of optimising for all AI-driven search surfaces, including LLM citations, conversational AI, and generative search experiences."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of content perform best for AEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Content that performs best for AEO follows a clear question-answer structure, uses concise definitions (40-60 words), includes structured data markup like FAQ schema, presents information in lists or tables, and establishes entity clarity through consistent terminology and authoritative sourcing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I still need traditional SEO if I do AEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. AEO builds on top of strong technical and on-page SEO foundations. Without proper indexing, crawlability, site speed, and topical authority, answer engines are unlikely to select your content. AEO is an additional layer of optimisation, not a replacement for SEO."
+      }
+    }
+  ]
+};
+
+const schema = [articleSchema, faqSchema];
+---
+
+<Base title={title} description={description} schema={schema} ogType="article">
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-20 sm:py-28">
+    <div class="absolute inset-0 bg-gradient-to-b from-accent-500/5 via-transparent to-transparent"></div>
+    <div class="relative mx-auto max-w-4xl px-4 text-center">
+      <span class="inline-block rounded-full border border-accent-500/30 bg-accent-500/10 px-4 py-1.5 text-xs font-semibold tracking-wider text-accent-400 uppercase mb-6">Node N2 — AEO Guide</span>
+      <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Answer Engine Optimisation (AEO): The Complete Guide</h1>
+      <p class="mt-6 text-lg text-gray-400 max-w-2xl mx-auto">How to structure content so answer engines — from featured snippets to AI Overviews — surface your brand as the definitive response.</p>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm text-gray-500">
+        <time datetime="2026-05-24">24 May 2026</time>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>14 min read</span>
+        <span class="hidden sm:inline">&middot;</span>
+        <span>By GEOoptimised</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article body -->
+  <article class="mx-auto max-w-3xl px-4 pb-24">
+
+    <!-- Table of contents -->
+    <nav class="mb-16 rounded-xl border border-geo-800/60 bg-geo-900/50 p-6" aria-label="Table of contents">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-accent-400 mb-4">Contents</h2>
+      <ol class="space-y-2 text-sm text-gray-400 list-decimal list-inside">
+        <li><a href="#what-is-aeo" class="hover:text-accent-400 transition">What Is Answer Engine Optimisation?</a></li>
+        <li><a href="#how-aeo-works" class="hover:text-accent-400 transition">How AEO Works</a></li>
+        <li><a href="#aeo-vs-geo" class="hover:text-accent-400 transition">AEO vs GEO</a></li>
+        <li><a href="#aeo-vs-seo" class="hover:text-accent-400 transition">AEO vs Traditional SEO</a></li>
+        <li><a href="#best-practices" class="hover:text-accent-400 transition">AEO Best Practices</a></li>
+        <li><a href="#aeo-tools" class="hover:text-accent-400 transition">AEO Tools</a></li>
+        <li><a href="#business-types" class="hover:text-accent-400 transition">AEO for Different Business Types</a></li>
+        <li><a href="#getting-started" class="hover:text-accent-400 transition">Getting Started with AEO</a></li>
+        <li><a href="#faqs" class="hover:text-accent-400 transition">Frequently Asked Questions</a></li>
+      </ol>
+    </nav>
+
+    <!-- 1. Definition -->
+    <section id="what-is-aeo" class="mb-16">
+      <h2 class="text-2xl font-bold text-white mb-6">What Is Answer Engine Optimisation?</h2>
+      <p class="text-gray-300 leading-relaxed mb-4"><strong class="text-white">Answer Engine Optimisation (AEO) is the practice of structuring website content so that answer engines can extract and surface it as a direct response to user queries.</strong> These answer engines include Google's featured snippets, AI Overviews, Microsoft Copilot, ChatGPT, Perplexity, voice assistants like Alexa and Siri, and any interface that delivers answers rather than links.</p>
+      <p class="text-gray-300 leading-relaxed mb-4">The term emerged as search evolved beyond ten blue links. When a user asks "what is the boiling point of water," Google does not simply list pages about boiling points. It extracts the answer — 100 degrees Celsius — and presents it directly. AEO is the discipline of ensuring your content is the source that gets selected for that extraction.</p>
+      <p class="text-gray-300 leading-relaxed mb-4">Unlike traditional search engine optimisation, which focuses on ranking position within a results page, AEO focuses on <em>selection</em>. The goal is not to rank first in a list of links. The goal is to become the answer itself.</p>
+      <p class="text-gray-300 leading-relaxed">This distinction matters commercially. Brands that appear in answer boxes, AI Overviews, and voice responses gain authority and visibility that no amount of link-list ranking can replicate. The user does not choose between ten options. The answer engine chooses for them — and AEO determines whether that choice is you.</p>
+    </section>
+
+    <!-- 2. How AEO Works -->
+    <section id="how-aeo-works" class="mb-16">
+      <h2 class="text-2xl font-bold text-white mb-6">How AEO Works</h2>
+      <p class="text-gray-300 leading-relaxed mb-4"><strong class="text-white">Answer engines work by identifying the most authoritative, clearly structured response to a query and presenting it without requiring the user to click through.</strong> Understanding the mechanics behind this selection process is essential to optimising for it.</p>
+
+      <h3 class="text-xl font-semibold text-white mt-8 mb-4">Featured Snippets</h3>
+      <p class="text-gray-300 leading-relaxed mb-4">Featured snippets are the original answer engine. Google selects a passage, list, or table from a web page and displays it above the organic results in "position zero." The selection algorithm favours content that directly and concisely answers the query, uses clear heading structures, and comes from pages with established topical authority.</p>
+      <p class="text-gray-300 leading-relaxed mb-4">There are three primary snippet formats: paragraph snippets (a concise text block answering a definitional or explanatory query), list snippets (ordered or unordered lists answering "how to" or "best of" queries), and table snippets (structured data comparisons). Each format requires different content structures to trigger selection.</p>
+
+      <h3 class="text-xl font-semibold text-white mt-8 mb-4">AI Overviews</h3>
+      <p class="text-gray-300 leading-relaxed mb-4">Google's AI Overviews represent the next evolution. Rather than extracting a single passage, the AI synthesises information from multiple sources into a generated response. Your content can be cited as one of several contributing sources, or it can be the primary source the AI draws from.</p>
+      <p class="text-gray-300 leading-relaxed mb-4">AI Overviews favour content that demonstrates expertise through specific data points, original research, and clear entity relationships. Generic content that restates common knowledge is rarely cited. The AI needs a reason to reference <em>your</em> page rather than its own training data.</p>
+
+      <h3 class="text-xl font-semibold text-white mt-8 mb-4">Voice Assistants and Conversational AI</h3>
+      <p class="text-gray-300 leading-relaxed mb-4">Voice search through Alexa, Google Assistant, and Siri operates on a single-answer model. There is no "page two." The assistant selects one source, reads the answer, and the interaction ends. This makes AEO especially critical for voice-first queries, where the stakes are binary: you are either the answer or you are invisible.</p>
+
+      <h3 class="text-xl font-semibold text-white mt-8 mb-4">LLM-Powered Search</h3>
+      <p class="text-gray-300 leading-relaxed">Platforms like Perplexity, ChatGPT with browsing, and Microsoft Copilot use large language models to generate answers with cited sources. These systems evaluate content for factual accuracy, source authority, recency, and structural clarity. They tend to cite content that makes definitive statements backed by evidence rather than hedged, opinion-light prose.</p>
+    </section>
+
+    <!-- 3. AEO vs GEO -->
+    <section id="aeo-vs-geo" class="mb-16">
+      <h2 class="text-2xl font-bold text-white mb-6">AEO vs GEO: How They Relate</h2>
+      <p class="text-gray-300 leading-relaxed mb-4"><strong class="text-white">AEO is a subset of <a href="/generative-engine-optimisation/" class="text-accent-400 hover:text-accent-300 underline decoration-accent-500/30 underline-offset-2 transition">Generative Engine Optimisation (GEO)</a>.</strong> The two disciplines are related but differ in scope and application.</p>
+      <p class="text-gray-300 leading-relaxed mb-4">AEO focuses specifically on answer-box and direct-answer interfaces: featured snippets, knowledge panels, voice responses, and People Also Ask expansions. The optimisation target is a discrete answer to a discrete question.</p>
+      <p class="text-gray-300 leading-relaxed mb-4">GEO encompasses the broader challenge of making your brand visible across all AI-driven search surfaces. This includes LLM citation in conversational AI, generative search experiences like Google's AI Overviews, and the emerging landscape of AI agents that autonomously research topics and recommend solutions.</p>
+      <p class="text-gray-300 leading-relaxed mb-4">Think of it as a hierarchy. GEO is the umbrella discipline. AEO is the branch that addresses the specific challenge of being selected as a direct answer. Every AEO tactic is a GEO tactic, but GEO includes strategies — like entity authority building, LLM training data optimisation, and multi-source citation strategies — that go beyond the scope of answer-box optimisation.</p>
+      <p class="text-gray-300 leading-relaxed">If your primary concern is featured snippets and voice search answers, AEO is your focus. If you want comprehensive visibility across ChatGPT, Perplexity, Copilot, and AI Overviews, you need the full <a href="/generative-engine-optimisation/" class="text-accent-400 hover:text-accent-300 underline decoration-accent-500/30 underline-offset-2 transition">GEO framework</a>.</p>
+    </section>
+
+    <!-- 4. AEO vs Traditional SEO -->
+    <section id="aeo-vs-seo" class="mb-16">
+      <h2 class="text-2xl font-bold text-white mb-6">AEO vs Traditional SEO</h2>
+      <p class="text-gray-300 leading-relaxed mb-6"><strong class="text-white">AEO changes the success metric from ranking position to answer selection, but it does not replace traditional SEO.</strong> The two disciplines are complementary, and AEO performs best when built on top of strong SEO foundations.</p>
+
+      <div class="overflow-x-auto rounded-xl border border-geo-800/60">
+        <table class="w-full text-sm text-left">
+          <thead>
+            <tr class="border-b border-geo-800/60 bg-geo-900/80">
+              <th class="px-4 py-3 font-semibold text-accent-400">Dimension</th>
+              <th class="px-4 py-3 font-semibold text-accent-400">Traditional SEO</th>
+              <th class="px-4 py-3 font-semibold text-accent-400">AEO</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-300">
+            <tr class="border-b border-geo-800/40">
+              <td class="px-4 py-3 font-medium text-white">Goal</td>
+              <td class="px-4 py-3">Rank highly in organic results</td>
+              <td class="px-4 py-3">Be selected as the direct answer</td>
+            </tr>
+            <tr class="border-b border-geo-800/40">
+              <td class="px-4 py-3 font-medium text-white">Success metric</td>
+              <td class="px-4 py-3">Position, clicks, traffic</td>
+              <td class="px-4 py-3">Answer selection rate, brand visibility</td>
+            </tr>
+            <tr class="border-b border-geo-800/40">
+              <td class="px-4 py-3 font-medium text-white">Content format</td>
+              <td class="px-4 py-3">Long-form, keyword-rich</td>
+              <td class="px-4 py-3">Structured, concise, question-answer pairs</td>
+            </tr>
+            <tr class="border-b border-geo-800/40">
+              <td class="px-4 py-3 font-medium text-white">User interaction</td>
+              <td class="px-4 py-3">User clicks through to your page</td>
+              <td class="px-4 py-3">User sees your answer without clicking</td>
+            </tr>
+            <tr class="border-b border-geo-800/40">
+              <td class="px-4 py-3 font-medium text-white">Schema reliance</td>
+              <td class="px-4 py-3">Helpful but optional</td>
+              <td class="px-4 py-3">Critical for selection signals</td>
+            </tr>
+            <tr class="border-b border-geo-800/40">
+              <td class="px-4 py-3 font-medium text-white">Competition model</td>
+              <td class="px-4 py-3">Compete for page-one positions</td>
+              <td class="px-4 py-3">Compete for a single answer slot</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-medium text-white">Traffic impact</td>
+              <td class="px-4 py-3">Direct traffic generation</td>
+              <td class="px-4 py-3">Brand authority; may reduce direct clicks</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="text-xl font-semibold text-white mt-8 mb-4">What Stays the Same</h3>
+      <p class="text-gray-300 leading-relaxed mb-4">Technical SEO fundamentals remain essential. Crawlability, page speed, mobile responsiveness, HTTPS, and clean site architecture are prerequisites for both SEO and AEO. Answer engines will not select content from pages they cannot efficiently crawl and render.</p>
+      <p class="text-gray-300 leading-relaxed mb-4">Topical authority still matters. Answer engines prefer content from domains that demonstrate comprehensive expertise in their subject area. A site with fifty deeply researched articles on home energy is more likely to be selected as the answer source for a heat pump query than a generalist blog with one article on the topic.</p>
+
+      <h3 class="text-xl font-semibold text-white mt-8 mb-4">What Changes</h3>
+      <p class="text-gray-300 leading-relaxed">Content structure becomes paramount. Traditional SEO tolerates buried answers and long introductions. AEO demands that the core answer appears early, clearly, and in a format that machines can extract. The "inverted pyramid" — leading with the definitive answer before expanding into supporting detail — is the primary structural pattern for AEO content.</p>
+    </section>
+
+    <!-- 5. AEO Best Practices -->
+    <section id="best-practices" class="mb-16">
+      <h2 class="text-2xl font-bold text-white mb-6">AEO Best Practices</h2>
+      <p class="text-gray-300 leading-relaxed mb-8"><strong class="text-white">Effective AEO follows ten principles that make content machine-extractable, authoritative, and structurally clear.</strong> These practices are not theoretical — they reflect the patterns consistently observed in content that answer engines select.</p>
+
+      <div class="space-y-8">
+        <div class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-6">
+          <h3 class="text-lg font-semibold text-accent-400 mb-3">1. Lead with a definitive answer</h3>
+          <p class="text-gray-300 leading-relaxed">Every section that targets an answer query should open with a clear, concise statement of 40-60 words that directly answers the question. This is the passage answer engines extract. Place it immediately after the heading, before any context or elaboration. Avoid introductory preamble.</p>
+        </div>
+
+        <div class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-6">
+          <h3 class="text-lg font-semibold text-accent-400 mb-3">2. Use question-based headings</h3>
+          <p class="text-gray-300 leading-relaxed">Structure your H2s and H3s as the exact questions users ask. Answer engines match queries to headings before evaluating the body text beneath them. "What is answer engine optimisation?" is more AEO-effective than "Overview of AEO" because it mirrors the natural language query.</p>
+        </div>
+
+        <div class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-6">
+          <h3 class="text-lg font-semibold text-accent-400 mb-3">3. Implement FAQ schema</h3>
+          <p class="text-gray-300 leading-relaxed">FAQPage structured data explicitly marks up question-answer pairs for machine consumption. This is not optional for AEO — it is the strongest signal you can send that your content is structured for direct-answer extraction. Include 4-8 genuine FAQs per page, each with a complete, self-contained answer.</p>
+        </div>
+
+        <div class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-6">
+          <h3 class="text-lg font-semibold text-accent-400 mb-3">4. Structure content for extraction</h3>
+          <p class="text-gray-300 leading-relaxed">Use lists for process-based queries ("how to"), tables for comparison queries ("X vs Y"), and concise paragraphs for definitional queries ("what is"). Match your content format to the snippet type your target query triggers. Check existing SERPs to identify which format Google currently prefers for each query.</p>
+        </div>
+
+        <div class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-6">
+          <h3 class="text-lg font-semibold text-accent-400 mb-3">5. Establish entity clarity</h3>
+          <p class="text-gray-300 leading-relaxed">Answer engines need to understand what entities your content discusses and how they relate. Use consistent terminology throughout. If you refer to "answer engine optimisation," do not switch to "AEO" without first establishing the abbreviation. Mention related entities (Google, featured snippets, AI Overviews) to build semantic context.</p>
+        </div>
+
+        <div class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-6">
+          <h3 class="text-lg font-semibold text-accent-400 mb-3">6. Build source authority signals</h3>
+          <p class="text-gray-300 leading-relaxed">Answer engines preferentially select content from authoritative sources. Cite original data, reference specific studies, include author credentials, and link to primary sources. Pages that aggregate information without adding original insight are rarely selected. Demonstrate why your perspective adds unique value.</p>
+        </div>
+
+        <div class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-6">
+          <h3 class="text-lg font-semibold text-accent-400 mb-3">7. Optimise for voice search patterns</h3>
+          <p class="text-gray-300 leading-relaxed">Voice queries are longer and more conversational than typed queries. They frequently begin with "how," "what," "why," "when," and "who." Write answers that sound natural when read aloud. Keep answer paragraphs under 50 words for voice snippet selection — assistants will not read extended passages.</p>
+        </div>
+
+        <div class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-6">
+          <h3 class="text-lg font-semibold text-accent-400 mb-3">8. Target People Also Ask boxes</h3>
+          <p class="text-gray-300 leading-relaxed">People Also Ask (PAA) is an answer engine in its own right. Each PAA expansion pulls content from a different source, creating multiple opportunities for visibility. Research the PAA questions that appear for your target keywords and create content that answers each one with a dedicated heading and concise response.</p>
+        </div>
+
+        <div class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-6">
+          <h3 class="text-lg font-semibold text-accent-400 mb-3">9. Keep content fresh and accurate</h3>
+          <p class="text-gray-300 leading-relaxed">Answer engines deprioritise stale content. Regularly update statistics, dates, and factual claims. Include a visible "last updated" date. For topics that change frequently — pricing, regulations, technology capabilities — set a quarterly review schedule and update the dateModified in your Article schema.</p>
+        </div>
+
+        <div class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-6">
+          <h3 class="text-lg font-semibold text-accent-400 mb-3">10. Make your content crawlable by AI</h3>
+          <p class="text-gray-300 leading-relaxed">Ensure your robots.txt allows access to AI crawlers (GPTBot, ClaudeBot, PerplexityBot). Provide an <code class="text-accent-400 bg-geo-800/50 px-1 rounded">llms.txt</code> file that summarises your site's expertise and structure. Use semantic HTML — <code class="text-accent-400 bg-geo-800/50 px-1 rounded">&lt;article&gt;</code>, <code class="text-accent-400 bg-geo-800/50 px-1 rounded">&lt;section&gt;</code>, <code class="text-accent-400 bg-geo-800/50 px-1 rounded">&lt;nav&gt;</code> — rather than generic <code class="text-accent-400 bg-geo-800/50 px-1 rounded">&lt;div&gt;</code> wrappers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. AEO Tools -->
+    <section id="aeo-tools" class="mb-16">
+      <h2 class="text-2xl font-bold text-white mb-6">AEO Tools</h2>
+      <p class="text-gray-300 leading-relaxed mb-6"><strong class="text-white">AEO requires tools that reveal how answer engines interact with your content, not just where you rank.</strong> The traditional rank tracker is necessary but insufficient. You need to track answer selection, not just position.</p>
+
+      <div class="space-y-4">
+        <div class="rounded-lg border border-geo-800/40 bg-geo-900/30 p-5">
+          <h3 class="font-semibold text-white mb-2">SERP Feature Trackers</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Tools like Semrush, Ahrefs, and SE Ranking track featured snippet ownership, People Also Ask appearances, and knowledge panel presence. These show you where you currently hold answer positions and where competitors own them.</p>
+        </div>
+        <div class="rounded-lg border border-geo-800/40 bg-geo-900/30 p-5">
+          <h3 class="font-semibold text-white mb-2">Schema Validators</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Google's Rich Results Test and Schema.org Validator confirm your structured data is correctly implemented. Invalid schema is worse than no schema — it signals unreliable content to answer engines.</p>
+        </div>
+        <div class="rounded-lg border border-geo-800/40 bg-geo-900/30 p-5">
+          <h3 class="font-semibold text-white mb-2">AI Search Monitors</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Platforms like Otterly.AI, Peec AI, and Profound monitor how your brand appears in AI-generated answers across ChatGPT, Perplexity, and Google AI Overviews. These are the emerging standard for AEO measurement.</p>
+        </div>
+        <div class="rounded-lg border border-geo-800/40 bg-geo-900/30 p-5">
+          <h3 class="font-semibold text-white mb-2">Google Search Console</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">GSC's search appearance filters show impressions and clicks specifically from featured snippets and other SERP features. This is your primary free tool for tracking AEO performance on Google.</p>
+        </div>
+        <div class="rounded-lg border border-geo-800/40 bg-geo-900/30 p-5">
+          <h3 class="font-semibold text-white mb-2">Content Optimisation Platforms</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Clearscope, SurferSEO, and Frase analyse the semantic patterns in content that currently holds answer positions. They help you structure content to match the patterns answer engines prefer for specific query types.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. AEO for Different Business Types -->
+    <section id="business-types" class="mb-16">
+      <h2 class="text-2xl font-bold text-white mb-6">AEO for Different Business Types</h2>
+      <p class="text-gray-300 leading-relaxed mb-6"><strong class="text-white">AEO strategy varies by business type because different industries trigger different answer formats.</strong> The approach for a local service business differs fundamentally from that of a SaaS company or an e-commerce brand.</p>
+
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-6">
+          <h3 class="font-semibold text-accent-400 mb-3">Local Services</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Local businesses should optimise for "near me" and "best [service] in [location]" answer queries. Google Business Profile optimisation, local FAQ schema, and review structured data are critical. Voice search disproportionately favours local queries — 46% of all voice searches have local intent.</p>
+        </div>
+        <div class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-6">
+          <h3 class="font-semibold text-accent-400 mb-3">E-commerce</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Product-related queries trigger shopping-specific answer formats. Optimise Product schema, include pricing and availability data, and target comparison queries with structured tables. "Best [product] for [use case]" queries are high-value AEO targets for e-commerce brands.</p>
+        </div>
+        <div class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-6">
+          <h3 class="font-semibold text-accent-400 mb-3">SaaS and Technology</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Technology companies should focus on definitional queries ("what is [feature/concept]"), how-to content, and comparison queries ("X vs Y"). Technical documentation with clear code examples and step-by-step instructions performs exceptionally well in both featured snippets and AI citations.</p>
+        </div>
+        <div class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-6">
+          <h3 class="font-semibold text-accent-400 mb-3">Professional Services</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Law firms, accountancies, and consultancies should target informational queries that precede commercial intent. "How much does [service] cost," "do I need [service]," and "what is the process for [action]" are high-value AEO targets that position the firm as the authority before the prospect begins comparing providers.</p>
+        </div>
+        <div class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-6">
+          <h3 class="font-semibold text-accent-400 mb-3">Healthcare and YMYL</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Your Money, Your Life content faces elevated scrutiny from answer engines. Medical, financial, and legal content must demonstrate E-E-A-T (Experience, Expertise, Authoritativeness, Trust) through author credentials, peer-reviewed citations, and clear disclaimers. Answer engines are increasingly cautious about which sources they select for health-related answers.</p>
+        </div>
+        <div class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-6">
+          <h3 class="font-semibold text-accent-400 mb-3">Publishers and Media</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">News and media organisations should optimise for recency-sensitive queries. Timely, fact-checked reporting with clear datelines and NewsArticle schema receives preferential treatment in answer formats. Evergreen explainer content with regular updates targets the long-tail of informational queries.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Getting Started -->
+    <section id="getting-started" class="mb-16">
+      <h2 class="text-2xl font-bold text-white mb-6">Getting Started with AEO</h2>
+      <p class="text-gray-300 leading-relaxed mb-6"><strong class="text-white">Starting AEO does not require rebuilding your content strategy from scratch.</strong> It requires auditing your existing content through an answer-engine lens and making structural adjustments that improve machine extractability.</p>
+
+      <ol class="space-y-4 text-gray-300 leading-relaxed list-decimal list-inside mb-8">
+        <li><strong class="text-white">Audit your current featured snippet presence.</strong> Use GSC and a SERP tracker to identify which queries you already appear in answer boxes for, and which competitor holds the snippets you should own.</li>
+        <li><strong class="text-white">Identify high-value answer queries.</strong> Filter your keyword list for question-based queries with featured snippet or AI Overview presence. Prioritise queries where you already rank in the top five — these are the easiest to convert into answer positions.</li>
+        <li><strong class="text-white">Restructure your top pages.</strong> Add clear question headings, lead each section with a 40-60 word definitive answer, and implement FAQ schema. This single change can shift content from "ranked but not selected" to "owning the answer box."</li>
+        <li><strong class="text-white">Implement structured data.</strong> Article, FAQPage, HowTo, and Product schemas are the minimum. Validate every implementation with Google's Rich Results Test before deployment.</li>
+        <li><strong class="text-white">Monitor and iterate.</strong> Track answer selection weekly. When you lose an answer position, analyse what the new holder does differently. AEO is a continuous optimisation process, not a one-time implementation.</li>
+      </ol>
+
+      <div class="rounded-xl border border-accent-500/30 bg-accent-500/5 p-8 text-center">
+        <h3 class="text-xl font-bold text-white mb-3">Need expert AEO implementation?</h3>
+        <p class="text-gray-400 mb-6 max-w-lg mx-auto">GEOoptimised helps brands become the answer, not just a result. Our <a href="/aeo-agency/" class="text-accent-400 hover:text-accent-300 underline decoration-accent-500/30 underline-offset-2 transition">AEO agency services</a> cover audit, strategy, and ongoing optimisation across all answer engine surfaces.</p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="/aeo-agency/" class="inline-flex items-center rounded-lg bg-accent-500 px-6 py-3 text-sm font-semibold text-geo-950 transition hover:bg-accent-400">Explore AEO Services</a>
+          <a href="/contact/" class="inline-flex items-center rounded-lg border border-accent-500/30 px-6 py-3 text-sm font-semibold text-accent-400 transition hover:bg-accent-500/10">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FAQs -->
+    <section id="faqs" class="mb-16">
+      <h2 class="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
+
+      <div class="space-y-6">
+        <div class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-6">
+          <h3 class="font-semibold text-white mb-3">What is answer engine optimisation?</h3>
+          <p class="text-gray-300 leading-relaxed">Answer engine optimisation (AEO) is the practice of structuring website content so that answer engines — including Google's featured snippets, AI Overviews, voice assistants, and AI chatbots — can extract and surface it as a direct response to user queries.</p>
+        </div>
+
+        <div class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-6">
+          <h3 class="font-semibold text-white mb-3">How is AEO different from SEO?</h3>
+          <p class="text-gray-300 leading-relaxed">Traditional SEO optimises for ranking positions in a list of blue links. AEO optimises for selection as a direct answer. SEO targets click-through from search results pages; AEO targets zero-click visibility where the answer engine presents your content directly to the user.</p>
+        </div>
+
+        <div class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-6">
+          <h3 class="font-semibold text-white mb-3">Is AEO part of GEO?</h3>
+          <p class="text-gray-300 leading-relaxed">Yes. AEO is a subset of <a href="/generative-engine-optimisation/" class="text-accent-400 hover:text-accent-300 underline decoration-accent-500/30 underline-offset-2 transition">Generative Engine Optimisation (GEO)</a>. AEO focuses specifically on answer-box and direct-answer interfaces, while GEO encompasses the broader discipline of optimising for all AI-driven search surfaces, including LLM citations, conversational AI, and generative search experiences.</p>
+        </div>
+
+        <div class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-6">
+          <h3 class="font-semibold text-white mb-3">What types of content perform best for AEO?</h3>
+          <p class="text-gray-300 leading-relaxed">Content that performs best for AEO follows a clear question-answer structure, uses concise definitions (40-60 words), includes structured data markup like FAQ schema, presents information in lists or tables, and establishes entity clarity through consistent terminology and authoritative sourcing.</p>
+        </div>
+
+        <div class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-6">
+          <h3 class="font-semibold text-white mb-3">Do I still need traditional SEO if I do AEO?</h3>
+          <p class="text-gray-300 leading-relaxed">Yes. AEO builds on top of strong technical and on-page SEO foundations. Without proper indexing, crawlability, site speed, and topical authority, answer engines are unlikely to select your content. AEO is an additional layer of optimisation, not a replacement for SEO.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Internal link block -->
+    <section class="rounded-xl border border-geo-800/60 bg-geo-900/30 p-8">
+      <h2 class="text-lg font-semibold text-white mb-4">Related guides</h2>
+      <ul class="space-y-3 text-sm">
+        <li><a href="/generative-engine-optimisation/" class="text-accent-400 hover:text-accent-300 transition">Generative Engine Optimisation (GEO): The Complete Guide</a> — the root discipline that AEO sits within.</li>
+        <li><a href="/geo-services/" class="text-accent-400 hover:text-accent-300 transition">GEO Services</a> — full-service generative engine optimisation for brands and agencies.</li>
+        <li><a href="/aeo-agency/" class="text-accent-400 hover:text-accent-300 transition">AEO Agency</a> — specialist answer engine optimisation services.</li>
+        <li><a href="/geo-agency/" class="text-accent-400 hover:text-accent-300 transition">GEO Agency</a> — end-to-end GEO strategy, audit, and implementation.</li>
+      </ul>
+    </section>
+
+  </article>
+
+</Base>

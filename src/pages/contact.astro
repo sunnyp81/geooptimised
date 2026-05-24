@@ -1,0 +1,115 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Contact GEOoptimised | Get a GEO Audit';
+const description = 'Get in touch with GEOoptimised for a free AI visibility assessment. Find out how your brand performs in ChatGPT, Perplexity, Gemini and Google AI Overviews.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact GEOoptimised",
+    "url": "https://geooptimised.com/contact/",
+    "description": "Contact GEOoptimised to start your Generative Engine Optimisation journey with a free AI visibility assessment.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "GEOoptimised",
+      "url": "https://geooptimised.com",
+      "email": "hello@geooptimised.com"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://geooptimised.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://geooptimised.com/contact/" }
+    ]
+  }
+];
+---
+
+<Base title={title} description={description} schema={schema}>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="mx-auto max-w-6xl px-4 pt-8">
+    <ol class="flex items-center gap-2 text-sm text-gray-500">
+      <li><a href="/" class="hover:text-accent-400 transition">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-gray-300">Contact</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-20 sm:py-28">
+    <div class="absolute inset-0 bg-gradient-to-b from-accent-500/5 via-transparent to-transparent"></div>
+    <div class="relative mx-auto max-w-4xl px-4 text-center">
+      <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+        Get in <span class="text-accent-500">Touch</span>
+      </h1>
+      <p class="mx-auto mt-6 max-w-2xl text-lg text-gray-300">
+        Ready to make your brand visible in AI search? Start with a conversation.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact form + info -->
+  <section class="py-16">
+    <div class="mx-auto max-w-3xl px-4">
+
+      <div class="mb-12 text-center text-gray-300">
+        <p>
+          We start every engagement with a <strong class="text-white">free AI visibility assessment</strong>. We will audit how your brand currently performs across ChatGPT, Perplexity, Gemini and Google AI Overviews — and show you exactly where the opportunities are. No commitment, no obligation. Just data.
+        </p>
+        <p class="mt-4 text-gray-400">
+          You can also reach us directly at <a href="mailto:hello@geooptimised.com" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:decoration-accent-400 transition">hello@geooptimised.com</a>.
+        </p>
+      </div>
+
+      <form action="https://formsubmit.co/hello@geooptimised.com" method="POST" class="space-y-6 rounded-xl border border-geo-800/60 bg-geo-900/40 p-8">
+
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-300">Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name"
+            class="mt-2 w-full rounded-lg border border-geo-700 bg-geo-900 px-4 py-3 text-white placeholder-gray-500 transition focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/40"
+            placeholder="Your name" />
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email"
+            class="mt-2 w-full rounded-lg border border-geo-700 bg-geo-900 px-4 py-3 text-white placeholder-gray-500 transition focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/40"
+            placeholder="you@company.com" />
+        </div>
+
+        <div>
+          <label for="website" class="block text-sm font-medium text-gray-300">Website URL</label>
+          <input type="url" id="website" name="website" autocomplete="url"
+            class="mt-2 w-full rounded-lg border border-geo-700 bg-geo-900 px-4 py-3 text-white placeholder-gray-500 transition focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/40"
+            placeholder="https://yoursite.com" />
+        </div>
+
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-300">Message</label>
+          <textarea id="message" name="message" rows="5" required
+            class="mt-2 w-full rounded-lg border border-geo-700 bg-geo-900 px-4 py-3 text-white placeholder-gray-500 transition focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/40 resize-y"
+            placeholder="Tell us about your goals and what you would like help with."></textarea>
+        </div>
+
+        <!-- FormSubmit config -->
+        <input type="hidden" name="_subject" value="New GEO enquiry from geooptimised.com" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://geooptimised.com/contact/?submitted=true" />
+        <input type="text" name="_honey" style="display:none" />
+
+        <button type="submit"
+          class="w-full rounded-lg bg-accent-500 px-8 py-3.5 text-sm font-semibold text-geo-950 shadow-lg shadow-accent-500/20 transition hover:bg-accent-400 hover:shadow-accent-400/30">
+          Send Message
+        </button>
+
+      </form>
+
+    </div>
+  </section>
+
+</Base>

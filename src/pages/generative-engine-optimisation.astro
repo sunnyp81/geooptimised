@@ -1,0 +1,582 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Generative Engine Optimisation (GEO): The Complete Guide to AI Search';
+const description = 'Generative Engine Optimisation (GEO) is the practice of optimising your brand to be cited by AI search engines. Learn the complete GEO framework, tools, metrics, and strategy.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  author: {
+    '@type': 'Organization',
+    name: 'GEOoptimised',
+    url: 'https://geooptimised.com/'
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'GEOoptimised',
+    url: 'https://geooptimised.com/'
+  },
+  datePublished: '2026-05-24',
+  dateModified: '2026-05-24',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/generative-engine-optimisation/'
+  }
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is Generative Engine Optimisation (GEO)?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Generative Engine Optimisation (GEO) is the practice of structuring your content, entity signals, and technical infrastructure so that large language models cite your brand when generating answers. Unlike traditional SEO, which targets blue-link rankings, GEO targets inclusion in AI-generated responses from ChatGPT, Google AI Overviews, Perplexity, Copilot, and similar systems.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'How is GEO different from traditional SEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Traditional SEO optimises for search engine ranking positions and click-through rates on blue links. GEO optimises for citation within AI-generated answers. SEO relies on backlinks, keyword density, and crawlability. GEO relies on entity authority, structured data, quotable content patterns, and cross-model consistency. Both disciplines share foundational elements like topical authority and technical excellence, but GEO requires a fundamentally different measurement framework.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Which AI search engines does GEO target?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'GEO targets all major AI-powered search and answer systems including Google AI Overviews (formerly SGE), ChatGPT with browsing, Microsoft Copilot, Perplexity AI, Claude, Gemini, and any retrieval-augmented generation (RAG) system that synthesises answers from web sources. Each model has different retrieval preferences, which is why cross-model optimisation is a core part of the GEO framework.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'How do you measure GEO success?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'GEO success is measured through citation frequency (how often your brand appears in AI answers), citation accuracy (whether AI correctly attributes your claims), share of voice in AI responses compared to competitors, brand mention sentiment across AI outputs, and referral traffic from AI platforms. Traditional metrics like ranking position become less relevant as AI answers replace blue links.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Do businesses need GEO or is traditional SEO enough?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Any business that depends on organic search traffic needs GEO. AI-generated answers are already displacing traditional search results, with Google AI Overviews appearing for an increasing percentage of queries. Businesses that ignore GEO risk becoming invisible in AI search results even if they rank well in traditional blue links. The transition is accelerating — brands that build entity authority and AI-readable content now will have a significant advantage over those who wait.'
+      }
+    }
+  ]
+};
+
+const schema = [articleSchema, faqSchema];
+---
+
+<Base title={title} description={description} schema={schema} ogType="article">
+  <!-- Hero -->
+  <section class="relative overflow-hidden border-b border-geo-800/40">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--color-accent-500)_0%,_transparent_50%)] opacity-[0.07]"></div>
+    <div class="relative mx-auto max-w-4xl px-4 py-20 sm:py-28">
+      <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-accent-500">The Definitive Guide</p>
+      <h1 class="text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+        Generative Engine Optimisation: How to Get Your Brand Cited by AI
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-gray-400">
+        AI search engines are replacing blue links with generated answers. The brands that appear inside those answers win. This guide covers everything you need to know about GEO — from first principles to full implementation.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="/geo-services/" class="rounded-lg bg-accent-500 px-6 py-3 text-sm font-semibold text-geo-950 transition hover:bg-accent-400">Get GEO Services</a>
+        <a href="#what-is-geo" class="rounded-lg border border-geo-700 px-6 py-3 text-sm font-semibold text-gray-300 transition hover:border-accent-500 hover:text-white">Read the Guide</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Table of Contents -->
+  <nav class="border-b border-geo-800/40 bg-geo-900/50" aria-label="Table of contents">
+    <div class="mx-auto max-w-4xl px-4 py-6">
+      <p class="mb-3 text-xs font-semibold uppercase tracking-widest text-accent-500">In this guide</p>
+      <ol class="columns-1 gap-x-8 text-sm text-gray-400 sm:columns-2">
+        <li class="mb-1.5"><a href="#what-is-geo" class="transition hover:text-accent-400">1. What Is Generative Engine Optimisation?</a></li>
+        <li class="mb-1.5"><a href="#how-geo-works" class="transition hover:text-accent-400">2. How GEO Works</a></li>
+        <li class="mb-1.5"><a href="#geo-vs-seo" class="transition hover:text-accent-400">3. GEO vs Traditional SEO</a></li>
+        <li class="mb-1.5"><a href="#geo-framework" class="transition hover:text-accent-400">4. The 7-Step GEO Framework</a></li>
+        <li class="mb-1.5"><a href="#geo-tools" class="transition hover:text-accent-400">5. GEO Tools &amp; Platforms</a></li>
+        <li class="mb-1.5"><a href="#measuring-geo" class="transition hover:text-accent-400">6. Measuring GEO Success</a></li>
+        <li class="mb-1.5"><a href="#who-needs-geo" class="transition hover:text-accent-400">7. Who Needs GEO?</a></li>
+        <li class="mb-1.5"><a href="#geo-services" class="transition hover:text-accent-400">8. GEO Services</a></li>
+        <li class="mb-1.5"><a href="#faqs" class="transition hover:text-accent-400">9. FAQs</a></li>
+        <li class="mb-1.5"><a href="#next-steps" class="transition hover:text-accent-400">10. Next Steps</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <article class="mx-auto max-w-4xl px-4 py-16">
+
+    <!-- Section 1: What Is GEO -->
+    <section id="what-is-geo" class="mb-20 scroll-mt-24">
+      <h2 class="mb-6 text-3xl font-bold text-white">What Is Generative Engine Optimisation?</h2>
+
+      <p class="mb-5 text-lg leading-relaxed text-gray-300">
+        <strong class="text-white">Generative Engine Optimisation (GEO) is the practice of structuring your content, entity signals, and technical infrastructure so that large language models cite your brand when generating answers.</strong> It is the next evolution of search marketing — moving from ranking in a list of ten blue links to being directly quoted inside an AI-generated response.
+      </p>
+
+      <p class="mb-5 leading-relaxed text-gray-300">
+        When someone asks ChatGPT, Google&rsquo;s AI Overview, Perplexity, or Microsoft Copilot a question, those systems retrieve information from across the web, synthesise it, and produce a single coherent answer. The sources that get cited in those answers receive attention, trust, and traffic. GEO is the discipline of ensuring your brand is one of those cited sources.
+      </p>
+
+      <p class="mb-5 leading-relaxed text-gray-300">
+        The term covers both the American spelling &mdash; generative engine optimization &mdash; and the British spelling used throughout this guide. Both refer to the same practice: optimising for AI-generated search results rather than traditional organic rankings.
+      </p>
+
+      <p class="mb-5 leading-relaxed text-gray-300">
+        GEO sits alongside <a href="/answer-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 transition hover:text-accent-300">answer engine optimisation (AEO)</a>, which focuses specifically on getting your content surfaced in direct-answer formats like featured snippets and voice assistants. While AEO has existed since Google&rsquo;s Knowledge Graph era, GEO addresses the fundamentally different mechanics of retrieval-augmented generation used by large language models. In practice, a comprehensive AI search strategy incorporates both.
+      </p>
+
+      <p class="leading-relaxed text-gray-300">
+        GEO is not a rebrand of SEO. It is an additional discipline that requires its own framework, its own tools, and its own success metrics. Traditional SEO remains important &mdash; a technically excellent site with strong domain authority gives you an advantage in GEO as well. But GEO introduces new requirements around entity definition, content structure, and cross-model visibility that SEO alone does not address.
+      </p>
+    </section>
+
+    <!-- Section 2: How GEO Works -->
+    <section id="how-geo-works" class="mb-20 scroll-mt-24">
+      <h2 class="mb-6 text-3xl font-bold text-white">How GEO Works</h2>
+
+      <p class="mb-5 text-lg leading-relaxed text-gray-300">
+        <strong class="text-white">GEO works by aligning your content with the retrieval and synthesis process that large language models use to generate answers.</strong> Understanding this process is essential to optimising for it.
+      </p>
+
+      <h3 class="mb-3 mt-8 text-xl font-semibold text-white">The Retrieval-Augmented Generation (RAG) Pipeline</h3>
+
+      <p class="mb-5 leading-relaxed text-gray-300">
+        Most AI search systems use a process called retrieval-augmented generation. When a user submits a query, the system does not rely solely on its pre-trained knowledge. Instead, it follows a multi-stage pipeline:
+      </p>
+
+      <ol class="mb-6 space-y-3 pl-5 text-gray-300">
+        <li class="leading-relaxed"><span class="mr-2 font-semibold text-accent-500">1.</span><strong class="text-white">Query interpretation.</strong> The model parses the user&rsquo;s intent, identifies entities, and determines what type of information is needed. Complex queries may be decomposed into sub-queries.</li>
+        <li class="leading-relaxed"><span class="mr-2 font-semibold text-accent-500">2.</span><strong class="text-white">Source retrieval.</strong> The system searches its index (or the live web) for relevant documents. This resembles traditional search but often uses dense vector retrieval in addition to keyword matching. Pages with strong entity signals and clear topical relevance rank higher in retrieval.</li>
+        <li class="leading-relaxed"><span class="mr-2 font-semibold text-accent-500">3.</span><strong class="text-white">Passage extraction.</strong> From the retrieved documents, the model identifies specific passages that are most relevant to the query. Content that uses clear declarative statements, is well-structured with descriptive headings, and provides specific data points is more likely to be extracted.</li>
+        <li class="leading-relaxed"><span class="mr-2 font-semibold text-accent-500">4.</span><strong class="text-white">Synthesis and attribution.</strong> The model combines information from multiple sources into a single answer. Sources that provide unique, authoritative information — rather than restating what every other page says — are more likely to be cited as a distinct source.</li>
+      </ol>
+
+      <h3 class="mb-3 mt-8 text-xl font-semibold text-white">What Makes Content Citable</h3>
+
+      <p class="mb-5 leading-relaxed text-gray-300">
+        Through analysis of citation patterns across ChatGPT, Perplexity, Copilot, and Google AI Overviews, several content characteristics consistently correlate with citation:
+      </p>
+
+      <ul class="mb-6 space-y-2 pl-5 text-gray-300">
+        <li class="leading-relaxed"><span class="mr-2 text-accent-500">&bull;</span><strong class="text-white">Declarative opening statements</strong> that define a concept concisely. AI models gravitate toward sentences that begin with &ldquo;X is&rdquo; or &ldquo;X refers to&rdquo; because they are easy to extract and attribute.</li>
+        <li class="leading-relaxed"><span class="mr-2 text-accent-500">&bull;</span><strong class="text-white">Original data, statistics, and specific claims</strong> that cannot be found elsewhere. If your content adds a unique data point, the model has no choice but to cite you for it.</li>
+        <li class="leading-relaxed"><span class="mr-2 text-accent-500">&bull;</span><strong class="text-white">Entity-rich content</strong> that connects concepts to recognised entities (brands, people, technologies, standards). This helps the model understand the authority and context of your claims.</li>
+        <li class="leading-relaxed"><span class="mr-2 text-accent-500">&bull;</span><strong class="text-white">Structured data and schema markup</strong> that explicitly define entities, relationships, and content types. JSON-LD helps retrieval systems understand your content before they process the visible text.</li>
+        <li class="leading-relaxed"><span class="mr-2 text-accent-500">&bull;</span><strong class="text-white">Consistent cross-web entity presence</strong> across Wikipedia, Wikidata, Crunchbase, LinkedIn, and other knowledge bases that LLMs use as authority signals.</li>
+      </ul>
+
+      <h3 class="mb-3 mt-8 text-xl font-semibold text-white">The Role of llms.txt</h3>
+
+      <p class="leading-relaxed text-gray-300">
+        The <code class="rounded bg-geo-800 px-1.5 py-0.5 text-sm text-accent-400">llms.txt</code> standard is emerging as a way for websites to communicate directly with AI crawlers, similar to how <code class="rounded bg-geo-800 px-1.5 py-0.5 text-sm text-accent-400">robots.txt</code> communicates with traditional search crawlers. An llms.txt file tells AI systems what your site is about, which pages are most important, and how your content should be understood. While adoption is still early, implementing llms.txt is becoming a standard part of GEO technical setup. It reduces ambiguity for AI systems and ensures your brand identity is communicated accurately during retrieval.
+      </p>
+    </section>
+
+    <!-- Section 3: GEO vs SEO -->
+    <section id="geo-vs-seo" class="mb-20 scroll-mt-24">
+      <h2 class="mb-6 text-3xl font-bold text-white">GEO vs Traditional SEO</h2>
+
+      <p class="mb-5 text-lg leading-relaxed text-gray-300">
+        <strong class="text-white">GEO and SEO share common roots in content quality and technical excellence, but they differ fundamentally in what they optimise for, how they measure success, and what signals matter most.</strong>
+      </p>
+
+      <p class="mb-6 leading-relaxed text-gray-300">
+        The confusion between generative engine optimisation and search engine optimisation is understandable. Both deal with visibility in search results. But the mechanics diverge sharply once you examine how each system selects and presents content.
+      </p>
+
+      <div class="mb-8 overflow-x-auto rounded-xl border border-geo-800">
+        <table class="w-full text-sm text-gray-300">
+          <thead>
+            <tr class="border-b border-geo-800 bg-geo-900/80 text-left">
+              <th class="px-5 py-3 font-semibold text-white">Dimension</th>
+              <th class="px-5 py-3 font-semibold text-white">Traditional SEO</th>
+              <th class="px-5 py-3 font-semibold text-accent-400">Generative Engine Optimisation</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-geo-800/60">
+            <tr><td class="px-5 py-3 font-medium text-gray-200">Goal</td><td class="px-5 py-3">Rank in blue links</td><td class="px-5 py-3">Get cited in AI-generated answers</td></tr>
+            <tr><td class="px-5 py-3 font-medium text-gray-200">Primary signal</td><td class="px-5 py-3">Backlinks &amp; PageRank</td><td class="px-5 py-3">Entity authority &amp; content structure</td></tr>
+            <tr><td class="px-5 py-3 font-medium text-gray-200">Content format</td><td class="px-5 py-3">Keyword-optimised pages</td><td class="px-5 py-3">Declarative, quotable, data-rich passages</td></tr>
+            <tr><td class="px-5 py-3 font-medium text-gray-200">Technical focus</td><td class="px-5 py-3">Crawlability, Core Web Vitals</td><td class="px-5 py-3">Structured data, llms.txt, entity markup</td></tr>
+            <tr><td class="px-5 py-3 font-medium text-gray-200">Success metric</td><td class="px-5 py-3">Rankings, CTR, organic traffic</td><td class="px-5 py-3">Citation frequency, brand mention share, AI referral traffic</td></tr>
+            <tr><td class="px-5 py-3 font-medium text-gray-200">Competition model</td><td class="px-5 py-3">10 blue links per SERP</td><td class="px-5 py-3">1&ndash;5 citations per AI answer (winner-takes-most)</td></tr>
+            <tr><td class="px-5 py-3 font-medium text-gray-200">Update cycle</td><td class="px-5 py-3">Algorithm updates (quarterly)</td><td class="px-5 py-3">Model updates (continuous, often weekly)</td></tr>
+            <tr><td class="px-5 py-3 font-medium text-gray-200">Measurement tools</td><td class="px-5 py-3">Google Search Console, Ahrefs, SEMrush</td><td class="px-5 py-3">AI citation trackers, LLM auditing tools, manual prompt testing</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="mb-5 leading-relaxed text-gray-300">
+        The most critical difference is the competition model. In traditional SEO, ten results share page one. In AI search, typically one to three sources are cited in a generated answer, and often with minimal visual distinction between them. The brand that gets cited first — and most accurately — captures the majority of trust and attention.
+      </p>
+
+      <p class="mb-5 leading-relaxed text-gray-300">
+        This does not mean SEO is dead. Far from it. A strong SEO foundation — fast site, clean architecture, authoritative backlink profile — feeds directly into GEO performance. AI retrieval systems still use web indexes as their source material, and pages that rank well in traditional search are more likely to appear in AI retrieval results. The two disciplines are complementary, not competing.
+      </p>
+
+      <p class="leading-relaxed text-gray-300">
+        For a detailed breakdown of where these disciplines overlap and diverge, see our dedicated comparison: <a href="/geo-vs-seo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 transition hover:text-accent-300">GEO vs SEO: What&rsquo;s the Difference?</a>
+      </p>
+    </section>
+
+    <!-- Section 4: The 7-Step GEO Framework -->
+    <section id="geo-framework" class="mb-20 scroll-mt-24">
+      <h2 class="mb-6 text-3xl font-bold text-white">The 7-Step GEO Framework</h2>
+
+      <p class="mb-8 text-lg leading-relaxed text-gray-300">
+        <strong class="text-white">Effective generative engine optimisation follows a structured methodology.</strong> At <a href="/geo-agency/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 transition hover:text-accent-300">GEOoptimised</a>, we apply this seven-step framework to systematically increase AI citation across every major model.
+      </p>
+
+      <!-- Step 1 -->
+      <div class="mb-10 rounded-xl border border-geo-800 bg-geo-900/40 p-6">
+        <div class="mb-3 flex items-center gap-3">
+          <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-accent-500/10 text-lg font-bold text-accent-500">1</span>
+          <h3 class="text-xl font-semibold text-white">Entity Authority Audit</h3>
+        </div>
+        <p class="mb-3 leading-relaxed text-gray-300">
+          Before optimising anything, you need to know how AI models currently perceive your brand. An entity authority audit maps your presence across the knowledge sources that LLMs rely on: Wikipedia, Wikidata, Crunchbase, LinkedIn, Google Knowledge Graph, industry directories, and major publications.
+        </p>
+        <p class="leading-relaxed text-gray-300">
+          The audit reveals gaps. If your brand exists on your website but nowhere else, AI models treat it as low-authority and avoid citing it. The fix is not to build backlinks (though those help) — it is to establish consistent entity presence across the knowledge ecosystem that language models draw from.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="mb-10 rounded-xl border border-geo-800 bg-geo-900/40 p-6">
+        <div class="mb-3 flex items-center gap-3">
+          <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-accent-500/10 text-lg font-bold text-accent-500">2</span>
+          <h3 class="text-xl font-semibold text-white">Structured Data &amp; Schema Implementation</h3>
+        </div>
+        <p class="mb-3 leading-relaxed text-gray-300">
+          Structured data is the bridge between your content and machine understanding. JSON-LD schema markup tells AI systems exactly what your content represents, who created it, what entities it references, and how claims relate to each other.
+        </p>
+        <p class="leading-relaxed text-gray-300">
+          For GEO, standard Organisation, Article, and FAQPage schema are just the baseline. Advanced implementations include speakable markup (identifying which passages are suitable for voice and AI quotation), sameAs properties linking to authoritative entity references, and ClaimReview or HowTo schema where appropriate. The goal is to remove all ambiguity about what your content means and who stands behind it.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="mb-10 rounded-xl border border-geo-800 bg-geo-900/40 p-6">
+        <div class="mb-3 flex items-center gap-3">
+          <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-accent-500/10 text-lg font-bold text-accent-500">3</span>
+          <h3 class="text-xl font-semibold text-white">Content Architecture for Citability</h3>
+        </div>
+        <p class="mb-3 leading-relaxed text-gray-300">
+          Not all content is equally citable. AI models extract passages, not whole pages. Your content architecture must be designed so that individual paragraphs and sections function as standalone, quotable units of information.
+        </p>
+        <p class="mb-3 leading-relaxed text-gray-300">
+          This means every major section should open with a clear declarative statement that defines or explains a concept. Supporting details follow. Statistics, specific figures, and named examples give the model a reason to cite your source rather than paraphrasing generic information from elsewhere.
+        </p>
+        <p class="leading-relaxed text-gray-300">
+          Page structure matters too. Descriptive H2 and H3 headings that match the questions users ask allow retrieval systems to identify relevant passages quickly. A flat wall of text is harder to extract from than well-segmented, hierarchically structured content.
+        </p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="mb-10 rounded-xl border border-geo-800 bg-geo-900/40 p-6">
+        <div class="mb-3 flex items-center gap-3">
+          <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-accent-500/10 text-lg font-bold text-accent-500">4</span>
+          <h3 class="text-xl font-semibold text-white">llms.txt &amp; AI Crawler Configuration</h3>
+        </div>
+        <p class="mb-3 leading-relaxed text-gray-300">
+          Just as robots.txt tells traditional crawlers how to index your site, llms.txt communicates with AI-specific crawlers. This file defines your brand identity, specifies which pages contain your most authoritative content, and provides context that helps AI systems understand your site&rsquo;s purpose.
+        </p>
+        <p class="leading-relaxed text-gray-300">
+          Beyond llms.txt, GEO involves configuring robots.txt rules for AI-specific user agents (GPTBot, Anthropic-AI, PerplexityBot, CCBot, Google-Extended), deciding what content you want AI systems to access, and ensuring your most valuable pages are not inadvertently blocked from AI retrieval.
+        </p>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="mb-10 rounded-xl border border-geo-800 bg-geo-900/40 p-6">
+        <div class="mb-3 flex items-center gap-3">
+          <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-accent-500/10 text-lg font-bold text-accent-500">5</span>
+          <h3 class="text-xl font-semibold text-white">Cross-Model Optimisation</h3>
+        </div>
+        <p class="mb-3 leading-relaxed text-gray-300">
+          Different AI models have different retrieval behaviours, different training data cutoffs, and different citation preferences. A page that gets cited by Perplexity may be ignored by ChatGPT or Copilot. Cross-model optimisation involves testing your visibility across all major AI systems and tailoring your approach to each.
+        </p>
+        <p class="leading-relaxed text-gray-300">
+          Google AI Overviews draws heavily from pages that already rank in its traditional index. Perplexity uses its own web crawler and tends to favour recent, well-structured content. ChatGPT with browsing uses Bing&rsquo;s index and favours authoritative sources with clear entity signals. A GEO strategy must account for these differences and optimise for the models that matter most to your audience.
+        </p>
+      </div>
+
+      <!-- Step 6 -->
+      <div class="mb-10 rounded-xl border border-geo-800 bg-geo-900/40 p-6">
+        <div class="mb-3 flex items-center gap-3">
+          <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-accent-500/10 text-lg font-bold text-accent-500">6</span>
+          <h3 class="text-xl font-semibold text-white">Citation Monitoring</h3>
+        </div>
+        <p class="mb-3 leading-relaxed text-gray-300">
+          You cannot improve what you do not measure. Citation monitoring involves systematically querying AI models with your target queries and tracking whether your brand is cited, how accurately it is cited, and how your citation share compares to competitors.
+        </p>
+        <p class="leading-relaxed text-gray-300">
+          Manual monitoring works at small scale: pick your top 20 queries, run them across ChatGPT, Perplexity, Copilot, and Google AI Overviews weekly, and log the results. At larger scale, automated tools are emerging to handle this (see <a href="#geo-tools" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 transition hover:text-accent-300">GEO Tools</a> below). The key is consistency — AI model behaviour changes with every update, so continuous monitoring is essential.
+        </p>
+      </div>
+
+      <!-- Step 7 -->
+      <div class="rounded-xl border border-geo-800 bg-geo-900/40 p-6">
+        <div class="mb-3 flex items-center gap-3">
+          <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-accent-500/10 text-lg font-bold text-accent-500">7</span>
+          <h3 class="text-xl font-semibold text-white">Iteration &amp; Competitive Intelligence</h3>
+        </div>
+        <p class="mb-3 leading-relaxed text-gray-300">
+          GEO is not a one-time implementation. AI models are updated frequently — sometimes weekly — and the competitive landscape shifts as more brands invest in AI visibility. Iteration means continuously refining your content based on what gets cited and what does not.
+        </p>
+        <p class="leading-relaxed text-gray-300">
+          Competitive intelligence is particularly valuable. When a competitor gets cited and you do not, analysing their content structure, entity signals, and data points reveals what the model values. This feedback loop — monitor, analyse, refine, re-test — is the core engine of sustained GEO performance.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: GEO Tools -->
+    <section id="geo-tools" class="mb-20 scroll-mt-24">
+      <h2 class="mb-6 text-3xl font-bold text-white">GEO Tools &amp; Platforms</h2>
+
+      <p class="mb-5 text-lg leading-relaxed text-gray-300">
+        <strong class="text-white">The GEO tooling landscape is maturing rapidly as the industry recognises that AI search requires new measurement and optimisation capabilities.</strong> Tools fall into several categories, each addressing a different part of the GEO workflow.
+      </p>
+
+      <div class="mb-8 grid gap-6 sm:grid-cols-2">
+        <div class="rounded-xl border border-geo-800 bg-geo-900/40 p-5">
+          <h3 class="mb-2 font-semibold text-accent-400">Citation Trackers</h3>
+          <p class="text-sm leading-relaxed text-gray-400">Monitor whether your brand is being cited in AI-generated answers across ChatGPT, Perplexity, Copilot, and Google AI Overviews. Track citation frequency, accuracy, and share of voice over time.</p>
+        </div>
+        <div class="rounded-xl border border-geo-800 bg-geo-900/40 p-5">
+          <h3 class="mb-2 font-semibold text-accent-400">AI Visibility Checkers</h3>
+          <p class="text-sm leading-relaxed text-gray-400">Test how visible your brand is across multiple AI models for specific queries. These tools automate the manual process of querying each model and checking for your brand in the response.</p>
+        </div>
+        <div class="rounded-xl border border-geo-800 bg-geo-900/40 p-5">
+          <h3 class="mb-2 font-semibold text-accent-400">Entity &amp; Schema Validators</h3>
+          <p class="text-sm leading-relaxed text-gray-400">Validate that your structured data is complete, consistent, and aligned with the entity definitions that AI models use. Goes beyond basic schema validation to check entity coherence across your site.</p>
+        </div>
+        <div class="rounded-xl border border-geo-800 bg-geo-900/40 p-5">
+          <h3 class="mb-2 font-semibold text-accent-400">Content Optimisation Platforms</h3>
+          <p class="text-sm leading-relaxed text-gray-400">Analyse your content against citation patterns and recommend structural changes to improve citability. These tools evaluate sentence structure, data density, entity coverage, and quotability.</p>
+        </div>
+      </div>
+
+      <p class="mb-5 leading-relaxed text-gray-300">
+        Traditional SEO tools like Ahrefs, SEMrush, and Google Search Console remain relevant for the SEO foundation that supports GEO. However, they do not track AI citations or measure AI visibility. The gap is being filled by a new generation of GEO-specific platforms.
+      </p>
+
+      <p class="leading-relaxed text-gray-300">
+        For a curated breakdown of the best tools by category, including pricing and feature comparisons, see our <a href="/geo-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 transition hover:text-accent-300">GEO tools directory</a>.
+      </p>
+    </section>
+
+    <!-- Section 6: Measuring GEO Success -->
+    <section id="measuring-geo" class="mb-20 scroll-mt-24">
+      <h2 class="mb-6 text-3xl font-bold text-white">Measuring GEO Success</h2>
+
+      <p class="mb-5 text-lg leading-relaxed text-gray-300">
+        <strong class="text-white">Traditional SEO metrics — ranking position, click-through rate, and organic sessions — do not capture GEO performance.</strong> AI search requires a new measurement framework built around citation, accuracy, and share of voice.
+      </p>
+
+      <h3 class="mb-3 mt-8 text-xl font-semibold text-white">Core GEO KPIs</h3>
+
+      <div class="mb-8 space-y-4">
+        <div class="rounded-lg border border-geo-800/60 bg-geo-900/30 p-5">
+          <h4 class="mb-1.5 font-semibold text-white">Citation Frequency</h4>
+          <p class="text-sm leading-relaxed text-gray-400">How often your brand or content is cited in AI-generated answers for your target queries. Measured as the percentage of tracked queries where your brand appears in the AI response. A citation frequency above 30% for your core queries indicates strong GEO performance.</p>
+        </div>
+        <div class="rounded-lg border border-geo-800/60 bg-geo-900/30 p-5">
+          <h4 class="mb-1.5 font-semibold text-white">Citation Accuracy</h4>
+          <p class="text-sm leading-relaxed text-gray-400">Whether AI models correctly attribute your claims, data, and brand positioning when they cite you. Inaccurate citations — where the AI misrepresents your content or confuses your brand with another — can damage trust. Monitoring accuracy is as important as monitoring frequency.</p>
+        </div>
+        <div class="rounded-lg border border-geo-800/60 bg-geo-900/30 p-5">
+          <h4 class="mb-1.5 font-semibold text-white">AI Share of Voice</h4>
+          <p class="text-sm leading-relaxed text-gray-400">Your brand&rsquo;s citation share compared to competitors across your target query set. If five brands are cited for a given query, your share of voice is 20%. This metric reveals your competitive position in AI search and tracks progress over time.</p>
+        </div>
+        <div class="rounded-lg border border-geo-800/60 bg-geo-900/30 p-5">
+          <h4 class="mb-1.5 font-semibold text-white">Brand Mention Sentiment</h4>
+          <p class="text-sm leading-relaxed text-gray-400">The tone and context in which your brand is mentioned in AI responses. A citation that positions your brand as &ldquo;one of the leading providers&rdquo; carries more value than one that mentions you as &ldquo;an alternative to consider.&rdquo; Sentiment tracking ensures that AI models reflect your desired brand positioning.</p>
+        </div>
+        <div class="rounded-lg border border-geo-800/60 bg-geo-900/30 p-5">
+          <h4 class="mb-1.5 font-semibold text-white">AI Referral Traffic</h4>
+          <p class="text-sm leading-relaxed text-gray-400">Direct traffic from AI platforms to your website. As AI systems increasingly include clickable source links, this metric tracks actual visitors arriving from AI citations. Google Analytics can segment this traffic using referral source data from chatgpt.com, perplexity.ai, copilot.microsoft.com, and others.</p>
+        </div>
+      </div>
+
+      <p class="leading-relaxed text-gray-300">
+        For implementation guidance on building a GEO measurement dashboard, including which tools to connect and how to establish baselines, see our <a href="/geo-metrics/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 transition hover:text-accent-300">GEO metrics guide</a>.
+      </p>
+    </section>
+
+    <!-- Section 7: Who Needs GEO -->
+    <section id="who-needs-geo" class="mb-20 scroll-mt-24">
+      <h2 class="mb-6 text-3xl font-bold text-white">Who Needs GEO?</h2>
+
+      <p class="mb-5 text-lg leading-relaxed text-gray-300">
+        <strong class="text-white">Any organisation that depends on organic search visibility needs a GEO strategy.</strong> The shift from traditional search to AI-generated answers is not hypothetical — it is happening now, and the impact varies by industry.
+      </p>
+
+      <h3 class="mb-3 mt-8 text-xl font-semibold text-white">B2B &amp; SaaS Companies</h3>
+      <p class="mb-5 leading-relaxed text-gray-300">
+        B2B buyers increasingly use AI assistants to research solutions. When a procurement manager asks ChatGPT &ldquo;what are the best project management tools for agencies?&rdquo; the brands cited in the response gain consideration. Those not cited are invisible. For SaaS companies, GEO directly impacts pipeline — AI citations are becoming the new analyst quadrant for buyer research.
+      </p>
+
+      <h3 class="mb-3 mt-8 text-xl font-semibold text-white">Professional Services</h3>
+      <p class="mb-5 leading-relaxed text-gray-300">
+        Law firms, consultancies, accountancies, and agencies are particularly affected. AI search is already answering questions like &ldquo;best employment lawyers in London&rdquo; or &ldquo;top SEO agencies UK&rdquo; with curated lists pulled from across the web. Professional services firms that lack entity authority in knowledge bases are consistently omitted from these AI-generated recommendations.
+      </p>
+
+      <h3 class="mb-3 mt-8 text-xl font-semibold text-white">E-commerce</h3>
+      <p class="mb-5 leading-relaxed text-gray-300">
+        Product recommendations from AI assistants are influencing purchasing decisions. When a user asks &ldquo;best running shoes for flat feet&rdquo; and receives an AI-generated answer listing specific products and retailers, the brands and shops mentioned capture demand. E-commerce GEO focuses on product entity markup, review aggregation, and getting your brand associated with product category queries.
+      </p>
+
+      <h3 class="mb-3 mt-8 text-xl font-semibold text-white">Agencies &amp; Consultancies</h3>
+      <p class="mb-5 leading-relaxed text-gray-300">
+        Marketing agencies face a dual need: they need GEO for their own visibility, and they need to offer GEO as a service to clients. <a href="/aeo-agency/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 transition hover:text-accent-300">AEO and GEO agency services</a> are becoming a standard offering alongside SEO, PPC, and content marketing. Agencies that develop GEO competency now will differentiate themselves as the market shifts.
+      </p>
+
+      <h3 class="mb-3 mt-8 text-xl font-semibold text-white">Healthcare, Finance &amp; YMYL</h3>
+      <p class="mb-5 leading-relaxed text-gray-300">
+        Your Money or Your Life (YMYL) sectors face unique GEO challenges. AI models apply stricter sourcing standards for health and financial queries, favouring established authorities with strong E-E-A-T signals. For YMYL brands, GEO requires demonstrable expertise, practitioner credentials, and citations from peer-reviewed or industry-standard sources. The barrier to entry is higher, but the competitive moat for those who establish AI authority is deeper.
+      </p>
+
+      <p class="leading-relaxed text-gray-300">
+        For industry-specific GEO strategies and case studies, see our <a href="/geo-by-industry/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 transition hover:text-accent-300">GEO by industry</a> breakdown.
+      </p>
+    </section>
+
+    <!-- Section 8: GEO Services -->
+    <section id="geo-services" class="mb-20 scroll-mt-24">
+      <h2 class="mb-6 text-3xl font-bold text-white">GEO Services: What a Generative Engine Optimisation Agency Delivers</h2>
+
+      <p class="mb-5 text-lg leading-relaxed text-gray-300">
+        <strong class="text-white">A dedicated <a href="/geo-agency/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 transition hover:text-accent-300">GEO agency</a> provides the strategy, implementation, and ongoing management required to establish and maintain AI citation authority.</strong> This is what a comprehensive GEO engagement looks like.
+      </p>
+
+      <div class="mb-8 space-y-4">
+        <div class="flex gap-4 rounded-lg border border-geo-800/60 bg-geo-900/30 p-5">
+          <div class="flex-shrink-0 pt-0.5 text-accent-500 font-bold">01</div>
+          <div>
+            <h4 class="mb-1 font-semibold text-white">AI Visibility Audit</h4>
+            <p class="text-sm leading-relaxed text-gray-400">Comprehensive audit of your current AI citation status across all major models. Identifies where your brand appears, where it is absent, and where competitors are being cited instead.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 rounded-lg border border-geo-800/60 bg-geo-900/30 p-5">
+          <div class="flex-shrink-0 pt-0.5 text-accent-500 font-bold">02</div>
+          <div>
+            <h4 class="mb-1 font-semibold text-white">Entity Authority Building</h4>
+            <p class="text-sm leading-relaxed text-gray-400">Establishing and strengthening your brand&rsquo;s presence across the knowledge sources that LLMs reference. Wikipedia, Wikidata, industry directories, professional associations, and media mentions.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 rounded-lg border border-geo-800/60 bg-geo-900/30 p-5">
+          <div class="flex-shrink-0 pt-0.5 text-accent-500 font-bold">03</div>
+          <div>
+            <h4 class="mb-1 font-semibold text-white">Content Restructuring</h4>
+            <p class="text-sm leading-relaxed text-gray-400">Rewriting and restructuring existing content for maximum citability. This includes adding declarative statements, original data, entity references, and clear section delineation that AI models can extract from.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 rounded-lg border border-geo-800/60 bg-geo-900/30 p-5">
+          <div class="flex-shrink-0 pt-0.5 text-accent-500 font-bold">04</div>
+          <div>
+            <h4 class="mb-1 font-semibold text-white">Technical Implementation</h4>
+            <p class="text-sm leading-relaxed text-gray-400">Schema markup, llms.txt configuration, AI crawler management, and structured data deployment. The technical layer that ensures your content is machine-readable and correctly interpreted by AI systems.</p>
+          </div>
+        </div>
+        <div class="flex gap-4 rounded-lg border border-geo-800/60 bg-geo-900/30 p-5">
+          <div class="flex-shrink-0 pt-0.5 text-accent-500 font-bold">05</div>
+          <div>
+            <h4 class="mb-1 font-semibold text-white">Ongoing Monitoring &amp; Iteration</h4>
+            <p class="text-sm leading-relaxed text-gray-400">Continuous tracking of AI citation performance, competitive benchmarking, and iterative refinement based on results. GEO is not a project — it is an ongoing programme that adapts as AI models evolve.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="leading-relaxed text-gray-300">
+        Explore our full service offering: <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 transition hover:text-accent-300">GEOoptimised Services</a>.
+      </p>
+    </section>
+
+    <!-- Section 9: FAQs -->
+    <section id="faqs" class="mb-20 scroll-mt-24">
+      <h2 class="mb-6 text-3xl font-bold text-white">Frequently Asked Questions About GEO</h2>
+
+      <div class="space-y-6">
+        <details class="group rounded-xl border border-geo-800 bg-geo-900/40" open>
+          <summary class="flex cursor-pointer items-center justify-between p-5 text-white font-semibold">
+            What is Generative Engine Optimisation (GEO)?
+            <span class="ml-4 text-accent-500 transition group-open:rotate-45">+</span>
+          </summary>
+          <div class="border-t border-geo-800/60 px-5 pb-5 pt-4 text-sm leading-relaxed text-gray-400">
+            Generative Engine Optimisation (GEO) is the practice of structuring your content, entity signals, and technical infrastructure so that large language models cite your brand when generating answers. Unlike traditional SEO, which targets blue-link rankings, GEO targets inclusion in AI-generated responses from ChatGPT, Google AI Overviews, Perplexity, Copilot, and similar systems.
+          </div>
+        </details>
+
+        <details class="group rounded-xl border border-geo-800 bg-geo-900/40">
+          <summary class="flex cursor-pointer items-center justify-between p-5 text-white font-semibold">
+            How is GEO different from traditional SEO?
+            <span class="ml-4 text-accent-500 transition group-open:rotate-45">+</span>
+          </summary>
+          <div class="border-t border-geo-800/60 px-5 pb-5 pt-4 text-sm leading-relaxed text-gray-400">
+            Traditional SEO optimises for search engine ranking positions and click-through rates on blue links. GEO optimises for citation within AI-generated answers. SEO relies on backlinks, keyword density, and crawlability. GEO relies on entity authority, structured data, quotable content patterns, and cross-model consistency. Both disciplines share foundational elements like topical authority and technical excellence, but GEO requires a fundamentally different measurement framework.
+          </div>
+        </details>
+
+        <details class="group rounded-xl border border-geo-800 bg-geo-900/40">
+          <summary class="flex cursor-pointer items-center justify-between p-5 text-white font-semibold">
+            Which AI search engines does GEO target?
+            <span class="ml-4 text-accent-500 transition group-open:rotate-45">+</span>
+          </summary>
+          <div class="border-t border-geo-800/60 px-5 pb-5 pt-4 text-sm leading-relaxed text-gray-400">
+            GEO targets all major AI-powered search and answer systems including Google AI Overviews, ChatGPT with browsing, Microsoft Copilot, Perplexity AI, Claude, and Gemini. Each model has different retrieval preferences, which is why cross-model optimisation is a core part of the GEO framework.
+          </div>
+        </details>
+
+        <details class="group rounded-xl border border-geo-800 bg-geo-900/40">
+          <summary class="flex cursor-pointer items-center justify-between p-5 text-white font-semibold">
+            How do you measure GEO success?
+            <span class="ml-4 text-accent-500 transition group-open:rotate-45">+</span>
+          </summary>
+          <div class="border-t border-geo-800/60 px-5 pb-5 pt-4 text-sm leading-relaxed text-gray-400">
+            GEO success is measured through citation frequency, citation accuracy, AI share of voice compared to competitors, brand mention sentiment across AI outputs, and referral traffic from AI platforms. Traditional metrics like ranking position become less relevant as AI answers replace blue links.
+          </div>
+        </details>
+
+        <details class="group rounded-xl border border-geo-800 bg-geo-900/40">
+          <summary class="flex cursor-pointer items-center justify-between p-5 text-white font-semibold">
+            Do businesses need GEO or is traditional SEO enough?
+            <span class="ml-4 text-accent-500 transition group-open:rotate-45">+</span>
+          </summary>
+          <div class="border-t border-geo-800/60 px-5 pb-5 pt-4 text-sm leading-relaxed text-gray-400">
+            Any business that depends on organic search traffic needs GEO. AI-generated answers are displacing traditional search results, with Google AI Overviews appearing for an increasing percentage of queries. Businesses that ignore GEO risk becoming invisible in AI search even if they rank well in traditional blue links. The brands that build entity authority and AI-readable content now will have a significant advantage.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- Section 10: Next Steps / CTA -->
+    <section id="next-steps" class="scroll-mt-24">
+      <div class="rounded-2xl border border-accent-500/20 bg-gradient-to-br from-geo-900 to-geo-950 p-8 sm:p-12">
+        <h2 class="mb-4 text-3xl font-bold text-white">Start Your GEO Strategy</h2>
+        <p class="mb-6 max-w-2xl text-lg leading-relaxed text-gray-300">
+          AI search is not a future trend — it is the current reality. Every day your brand is absent from AI-generated answers, you are ceding ground to competitors who are being cited instead. The sooner you establish entity authority and citation patterns, the harder it becomes for competitors to displace you.
+        </p>
+        <p class="mb-8 leading-relaxed text-gray-400">
+          GEOoptimised provides end-to-end generative engine optimisation services: from initial AI visibility audit through to ongoing citation monitoring and competitive intelligence. Whether you need a full GEO programme or a focused audit to understand your current AI search position, we can help.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/geo-services/" class="rounded-lg bg-accent-500 px-8 py-3.5 text-sm font-bold text-geo-950 transition hover:bg-accent-400">Explore GEO Services</a>
+          <a href="/contact/" class="rounded-lg border border-geo-600 px-8 py-3.5 text-sm font-semibold text-gray-300 transition hover:border-accent-500 hover:text-white">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+  </article>
+</Base>

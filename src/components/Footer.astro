@@ -1,0 +1,38 @@
+---
+const year = new Date().getFullYear();
+const links = [
+  { href: '/generative-engine-optimisation/', label: 'GEO Guide' },
+  { href: '/geo-services/', label: 'Services' },
+  { href: '/geo-agency/', label: 'Agency' },
+  { href: '/answer-engine-optimisation/', label: 'AEO' },
+  { href: '/about/', label: 'About' },
+  { href: '/contact/', label: 'Contact' },
+];
+---
+<footer class="border-t border-geo-800/60 bg-geo-950 mt-24">
+  <div class="mx-auto max-w-6xl px-4 py-12">
+    <div class="grid gap-8 md:grid-cols-3">
+      <div>
+        <a href="/" class="text-lg font-bold text-white">GEO<span class="text-accent-500">optimised</span></a>
+        <p class="mt-3 text-sm text-gray-400 max-w-xs">Generative Engine Optimisation agency. We make brands visible in AI-generated search results.</p>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Pages</h3>
+        <ul class="mt-3 space-y-2">
+          {links.map(link => (
+            <li><a href={link.href} class="text-sm text-gray-400 hover:text-accent-400 transition">{link.label}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold text-white uppercase tracking-wider">Contact</h3>
+        <ul class="mt-3 space-y-2 text-sm text-gray-400">
+          <li><a href="mailto:hello@geooptimised.com" class="hover:text-accent-400 transition">hello@geooptimised.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-10 border-t border-geo-800/60 pt-6 text-center text-xs text-gray-500">
+      &copy; {year} GEOoptimised. All rights reserved.
+    </div>
+  </div>
+</footer>
