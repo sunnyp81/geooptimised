@@ -1,0 +1,298 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'AI Optimisation Agency: Full-Service GEO & AEO';
+const description = 'GEOoptimised is a full-service AI optimisation agency delivering generative engine optimisation and answer engine optimisation to make brands visible in AI-generated answers.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "GEOoptimised",
+    "url": "https://geooptimised.com/ai-optimisation-agency/",
+    "serviceType": "AI Optimisation",
+    "description": "Full-service AI optimisation agency specialising in generative engine optimisation and answer engine optimisation for brands seeking visibility in AI-generated search results.",
+    "areaServed": { "@type": "Country", "name": "United Kingdom" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://geooptimised.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://geooptimised.com/geo-services/" },
+      { "@type": "ListItem", "position": 3, "name": "AI Optimisation Agency", "item": "https://geooptimised.com/ai-optimisation-agency/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What does an AI optimisation agency do?", "acceptedAnswer": { "@type": "Answer", "text": "An AI optimisation agency increases your brand's visibility in AI-generated answers across platforms like ChatGPT, Perplexity, Gemini, and Google AI Overviews. This involves entity authority building, content restructuring for LLM citation, structured data implementation, and cross-platform monitoring." } },
+      { "@type": "Question", "name": "How is AI optimisation different from SEO?", "acceptedAnswer": { "@type": "Answer", "text": "SEO targets ranked search results. AI optimisation targets the synthesised answers that large language models generate when users ask questions. The signals, content structures, and measurement frameworks differ significantly, though a strong SEO foundation makes AI optimisation more effective." } },
+      { "@type": "Question", "name": "How long does AI optimisation take to show results?", "acceptedAnswer": { "@type": "Answer", "text": "Most businesses see measurable changes in AI citation frequency within eight to twelve weeks. Full competitive positioning across multiple AI platforms typically takes four to six months, depending on your starting authority and competitive landscape." } },
+      { "@type": "Question", "name": "Do I need both GEO and AEO?", "acceptedAnswer": { "@type": "Answer", "text": "GEO and AEO are complementary. GEO targets the full spectrum of generative AI platforms. AEO focuses specifically on featured snippets, voice assistants, and direct-answer formats. Most businesses benefit from both, delivered as a unified programme." } },
+      { "@type": "Question", "name": "What does an AI optimisation audit include?", "acceptedAnswer": { "@type": "Answer", "text": "A comprehensive AI optimisation audit maps your brand's current visibility across all major AI platforms, analyses competitor citations, assesses entity presence and structured data, and produces a prioritised action plan with estimated impact for each recommendation." } }
+    ]
+  }
+];
+
+const services = [
+  { title: 'Generative Engine Optimisation', text: 'Systematic optimisation for ChatGPT, Perplexity, Gemini, Copilot, and Claude. We ensure your brand is cited when users ask AI tools questions relevant to your business.' },
+  { title: 'Answer Engine Optimisation', text: 'Targeted optimisation for featured snippets, voice search responses, and AI Overview answers. Structured content that machines can extract and present directly.' },
+  { title: 'Entity Authority Building', text: 'Strengthening your brand presence across Wikipedia, Wikidata, Google Knowledge Graph, and industry databases that LLMs treat as ground truth.' },
+  { title: 'AI Visibility Monitoring', text: 'Continuous tracking of citation frequency, brand accuracy, and competitive positioning across all AI platforms. Monthly reporting with actionable insights.' },
+  { title: 'Content Architecture', text: 'Restructuring existing content and creating new assets specifically designed for LLM citation. Every paragraph becomes a quotable, extractable unit of expertise.' },
+  { title: 'Technical AI Infrastructure', text: 'Schema implementation, llms.txt configuration, AI crawler management, and structured data optimisation for maximum machine readability.' },
+];
+
+const tocItems = [
+  { id: 'what-we-do', label: 'What We Do' },
+  { id: 'geo-and-aeo', label: 'GEO + AEO Together' },
+  { id: 'our-process', label: 'Our Process' },
+  { id: 'who-we-help', label: 'Who We Help' },
+  { id: 'why-specialist', label: 'Why a Specialist Agency' },
+  { id: 'faq', label: 'FAQ' },
+];
+
+const faqs = [
+  { q: 'What does an AI optimisation agency do?', a: 'An AI optimisation agency increases your brand\'s visibility in AI-generated answers across platforms like ChatGPT, Perplexity, Gemini, and Google AI Overviews. This involves entity authority building, content restructuring for LLM citation, structured data implementation, and cross-platform monitoring.' },
+  { q: 'How is AI optimisation different from SEO?', a: 'SEO targets ranked search results. AI optimisation targets the synthesised answers that large language models generate when users ask questions. The signals, content structures, and measurement frameworks differ significantly, though a strong SEO foundation makes AI optimisation more effective.' },
+  { q: 'How long does AI optimisation take to show results?', a: 'Most businesses see measurable changes in AI citation frequency within eight to twelve weeks. Full competitive positioning across multiple AI platforms typically takes four to six months, depending on your starting authority and competitive landscape.' },
+  { q: 'Do I need both GEO and AEO?', a: 'GEO and AEO are complementary. GEO targets the full spectrum of generative AI platforms. AEO focuses specifically on featured snippets, voice assistants, and direct-answer formats. Most businesses benefit from both, delivered as a unified programme.' },
+  { q: 'What does an AI optimisation audit include?', a: 'A comprehensive AI optimisation audit maps your brand\'s current visibility across all major AI platforms, analyses competitor citations, assesses entity presence and structured data, and produces a prioritised action plan with estimated impact for each recommendation.' },
+];
+
+const steps = [
+  { label: 'Discovery', desc: 'We audit your current AI visibility across every major platform: where you appear, where you are absent, what competitors hold, and which queries matter most commercially.' },
+  { label: 'Strategy', desc: 'We build a prioritised plan targeting the queries, platforms, and content gaps with the highest commercial return. Every recommendation is tied to a measurable outcome.' },
+  { label: 'Foundation', desc: 'We implement structured data, strengthen entity signals, configure AI crawler access, and restructure your highest-priority content for LLM citation.' },
+  { label: 'Optimisation', desc: 'We systematically optimise content across your site, create new citation-target assets, and build third-party source presence to reinforce entity authority.' },
+  { label: 'Monitoring', desc: 'We track citation frequency, brand accuracy, and competitive positioning across all platforms. Monthly reporting drives the next iteration of strategy.' },
+];
+
+const audiences = [
+  { title: 'B2B Service Businesses', text: 'Consulting firms, SaaS companies, agencies, and professional services where buyers research solutions through AI tools before making decisions.' },
+  { title: 'E-commerce Brands', text: 'Considered-purchase categories where customers ask AI for recommendations, comparisons, and buying advice. Electronics, specialist equipment, premium consumer goods.' },
+  { title: 'Enterprise Organisations', text: 'Large organisations with complex product portfolios where AI-generated answers influence procurement decisions and brand perception at scale.' },
+];
+
+const related = [
+  { tag: 'Guide', title: 'Generative Engine Optimisation: The Complete Guide', excerpt: 'Everything you need to know about GEO — from first principles to advanced entity strategies.', href: '/generative-engine-optimisation/' },
+  { tag: 'Service', title: 'GEO Agency', excerpt: 'Our core generative engine optimisation service and methodology.', href: '/geo-agency/' },
+  { tag: 'Service', title: 'AEO Agency', excerpt: 'Specialist answer engine optimisation for featured snippets and AI answers.', href: '/aeo-agency/' },
+];
+---
+
+<Base title={title} description={description} schema={schema} ogType="website">
+
+  <nav aria-label="Breadcrumb" class="container-wide pt-28">
+    <ol class="flex items-center gap-1.5 text-sm text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-services/" class="transition hover:text-[var(--accent)]">Services</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">AI Optimisation Agency</li>
+    </ol>
+  </nav>
+
+  <section class="hero-fade">
+    <div class="container-wide pt-12 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Service</span>
+        <span class="font-mono text-xs text-ink-400">10 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        AI Optimisation Agency: Full-Service GEO &amp; AEO
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        An <strong class="text-white">AI optimisation agency</strong> makes your brand visible in the places where your customers are increasingly looking for answers: ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews. We deliver both <a href="/generative-engine-optimisation/" class="text-[var(--accent)] hover:underline underline-offset-4">generative engine optimisation</a> and <a href="/answer-engine-optimisation/" class="text-[var(--accent)] hover:underline underline-offset-4">answer engine optimisation</a> as a unified programme.
+      </p>
+    </div>
+  </section>
+
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <div>
+
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>AI optimisation combines GEO and AEO into a single programme targeting all AI-generated answer formats.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>We cover six core service areas: GEO, AEO, entity authority, monitoring, content architecture, and technical infrastructure.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Results typically appear within 8-12 weeks, with full competitive positioning at 4-6 months.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Specialist AI optimisation agencies outperform generalist digital agencies on every measurable dimension.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prose-dark">
+        <h2 id="what-we-do" class="anchor-top">What an AI Optimisation Agency Delivers</h2>
+        <p>AI optimisation is the practice of making your brand visible, quotable, and citable inside AI-generated answers. When a potential customer asks an AI tool for a recommendation, comparison, or explanation in your category, an AI optimisation agency ensures your brand is the one being cited — not your competitor's.</p>
+        <p>This is not a variation of search engine optimisation. It is a parallel discipline with its own signals, its own measurement framework, and its own competitive dynamics. The outputs are different (synthesised answers, not ranked links). The signals are different (entity authority and content extractability, not just backlinks and keywords). The stakes are different (one to three sources cited per answer, not ten results per page).</p>
+        <p>A full-service AI optimisation agency operates across six interconnected service areas, each targeting a specific mechanism that determines whether AI models cite your brand or ignore it.</p>
+      </div>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        {services.map(s => (
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">{s.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">{s.text}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="geo-and-aeo" class="anchor-top">Why GEO and AEO Belong Together</h2>
+        <p>Generative engine optimisation and answer engine optimisation share a common foundation: structuring content so that machines can extract, attribute, and present it accurately. The difference is scope. <a href="/aeo-agency/">AEO</a> focuses on featured snippets, voice search, and direct-answer formats. <a href="/geo-agency/">GEO</a> targets the full spectrum of generative AI platforms — ChatGPT, Perplexity, Gemini, Copilot, and Claude.</p>
+        <p>Delivering both as a unified programme creates compounding advantages. Content optimised for AEO — clear, structured, directly answerable — also performs well in generative engines. Entity authority built for GEO strengthens your featured snippet eligibility. Schema markup implemented for one discipline serves both. The investment in each amplifies the return on the other.</p>
+        <p>Most businesses that attempt to separate GEO and AEO into distinct engagements with different providers discover inefficiency: duplicated audits, conflicting content strategies, and gaps where neither provider takes responsibility. A unified AI optimisation agency eliminates these problems by design.</p>
+
+        <h2 id="our-process" class="anchor-top">Our Five-Stage Process</h2>
+        <p>Every AI optimisation engagement follows a structured methodology designed to produce measurable results within the first 90 days, then compound them through continuous iteration.</p>
+      </div>
+
+      <ol class="mt-8 space-y-6">
+        {steps.map((step, i) => (
+          <li class="flex gap-5">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border hair font-display text-sm font-bold text-[var(--accent)]">
+              {i + 1}
+            </span>
+            <div>
+              <h3 class="font-display text-lg font-semibold text-white">{step.label}</h3>
+              <p class="mt-1 text-sm leading-relaxed text-ink-300">{step.desc}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      <div class="prose-dark mt-16">
+        <h2 id="who-we-help" class="anchor-top">Who We Help</h2>
+        <p>AI optimisation is not equally urgent for every business. The highest returns come from organisations where buyers actively use AI tools to research solutions, compare options, and build shortlists. Three categories see the most immediate impact.</p>
+      </div>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        {audiences.map(a => (
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">{a.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">{a.text}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="prose-dark mt-16">
+        <p>If your category has not yet seen significant AI search adoption, the investment may be premature. A one-off <a href="/geo-services/">AI visibility audit</a> is the pragmatic starting point: it reveals whether the opportunity justifies ongoing investment and quantifies the gap between your current position and your competitors'.</p>
+
+        <h2 id="why-specialist" class="anchor-top">Why Choose a Specialist AI Optimisation Agency</h2>
+        <p>Most digital marketing agencies now include AI optimisation on their capabilities page. Few have built the dedicated infrastructure to deliver it. The difference matters because AI optimisation requires specialist tooling for citation tracking, entity analysis, and cross-platform monitoring that generalist agencies typically lack.</p>
+        <p>A generalist agency will mention GEO in your monthly report. A specialist AI optimisation agency will show you exactly which queries trigger competitor citations across five platforms, which content patterns are driving those citations, and what specific changes to your entity presence, content structure, and technical implementation will shift the balance.</p>
+        <p>We built GEOoptimised around this gap. Every process, every tool, and every team member is focused on one outcome: making your brand the source that AI models choose to cite. We do not split resources between PPC campaigns, social media management, and AI optimisation. This is all we do, and the results reflect that focus.</p>
+        <p>The practical advantage of specialisation compounds over time. We maintain current intelligence on how each AI platform's retrieval and citation behaviour works — intelligence that changes weekly as these systems evolve. A <a href="/geo-vs-seo/">generalist approach</a> cannot keep pace with that rate of change across multiple disciplines simultaneously.</p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 max-w-3xl divide-y divide-[var(--line)]">
+        {faqs.map(faq => (
+          <div class="faq-item">
+            <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
+              <span>{faq.q}</span>
+              <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+              </svg>
+            </button>
+            <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+              <p class="pb-5 text-ink-300 leading-relaxed">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="border-t hair mt-12">
+    <div class="container-wide py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Start With an AI Visibility Audit</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Before we propose a strategy, we show you the data. Our audit maps your current AI visibility across every major platform and gives you a clear picture of what a specialist agency can change.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request Your Free Audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const tocLinks = document.querySelectorAll('.toc a');
+    const sections = document.querySelectorAll('.anchor-top');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.toc a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -80% 0px' });
+    sections.forEach(s => observer.observe(s));
+
+    document.querySelectorAll('.faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = '0';
+            other.closest('.faq-item').querySelector('.faq-icon').style.transform = '';
+          }
+        });
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+        icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+      });
+    });
+  </script>
+
+</Base>

@@ -1,0 +1,273 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Top GEO Companies: Who Delivers Results in AI Search';
+const description = 'An honest assessment of the top generative engine optimisation companies. What to look for, how to evaluate providers, and which types of GEO company deliver measurable results.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Top GEO Companies: Who Delivers Results in AI Search",
+    "description": "An honest assessment of top generative engine optimisation companies, evaluation criteria, and what separates genuine GEO expertise from repackaged SEO.",
+    "author": { "@type": "Organization", "name": "GEOoptimised", "url": "https://geooptimised.com" },
+    "publisher": { "@type": "Organization", "name": "GEOoptimised", "url": "https://geooptimised.com" },
+    "datePublished": "2025-05-25",
+    "dateModified": "2025-05-25",
+    "url": "https://geooptimised.com/geo-companies/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://geooptimised.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://geooptimised.com/geo-services/" },
+      { "@type": "ListItem", "position": 3, "name": "GEO Companies", "item": "https://geooptimised.com/geo-companies/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What makes a good GEO company?", "acceptedAnswer": { "@type": "Answer", "text": "A good GEO company has dedicated AI visibility tooling, can demonstrate citation tracking across multiple platforms, employs specialists with entity optimisation expertise, and measures results in terms of citation frequency rather than just organic rankings." } },
+      { "@type": "Question", "name": "How many GEO companies exist?", "acceptedAnswer": { "@type": "Answer", "text": "As of 2025, fewer than fifty companies worldwide offer genuine generative engine optimisation as a core service. Many digital agencies have added GEO to their services page, but the number with dedicated methodology, tooling, and measurable client results is much smaller." } },
+      { "@type": "Question", "name": "How much do GEO companies charge?", "acceptedAnswer": { "@type": "Answer", "text": "GEO company pricing ranges from £1,500 to £3,000 for one-off audits and £2,000 to £10,000 per month for ongoing retainers. Enterprise programmes with multi-platform coverage can exceed £15,000 per month. The right investment depends on competitive landscape and commercial opportunity." } },
+      { "@type": "Question", "name": "Should I choose a GEO specialist or a full-service agency?", "acceptedAnswer": { "@type": "Answer", "text": "Specialist GEO companies outperform generalist agencies on citation metrics in almost every measurable comparison. If your organic SEO foundation is solid and your priority is AI visibility, a specialist is the better investment. If you need both SEO and GEO from scratch, a full-service agency with genuine GEO capability is the pragmatic choice." } },
+      { "@type": "Question", "name": "What questions should I ask a GEO company before hiring?", "acceptedAnswer": { "@type": "Answer", "text": "Ask: What citation tracking tools do you use? Can you show me before-and-after citation data for a current client? How do you measure GEO success? Which AI platforms do you optimise for? What is your entity optimisation methodology? How frequently do you update strategy based on platform changes?" } }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'landscape', label: 'The GEO Landscape' },
+  { id: 'what-to-look-for', label: 'What to Look For' },
+  { id: 'types', label: 'Types of GEO Company' },
+  { id: 'evaluation', label: 'How to Evaluate' },
+  { id: 'red-flags', label: 'Red Flags' },
+  { id: 'faq', label: 'FAQ' },
+];
+
+const faqs = [
+  { q: 'What makes a good GEO company?', a: 'A good GEO company has dedicated AI visibility tooling, can demonstrate citation tracking across multiple platforms, employs specialists with entity optimisation expertise, and measures results in terms of citation frequency rather than just organic rankings.' },
+  { q: 'How many GEO companies exist?', a: 'As of 2025, fewer than fifty companies worldwide offer genuine generative engine optimisation as a core service. Many digital agencies have added GEO to their services page, but the number with dedicated methodology, tooling, and measurable client results is much smaller.' },
+  { q: 'How much do GEO companies charge?', a: 'GEO company pricing ranges from £1,500 to £3,000 for one-off audits and £2,000 to £10,000 per month for ongoing retainers. Enterprise programmes with multi-platform coverage can exceed £15,000 per month. The right investment depends on competitive landscape and commercial opportunity.' },
+  { q: 'Should I choose a GEO specialist or a full-service agency?', a: 'Specialist GEO companies outperform generalist agencies on citation metrics in almost every measurable comparison. If your organic SEO foundation is solid and your priority is AI visibility, a specialist is the better investment. If you need both SEO and GEO from scratch, a full-service agency with genuine GEO capability is the pragmatic choice.' },
+  { q: 'What questions should I ask a GEO company before hiring?', a: 'Ask: What citation tracking tools do you use? Can you show me before-and-after citation data for a current client? How do you measure GEO success? Which AI platforms do you optimise for? What is your entity optimisation methodology? How frequently do you update strategy based on platform changes?' },
+];
+
+const related = [
+  { tag: 'Service', title: 'GEO Agency', excerpt: 'Our core generative engine optimisation service and methodology.', href: '/geo-agency/' },
+  { tag: 'Service', title: 'AI Optimisation Agency', excerpt: 'Full-service GEO and AEO delivered as a unified programme.', href: '/ai-optimisation-agency/' },
+  { tag: 'Services', title: 'GEO Services Overview', excerpt: 'The full range of services a specialist GEO company delivers.', href: '/geo-services/' },
+];
+---
+
+<Base title={title} description={description} schema={schema} ogType="article">
+
+  <nav aria-label="Breadcrumb" class="container-wide pt-28">
+    <ol class="flex items-center gap-1.5 text-sm text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-services/" class="transition hover:text-[var(--accent)]">Services</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">GEO Companies</li>
+    </ol>
+  </nav>
+
+  <section class="hero-fade">
+    <div class="container-wide pt-12 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Buyer's Guide</span>
+        <span class="font-mono text-xs text-ink-400">8 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        Top GEO Companies: Who Delivers Results
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        The generative engine optimisation market is new, fast-moving, and crowded with agencies that have added GEO to their services page without building the infrastructure to deliver it. This guide helps you separate genuine expertise from marketing claims.
+      </p>
+    </div>
+  </section>
+
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <div>
+
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Fewer than fifty companies worldwide offer genuine GEO as a core service — most are repackaged SEO.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>The best GEO companies have dedicated citation tracking, entity analysis tooling, and cross-platform monitoring.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Specialist GEO companies outperform generalist agencies on every measurable citation metric.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Ask for citation data, not just ranking reports — that is the clearest test of genuine GEO capability.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prose-dark">
+        <h2 id="landscape" class="anchor-top">The Current GEO Company Landscape</h2>
+        <p>Generative engine optimisation emerged as a distinct discipline in 2024, and the market is still forming. The companies operating in this space fall into three broad categories: purpose-built GEO specialists, traditional SEO agencies that have added GEO services, and technology platforms that provide GEO tooling without consulting.</p>
+        <p>The distinction matters because the quality of GEO delivery varies dramatically across these categories. A purpose-built specialist has invested in the methodology, tooling, and expertise required to track and improve AI visibility. A traditional agency that has added GEO to its menu may lack the infrastructure to deliver meaningful results. A technology platform can provide data but not strategy.</p>
+        <p>As of mid-2025, fewer than fifty companies worldwide can demonstrate genuine GEO capability with measurable client results. The number claiming GEO expertise is many times larger. The gap between claim and capability is the central challenge for any business evaluating <a href="/geo-services/">GEO service providers</a>.</p>
+
+        <h2 id="what-to-look-for" class="anchor-top">What to Look for in a GEO Company</h2>
+        <p>Six capabilities separate genuine GEO companies from agencies that have bolted the term onto their existing services.</p>
+        <p><strong>Dedicated citation tracking.</strong> A real GEO company can show you how often your brand is cited across ChatGPT, Perplexity, Gemini, Copilot, and AI Overviews — and how that compares to competitors. If a company cannot demonstrate this capability in a sales conversation, they do not have it.</p>
+        <p><strong>Entity optimisation expertise.</strong> LLMs make citation decisions based on entity authority. A competent GEO company understands how to strengthen your brand's presence in Wikipedia, Wikidata, Google Knowledge Graph, and industry databases. This is specialist knowledge that most SEO agencies lack.</p>
+        <p><strong>Cross-platform methodology.</strong> ChatGPT, Perplexity, and Gemini use different retrieval mechanisms and weight different signals. A serious GEO company has distinct strategies for each platform, not a one-size-fits-all approach.</p>
+        <p><strong>Content architecture for LLMs.</strong> GEO-specific content optimisation differs from SEO content. The content must be structured so that AI models can extract specific claims, attribute them correctly, and cite them in generated responses. This requires understanding how retrieval-augmented generation works at a technical level.</p>
+        <p><strong>Measurable reporting.</strong> Citation frequency, brand accuracy in AI responses, and competitive positioning across platforms — these are the metrics that matter. If a GEO company reports only organic rankings and traffic, they are running an SEO programme under a different name.</p>
+        <p><strong>Current platform intelligence.</strong> AI platforms evolve weekly. A credible GEO company maintains active research into how each platform's retrieval and citation behaviour changes, and adjusts strategy accordingly. Ask how they stay current — if the answer is vague, that tells you something.</p>
+
+        <h2 id="types" class="anchor-top">Types of GEO Company</h2>
+
+        <h3>Purpose-Built GEO Specialists</h3>
+        <p>These are companies founded specifically to address AI visibility. Their entire team, tooling, and methodology is built around making brands visible in AI-generated answers. They do not offer traditional SEO, PPC, or social media as separate services. GEO is the product.</p>
+        <p>Advantages: deepest expertise, most advanced tooling, fastest adaptation to platform changes. Disadvantages: may not address your traditional SEO needs, typically higher price point, smaller team size. <a href="/geo-agency/">GEOoptimised</a> falls into this category.</p>
+
+        <h3>SEO Agencies with GEO Capabilities</h3>
+        <p>Established SEO agencies that have developed genuine GEO capability alongside their existing services. The best of these have invested in dedicated GEO tooling and specialists. The worst have simply renamed their content optimisation service.</p>
+        <p>Advantages: can handle both SEO and GEO under one roof, existing relationship if you are already a client. Disadvantages: GEO is often a secondary priority, specialists may split time across disciplines, tooling may lag behind purpose-built competitors.</p>
+
+        <h3>GEO Technology Platforms</h3>
+        <p>Companies that provide <a href="/geo-tools/">GEO tooling</a> — citation tracking, entity analysis, AI visibility dashboards — without consulting or implementation services. Useful for in-house teams with the expertise to act on the data.</p>
+        <p>Advantages: lower cost, full control, useful data. Disadvantages: requires internal expertise to interpret and act on, no strategic guidance, no implementation support.</p>
+
+        <h2 id="evaluation" class="anchor-top">How to Evaluate a GEO Company</h2>
+        <p>Before signing with any GEO provider, ask these six questions. The quality of the answers will tell you more than any pitch deck.</p>
+        <p><strong>1. Show me your citation tracking dashboard.</strong> If they have one, they are serious. If they describe plans to build one, they are not ready.</p>
+        <p><strong>2. Walk me through a client case study with citation data.</strong> Before-and-after citation frequency across platforms. Not testimonials, not organic ranking improvements — actual AI visibility metrics.</p>
+        <p><strong>3. How do you optimise differently for ChatGPT versus Perplexity?</strong> These platforms use different retrieval mechanisms. If the answer is the same strategy for both, the company lacks platform-specific expertise.</p>
+        <p><strong>4. What is your entity optimisation methodology?</strong> Listen for specifics: Wikipedia editing guidelines, Wikidata property management, Knowledge Graph reconciliation, sameAs linking strategy. Vague answers indicate surface-level capability.</p>
+        <p><strong>5. How frequently do you update strategy based on platform changes?</strong> AI platforms evolve weekly. Quarterly strategy reviews are insufficient. The best GEO companies adjust tactics continuously based on observed changes in citation behaviour.</p>
+        <p><strong>6. What does your reporting include?</strong> Citation frequency, brand accuracy, competitive positioning, platform-by-platform performance. If the answer focuses on organic rankings and traffic, the company is running SEO under a GEO label.</p>
+
+        <h2 id="red-flags" class="anchor-top">Red Flags When Evaluating GEO Companies</h2>
+      </div>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        <div class="card p-6">
+          <h3 class="font-display text-base font-semibold text-ink-300">Guaranteed citations</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300">No company can guarantee AI citations. LLM behaviour is probabilistic, not deterministic. Any company promising guaranteed placement in AI answers is either misrepresenting how these systems work or planning to underdeliver.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-display text-base font-semibold text-ink-300">GEO as a bolt-on</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300">If GEO is a line item on an existing SEO retainer rather than a standalone programme with its own strategy, tooling, and reporting, it will receive secondary attention and produce secondary results.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-display text-base font-semibold text-ink-300">No citation data</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300">If a company cannot show you current citation data for their own brand across AI platforms, they have not built the monitoring infrastructure required to deliver GEO. They are selling a service they cannot yet measure.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-display text-base font-semibold text-ink-300">One-platform focus</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300">Your customers use multiple AI tools. A company that only optimises for ChatGPT or only targets AI Overviews is leaving visibility on the table. Cross-platform coverage is a baseline requirement.</p>
+        </div>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 max-w-3xl divide-y divide-[var(--line)]">
+        {faqs.map(faq => (
+          <div class="faq-item">
+            <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
+              <span>{faq.q}</span>
+              <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+              </svg>
+            </button>
+            <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+              <p class="pb-5 text-ink-300 leading-relaxed">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="border-t hair mt-12">
+    <div class="container-wide py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">See How We Compare</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        We are a purpose-built GEO company with dedicated citation tracking, entity optimisation expertise, and cross-platform methodology. Request a free audit and judge our capabilities against the criteria on this page.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request Your Free GEO Audit</a>
+        <a href="/geo-agency/" class="btn btn-ghost">About Our Agency</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const tocLinks = document.querySelectorAll('.toc a');
+    const sections = document.querySelectorAll('.anchor-top');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.toc a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -80% 0px' });
+    sections.forEach(s => observer.observe(s));
+
+    document.querySelectorAll('.faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = '0';
+            other.closest('.faq-item').querySelector('.faq-icon').style.transform = '';
+          }
+        });
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+        icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+      });
+    });
+  </script>
+
+</Base>

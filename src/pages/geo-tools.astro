@@ -1,0 +1,399 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Best GEO Tools & Platforms for AI Visibility | GEOoptimised';
+const description = 'The definitive guide to generative engine optimisation tools: AI visibility trackers, citation monitors, content optimisers, and brand authority analysers reviewed and compared.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "GEO Tools Consulting",
+    "serviceType": "Generative Engine Optimisation Tools Advisory",
+    "provider": {
+      "@type": "Organization",
+      "name": "GEOoptimised",
+      "url": "https://geooptimised.com"
+    },
+    "description": "Independent evaluation and implementation guidance for generative engine optimisation tools, AI visibility trackers, citation monitors, and brand authority platforms.",
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Kingdom"
+    },
+    "url": "https://geooptimised.com/geo-tools/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://geooptimised.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "GEO Tools",
+        "item": "https://geooptimised.com/geo-tools/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are generative engine optimisation tools?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Generative engine optimisation tools are software platforms that help brands measure, track, and improve their visibility within AI-generated answers from ChatGPT, Perplexity, Gemini, Copilot, and similar large language model platforms. They differ from traditional SEO tools in that they focus on citation frequency, brand entity recognition, and AI answer presence rather than search engine rankings and organic click data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do GEO tools differ from standard SEO tools?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standard SEO tools measure rankings, backlinks, crawl health, and organic click-through rates in traditional search engines. GEO tools measure entirely different signals: how often AI models cite your brand, which sources they draw upon, how your entity is described, and how your citation rate compares to competitors across generative platforms. The underlying data sources, measurement methodologies, and optimisation recommendations are fundamentally distinct."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a GEO tool if I already use Ahrefs or SEMrush?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, if AI visibility is a priority for your business. Ahrefs and SEMrush are built for traditional search and do not measure AI citation frequency, generative platform presence, or entity recognition by large language models. A dedicated GEO tool fills this blind spot. The two categories are complementary: use SEO tools for organic search performance and GEO tools for AI answer visibility."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which AI platforms should a GEO tool cover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At minimum, a useful GEO tool should cover ChatGPT, Perplexity, Google Gemini, and Microsoft Copilot. These four platforms account for the vast majority of AI-driven information queries. Coverage of Claude, Google AI Overviews, and sector-specific AI tools is a useful addition. The best tools allow custom prompt libraries so you can test the specific queries your target audience is likely to use."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much do GEO tools typically cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GEO tool pricing varies widely because the category is young and evolving rapidly. Entry-level tools with basic citation tracking start from around GBP 50 to GBP 200 per month. Mid-tier platforms with multi-platform coverage, competitive benchmarking, and reporting dashboards run GBP 300 to GBP 800 per month. Enterprise solutions with API access, custom prompt libraries, and white-label reporting can exceed GBP 2,000 per month. Most offer a free trial or limited free tier."
+        }
+      }
+    ]
+  }
+];
+
+const categories = [
+  {
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>`,
+    tag: 'Category 1',
+    title: 'AI Visibility Trackers',
+    body: 'Platforms that systematically query ChatGPT, Perplexity, Gemini, and Copilot with your target prompts and record citation frequency, brand mention rate, and competitor presence over time.',
+    href: '/geo-tools/ai-visibility-trackers/',
+  },
+  {
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>`,
+    tag: 'Category 2',
+    title: 'Citation Monitors',
+    body: 'Tools that track where and how AI platforms cite your brand, which source URLs are being referenced, how your brand is described in generated responses, and whether citations are accurate.',
+    href: '/geo-tools/citation-monitors/',
+  },
+  {
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>`,
+    tag: 'Category 3',
+    title: 'Content Optimisers',
+    body: 'Platforms that analyse your existing content and recommend structural, linguistic, and semantic changes to increase the probability that AI models select it as a citation source.',
+    href: '/geo-tools/content-optimisers/',
+  },
+  {
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`,
+    tag: 'Category 4',
+    title: 'Brand Authority Analysers',
+    body: 'Tools focused on entity presence across knowledge graphs, Wikipedia, Wikidata, and structured databases that large language models draw on when constructing factual claims about organisations.',
+    href: '/geo-tools/brand-authority-analysers/',
+  },
+];
+
+const faqs = [
+  {
+    q: 'What are generative engine optimisation tools?',
+    a: 'Generative engine optimisation tools are software platforms that help brands measure, track, and improve their visibility within AI-generated answers from ChatGPT, Perplexity, Gemini, Copilot, and similar large language model platforms. They differ from traditional SEO tools in that they focus on citation frequency, brand entity recognition, and AI answer presence rather than search engine rankings and organic click data.',
+  },
+  {
+    q: 'How do GEO tools differ from standard SEO tools?',
+    a: 'Standard SEO tools measure rankings, backlinks, crawl health, and organic click-through rates in traditional search engines. GEO tools measure entirely different signals: how often AI models cite your brand, which sources they draw upon, how your entity is described, and how your citation rate compares to competitors across generative platforms. The underlying data sources, measurement methodologies, and optimisation recommendations are fundamentally distinct.',
+  },
+  {
+    q: 'Do I need a GEO tool if I already use Ahrefs or SEMrush?',
+    a: 'Yes, if AI visibility is a priority for your business. Ahrefs and SEMrush are built for traditional search and do not measure AI citation frequency, generative platform presence, or entity recognition by large language models. A dedicated GEO tool fills this blind spot. The two categories are complementary: use SEO tools for organic search performance and GEO tools for AI answer visibility.',
+  },
+  {
+    q: 'Which AI platforms should a GEO tool cover?',
+    a: 'At minimum, a useful GEO tool should cover ChatGPT, Perplexity, Google Gemini, and Microsoft Copilot. These four platforms account for the vast majority of AI-driven information queries. Coverage of Claude, Google AI Overviews, and sector-specific AI tools is a useful addition. The best tools allow custom prompt libraries so you can test the specific queries your target audience is likely to use.',
+  },
+  {
+    q: 'How much do GEO tools typically cost?',
+    a: 'GEO tool pricing varies widely because the category is young and evolving rapidly. Entry-level tools with basic citation tracking start from around GBP 50 to GBP 200 per month. Mid-tier platforms with multi-platform coverage, competitive benchmarking, and reporting dashboards run GBP 300 to GBP 800 per month. Enterprise solutions with API access, custom prompt libraries, and white-label reporting can exceed GBP 2,000 per month. Most offer a free trial or limited free tier.',
+  },
+];
+
+const relatedHubs = [
+  { title: 'GEO Services', desc: 'The full scope of generative engine optimisation services: audits, entity work, structured data, and ongoing monitoring.', href: '/geo-services/' },
+  { title: 'AI Brand Visibility', desc: 'How to build the brand signals that make AI models recognise, trust, and cite your organisation.', href: '/ai-brand-visibility/' },
+  { title: 'GEO Monitoring', desc: 'Continuous tracking of your citation frequency, competitive position, and brand accuracy across AI platforms.', href: '/geo-monitoring/' },
+];
+---
+
+<Base title={title} description={description} schema={schema} ogType="website">
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-28">
+    <ol class="flex items-center gap-2 font-mono text-xs text-ink-400">
+      <li><a href="/" class="hover:text-[var(--accent)] transition-colors">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200">GEO Tools</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-fade relative overflow-hidden">
+    <div class="container-wide grid gap-12 pt-12 pb-20 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-7">
+        <span class="eyebrow">GEO Tools Hub</span>
+        <h1 class="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <span class="grad-text">Best GEO Tools &amp; Platforms for AI Visibility</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-300">
+          Generative engine optimisation tools are the instruments that make AI visibility measurable. This hub reviews the platforms that track citations, monitor brand presence, optimise content for LLM selection, and analyse entity authority across the major generative AI platforms.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/contact/" class="btn btn-primary">Get Tools Advice</a>
+          <a href="/geo-services/" class="btn btn-ghost">Explore GEO Services</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="card p-6">
+          <span class="eyebrow">At a glance</span>
+          <div class="mt-4 grid grid-cols-2 gap-6">
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">13</p>
+              <p class="mt-1 text-sm text-ink-400">Tools reviewed</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">5</p>
+              <p class="mt-1 text-sm text-ink-400">Tool categories</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">Free &amp; Paid</p>
+              <p class="mt-1 text-sm text-ink-400">Options covered</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">Monthly</p>
+              <p class="mt-1 text-sm text-ink-400">Updated</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Tool Categories Grid -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">Tool Categories</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Four Categories of GEO Tooling</h2>
+    <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed">
+      The GEO tool landscape splits into four functional categories, each addressing a distinct part of the AI visibility problem. Mature programmes use tools from all four. Brands starting out typically begin with an AI visibility tracker and add capability as their programme matures.
+    </p>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-2">
+      {categories.map(c => (
+        <div class="card card-hover p-8 flex flex-col">
+          <div class="flex h-12 w-12 items-center justify-center rounded-lg border border-[var(--line)] text-[var(--accent)]">
+            <Fragment set:html={c.icon} />
+          </div>
+          <span class="eyebrow mt-5">{c.tag}</span>
+          <h3 class="mt-2 font-display text-xl font-semibold text-ink-50">{c.title}</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300 flex-1">{c.body}</p>
+          <a href={c.href} class="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-[var(--accent)] hover:underline underline-offset-4">
+            See tools <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Prose Overview -->
+  <section class="container-wide py-20">
+    <div class="prose-dark space-y-16">
+
+      <div class="grid gap-8 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <span class="eyebrow">Overview</span>
+          <h2 id="why-tools-matter" class="anchor-top !mt-3">Why GEO Tools Matter</h2>
+        </div>
+        <div class="lg:col-span-7">
+          <p>Generative engine optimisation is a measurement problem before it is an optimisation problem. You cannot improve your brand's citation frequency in AI-generated answers without first knowing your baseline: which platforms cite you, for which queries, how often, and with what accuracy. Without tooling, this assessment is guesswork based on anecdotal spot-checks that cannot be scaled, compared over time, or benchmarked against competitors.</p>
+          <p>The emergence of dedicated GEO tools marks the maturation of the discipline. When <a href="/generative-engine-optimisation/">generative engine optimisation</a> first became a recognised practice, practitioners had to build custom query runners, manually log AI responses in spreadsheets, and infer trends from informal observation. Purpose-built platforms have since automated the core measurement tasks and made it possible to track AI visibility with the same rigour that rank trackers brought to traditional SEO.</p>
+          <p>The distinction matters commercially. Brands that invest in <a href="/geo-services/">GEO services</a> without measurement infrastructure have no way to quantify impact, prioritise effort, or demonstrate return on investment to stakeholders. Tools close that accountability gap. They turn AI visibility from an abstract goal into a tracked metric with a baseline, a trajectory, and a competitive context.</p>
+          <p>The GEO tool market is younger than the broader SEO tool landscape and considerably less consolidated. Dozens of platforms launched between 2023 and 2025, with varying scopes, data quality standards, and coverage models. Some are genuinely useful and actively developed. Others are superficial dashboards dressed up in AI-era terminology. This hub exists to cut through that noise and help practitioners identify the tools worth building into their workflow.</p>
+        </div>
+      </div>
+
+      <div>
+        <h2 id="what-to-look-for">What to Look for in a GEO Tool</h2>
+        <p>The most important criterion for any GEO tool is platform breadth. A tool that only monitors one AI platform is a narrow instrument. Your customers do not restrict themselves to a single AI assistant, and your tooling should not either. The minimum credible coverage set is ChatGPT, Perplexity, Google Gemini, and Microsoft Copilot. Tools that add Claude, Google AI Overviews, and the ability to create custom prompt libraries are considerably more useful for serious programmes.</p>
+        <p>Query customisation is the second decisive factor. Generic tools that query AI platforms with pre-set prompts will not reflect your specific business context. The prompts that matter are the ones your target customers actually use when seeking products, services, or information in your category. A GEO tool that allows you to build and manage your own prompt library, organised by intent type and persona, will produce far more actionable data than one that relies on generalised templates.</p>
+        <p>Citation tracking granularity determines whether a tool is useful for optimisation decisions or merely informational. Basic tools report whether your brand appeared in an answer. Better tools identify which specific URL was cited, which section of the answer contained the citation, whether the citation was attributed or paraphrased, and how competitor citation rates compare for the same queries. That granularity is what enables prioritisation: it tells you which pages are working as citation sources and which are being overlooked despite ranking well in traditional search.</p>
+        <p>Historical data retention is frequently undervalued until it matters. AI platform behaviour changes as models are updated, retrieval systems are revised, and the competitive landscape shifts. A tool that only shows current data cannot tell you whether a change in citation frequency is a result of your optimisation work, a platform update, or a competitor's intervention. Tools that retain at minimum ninety days of history, and ideally twelve months, are the ones that support genuine strategic decision-making.</p>
+        <p>Finally, consider the tool's approach to data collection. Some platforms use their own API access to query AI systems. Others rely on scraping or third-party data aggregation. The methodology matters because it affects reliability, refresh frequency, and the risk of the tool breaking when underlying platforms change. Vendors that are transparent about their data collection approach are more trustworthy than those that are vague about their methodology.</p>
+      </div>
+
+      <div>
+        <h2 id="how-they-differ-from-seo-tools">How GEO Tools Differ from Traditional SEO Tools</h2>
+        <p>Traditional SEO tools are built around a specific data model: the search engine index. They query Google, Bing, and similar platforms via official APIs or permitted scraping, collect ranking positions, backlink counts, and crawl data, and present this information through dashboards designed to help practitioners improve organic search performance. The entire conceptual framework assumes a list-based results page where positions are stable enough to track and compare over time.</p>
+        <p>Generative AI platforms produce a fundamentally different kind of output. There are no fixed positions. There is no consistent ranking to track. Instead, an AI model synthesises a unique response to each query, drawing on a combination of its training data and, in retrieval-augmented systems, real-time web results. The same brand may be cited in one response and absent from the next, depending on phrasing, model version, and retrieved context. This probabilistic nature requires a different measurement approach entirely: statistical sampling at scale rather than position tracking at a point in time.</p>
+        <p>This is why existing SEO tools cannot fill the GEO measurement gap simply by adding an AI-monitoring tab. The data collection infrastructure, the aggregation methodology, the metrics definitions, and the optimisation frameworks are all different. A platform built to tell you that your page ranks position four for a given keyword requires a complete rebuild to tell you that your brand is cited in 34% of AI answers for a given query category. These are different products addressing different problems.</p>
+        <p>The practical implication for practitioners is that GEO tools and SEO tools are complementary, not competing. A well-equipped team uses both. SEO tools inform the content and link-building work that creates the underlying authority GEO depends on. GEO tools measure whether that authority is translating into AI citations and guide the adjustments that increase citation frequency. The disciplines reinforce each other; the tools serve different but related purposes.</p>
+      </div>
+
+      <div>
+        <h2 id="tool-selection-framework">A Framework for Selecting GEO Tools</h2>
+        <p>Start with your measurement objective. If your primary need is to establish a baseline — to understand your current AI visibility position before committing to an optimisation programme — prioritise platform breadth and query customisation over depth of analytics. You need to know the scale of your presence or absence before you can decide where to invest.</p>
+        <p>If you already have a baseline and are tracking the impact of ongoing <a href="/geo-agency/">GEO agency</a> work, shift priority to historical data retention, trend analysis, and competitive benchmarking. At this stage, the ability to measure change over time and compare your trajectory against specific competitors is more valuable than breadth alone.</p>
+        <p>For brands managing large content estates or operating across multiple markets, look for tools with bulk query management, segmentation by topic cluster or audience type, and export capabilities that integrate with existing reporting infrastructure. A tool that produces excellent insights but cannot be incorporated into the dashboards your stakeholders already use will face adoption friction regardless of its technical quality.</p>
+        <p>Budget is a real constraint. The good news is that free and entry-level tools provide genuine value for brands at the beginning of their GEO journey. Spending GBP 500 per month on an enterprise GEO platform before you have an optimisation process to feed with its data is premature. Match tool sophistication to programme maturity: start lean, establish process, and invest in more capable tooling as your programme scales.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Evaluation Criteria -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">How We Evaluate</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Our Tool Evaluation Criteria</h2>
+    <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed mb-12">
+      Every tool reviewed on this hub is assessed against the same five criteria. Scores are assigned independently for each dimension and combined into an overall recommendation. We do not accept paid placements or sponsored reviews.
+    </p>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="card p-6 border-t-2 border-t-[var(--accent)]">
+        <span class="font-mono text-xs text-ink-500">Criterion 1</span>
+        <h3 class="mt-2 font-display text-lg font-semibold text-ink-50">Platform Coverage</h3>
+        <p class="mt-3 text-sm leading-relaxed text-ink-300">How many AI platforms does the tool monitor? Does it cover the four core platforms (ChatGPT, Perplexity, Gemini, Copilot) as a minimum? Does it include Google AI Overviews, Claude, and emerging sector-specific AI assistants? Breadth of coverage determines how representative the data is of the actual AI search landscape.</p>
+      </div>
+      <div class="card p-6 border-t-2 border-t-[var(--accent)]">
+        <span class="font-mono text-xs text-ink-500">Criterion 2</span>
+        <h3 class="mt-2 font-display text-lg font-semibold text-ink-50">Citation Tracking</h3>
+        <p class="mt-3 text-sm leading-relaxed text-ink-300">Does the tool track which specific URLs are cited, not just whether a brand name appears? Can it distinguish between direct citation, paraphrase, and incidental mention? Does it identify the section of the AI response where the citation appears? Granularity at the URL and response-position level is what separates actionable data from vanity metrics.</p>
+      </div>
+      <div class="card p-6 border-t-2 border-t-[var(--accent)]">
+        <span class="font-mono text-xs text-ink-500">Criterion 3</span>
+        <h3 class="mt-2 font-display text-lg font-semibold text-ink-50">Entity Analysis</h3>
+        <p class="mt-3 text-sm leading-relaxed text-ink-300">Does the tool assess your brand's entity presence across the knowledge sources AI models draw on? Can it surface gaps in your Wikipedia, Wikidata, or structured data presence that may be limiting citation potential? Entity analysis capability is the feature most absent from first-generation GEO tools and most valuable for brands with existing authority that is not translating into AI citations.</p>
+      </div>
+      <div class="card p-6 border-t-2 border-t-[var(--accent)]">
+        <span class="font-mono text-xs text-ink-500">Criterion 4</span>
+        <h3 class="mt-2 font-display text-lg font-semibold text-ink-50">Pricing &amp; Value</h3>
+        <p class="mt-3 text-sm leading-relaxed text-ink-300">Is the pricing model appropriate for the data quality delivered? Are there meaningful free or trial tiers for brands establishing baseline measurements? Does the tool charge per query (creating unpredictable costs as programmes scale) or per seat or per month at a fixed rate? Transparent, scalable pricing is a signal of a well-structured product.</p>
+      </div>
+      <div class="card p-6 border-t-2 border-t-[var(--accent)]">
+        <span class="font-mono text-xs text-ink-500">Criterion 5</span>
+        <h3 class="mt-2 font-display text-lg font-semibold text-ink-50">Ease of Use</h3>
+        <p class="mt-3 text-sm leading-relaxed text-ink-300">Can a practitioner without a technical background configure the tool, build a prompt library, and extract insights without extensive onboarding? Is the interface designed around the actual workflow of a GEO practitioner, or is it a technically capable platform with poor UX? Ease of use determines whether the tool gets used consistently, which matters more than any individual feature.</p>
+      </div>
+      <div class="card p-6 border-t-2 border-t-[var(--accent)]">
+        <span class="font-mono text-xs text-ink-500">Criterion 6</span>
+        <h3 class="mt-2 font-display text-lg font-semibold text-ink-50">Data Methodology</h3>
+        <p class="mt-3 text-sm leading-relaxed text-ink-300">Is the tool transparent about how it collects AI response data? Does it use official APIs, proprietary crawlers, or third-party data aggregation? How frequently is data refreshed? How does it handle probabilistic variation in AI responses — sampling strategy and statistical confidence levels matter for drawing valid conclusions from citation frequency data.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Frequently Asked Questions</h2>
+
+    <div class="mt-10 max-w-3xl divide-y divide-[var(--line)]">
+      {faqs.map(faq => (
+        <div class="faq-item">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors"
+            aria-expanded="false"
+          >
+            <span>{faq.q}</span>
+            <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+            </svg>
+          </button>
+          <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+            <p class="pb-5 text-ink-300 leading-relaxed">{faq.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="container-wide py-20">
+    <div class="relative overflow-hidden rounded-2xl dot-grid">
+      <div class="absolute inset-0 bg-gradient-to-br from-[rgba(var(--accent-glow),.12)] via-transparent to-transparent"></div>
+      <div class="relative px-8 py-16 text-center sm:px-16">
+        <span class="eyebrow">Tools Advice</span>
+        <h2 class="mt-4 font-display text-3xl font-bold text-ink-50 sm:text-4xl">Not Sure Which GEO Tools Are Right for Your Programme?</h2>
+        <p class="mt-4 mx-auto max-w-2xl text-ink-300 leading-relaxed">
+          Tool selection depends on your programme maturity, budget, and measurement objectives. Our team evaluates tools regularly and can advise on the right stack for your specific situation — without any vendor bias. Get in touch to discuss your needs.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact/" class="btn btn-primary">Get Tools Advice</a>
+          <a href="/geo-services/" class="btn btn-ghost">Explore GEO Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Hubs -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">Related</span>
+    <h2 class="mt-3 font-display text-2xl font-bold text-ink-50">Explore More</h2>
+    <div class="mt-8 grid gap-6 sm:grid-cols-3">
+      {relatedHubs.map(hub => (
+        <a href={hub.href} class="card card-hover block p-6">
+          <h3 class="font-display text-lg font-semibold text-ink-50">{hub.title}</h3>
+          <p class="mt-2 text-sm text-ink-400 leading-relaxed">{hub.desc}</p>
+          <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">
+            Read more <span aria-hidden="true">&rarr;</span>
+          </span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = '0';
+            other.closest('.faq-item').querySelector('.faq-icon').style.transform = '';
+          }
+        });
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+        icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+      });
+    });
+  </script>
+
+</Base>

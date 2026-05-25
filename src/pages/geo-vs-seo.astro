@@ -1,0 +1,497 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO vs Traditional SEO: What Changes and What Stays';
+const description = 'Generative engine optimisation and traditional SEO share a foundation but diverge sharply in signals, measurement, and competitive dynamics. A definitive comparison for 2025 and beyond.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'GEO vs Traditional SEO: What Changes and What Stays',
+    description: 'Generative engine optimisation and traditional SEO share a foundation but diverge sharply in signals, measurement, and competitive dynamics.',
+    url: 'https://geooptimised.com/geo-vs-seo/',
+    datePublished: '2025-05-25',
+    dateModified: '2025-05-25',
+    author: {
+      '@type': 'Organization',
+      name: 'GEOoptimised',
+      url: 'https://geooptimised.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'GEOoptimised',
+      url: 'https://geooptimised.com',
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'GEO vs SEO', item: 'https://geooptimised.com/geo-vs-seo/' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Is GEO replacing SEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'GEO is not replacing SEO — it is running alongside it. Traditional organic search still drives significant traffic, and a strong SEO foundation remains one of the most reliable inputs into GEO performance. The disciplines are complementary. Most brands need both, with the balance shifting towards GEO as AI-generated answers capture a growing share of query responses.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can the same agency deliver both GEO and SEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, provided the agency has built genuine GEO capability rather than simply rebranding existing SEO services. The signals, tooling, and measurement frameworks differ enough that delivering both well requires dedicated expertise in each. A generalist adding GEO to their service list is not the same as a team that has built its methodology around it.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What are the key signals for GEO vs SEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Traditional SEO prioritises backlinks, crawlability, page experience, and keyword relevance. GEO prioritises entity authority, structured data accuracy, citation-ready content structure, and presence in the knowledge bases that LLMs use as ground truth. Technical health and content quality matter in both, but the weighting and the specific mechanics differ substantially.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How is GEO success measured compared to SEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'SEO is measured through rankings, organic clicks, and impressions. GEO is measured through citation frequency (how often AI models mention your brand for target queries), brand accuracy (whether those mentions are correct), and cross-platform reach (visibility across ChatGPT, Perplexity, Gemini, Copilot, and AI Overviews). There are no fixed positions in GEO — presence and prominence replace rank.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How long does GEO take to show results compared to SEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Both disciplines require patience. Traditional SEO typically takes three to six months to show meaningful ranking improvements for competitive terms. GEO timelines are similar: most businesses see measurable changes in citation frequency within eight to twelve weeks of completing foundational work. Full competitive positioning in AI answers typically takes four to six months. Neither is a fast channel, but both compound significantly over time.',
+        },
+      },
+    ],
+  },
+];
+
+const tocItems = [
+  { id: 'fundamental-difference', label: 'The Fundamental Difference' },
+  { id: 'what-stays', label: 'What Stays the Same' },
+  { id: 'what-changes', label: 'What Changes' },
+  { id: 'comparison-table', label: 'Side-by-Side Comparison' },
+  { id: 'when-to-invest', label: 'When to Invest in Each' },
+  { id: 'one-agency', label: 'Can One Agency Do Both?' },
+  { id: 'convergence', label: 'The Convergence Thesis' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const comparisonRows = [
+  { dimension: 'Goal', seo: 'Rank pages in search engine results pages', geo: 'Earn citations in AI-generated answers' },
+  { dimension: 'Target Output', seo: 'Blue links, featured snippets, local pack', geo: 'Synthesised AI responses with source attribution' },
+  { dimension: 'Key Signals', seo: 'Backlinks, crawlability, page experience, keyword relevance', geo: 'Entity authority, structured data, citation-ready content, knowledge graph presence' },
+  { dimension: 'Content Approach', seo: 'Keyword-targeted, search intent-aligned, word count weighted', geo: 'Claim-based, quotable paragraphs, definitional statements, LLM-extractable' },
+  { dimension: 'Measurement', seo: 'Rankings, organic clicks, impressions, CTR', geo: 'Citation frequency, brand accuracy, AI visibility share, cross-platform reach' },
+  { dimension: 'Competition', seo: 'Ten organic positions per results page', geo: 'Typically one to three sources cited per AI answer' },
+  { dimension: 'Timeline', seo: '3–6 months for competitive terms', geo: '8–12 weeks to first measurable citation changes' },
+  { dimension: 'Pricing', seo: 'GBP 500–5,000 / month', geo: 'GBP 2,000–10,000+ / month' },
+  { dimension: 'Tools', seo: 'Ahrefs, Semrush, Screaming Frog, GSC', geo: 'AI query audits, entity monitors, citation trackers, Perplexity/ChatGPT/Gemini sampling' },
+  { dimension: 'When to Prioritise', seo: 'Strong organic search demand, established site needing traffic', geo: 'Buyers research via AI tools, competitors already cited in ChatGPT/Perplexity' },
+];
+
+const faqs = [
+  {
+    q: 'Is GEO replacing SEO?',
+    a: 'GEO is not replacing SEO — it is running alongside it. Traditional organic search still drives significant traffic, and a strong SEO foundation remains one of the most reliable inputs into GEO performance. The disciplines are complementary. Most brands need both, with the balance shifting towards GEO as AI-generated answers capture a growing share of query responses.',
+  },
+  {
+    q: 'Can the same agency deliver both GEO and SEO?',
+    a: 'Yes, provided the agency has built genuine GEO capability rather than simply rebranding existing SEO services. The signals, tooling, and measurement frameworks differ enough that delivering both well requires dedicated expertise in each. A generalist adding GEO to their service list is not the same as a team that has built its methodology around it.',
+  },
+  {
+    q: 'What are the key signals for GEO vs SEO?',
+    a: 'Traditional SEO prioritises backlinks, crawlability, page experience, and keyword relevance. GEO prioritises entity authority, structured data accuracy, citation-ready content structure, and presence in the knowledge bases that LLMs use as ground truth. Technical health and content quality matter in both, but the weighting and the specific mechanics differ substantially.',
+  },
+  {
+    q: 'How is GEO success measured compared to SEO?',
+    a: 'SEO is measured through rankings, organic clicks, and impressions. GEO is measured through citation frequency (how often AI models mention your brand for target queries), brand accuracy (whether those mentions are correct), and cross-platform reach (visibility across ChatGPT, Perplexity, Gemini, Copilot, and AI Overviews). There are no fixed positions in GEO — presence and prominence replace rank.',
+  },
+  {
+    q: 'How long does GEO take to show results compared to SEO?',
+    a: 'Both disciplines require patience. Traditional SEO typically takes three to six months to show meaningful ranking improvements for competitive terms. GEO timelines are similar: most businesses see measurable changes in citation frequency within eight to twelve weeks of completing foundational work. Full competitive positioning in AI answers typically takes four to six months. Neither is a fast channel, but both compound significantly over time.',
+  },
+];
+
+const related = [
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'First principles to advanced entity strategies — everything you need to understand GEO.',
+    href: '/generative-engine-optimisation/',
+  },
+  {
+    tag: 'Services',
+    title: 'GEO Services Overview',
+    excerpt: 'The full scope of what a generative engine optimisation agency delivers.',
+    href: '/geo-services/',
+  },
+  {
+    tag: 'Guide',
+    title: 'Answer Engine Optimisation',
+    excerpt: 'How AEO sits within a broader GEO programme and when you need both.',
+    href: '/answer-engine-optimisation/',
+  },
+];
+---
+
+<Base title={title} description={description} schema={schema} ogType="article">
+
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex items-center gap-1.5 font-mono text-xs text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">GEO vs SEO</li>
+    </ol>
+  </nav>
+
+  <section class="hero-fade">
+    <div class="container-wide pt-14 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Comparison Guide</span>
+        <span class="font-mono text-xs text-ink-400">10 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-4xl font-display text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+        <span class="grad-text">GEO vs Traditional SEO:</span> What Changes and What Stays
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <a href="/generative-engine-optimisation/" class="text-[var(--accent)] border-b border-[var(--accent)]/30 hover:border-[var(--accent)] transition">Generative engine optimisation</a> and traditional SEO share the same origin — make your brand visible when people search — but they diverge sharply in how that visibility is earned, measured, and sustained. This guide maps every significant difference and identifies precisely where the two disciplines converge.
+      </p>
+    </div>
+  </section>
+
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <div>
+
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>GEO targets AI-generated answers; SEO targets ranked results pages. The outputs are different, so the methods must be different too.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Content quality, technical site health, and domain authority remain essential in both disciplines — they are the shared foundation.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>GEO changes the signals that matter most: entity presence, structured data precision, and quotable content architecture replace keyword density and raw backlink volume.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>The competitive dynamic is more concentrated in GEO: one to three sources are cited per AI answer, versus ten organic positions per SERP.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>GEO and SEO are converging: AI Overviews, Perplexity, and Copilot increasingly blend retrieval with generation, making the disciplines inseparable at the top of the funnel.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prose-dark">
+        <h2 id="fundamental-difference" class="anchor-top">The Fundamental Difference</h2>
+        <p>
+          Traditional SEO operates on a simple premise: produce content that search engines rank highly, and users will find it in a list of ten blue links. The user sees your result, decides whether to click, lands on your page, and engages. Every step in that journey is visible, trackable, and optimisable.
+        </p>
+        <p>
+          Generative engine optimisation addresses a fundamentally different outcome. When a user asks ChatGPT "what are the best project management tools for agencies" or asks Perplexity "which SEO agencies specialise in AI search", they do not receive a list of links. They receive a synthesised, AI-authored answer that draws on sources the model has already evaluated. Your brand is either in that answer — cited, described, and positioned — or it is absent. There is no page two. There is no position eleven. The answer is the output.
+        </p>
+        <p>
+          This is the core divergence. SEO is about ranking pages so users can choose to click. GEO is about being chosen by an AI model to populate an answer before the user has a choice at all. The mechanics that determine each outcome are related but distinct.
+        </p>
+        <p>
+          Traditional search engines rank pages using signals that have been refined over two decades: the quality and relevance of backlinks, the technical crawlability of the site, the precision of keyword targeting, the authority of the domain, and increasingly the quality of the user experience. These signals are imperfect proxies for the question every search engine is trying to answer: which page best satisfies this query?
+        </p>
+        <p>
+          Large language models approach the same question differently. When a generative engine constructs an answer, it draws on training data and, in retrieval-augmented systems, real-time web content. The model selects sources based on entity authority (does the model know who you are?), content extractability (can the model cleanly quote a factual claim from your page?), and source corroboration (do multiple trusted references describe you consistently?). None of these is a direct equivalent of a backlink or a keyword match.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="what-stays" class="anchor-top">What Stays the Same</h2>
+        <p>
+          The differences between GEO and SEO are real and significant, but so is the shared foundation. Brands that strip away their SEO investment in favour of GEO-only strategies will underperform in both channels. The fundamentals transfer.
+        </p>
+        <h3>Content quality is non-negotiable in both</h3>
+        <p>
+          Search engines demote thin, low-quality, or inaccurate content. So do LLMs. A generative engine will not cite a page that contradicts well-established facts, makes unsubstantiated claims, or offers no genuine informational value. The bar for content quality has not fallen in the transition from SEO to GEO — it has risen. The difference is that LLMs can assess content quality at a semantic level that keyword-based ranking algorithms never could.
+        </p>
+        <p>
+          Content that genuinely answers questions, cites specific data, and provides clear, accurate information serves both disciplines equally well. The structural presentation must change, but the underlying quality requirement is identical.
+        </p>
+        <h3>Technical site health remains essential</h3>
+        <p>
+          Crawlability, page speed, mobile responsiveness, and clean site architecture matter in GEO for the same reason they matter in SEO: models cannot cite content they cannot access. A site that blocks AI crawlers entirely (via robots.txt or server configuration) removes itself from retrieval-augmented generation pipelines entirely. A site with broken links, slow load times, and inaccessible content gives AI systems a degraded picture of the brand.
+        </p>
+        <p>
+          Technical SEO hygiene — canonical URLs, structured navigation, clean internal linking — also improves the coherence of entity signals that LLMs rely on. A technically sound site is easier for any machine to understand, whether that machine is a traditional crawler or a language model performing retrieval.
+        </p>
+        <h3>Domain authority and trust signals persist</h3>
+        <p>
+          AI models have absorbed years of web data, and that data skews heavily towards established, trusted sources. A domain with strong backlink profiles, editorial citations, and a history of authoritative content starts GEO from a position of advantage. The trust signals that underpin high SEO authority do not disappear in the transition to GEO — they become foundational inputs.
+        </p>
+        <p>
+          A brand with no organic presence, no inbound links, and no third-party mentions is not an entity in any model's understanding of the world. Building that authority through traditional SEO creates the raw material that GEO strategies work with.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="what-changes" class="anchor-top">What Changes</h2>
+        <p>
+          The differences between GEO and SEO are not superficial. They affect which signals matter most, how competitive advantage is structured, and what you measure to know whether the strategy is working.
+        </p>
+        <h3>Signals shift from links to entities</h3>
+        <p>
+          Backlinks are the currency of traditional SEO because they represent one site's endorsement of another. A high volume of high-quality backlinks signals that a page is authoritative on its subject. LLMs process this signal, but they also weight something that SEO has historically underemphasised: entity coherence.
+        </p>
+        <p>
+          An entity is a distinct, knowable object in the world — a person, organisation, product, concept. LLMs construct their understanding of the world through entities and the relationships between them. If your brand exists as a well-defined entity in Wikipedia, Wikidata, Google's Knowledge Graph, and authoritative industry databases, you are structurally visible to AI models in a way that a high-backlink-count, low-entity-presence site is not.
+        </p>
+        <p>
+          GEO requires deliberate entity building: ensuring consistent naming across all platforms, establishing verified attributes, and creating the third-party corroboration that signals notability to knowledge systems.
+        </p>
+        <h3>Content structure changes from keyword targeting to claim architecture</h3>
+        <p>
+          Traditional SEO content is structured around keyword intent: identify the query, build content that satisfies it, target the primary keyword in the title, H1, and copy. This model produces content that ranks well in traditional SERPs but is not always optimal for LLM extraction.
+        </p>
+        <p>
+          GEO-optimised content is structured around extractable claims. Each paragraph should function as a self-contained, citable unit. Definitional statements ("GEO is the practice of optimising brand visibility in AI-generated answers") give LLMs clear, quotable text. Specific data points, named examples, and precise attributions give models the kind of grounded information they prefer to cite over vague equivalents.
+        </p>
+        <p>
+          Structured data becomes more important in GEO than it typically is in pure SEO. Schema markup — FAQPage, HowTo, Service, Person, sameAs — provides machine-readable context that helps models understand the content and attribute it correctly to the right entity.
+        </p>
+        <h3>Measurement replaces rank tracking with citation monitoring</h3>
+        <p>
+          You cannot track your position in a GEO environment the way you track keyword rankings in SEO. There are no fixed positions. The same query may produce different AI answers for different users, on different platforms, at different times. The measurement framework has to change accordingly.
+        </p>
+        <p>
+          GEO measurement focuses on citation frequency (how often your brand appears in AI answers for a set of target queries), brand accuracy (whether those mentions describe you correctly), sentiment (whether the description is favourable or neutral), and cross-platform reach (consistency of presence across ChatGPT, Perplexity, Gemini, Copilot, and AI Overviews). These metrics require different tooling and different analytical approaches from traditional rank tracking.
+        </p>
+        <h3>Competitive dynamics compress dramatically</h3>
+        <p>
+          Traditional SEO allocates ten organic positions on the first page. A competitive market might have fifty well-optimised pages vying for those slots, but ten brands share first-page visibility. The competitive landscape is tight but not zero-sum.
+        </p>
+        <p>
+          Generative AI answers typically cite one to three sources. In practice, the brand that earns the citation in a given AI answer gains disproportionate visibility — not a position in a list, but a direct endorsement in a synthesised response. This compression makes the stakes higher and the value of being the cited source significantly greater. It also means that early investment in GEO creates structural advantages that become progressively harder for late movers to overcome.
+        </p>
+      </div>
+
+      <div class="mt-16">
+        <h2 id="comparison-table" class="anchor-top font-display text-2xl font-bold text-ink-50 mb-6">Side-by-Side Comparison</h2>
+        <div class="card overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm">
+              <thead>
+                <tr class="border-b border-[var(--line)]">
+                  <th class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Dimension</th>
+                  <th class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-ink-300">Traditional SEO</th>
+                  <th class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Generative Engine Optimisation</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonRows.map((row, i) => (
+                  <tr class={i < comparisonRows.length - 1 ? 'border-b border-[var(--line-soft)]' : ''}>
+                    <td class="px-5 py-4 font-medium text-ink-100 align-top">{row.dimension}</td>
+                    <td class="px-5 py-4 text-ink-400 align-top">{row.seo}</td>
+                    <td class="px-5 py-4 text-ink-200 align-top">{row.geo}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="when-to-invest" class="anchor-top">When to Invest in GEO vs SEO</h2>
+        <p>
+          The question is not usually GEO or SEO — it is how to allocate effort between them given your specific situation. The answer depends on your industry, your current organic presence, and the behaviour of your buyers.
+        </p>
+        <h3>Prioritise GEO when your buyers research via AI tools</h3>
+        <p>
+          B2B buyers, professionals, and high-consideration consumers increasingly use AI assistants as a first step in research. A finance director evaluating accounting software is likely to ask ChatGPT or Perplexity for a shortlist before visiting any vendor's website. If your brand is not appearing in those AI-generated shortlists, you are invisible at the earliest and most influential stage of the buying process.
+        </p>
+        <p>
+          The trigger for GEO investment is not a threshold traffic number — it is observable buyer behaviour. If your customers are using AI tools to evaluate options in your category, GEO is already commercially relevant regardless of where traditional organic search rankings sit.
+        </p>
+        <h3>Prioritise SEO when organic demand is strong and AI adoption is low</h3>
+        <p>
+          Categories with strong transactional search intent and low AI research adoption — fast-moving consumer goods, local services, commodity products — may see limited GEO return in the near term. If your customers are searching "buy running shoes London" or "electrician Reading", traditional SEO serves that intent more directly than GEO.
+        </p>
+        <p>
+          The calculus shifts as AI adoption broadens. A local electrician with no online presence today faces a different strategic priority from an HR software provider whose enterprise buyers are already using Copilot to research vendors. Match the channel to the behaviour, not to the trend.
+        </p>
+        <h3>Invest in both when you are in a competitive, high-consideration category</h3>
+        <p>
+          Most businesses in competitive B2B or considered-purchase B2C categories should be investing in both simultaneously. A strong <a href="/geo-services/">GEO services</a> programme built on top of a well-maintained SEO foundation outperforms either approach in isolation, because the inputs to GEO — domain authority, content quality, technical health — are the same outputs that SEO produces.
+        </p>
+        <p>
+          The practical question is resourcing. A business with a limited budget and weak SEO fundamentals should build the foundation first. A business with established organic presence and competitive pressure from AI-visible rivals should layer GEO investment on top without abandoning SEO maintenance.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="one-agency" class="anchor-top">Can One Agency Do Both?</h2>
+        <p>
+          The honest answer is: yes, but only if they have genuinely built GEO capability rather than rebranding SEO services with new terminology.
+        </p>
+        <p>
+          The GEO market is young, and the speed at which every agency has added "AI search optimisation" to their services page is not matched by the speed at which most have developed real expertise. The tooling, the methodology, and the measurement infrastructure for GEO are distinct from SEO. An agency that retrofits GEO onto SEO delivery processes will produce SEO outputs with a GEO label.
+        </p>
+        <p>
+          A specialist <a href="/geo-agency/">GEO agency</a> built its methodology around how language models actually work — how they select sources, how they weight entity signals, how they construct citations. That is different from an agency that has adapted its existing keyword and backlink workflow to include some schema markup and a few LLM-focused content guidelines.
+        </p>
+        <p>
+          When evaluating a unified SEO and GEO provider, ask for the specific GEO tooling they use for citation tracking, the methodology for entity gap analysis, and examples of documented citation frequency improvements in campaigns they have run. Vague answers reveal retrofitted services. Specific, structured answers — with KPIs, measurement cadences, and platform-specific observations — reveal genuine capability.
+        </p>
+        <p>
+          The integration benefit of a single agency covering both is real: SEO and GEO share enough input signals that a team working across both can avoid duplication, spot synergies, and ensure that SEO work feeds GEO outcomes rather than conflicting with them. That benefit only materialises if both capabilities are genuine.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="convergence" class="anchor-top">The Convergence Thesis</h2>
+        <p>
+          There is a view gaining traction among search strategists that GEO and SEO are not diverging disciplines — they are converging ones. The evidence for this is structural.
+        </p>
+        <p>
+          Google's AI Overviews are a generative layer on top of traditional search infrastructure. They use existing PageRank signals, crawled content, and Search Console data alongside entity graphs and LLM reasoning to construct their answers. A brand that ranks well organically has a structural advantage in AI Overviews because the signals overlap. This is not GEO replacing SEO — it is GEO being built on top of SEO foundations.
+        </p>
+        <p>
+          Perplexity and Bing Copilot operate retrieval-augmented generation systems that actively crawl the web in real time. Strong SEO presence — crawlable pages, authoritative backlinks, fast load times — directly improves the probability that these platforms retrieve your content as a source. Again, SEO foundations feed GEO outcomes.
+        </p>
+        <p>
+          ChatGPT with web browsing, Gemini's integration with Google Search, and the emergence of AI Overviews in markets beyond the United States all point in the same direction: the future of search is a hybrid system in which generative synthesis sits on top of traditional retrieval. Brands optimising for that system need both disciplines.
+        </p>
+        <p>
+          The convergence does not erase the differences. Citation-specific content architecture, entity optimisation, and platform-specific GEO strategy will remain distinct from traditional keyword and backlink work for the foreseeable future. But the strategic framing should shift from "GEO or SEO" to "GEO and SEO, coordinated." The brands that treat them as separate budgets to be traded off will underperform the brands that treat them as a unified visibility strategy with two execution layers.
+        </p>
+        <p>
+          <a href="/answer-engine-optimisation/">Answer engine optimisation</a> sits at the intersection of both. The discipline of structuring content for direct answer extraction — concise, factual, schema-marked — serves both traditional featured snippets and AI-generated responses. It is a useful frame for understanding where GEO and SEO already share method, not just foundation.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 max-w-3xl divide-y divide-[var(--line)]">
+        {faqs.map(faq => (
+          <div class="faq-item">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+              </svg>
+            </button>
+            <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+              <p class="pb-5 text-ink-300 leading-relaxed">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </div>
+
+  <section class="border-t hair mt-12">
+    <div class="container-wide py-20">
+      <div class="relative overflow-hidden rounded-2xl dot-grid">
+        <div class="absolute inset-0 bg-gradient-to-br from-[rgba(var(--accent-glow),.12)] via-transparent to-transparent"></div>
+        <div class="relative px-8 py-16 text-center sm:px-16">
+          <span class="eyebrow">Get Started</span>
+          <h2 class="mt-4 font-display text-3xl font-bold text-ink-50 sm:text-4xl">See Where Your Brand Stands in AI Search</h2>
+          <p class="mt-4 mx-auto max-w-2xl text-ink-300 leading-relaxed">
+            A GEO audit maps your current citation frequency across ChatGPT, Perplexity, Gemini, Copilot, and AI Overviews, identifies which competitors are being cited in your place, and produces a prioritised action plan. It is the right starting point whether you are adding GEO to an existing SEO programme or building from scratch.
+          </p>
+          <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <a href="/contact/" class="btn btn-primary">Request a free GEO audit</a>
+            <a href="/geo-services/" class="btn btn-ghost">View GEO services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-wide pb-20">
+    <span class="eyebrow" id="related">Related reading</span>
+    <div class="mt-6 grid gap-6 md:grid-cols-3">
+      {related.map(item => (
+        <a href={item.href} class="card card-hover block p-5 no-underline">
+          <span class="eyebrow">{item.tag}</span>
+          <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+          <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+          <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <script>
+    const tocLinks = document.querySelectorAll('.toc a');
+    const sections = document.querySelectorAll('.anchor-top');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const id = entry.target.id;
+          const active = document.querySelector(`.toc a[href="#${id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -80% 0px' });
+    sections.forEach(s => observer.observe(s));
+
+    document.querySelectorAll('.faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = '0';
+            other.closest('.faq-item').querySelector('.faq-icon').style.transform = '';
+          }
+        });
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+        icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+      });
+    });
+  </script>
+
+</Base>

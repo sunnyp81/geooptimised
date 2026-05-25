@@ -1,0 +1,263 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Answer Engine Optimisation Services: Get Found in AI Answers';
+const description = 'Comprehensive answer engine optimisation services: featured snippet capture, voice search optimisation, AI Overview targeting, and structured content for direct-answer formats.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Answer Engine Optimisation Services",
+    "serviceType": "Answer Engine Optimisation",
+    "provider": { "@type": "Organization", "name": "GEOoptimised", "url": "https://geooptimised.com" },
+    "description": "Comprehensive answer engine optimisation services including featured snippet capture, voice search optimisation, and AI answer targeting.",
+    "areaServed": { "@type": "Country", "name": "United Kingdom" },
+    "url": "https://geooptimised.com/aeo-services/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://geooptimised.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://geooptimised.com/geo-services/" },
+      { "@type": "ListItem", "position": 3, "name": "AEO Services", "item": "https://geooptimised.com/aeo-services/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What are answer engine optimisation services?", "acceptedAnswer": { "@type": "Answer", "text": "Answer engine optimisation services structure your content to appear in direct-answer formats: featured snippets, voice search responses, AI Overviews, and AI-generated answers. The goal is to make your brand the source that machines extract and present when users ask questions." } },
+      { "@type": "Question", "name": "How does AEO differ from GEO?", "acceptedAnswer": { "@type": "Answer", "text": "AEO focuses on direct-answer formats like featured snippets, People Also Ask, and voice search. GEO covers the broader spectrum of generative AI platforms including ChatGPT, Perplexity, and Gemini. AEO is a subset of the wider AI visibility strategy that GEO encompasses." } },
+      { "@type": "Question", "name": "How long do AEO results take?", "acceptedAnswer": { "@type": "Answer", "text": "Featured snippet gains can appear within four to eight weeks for content that already ranks on page one. Broader AEO improvements, including voice search and AI Overview presence, typically develop over eight to sixteen weeks as content restructuring and schema implementation take effect." } },
+      { "@type": "Question", "name": "What industries benefit most from AEO?", "acceptedAnswer": { "@type": "Answer", "text": "Industries with high question-based search volume benefit most: healthcare, finance, legal, technology, education, and professional services. Any sector where customers ask specific questions before making decisions is a strong candidate for answer engine optimisation." } },
+      { "@type": "Question", "name": "Do I need AEO if I already have SEO?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Traditional SEO drives organic rankings but does not specifically optimise for direct-answer formats. AEO targets the content structures, schema markup, and formatting patterns that trigger featured snippets, voice responses, and AI answers — opportunities that pure SEO strategies often miss." } }
+    ]
+  }
+];
+
+const deliverables = [
+  { title: 'Featured Snippet Capture', text: 'Systematic identification of snippet opportunities in your category, content restructuring to trigger paragraph, list, and table snippets, and ongoing monitoring of snippet positions across target queries.' },
+  { title: 'Voice Search Optimisation', text: 'Content structured for natural language queries that voice assistants use to source answers. Conversational phrasing, concise factual responses, and schema markup that voice platforms prefer.' },
+  { title: 'AI Overview Targeting', text: 'Specific optimisation for Google AI Overviews, which pull from organic results but weight different signals. Content formatting, source authority, and citation patterns that increase AI Overview inclusion.' },
+  { title: 'People Also Ask Optimisation', text: 'Targeting the PAA boxes that appear for your key queries. Each PAA position is an answer engine opportunity — structured Q&A content designed to trigger these placements.' },
+  { title: 'Schema & Structured Data', text: 'FAQPage, HowTo, QAPage, and speakable schema implementation. Machine-readable markup that tells answer engines exactly what your content answers and how to present it.' },
+  { title: 'Content Restructuring', text: 'Rewriting existing pages with answer-first formatting: clear question-and-answer patterns, concise definitions, numbered processes, and comparison structures that answer engines favour.' },
+];
+
+const tocItems = [
+  { id: 'what-aeo-delivers', label: 'What AEO Delivers' },
+  { id: 'service-details', label: 'Service Details' },
+  { id: 'aeo-vs-geo', label: 'AEO vs GEO' },
+  { id: 'process', label: 'Our Process' },
+  { id: 'pricing', label: 'Pricing' },
+  { id: 'faq', label: 'FAQ' },
+];
+
+const faqs = [
+  { q: 'What are answer engine optimisation services?', a: 'Answer engine optimisation services structure your content to appear in direct-answer formats: featured snippets, voice search responses, AI Overviews, and AI-generated answers. The goal is to make your brand the source that machines extract and present when users ask questions.' },
+  { q: 'How does AEO differ from GEO?', a: 'AEO focuses on direct-answer formats like featured snippets, People Also Ask, and voice search. GEO covers the broader spectrum of generative AI platforms including ChatGPT, Perplexity, and Gemini. AEO is a subset of the wider AI visibility strategy that GEO encompasses.' },
+  { q: 'How long do AEO results take?', a: 'Featured snippet gains can appear within four to eight weeks for content that already ranks on page one. Broader AEO improvements, including voice search and AI Overview presence, typically develop over eight to sixteen weeks as content restructuring and schema implementation take effect.' },
+  { q: 'What industries benefit most from AEO?', a: 'Industries with high question-based search volume benefit most: healthcare, finance, legal, technology, education, and professional services. Any sector where customers ask specific questions before making decisions is a strong candidate for answer engine optimisation.' },
+  { q: 'Do I need AEO if I already have SEO?', a: 'Yes. Traditional SEO drives organic rankings but does not specifically optimise for direct-answer formats. AEO targets the content structures, schema markup, and formatting patterns that trigger featured snippets, voice responses, and AI answers — opportunities that pure SEO strategies often miss.' },
+];
+
+const related = [
+  { tag: 'Guide', title: 'Answer Engine Optimisation: The Complete Guide', excerpt: 'Everything about AEO from fundamentals to advanced techniques.', href: '/answer-engine-optimisation/' },
+  { tag: 'Service', title: 'AEO Agency', excerpt: 'Our specialist AEO offering and methodology.', href: '/aeo-agency/' },
+  { tag: 'Services', title: 'GEO Services Overview', excerpt: 'The full range of generative engine optimisation services.', href: '/geo-services/' },
+];
+---
+
+<Base title={title} description={description} schema={schema} ogType="website">
+
+  <nav aria-label="Breadcrumb" class="container-wide pt-28">
+    <ol class="flex items-center gap-1.5 text-sm text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-services/" class="transition hover:text-[var(--accent)]">Services</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">AEO Services</li>
+    </ol>
+  </nav>
+
+  <section class="hero-fade">
+    <div class="container-wide pt-12 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Service</span>
+        <span class="font-mono text-xs text-ink-400">9 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        Answer Engine Optimisation Services
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        Answer engine optimisation targets the direct-answer formats that are replacing traditional search results: featured snippets, voice responses, People Also Ask boxes, and AI Overviews. These services ensure your brand is the source that machines extract and present when users ask questions relevant to your business.
+      </p>
+    </div>
+  </section>
+
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <div>
+
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>AEO optimises for direct-answer formats: featured snippets, voice search, PAA boxes, and AI Overviews.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Six core deliverables: snippet capture, voice search, AI Overviews, PAA, schema, and content restructuring.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Featured snippet results can appear in 4-8 weeks; broader AEO improvements take 8-16 weeks.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>AEO and GEO are complementary — most businesses benefit from both delivered as a unified programme.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prose-dark">
+        <h2 id="what-aeo-delivers" class="anchor-top">What Answer Engine Optimisation Delivers</h2>
+        <p>Answer engines are any system that extracts a direct answer from web content and presents it to a user without requiring them to click through to your site. This includes Google's featured snippets, People Also Ask boxes, voice assistant responses (Alexa, Siri, Google Assistant), and the AI Overviews that now appear at the top of many Google searches.</p>
+        <p>Traditional SEO gets your pages ranked. <a href="/answer-engine-optimisation/">Answer engine optimisation</a> gets your content extracted and presented as the answer. The distinction matters commercially because answer-engine placements capture attention at the highest-intent moment: when a user has asked a specific question and is ready to act on the response.</p>
+        <p>Answer engine optimisation services restructure your content, implement the technical markup that answer engines require, and systematically target the query patterns where direct-answer placements have the highest commercial value for your business. The work is precise, measurable, and directly connected to the queries your customers use.</p>
+
+        <h2 id="service-details" class="anchor-top">Core AEO Service Areas</h2>
+      </div>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        {deliverables.map(d => (
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">{d.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">{d.text}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="aeo-vs-geo" class="anchor-top">How AEO Fits Within a GEO Programme</h2>
+        <p>Answer engine optimisation is a focused discipline within the broader field of <a href="/generative-engine-optimisation/">generative engine optimisation</a>. AEO targets specific direct-answer formats: featured snippets, PAA, voice search, and AI Overviews. GEO covers the full spectrum of generative AI platforms including ChatGPT, Perplexity, Gemini, and Copilot.</p>
+        <p>The disciplines share common foundations. Content structured for AEO — clear answers, logical hierarchies, precise schema markup — also performs well in generative engines. Entity authority built through GEO strengthens your featured snippet eligibility. The investment in each amplifies the other.</p>
+        <p>For most businesses, the pragmatic approach is a unified programme that delivers both AEO and GEO through a single <a href="/ai-optimisation-agency/">AI optimisation agency</a>. This eliminates duplication, ensures strategic alignment, and captures compounding returns across all answer-format types.</p>
+        <p>If budget forces a choice, AEO is the faster path to measurable results. Featured snippets can shift within weeks for content that already ranks on page one. GEO results take longer but address the larger strategic opportunity as AI-generated answers become a bigger share of how users find information.</p>
+
+        <h2 id="process" class="anchor-top">Our AEO Process</h2>
+        <p><strong>Phase 1: Answer Opportunity Audit (Weeks 1-2).</strong> We map every featured snippet, PAA box, and AI Overview that appears for your target queries. We identify which of these your competitors hold, which are up for capture, and which represent the highest commercial value.</p>
+        <p><strong>Phase 2: Content Restructuring (Weeks 2-6).</strong> We rewrite your highest-priority pages with answer-first formatting. Clear question-and-answer patterns, concise definitions, numbered processes, and comparison tables that answer engines favour. Each page targets specific answer-format placements.</p>
+        <p><strong>Phase 3: Technical Implementation (Weeks 3-6).</strong> FAQPage, HowTo, QAPage, and speakable schema deployed across restructured pages. AI crawler configuration. Structured data validation and testing against Google's Rich Results requirements.</p>
+        <p><strong>Phase 4: Monitoring and Iteration (Ongoing).</strong> Weekly tracking of featured snippet positions, PAA placements, and AI Overview inclusions. Monthly reporting with competitive benchmarking. Continuous refinement based on what the data reveals about answer-engine behaviour in your category.</p>
+
+        <h2 id="pricing" class="anchor-top">AEO Services Pricing</h2>
+        <p>Answer engine optimisation services are priced based on the scope of your target query landscape and the volume of content requiring restructuring.</p>
+        <p><strong>AEO Audit (one-off):</strong> £1,500 to £3,000. Comprehensive mapping of answer-engine opportunities across your target queries, competitor analysis, and a prioritised action plan.</p>
+        <p><strong>AEO Retainer:</strong> £1,500 to £5,000 per month. Ongoing content restructuring, schema implementation, monitoring, and iteration. Most engagements begin at the lower end and scale as the programme proves ROI.</p>
+        <p><strong>Combined GEO + AEO Programme:</strong> £2,500 to £10,000 per month. A unified AI visibility programme covering both answer-engine formats and generative AI platforms. This is the approach we recommend for most businesses, as the disciplines compound each other's results.</p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 max-w-3xl divide-y divide-[var(--line)]">
+        {faqs.map(faq => (
+          <div class="faq-item">
+            <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
+              <span>{faq.q}</span>
+              <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+              </svg>
+            </button>
+            <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+              <p class="pb-5 text-ink-300 leading-relaxed">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="container-wide py-20">
+    <div class="relative overflow-hidden rounded-2xl dot-grid">
+      <div class="absolute inset-0 bg-gradient-to-br from-[rgba(var(--accent-glow),.12)] via-transparent to-transparent"></div>
+      <div class="relative px-8 py-16 text-center sm:px-16">
+        <span class="eyebrow">Get Started</span>
+        <h2 class="mt-4 font-display text-3xl font-bold text-ink-50 sm:text-4xl">Ready to Own the Answer?</h2>
+        <p class="mt-4 mx-auto max-w-2xl text-ink-300 leading-relaxed">
+          Our AEO audit maps every featured snippet, PAA box, and AI Overview opportunity in your category — then shows you exactly how to capture them.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact/" class="btn btn-primary">Book an AEO Audit</a>
+          <a href="/aeo-agency/" class="btn btn-ghost">Learn About Our AEO Agency</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const tocLinks = document.querySelectorAll('.toc a');
+    const sections = document.querySelectorAll('.anchor-top');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.toc a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -80% 0px' });
+    sections.forEach(s => observer.observe(s));
+
+    document.querySelectorAll('.faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = '0';
+            other.closest('.faq-item').querySelector('.faq-icon').style.transform = '';
+          }
+        });
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+        icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+      });
+    });
+  </script>
+
+</Base>
