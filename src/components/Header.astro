@@ -1,4 +1,5 @@
 ---
+import Logo from './Logo.astro';
 const navLinks = [
   { href: '/geo-services/', label: 'Services' },
   { href: '/generative-engine-optimisation/', label: 'Learn' },
@@ -9,18 +10,7 @@ const navLinks = [
 ---
 <header id="site-header" class="fixed top-0 inset-x-0 z-40 transition-all">
   <div class="container-wide flex items-center justify-between h-[68px]">
-    <a href="/" class="flex items-center gap-2.5 group">
-      <span class="relative inline-flex items-center justify-center w-8 h-8 rounded-lg" style="background: linear-gradient(135deg,#00E5CC 0%,#0BB29F 100%)">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#001a16" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="3" />
-          <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/>
-        </svg>
-        <span class="absolute inset-0 rounded-lg pulse-dot" style="box-shadow: 0 0 0 1px rgba(0,229,204,.4)"></span>
-      </span>
-      <span class="font-display font-semibold text-[17px] tracking-[-0.018em] text-white">
-        GEO<span class="text-ink-300 font-medium">optimised</span>
-      </span>
-    </a>
+    <Logo />
 
     <nav class="hidden md:flex items-center gap-1">
       {navLinks.map(link => (

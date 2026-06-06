@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00E5CC"/>
+      <stop offset="1" stop-color="#0BB29F"/>
+    </linearGradient>
+    <linearGradient id="head" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#B6C0D6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.0" r="0.9">
+      <stop offset="0" stop-color="#00E5CC" stop-opacity="0.20"/>
+      <stop offset="0.6" stop-color="#00E5CC" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.85" cy="0.25" r="0.5">
+      <stop offset="0" stop-color="#7C5CFF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7C5CFF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="#06090F"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <!-- Brand lockup -->
+  <g transform="translate(80, 86)">
+    <rect width="60" height="60" rx="15" fill="url(#tile)"/>
+    <g transform="translate(30,30)" fill="none" stroke="#02201C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="0" cy="0" r="7.5"/>
+      <path d="M0 -22V-15M0 22V15M-22 0H-15M22 0H15"/>
+    </g>
+    <circle cx="30" cy="30" r="3" fill="#02201C"/>
+    <text x="78" y="40" font-family="Space Grotesk, Inter, sans-serif" font-size="30" font-weight="700" letter-spacing="-0.5" fill="#ffffff">GEO<tspan fill="#8B95A8" font-weight="500">optimised</tspan></text>
+  </g>
+
+  <!-- Eyebrow -->
+  <text x="82" y="248" font-family="JetBrains Mono, monospace" font-size="20" letter-spacing="3" fill="#00E5CC">GENERATIVE ENGINE OPTIMISATION</text>
+
+  <!-- Headline -->
+  <text font-family="Space Grotesk, Inter, sans-serif" font-weight="700" letter-spacing="-2" fill="url(#head)">
+    <tspan x="80" y="338" font-size="74">Get your brand cited</tspan>
+    <tspan x="80" y="420" font-size="74">inside <tspan fill="#00E5CC">AI answers</tspan>.</tspan>
+  </text>
+
+  <!-- Subtext -->
+  <text x="82" y="486" font-family="Inter, sans-serif" font-size="26" fill="#C4CCDB">ChatGPT &#183; Perplexity &#183; Gemini &#183; Claude &#183; Google AI Overviews</text>
+
+  <!-- Footer URL -->
+  <text x="82" y="560" font-family="JetBrains Mono, monospace" font-size="22" fill="#5A6585">geooptimised.com</text>
+
+  <line x1="0" y1="630" x2="1200" y2="630" stroke="#00E5CC" stroke-width="6"/>
+</svg>

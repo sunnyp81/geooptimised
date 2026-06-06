@@ -18,6 +18,7 @@
 }
 
 :root {
+  --header-h: 68px;
   --bg: #0A0F1E;
   --bg-2: #11172A;
   --bg-3: #161D33;
@@ -31,6 +32,21 @@
 }
 
 html { scroll-behavior: smooth; }
+
+/* Reserve space for the fixed header so page content never hides behind it.
+   The homepage hero opts out with .hero-bleed so its glow extends up behind
+   the transparent header. */
+main { padding-top: var(--header-h); }
+.hero-bleed { margin-top: calc(-1 * var(--header-h)); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+}
 
 body {
   background: var(--bg);
