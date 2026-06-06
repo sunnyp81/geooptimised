@@ -1,8 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const title = 'Answer Engine Optimisation Services: Get Found in AI Answers';
-const description = 'Comprehensive answer engine optimisation services: featured snippet capture, voice search optimisation, AI Overview targeting, and structured content for direct-answer formats.';
+const title = 'AEO Services: Get Found in AI Answers | GEOoptimised';
+const description = 'AEO services from GEOoptimised: featured snippet capture, voice search optimisation, AI Overview targeting, and structured data for direct-answer formats.';
 
 const schema = [
   {
@@ -10,7 +10,7 @@ const schema = [
     "@type": "Service",
     "name": "Answer Engine Optimisation Services",
     "serviceType": "Answer Engine Optimisation",
-    "provider": { "@type": "Organization", "name": "GEOoptimised", "url": "https://geooptimised.com" },
+    "provider": { "@type": "Organization", "name": "GEOoptimised", "url": "https://geooptimised.com/", "logo": { "@type": "ImageObject", "url": "https://geooptimised.com/icon-512.png" } },
     "description": "Comprehensive answer engine optimisation services including featured snippet capture, voice search optimisation, and AI answer targeting.",
     "areaServed": { "@type": "Country", "name": "United Kingdom" },
     "url": "https://geooptimised.com/aeo-services/"
@@ -72,7 +72,7 @@ const related = [
 
 <Base title={title} description={description} schema={schema} ogType="website">
 
-  <nav aria-label="Breadcrumb" class="container-wide pt-28">
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
     <ol class="flex items-center gap-1.5 text-sm text-ink-400">
       <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
       <li aria-hidden="true">/</li>
@@ -137,7 +137,7 @@ const related = [
       <div class="prose-dark">
         <h2 id="what-aeo-delivers" class="anchor-top">What Answer Engine Optimisation Delivers</h2>
         <p>Answer engines are any system that extracts a direct answer from web content and presents it to a user without requiring them to click through to your site. This includes Google's featured snippets, People Also Ask boxes, voice assistant responses (Alexa, Siri, Google Assistant), and the AI Overviews that now appear at the top of many Google searches.</p>
-        <p>Traditional SEO gets your pages ranked. <a href="/answer-engine-optimisation/">Answer engine optimisation</a> gets your content extracted and presented as the answer. The distinction matters commercially because answer-engine placements capture attention at the highest-intent moment: when a user has asked a specific question and is ready to act on the response.</p>
+        <p>Traditional SEO gets your pages ranked. <a href="/answer-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Answer engine optimisation</a> gets your content extracted and presented as the answer. The distinction matters commercially because answer-engine placements capture attention at the highest-intent moment: when a user has asked a specific question and is ready to act on the response.</p>
         <p>Answer engine optimisation services restructure your content, implement the technical markup that answer engines require, and systematically target the query patterns where direct-answer placements have the highest commercial value for your business. The work is precise, measurable, and directly connected to the queries your customers use.</p>
 
         <h2 id="service-details" class="anchor-top">Core AEO Service Areas</h2>
@@ -154,9 +154,9 @@ const related = [
 
       <div class="prose-dark mt-16">
         <h2 id="aeo-vs-geo" class="anchor-top">How AEO Fits Within a GEO Programme</h2>
-        <p>Answer engine optimisation is a focused discipline within the broader field of <a href="/generative-engine-optimisation/">generative engine optimisation</a>. AEO targets specific direct-answer formats: featured snippets, PAA, voice search, and AI Overviews. GEO covers the full spectrum of generative AI platforms including ChatGPT, Perplexity, Gemini, and Copilot.</p>
+        <p>Answer engine optimisation is a focused discipline within the broader field of <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a>. AEO targets specific direct-answer formats: featured snippets, PAA, voice search, and AI Overviews. GEO covers the full spectrum of generative AI platforms including ChatGPT, Perplexity, Gemini, and Copilot.</p>
         <p>The disciplines share common foundations. Content structured for AEO — clear answers, logical hierarchies, precise schema markup — also performs well in generative engines. Entity authority built through GEO strengthens your featured snippet eligibility. The investment in each amplifies the other.</p>
-        <p>For most businesses, the pragmatic approach is a unified programme that delivers both AEO and GEO through a single <a href="/ai-optimisation-agency/">AI optimisation agency</a>. This eliminates duplication, ensures strategic alignment, and captures compounding returns across all answer-format types.</p>
+        <p>For most businesses, the pragmatic approach is a unified programme that delivers both AEO and GEO through a single <a href="/ai-optimisation-agency/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI optimisation agency</a>. This eliminates duplication, ensures strategic alignment, and captures compounding returns across all answer-format types.</p>
         <p>If budget forces a choice, AEO is the faster path to measurable results. Featured snippets can shift within weeks for content that already ranks on page one. GEO results take longer but address the larger strategic opportunity as AI-generated answers become a bigger share of how users find information.</p>
 
         <h2 id="process" class="anchor-top">Our AEO Process</h2>
@@ -181,7 +181,7 @@ const related = [
           <div class="faq-item">
             <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
               <span>{faq.q}</span>
-              <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+              <svg aria-hidden="true" focusable="false" class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
               </svg>
             </button>

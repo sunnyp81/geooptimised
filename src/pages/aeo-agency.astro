@@ -1,30 +1,75 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const title = 'Answer Engine Optimisation Agency | AEO Specialists';
-const description = 'GEOoptimised is a specialist answer engine optimisation agency. We optimise your content for featured snippets, AI overviews, voice search and direct answers across every answer engine.';
+const title = 'AEO Agency | Answer Engine Optimisation Specialists';
+const description = 'Specialist AEO agency. GEOoptimised structures content to earn featured snippets, AI Overview citations, and voice answers — the answer, not a link.';
 
 const schema = [
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "GEOoptimised",
+    "name": "GEOoptimised — AEO Agency",
     "url": "https://geooptimised.com/aeo-agency/",
-    "description": "Specialist answer engine optimisation agency helping brands earn featured snippets, AI overview citations, voice search results and direct answers.",
+    "description": "Specialist answer engine optimisation agency helping brands earn featured snippets, AI Overview citations, voice search results, and direct answers.",
     "serviceType": "Answer Engine Optimisation",
-    "areaServed": "GB",
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Kingdom"
+    },
     "provider": {
       "@type": "Organization",
       "name": "GEOoptimised",
-      "url": "https://geooptimised.com"
+      "url": "https://geooptimised.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://geooptimised.com/icon-512.png"
+      }
     }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is answer engine optimisation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Answer engine optimisation is the practice of structuring content so that answer engines — featured snippets, AI Overviews, voice assistants — select it as their cited source. It focuses on extractable, machine-readable formatting rather than traditional ranking factors."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does AEO differ from GEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AEO is a subset of GEO. AEO targets the answer layer (featured snippets, People Also Ask, voice responses). GEO extends further into generative AI platforms like ChatGPT and Perplexity, where the output is a synthesised narrative rather than a single extracted answer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does AEO take to show results?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Featured snippet wins can appear within 2–4 weeks of content restructuring. AI Overview citations and voice search appearances typically follow within 60–90 days as search engines re-evaluate your content authority."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do we need AEO if we already do SEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Traditional SEO targets ranked links. AEO targets the answer that appears above those links. A page ranking position one can still lose the click if a competitor owns the featured snippet or AI Overview citation."
+        }
+      }
+    ]
   },
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://geooptimised.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://geooptimised.com/geo-services/" },
+      { "@type": "ListItem", "position": 2, "name": "Generative Engine Optimisation", "item": "https://geooptimised.com/generative-engine-optimisation/" },
       { "@type": "ListItem", "position": 3, "name": "AEO Agency", "item": "https://geooptimised.com/aeo-agency/" }
     ]
   }
@@ -37,7 +82,7 @@ const services = [
   },
   {
     title: 'FAQ Schema Implementation',
-    text: 'We deploy FAQPage structured data that surfaces your answers directly in search results and feeds them into AI overviews, voice assistants and knowledge panels.'
+    text: 'We deploy FAQPage structured data that surfaces your answers directly in search results and feeds them into AI Overviews, voice assistants and knowledge panels.'
   },
   {
     title: 'Direct Answer Formatting',
@@ -56,7 +101,7 @@ const services = [
 const audiences = [
   {
     title: 'SaaS and Technology Companies',
-    text: 'Technical queries generate heavy AI overview coverage. If your product solves a problem that users ask about in natural language, AEO puts your brand in the answer.'
+    text: 'Technical queries generate heavy AI Overview coverage. If your product solves a problem that users ask about in natural language, AEO puts your brand in the answer.'
   },
   {
     title: 'Professional Services Firms',
@@ -73,16 +118,16 @@ const audiences = [
 ];
 
 const steps = [
-  { num: '01', title: 'Answer Landscape Audit', text: 'We map every answer engine result for your target queries — featured snippets, AI overviews, People Also Ask, voice responses — and identify where your brand is absent.' },
+  { num: '01', title: 'Answer Landscape Audit', text: 'We map every answer engine result for your target queries — featured snippets, AI Overviews, People Also Ask, voice responses — and identify where your brand is absent.' },
   { num: '02', title: 'Content Restructuring', text: 'We reformat existing content into answer-ready structures: concise definitions, ordered lists, comparison tables and FAQ blocks that answer engines can parse and cite.' },
   { num: '03', title: 'Schema and Entity Markup', text: 'We implement FAQPage, HowTo, Article and organisation schema so that answer engines can identify your content type, authorship and topical relevance programmatically.' },
-  { num: '04', title: 'Monitoring and Iteration', text: 'We track snippet ownership, AI overview citations and voice search appearances weekly. When a competitor displaces your answer, we respond within the same cycle.' }
+  { num: '04', title: 'Monitoring and Iteration', text: 'We track snippet ownership, AI Overview citations and voice search appearances weekly. When a competitor displaces your answer, we respond within the same cycle.' }
 ];
 
 const faqs = [
   {
     q: 'What is answer engine optimisation?',
-    a: 'Answer engine optimisation is the practice of structuring content so that answer engines — featured snippets, AI overviews, voice assistants — select it as their cited source. It focuses on extractable, machine-readable formatting rather than traditional ranking factors.'
+    a: 'Answer engine optimisation is the practice of structuring content so that answer engines — featured snippets, AI Overviews, voice assistants — select it as their cited source. It focuses on extractable, machine-readable formatting rather than traditional ranking factors.'
   },
   {
     q: 'How does AEO differ from GEO?',
@@ -90,11 +135,11 @@ const faqs = [
   },
   {
     q: 'How long does AEO take to show results?',
-    a: 'Featured snippet wins can appear within 2-4 weeks of content restructuring. AI overview citations and voice search appearances typically follow within 60-90 days as search engines re-evaluate your content authority.'
+    a: 'Featured snippet wins can appear within 2-4 weeks of content restructuring. AI Overview citations and voice search appearances typically follow within 60-90 days as search engines re-evaluate your content authority.'
   },
   {
     q: 'Do we need AEO if we already do SEO?',
-    a: 'Yes. Traditional SEO targets ranked links. AEO targets the answer that appears above those links. A page ranking position one can still lose the click if a competitor owns the featured snippet or AI overview citation.'
+    a: 'Yes. Traditional SEO targets ranked links. AEO targets the answer that appears above those links. A page ranking position one can still lose the click if a competitor owns the featured snippet or AI Overview citation.'
   },
 ];
 ---
@@ -106,7 +151,7 @@ const faqs = [
     <ol class="flex items-center gap-1.5 text-sm text-ink-400">
       <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
       <li aria-hidden="true">/</li>
-      <li><a href="/geo-services/" class="transition hover:text-[var(--accent)]">Services</a></li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">Generative Engine Optimisation</a></li>
       <li aria-hidden="true">/</li>
       <li class="text-ink-200" aria-current="page">AEO Agency</li>
     </ol>
@@ -120,7 +165,7 @@ const faqs = [
         Answer Engine Optimisation Agency
       </h1>
       <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-200">
-        An answer engine optimisation agency makes your brand the source that search engines, AI overviews and voice assistants cite when users ask a direct question. GEOoptimised is that agency. We engineer your content to appear as the definitive answer — not a ranked link, but the answer itself.
+        An answer engine optimisation agency makes your brand the source that search engines, AI Overviews and voice assistants cite when users ask a direct question. GEOoptimised is that agency. We engineer your content to appear as the definitive answer — not a ranked link, but the answer itself.
       </p>
     </div>
   </section>
@@ -136,7 +181,7 @@ const faqs = [
         Most websites are built for human readers browsing a list of results. An answer engine optimisation agency restructures that content for a different interface — one where a single synthesised response replaces the traditional results page. If your content is not formatted for extraction, it will not be cited, regardless of its quality or authority.
       </p>
       <p>
-        At GEOoptimised, <a href="/answer-engine-optimisation/">answer engine optimisation</a> is a core discipline, not an add-on. We audit your current answer engine visibility, restructure content for citation, implement the schema that answer engines rely on and monitor results across every platform.
+        At GEOoptimised, <a href="/answer-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">answer engine optimisation</a> is a core discipline, not an add-on. We audit your current answer engine visibility, restructure content for citation, implement the schema that answer engines rely on and monitor results across every platform.
       </p>
     </div>
   </section>
@@ -168,13 +213,13 @@ const faqs = [
       <div class="max-w-3xl prose-dark">
         <h2 id="aeo-vs-geo" class="anchor-top">AEO Agency vs GEO Agency</h2>
         <p>
-          <strong>Answer engine optimisation is a subset of <a href="/generative-engine-optimisation/">generative engine optimisation</a>.</strong> AEO focuses on the answer layer — featured snippets, People Also Ask boxes, voice search responses and direct answer panels. GEO encompasses AEO but extends further into generative AI platforms like ChatGPT, Perplexity and Gemini, where the output is a synthesised narrative rather than a single extracted answer.
+          <strong>Answer engine optimisation is a subset of <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a>.</strong> AEO focuses on the answer layer — featured snippets, People Also Ask boxes, voice search responses and direct answer panels. GEO encompasses AEO but extends further into generative AI platforms like ChatGPT, Perplexity and Gemini, where the output is a synthesised narrative rather than a single extracted answer.
         </p>
         <p>
           The distinction matters because the optimisation techniques differ. AEO prioritises concise, extractable formatting — definitions, numbered lists, comparison tables. GEO requires deeper topical authority, entity relationships and citation signals that LLMs evaluate during retrieval-augmented generation. A page optimised purely for AEO may win a featured snippet but fail to appear in a ChatGPT response.
         </p>
         <p>
-          GEOoptimised operates as both an AEO agency and a <a href="/geo-agency/">GEO agency</a>. We treat AEO as the foundation — if your content cannot win a featured snippet, it is unlikely to be cited by a generative model — and layer GEO strategy on top. The result is visibility across both traditional answer engines and the generative platforms that are rapidly replacing them.
+          GEOoptimised operates as both an AEO agency and a <a href="/geo-agency/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO agency</a>. We treat AEO as the foundation — if your content cannot win a featured snippet, it is unlikely to be cited by a generative model — and layer GEO strategy on top. The result is visibility across both traditional answer engines and the generative platforms that are rapidly replacing them.
         </p>
       </div>
     </div>
@@ -260,7 +305,7 @@ const faqs = [
     <div class="container-wide py-20 text-center">
       <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Start Winning Answers</h2>
       <p class="mx-auto mt-5 max-w-xl text-ink-300">
-        Your competitors are already being cited by answer engines. We will audit your current visibility, identify the highest-value queries you are missing and build the content strategy that puts your brand in the answer. No retainer commitment required for the initial audit.
+        Your competitors are already being cited by answer engines. We will audit your current visibility, identify the highest-value queries you are missing and build the content strategy that puts your brand in the answer. Review our <a href="/aeo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO service deliverables</a> or start with the initial audit — no retainer commitment required.
       </p>
       <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
         <a href="/contact/" class="btn btn-primary">Get Your AEO Audit</a>
