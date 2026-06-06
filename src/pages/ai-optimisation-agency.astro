@@ -11,8 +11,27 @@ const schema = [
     "name": "GEOoptimised",
     "url": "https://geooptimised.com/ai-optimisation-agency/",
     "serviceType": "AI Optimisation",
+    "email": "hello@geooptimised.com",
     "description": "Full-service AI optimisation agency specialising in generative engine optimisation and answer engine optimisation for brands seeking visibility in AI-generated search results.",
-    "areaServed": { "@type": "Country", "name": "United Kingdom" }
+    "areaServed": { "@type": "Country", "name": "United Kingdom" },
+    "provider": {
+      "@type": "Organization",
+      "name": "GEOoptimised",
+      "url": "https://geooptimised.com",
+      "logo": "https://geooptimised.com/icon-512.png"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "AI Optimisation Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Generative Engine Optimisation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Answer Engine Optimisation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Entity Authority Building" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Visibility Monitoring" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Content Architecture for LLMs" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Technical AI Infrastructure" } }
+      ]
+    }
   },
   {
     "@context": "https://schema.org",
@@ -83,9 +102,9 @@ const related = [
 ];
 ---
 
-<Base title={title} description={description} schema={schema} ogType="website">
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/ai-optimisation-agency/" ogType="website">
 
-  <nav aria-label="Breadcrumb" class="container-wide pt-28">
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
     <ol class="flex items-center gap-1.5 text-sm text-ink-400">
       <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
       <li aria-hidden="true">/</li>
@@ -138,7 +157,7 @@ const related = [
           </li>
           <li class="flex items-start gap-2">
             <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
-            <span>Results typically appear within 8-12 weeks, with full competitive positioning at 4-6 months.</span>
+            <span>Results typically appear within 8–12 weeks, with full competitive positioning at 4–6 months.</span>
           </li>
           <li class="flex items-start gap-2">
             <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
@@ -220,7 +239,7 @@ const related = [
           <div class="faq-item">
             <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
               <span>{faq.q}</span>
-              <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+              <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                 <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
               </svg>
             </button>

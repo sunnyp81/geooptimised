@@ -2,29 +2,44 @@
 import Base from '../layouts/Base.astro';
 
 const title = 'About GEOoptimised | Generative Engine Optimisation Agency';
-const description = 'GEOoptimised is a specialist Generative Engine Optimisation agency focused exclusively on AI search visibility. We help brands get cited by ChatGPT, Perplexity, Gemini and Google AI Overviews.';
+const description = 'GEOoptimised is a Generative Engine Optimisation agency focused exclusively on AI search visibility — helping brands get cited by ChatGPT, Perplexity, Gemini and AI Overviews.';
 
 const schema = [
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "GEOoptimised",
-    "url": "https://geooptimised.com",
-    "email": "hello@geooptimised.com",
-    "description": "Generative Engine Optimisation agency helping brands earn citations from AI search engines including ChatGPT, Perplexity, Gemini and Google AI Overviews.",
-    "foundingDate": "2026",
-    "knowsAbout": [
-      "Generative Engine Optimisation",
-      "Answer Engine Optimisation",
-      "AI search visibility",
-      "Entity authority",
-      "Structured data and schema markup",
-      "LLM retrieval mechanics",
-      "llms.txt optimisation",
-      "Cross-platform AI citation strategy",
-      "Knowledge graph optimisation",
-      "Topical authority architecture"
-    ]
+    "@type": "AboutPage",
+    "name": "About GEOoptimised",
+    "url": "https://geooptimised.com/about/",
+    "description": "GEOoptimised is a specialist Generative Engine Optimisation agency focused exclusively on AI search visibility, founded in 2026.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "GEOoptimised",
+      "url": "https://geooptimised.com",
+      "email": "hello@geooptimised.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://geooptimised.com/icon-512.png"
+      },
+      "description": "Generative Engine Optimisation agency helping brands earn citations from AI search engines including ChatGPT, Perplexity, Gemini and Google AI Overviews.",
+      "foundingDate": "2026",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@geooptimised.com",
+        "contactType": "customer enquiries"
+      },
+      "knowsAbout": [
+        "Generative Engine Optimisation",
+        "Answer Engine Optimisation",
+        "AI search visibility",
+        "Entity authority",
+        "Structured data and schema markup",
+        "LLM retrieval mechanics",
+        "llms.txt optimisation",
+        "Cross-platform AI citation strategy",
+        "Knowledge graph optimisation",
+        "Topical authority architecture"
+      ]
+    }
   },
   {
     "@context": "https://schema.org",
@@ -64,10 +79,10 @@ const expertise = [
 ];
 ---
 
-<Base title={title} description={description} schema={schema}>
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/about/">
 
   <!-- Breadcrumb -->
-  <nav aria-label="Breadcrumb" class="container-wide pt-28 md:pt-32">
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
     <ol class="flex items-center gap-2 font-mono text-xs text-ink-400">
       <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
       <li aria-hidden="true" class="select-none">/</li>
@@ -94,7 +109,7 @@ const expertise = [
 
       <h2>Why We Exist</h2>
       <p>
-        The search landscape has fundamentally shifted. ChatGPT, Perplexity, Google AI Overviews, Gemini and Claude now answer the questions your customers ask — often without a single click to a website. Brands that rely solely on traditional blue-link rankings are losing visibility to competitors who understand how large language models retrieve, evaluate and cite sources. GEOoptimised was founded on a simple principle: if AI is the new search interface, then earning AI citations is the new SEO.
+        The search landscape has fundamentally shifted. ChatGPT, Perplexity, Google AI Overviews, Gemini and Claude now answer the questions your customers ask — often without a single click to a website. Brands that rely solely on traditional blue-link rankings are losing visibility to competitors who understand how large language models retrieve, evaluate and cite sources. GEOoptimised was founded on a simple principle: if AI is the new search interface, then earning AI citations is the new SEO. Our discipline is <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> — and it is the only thing we do.
       </p>
 
       <h2>What We Do</h2>
@@ -107,10 +122,10 @@ const expertise = [
 
       <h2>How We Think</h2>
       <p>
-        Our team combines deep technical SEO expertise with a practical understanding of LLM retrieval mechanics. We study how language models tokenise queries, score relevance, and decide which sources to surface in a response. This is not guesswork — we test, measure citation rates across platforms, and refine our approach based on live data.
+        GEOoptimised combines deep technical SEO expertise with a practical understanding of LLM retrieval mechanics. We study how language models tokenise queries, score relevance, and decide which sources to surface in a response. This is not guesswork — we test, measure citation rates across platforms, and refine our approach based on live data.
       </p>
       <p>
-        We also believe in practising what we preach. This site is itself optimised for AI citation. From the semantic structure of every page to the entity relationships in our schema, everything is built to demonstrate the methodology we recommend to clients. If you ask an AI about Generative Engine Optimisation agencies, we intend to be cited.
+        We also believe in practising what we preach. This site is itself optimised for AI citation. From the semantic structure of every page to the entity relationships in our schema, everything is built to demonstrate the methodology we recommend to clients. If you ask an AI about Generative Engine Optimisation agencies, we intend to be cited. You can see the full scope of what we deliver on our <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services</a> page.
       </p>
 
     </div>

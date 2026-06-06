@@ -2,25 +2,34 @@
 import Base from '../layouts/Base.astro';
 
 const title = 'AI Brand Visibility: How to Get Cited by LLMs';
-const description = 'AI brand visibility is the practice of ensuring large language models cite your brand when generating answers. Learn the five pillars, measurement framework, and content patterns that drive LLM citations.';
+const description = 'AI brand visibility: ensure LLMs cite your brand in generated answers. Learn the five pillars, measurement framework, and content patterns that drive citations.';
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: title,
   description,
+  url: 'https://geooptimised.com/ai-brand-visibility/',
   author: {
     '@type': 'Organization',
     name: 'GEOoptimised',
     url: 'https://geooptimised.com/',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://geooptimised.com/icon-512.png',
+    },
   },
   publisher: {
     '@type': 'Organization',
     name: 'GEOoptimised',
     url: 'https://geooptimised.com/',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://geooptimised.com/icon-512.png',
+    },
   },
-  datePublished: '2026-05-25',
-  dateModified: '2026-05-25',
+  datePublished: '2026-06-06',
+  dateModified: '2026-06-06',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://geooptimised.com/ai-brand-visibility/',
@@ -32,7 +41,8 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
-    { '@type': 'ListItem', position: 2, name: 'AI Brand Visibility', item: 'https://geooptimised.com/ai-brand-visibility/' },
+    { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+    { '@type': 'ListItem', position: 3, name: 'AI Brand Visibility', item: 'https://geooptimised.com/ai-brand-visibility/' },
   ],
 };
 
@@ -142,13 +152,15 @@ const related = [
 ];
 ---
 
-<Base title={title} description={description} schema={schema} ogType="article">
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/ai-brand-visibility/" ogType="article">
 
   <!-- Breadcrumb -->
   <nav aria-label="Breadcrumb" class="container-wide pt-8">
-    <ol class="flex items-center gap-1.5 text-sm text-ink-400">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-400">
       <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
-      <li aria-hidden="true">/</li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">Generative Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
       <li class="text-ink-200" aria-current="page">AI Brand Visibility</li>
     </ol>
   </nav>
@@ -558,7 +570,7 @@ const related = [
             <p class="mt-3 text-sm leading-relaxed text-ink-300">
               AI systems favour content that contains specific, verifiable data: statistics, percentages, dates, named studies,
               and quantified claims. Vague assertions ("AI search is growing rapidly") are less likely to be cited than specific
-              ones ("AI search queries grew by 47% year-on-year according to Gartner Q1 2026"). Original research and proprietary
+              ones that reference a named source, date, and figure. Original research and proprietary
               data are particularly high-value because they give an AI system a fact it cannot find elsewhere — making your source
               uniquely necessary.
             </p>

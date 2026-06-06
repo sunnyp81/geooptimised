@@ -1,26 +1,73 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const title = 'Best GEO Tools & Platforms for AI Visibility | GEOoptimised';
-const description = 'The definitive guide to generative engine optimisation tools: AI visibility trackers, citation monitors, content optimisers, and brand authority analysers reviewed and compared.';
+const title = 'GEO Tools: AI Visibility Trackers, Citation Monitors & More';
+const description = 'The GEO tools guide: AI visibility trackers, citation monitors, content optimisers, and brand authority analysers — how they work and what to look for.';
 
 const schema = [
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "GEO Tools Consulting",
-    "serviceType": "Generative Engine Optimisation Tools Advisory",
-    "provider": {
+    "@type": "Article",
+    "headline": "GEO Tools: AI Visibility Trackers, Citation Monitors & More",
+    "description": "A guide to generative engine optimisation tools: AI visibility trackers, citation monitors, content optimisers, and brand authority analysers.",
+    "url": "https://geooptimised.com/geo-tools/",
+    "datePublished": "2026-06-06",
+    "dateModified": "2026-06-06",
+    "author": {
       "@type": "Organization",
       "name": "GEOoptimised",
-      "url": "https://geooptimised.com"
+      "url": "https://geooptimised.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://geooptimised.com/icon-512.png"
+      }
     },
-    "description": "Independent evaluation and implementation guidance for generative engine optimisation tools, AI visibility trackers, citation monitors, and brand authority platforms.",
-    "areaServed": {
-      "@type": "Country",
-      "name": "United Kingdom"
+    "publisher": {
+      "@type": "Organization",
+      "name": "GEOoptimised",
+      "url": "https://geooptimised.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://geooptimised.com/icon-512.png"
+      }
     },
-    "url": "https://geooptimised.com/geo-tools/"
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://geooptimised.com/geo-tools/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "GEO Tool Categories",
+    "description": "The four functional categories of generative engine optimisation tools.",
+    "numberOfItems": 4,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "AI Visibility Trackers",
+        "url": "https://geooptimised.com/geo-tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Citation Monitors",
+        "url": "https://geooptimised.com/geo-tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Content Optimisers",
+        "url": "https://geooptimised.com/geo-tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Brand Authority Analysers",
+        "url": "https://geooptimised.com/geo-tools/"
+      }
+    ]
   },
   {
     "@context": "https://schema.org",
@@ -35,6 +82,12 @@ const schema = [
       {
         "@type": "ListItem",
         "position": 2,
+        "name": "GEO Services",
+        "item": "https://geooptimised.com/geo-services/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
         "name": "GEO Tools",
         "item": "https://geooptimised.com/geo-tools/"
       }
@@ -90,32 +143,32 @@ const schema = [
 
 const categories = [
   {
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>`,
+    icon: `<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>`,
     tag: 'Category 1',
     title: 'AI Visibility Trackers',
     body: 'Platforms that systematically query ChatGPT, Perplexity, Gemini, and Copilot with your target prompts and record citation frequency, brand mention rate, and competitor presence over time.',
-    href: '/geo-tools/ai-visibility-trackers/',
+    href: '#why-tools-matter',
   },
   {
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>`,
+    icon: `<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>`,
     tag: 'Category 2',
     title: 'Citation Monitors',
     body: 'Tools that track where and how AI platforms cite your brand, which source URLs are being referenced, how your brand is described in generated responses, and whether citations are accurate.',
-    href: '/geo-tools/citation-monitors/',
+    href: '#what-to-look-for',
   },
   {
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>`,
+    icon: `<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>`,
     tag: 'Category 3',
     title: 'Content Optimisers',
     body: 'Platforms that analyse your existing content and recommend structural, linguistic, and semantic changes to increase the probability that AI models select it as a citation source.',
-    href: '/geo-tools/content-optimisers/',
+    href: '#how-they-differ-from-seo-tools',
   },
   {
-    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`,
+    icon: `<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`,
     tag: 'Category 4',
     title: 'Brand Authority Analysers',
     body: 'Tools focused on entity presence across knowledge graphs, Wikipedia, Wikidata, and structured databases that large language models draw on when constructing factual claims about organisations.',
-    href: '/geo-tools/brand-authority-analysers/',
+    href: '#tool-selection-framework',
   },
 ];
 
@@ -145,18 +198,20 @@ const faqs = [
 const relatedHubs = [
   { title: 'GEO Services', desc: 'The full scope of generative engine optimisation services: audits, entity work, structured data, and ongoing monitoring.', href: '/geo-services/' },
   { title: 'AI Brand Visibility', desc: 'How to build the brand signals that make AI models recognise, trust, and cite your organisation.', href: '/ai-brand-visibility/' },
-  { title: 'GEO Monitoring', desc: 'Continuous tracking of your citation frequency, competitive position, and brand accuracy across AI platforms.', href: '/geo-monitoring/' },
+  { title: 'GEO Strategy', desc: 'How to turn citation tracking and competitive analysis into a prioritised, repeatable GEO programme.', href: '/geo-strategy/' },
 ];
 ---
 
-<Base title={title} description={description} schema={schema} ogType="website">
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/geo-tools/" ogType="article">
 
   <!-- Breadcrumb -->
-  <nav aria-label="Breadcrumb" class="container-wide pt-28">
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
     <ol class="flex items-center gap-2 font-mono text-xs text-ink-400">
       <li><a href="/" class="hover:text-[var(--accent)] transition-colors">Home</a></li>
       <li aria-hidden="true" class="text-ink-600">/</li>
-      <li class="text-ink-200">GEO Tools</li>
+      <li><a href="/geo-services/" class="hover:text-[var(--accent)] transition-colors">GEO Services</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">GEO Tools</li>
     </ol>
   </nav>
 
@@ -181,20 +236,20 @@ const relatedHubs = [
           <span class="eyebrow">At a glance</span>
           <div class="mt-4 grid grid-cols-2 gap-6">
             <div>
-              <p class="font-display text-3xl font-bold text-[var(--accent)]">13</p>
-              <p class="mt-1 text-sm text-ink-400">Tools reviewed</p>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">4</p>
+              <p class="mt-1 text-sm text-ink-400">Tool categories</p>
             </div>
             <div>
               <p class="font-display text-3xl font-bold text-[var(--accent)]">5</p>
-              <p class="mt-1 text-sm text-ink-400">Tool categories</p>
+              <p class="mt-1 text-sm text-ink-400">AI platforms covered</p>
             </div>
             <div>
               <p class="font-display text-3xl font-bold text-[var(--accent)]">Free &amp; Paid</p>
               <p class="mt-1 text-sm text-ink-400">Options covered</p>
             </div>
             <div>
-              <p class="font-display text-3xl font-bold text-[var(--accent)]">Monthly</p>
-              <p class="mt-1 text-sm text-ink-400">Updated</p>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">6</p>
+              <p class="mt-1 text-sm text-ink-400">Evaluation criteria</p>
             </div>
           </div>
         </div>
@@ -220,7 +275,7 @@ const relatedHubs = [
           <h3 class="mt-2 font-display text-xl font-semibold text-ink-50">{c.title}</h3>
           <p class="mt-3 text-sm leading-relaxed text-ink-300 flex-1">{c.body}</p>
           <a href={c.href} class="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-[var(--accent)] hover:underline underline-offset-4">
-            See tools <span aria-hidden="true">&rarr;</span>
+            Learn more <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
       ))}
@@ -277,7 +332,7 @@ const relatedHubs = [
     <span class="eyebrow">How We Evaluate</span>
     <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Our Tool Evaluation Criteria</h2>
     <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed mb-12">
-      Every tool reviewed on this hub is assessed against the same five criteria. Scores are assigned independently for each dimension and combined into an overall recommendation. We do not accept paid placements or sponsored reviews.
+      Every tool reviewed on this hub is assessed against the same six criteria. Scores are assigned independently for each dimension and combined into an overall recommendation. Our assessments are based on direct evaluation and publicly available information.
     </p>
 
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
