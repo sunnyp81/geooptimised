@@ -18,12 +18,67 @@ const canonicalUrl = canonical || Astro.url.href;
 const siteName = 'GEOoptimised';
 const site = Astro.site ?? new URL('https://geooptimised.com');
 const imageUrl = new URL(image, site).href;
+const origin = site.origin;
+
+// Sitewide knowledge-graph entity: defined once with stable @ids so every page
+// references one canonical Organization/WebSite rather than re-declaring them.
+// Per-page schema (passed via the `schema` prop) can reference these by @id,
+// e.g. publisher / provider / author / isPartOf: { "@id": `${origin}/#organization` }.
+const entityGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${origin}/#organization`,
+      name: 'GEOoptimised',
+      url: `${origin}/`,
+      email: 'hello@geooptimised.com',
+      description: 'Generative Engine Optimisation agency helping brands get cited by AI search engines including ChatGPT, Perplexity, Google AI Overviews, Gemini and Claude.',
+      foundingDate: '2026',
+      logo: {
+        '@type': 'ImageObject',
+        '@id': `${origin}/#logo`,
+        url: `${origin}/icon-512.png`,
+        width: 512,
+        height: 512,
+        caption: 'GEOoptimised',
+      },
+      image: { '@id': `${origin}/#logo` },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        email: 'hello@geooptimised.com',
+        contactType: 'sales',
+        availableLanguage: 'English',
+      },
+      areaServed: { '@type': 'Country', name: 'United Kingdom' },
+      knowsAbout: [
+        'Generative Engine Optimisation',
+        'Answer Engine Optimisation',
+        'AI search optimisation',
+        'Large language model optimisation',
+        'AI citation strategy',
+        'Knowledge graph optimisation',
+        'Entity optimisation',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${origin}/#website`,
+      name: 'GEOoptimised',
+      url: `${origin}/`,
+      publisher: { '@id': `${origin}/#organization` },
+      inLanguage: 'en-GB',
+    },
+  ],
+};
 ---
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Explicit color-scheme meta so browser chrome (scrollbars, form controls) renders dark -->
+  <meta name="color-scheme" content="dark" />
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonicalUrl} />
@@ -56,9 +111,12 @@ const imageUrl = new URL(image, site).href;
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={imageUrl} />
 
+  <!-- Fonts: preconnect then load with display=swap to prevent invisible text (FOIT) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json" set:html={JSON.stringify(entityGraph)} />
   {schema && (
     Array.isArray(schema)
       ? schema.map(s => <script type="application/ld+json" set:html={JSON.stringify(s)} />)
@@ -66,9 +124,13 @@ const imageUrl = new URL(image, site).href;
   )}
 </head>
 <body>
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-[var(--accent)] focus:text-ink-950 focus:px-4 focus:py-2 focus:rounded focus:z-50">Skip to content</a>
+  <!-- Skip link: always rendered, only visible on focus — uses focus-visible global styles -->
+  <a
+    href="#main"
+    class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:rounded-md focus:px-4 focus:py-2"
+  >Skip to content</a>
   <Header />
-  <main id="main">
+  <main id="main" tabindex="-1">
     <slot />
   </main>
   <Footer />
