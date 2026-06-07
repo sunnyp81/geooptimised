@@ -1,0 +1,567 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'How to Do GEO: A Step-by-Step Guide | GEOoptimised';
+const description = 'Learn how to do GEO in eight actionable steps: audit AI visibility, map entities, structure content for extraction, deploy schema, build sources, and monitor citations.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to Do GEO: A Step-by-Step Guide',
+    description: 'A practical, step-by-step guide to doing generative engine optimisation — from baseline audit to ongoing citation monitoring across all major AI platforms.',
+    url: 'https://geooptimised.com/how-to-do-geo/',
+    image: 'https://geooptimised.com/og-image.png',
+    author: {
+      '@type': 'Organization',
+      name: 'GEOoptimised',
+      url: 'https://geooptimised.com/',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://geooptimised.com/icon-512.png'
+      }
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'GEOoptimised',
+      url: 'https://geooptimised.com/',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://geooptimised.com/icon-512.png'
+      }
+    },
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Run an AI Visibility Audit',
+        text: 'Submit structured queries to ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews. Record which brands are cited, where your brand appears or is absent, and what language AI engines use to describe your category.'
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: 'Map Your Brand Entity',
+        text: 'Define every attribute of your brand entity — name, category, products, differentiation, key people — and ensure those attributes are described consistently across your website, structured data, and all third-party platforms AI models can access.'
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Identify Content Gaps',
+        text: 'Compare the queries submitted to AI engines in your category against your published content. Prioritise gaps where competitors are already being cited, then open opportunities where no brand holds citation share yet.'
+      },
+      {
+        '@type': 'HowToStep',
+        position: 4,
+        name: 'Build Citation Architecture',
+        text: 'Restructure existing content and write new content to be maximally extractable: definitional openings, short single-point paragraphs, FAQ sections matching real queries, tables and lists that stand alone as data units.'
+      },
+      {
+        '@type': 'HowToStep',
+        position: 5,
+        name: 'Deploy Schema Markup',
+        text: 'Implement Article, FAQPage, HowTo, and Organization schema on relevant pages. Use BreadcrumbList on all non-homepage pages. Validate with Google Rich Results Test and schema.org validator before publishing.'
+      },
+      {
+        '@type': 'HowToStep',
+        position: 6,
+        name: 'Configure Technical GEO Signals',
+        text: 'Update robots.txt to permit AI crawlers, add an llms.txt file declaring your expertise areas, consolidate canonical URLs, and ensure Core Web Vitals do not impede crawl budget allocation.'
+      },
+      {
+        '@type': 'HowToStep',
+        position: 7,
+        name: 'Build Authoritative External Sources',
+        text: 'Earn editorial mentions in high-trust publications, update industry directory listings, contribute to relevant Wikidata entries, and build the citation footprint that AI retrieval systems use to assess authority in your category.'
+      },
+      {
+        '@type': 'HowToStep',
+        position: 8,
+        name: 'Monitor, Measure, and Iterate',
+        text: 'Run a fixed query set across all five major AI platforms weekly. Track citation frequency, brand accuracy, and competitor share. Review monthly and adjust content, entity signals, and source-building priorities based on the data.'
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'How to Do GEO: A Step-by-Step Guide',
+    description: 'A practical, step-by-step guide to doing generative engine optimisation — from baseline audit to ongoing citation monitoring across all major AI platforms.',
+    url: 'https://geooptimised.com/how-to-do-geo/',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://geooptimised.com/how-to-do-geo/'
+    },
+    image: 'https://geooptimised.com/og-image.png',
+    author: {
+      '@type': 'Organization',
+      name: 'GEOoptimised',
+      url: 'https://geooptimised.com/',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://geooptimised.com/icon-512.png'
+      }
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'GEOoptimised',
+      url: 'https://geooptimised.com/',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://geooptimised.com/icon-512.png'
+      }
+    },
+    datePublished: '2026-06-06',
+    dateModified: '2026-06-06',
+    inLanguage: 'en-GB'
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+      { '@type': 'ListItem', position: 3, name: 'GEO Strategy', item: 'https://geooptimised.com/geo-strategy/' },
+      { '@type': 'ListItem', position: 4, name: 'How to Do GEO', item: 'https://geooptimised.com/how-to-do-geo/' }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How long does it take to do GEO properly?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'A properly executed GEO programme requires a minimum 90-day commitment to produce measurable results. Month 1 covers audit and foundation work. Month 2 focuses on content production and entity reinforcement. Month 3 establishes the monitoring cadence. Citation improvements are typically measurable within 60–90 days; compounding authority builds over 6–12 months.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the most important step in doing GEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The AI visibility audit is the most important step because it establishes the baseline from which every subsequent decision is made. Without knowing where your brand currently appears or is absent in AI-generated answers, you cannot prioritise content gaps, measure progress, or attribute citation improvements to specific actions.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Do I need technical skills to do GEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'GEO requires a combination of content, technical, and strategic skills. The content layer — writing for extraction, structuring FAQs, building citation architecture — is accessible without deep technical knowledge. The technical layer — schema deployment, llms.txt configuration, canonical URL management — requires either a developer or a marketer comfortable working with structured data and CMS configurations.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How is doing GEO different from doing SEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'GEO optimises for AI citation in generative answers; SEO optimises for ranking in traditional search results. The key practical differences are: GEO prioritises content extractability over click-through appeal, entity consistency over keyword density, citation footprint over backlink quantity, and cross-platform monitoring over keyword rank tracking. Many SEO foundations — fast pages, clear structure, authoritative content — carry over, but the optimisation logic is fundamentally different.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Which AI platforms should I target when doing GEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The five major platforms to target are ChatGPT, Perplexity, Google Gemini, Microsoft Copilot, and Google AI Overviews. Each has different citation logic: Perplexity is retrieval-first and cites sources directly; ChatGPT draws primarily from training data with web browsing for recent queries; Google AI Overviews are tightly coupled to organic ranking signals; Gemini and Copilot blend training data with live retrieval. A comprehensive GEO programme addresses all five.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What does GEO-optimised content look like in practice?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'GEO-optimised content opens with a crisp definitional statement answering the primary query in one to two sentences. It uses short paragraphs of two to four sentences, each covering a single point. It includes an FAQ section matching real query phrasing, tables summarising key comparisons, and appropriate schema markup. Every section leads with a bold declarative claim. Internal links reinforce topical authority. The content reads as a series of discrete, citable answers rather than continuous narrative prose.'
+        }
+      }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'what-is-geo', label: 'What GEO Actually Involves' },
+  { id: 'before-you-start', label: 'Before You Start' },
+  { id: 'step-by-step', label: 'The 8-Step Process' },
+  { id: 'content-requirements', label: 'Content Requirements' },
+  { id: 'platform-differences', label: 'Platform-by-Platform Differences' },
+  { id: 'measuring-progress', label: 'Measuring Progress' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' }
+];
+
+const steps = [
+  {
+    label: 'Run an AI Visibility Audit',
+    detail: 'Before changing anything, establish a baseline. Submit 20–40 structured queries to ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews — queries that represent the problems your target audience asks AI engines to solve. Record which brands are cited in each answer, the language used to describe your category, and where your brand appears or is entirely absent. This audit is the single most important deliverable in the entire programme. It tells you which battles to fight, which platforms to prioritise, and where competitor citation share is weakest. Without a baseline, every subsequent optimisation decision is a guess. Document results in a spreadsheet by platform, query, brand mentioned, and description accuracy.'
+  },
+  {
+    label: 'Map Your Brand Entity',
+    detail: 'Generative engines do not retrieve pages — they retrieve entities. An entity is your brand as understood by AI models: its name, category membership, key attributes, differentiation claims, and relationships to other entities (industry, product category, geography, founders). Map every attribute your brand entity should carry and then audit how consistently those attributes appear across your website, your structured data, your Google Business Profile, LinkedIn, industry directories, Wikidata, and every third-party mention you can access or influence. Identify contradictions — where your company is described as doing one thing on one platform and something different elsewhere. Every contradiction creates entity ambiguity, and ambiguity makes AI models default to whichever competitor is described most consistently.'
+  },
+  {
+    label: 'Identify Content Gaps',
+    detail: 'Cross-reference the queries from your audit against your current content inventory. The gap between what you have published and what AI engines are being asked is your content opportunity map. Prioritise in three tiers: first, queries where competitors are being cited and you are absent (displacement opportunities); second, queries where no brand holds citation share (first-mover opportunities); third, queries where your brand is mentioned but inaccurately described (accuracy remediation). Displacement opportunities typically show faster results because the query pattern already produces citations — you are redirecting existing AI behaviour, not establishing new citation behaviour from scratch. First-mover opportunities take longer to show results but produce durable citation share once established.'
+  },
+  {
+    label: 'Build Citation Architecture',
+    detail: 'Citation architecture is how your content is structured to be maximally extractable by large language models. Every page needs four components: a definitional opening (one to two sentences that answer the primary query directly and completely); short, single-point paragraphs of two to four sentences each; a FAQ section that matches the exact phrasing of queries submitted to AI engines; and tables or lists that can be read as standalone data units without surrounding context. Retrofit existing high-priority pages first — the audit will have identified which pages are already close to citation-ready. Then build new content to this architecture from the outset. Pages that bury their main claim after three paragraphs of context-setting will consistently lose citation share to pages that answer first and support second.'
+  },
+  {
+    label: 'Deploy Schema Markup',
+    detail: 'Schema markup gives AI crawlers and retrieval systems machine-readable signals about the type, structure, and relationships of your content. Deploy Article schema on every substantive content page with correct datePublished, dateModified, author, and publisher fields. Add FAQPage schema that mirrors your on-page FAQ section exactly. Use HowTo schema on process pages (like this one). Apply Organization schema with complete name, url, logo, and sameAs fields linking to your major profiles. Add BreadcrumbList on all non-homepage pages. Validate every schema deployment using the Google Rich Results Test and the schema.org validator before publishing. Invalid schema is not neutral — it can create conflicting signals that reduce entity resolution accuracy.'
+  },
+  {
+    label: 'Configure Technical GEO Signals',
+    detail: 'Technical GEO covers the signals that determine whether AI crawlers can access your content and how retrieval systems interpret your site structure. Check your robots.txt to ensure you are not inadvertently blocking AI crawlers — many sites block GPTBot, ClaudeBot, or PerplexityBot via legacy rules that were never intended to block AI access. Add an llms.txt file at your domain root declaring your site\'s expertise areas, key pages, and content purpose — this is a direct signal to AI systems about how to interpret your content. Consolidate canonical URLs to prevent entity signal fragmentation across duplicate or near-duplicate pages. Ensure your Core Web Vitals scores do not impede crawl budget — slow pages get crawled less frequently, reducing the freshness of your content in retrieval pipelines.'
+  },
+  {
+    label: 'Build Authoritative External Sources',
+    detail: 'AI models weight sources by perceived authority. Authority in GEO is built through citation footprint: the volume and quality of authoritative third-party sources that describe your brand correctly and consistently. This means earning editorial mentions in industry publications, contributing expert quotes to category-defining articles, updating or creating a Wikidata entry for your brand, ensuring your brand appears in relevant association directories with accurate attribute data, and building relationships with journalists and analysts who cover your category in publications that feed AI training data and RAG retrieval pipelines. Source building for GEO follows similar principles to link building for SEO — quality and topical relevance matter more than quantity — but the mechanism is different. You are building training data signals and retrieval source authority, not PageRank.'
+  },
+  {
+    label: 'Monitor, Measure, and Iterate',
+    detail: 'GEO is a programme, not a project. Set up a weekly monitoring cadence using a fixed query set — typically 30–60 queries that represent your core citation targets — and run it consistently across all five major AI platforms. Log citation frequency (how often your brand is mentioned), brand accuracy (whether descriptions match your entity map), competitor citation share (which competitors are gaining or losing), and answer format changes (whether platforms are switching from cited answers to direct synthesis). Review the data monthly to identify which pages are driving citation improvements, which entity gaps remain, and which source-building targets have produced retrievable mentions. Adjust content, entity signals, and outreach priorities based on what the data shows. The brands that compound GEO gains fastest treat monitoring as a core deliverable, not an optional extra.'
+  }
+];
+
+const platformData = [
+  { platform: 'ChatGPT', mechanism: 'Training data + web browsing', citationStyle: 'Inline hyperlinks (with browsing)', prioritySignal: 'Entity authority in training data, high-trust source mentions' },
+  { platform: 'Perplexity', mechanism: 'Real-time RAG retrieval', citationStyle: 'Numbered source citations', prioritySignal: 'Structured, extractable content; fast-loading pages' },
+  { platform: 'Google AI Overviews', mechanism: 'Organic index + RAG', citationStyle: 'Accordion citations from SERPs', prioritySignal: 'Strong organic ranking + GEO content structure' },
+  { platform: 'Microsoft Copilot', mechanism: 'Bing index + GPT-4 synthesis', citationStyle: 'Inline links from Bing results', prioritySignal: 'Bing visibility + entity consistency' },
+  { platform: 'Google Gemini', mechanism: 'Training data + Search Grounding', citationStyle: 'Linked sources when grounded', prioritySignal: 'Google entity authority, E-E-A-T signals, Knowledge Graph' }
+];
+
+const faqs = [
+  {
+    q: 'How long does it take to do GEO properly?',
+    a: 'A properly executed GEO programme requires a minimum 90-day commitment to produce measurable results. Month 1 covers audit and foundation work. Month 2 focuses on content production and entity reinforcement. Month 3 establishes the monitoring cadence. Citation improvements are typically measurable within 60–90 days; compounding authority builds over 6–12 months.'
+  },
+  {
+    q: 'What is the most important step in doing GEO?',
+    a: 'The AI visibility audit is the most important step because it establishes the baseline from which every subsequent decision is made. Without knowing where your brand currently appears or is absent in AI-generated answers, you cannot prioritise content gaps, measure progress, or attribute citation improvements to specific actions.'
+  },
+  {
+    q: 'Do I need technical skills to do GEO?',
+    a: 'GEO requires a combination of content, technical, and strategic skills. The content layer — writing for extraction, structuring FAQs, building citation architecture — is accessible without deep technical knowledge. The technical layer — schema deployment, llms.txt configuration, canonical URL management — requires either a developer or a marketer comfortable working with structured data and CMS configurations.'
+  },
+  {
+    q: 'How is doing GEO different from doing SEO?',
+    a: 'GEO optimises for AI citation in generative answers; SEO optimises for ranking in traditional search results. The key practical differences are: GEO prioritises content extractability over click-through appeal, entity consistency over keyword density, citation footprint over backlink quantity, and cross-platform monitoring over keyword rank tracking. Many SEO foundations — fast pages, clear structure, authoritative content — carry over, but the optimisation logic is fundamentally different.'
+  },
+  {
+    q: 'Which AI platforms should I target when doing GEO?',
+    a: 'The five major platforms to target are ChatGPT, Perplexity, Google Gemini, Microsoft Copilot, and Google AI Overviews. Each has different citation logic: Perplexity is retrieval-first and cites sources directly; ChatGPT draws primarily from training data with web browsing for recent queries; Google AI Overviews are tightly coupled to organic ranking signals; Gemini and Copilot blend training data with live retrieval. A comprehensive GEO programme addresses all five.'
+  },
+  {
+    q: 'What does GEO-optimised content look like in practice?',
+    a: 'GEO-optimised content opens with a crisp definitional statement answering the primary query in one to two sentences. It uses short paragraphs of two to four sentences, each covering a single point. It includes an FAQ section matching real query phrasing, tables summarising key comparisons, and appropriate schema markup. Every section leads with a bold declarative claim. Internal links reinforce topical authority. The content reads as a series of discrete, citable answers rather than continuous narrative prose.'
+  }
+];
+
+const related = [
+  {
+    tag: 'Strategy',
+    title: 'GEO Strategy & Best Practices Framework',
+    excerpt: 'The seven-step framework, best practices that drive citations, and the 90-day plan for executing GEO at scale.',
+    href: '/geo-strategy/'
+  },
+  {
+    tag: 'Framework',
+    title: 'The GEO Framework: A Repeatable System',
+    excerpt: 'A named, structured seven-stage framework with clear definitions and success criteria for each stage.',
+    href: '/geo-framework/'
+  },
+  {
+    tag: 'Checklist',
+    title: 'GEO Checklist: Every Signal Covered',
+    excerpt: 'A comprehensive audit checklist covering content, technical, entity, and monitoring signals.',
+    href: '/geo-checklist/'
+  }
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/how-to-do-geo/"
+  ogType="article"
+>
+
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">GEO</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-strategy/" class="transition hover:text-[var(--accent)]">GEO Strategy</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">How to Do GEO</li>
+    </ol>
+  </nav>
+
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Step-by-Step Guide</span>
+        <span class="font-mono text-xs text-ink-400">6 June 2026</span>
+        <span class="font-mono text-xs text-ink-400">12 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        How to Do GEO: A Step-by-Step Guide
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">Generative engine optimisation is an eight-step programme</strong> that moves your brand from absent in AI-generated answers to consistently cited across ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews. This guide gives you every step in order, with the rationale, practical actions, and common mistakes for each.
+      </p>
+    </div>
+  </section>
+
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" id="toc-nav">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <div>
+
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>The AI visibility audit is the non-negotiable first step — every subsequent decision depends on the baseline it establishes.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Entity mapping must precede content production. Inconsistent entity descriptions cause AI models to default to competitors.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Citation architecture — definitional openings, short paragraphs, FAQ sections, schema markup — is the highest-leverage content practice.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Each AI platform has different citation logic. A strategy targeting only one platform will miss the majority of AI search traffic.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>GEO is a programme, not a project. Weekly monitoring and monthly iteration are what turn one-off gains into compounding citation share.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prose-dark">
+        <h2 id="what-is-geo" class="anchor-top">What GEO Actually Involves</h2>
+        <p>
+          <strong>Generative engine optimisation (GEO) is the practice of making your brand the cited answer when AI engines respond to queries in your category.</strong> It differs from traditional SEO in its mechanism: instead of optimising for algorithmic ranking signals that drive click-through, GEO optimises for the entity signals, content structure, and source authority that large language models use to select and cite information in their generated answers.
+        </p>
+        <p>
+          Doing GEO means working across three layers simultaneously. The entity layer covers how your brand is defined and described across every platform AI models can access. The content layer covers how your pages are structured to be extractable by retrieval-augmented generation systems. The authority layer covers the citation footprint — editorial mentions, directory listings, structured data — that AI models use to assess whether your brand is a credible source in your category.
+        </p>
+        <p>
+          Many teams attempt GEO by publishing more content or adding schema to existing pages. This produces limited results because it addresses one layer without the others. A brand with excellent content structure but inconsistent entity descriptions will produce citations that misrepresent the brand. A brand with strong entity authority but unstructured content will generate vague mentions without specific citations. All three layers must be addressed for GEO to compound. For a deeper grounding in why this is the case, see the <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">complete guide to generative engine optimisation</a>.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="before-you-start" class="anchor-top">Before You Start</h2>
+        <p>
+          <strong>Attempting GEO without preparation produces wasted effort and misleading data.</strong> Before executing any of the eight steps below, confirm three things: you have access to all five major AI platforms for query testing; you have a structured document for recording audit findings; and you have a clear definition of your brand entity — what your company does, who it serves, and what differentiates it — that all team members will use consistently.
+        </p>
+        <p>
+          The entity definition is particularly important. If different team members describe your brand differently when creating content or updating profiles, you will be building entity inconsistency into the programme from the start. Agree on a canonical one-sentence brand description, a canonical category label, and a canonical set of differentiating attributes before any content or technical work begins. Everything produced in the programme should be traceable back to this entity definition.
+        </p>
+        <p>
+          If your brand is already active in SEO, review your existing schema markup and internal link structure before starting. Some existing technical work will carry over to GEO; other elements — particularly keyword-density-oriented content — may need to be restructured rather than added to. Understanding your starting point prevents duplication and identifies quick wins that can be implemented in the first 30 days. The <a href="/geo-strategy/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO strategy framework</a> gives you the planning structure to sequence this work correctly.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="step-by-step" class="anchor-top">The 8-Step Process</h2>
+        <p>
+          The eight steps below represent the complete GEO implementation sequence. They are ordered for a reason: each step generates data or structures that the following steps depend on. Skipping ahead — particularly past the audit and entity mapping phases — is the most common reason GEO programmes fail to produce measurable results.
+        </p>
+      </div>
+
+      <ol class="mt-8 space-y-6">
+        {steps.map((step, i) => (
+          <li class="flex gap-5">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border hair font-display text-sm font-bold text-[var(--accent)]">
+              {i + 1}
+            </span>
+            <div>
+              <h3 class="font-display text-lg font-semibold text-white">{step.label}</h3>
+              <p class="mt-1 text-sm leading-relaxed text-ink-300">{step.detail}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      <div class="prose-dark mt-16">
+        <h2 id="content-requirements" class="anchor-top">Content Requirements for GEO</h2>
+        <p>
+          <strong>GEO-optimised content is structured for extraction, not for engagement.</strong> The distinction matters: content written to attract clicks tends to be narrative, context-rich, and designed to keep readers on the page. Content written for AI citation needs to be immediately extractable — the answer must be accessible in the first sentence, supported by short paragraphs, and labelled with schema that confirms what type of content it is.
+        </p>
+        <p>
+          Every page you produce for GEO should satisfy three tests. First, the extraction test: can the primary answer be lifted from the first two sentences without any surrounding context? Second, the paragraph test: does each paragraph cover exactly one point, stated at the start? Third, the FAQ test: do your on-page FAQ questions match the exact phrasing of queries your audience submits to AI engines, not question phrasing you invented?
+        </p>
+        <p>
+          Failing any of these tests does not mean the page cannot be cited — it means it is less likely to be cited than a competitor page that passes all three. GEO is competitive: when two brands have comparable authority, the one with better citation architecture wins the mention. For a detailed breakdown of specific content patterns that drive citations, see <a href="/geo-best-practices/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO best practices</a>.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="platform-differences" class="anchor-top">Platform-by-Platform Differences</h2>
+        <p>
+          <strong>Each major AI platform uses a different citation mechanism, which means GEO tactics must be calibrated per platform.</strong> A strategy optimised only for Perplexity will underperform on ChatGPT; a strategy built around Google AI Overviews will not transfer directly to Copilot. The table below summarises the key differences.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Platform</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Retrieval Mechanism</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Citation Style</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Priority Signal for GEO</th>
+            </tr>
+          </thead>
+          <tbody>
+            {platformData.map((row, i) => (
+              <tr class={i % 2 === 0 ? 'border-b hair' : 'border-b hair bg-white/[.02]'}>
+                <td class="px-4 py-3 font-medium text-white">{row.platform}</td>
+                <td class="px-4 py-3 text-ink-300">{row.mechanism}</td>
+                <td class="px-4 py-3 text-ink-300">{row.citationStyle}</td>
+                <td class="px-4 py-3 text-ink-300">{row.prioritySignal}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          The practical implication is that your monitoring query set must be run on all five platforms, not just the one where your audience is most active. Citation behaviour shifts as platforms update their models and retrieval logic. A brand that monitors only Perplexity may be unaware that its Gemini visibility has collapsed — or that it has become the default citation in ChatGPT for its core category queries. Cross-platform monitoring is not optional; it is what makes GEO measurable. For the complete framework behind this approach, see the <a href="/geo-framework/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO framework</a> page.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="measuring-progress" class="anchor-top">Measuring Progress</h2>
+        <p>
+          <strong>GEO progress is measured by citation frequency, brand accuracy, and cross-platform reach — not by organic sessions or keyword rankings.</strong> These are different metrics measuring a different layer of the search ecosystem. A brand can rank on page one for its target keywords and still be invisible in AI-generated answers; conversely, a brand can gain significant AI citation share without any change in traditional search rankings.
+        </p>
+        <p>
+          Set up a tracking spreadsheet with columns for: platform, query, brand cited (yes/no), brand description accuracy (accurate / partially accurate / inaccurate / absent), competitor mentions, and answer format (cited sources / direct synthesis / no answer). Run this query set weekly. After four to six weeks of consistent data, patterns will emerge: which pages are driving citation improvements, which entity descriptions are persisting, and which platforms are lagging relative to the others.
+        </p>
+        <p>
+          Monthly reviews should produce three outputs: a citation trend report comparing current versus baseline frequency by platform; an entity accuracy report identifying remaining description inconsistencies; and a content iteration list of pages to restructure based on citation data. Quarterly reviews should produce updated priorities for source-building outreach and content gap filling. For a detailed breakdown of what to track and when, the <a href="/geo-checklist/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO checklist</a> covers the measurement framework in full. If you would rather have the monitoring set up and managed for you, <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services</a> from GEOoptimised include ongoing citation tracking as standard.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="relative border-t hair mt-12 overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Ready to Start Your GEO Programme?</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        We run the AI visibility audit, build the entity map, and deliver a prioritised 90-day plan with every step sequenced for your category and competitive landscape.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Book an AI visibility audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">Explore GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const faqBtns = document.querySelectorAll('#faq-accordion button');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+
+    const tocLinks = document.querySelectorAll('#toc-nav a');
+    const headings = Array.from(
+      document.querySelectorAll('h2[id], h3[id]')
+    ) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(link => {
+              link.classList.remove('text-[var(--accent)]');
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.classList.add('text-[var(--accent)]');
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+
+    headings.forEach(h => observer.observe(h));
+  </script>
+
+</Base>

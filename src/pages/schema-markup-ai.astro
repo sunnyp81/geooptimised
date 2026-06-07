@@ -1,0 +1,694 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Schema Markup for AI: Structured Data That Earns Citations';
+const description = 'Schema markup for AI optimization: the exact JSON-LD types, properties, and patterns that help LLMs parse, trust, and cite your content across generative platforms.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: title,
+  description,
+  url: 'https://geooptimised.com/schema-markup-ai/',
+  author: {
+    '@type': 'Organization',
+    name: 'GEOoptimised',
+    url: 'https://geooptimised.com/',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://geooptimised.com/icon-512.png',
+    },
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'GEOoptimised',
+    url: 'https://geooptimised.com/',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://geooptimised.com/icon-512.png',
+    },
+  },
+  datePublished: '2026-06-06',
+  dateModified: '2026-06-06',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/schema-markup-ai/',
+  },
+  image: 'https://geooptimised.com/og-image.png',
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+    { '@type': 'ListItem', position: 3, name: 'AI Brand Visibility', item: 'https://geooptimised.com/ai-brand-visibility/' },
+    { '@type': 'ListItem', position: 4, name: 'Schema Markup for AI', item: 'https://geooptimised.com/schema-markup-ai/' },
+  ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Does schema markup directly improve AI citation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Schema markup does not guarantee AI citation, but it significantly improves the probability by reducing ambiguity. When a language model or RAG pipeline retrieves a page, structured data signals tell it exactly what type of content the page contains, who authored it, and what its key claims are. Pages with valid JSON-LD schema are easier for AI systems to parse and trust than pages relying solely on prose. FAQPage and HowTo schemas in particular map directly onto the response formats that generative platforms prefer.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which schema types are most important for AI optimization?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The five most impactful schema types for AI optimization are: Organization (establishes brand entity with sameAs links), Article or TechArticle (signals content type and authority), FAQPage (maps Q&A pairs directly to generative response formats), HowTo (structures step-based content that AI systems cite for process queries), and BreadcrumbList (establishes topical hierarchy). Every content page should carry at minimum an Article and FAQPage schema alongside BreadcrumbList.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should I use JSON-LD, Microdata, or RDFa for AI?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'JSON-LD is the recommended format for AI optimization. It is the format Google officially recommends, it is cleanly separable from page HTML (reducing parse errors), and it is easier for both human developers and AI systems to read and validate. Microdata and RDFa are functionally equivalent to search engines but introduce more implementation complexity and are harder to audit. All examples in this guide use JSON-LD.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I validate my schema markup?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Use Google's Rich Results Test (search.google.com/test/rich-results) for surface-level validation and Schema.org's own validator (validator.schema.org) for spec compliance. For AI-specific validation, check that your JSON-LD parses without errors, that all required properties for each schema type are present, and that entity identifiers in sameAs arrays resolve to live, accurate pages. Broken or malformed JSON is worse than no schema — it actively signals unreliability to parsing systems.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the sameAs property and why does it matter for AI?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The sameAs property in Organization schema is an array of URLs that identify your organisation entity in external knowledge bases — Wikidata, Wikipedia, LinkedIn, Crunchbase, Companies House, and similar. It is one of the most important schema properties for AI visibility because it connects your website\'s entity representation to the knowledge graph records that AI systems use to resolve brand identities. A complete sameAs array reduces entity ambiguity, helps AI systems cite your brand accurately, and prevents misidentification with similarly named entities.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need schema on every page?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'You need schema on every page you want AI systems to understand and potentially cite. At minimum: Organization schema on every page (via a shared layout), BreadcrumbList on all non-homepage pages, and page-type-specific schema (Article, FAQPage, Product, Service) on the relevant content pages. Pages without any schema are not penalised, but they provide no structured signal to AI parsing systems — relying entirely on prose extraction, which is less precise and less reliable.',
+      },
+    },
+  ],
+};
+
+const schema = [articleSchema, breadcrumbSchema, faqSchema];
+
+const tocItems = [
+  { id: 'what-is-schema-for-ai', label: 'What Schema Does for AI' },
+  { id: 'schema-types', label: 'Priority Schema Types' },
+  { id: 'organization-schema', label: 'Organisation Schema' },
+  { id: 'article-faq-schema', label: 'Article and FAQPage Schema' },
+  { id: 'howto-schema', label: 'HowTo Schema' },
+  { id: 'schema-table', label: 'Schema Type Reference' },
+  { id: 'implementation', label: 'Implementation Checklist' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const faqs = [
+  {
+    q: 'Does schema markup directly improve AI citation?',
+    a: 'Schema markup does not guarantee AI citation, but it significantly improves the probability by reducing ambiguity. When a language model or RAG pipeline retrieves a page, structured data signals tell it exactly what type of content the page contains, who authored it, and what its key claims are. Pages with valid JSON-LD schema are easier for AI systems to parse and trust than pages relying solely on prose. FAQPage and HowTo schemas in particular map directly onto the response formats that generative platforms prefer.',
+  },
+  {
+    q: 'Which schema types are most important for AI optimization?',
+    a: 'The five most impactful schema types for AI optimization are: Organization (establishes brand entity with sameAs links), Article or TechArticle (signals content type and authority), FAQPage (maps Q&A pairs directly to generative response formats), HowTo (structures step-based content that AI systems cite for process queries), and BreadcrumbList (establishes topical hierarchy). Every content page should carry at minimum an Article and FAQPage schema alongside BreadcrumbList.',
+  },
+  {
+    q: 'Should I use JSON-LD, Microdata, or RDFa for AI?',
+    a: 'JSON-LD is the recommended format for AI optimization. It is the format Google officially recommends, it is cleanly separable from page HTML (reducing parse errors), and it is easier for both human developers and AI systems to read and validate. Microdata and RDFa are functionally equivalent to search engines but introduce more implementation complexity and are harder to audit. All examples in this guide use JSON-LD.',
+  },
+  {
+    q: 'How do I validate my schema markup?',
+    a: "Use Google's Rich Results Test (search.google.com/test/rich-results) for surface-level validation and Schema.org's own validator (validator.schema.org) for spec compliance. For AI-specific validation, check that your JSON-LD parses without errors, that all required properties for each schema type are present, and that entity identifiers in sameAs arrays resolve to live, accurate pages. Broken or malformed JSON is worse than no schema — it actively signals unreliability to parsing systems.",
+  },
+  {
+    q: 'What is the sameAs property and why does it matter for AI?',
+    a: "The sameAs property in Organization schema is an array of URLs that identify your organisation entity in external knowledge bases — Wikidata, Wikipedia, LinkedIn, Crunchbase, Companies House, and similar. It is one of the most important schema properties for AI visibility because it connects your website's entity representation to the knowledge graph records that AI systems use to resolve brand identities. A complete sameAs array reduces entity ambiguity, helps AI systems cite your brand accurately, and prevents misidentification with similarly named entities.",
+  },
+  {
+    q: 'Do I need schema on every page?',
+    a: 'You need schema on every page you want AI systems to understand and potentially cite. At minimum: Organization schema on every page (via a shared layout), BreadcrumbList on all non-homepage pages, and page-type-specific schema (Article, FAQPage, Product, Service) on the relevant content pages. Pages without any schema are not penalised, but they provide no structured signal to AI parsing systems — relying entirely on prose extraction, which is less precise and less reliable.',
+  },
+];
+
+const related = [
+  {
+    tag: 'Parent NODE',
+    title: 'AI Brand Visibility: How to Get Cited by LLMs',
+    excerpt: 'The five pillars of AI brand visibility, measurement framework, and content patterns that drive LLM citations.',
+    href: '/ai-brand-visibility/',
+  },
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'The full GEO framework — from first principles through to advanced entity strategy and measurement.',
+    href: '/generative-engine-optimisation/',
+  },
+  {
+    tag: 'Deep Dive',
+    title: 'Entity Optimisation for AI Visibility',
+    excerpt: 'How to build entity authority across knowledge graphs so AI systems recognise and cite your brand accurately.',
+    href: '/entity-optimisation/',
+  },
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/schema-markup-ai/" ogType="article">
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">Generative Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/ai-brand-visibility/" class="transition hover:text-[var(--accent)]">AI Brand Visibility</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">Schema Markup for AI</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Technical Guide</span>
+        <span class="font-mono text-xs text-ink-400">6 Jun 2026</span>
+        <span class="font-mono text-xs text-ink-400">14 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        Schema Markup for AI: Structured Data That Earns Citations
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">Schema markup for AI optimization</strong> is the practice of implementing JSON-LD structured data that
+        reduces ambiguity for large language models, signals content authority, and maps your pages onto the response patterns
+        that generative platforms prefer. The right schema types, deployed correctly, make your content measurably easier for AI systems to parse,
+        trust, and cite — on every platform from Perplexity to Google AI Overviews.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Schema markup in JSON-LD reduces parse ambiguity for AI retrieval systems, increasing the likelihood that your content is cited accurately.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>FAQPage and HowTo schemas map directly onto the response formats generative platforms use — making them disproportionately high-value for GEO.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>The <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">sameAs</code> property in Organization schema is the single most important structured data signal for entity disambiguation across AI systems.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Broken or invalid JSON-LD is worse than no schema — it signals unreliability to parsing systems. Always validate before deploying.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Every non-homepage content page should carry at minimum: BreadcrumbList + Article/TechArticle + FAQPage schemas as an array.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1: What Schema Does for AI -->
+      <section id="what-is-schema-for-ai" class="anchor-top prose-dark mb-16">
+        <h2>What Schema Markup Does for AI Systems</h2>
+
+        <p>
+          <strong>Schema markup is machine-readable metadata — a structured layer of signals that tells AI retrieval systems exactly what a page is, who created it, and what its content represents, without requiring the system to infer these facts from prose alone.</strong>
+          For traditional SEO, schema enables rich results in Google Search. For generative engine optimisation, it serves a different but equally critical function: reducing the ambiguity that causes AI systems to misclassify, under-cite, or omit pages entirely.
+        </p>
+
+        <p>
+          When a retrieval-augmented generation (RAG) pipeline fetches a candidate page, it processes both the visible content and the structured data embedded in the <code>&lt;head&gt;</code>. A page with valid JSON-LD schema provides the AI system with a pre-parsed summary of its content type, author, publication date, topic, and key claims. A page without schema forces the system to infer all of those attributes from prose — a process that introduces error and reduces confidence in citation accuracy.
+        </p>
+
+        <p>
+          This matters because AI systems — particularly those generating citations in responses — demonstrate a measurable preference for content they can parse with high confidence. A page that clearly identifies itself as an Article authored by a named Organisation, with a defined topic and a set of structured Q&amp;A pairs, is treated as a more reliable source than a page with equivalent prose quality but no structured signals. The difference is not in the content itself — it is in the clarity of the machine-readable layer that wraps it.
+        </p>
+
+        <p>
+          Schema markup is part of the broader <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility</a> strategy, and sits alongside entity optimisation and content citability as one of the three core technical layers every GEO programme must address. For the full strategic context, see our <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation guide</a>.
+        </p>
+
+        <h3>Schema vs. Content Quality</h3>
+        <p>
+          Schema markup does not compensate for poor content. A page with excellent structured data but thin, ambiguous prose will still perform poorly in AI citation because RAG systems evaluate retrieved content quality before generating a response. Schema is a signal layer that amplifies good content — it reduces parse friction, confirms entity relationships, and maps content structure onto AI response formats. It does not substitute for the underlying citability of the content itself.
+        </p>
+
+        <p>
+          The correct framing is: structured data and content quality are multiplicative, not additive. A page with high-citability content and valid schema consistently outperforms pages with only one or neither of those properties.
+        </p>
+      </section>
+
+      <!-- Section 2: Priority Schema Types -->
+      <section id="schema-types" class="anchor-top prose-dark mb-16">
+        <h2>Priority Schema Types for AI Optimization</h2>
+
+        <p>
+          <strong>Not all schema types contribute equally to AI visibility — five types account for the majority of citation-relevant structured data signals.</strong>
+          Deploying these five correctly, in valid JSON-LD, covers the full spectrum of AI retrieval signals for most content pages and commercial pages alike.
+        </p>
+
+        <div class="not-prose mt-8 space-y-5">
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Organization</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              The Organisation schema establishes your brand as a named entity with defined attributes and cross-references to external knowledge bases. The <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">sameAs</code> array is its most important property for AI visibility — it connects your domain's entity to its Wikidata Q-number, Wikipedia article, LinkedIn profile, and other authoritative external identifiers. Deploy Organisation schema on every page via a shared layout component, not just the homepage.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Article / TechArticle</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Article schema identifies a page as editorial content, signals its publication and modification dates, and links it to the authoring organisation. Use <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">TechArticle</code> for technical guides and implementation content; use <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">Article</code> for general content. Always include <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">datePublished</code>, <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">dateModified</code>, <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">author</code>, <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">publisher</code>, and <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">mainEntityOfPage</code>. Missing properties degrade the schema's reliability signal.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">FAQPage</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              FAQPage schema maps your on-page Q&amp;A section directly onto the format that generative platforms use when answering informational queries. Each <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">Question</code>/<code class="text-xs bg-geo-800 px-1 py-0.5 rounded">acceptedAnswer</code> pair should match a visible FAQ on the page — do not include schema questions that have no corresponding visible content. Aim for 4 to 8 questions per page; answers should be self-contained, specific, and 2–5 sentences in length for optimal extraction.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">HowTo</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              HowTo schema is the highest-value schema type for process-oriented content. When a generative platform answers a "how do I…" query, it strongly favours sources whose content maps to a clear step structure. HowTo schema provides that structure explicitly: a named process, a list of ordered steps, and optional tool/supply requirements. Use it only for pages that are genuinely step-based — deploying HowTo on non-process content is a validity error that reduces trustworthiness.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">BreadcrumbList</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              BreadcrumbList schema provides AI systems with topical hierarchy context: where a given page sits within the site's information architecture. This hierarchy signal is used by retrieval systems to evaluate topical relevance and authority depth. A page with a BreadcrumbList that runs Home → Generative Engine Optimisation → AI Brand Visibility → Schema Markup for AI tells the retrieval system that this page is a deep-dive within a structured knowledge cluster — which increases the confidence of topical retrieval for schema-related queries.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Organisation Schema Deep Dive -->
+      <section id="organization-schema" class="anchor-top prose-dark mb-16">
+        <h2>Organisation Schema: The Entity Anchor</h2>
+
+        <p>
+          <strong>Organisation schema is the most strategically important schema type for AI brand visibility because it is the primary mechanism by which AI systems resolve your brand's entity identity.</strong>
+          When a language model encounters your brand name in a query or retrieved document, it attempts to match that name to a known entity record. Organisation schema — particularly the <code>sameAs</code> property — provides the cross-references that make that match reliable.
+        </p>
+
+        <p>
+          A well-formed Organisation schema for a UK-based service business should include the following properties at minimum:
+        </p>
+
+        <div class="not-prose">
+          <pre class="overflow-x-auto rounded-lg bg-geo-900 border border-geo-700 p-5 text-sm leading-relaxed"><code class="font-mono text-ink-200">{`{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "GEOoptimised",
+  "url": "https://geooptimised.com/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://geooptimised.com/icon-512.png"
+  },
+  "description": "UK-based Generative Engine Optimisation agency helping brands get cited by ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
+  "foundingDate": "2024",
+  "areaServed": "GB",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "email": "hello@geooptimised.com"
+  },
+  "sameAs": [
+    "https://www.wikidata.org/wiki/Q[YOUR-Q-NUMBER]",
+    "https://en.wikipedia.org/wiki/[YOUR-ARTICLE]",
+    "https://www.linkedin.com/company/[YOUR-HANDLE]",
+    "https://www.crunchbase.com/organization/[YOUR-SLUG]"
+  ]
+}`}</code></pre>
+        </div>
+
+        <p class="mt-6">
+          The <code>sameAs</code> array is the component most frequently omitted or left incomplete. Each URL in the array should resolve to a live, accurate page that describes the same organisation. Dead links or links to incorrect entities in the <code>sameAs</code> array actively harm entity disambiguation — they introduce conflicting signals that reduce AI confidence in your brand's identity.
+        </p>
+
+        <p>
+          For a detailed guide to building and reinforcing entity authority across knowledge graphs, see our pages on <a href="/entity-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">entity optimisation</a> and <a href="/knowledge-graph-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">knowledge graph optimisation</a>.
+        </p>
+      </section>
+
+      <!-- Section 4: Article and FAQPage Schema -->
+      <section id="article-faq-schema" class="anchor-top prose-dark mb-16">
+        <h2>Article and FAQPage Schema: The Citation Layer</h2>
+
+        <p>
+          <strong>The Article and FAQPage schema combination is the highest-impact structured data configuration for content pages targeting informational queries.</strong>
+          Article schema establishes the content's type, authorship, and temporal freshness. FAQPage schema maps the most extractable content on the page — your Q&amp;A pairs — directly into the structured format AI systems use when generating answers.
+        </p>
+
+        <p>
+          These two schemas should be deployed as an array — not nested within each other — so that each schema block validates independently. In Astro, this is done by passing an array to the <code>schema</code> prop on the Base layout:
+        </p>
+
+        <div class="not-prose">
+          <pre class="overflow-x-auto rounded-lg bg-geo-900 border border-geo-700 p-5 text-sm leading-relaxed"><code class="font-mono text-ink-200">{`const schema = [articleSchema, breadcrumbSchema, faqSchema];
+
+// In the layout call:
+<Base schema={schema} />`}</code></pre>
+        </div>
+
+        <p class="mt-6">
+          A fully-specified Article schema for a content page must include: <code>headline</code>, <code>description</code>, <code>url</code>, <code>author</code> (with <code>@type</code>, <code>name</code>, <code>url</code>, and <code>logo</code>), <code>publisher</code> (same structure), <code>datePublished</code>, <code>dateModified</code>, <code>mainEntityOfPage</code>, and <code>image</code>. Missing any of these properties produces a degraded schema that passes validation but provides incomplete signals.
+        </p>
+
+        <h3>FAQPage Best Practices</h3>
+        <p>
+          For FAQPage schema to contribute to AI citation, each question and answer pair must satisfy four conditions: the question text must match a visible heading or question on the page; the answer must be visible body text (not hidden or collapsed by default); the answer must be self-contained — interpretable without the surrounding page context; and the answer must be specific enough to be extractable — answers of two to five sentences consistently outperform one-line answers and multi-paragraph answers.
+        </p>
+
+        <p>
+          Do not include more questions in your FAQPage schema than you have visible on the page. Discrepancies between schema content and visible content are a reliability signal to AI parsing systems that your structured data cannot be trusted.
+        </p>
+      </section>
+
+      <!-- Section 5: HowTo Schema -->
+      <section id="howto-schema" class="anchor-top prose-dark mb-16">
+        <h2>HowTo Schema: Structuring Process Content</h2>
+
+        <p>
+          <strong>HowTo schema is the structured data type most directly aligned with the "how do I…" query format that dominates AI search usage for technical and procedural topics.</strong>
+          When deployed correctly on genuinely step-based content, it provides a machine-readable process map that AI systems can cite precisely — naming the process, the steps, and the expected outcome.
+        </p>
+
+        <p>A minimal, valid HowTo schema for a five-step process looks like this:</p>
+
+        <div class="not-prose">
+          <pre class="overflow-x-auto rounded-lg bg-geo-900 border border-geo-700 p-5 text-sm leading-relaxed"><code class="font-mono text-ink-200">{`{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Implement Schema Markup for AI Optimization",
+  "description": "A step-by-step guide to deploying JSON-LD structured data that improves AI citation of your content.",
+  "estimatedCost": { "@type": "MonetaryAmount", "currency": "GBP", "value": "0" },
+  "totalTime": "PT2H",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Audit existing schema",
+      "text": "Run your key pages through Google's Rich Results Test and Schema.org validator. Document which schema types are present, which are missing, and which have validation errors."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Deploy Organization schema sitewide",
+      "text": "Add Organization JSON-LD to your shared layout, including a complete sameAs array referencing Wikidata, Wikipedia, LinkedIn, and Crunchbase."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Add Article schema to content pages",
+      "text": "For each content page targeting informational queries, add TechArticle or Article schema with all required properties including datePublished, dateModified, author, and publisher."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Add FAQPage schema to Q&A sections",
+      "text": "Map each visible FAQ on the page to a Question/acceptedAnswer pair in FAQPage schema. Ensure every schema question has a corresponding visible question on the page."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Validate and monitor",
+      "text": "Validate all schema using Google's Rich Results Test and the Schema.org validator. Set a quarterly review schedule to ensure schema remains accurate as content is updated."
+    }
+  ]
+}`}</code></pre>
+        </div>
+
+        <p class="mt-6">
+          Note the <code>totalTime</code> property using ISO 8601 duration format (<code>PT2H</code> = two hours). This is not required by the spec but is recommended — it provides an additional machine-readable signal that helps AI systems contextualise the scope of the process when generating responses.
+        </p>
+      </section>
+
+      <!-- Section 6: Schema Type Reference Table -->
+      <section id="schema-table" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Schema Type Reference: AI Impact by Page Type</h2>
+          <p>
+            <strong>Different page types require different schema configurations — there is no single schema stack that fits every page.</strong>
+            The table below maps page types to recommended schema configurations, with notes on the AI citation impact of each combination.
+          </p>
+        </div>
+
+        <div class="mt-8 overflow-x-auto rounded-lg border border-geo-700">
+          <table class="min-w-full text-sm">
+            <thead>
+              <tr class="border-b border-geo-700 bg-geo-900">
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Page Type</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Recommended Schema</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">AI Citation Impact</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Priority</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-geo-800">
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">Pillar / ROOT page</td>
+                <td class="px-4 py-3 text-ink-300">Article + FAQPage + BreadcrumbList + Organization</td>
+                <td class="px-4 py-3 text-ink-300">Very high — foundational entity and topical authority signal</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">Critical</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-ink-100">Content guide (NODE/SEED)</td>
+                <td class="px-4 py-3 text-ink-300">TechArticle + FAQPage + BreadcrumbList</td>
+                <td class="px-4 py-3 text-ink-300">High — directly maps to informational query response format</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">Critical</td>
+              </tr>
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">Step-based process page</td>
+                <td class="px-4 py-3 text-ink-300">HowTo + FAQPage + BreadcrumbList</td>
+                <td class="px-4 py-3 text-ink-300">Very high for "how do I…" queries — strongest process signal</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">Critical</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-ink-100">Service / commercial page</td>
+                <td class="px-4 py-3 text-ink-300">Service + Organization + BreadcrumbList</td>
+                <td class="px-4 py-3 text-ink-300">Medium — signals intent and scope; improves entity classification</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">High</td>
+              </tr>
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">Comparison / tools page</td>
+                <td class="px-4 py-3 text-ink-300">Article + ItemList + FAQPage + BreadcrumbList</td>
+                <td class="px-4 py-3 text-ink-300">High for "best X" queries — ItemList maps to recommendation format</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">High</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-ink-100">About page</td>
+                <td class="px-4 py-3 text-ink-300">Organization + ProfessionalService</td>
+                <td class="px-4 py-3 text-ink-300">Medium — reinforces entity identity; supports brand query accuracy</td>
+                <td class="px-4 py-3 text-ink-400 font-semibold">Medium</td>
+              </tr>
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">Homepage</td>
+                <td class="px-4 py-3 text-ink-300">Organization + WebSite + SiteLinksSearchBox</td>
+                <td class="px-4 py-3 text-ink-300">Medium — entity anchor; supports navigational query resolution</td>
+                <td class="px-4 py-3 text-ink-400 font-semibold">Medium</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 7: Implementation Checklist -->
+      <section id="implementation" class="anchor-top prose-dark mb-16">
+        <h2>Implementation Checklist</h2>
+
+        <p>
+          <strong>A schema markup deployment for AI optimization is only as strong as its least valid page.</strong>
+          A single page with broken JSON-LD does not suppress the rest of your site — but it represents a missed citation opportunity and signals unreliability to any AI system that retrieves it. Use this checklist to ensure complete, valid deployment across your entire content set.
+        </p>
+
+        <div class="not-prose mt-6 space-y-4">
+
+          <div class="card p-5">
+            <h3 class="text-sm font-semibold text-ink-50 mb-3">Sitewide Foundation</h3>
+            <ul class="space-y-2 text-sm text-ink-300">
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> Organization schema deployed via shared layout (present on every page)</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">sameAs</code> array references Wikidata, Wikipedia, LinkedIn, Crunchbase — all live links</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> BreadcrumbList on every non-homepage page, matching visible breadcrumb navigation</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> Schema passed as array (not nested) in layout component</li>
+            </ul>
+          </div>
+
+          <div class="card p-5">
+            <h3 class="text-sm font-semibold text-ink-50 mb-3">Content Pages</h3>
+            <ul class="space-y-2 text-sm text-ink-300">
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> Article or TechArticle schema on all content pages with <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">datePublished</code>, <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">dateModified</code>, author, publisher, image</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> FAQPage schema matching visible on-page FAQ (4–8 Q&amp;A pairs minimum)</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> Each answer is self-contained and 2–5 sentences in length</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> HowTo schema on step-based pages only; all steps have <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">name</code> and <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">text</code></li>
+            </ul>
+          </div>
+
+          <div class="card p-5">
+            <h3 class="text-sm font-semibold text-ink-50 mb-3">Validation and Maintenance</h3>
+            <ul class="space-y-2 text-sm text-ink-300">
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> All schema validated via Google Rich Results Test — zero errors (warnings acceptable)</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> Schema validated via Schema.org validator for spec compliance</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">dateModified</code> updated whenever page content is substantially changed</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> Quarterly audit of <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">sameAs</code> URLs to confirm all still resolve correctly</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> Schema reviewed after any major site restructure or URL change</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <p class="mt-8">
+          Schema markup deployment is one component of the technical GEO services we provide. For a complete technical audit covering schema, crawler access, entity consistency, and content citability scoring, <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">contact us</a>. For platform-specific optimisation including llms.txt implementation, see our <a href="/geo-services/#llms-txt" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services</a> overview.
+        </p>
+      </section>
+
+      <!-- FAQ -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Get a Full Schema and Structured Data Audit</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Incomplete or invalid structured data is one of the most common and most fixable causes of poor AI citation performance.
+        Our GEO technical audit identifies every schema gap, validates your entity signals, and delivers a prioritised
+        implementation plan your development team can act on immediately.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request your free schema audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

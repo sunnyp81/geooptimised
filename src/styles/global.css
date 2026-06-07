@@ -12,6 +12,18 @@
   --color-ink-200: #C4CCDB;
   --color-ink-100: #E2E8F0;
   --color-ink-50: #F0F4F8;
+  /* geo-* mirrors the ink navy scale (documented brand scale; kept in sync). */
+  --color-geo-950: #06090F;
+  --color-geo-900: #0A0F1E;
+  --color-geo-800: #11172A;
+  --color-geo-700: #1A2138;
+  --color-geo-600: #252D48;
+  --color-geo-500: #3A4564;
+  --color-geo-400: #5A6585;
+  --color-geo-300: #8B95A8;
+  --color-geo-200: #C4CCDB;
+  --color-geo-100: #E2E8F0;
+  --color-geo-50: #F0F4F8;
   --color-accent-300: #5FF5E6;
   --color-accent-400: #2EF0D8;
   --color-accent-500: #00E5CC;

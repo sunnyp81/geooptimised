@@ -1,0 +1,623 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO Best Practices: What Earns AI Citations | GEOoptimised';
+const description = 'The definitive GEO best practices guide: citation architecture, entity consistency, structural writing patterns, and the signals AI engines use to select sources.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'GEO Best Practices: What Actually Earns AI Citations',
+    description: 'The definitive GEO best practices guide: citation architecture, entity consistency, structural writing patterns, and the signals AI engines use to select sources.',
+    url: 'https://geooptimised.com/geo-best-practices/',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://geooptimised.com/geo-best-practices/'
+    },
+    author: {
+      '@type': 'Organization',
+      name: 'GEOoptimised',
+      url: 'https://geooptimised.com/',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://geooptimised.com/icon-512.png'
+      }
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'GEOoptimised',
+      url: 'https://geooptimised.com/',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://geooptimised.com/icon-512.png'
+      }
+    },
+    datePublished: '2026-06-06',
+    dateModified: '2026-06-06',
+    image: 'https://geooptimised.com/og-image.png',
+    inLanguage: 'en-GB'
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is the most important GEO best practice?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The single most important GEO best practice is writing for extraction: opening every page and section with a concise, definitional statement that answers the target query directly. Large language models surface content that presents the answer immediately — without preamble, rhetorical questions, or context-building — because it matches the pattern of a reliable, citable source.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How does entity consistency affect AI citations?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Entity consistency directly affects whether AI engines can resolve your brand as a distinct, trustworthy entity. When your company name, description, attributes, and category are described identically across your website, structured data, Google Business Profile, Wikidata, and third-party sources, AI models can confidently attribute answers to you. Inconsistency creates ambiguity that AI models resolve by favouring competitors whose entities are better defined.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Do technical GEO signals matter as much as content quality?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Technical GEO signals and content quality are interdependent, not competing priorities. Content that is structurally excellent but blocked from AI crawlers will not earn citations. Schema markup that is correctly deployed on thin content produces no benefit. The best-performing GEO programmes treat technical implementation as a multiplier: it amplifies the citation potential of well-structured content without replacing it.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Which AI platforms should GEO best practices target?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'GEO best practices should target all five major generative platforms: ChatGPT, Perplexity, Google Gemini, Microsoft Copilot, and Google AI Overviews. Each platform retrieves and cites sources differently. Perplexity is retrieval-first and heavily cites live web sources. ChatGPT blends training data with browsing. Google AI Overviews correlate with organic ranking signals. A complete GEO programme addresses all five, not just the platform with the largest user base.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How often should GEO content be updated to maintain citations?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'GEO content should be reviewed quarterly at minimum and updated whenever AI monitoring reveals a decline in citation frequency, a change in how your brand is described, or a competitor gaining citation share on a target query. Unlike traditional SEO content decay, GEO citation loss is often triggered by model updates or competitor entity improvements rather than content staleness alone. Monthly monitoring with quarterly content reviews is the recommended cadence.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What structured data types are most important for GEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The structured data types with the greatest impact on GEO are: Article or TechArticle (labels content as an authoritative source), FAQPage (maps to common AI query patterns), Organization with logo and sameAs (anchors your entity identity), BreadcrumbList (signals topical hierarchy), and HowTo (matches procedural query formats). Deploy these in JSON-LD format on every relevant page, not just the homepage.'
+        }
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+      { '@type': 'ListItem', position: 3, name: 'GEO Strategy', item: 'https://geooptimised.com/geo-strategy/' },
+      { '@type': 'ListItem', position: 4, name: 'GEO Best Practices', item: 'https://geooptimised.com/geo-best-practices/' }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'what-earns-citations', label: 'What Actually Earns Citations' },
+  { id: 'content-practices', label: 'Content Best Practices' },
+  { id: 'entity-practices', label: 'Entity & Structured Data' },
+  { id: 'technical-practices', label: 'Technical GEO Signals' },
+  { id: 'platform-differences', label: 'Platform-Specific Behaviour' },
+  { id: 'practices-comparison', label: 'Practices Comparison' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const contentPractices = [
+  {
+    title: 'Open with a definitional statement',
+    detail: 'Every page and every section should begin with a concise, declarative sentence that answers the primary query directly. "GEO is the practice of optimising content to earn citations in AI-generated answers." Not a question. Not a preamble. A claim. LLMs extract definitional openings because they function as standalone, citable units that do not require surrounding context to make sense.',
+  },
+  {
+    title: 'Write short, single-point paragraphs',
+    detail: 'Each paragraph should cover exactly one point in two to four sentences. Multi-concept paragraphs dilute extractability. A retrieval-augmented generation system pulling a relevant passage cannot cleanly extract half a paragraph. If your answer spans a paragraph boundary, it may be silently truncated, changing its meaning or making it unusable as a citation.',
+  },
+  {
+    title: 'Use H2 and H3 labels as metadata',
+    detail: 'Section headings are not decorative. They are metadata that AI systems use to route queries to the correct passage. Write headings as declarative labels — "Entity Consistency Drives Citation Reliability" — rather than as questions or vague topics. A heading that states the section\'s conclusion helps AI systems match the heading to queries and pull the correct block.',
+  },
+  {
+    title: 'Include FAQ sections on every page',
+    detail: 'FAQ sections are the highest-density citation targets on any page. They present questions in the exact phrasing that users submit to AI engines, followed immediately by concise answers. Structure each FAQ answer as a complete, standalone response of 40 to 100 words. Deploy FAQPage schema on every FAQ section. This combination — on-page content plus structured data — produces the strongest citation signal for conversational queries.',
+  },
+  {
+    title: 'Deploy tables for comparative data',
+    detail: 'Tables are natively extractable. AI systems can pull a table as a discrete unit, preserving the relational structure between rows and columns. Any time your content compares options, describes attributes of multiple entities, or presents data across categories, a table is the correct format. Use clear column headers with scope attributes and avoid merged cells that break the extraction logic.',
+  },
+];
+
+const entityPractices = [
+  {
+    title: 'Describe your entity identically everywhere',
+    detail: 'Your company name, founding date, category descriptor, location, and key service descriptions should be word-for-word identical across your website, Google Business Profile, Wikidata entry, LinkedIn company page, and any structured data you deploy. Even minor variations — "GEOoptimised Ltd" versus "GEOoptimised" — create entity ambiguity that AI models resolve by deprioritising your brand.',
+  },
+  {
+    title: 'Use sameAs to anchor your entity',
+    detail: 'The sameAs property in Organization schema links your entity to authoritative third-party identifiers: your Wikidata Q-number, LinkedIn URL, Companies House entry, and any domain where your entity is definitively described. These links tell knowledge graph crawlers that all these representations are the same entity, consolidating authority signals rather than fragmenting them across multiple unconnected records.',
+  },
+  {
+    title: 'Deploy Article schema on every content page',
+    detail: 'Article or TechArticle schema marks your content as an authored, published piece with a known source and date. It provides the author and publisher attributes that AI retrieval systems use to assess credibility. Without it, a page is an anonymous document. With it, it is a publication by a named organisation with a verifiable identity. This distinction affects citation weighting.',
+  },
+  {
+    title: 'Submit and maintain your llms.txt file',
+    detail: 'The llms.txt convention — a plain-text file at the root of your domain — declares your site\'s purpose, expertise areas, and preferred citation identifiers to AI crawlers. While not universally adopted by all platforms, it is the closest equivalent to robots.txt for the generative AI layer. A well-structured llms.txt helps AI crawlers categorise your domain correctly and reduces the chance of your content being misclassified.',
+  },
+];
+
+const technicalPractices = [
+  {
+    signal: 'robots.txt',
+    requirement: 'Allow all AI crawlers (GPTBot, PerplexityBot, ClaudeBot, Googlebot)',
+    impact: 'High — blocked crawlers cannot index your content for retrieval'
+  },
+  {
+    signal: 'llms.txt',
+    requirement: 'Declare site purpose, topic scope, and entity identifiers',
+    impact: 'Medium — improves AI categorisation and reduces misclassification'
+  },
+  {
+    signal: 'JSON-LD schema',
+    requirement: 'Article, FAQPage, Organization, BreadcrumbList on all content pages',
+    impact: 'High — structured data is the primary entity signal for knowledge graphs'
+  },
+  {
+    signal: 'Canonical URLs',
+    requirement: 'One canonical per page; no parameter-based duplicates',
+    impact: 'High — consolidates entity signals on a single URL'
+  },
+  {
+    signal: 'Page speed / CWV',
+    requirement: 'LCP < 2.5 s, CLS < 0.1 for crawlability and indexation',
+    impact: 'Medium — slow pages receive lower crawl priority'
+  },
+  {
+    signal: 'Internal link architecture',
+    requirement: 'Every SEED links to NODE and ROOT; cross-topic bridges where relevant',
+    impact: 'Medium — reinforces topical authority signals across the domain'
+  },
+];
+
+const platformBehaviours = [
+  {
+    platform: 'Perplexity',
+    retrieval: 'Live RAG — fetches current web sources per query',
+    best_practice: 'Short extractable paragraphs, clear source attribution, fresh content dates',
+  },
+  {
+    platform: 'ChatGPT (browsing)',
+    retrieval: 'Training data + optional web browsing',
+    best_practice: 'Training-data entity signals plus crawlable live content for recent queries',
+  },
+  {
+    platform: 'Google AI Overviews',
+    retrieval: 'Correlated with organic ranking + Knowledge Graph',
+    best_practice: 'Strong organic authority plus Entity schema and E-E-A-T signals',
+  },
+  {
+    platform: 'Microsoft Copilot',
+    retrieval: 'Bing index plus GPT-4 reasoning',
+    best_practice: 'Bing Webmaster Tools verification, schema, and Bing-crawlable content',
+  },
+  {
+    platform: 'Google Gemini',
+    retrieval: 'Training data plus Google Search integration',
+    best_practice: 'Google Business Profile accuracy, Knowledge Panel data, authoritative backlinks',
+  },
+];
+
+const faqs = [
+  {
+    q: 'What is the most important GEO best practice?',
+    a: 'The single most important GEO best practice is writing for extraction: opening every page and section with a concise, definitional statement that answers the target query directly. Large language models surface content that presents the answer immediately — without preamble, rhetorical questions, or context-building — because it matches the pattern of a reliable, citable source.',
+  },
+  {
+    q: 'How does entity consistency affect AI citations?',
+    a: 'Entity consistency directly affects whether AI engines can resolve your brand as a distinct, trustworthy entity. When your company name, description, attributes, and category are described identically across your website, structured data, Google Business Profile, Wikidata, and third-party sources, AI models can confidently attribute answers to you. Inconsistency creates ambiguity that AI models resolve by favouring competitors whose entities are better defined.',
+  },
+  {
+    q: 'Do technical GEO signals matter as much as content quality?',
+    a: 'Technical GEO signals and content quality are interdependent, not competing priorities. Content that is structurally excellent but blocked from AI crawlers will not earn citations. Schema markup that is correctly deployed on thin content produces no benefit. The best-performing GEO programmes treat technical implementation as a multiplier: it amplifies the citation potential of well-structured content without replacing it.',
+  },
+  {
+    q: 'Which AI platforms should GEO best practices target?',
+    a: 'GEO best practices should target all five major generative platforms: ChatGPT, Perplexity, Google Gemini, Microsoft Copilot, and Google AI Overviews. Each platform retrieves and cites sources differently. A complete GEO programme addresses all five, not just the platform with the largest user base.',
+  },
+  {
+    q: 'How often should GEO content be updated to maintain citations?',
+    a: 'GEO content should be reviewed quarterly at minimum and updated whenever AI monitoring reveals a decline in citation frequency. Monthly monitoring with quarterly content reviews is the recommended cadence.',
+  },
+  {
+    q: 'What structured data types are most important for GEO?',
+    a: 'The structured data types with the greatest impact on GEO are: Article or TechArticle, FAQPage, Organization with logo and sameAs, BreadcrumbList, and HowTo for procedural content. Deploy these in JSON-LD format on every relevant page.',
+  },
+];
+
+const related = [
+  {
+    tag: 'NODE',
+    title: 'GEO Strategy Framework',
+    excerpt: 'The seven-step systematic process for building durable citation share across all major AI platforms.',
+    href: '/geo-strategy/',
+  },
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'First principles through advanced entity strategies — the definitive GEO reference.',
+    href: '/generative-engine-optimisation/',
+  },
+  {
+    tag: 'Tool',
+    title: 'GEO Checklist: Pre-Launch and Ongoing',
+    excerpt: 'A structured, actionable checklist for implementing GEO best practices at every stage.',
+    href: '/geo-checklist/',
+  },
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/geo-best-practices/" ogType="article">
+
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">GEO</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-strategy/" class="transition hover:text-[var(--accent)]">GEO Strategy</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">GEO Best Practices</li>
+    </ol>
+  </nav>
+
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Best Practices</span>
+        <span class="font-mono text-xs text-ink-400">6 June 2026</span>
+        <span class="font-mono text-xs text-ink-400">12 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO Best Practices: What Actually Earns AI Citations
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">GEO best practices are defined by a single criterion: they optimise for extraction, not for impression.</strong> Traditional SEO content attracts clicks. GEO content is designed to be pulled apart, summarised, and cited by large language models across ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews. This guide covers the content, entity, and technical practices that consistently produce measurable citation gains.
+      </p>
+    </div>
+  </section>
+
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" id="toc-nav">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <div>
+
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Extraction-first writing — definitional openings, single-point paragraphs, declarative headings — is the highest-leverage content practice in GEO.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Entity consistency across all platforms is a prerequisite: AI models that cannot cleanly resolve your entity will not reliably cite it.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Structured data (Article, FAQPage, Organization, BreadcrumbList) is the primary signal that labels your content as a credible, attributable source.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Each of the five major AI platforms retrieves differently — a complete GEO programme addresses all five, not just the largest.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Technical signals (robots.txt, llms.txt, canonicals, Core Web Vitals) act as multipliers: they amplify strong content, not substitute for it.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prose-dark">
+        <h2 id="what-earns-citations" class="anchor-top">What Actually Earns AI Citations</h2>
+        <p>
+          <strong>AI engines cite sources that are easy to extract, authoritative in their entity identity, and structurally matched to how retrieval-augmented generation systems pull information.</strong> This is fundamentally different from how traditional search engines rank pages. Google's algorithm weighs hundreds of signals to determine relevance and authority. A large language model generating an answer pulls the passage that most cleanly answers the query, from a source its training data or retrieval system associates with trustworthiness.
+        </p>
+        <p>
+          Three factors determine whether a given piece of content earns a citation or gets skipped: extractability (can the relevant passage be cleanly isolated?), entity authority (is the source reliably associated with this topic?), and retrieval accessibility (can AI crawlers reach and index the content?). Best practices in <a href="/generative-engine-optimisation/">generative engine optimisation</a> address all three factors in combination. Optimising for just one while neglecting the others produces inconsistent and unstable citation patterns.
+        </p>
+        <p>
+          The brands that consistently appear in AI-generated answers share a common characteristic: their content is structured as a series of discrete, self-contained answers rather than as a continuous argument. They describe their entity identically across every platform. Their technical infrastructure allows every major AI crawler unrestricted access. These are not advanced techniques — they are foundational practices that most brands have not yet implemented because the GEO discipline is still emerging. Early movers who establish these foundations now are significantly harder to displace as competition intensifies.
+        </p>
+        <p>
+          For the strategic framework that sequences these practices into a programme, see the <a href="/geo-strategy/">GEO strategy guide</a>. The following sections go deeper on each practice category.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="content-practices" class="anchor-top">Content Best Practices</h2>
+        <p>
+          <strong>Content written for extraction earns citations; content written for impression earns traffic but goes unquoted.</strong> The five practices below are sequenced by impact. Implementing them in order, rather than selectively, produces the fastest citation gains.
+        </p>
+      </div>
+
+      <ol class="mt-8 space-y-6">
+        {contentPractices.map((p, i) => (
+          <li class="flex gap-5">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border hair font-display text-sm font-bold text-[var(--accent)]">
+              {i + 1}
+            </span>
+            <div>
+              <h3 class="font-display text-lg font-semibold text-white">{p.title}</h3>
+              <p class="mt-1 text-sm leading-relaxed text-ink-300">{p.detail}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      <div class="prose-dark mt-12">
+        <p>
+          For a tactical breakdown of how to structure individual pages for citations, see the <a href="/how-to-do-geo/">how to do GEO</a> guide and the <a href="/geo-framework/">GEO framework</a> reference. For a ready-to-use implementation checklist, the <a href="/geo-checklist/">GEO checklist</a> sequences all content practices into pre-launch and ongoing tasks.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="entity-practices" class="anchor-top">Entity &amp; Structured Data Practices</h2>
+        <p>
+          <strong>Entity authority is the layer of GEO that most brands neglect — and the layer that most directly affects whether AI models cite you reliably.</strong> A well-written page published by an ambiguous or poorly-defined entity earns fewer citations than a moderately-written page published by a clearly-resolved, authoritative entity. The following four practices build the entity foundation that makes all content practices more effective.
+        </p>
+      </div>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        {entityPractices.map(p => (
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">{p.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">{p.detail}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="technical-practices" class="anchor-top">Technical GEO Signals</h2>
+        <p>
+          <strong>Technical GEO signals act as multipliers on content quality — they do not substitute for it, but they determine how much of your content's citation potential is realised.</strong> A page with excellent extraction architecture that is blocked in robots.txt earns zero citations. A page with perfect schema markup that loads in six seconds receives lower crawl priority. The table below maps each technical signal to its implementation requirement and relative citation impact.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Technical Signal</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Implementation Requirement</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Citation Impact</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y hair">
+            {technicalPractices.map(row => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class="px-4 py-3 font-mono text-xs text-[var(--accent)]">{row.signal}</td>
+                <td class="px-4 py-3 text-ink-300">{row.requirement}</td>
+                <td class="px-4 py-3 text-ink-300">{row.impact}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          The most commonly neglected technical signal is robots.txt AI crawler access. Many brands updated their robots.txt to block AI crawlers in 2023 and 2024 as a defensive measure against training data scraping. Those blocks prevent citation earning — the same crawlers that might scrape training data are the crawlers that drive RAG retrieval. Review your robots.txt and explicitly allow GPTBot, PerplexityBot, ClaudeBot, and the other major AI user-agents if citation earning is a priority.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="platform-differences" class="anchor-top">Platform-Specific Behaviour</h2>
+        <p>
+          <strong>Each AI platform retrieves and weights sources differently, which means a single content approach will perform differently across platforms unless it is designed with platform variation in mind.</strong> The table below summarises the retrieval mechanism and the most impactful practice for each of the five major platforms targeted in a complete <a href="/geo-strategy/">GEO strategy</a>.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Platform</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Retrieval Mechanism</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Primary Best Practice</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y hair">
+            {platformBehaviours.map(row => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class="px-4 py-3 font-semibold text-white">{row.platform}</td>
+                <td class="px-4 py-3 text-ink-300">{row.retrieval}</td>
+                <td class="px-4 py-3 text-ink-300">{row.best_practice}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          Perplexity deserves particular attention because it is the most transparent about its sources and the most purely RAG-driven of the five platforms. Content that performs well in Perplexity — short, extractable paragraphs, clear source attribution, regularly updated publication dates — tends to perform across other platforms as well, making it a useful proxy for overall GEO content quality. Monitor Perplexity citation frequency as your primary early indicator of content extraction quality.
+        </p>
+        <p>
+          Google AI Overviews is the most complex because it combines organic ranking signals with entity resolution. Brands with strong traditional SEO foundations often find that GEO best practices accelerate their Overviews visibility because they are building on existing authority signals. For brands with weaker organic authority, entity schema and E-E-A-T signals are the faster path to AI Overviews citation. See our <a href="/geo-services/">GEO services</a> for how we approach platform-differentiated optimisation.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="practices-comparison" class="anchor-top">GEO vs SEO Best Practices Compared</h2>
+        <p>
+          <strong>GEO best practices and SEO best practices share some foundations but diverge significantly on structure, intent signals, and success metrics.</strong> Understanding the differences prevents teams from applying SEO thinking to GEO problems — a common mistake that produces content which ranks well but earns few AI citations.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Dimension</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">SEO Best Practice</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">GEO Best Practice</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y hair">
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-semibold text-white">Content opening</td>
+              <td class="px-4 py-3 text-ink-300">Context-building intro, hooks the reader</td>
+              <td class="px-4 py-3 text-ink-300">Definitional statement answers the query in sentence one</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-semibold text-white">Paragraph length</td>
+              <td class="px-4 py-3 text-ink-300">Variable; longer paragraphs acceptable</td>
+              <td class="px-4 py-3 text-ink-300">2–4 sentences per paragraph, one point each</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-semibold text-white">Section headings</td>
+              <td class="px-4 py-3 text-ink-300">Keyword-rich questions (H2s)</td>
+              <td class="px-4 py-3 text-ink-300">Declarative labels stating the section's claim</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-semibold text-white">Link building</td>
+              <td class="px-4 py-3 text-ink-300">PageRank via backlinks</td>
+              <td class="px-4 py-3 text-ink-300">Citation footprint in authoritative sources AI models retrieve</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-semibold text-white">Primary KPI</td>
+              <td class="px-4 py-3 text-ink-300">Organic sessions, keyword rankings</td>
+              <td class="px-4 py-3 text-ink-300">Citation frequency, brand accuracy, cross-platform reach</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-semibold text-white">Success horizon</td>
+              <td class="px-4 py-3 text-ink-300">3–6 months typical for new content</td>
+              <td class="px-4 py-3 text-ink-300">60–90 days for citation improvements; 6–12 months for entity authority</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          The most important divergence is in the content opening. Decade-long SEO writing convention produced introductory paragraphs designed to set context, demonstrate depth, and reduce bounce rate. These introductions are friction for AI extraction. Eliminating them is the fastest single change you can make to improve citation frequency on existing content. For the full comparison, see <a href="/geo-vs-seo/">GEO vs SEO</a>.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="relative border-t hair mt-12 overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Put These Best Practices to Work</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        We audit your current AI citation performance, identify the content and entity gaps holding you back, and deliver a prioritised remediation plan. The audit is a standalone deliverable — no ongoing commitment required to start.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request your GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const faqBtns = document.querySelectorAll('#faq-accordion button');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+
+    const tocLinks = document.querySelectorAll('#toc-nav a');
+    const headings = Array.from(
+      document.querySelectorAll('h2[id], h3[id]')
+    ) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(link => {
+              link.classList.remove('text-[var(--accent)]');
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.classList.add('text-[var(--accent)]');
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+
+    headings.forEach(h => observer.observe(h));
+  </script>
+
+</Base>

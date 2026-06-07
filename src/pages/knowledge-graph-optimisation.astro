@@ -1,0 +1,731 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Knowledge Graph Optimisation for AI Search | GEOoptimised';
+const description = 'Knowledge graph optimization: ensure AI systems recognise your brand as a verified entity. Learn how to build Knowledge Graph presence and earn consistent LLM citations.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: title,
+  description,
+  url: 'https://geooptimised.com/knowledge-graph-optimisation/',
+  author: {
+    '@type': 'Organization',
+    name: 'GEOoptimised',
+    url: 'https://geooptimised.com/',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://geooptimised.com/icon-512.png',
+    },
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'GEOoptimised',
+    url: 'https://geooptimised.com/',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://geooptimised.com/icon-512.png',
+    },
+  },
+  datePublished: '2026-06-06',
+  dateModified: '2026-06-06',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/knowledge-graph-optimisation/',
+  },
+  image: 'https://geooptimised.com/og-image.png',
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+    { '@type': 'ListItem', position: 3, name: 'Knowledge Graph Optimisation', item: 'https://geooptimised.com/knowledge-graph-optimisation/' },
+  ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is knowledge graph optimization?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Knowledge graph optimization is the process of ensuring your brand, product, or organisation is represented as a verified, well-defined entity within structured knowledge bases — particularly Google\'s Knowledge Graph, Wikidata, and Wikipedia — so that AI systems can identify, classify, and cite it accurately. It differs from traditional SEO in that it targets machine-readable entity data rather than ranking signals.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I get a Google Knowledge Panel for my brand?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A Google Knowledge Panel is awarded automatically when Google\'s systems are confident enough in an entity\'s identity and attributes. The most reliable path is: create a Wikidata entry with accurate claims and cited sources, contribute to or create a Wikipedia article if your brand meets notability guidelines, implement Organisation schema with a comprehensive sameAs array on your website, ensure consistent entity data across authoritative third-party directories, and build editorial mentions in publications that feed Google\'s Knowledge Graph data sources.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Why does knowledge graph presence matter for LLM citations?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Large language models use knowledge graph data in two ways: directly, when knowledge graph APIs are queried during inference to resolve entity attributes; and indirectly, because knowledge graph sources such as Wikipedia and Wikidata are heavily represented in LLM training corpora. A brand with a strong knowledge graph presence is more likely to be represented accurately in model weights and more likely to be resolved correctly when cited.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is a sameAs property and why does it matter?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The sameAs property in Schema.org Organisation markup links your website\'s entity representation to its equivalents in external knowledge bases — Wikidata, Wikipedia, LinkedIn, Crunchbase, Companies House, and sector-specific directories. By cross-referencing these identifiers, you reduce entity ambiguity and signal to AI systems that all of these records describe the same real-world organisation. A complete sameAs array is one of the highest-impact, lowest-effort improvements available for knowledge graph optimisation.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does Wikidata help with AI visibility?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Wikidata is an openly licensed, structured knowledge base that feeds data into Wikipedia, Google\'s Knowledge Graph, and multiple AI training pipelines. A Wikidata entry with accurate, sourced claims provides a persistent machine-readable identifier (Q-number) that AI systems can use to resolve your entity unambiguously. It is one of the most direct interventions available for improving both parametric representation in LLMs and entity resolution in RAG-based AI search systems.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does knowledge graph optimisation take to show results?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Schema markup and sameAs updates can be deployed within days and may influence RAG-based retrieval systems within 4 to 8 weeks. Wikidata entry creation and Wikipedia contributions can take 2 to 4 weeks to be processed and propagated. Knowledge Panel appearance, where applicable, typically follows 1 to 3 months after the underlying entity signals are in place. Improvements to parametric LLM representations require model retraining or fine-tuning cycles and may take 6 to 12 months to fully materialise across all major models.',
+      },
+    },
+  ],
+};
+
+const schema = [articleSchema, breadcrumbSchema, faqSchema];
+
+const tocItems = [
+  { id: 'what-is-knowledge-graph-optimisation', label: 'What Knowledge Graph Optimisation Is' },
+  { id: 'how-ai-uses-knowledge-graphs', label: 'How AI Uses Knowledge Graphs' },
+  { id: 'knowledge-graph-signals', label: 'The Key Entity Signals' },
+  { id: 'wikidata-wikipedia', label: 'Wikidata and Wikipedia' },
+  { id: 'schema-markup', label: 'Schema Markup and sameAs' },
+  { id: 'signal-comparison', label: 'Signal Comparison Table' },
+  { id: 'common-errors', label: 'Common Errors to Fix' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const faqs = [
+  {
+    q: 'What is knowledge graph optimization?',
+    a: "Knowledge graph optimization is the process of ensuring your brand, product, or organisation is represented as a verified, well-defined entity within structured knowledge bases — particularly Google's Knowledge Graph, Wikidata, and Wikipedia — so that AI systems can identify, classify, and cite it accurately. It differs from traditional SEO in that it targets machine-readable entity data rather than ranking signals.",
+  },
+  {
+    q: 'How do I get a Google Knowledge Panel for my brand?',
+    a: "A Google Knowledge Panel is awarded automatically when Google's systems are confident enough in an entity's identity and attributes. The most reliable path is: create a Wikidata entry with accurate claims and cited sources, contribute to or create a Wikipedia article if your brand meets notability guidelines, implement Organisation schema with a comprehensive sameAs array on your website, ensure consistent entity data across authoritative third-party directories, and build editorial mentions in publications that feed Google's Knowledge Graph data sources.",
+  },
+  {
+    q: 'Why does knowledge graph presence matter for LLM citations?',
+    a: "Large language models use knowledge graph data in two ways: directly, when knowledge graph APIs are queried during inference to resolve entity attributes; and indirectly, because knowledge graph sources such as Wikipedia and Wikidata are heavily represented in LLM training corpora. A brand with a strong knowledge graph presence is more likely to be represented accurately in model weights and more likely to be resolved correctly when cited.",
+  },
+  {
+    q: 'What is a sameAs property and why does it matter?',
+    a: "The sameAs property in Schema.org Organisation markup links your website's entity representation to its equivalents in external knowledge bases — Wikidata, Wikipedia, LinkedIn, Crunchbase, Companies House, and sector-specific directories. By cross-referencing these identifiers, you reduce entity ambiguity and signal to AI systems that all of these records describe the same real-world organisation. A complete sameAs array is one of the highest-impact, lowest-effort improvements available for knowledge graph optimisation.",
+  },
+  {
+    q: 'Does Wikidata help with AI visibility?',
+    a: "Yes. Wikidata is an openly licensed, structured knowledge base that feeds data into Wikipedia, Google's Knowledge Graph, and multiple AI training pipelines. A Wikidata entry with accurate, sourced claims provides a persistent machine-readable identifier (Q-number) that AI systems can use to resolve your entity unambiguously. It is one of the most direct interventions available for improving both parametric representation in LLMs and entity resolution in RAG-based AI search systems.",
+  },
+  {
+    q: 'How long does knowledge graph optimisation take to show results?',
+    a: "Schema markup and sameAs updates can be deployed within days and may influence RAG-based retrieval systems within 4 to 8 weeks. Wikidata entry creation and Wikipedia contributions can take 2 to 4 weeks to be processed and propagated. Knowledge Panel appearance, where applicable, typically follows 1 to 3 months after the underlying entity signals are in place. Improvements to parametric LLM representations require model retraining or fine-tuning cycles and may take 6 to 12 months to fully materialise across all major models.",
+  },
+];
+
+const related = [
+  {
+    tag: 'Parent Node',
+    title: 'AI Brand Visibility: How to Get Cited by LLMs',
+    excerpt: 'The five pillars of AI brand visibility — entity authority, content citability, structured data, source credibility, and cross-platform presence.',
+    href: '/ai-brand-visibility/',
+  },
+  {
+    tag: 'Deep Dive',
+    title: 'Entity Optimisation: Make AI Models Understand Your Brand',
+    excerpt: 'How to define and reinforce your brand as a distinct entity so AI systems classify and cite it correctly across every platform.',
+    href: '/entity-optimisation/',
+  },
+  {
+    tag: 'Technical',
+    title: 'Schema Markup for AI Search',
+    excerpt: 'Structured data patterns — Organisation, Article, FAQPage, HowTo — that improve entity clarity and AI retrieval performance.',
+    href: '/schema-markup-ai/',
+  },
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/knowledge-graph-optimisation/" ogType="article">
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">Generative Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/ai-brand-visibility/" class="transition hover:text-[var(--accent)]">AI Brand Visibility</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">Knowledge Graph Optimisation</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Entity Strategy</span>
+        <span class="font-mono text-xs text-ink-400">6 Jun 2026</span>
+        <span class="font-mono text-xs text-ink-400">14 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        Knowledge Graph Optimisation: Get Recognised by AI as an Entity
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">Knowledge graph optimisation</strong> is the practice of ensuring your brand is represented as a verified,
+        well-defined entity within structured knowledge bases — so that AI systems can identify, classify, and accurately cite your organisation
+        across every major generative platform. It is the infrastructure layer beneath all other
+        <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility</a> work.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Knowledge graphs are the structured databases AI systems query to resolve entity identity — brands not in them are harder to cite accurately.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Wikidata, Wikipedia, and Google's Knowledge Graph are the three highest-priority targets for entity presence — each feeds different AI systems.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>A complete sameAs array in your Organisation schema cross-references your entity across knowledge bases and is one of the fastest improvements available.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Inconsistent entity data across directories and social profiles is the leading cause of brand misrepresentation in AI-generated answers.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Knowledge graph improvements take 1 to 6 months to propagate — start early and treat them as infrastructure, not quick wins.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1 -->
+      <section id="what-is-knowledge-graph-optimisation" class="anchor-top prose-dark mb-16">
+        <h2>What Knowledge Graph Optimisation Is</h2>
+
+        <p>
+          <strong>Knowledge graph optimisation is the systematic process of building, verifying, and reinforcing your brand's entity record within the structured knowledge bases that AI systems use to understand the world.</strong>
+          Where traditional SEO targets ranking algorithms, knowledge graph optimisation targets entity resolution — the process by which an AI system
+          maps a name or concept to a specific, well-understood real-world object.
+        </p>
+
+        <p>
+          When a user asks an AI assistant "who are the best GEO agencies in the UK?", the AI does not simply search for documents containing those words.
+          It attempts to resolve the query to a set of known entities: organisations classified as GEO agencies, operating in the UK, with sufficient
+          evidence of quality. The brands that are represented in the underlying knowledge graphs — with correct classifications, accurate attributes,
+          and cross-referenced identifiers — are the brands that get named.
+        </p>
+
+        <p>
+          This is the knowledge graph layer of <a href="/generative-engine-optimisation/">generative engine optimisation</a>. It operates below the
+          content layer and the technical layer. It is foundational: even the best-structured, most citable content will produce inconsistent
+          AI citations if the underlying entity record is weak, ambiguous, or absent.
+        </p>
+
+        <h3>Knowledge Graphs vs. Traditional SEO Signals</h3>
+
+        <p>
+          Traditional SEO signals — backlinks, page authority, keyword density — tell search engines which pages are authoritative for a query.
+          Knowledge graph signals tell AI systems which entities a page or brand represents, what category they belong to, and how they relate
+          to other entities. These are different layers of the information architecture, and they require different strategies to optimise.
+        </p>
+
+        <p>
+          A brand can hold the top organic position for "cloud accounting software" and still be absent from ChatGPT's response to
+          "what are the best cloud accounting tools?" — because its entity record is incomplete, inconsistent, or absent from the knowledge bases
+          that inform the AI's understanding of the category. Knowledge graph optimisation closes that gap.
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="how-ai-uses-knowledge-graphs" class="anchor-top prose-dark mb-16">
+        <h2>How AI Systems Use Knowledge Graphs</h2>
+
+        <p>
+          <strong>AI systems interact with knowledge graphs at two distinct points in the generation process: during training and during inference.</strong>
+          Understanding both touchpoints is essential for prioritising knowledge graph optimisation efforts correctly.
+        </p>
+
+        <h3>Training-Time Representation</h3>
+
+        <p>
+          During the training of large language models, the training corpus includes extensive content from knowledge graph sources: Wikipedia articles,
+          Wikidata dumps, DBpedia extracts, and structured data from across the web. Brands mentioned and described consistently in these sources
+          are encoded into the model's weights — becoming part of what the model "knows" about the world without needing to retrieve external documents.
+        </p>
+
+        <p>
+          This parametric representation matters for every AI system, including those that use retrieval-augmented generation, because the base
+          model's understanding of an entity shapes how it interprets retrieved documents. A brand with strong parametric representation is described
+          accurately even when the retrieved documents are sparse. A brand with weak parametric representation may be described incorrectly
+          even when retrieved documents are present.
+        </p>
+
+        <h3>Inference-Time Entity Resolution</h3>
+
+        <p>
+          Some AI systems query knowledge graph APIs directly during inference. Google AI Overviews, for instance, integrates with Google's
+          Knowledge Graph to resolve entity attributes when generating responses. When a user asks about a brand, the system may fetch the
+          entity's Knowledge Graph entry to populate attributes — name, description, website, category — rather than relying solely on
+          training data or retrieved documents.
+        </p>
+
+        <p>
+          For these systems, a Knowledge Panel entry — Google's front-end representation of a Knowledge Graph entity — is a direct AI visibility
+          signal. Brands with Knowledge Panels have a structured, verified entity record that AI Overviews can query. Brands without them
+          depend entirely on the model's parametric knowledge and retrieved web content.
+        </p>
+
+        <h3>RAG and Entity Disambiguation</h3>
+
+        <p>
+          In retrieval-augmented generation pipelines, entity disambiguation is a pre-retrieval step: the system attempts to identify which
+          real-world entity the query is about before fetching candidate documents. Knowledge graph signals help the system perform this
+          disambiguation correctly. A brand with a clear entity record — consistent name, unique identifiers, unambiguous category classification —
+          is disambiguated confidently. A brand whose name is shared with other entities, or whose category classification is inconsistent
+          across sources, introduces ambiguity that can result in the wrong content being retrieved and the wrong brand being cited.
+        </p>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="knowledge-graph-signals" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>The Key Entity Signals</h2>
+          <p>
+            <strong>Entity authority is built through a combination of structured data on your own site, third-party knowledge base presence, and consistent cross-platform signals.</strong>
+            Each signal layer reinforces the others. The following are the highest-impact components of a knowledge graph optimisation programme.
+          </p>
+        </div>
+
+        <div class="mt-8 space-y-6">
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Organisation Schema with Complete Attributes</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Your website's <code>Organization</code> JSON-LD markup is the primary structured signal about your entity on your own domain.
+              A complete Organisation schema includes: legal name, trading name, founding date, country of incorporation, official website,
+              industry classification using a recognised taxonomy, description, logo, contact details, and a comprehensive <code>sameAs</code> array.
+              Incomplete or minimal Organisation markup is one of the most commonly missed opportunities in knowledge graph optimisation.
+              See our <a href="/schema-markup-ai/" class="text-[var(--accent)] border-b border-[var(--accent)]/35 hover:border-[var(--accent)] transition">schema markup for AI search</a> guide for full implementation patterns.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Google Business Profile</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Google Business Profile is a direct input into Google's Knowledge Graph for local and regional organisations.
+              A verified, complete Business Profile — with accurate primary category, consistent NAP (name, address, phone),
+              detailed description, and active review management — signals to Google's entity systems that the organisation is
+              real, active, and correctly classified. For brands targeting Google AI Overviews, Business Profile completeness
+              correlates directly with Knowledge Panel presence.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Industry Directory and Database Presence</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Authoritative industry directories — Crunchbase, Companies House, sector-specific registries — provide structured
+              entity data that both feeds AI training pipelines and serves as reference material for knowledge graph resolution.
+              Critically, the entity attributes in these directories must be consistent with each other and with your website's
+              schema markup. Any inconsistency — different trading names, conflicting founding dates, inconsistent category
+              classifications — introduces ambiguity that AI systems resolve conservatively, often by omitting the brand.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Editorial Mentions in Authoritative Publications</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              References to your brand in established industry publications, research papers, and news sources serve as
+              third-party corroboration of your entity's existence, category, and attributes. AI training pipelines weight
+              authoritative editorial sources heavily. A brand mentioned in ten high-authority publications — with consistent
+              name, description, and category — has significantly stronger parametric representation than a brand referenced
+              only in its own content.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="wikidata-wikipedia" class="anchor-top prose-dark mb-16">
+        <h2>Wikidata and Wikipedia: The Highest-Value Knowledge Graph Targets</h2>
+
+        <p>
+          <strong>Wikidata and Wikipedia are disproportionately represented in AI training corpora, making them the highest-priority targets for any knowledge graph optimisation programme.</strong>
+          Both are openly licensed, machine-readable, and trusted sources that feed dozens of downstream AI systems.
+        </p>
+
+        <h3>Creating a Wikidata Entry</h3>
+
+        <p>
+          Wikidata is an open knowledge base maintained by the Wikimedia Foundation. Any organisation that meets Wikidata's criteria for
+          notability — typically demonstrated by verifiable references in reliable sources — can have an entry. A Wikidata item provides
+          a persistent Q-number identifier that AI systems can use to resolve your entity unambiguously across all languages and contexts.
+        </p>
+
+        <p>
+          A complete Wikidata entry for an organisation should include: official name (P1448), legal form (P1454), country (P17),
+          official website (P856), founding date (P571), industry (P452), LinkedIn profile URL (P6linkedin), and references
+          to external sources for each substantive claim. Every claim in Wikidata should be backed by a reference to a reliable source —
+          unsourced claims are lower confidence and may be reviewed or removed.
+        </p>
+
+        <p>
+          Once your Wikidata entry exists, reference its Q-number URL in your website's <code>sameAs</code> array and in your
+          Wikipedia article's infobox (if applicable). This cross-referencing strengthens the entity resolution chain and is
+          one of the clearest signals available to AI systems that these records describe the same organisation.
+        </p>
+
+        <h3>Wikipedia and AI Training Data</h3>
+
+        <p>
+          Wikipedia is among the most heavily weighted sources in LLM training datasets. Models trained on Common Crawl, The Pile,
+          and similar corpora absorb Wikipedia articles in their entirety, and the entity descriptions, category memberships,
+          and infobox attributes in those articles directly inform the model's parametric knowledge about organisations.
+        </p>
+
+        <p>
+          Not every brand meets Wikipedia's notability guidelines, which require significant coverage in reliable, independent,
+          secondary sources. For brands that do qualify, a well-maintained Wikipedia article — with accurate infobox data,
+          reliable references, and correct category assignments — provides the single most impactful knowledge graph signal available.
+        </p>
+
+        <p>
+          For brands that do not qualify for a standalone article, contributing to relevant category pages, industry overview articles,
+          and "List of" pages can associate your brand with the correct topics and categories within Wikipedia's entity structure —
+          providing partial knowledge graph coverage without requiring standalone article eligibility.
+        </p>
+
+        <h3>DBpedia and Linked Open Data</h3>
+
+        <p>
+          DBpedia is an automated extraction of structured data from Wikipedia infoboxes, published as Linked Open Data. Because
+          DBpedia is generated from Wikipedia, maintaining accurate Wikipedia infobox data automatically improves DBpedia coverage.
+          DBpedia feeds several AI training pipelines and knowledge graph systems that may not access Wikipedia directly, making
+          it a valuable secondary signal that requires no additional action beyond maintaining Wikipedia accuracy.
+        </p>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="schema-markup" class="anchor-top prose-dark mb-16">
+        <h2>Schema Markup and sameAs: Connecting Your Entity Across Platforms</h2>
+
+        <p>
+          <strong>The <code>sameAs</code> property is the most direct technical mechanism for connecting your website's entity representation to external knowledge bases.</strong>
+          It is a single JSON-LD property that can materially improve AI entity resolution and is deployable in a day.
+        </p>
+
+        <p>
+          A <code>sameAs</code> array in your Organisation schema should reference every authoritative external record that describes your organisation:
+          Wikidata Q-number URL, Wikipedia article URL, LinkedIn company page, Crunchbase profile, Companies House record, Google Business Profile,
+          Twitter/X profile, Facebook page, and any sector-specific registry entries. Each reference reduces entity ambiguity by providing
+          an additional data point that corroborates your brand's identity.
+        </p>
+
+        <p>
+          Beyond <code>sameAs</code>, consider deploying these additional Organisation schema properties for maximum knowledge graph signal strength.
+          For full implementation guidance, see our <a href="/schema-markup-ai/">schema markup for AI search</a> reference, and for
+          broader entity strategy see our <a href="/geo-services/#entity-optimisation">entity optimisation service</a>.
+        </p>
+      </section>
+
+      <!-- Section 6: Signal Comparison Table -->
+      <section id="signal-comparison" class="anchor-top mb-16">
+        <div class="prose-dark mb-6">
+          <h2>Knowledge Graph Signal Comparison</h2>
+          <p>
+            <strong>Different knowledge graph signals vary significantly in their impact on AI visibility, implementation effort, and time to propagate.</strong>
+            This table provides a practical prioritisation framework for allocating knowledge graph optimisation effort.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-white/10">
+                <th scope="col" class="py-3 pr-4 text-left font-semibold text-ink-50">Signal</th>
+                <th scope="col" class="py-3 pr-4 text-left font-semibold text-ink-50">AI Visibility Impact</th>
+                <th scope="col" class="py-3 pr-4 text-left font-semibold text-ink-50">Implementation Effort</th>
+                <th scope="col" class="py-3 pr-4 text-left font-semibold text-ink-50">Propagation Time</th>
+                <th scope="col" class="py-3 text-left font-semibold text-ink-50">Priority</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">Organisation schema + sameAs</td>
+                <td class="py-3 pr-4 text-ink-300">High — direct entity resolution signal</td>
+                <td class="py-3 pr-4 text-ink-300">Low — 1–2 hours</td>
+                <td class="py-3 pr-4 text-ink-300">4–8 weeks</td>
+                <td class="py-3 text-green-400 font-semibold">Critical</td>
+              </tr>
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">Wikidata entry</td>
+                <td class="py-3 pr-4 text-ink-300">High — Q-number provides unambiguous ID</td>
+                <td class="py-3 pr-4 text-ink-300">Medium — 4–8 hours</td>
+                <td class="py-3 pr-4 text-ink-300">2–4 weeks</td>
+                <td class="py-3 text-green-400 font-semibold">Critical</td>
+              </tr>
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">Google Business Profile</td>
+                <td class="py-3 pr-4 text-ink-300">High for local/Google AI Overviews</td>
+                <td class="py-3 pr-4 text-ink-300">Low — 1–3 hours</td>
+                <td class="py-3 pr-4 text-ink-300">2–6 weeks</td>
+                <td class="py-3 text-green-400 font-semibold">High</td>
+              </tr>
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">Wikipedia article</td>
+                <td class="py-3 pr-4 text-ink-300">Very high — feeds LLM training data directly</td>
+                <td class="py-3 pr-4 text-ink-300">High — notability required</td>
+                <td class="py-3 pr-4 text-ink-300">1–3 months</td>
+                <td class="py-3 text-yellow-400 font-semibold">High (if eligible)</td>
+              </tr>
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">Crunchbase profile</td>
+                <td class="py-3 pr-4 text-ink-300">Medium — feeds VC/tech AI pipelines</td>
+                <td class="py-3 pr-4 text-ink-300">Low — 1–2 hours</td>
+                <td class="py-3 pr-4 text-ink-300">4–8 weeks</td>
+                <td class="py-3 text-yellow-400 font-semibold">Medium</td>
+              </tr>
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">Industry directory listings</td>
+                <td class="py-3 pr-4 text-ink-300">Medium — corroborates entity attributes</td>
+                <td class="py-3 pr-4 text-ink-300">Low to medium</td>
+                <td class="py-3 pr-4 text-ink-300">4–12 weeks</td>
+                <td class="py-3 text-yellow-400 font-semibold">Medium</td>
+              </tr>
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">Editorial press mentions</td>
+                <td class="py-3 pr-4 text-ink-300">High for parametric representation</td>
+                <td class="py-3 pr-4 text-ink-300">High — requires PR strategy</td>
+                <td class="py-3 pr-4 text-ink-300">6–18 months</td>
+                <td class="py-3 text-blue-400 font-semibold">Long-term</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 7: Common Errors -->
+      <section id="common-errors" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Common Knowledge Graph Errors That Suppress AI Citations</h2>
+          <p>
+            <strong>The majority of brands have avoidable errors in their knowledge graph presence that directly suppress AI citations.</strong>
+            These are the most frequently encountered issues in GEO audits, listed in order of frequency.
+          </p>
+        </div>
+
+        <div class="mt-8 space-y-6">
+
+          <div class="card p-6 border-l-2" style="border-left-color: #ef4444;">
+            <h3 class="font-display text-base font-semibold text-red-400">Missing or Minimal Organisation Schema</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Many sites have no Organisation schema at all, or have only a minimal implementation with name and URL.
+              Without a structured entity declaration on your own domain, AI systems have no machine-readable source of truth
+              for your brand's attributes. Deploy a complete Organisation schema in the <code>&lt;head&gt;</code> of your
+              homepage with all available attributes and a comprehensive <code>sameAs</code> array. This single change often
+              produces the fastest improvement in AI entity resolution.
+            </p>
+          </div>
+
+          <div class="card p-6 border-l-2" style="border-left-color: #f97316;">
+            <h3 class="font-display text-base font-semibold text-orange-400">Inconsistent Entity Data Across Sources</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Conflicting entity data across directories, social profiles, and structured markup is the most common
+              knowledge graph problem and one of the hardest to fix at scale. When AI systems encounter a brand described
+              as "GEOoptimised Ltd" on Companies House, "GEO Optimised" on LinkedIn, and "Geooptimised" on Crunchbase,
+              they face a disambiguation problem. The conservative resolution is to reduce confidence in citations or
+              omit the brand entirely. Conduct a full entity audit before any other knowledge graph work and standardise
+              every attribute across every source.
+            </p>
+          </div>
+
+          <div class="card p-6 border-l-2" style="border-left-color: #eab308;">
+            <h3 class="font-display text-base font-semibold text-yellow-400">No Wikidata Entry</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Wikidata is openly editable and does not require the level of notability that Wikipedia does.
+              Most established businesses qualify for a Wikidata entry on the basis of Companies House registration
+              and verifiable website presence alone. Yet the majority of SMEs and even many enterprise brands
+              have no Wikidata entry. Creating one — with sourced claims and a Q-number — provides an unambiguous
+              entity identifier that dramatically reduces the risk of AI misrepresentation.
+            </p>
+          </div>
+
+          <div class="card p-6 border-l-2" style="border-left-color: #6366f1;">
+            <h3 class="font-display text-base font-semibold text-indigo-400">sameAs Array Points to Dead or Incorrect URLs</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              A common technical error is deploying a <code>sameAs</code> array that includes outdated URLs —
+              old social profile addresses, redirected directory listings, or incorrect Wikidata Q-number URLs.
+              AI systems that follow these references and encounter 404s or mismatched entities may reduce their
+              confidence in the entity record. Audit every URL in your <code>sameAs</code> array quarterly
+              and update any that have changed.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="prose-dark mt-8">
+          <p>
+            A structured knowledge graph audit is the recommended starting point for any entity optimisation programme.
+            Our <a href="/geo-services/#entity-optimisation">entity and knowledge graph optimisation</a> service covers all of these
+            areas and benchmarks your entity authority against competitors and category leaders. Pair this with our
+            <a href="/llms-txt/">llms.txt implementation guide</a> to ensure AI crawlers can access your most authoritative content.
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Audit Your Knowledge Graph Presence</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Most brands have significant gaps in their entity records across Wikidata, Google's Knowledge Graph, and industry directories.
+        Our knowledge graph audit maps every inconsistency and missing signal, then delivers a prioritised remediation plan
+        that strengthens your AI citation foundation.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request your knowledge graph audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>
