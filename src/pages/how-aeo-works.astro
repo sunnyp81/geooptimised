@@ -1,0 +1,591 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'How Answer Engine Optimisation Works | GEOoptimised';
+const description = 'How does answer engine optimization work? Step-by-step breakdown of the query → retrieval → synthesis → citation pipeline, with tactics to win each stage.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'How Answer Engine Optimisation Works',
+    description: 'How does answer engine optimization work? Step-by-step breakdown of the query → retrieval → synthesis → citation pipeline, with tactics to win each stage.',
+    url: 'https://geooptimised.com/how-aeo-works/',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://geooptimised.com/how-aeo-works/'
+    },
+    author: {
+      '@id': 'https://geooptimised.com/#organization'
+    },
+    publisher: {
+      '@id': 'https://geooptimised.com/#organization'
+    },
+    datePublished: '2026-06-07',
+    dateModified: '2026-06-07',
+    image: 'https://geooptimised.com/og-image.png',
+    inLanguage: 'en-GB'
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How does answer engine optimization work?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Answer engine optimization works by structuring content to match each stage of the AI answer pipeline: query classification, source retrieval, answer synthesis, and citation selection. At each stage, the engine evaluates content for relevance, authority, and extractability. Optimising for AEO means making your content the clearest, most authoritative, and most structurally accessible option at every stage of that pipeline.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What is retrieval-augmented generation and why does it matter for AEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Retrieval-augmented generation (RAG) is the mechanism by which AI systems like Perplexity, ChatGPT with browsing, and Google AI Overviews pull live web content to supplement their language model responses. In a RAG system, the engine retrieves a set of candidate documents, extracts relevant passages, and synthesises them into a generated answer with citations. AEO matters for RAG because the content that gets retrieved and extracted determines which sources get cited.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What content formats do answer engines prefer?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Answer engines prefer content that is structurally matched to the query type: paragraph snippets for definitional queries, numbered lists for process queries, and tables for comparison queries. In all cases, the answer should appear immediately after the relevant heading, in 40–100 words, without preamble. Question-based headings aligned to natural-language queries and FAQ schema markup are consistently favoured across all major answer engine surfaces.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Does schema markup directly influence answer engine selection?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Schema markup is a strong indirect signal for answer engine selection. FAQPage schema explicitly maps question-answer pairs for machine consumption. Article schema establishes the content as an authored, dated publication from a named entity. BreadcrumbList schema signals topical hierarchy. While schema alone does not guarantee selection, it reduces ambiguity about content type and source authority — two factors that consistently influence which content is extracted and cited.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How is Google AI Overviews different from featured snippets?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Featured snippets extract a single passage from a single source and display it verbatim in position zero. Google AI Overviews synthesise information from multiple sources into a generated response, typically citing three to five contributing pages. Featured snippets reward the single best answer to a specific query. AI Overviews reward topical authority and citation-readiness across a cluster of related queries — making breadth of well-structured content more valuable.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How long does it take for AEO changes to show results?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Featured snippet changes typically show results within two to six weeks as Googlebot recrawls and re-evaluates the updated content. AI Overviews and conversational AI citation changes can take longer — four to twelve weeks — because they depend on both crawl frequency and the model\'s retrieval index being refreshed. Entity-level changes, such as improving structured data and third-party mentions, take three to six months to fully propagate across AI platforms.'
+        }
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Answer Engine Optimisation', item: 'https://geooptimised.com/answer-engine-optimisation/' },
+      { '@type': 'ListItem', position: 3, name: 'How AEO Works', item: 'https://geooptimised.com/how-aeo-works/' }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'the-pipeline', label: 'The AEO Pipeline' },
+  { id: 'query-classification', label: 'Stage 1: Query Classification' },
+  { id: 'source-retrieval', label: 'Stage 2: Source Retrieval' },
+  { id: 'answer-synthesis', label: 'Stage 3: Answer Synthesis' },
+  { id: 'citation-selection', label: 'Stage 4: Citation Selection' },
+  { id: 'platform-mechanics', label: 'Platform Mechanics' },
+  { id: 'optimise-for-each-stage', label: 'Optimising Each Stage' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' }
+];
+
+const faqs = [
+  {
+    q: 'How does answer engine optimization work?',
+    a: 'Answer engine optimization works by structuring content to match each stage of the AI answer pipeline: query classification, source retrieval, answer synthesis, and citation selection. At each stage, the engine evaluates content for relevance, authority, and extractability. Optimising for AEO means making your content the clearest, most authoritative, and most structurally accessible option at every stage of that pipeline.'
+  },
+  {
+    q: 'What is retrieval-augmented generation and why does it matter for AEO?',
+    a: 'Retrieval-augmented generation (RAG) is the mechanism by which AI systems like Perplexity, ChatGPT with browsing, and Google AI Overviews pull live web content to supplement their language model responses. In a RAG system, the engine retrieves a set of candidate documents, extracts relevant passages, and synthesises them into a generated answer with citations. AEO matters for RAG because the content that gets retrieved and extracted determines which sources get cited.'
+  },
+  {
+    q: 'What content formats do answer engines prefer?',
+    a: 'Answer engines prefer content that is structurally matched to the query type: paragraph snippets for definitional queries, numbered lists for process queries, and tables for comparison queries. In all cases, the answer should appear immediately after the relevant heading, in 40–100 words, without preamble. Question-based headings aligned to natural-language queries and FAQ schema markup are consistently favoured across all major answer engine surfaces.'
+  },
+  {
+    q: 'Does schema markup directly influence answer engine selection?',
+    a: 'Schema markup is a strong indirect signal for answer engine selection. FAQPage schema explicitly maps question-answer pairs for machine consumption. Article schema establishes the content as an authored, dated publication from a named entity. BreadcrumbList schema signals topical hierarchy. While schema alone does not guarantee selection, it reduces ambiguity about content type and source authority — two factors that consistently influence which content is extracted and cited.'
+  },
+  {
+    q: 'How is Google AI Overviews different from featured snippets?',
+    a: 'Featured snippets extract a single passage from a single source and display it verbatim in position zero. Google AI Overviews synthesise information from multiple sources into a generated response, typically citing three to five contributing pages. Featured snippets reward the single best answer to a specific query. AI Overviews reward topical authority and citation-readiness across a cluster of related queries.'
+  },
+  {
+    q: 'How long does it take for AEO changes to show results?',
+    a: 'Featured snippet changes typically show results within two to six weeks as Googlebot recrawls and re-evaluates the updated content. AI Overviews and conversational AI citation changes can take longer — four to twelve weeks — because they depend on both crawl frequency and the model\'s retrieval index being refreshed. Entity-level changes take three to six months to fully propagate across AI platforms.'
+  }
+];
+
+const related = [
+  {
+    tag: 'NODE',
+    title: 'Answer Engine Optimisation: Complete Guide',
+    excerpt: 'Everything you need to know about AEO — from definition through to implementation.',
+    href: '/answer-engine-optimisation/'
+  },
+  {
+    tag: 'Guide',
+    title: 'AEO Best Practices',
+    excerpt: 'Grouped, actionable best practices for earning answer engine citations at scale.',
+    href: '/aeo-best-practices/'
+  },
+  {
+    tag: 'Guide',
+    title: 'What Is AEO?',
+    excerpt: 'A concise primer on answer engine optimisation and why it matters for modern search.',
+    href: '/what-is-aeo/'
+  },
+  {
+    tag: 'Guide',
+    title: 'AEO vs SEO',
+    excerpt: 'How answer engine optimisation differs from traditional SEO — and how the two work together.',
+    href: '/aeo-vs-seo/'
+  }
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/how-aeo-works/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/answer-engine-optimisation/" class="transition hover:text-[var(--accent)]">Answer Engine Optimisation</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">How AEO Works</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Deep Dive</span>
+        <span class="font-mono text-xs text-ink-400">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-400">11 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        How Answer Engine Optimisation Works
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">Answer engines do not rank pages — they run a four-stage pipeline that classifies the query, retrieves candidate sources, synthesises an answer, and selects citations.</strong> Understanding every stage of that pipeline is the prerequisite for optimising it. This guide maps each stage and explains precisely what content, structural, and entity signals determine whether your brand is selected as the answer.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column layout: TOC + article -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" id="toc-nav" aria-label="Table of contents">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Answer engines use a four-stage pipeline: query classification, source retrieval, answer synthesis, and citation selection.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Each stage applies different selection criteria — AEO requires optimising for all four, not just content quality.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Retrieval-augmented generation (RAG) is the dominant mechanism for live AI search; extractable content structure is its primary selection signal.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Platform mechanics differ between Google AI Overviews, Perplexity, ChatGPT, Copilot, and voice assistants — each has a distinct retrieval model.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Entity authority — how clearly an AI model can resolve your brand as a distinct, trustworthy source — is the most durable citation signal.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section: The Pipeline -->
+      <div class="prose-dark">
+        <h2 id="the-pipeline" class="anchor-top">The AEO Pipeline</h2>
+        <p>
+          <strong>Answer engine optimisation works by aligning content with a sequential machine pipeline — not by improving a single ranking signal.</strong> When a user submits a query to Google AI Overviews, Perplexity, or ChatGPT, the system does not consult a ranked list of pages. It executes a structured process: classify the intent, retrieve relevant documents, synthesise a response, and decide which sources to credit. Your content either passes or fails at each stage independently.
+        </p>
+        <p>
+          This pipeline model is the foundational insight that distinguishes <a href="/answer-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">answer engine optimisation</a> from traditional SEO. SEO optimises for a single ranking signal — or a weighted combination of hundreds of signals — that produces a position on a results page. AEO optimises for sequential eligibility across four distinct stages, each with its own criteria. A page that clears three stages but fails the fourth earns no citation.
+        </p>
+        <p>
+          The four stages apply across every major answer engine surface, from Google's featured snippets and AI Overviews through to Perplexity, ChatGPT with browsing, Microsoft Copilot, and voice assistants. The specific implementation varies by platform, but the underlying pipeline logic is consistent. Understanding it in full is the basis of every <a href="/aeo-best-practices/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO best practice</a>.
+        </p>
+      </div>
+
+      <!-- Pipeline Stages Table -->
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Stage</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">What Happens</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">AEO Selection Criterion</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y hair">
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-semibold text-white">1. Query Classification</td>
+              <td class="px-4 py-3 text-ink-300">Engine interprets intent and determines answer format</td>
+              <td class="px-4 py-3 text-ink-300">Content headings and topic signals must match the classified intent</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-semibold text-white">2. Source Retrieval</td>
+              <td class="px-4 py-3 text-ink-300">Engine fetches candidate documents from its index or the live web</td>
+              <td class="px-4 py-3 text-ink-300">Page must be indexed, crawlable, and topically relevant</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-semibold text-white">3. Answer Synthesis</td>
+              <td class="px-4 py-3 text-ink-300">Engine extracts passages and generates a coherent response</td>
+              <td class="px-4 py-3 text-ink-300">Content must be extractable: short paragraphs, direct answers, clean structure</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-semibold text-white">4. Citation Selection</td>
+              <td class="px-4 py-3 text-ink-300">Engine assigns source credit to contributing passages</td>
+              <td class="px-4 py-3 text-ink-300">Source authority, entity clarity, and schema signals determine selection</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Stage 1 -->
+      <div class="prose-dark mt-16">
+        <h2 id="query-classification" class="anchor-top">Stage 1: Query Classification</h2>
+        <p>
+          <strong>Before retrieving a single document, the answer engine classifies the query to determine what type of answer is needed.</strong> This classification step determines everything that follows: the format of the answer (paragraph, list, or table), the type of sources that will be retrieved, and the confidence threshold required for citation selection.
+        </p>
+        <p>
+          Answer engines classify queries into broad categories: definitional ("what is X"), procedural ("how to do X"), comparative ("X vs Y"), local ("best X near me"), and factual ("when did X happen"). Each category triggers a different answer format. A definitional query triggers a paragraph snippet. A procedural query triggers an ordered list. A comparative query triggers a table or structured comparison. Understanding this classification is the first step in AEO content planning.
+        </p>
+        <p>
+          The practical implication for content creators is that your page structure should be deliberately matched to the query type you are targeting. A page that uses a table to answer "what is AEO" will underperform against a page that uses a clear definitional paragraph. A page that uses prose paragraphs to answer "how to implement FAQ schema" will underperform against a page using a numbered list. Match the format to the classified intent.
+        </p>
+        <p>
+          Query classification also determines whether the engine treats the topic as safe for AI-generated answers or routes it to a traditional results page. Topics in the Your Money, Your Life (YMYL) category — health, finance, legal — are subject to heightened scrutiny. Content in these categories must demonstrate E-E-A-T signals more explicitly to clear the classification stage.
+        </p>
+      </div>
+
+      <!-- Stage 2 -->
+      <div class="prose-dark mt-16">
+        <h2 id="source-retrieval" class="anchor-top">Stage 2: Source Retrieval</h2>
+        <p>
+          <strong>Source retrieval is the stage at which your page either enters the candidate pool or is permanently excluded from the answer — and most sites fail it silently.</strong> The engine queries its index (or, for RAG systems, the live web) for documents relevant to the classified query. Only pages that pass several eligibility checks enter this candidate pool.
+        </p>
+
+        <h3>Crawlability and Indexation</h3>
+        <p>
+          A page that is not crawlable by AI bots cannot enter the retrieval pool. Many sites updated their robots.txt in 2023–2024 to block GPTBot, PerplexityBot, and ClaudeBot to prevent training data scraping. This also blocks those platforms from retrieving the content for answer generation. Review your robots.txt and confirm that all major AI user-agents are explicitly allowed if citation earning is your objective.
+        </p>
+
+        <h3>Topical Relevance Matching</h3>
+        <p>
+          The retrieval stage selects documents based on semantic relevance to the classified query. Pages with high topical density — where the target topic is discussed thoroughly, with related entities and subtopics addressed — score higher in retrieval. This is where the <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO principle</a> of topical clustering applies: a site with comprehensive coverage of a subject area retrieves more consistently than a site with isolated pages on the same topic.
+        </p>
+
+        <h3>Retrieval-Augmented Generation</h3>
+        <p>
+          Platforms like Perplexity and ChatGPT with browsing use retrieval-augmented generation (RAG). Rather than relying solely on training data, they fetch live web content at query time, extract relevant passages, and use those passages as context for the generated answer. In a RAG system, source retrieval is the critical bottleneck — the quality and accessibility of your content determines whether it enters the retrieved context window at all.
+        </p>
+      </div>
+
+      <!-- Stage 3 -->
+      <div class="prose-dark mt-16">
+        <h2 id="answer-synthesis" class="anchor-top">Stage 3: Answer Synthesis</h2>
+        <p>
+          <strong>Answer synthesis is the stage at which the engine extracts passages from retrieved documents and assembles them into a coherent response — and extraction architecture is the dominant selection signal at this stage.</strong> Not every retrieved document contributes to the final answer. The synthesis process favours passages that are cleanly bounded, directly responsive to the query, and structurally discrete.
+        </p>
+        <p>
+          A "cleanly bounded" passage is one that makes complete sense on its own, without requiring surrounding context. A paragraph that begins "As mentioned above…" or "Building on the previous section…" is not cleanly bounded. A paragraph that opens with a direct definitional statement — "Answer engine optimisation is the practice of…" — is extractable as a standalone unit.
+        </p>
+        <p>
+          The extraction process is not word-for-word copying. Modern AI synthesis paraphrases, summarises, and combines passages. But the source passages must still be structured for extraction because the synthesis model needs to identify which sections of each document are relevant to which parts of the query. A page structured as one long, continuous argument is much harder to extract from than a page structured as a series of self-contained, labelled sections.
+        </p>
+
+        <h3>Format Matching in Synthesis</h3>
+        <p>
+          The synthesis stage applies format matching alongside content relevance. For a procedural query, the engine preferentially extracts from ordered lists. For a definitional query, it extracts from concise paragraph openings. For a comparison query, it extracts from tables or parallel list structures. Structure your content to match the answer format expected for your target query — the engine is not just reading words, it is reading structure.
+        </p>
+
+        <h3>The 40–100 Word Answer Zone</h3>
+        <p>
+          Empirical analysis of featured snippet and AI citation patterns consistently shows that selected passages cluster in the 40–100 word range for paragraph answers. Passages shorter than 40 words are often too context-free to be useful. Passages longer than 100 words are more likely to be partially extracted or paraphrased rather than cited. Write definitive section openings that land in this range — complete enough to stand alone, compact enough to be extracted cleanly.
+        </p>
+      </div>
+
+      <!-- Stage 4 -->
+      <div class="prose-dark mt-16">
+        <h2 id="citation-selection" class="anchor-top">Stage 4: Citation Selection</h2>
+        <p>
+          <strong>Citation selection is the final stage — where the engine decides which sources receive attribution credit for the generated answer — and source authority is its primary criterion.</strong> Multiple retrieved documents may have contributed extractable passages to the synthesis. The engine must choose which sources to cite, and the decision is based on a combination of entity authority, schema signals, and recency.
+        </p>
+
+        <h3>Entity Authority</h3>
+        <p>
+          An entity, in this context, is the machine-readable representation of your brand or organisation. If the AI model can resolve your entity clearly — associating your domain with a specific expertise area, a consistent name, and authoritative third-party mentions — it is more likely to attribute citations to you. Entity clarity is built through consistent use of Organisation schema, sameAs links to third-party identifiers (Wikidata, LinkedIn, Companies House), and identical entity descriptions across all web properties.
+        </p>
+
+        <h3>Schema Signals</h3>
+        <p>
+          Structured data does not directly cause citation selection, but it reduces the ambiguity that causes engines to deprioritise sources. Article schema confirms the content as a publication from a named author and organisation. FAQPage schema explicitly maps questions to answers in machine-readable format. BreadcrumbList schema signals topical hierarchy. Together, these schema types tell the citation engine that this is credible, attributed, categorised content — not an anonymous document of uncertain origin.
+        </p>
+
+        <h3>Recency and Freshness</h3>
+        <p>
+          For time-sensitive topics, recency is a significant citation signal. AI engines — particularly Perplexity and ChatGPT with browsing — tend to cite sources with recent publication or modification dates over older content that may have the same informational quality. Keep your <code class="bg-geo-900 text-accent-300 px-1.5 py-0.5 rounded text-xs border border-geo-700">dateModified</code> field in Article schema current whenever you update content. A visible "last updated" timestamp on the page itself also signals freshness to both crawlers and the synthesis engine.
+        </p>
+      </div>
+
+      <!-- Platform Mechanics -->
+      <div class="prose-dark mt-16">
+        <h2 id="platform-mechanics" class="anchor-top">Platform Mechanics: How Each Engine Differs</h2>
+        <p>
+          <strong>Every major answer engine runs the same four-stage pipeline, but the implementation of each stage differs significantly by platform.</strong> Understanding these differences is what separates a basic AEO programme from a comprehensive one that earns citations across all five major surfaces.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Platform</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Retrieval Model</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Key AEO Implication</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y hair">
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-semibold text-white">Google AI Overviews</td>
+              <td class="px-4 py-3 text-ink-300">Organic ranking + Knowledge Graph entity resolution</td>
+              <td class="px-4 py-3 text-ink-300">Strong organic authority is a prerequisite; entity schema accelerates inclusion</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-semibold text-white">Google Featured Snippets</td>
+              <td class="px-4 py-3 text-ink-300">Top-5 ranking pages evaluated for extraction quality</td>
+              <td class="px-4 py-3 text-ink-300">Must rank in top five; extraction architecture and format matching are decisive</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-semibold text-white">Perplexity</td>
+              <td class="px-4 py-3 text-ink-300">Live RAG — fetches current web sources per query</td>
+              <td class="px-4 py-3 text-ink-300">Crawlability, fresh dates, and short extractable paragraphs are the primary signals</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-semibold text-white">ChatGPT (browsing)</td>
+              <td class="px-4 py-3 text-ink-300">Training data + optional live web retrieval for recent queries</td>
+              <td class="px-4 py-3 text-ink-300">Entity mentions in training data corpora and crawlable live content both matter</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-semibold text-white">Microsoft Copilot</td>
+              <td class="px-4 py-3 text-ink-300">Bing index + GPT-4 reasoning layer</td>
+              <td class="px-4 py-3 text-ink-300">Bing Webmaster Tools verification and Bing-specific crawl access are important</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-semibold text-white">Voice Assistants</td>
+              <td class="px-4 py-3 text-ink-300">Single-answer model — no ranked list, one source selected</td>
+              <td class="px-4 py-3 text-ink-300">Sub-50 word answers, conversational phrasing, and structured data are critical</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          Google AI Overviews is the most consequential platform for most UK and global brands because of its reach — it appears on the most-used search engine in the world for a growing proportion of queries. But it is also the hardest to influence directly because it inherits Google's organic ranking signals. Brands that have invested in traditional SEO have a foundation to build on; those without it must prioritise entity schema and E-E-A-T signals as a parallel path.
+        </p>
+        <p>
+          Perplexity is the most transparent about how it retrieves and cites sources. Because it is purely RAG-driven, content that extracts well in Perplexity tends to extract well across other platforms. Use Perplexity citation performance as your primary early indicator of whether your extraction architecture is working.
+        </p>
+      </div>
+
+      <!-- Optimising Each Stage -->
+      <div class="prose-dark mt-16">
+        <h2 id="optimise-for-each-stage" class="anchor-top">Optimising Each Stage of the Pipeline</h2>
+        <p>
+          <strong>A complete AEO programme applies specific optimisations at each pipeline stage — addressing all four is what creates durable, cross-platform citation presence.</strong> The following tactics are sequenced by stage and are the foundation of any <a href="/aeo-best-practices/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO best practices</a> implementation.
+        </p>
+      </div>
+
+      <div class="mt-8 space-y-4">
+        <div class="card p-6">
+          <h3 class="font-display text-base font-semibold text-[var(--accent)]">Optimise Stage 1 — Query Classification</h3>
+          <ul class="mt-3 space-y-1.5 text-sm text-ink-300 leading-relaxed list-disc list-inside">
+            <li>Research the query format Google currently uses for your target keywords by checking SERPs before writing.</li>
+            <li>Match your content structure to the detected format: prose for definitional queries, numbered lists for procedural queries, tables for comparison queries.</li>
+            <li>Use question-based H2 and H3 headings that mirror the natural-language queries your audience uses.</li>
+            <li>For YMYL topics, explicitly signal E-E-A-T through author bios, credential references, and cited sources.</li>
+          </ul>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-display text-base font-semibold text-[var(--accent)]">Optimise Stage 2 — Source Retrieval</h3>
+          <ul class="mt-3 space-y-1.5 text-sm text-ink-300 leading-relaxed list-disc list-inside">
+            <li>Confirm your robots.txt explicitly allows GPTBot, PerplexityBot, ClaudeBot, Bingbot, and Googlebot.</li>
+            <li>Submit and maintain an <code class="bg-geo-900 text-accent-300 px-1.5 py-0.5 rounded text-xs border border-geo-700">llms.txt</code> file declaring your domain's expertise areas.</li>
+            <li>Build topical clusters — a parent NODE page linking to multiple SEED pages — so the AI retrieval system associates your domain with comprehensive coverage of the target topic.</li>
+            <li>Use canonical URLs consistently to prevent retrieval systems splitting authority across duplicate content.</li>
+          </ul>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-display text-base font-semibold text-[var(--accent)]">Optimise Stage 3 — Answer Synthesis</h3>
+          <ul class="mt-3 space-y-1.5 text-sm text-ink-300 leading-relaxed list-disc list-inside">
+            <li>Open every section with a 40–100 word definitional statement that answers the target query without preamble.</li>
+            <li>Write in single-point paragraphs of two to four sentences — one concept, one paragraph.</li>
+            <li>Avoid cross-references that require surrounding context ("as noted above", "see previous section").</li>
+            <li>Use semantic HTML: <code class="bg-geo-900 text-accent-300 px-1.5 py-0.5 rounded text-xs border border-geo-700">&lt;article&gt;</code>, <code class="bg-geo-900 text-accent-300 px-1.5 py-0.5 rounded text-xs border border-geo-700">&lt;section&gt;</code>, <code class="bg-geo-900 text-accent-300 px-1.5 py-0.5 rounded text-xs border border-geo-700">&lt;h2&gt;</code>, <code class="bg-geo-900 text-accent-300 px-1.5 py-0.5 rounded text-xs border border-geo-700">&lt;ol&gt;</code>, <code class="bg-geo-900 text-accent-300 px-1.5 py-0.5 rounded text-xs border border-geo-700">&lt;table&gt;</code> — to provide structural cues that aid passage extraction.</li>
+          </ul>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-display text-base font-semibold text-[var(--accent)]">Optimise Stage 4 — Citation Selection</h3>
+          <ul class="mt-3 space-y-1.5 text-sm text-ink-300 leading-relaxed list-disc list-inside">
+            <li>Deploy Article or TechArticle schema on every content page with author, publisher (by @id reference), datePublished, and dateModified.</li>
+            <li>Deploy FAQPage schema on every page with a FAQ section.</li>
+            <li>Keep entity descriptions identical across all web properties and structured data.</li>
+            <li>Update <code class="bg-geo-900 text-accent-300 px-1.5 py-0.5 rounded text-xs border border-geo-700">dateModified</code> in schema whenever content is updated — recency is a measurable citation signal.</li>
+            <li>Include sameAs links in Organisation schema pointing to Wikidata, LinkedIn, and other authoritative third-party identifiers.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="prose-dark mt-12">
+        <p>
+          For a comprehensive, grouped treatment of these tactics, see our <a href="/aeo-best-practices/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO best practices guide</a>. For examples of how brands have applied this pipeline model to earn measurable citation gains, see <a href="/aeo-examples/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO examples</a>. Our <a href="/aeo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO services</a> cover pipeline-stage audits and implementation support for each stage. For the broader context of how AEO fits within the <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> discipline, see our root guide.
+        </p>
+      </div>
+
+      <!-- FAQ -->
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read guide <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="relative border-t hair mt-12 overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Ready to Win the AEO Pipeline?</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        GEOoptimised audits your content against every stage of the answer engine pipeline and delivers a prioritised remediation plan. Our <a href="/aeo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO services</a> cover audit, strategy, and ongoing citation monitoring.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request an AEO audit</a>
+        <a href="/aeo-services/" class="btn btn-ghost">View AEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const faqBtns = document.querySelectorAll('#faq-accordion button');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+
+    const tocLinks = document.querySelectorAll('#toc-nav a');
+    const headings = Array.from(
+      document.querySelectorAll('h2[id], h3[id]')
+    ) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(link => {
+              link.classList.remove('text-[var(--accent)]');
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.classList.add('text-[var(--accent)]');
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+
+    headings.forEach(h => observer.observe(h));
+  </script>
+
+</Base>

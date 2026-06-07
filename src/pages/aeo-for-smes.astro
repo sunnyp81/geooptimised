@@ -1,0 +1,572 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'AEO for SMEs: A Practical Guide for Small Businesses';
+const description = 'AEO for SMEs: practical, budget-aware answer engine optimisation for small and medium businesses. Prioritised quick wins, tools, and a step-by-step action plan.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: 'AEO for SMEs: A Practical Guide for Small Businesses',
+  description: 'How small and medium-sized businesses can implement answer engine optimisation on a limited budget. Covers quick wins, prioritised tactics, tools, and a realistic action plan.',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  image: 'https://geooptimised.com/og-image.png',
+  inLanguage: 'en-GB',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/aeo-for-smes/',
+  },
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Can small businesses benefit from AEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Small businesses often have an advantage in AEO because they can focus on specific local or niche queries where competition for answer-box selection is lower than in broad national markets. A local plumber or independent accountancy practice can own featured snippets and AI Overview citations for hyper-specific queries that larger brands ignore.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does AEO cost for an SME?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The core AEO techniques — restructuring content, adding FAQ schema, using question-based headings, and updating your Google Business Profile — cost nothing beyond staff time or a modest freelancer fee. Paid AEO tools start at around £30–£100 per month, but Google Search Console (free) covers the essential monitoring for most SMEs starting out.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long before an SME sees AEO results?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Featured snippet and People Also Ask gains typically appear within 4–8 weeks of restructuring existing content on pages that already rank in the top ten. AI Overview citations can take longer — typically 2–3 months — as these systems update retrieval indices less frequently than traditional search rankings.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need technical skills to implement AEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Basic AEO implementation does not require developer skills. Adding FAQ schema via a WordPress plugin, restructuring headings in a page editor, and updating your Google Business Profile Q&A are all accessible to non-technical business owners. More advanced work — custom JSON-LD, llms.txt deployment, and site-wide schema audits — benefits from developer involvement.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is local SEO part of AEO for small businesses?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. For local service businesses, local AEO is often the highest-value starting point. Voice search queries carry a significant local intent component — queries such as "best electrician near me" or "accountant in [town]" are answered by AI systems drawing on Google Business Profile data, local structured data, and review signals. Optimising these signals is the local equivalent of AEO.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should SMEs do AEO before traditional SEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. AEO is built on top of SEO foundations. A page that is not indexed, not crawlable, or not ranking in at least the top twenty for a query is very unlikely to be selected for a featured snippet or AI citation. SMEs should ensure their basic technical SEO and content quality are sound before investing dedicated effort in AEO.',
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Answer Engine Optimisation', item: 'https://geooptimised.com/answer-engine-optimisation/' },
+    { '@type': 'ListItem', position: 3, name: 'AEO for SMEs', item: 'https://geooptimised.com/aeo-for-smes/' },
+  ],
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'why-aeo-for-smes', label: 'Why AEO Matters for SMEs' },
+  { id: 'sme-advantages', label: 'Where SMEs Have an Edge' },
+  { id: 'quick-wins', label: 'Prioritised Quick-Win Table' },
+  { id: 'content-restructuring', label: 'Content Restructuring' },
+  { id: 'schema-on-a-budget', label: 'Schema on a Budget' },
+  { id: 'local-aeo', label: 'Local AEO for Service Businesses' },
+  { id: 'tools', label: 'Free and Low-Cost Tools' },
+  { id: 'action-plan', label: '90-Day Action Plan' },
+  { id: 'faq', label: 'Frequently Asked Questions' },
+];
+
+const faqs = [
+  {
+    q: 'Can small businesses benefit from AEO?',
+    a: 'Yes. Small businesses often have an advantage in AEO because they can focus on specific local or niche queries where competition for answer-box selection is lower than in broad national markets. A local plumber or independent accountancy practice can own featured snippets and AI Overview citations for hyper-specific queries that larger brands ignore.',
+  },
+  {
+    q: 'How much does AEO cost for an SME?',
+    a: 'The core AEO techniques — restructuring content, adding FAQ schema, using question-based headings, and updating your Google Business Profile — cost nothing beyond staff time or a modest freelancer fee. Paid AEO tools start at around £30–£100 per month, but Google Search Console (free) covers the essential monitoring for most SMEs starting out.',
+  },
+  {
+    q: 'How long before an SME sees AEO results?',
+    a: 'Featured snippet and People Also Ask gains typically appear within 4–8 weeks of restructuring existing content on pages that already rank in the top ten. AI Overview citations can take longer — typically 2–3 months — as these systems update retrieval indices less frequently than traditional search rankings.',
+  },
+  {
+    q: 'Do I need technical skills to implement AEO?',
+    a: 'Basic AEO implementation does not require developer skills. Adding FAQ schema via a WordPress plugin, restructuring headings in a page editor, and updating your Google Business Profile Q&A are all accessible to non-technical business owners. More advanced work — custom JSON-LD, llms.txt deployment, and site-wide schema audits — benefits from developer involvement.',
+  },
+  {
+    q: 'Is local SEO part of AEO for small businesses?',
+    a: 'Yes. For local service businesses, local AEO is often the highest-value starting point. Voice search queries carry a significant local intent component — queries such as "best electrician near me" or "accountant in [town]" are answered by AI systems drawing on Google Business Profile data, local structured data, and review signals. Optimising these signals is the local equivalent of AEO.',
+  },
+  {
+    q: 'Should SMEs do AEO before traditional SEO?',
+    a: 'No. AEO is built on top of SEO foundations. A page that is not indexed, not crawlable, or not ranking in at least the top twenty for a query is very unlikely to be selected for a featured snippet or AI citation. SMEs should ensure their basic technical SEO and content quality are sound before investing dedicated effort in AEO.',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/aeo-for-smes/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/answer-engine-optimisation/" class="transition hover:text-[var(--accent)]">Answer Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">AEO for SMEs</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Practical Guide</span>
+        <time datetime="2026-06-07" class="font-mono text-xs text-ink-400">7 June 2026</time>
+        <span class="font-mono text-xs text-ink-400">11 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        AEO for SMEs: A Practical Guide for Small Businesses
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <a href="/answer-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Answer engine optimisation</a> is not the exclusive domain of enterprise budgets. Small and medium businesses can compete for featured snippets, AI Overview citations, and voice-search answers — often on less resource than a single paid-search campaign. This guide shows you exactly where to start.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" aria-label="Table of contents">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <svg aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>SMEs can win local and niche AEO positions that large brands systematically neglect — specificity is a competitive advantage.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>The highest-ROI AEO tactics — content restructuring, FAQ schema, question headings — require time, not budget.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>Local service businesses should treat Google Business Profile optimisation and local FAQ content as their AEO foundation.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>AEO builds on solid SEO foundations — skip technical SEO basics at your peril.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1: Why AEO Matters for SMEs -->
+      <section id="why-aeo-for-smes" class="anchor-top prose-dark mb-16">
+        <h2>Why AEO Matters for SMEs</h2>
+        <p><strong>Answer engine optimisation levels the playing field for small businesses by rewarding content quality and structural clarity over domain authority and budget.</strong> Traditional SEO is partly a function of how many quality backlinks a site has accumulated — a metric that naturally favours established, well-resourced brands. AEO, by contrast, rewards the site whose content most directly and clearly answers a specific query.</p>
+        <p>When a user asks Google "how much does a boiler service cost in Manchester" or asks their voice assistant "who are the best accountants for freelancers in Bristol," the answer engine selects a source based on relevance, clarity, and structural signals — not primarily on domain age or link count. A specialist SME with well-structured, locally relevant content can outperform a national brand whose generic pages bury the answer in paragraphs of boilerplate.</p>
+        <p>The scale of the opportunity is growing. AI Overviews now appear on a significant proportion of informational and commercial queries. Voice search usage continues to expand, with smart speakers and mobile voice queries growing year on year. Each of these touchpoints represents a zero-click visibility channel where small businesses can appear alongside — or in place of — much larger competitors, at zero cost per impression.</p>
+        <p>For a comprehensive understanding of the broader discipline this sits within, see our guide to <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a>. AEO is the branch of GEO focused specifically on direct-answer selection, which makes it the natural starting point for SMEs with constrained resources.</p>
+      </section>
+
+      <!-- Section 2: Where SMEs Have an Edge -->
+      <section id="sme-advantages" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Where SMEs Have a Competitive Edge in AEO</h2>
+          <p><strong>Small businesses hold structural advantages in AEO that their larger competitors cannot easily replicate.</strong> Understanding these advantages is essential to prioritising where to focus your effort.</p>
+        </div>
+
+        <div class="mt-8 grid gap-5 sm:grid-cols-2">
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Geographic Specificity</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">Local queries — "best [service] in [town]," "how much does [service] cost near me" — are high-volume, high-intent, and systematically underprovided by national brands. A local business with a dedicated, well-structured location page and an optimised Google Business Profile can own these answer positions outright.</p>
+          </div>
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Niche Depth</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">Specialists — independent financial advisers, boutique law firms, artisan manufacturers — can answer niche questions with a level of specificity and expertise that generalist brands cannot match. Answer engines value expertise signals. A narrow niche covered with genuine depth outperforms broad coverage with shallow treatment.</p>
+          </div>
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Agility</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">An SME can restructure a key page, add FAQ schema, and republish within hours. Enterprise sites may require change requests, staging environments, and weeks of approval cycles for the same edit. In a discipline where speed of iteration is a competitive advantage, small businesses move faster.</p>
+          </div>
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Authentic Voice</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">AI systems are increasingly adept at identifying thin, templated content produced at scale. A small business owner writing from genuine practitioner experience produces the kind of specific, confident, first-person expertise that answer engines preferentially select over anonymised corporate copy.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Quick-Win Table -->
+      <section id="quick-wins" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Prioritised AEO Quick Wins for SMEs</h2>
+          <p><strong>Not all AEO tactics deliver equal return on time invested — SMEs should sequence by impact-to-effort ratio.</strong> The table below ranks the most accessible AEO actions by expected impact, time to implement, and cost, allowing you to prioritise your first 30 days effectively.</p>
+        </div>
+
+        <div class="mt-8 card overflow-hidden not-prose">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm">
+              <thead>
+                <tr class="border-b border-[var(--line)]">
+                  <th scope="col" class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Action</th>
+                  <th scope="col" class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Impact</th>
+                  <th scope="col" class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Time</th>
+                  <th scope="col" class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Cost</th>
+                  <th scope="col" class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Priority</th>
+                </tr>
+              </thead>
+              <tbody class="text-ink-300 divide-y divide-[var(--line-soft)]">
+                <tr>
+                  <td class="px-5 py-3 font-medium text-ink-100">Add FAQ schema to top-5 pages</td>
+                  <td class="px-5 py-3">High</td>
+                  <td class="px-5 py-3">2–4 hrs</td>
+                  <td class="px-5 py-3">Free</td>
+                  <td class="px-5 py-3"><span class="inline-block rounded bg-accent-600/20 px-2 py-0.5 text-xs font-mono text-accent-300">1 — Do first</span></td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-3 font-medium text-ink-100">Rewrite H2s as questions on key service pages</td>
+                  <td class="px-5 py-3">High</td>
+                  <td class="px-5 py-3">1–2 hrs</td>
+                  <td class="px-5 py-3">Free</td>
+                  <td class="px-5 py-3"><span class="inline-block rounded bg-accent-600/20 px-2 py-0.5 text-xs font-mono text-accent-300">1 — Do first</span></td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-3 font-medium text-ink-100">Add a 40–60 word definition at the top of each page</td>
+                  <td class="px-5 py-3">High</td>
+                  <td class="px-5 py-3">30 min/page</td>
+                  <td class="px-5 py-3">Free</td>
+                  <td class="px-5 py-3"><span class="inline-block rounded bg-accent-600/20 px-2 py-0.5 text-xs font-mono text-accent-300">1 — Do first</span></td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-3 font-medium text-ink-100">Optimise Google Business Profile Q&amp;A section</td>
+                  <td class="px-5 py-3">High (local)</td>
+                  <td class="px-5 py-3">1 hr</td>
+                  <td class="px-5 py-3">Free</td>
+                  <td class="px-5 py-3"><span class="inline-block rounded bg-accent-600/20 px-2 py-0.5 text-xs font-mono text-accent-300">1 — Do first</span></td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-3 font-medium text-ink-100">Set up Google Search Console, check snippet appearances</td>
+                  <td class="px-5 py-3">Medium</td>
+                  <td class="px-5 py-3">1 hr</td>
+                  <td class="px-5 py-3">Free</td>
+                  <td class="px-5 py-3"><span class="inline-block rounded bg-geo-700/30 px-2 py-0.5 text-xs font-mono text-geo-300">2 — Week one</span></td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-3 font-medium text-ink-100">Research People Also Ask questions for each target keyword</td>
+                  <td class="px-5 py-3">Medium</td>
+                  <td class="px-5 py-3">2–3 hrs</td>
+                  <td class="px-5 py-3">Free</td>
+                  <td class="px-5 py-3"><span class="inline-block rounded bg-geo-700/30 px-2 py-0.5 text-xs font-mono text-geo-300">2 — Week one</span></td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-3 font-medium text-ink-100">Add HowTo schema to process-based pages</td>
+                  <td class="px-5 py-3">Medium</td>
+                  <td class="px-5 py-3">1–2 hrs</td>
+                  <td class="px-5 py-3">Free/plugin</td>
+                  <td class="px-5 py-3"><span class="inline-block rounded bg-geo-700/30 px-2 py-0.5 text-xs font-mono text-geo-300">2 — Week one</span></td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-3 font-medium text-ink-100">Deploy an llms.txt file summarising your expertise</td>
+                  <td class="px-5 py-3">Medium</td>
+                  <td class="px-5 py-3">1 hr</td>
+                  <td class="px-5 py-3">Free</td>
+                  <td class="px-5 py-3"><span class="inline-block rounded bg-geo-700/30 px-2 py-0.5 text-xs font-mono text-geo-300">2 — Week one</span></td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-3 font-medium text-ink-100">Add BreadcrumbList and Article schema site-wide</td>
+                  <td class="px-5 py-3">Medium</td>
+                  <td class="px-5 py-3">2–4 hrs</td>
+                  <td class="px-5 py-3">Free/dev time</td>
+                  <td class="px-5 py-3"><span class="inline-block rounded bg-geo-700/30 px-2 py-0.5 text-xs font-mono text-geo-300">2 — Week one</span></td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-3 font-medium text-ink-100">Create dedicated pages for top-20 PAA questions</td>
+                  <td class="px-5 py-3">High (long-term)</td>
+                  <td class="px-5 py-3">Ongoing</td>
+                  <td class="px-5 py-3">Free</td>
+                  <td class="px-5 py-3"><span class="inline-block rounded bg-ink-700/50 px-2 py-0.5 text-xs font-mono text-ink-300">3 — Month 2+</span></td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-3 font-medium text-ink-100">Build external citations: industry directories, PR</td>
+                  <td class="px-5 py-3">Medium</td>
+                  <td class="px-5 py-3">Ongoing</td>
+                  <td class="px-5 py-3">Low/varies</td>
+                  <td class="px-5 py-3"><span class="inline-block rounded bg-ink-700/50 px-2 py-0.5 text-xs font-mono text-ink-300">3 — Month 2+</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Content Restructuring -->
+      <section id="content-restructuring" class="anchor-top prose-dark mb-16">
+        <h2>Content Restructuring: The Highest-Leverage AEO Tactic</h2>
+        <p><strong>Restructuring existing content is the single highest-ROI AEO action available to an SME because it converts pages you already rank for into answer positions.</strong> You do not need new content — you need the same content rearranged so answer engines can extract the core response efficiently.</p>
+        <p>The fundamental restructuring pattern is the inverted pyramid: lead every page section with a single, definitive statement (40–60 words) that directly answers the implicit question behind the heading, then follow with supporting detail, examples, and nuance. This is the opposite of how most service-page copy is written, where context and background lead and the answer is buried two paragraphs down.</p>
+
+        <h3>The Three Structural Changes That Matter Most</h3>
+        <p><strong>Question-based H2s and H3s.</strong> Change "Our Services" to "What services does [business name] offer?" Change "The Process" to "How does the [service] process work?" Answer engines match heading text to query intent. Question headings dramatically improve the likelihood that the content beneath will be selected as a featured snippet or People Also Ask response. See our <a href="/aeo-best-practices/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO best practices guide</a> for detailed heading patterns.</p>
+        <p><strong>Concise definitional openings.</strong> The first paragraph after each heading should stand alone as a complete answer to the heading question. Write it as if you were answering verbally: clear, direct, and free of preamble. Avoid phrases like "In this section, we will explore..." — answer engines extract the content, not the signposting.</p>
+        <p><strong>FAQ sections on every service page.</strong> A dedicated FAQ section at the bottom of each service or location page, with 4–6 genuine questions and self-contained answers, creates multiple discrete answer opportunities per page. Each FAQ answer is independently eligible for featured-snippet and PAA selection. For examples of effective FAQ formats, see our <a href="/aeo-examples/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO examples</a>.</p>
+      </section>
+
+      <!-- Section 5: Schema on a Budget -->
+      <section id="schema-on-a-budget" class="anchor-top prose-dark mb-16">
+        <h2>Schema Markup on an SME Budget</h2>
+        <p><strong>Structured data implementation does not require a developer — modern CMS plugins handle the most impactful schema types with a few clicks.</strong> The key is knowing which schema types deliver the highest AEO impact and which can wait.</p>
+        <p>For WordPress sites, plugins such as Yoast SEO Premium, Rank Math, and Schema Pro handle FAQPage, HowTo, Article, and LocalBusiness schema through a GUI, eliminating the need to write JSON-LD by hand. For Shopify, apps like JSON-LD for SEO and Smart SEO cover Product and Organisation schemas. For custom-built sites, Google's Structured Data Markup Helper generates valid JSON-LD that you can paste directly into page templates.</p>
+
+        <h3>Priority Schema Types for SMEs</h3>
+        <ul>
+          <li><strong>FAQPage</strong> — the single most impactful schema type for AEO; marks up every FAQ section for direct-answer extraction.</li>
+          <li><strong>LocalBusiness</strong> (or relevant subtype: Plumber, AccountingService, LegalService, etc.) — essential for local answer visibility; feeds Google Business Profile and voice search answers.</li>
+          <li><strong>Article / TechArticle</strong> — signals content type and establishes datePublished/dateModified for freshness signals.</li>
+          <li><strong>BreadcrumbList</strong> — clarifies site structure; used by Google AI Overviews to contextualise page placement within a topic hierarchy.</li>
+          <li><strong>HowTo</strong> — high-impact for process pages ("how to apply for planning permission," "how to change a fuse box"); triggers rich results directly.</li>
+        </ul>
+
+        <p>Validate every schema implementation with Google's free Rich Results Test before and after deployment. Invalid structured data is counterproductive — it signals technical unreliability to search and AI systems alike.</p>
+      </section>
+
+      <!-- Section 6: Local AEO -->
+      <section id="local-aeo" class="anchor-top prose-dark mb-16">
+        <h2>Local AEO for Service Businesses</h2>
+        <p><strong>For local service businesses, local AEO is the highest-value subset of answer engine optimisation — voice search queries carry a substantial local-intent component, and AI systems draw heavily on Google Business Profile data to answer them.</strong></p>
+        <p>Voice queries such as "what are the best heating engineers near me" and "find a solicitor in [town]" are answered by AI systems that synthesise data from multiple sources: the Google Business Profile, the business website, review platforms, and local citations in directories. Each of these data sources is a local AEO signal.</p>
+
+        <h3>Google Business Profile as an AEO Asset</h3>
+        <p>Your Google Business Profile is one of the most underutilised AEO assets in local marketing. The Q&amp;A section of the profile — which allows businesses to pre-populate frequently asked questions — is directly indexed and cited in local AI-generated answers. Populate it with the ten questions you are most commonly asked, with concise, accurate answers. This is equivalent to adding FAQ schema to your website, but for the local knowledge panel.</p>
+        <p>The business description field should lead with a clear, keyword-rich statement of what you do and where you serve, using the same inverted-pyramid structure as your website content. Services should be fully listed with descriptions — AI systems use this structured data when answering "does [business name] do X" queries.</p>
+
+        <h3>Local Citation Consistency</h3>
+        <p>Inconsistent name, address, and phone number (NAP) data across directories confuses the entity resolution process that AI systems use when generating local answers. Audit your business listings across Google Business Profile, Yelp, Yell, Checkatrade, Trustpilot, and any industry-specific directories. Ensure your trading name, address format, and contact details are identical across all of them.</p>
+      </section>
+
+      <!-- Section 7: Tools -->
+      <section id="tools" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Free and Low-Cost AEO Tools for SMEs</h2>
+          <p><strong>Effective AEO measurement for an SME does not require an enterprise software subscription — a carefully selected set of free and low-cost tools covers the essentials.</strong></p>
+        </div>
+
+        <div class="mt-8 space-y-4">
+          <div class="card p-5">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Google Search Console (Free)</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">The primary tool for tracking featured snippet appearances. Filter the Performance report by "Search type: Web" and look for queries where your impressions are high but click-through is low — these are queries where you appear in an answer box but users do not click through. GSC also surfaces which queries trigger rich results for your schema implementations.</p>
+          </div>
+          <div class="card p-5">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Google's Rich Results Test (Free)</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">Validates your structured data implementation and shows exactly which rich result types your schema is eligible for. Run this after every schema addition before publishing. Non-valid schema is invisible to answer engines and wastes implementation effort.</p>
+          </div>
+          <div class="card p-5">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">AlsoAsked (Free tier available)</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">Maps the People Also Ask question clusters for any keyword. The free tier provides enough data for an SME to identify the ten to twenty most important PAA questions in their niche and build content to address them directly.</p>
+          </div>
+          <div class="card p-5">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Schema.org Validator (Free)</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">The canonical reference for structured data syntax. Useful for checking custom JSON-LD markup against the official specification before deploying it. Particularly important for less common schema types not covered by CMS plugins.</p>
+          </div>
+          <div class="card p-5">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Semrush or Ahrefs (Paid, ~£100/month)</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">Both platforms offer featured snippet tracking at the keyword level, showing whether you or a competitor currently holds a given snippet. For SMEs with a manageable keyword list (under 200 queries), the base plan is sufficient to identify and track the answer positions that matter most to the business.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8: 90-Day Action Plan -->
+      <section id="action-plan" class="anchor-top prose-dark mb-16">
+        <h2>A 90-Day AEO Action Plan for SMEs</h2>
+        <p><strong>Ninety days of focused AEO effort is enough for most SMEs to establish measurable answer-box presence for their core keywords.</strong> The plan below is structured in three phases, each building on the last.</p>
+
+        <h3>Days 1–30: Foundations</h3>
+        <ol>
+          <li>Set up Google Search Console if not already active. Verify site ownership, submit sitemap, and baseline your current featured snippet appearances using the Search Appearance filter.</li>
+          <li>Identify your five most commercially important pages (typically your homepage, main service page, and top-performing blog posts). These are your AEO priority targets.</li>
+          <li>For each priority page: rewrite H2s as questions, add a concise definitional opening paragraph, and add a 4–6 question FAQ section at the bottom.</li>
+          <li>Implement FAQPage schema on all five priority pages. Validate each with Google's Rich Results Test.</li>
+          <li>Fully populate your Google Business Profile: description, Q&amp;A section (10 questions minimum), all service listings with descriptions, and ensure NAP consistency with your website.</li>
+        </ol>
+
+        <h3>Days 31–60: Expansion</h3>
+        <ol>
+          <li>Use AlsoAsked or manual SERP research to identify the twenty most important PAA questions in your category. Map each to an existing page or flag for new content.</li>
+          <li>Add dedicated H2/H3 sections and FAQ entries on existing pages for the PAA questions that align with your current content. Do not create thin new pages — enrich existing ones first.</li>
+          <li>Add HowTo schema to any process-based pages. Add Article or TechArticle schema to blog posts and guides.</li>
+          <li>Deploy a basic llms.txt file in your site root. Include a brief description of your business, your primary expertise areas, and links to your most authoritative pages.</li>
+          <li>Check robots.txt to ensure AI crawlers (GPTBot, ClaudeBot, PerplexityBot) are not being blocked inadvertently.</li>
+        </ol>
+
+        <h3>Days 61–90: Consolidation and Measurement</h3>
+        <ol>
+          <li>Review GSC data for the first two months. Identify which queries now show rich result impressions and which priority pages have gained featured snippet or PAA appearances.</li>
+          <li>For any target queries where a competitor holds the answer position, analyse their content structure. Identify the specific structural advantage (shorter definition, clearer list, more specific data) and implement the improvement.</li>
+          <li>Begin creating new content for the PAA questions that had no suitable existing page. Prioritise by search volume and commercial relevance.</li>
+          <li>Submit an IndexNow ping and re-submit your sitemap to GSC after significant content updates.</li>
+        </ol>
+
+        <p>For specialist support on any phase of this plan, our <a href="/aeo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO services</a> include SME-specific audit and implementation packages designed to deliver maximum impact on a constrained budget.</p>
+      </section>
+
+      <!-- FAQ -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          <a href="/answer-engine-optimisation/" class="card card-hover block p-5 no-underline">
+            <span class="eyebrow">Node</span>
+            <h3 class="mt-2 font-display text-base font-semibold text-white">Answer Engine Optimisation</h3>
+            <p class="mt-2 text-sm text-ink-300">The complete AEO guide — what it is, how it works, best practices, and tools.</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read guide <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a href="/aeo-best-practices/" class="card card-hover block p-5 no-underline">
+            <span class="eyebrow">Guide</span>
+            <h3 class="mt-2 font-display text-base font-semibold text-white">AEO Best Practices</h3>
+            <p class="mt-2 text-sm text-ink-300">The tactical checklist for content structure, schema, and answer-box optimisation.</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read guide <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a href="/aeo-examples/" class="card card-hover block p-5 no-underline">
+            <span class="eyebrow">Examples</span>
+            <h3 class="mt-2 font-display text-base font-semibold text-white">AEO Examples</h3>
+            <p class="mt-2 text-sm text-ink-300">Annotated examples of featured snippets, PAA selections, and AI citations in practice.</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">See examples <span aria-hidden="true">&rarr;</span></span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Ready to Win Answer Positions for Your Business?</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        GEOoptimised works with SMEs to identify quick-win AEO opportunities, implement structured data correctly, and build the content foundations that drive featured snippets and AI citations. Let us show you where your biggest gains are.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Talk to us about AEO</a>
+        <a href="/aeo-services/" class="btn btn-ghost">View AEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

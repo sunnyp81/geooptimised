@@ -1,0 +1,506 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'AEO Case Studies: How Answer Engine Optimisation Plays Out';
+const description = 'AEO case studies: what a rigorous answer engine optimisation study should measure, the methodology behind it, and illustrative hypothetical scenarios showing realistic outcomes.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: 'AEO Case Studies: How Answer Engine Optimisation Plays Out',
+  description: 'A methodology-first guide to AEO case studies — what they should measure, how to structure them, and clearly-labelled illustrative scenarios showing how AEO changes play out across different business types.',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  image: 'https://geooptimised.com/og-image.png',
+  inLanguage: 'en-GB',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/aeo-case-studies/',
+  },
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What should an AEO case study measure?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A rigorous AEO case study should measure: featured snippet win rate (percentage of target queries for which the site holds a snippet), People Also Ask appearance count, AI Overview citation frequency across relevant queries, voice-search answer selection rate for local businesses, and changes in zero-click impression share over time. It should also track the before/after content and schema changes that drove the results, and the timeline from implementation to measurable change.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Why do most published AEO case studies lack reliable data?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most published AEO case studies suffer from attribution problems: featured snippet gains are often conflated with broader SEO improvements; AI Overview citation changes are difficult to measure at scale without specialist tooling; and many published "results" are drawn from time periods too short to distinguish AEO impact from normal ranking fluctuation. The discipline is also young, with limited peer-reviewed methodology standards.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does a meaningful AEO case study take to run?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A credible AEO case study requires a minimum of 60 days post-implementation to observe featured snippet and PAA changes, and 90 to 120 days to assess AI Overview citation trends. Shorter windows produce noisy data that cannot reliably be separated from seasonal variation and algorithm updates. Studies measuring voice-search impact require a minimum of six months to gather sufficient query volume data.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between an AEO win and an SEO win?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'An AEO win is measured by answer-box selection, not ranking position. A page can drop from position one to position three in organic rankings while simultaneously gaining a featured snippet for the same query — that is an AEO win and an SEO loss occurring simultaneously. Conversely, a page can rank number one but never be selected for any answer format. AEO metrics and SEO metrics are complementary but distinct.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What content changes most reliably drive AEO improvements?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The content changes most consistently associated with AEO improvements are: adding a concise 40–60 word definitional statement at the start of each major section; restructuring H2 and H3 headings as questions; adding FAQPage schema with self-contained answers; creating dedicated pages targeting People Also Ask questions; and adding comparison tables for versus-type queries. These structural changes — not word count or keyword density — are the primary drivers of answer-box selection.',
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Answer Engine Optimisation', item: 'https://geooptimised.com/answer-engine-optimisation/' },
+    { '@type': 'ListItem', position: 3, name: 'AEO Case Studies', item: 'https://geooptimised.com/aeo-case-studies/' },
+  ],
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'what-makes-a-good-aeo-study', label: 'What Makes a Good AEO Study' },
+  { id: 'measurement-framework', label: 'The Measurement Framework' },
+  { id: 'methodology', label: 'Methodology Standards' },
+  { id: 'illustrative-scenarios', label: 'Illustrative Scenarios' },
+  { id: 'what-drives-results', label: 'What Actually Drives Results' },
+  { id: 'attribution', label: 'Attribution Challenges' },
+  { id: 'faq', label: 'Frequently Asked Questions' },
+];
+
+const faqs = [
+  {
+    q: 'What should an AEO case study measure?',
+    a: 'A rigorous AEO case study should measure: featured snippet win rate (percentage of target queries for which the site holds a snippet), People Also Ask appearance count, AI Overview citation frequency across relevant queries, voice-search answer selection rate for local businesses, and changes in zero-click impression share over time. It should also track the before/after content and schema changes that drove the results, and the timeline from implementation to measurable change.',
+  },
+  {
+    q: 'Why do most published AEO case studies lack reliable data?',
+    a: 'Most published AEO case studies suffer from attribution problems: featured snippet gains are often conflated with broader SEO improvements; AI Overview citation changes are difficult to measure at scale without specialist tooling; and many published "results" are drawn from time periods too short to distinguish AEO impact from normal ranking fluctuation. The discipline is also young, with limited peer-reviewed methodology standards.',
+  },
+  {
+    q: 'How long does a meaningful AEO case study take to run?',
+    a: 'A credible AEO case study requires a minimum of 60 days post-implementation to observe featured snippet and PAA changes, and 90 to 120 days to assess AI Overview citation trends. Shorter windows produce noisy data that cannot reliably be separated from seasonal variation and algorithm updates. Studies measuring voice-search impact require a minimum of six months to gather sufficient query volume data.',
+  },
+  {
+    q: 'What is the difference between an AEO win and an SEO win?',
+    a: 'An AEO win is measured by answer-box selection, not ranking position. A page can drop from position one to position three in organic rankings while simultaneously gaining a featured snippet for the same query — that is an AEO win and an SEO loss occurring simultaneously. Conversely, a page can rank number one but never be selected for any answer format. AEO metrics and SEO metrics are complementary but distinct.',
+  },
+  {
+    q: 'What content changes most reliably drive AEO improvements?',
+    a: 'The content changes most consistently associated with AEO improvements are: adding a concise 40–60 word definitional statement at the start of each major section; restructuring H2 and H3 headings as questions; adding FAQPage schema with self-contained answers; creating dedicated pages targeting People Also Ask questions; and adding comparison tables for versus-type queries. These structural changes — not word count or keyword density — are the primary drivers of answer-box selection.',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/aeo-case-studies/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/answer-engine-optimisation/" class="transition hover:text-[var(--accent)]">Answer Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">AEO Case Studies</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Methodology + Scenarios</span>
+        <time datetime="2026-06-07" class="font-mono text-xs text-ink-400">7 June 2026</time>
+        <span class="font-mono text-xs text-ink-400">12 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        AEO Case Studies: How Answer Engine Optimisation Plays Out
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        What does a rigorous <a href="/answer-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">answer engine optimisation</a> study actually measure, and what does realistic progress look like? This page establishes the methodology for credible AEO measurement — and presents clearly-labelled illustrative scenarios grounded in documented AEO principles.
+      </p>
+
+      <!-- Honesty notice -->
+      <div class="mt-8 rounded-lg border border-[var(--line)] bg-ink-900/60 px-6 py-5 max-w-2xl">
+        <p class="text-sm text-ink-300 leading-relaxed"><strong class="text-ink-100">A note on this page:</strong> GEOoptimised was founded in 2026. We do not publish fabricated client results or invented metrics. The scenarios below are clearly marked as <strong class="text-accent-400">illustrative examples</strong> — hypothetical outcomes calibrated to what the underlying AEO literature and SERP evidence suggests is realistic. They are not real client results. When we have publishable client data, we will say so explicitly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" aria-label="Table of contents">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <svg aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>Most published AEO "case studies" conflate featured snippet gains with broader SEO improvements — credible measurement requires isolating AEO-specific signals.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>The core AEO measurement framework has five metrics: snippet win rate, PAA count, AI Overview citation frequency, voice answer selection, and zero-click impression share.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>AEO improvements are primarily driven by structural content changes, not keyword density or backlink acquisition.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>A credible AEO study requires a minimum 60-day post-implementation window; 90–120 days is preferred for AI Overview data.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1: What Makes a Good AEO Study -->
+      <section id="what-makes-a-good-aeo-study" class="anchor-top prose-dark mb-16">
+        <h2>What Makes a Good AEO Case Study?</h2>
+        <p><strong>A credible AEO case study documents specific content and schema changes, measures defined AEO metrics before and after those changes, controls for concurrent SEO activity, and reports results over a time window long enough to isolate AEO impact from ranking noise.</strong></p>
+        <p>Most published AEO case studies fail at least one of these criteria. The most common failure is conflating featured snippet acquisition with broader organic ranking improvements. If a site published forty new pages, gained significant backlinks, and also restructured its content for AEO in the same quarter, attributing snippet gains exclusively to AEO restructuring is methodologically indefensible.</p>
+        <p>A rigorous study isolates variables. Ideally, it applies AEO changes to a defined set of pages while holding a control group constant, uses the same schema and structural changes across all treatment pages, and measures the same query set before and after. In practice, controlled experiments are difficult to run on live sites — but the closer a study gets to this standard, the more meaningful its conclusions.</p>
+        <p>The discipline of <a href="/answer-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">answer engine optimisation</a> is part of the broader <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> framework — and like all of GEO, it is young enough that measurement standards are still being established. This page represents our current view of what good measurement looks like.</p>
+      </section>
+
+      <!-- Section 2: Measurement Framework -->
+      <section id="measurement-framework" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>The AEO Measurement Framework</h2>
+          <p><strong>Measuring AEO performance requires five distinct metrics, each capturing a different answer-engine surface.</strong> Traditional SEO metrics — ranking position, organic traffic, click-through rate — are insufficient on their own because they do not track zero-click visibility, which is the primary value driver of AEO.</p>
+        </div>
+
+        <div class="mt-8 card overflow-hidden not-prose">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm">
+              <thead>
+                <tr class="border-b border-[var(--line)]">
+                  <th scope="col" class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Metric</th>
+                  <th scope="col" class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">What It Measures</th>
+                  <th scope="col" class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Primary Tool</th>
+                  <th scope="col" class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Min. Measurement Window</th>
+                </tr>
+              </thead>
+              <tbody class="text-ink-300 divide-y divide-[var(--line-soft)]">
+                <tr>
+                  <td class="px-5 py-3 font-medium text-ink-100">Featured Snippet Win Rate</td>
+                  <td class="px-5 py-3">% of target queries where you hold position zero</td>
+                  <td class="px-5 py-3">Semrush, Ahrefs, GSC</td>
+                  <td class="px-5 py-3">60 days</td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-3 font-medium text-ink-100">People Also Ask Appearances</td>
+                  <td class="px-5 py-3">Count of PAA boxes where your content is selected</td>
+                  <td class="px-5 py-3">Semrush, AlsoAsked</td>
+                  <td class="px-5 py-3">60 days</td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-3 font-medium text-ink-100">AI Overview Citation Frequency</td>
+                  <td class="px-5 py-3">% of monitored queries where AI Overviews cite your domain</td>
+                  <td class="px-5 py-3">Profound, Semrush AI Toolkit</td>
+                  <td class="px-5 py-3">90 days</td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-3 font-medium text-ink-100">Voice Answer Selection</td>
+                  <td class="px-5 py-3">% of tested voice queries where your content is read aloud</td>
+                  <td class="px-5 py-3">Manual testing protocol</td>
+                  <td class="px-5 py-3">90 days</td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-3 font-medium text-ink-100">Zero-Click Impression Share</td>
+                  <td class="px-5 py-3">Impressions for queries with no click required, as % of total</td>
+                  <td class="px-5 py-3">Google Search Console</td>
+                  <td class="px-5 py-3">60 days</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="prose-dark mt-8">
+          <p>Not every metric is measurable for every business. Voice answer selection testing, for example, requires a defined protocol: a set of test queries, a consistent testing environment, and a human reviewer recording outcomes. At small scale this is feasible. At enterprise scale it requires automation or specialist tooling. For most SMEs beginning their AEO programme, featured snippet win rate and PAA appearances — both measurable through Google Search Console and a basic SERP tracker — are sufficient starting metrics.</p>
+        </div>
+      </section>
+
+      <!-- Section 3: Methodology Standards -->
+      <section id="methodology" class="anchor-top prose-dark mb-16">
+        <h2>Methodology Standards for Credible AEO Studies</h2>
+        <p><strong>A credible AEO case study is defined by the rigour of its methodology, not the size of its claimed improvements.</strong> Small, well-controlled studies with clear attribution are more informative than large headline figures with opaque methodology.</p>
+
+        <h3>Pre-Requisites Before Starting</h3>
+        <p>Before making any AEO changes, a study should establish: a baseline snapshot of all five measurement metrics for the target query set; a documented list of all content and schema changes planned; a schedule for when changes will be implemented (ideally in phases, not all at once); and a commitment not to make concurrent changes that would confound attribution — no new link building campaigns, no site migrations, no major content additions outside the study scope during the measurement window.</p>
+
+        <h3>Defining the Query Set</h3>
+        <p>The query set — the specific searches you will monitor throughout the study — should be defined before implementation begins. A useful query set has three properties: it is anchored to commercial intent (queries that, if answered, would bring your business into consideration); it covers different answer formats (definitional queries likely to trigger paragraph snippets, process queries likely to trigger list snippets, comparison queries likely to trigger table snippets); and it is stable over time (not news-driven queries that change character from week to week).</p>
+        <p>For a typical SME study, a query set of 30–60 queries across 5–10 target pages is sufficient. For an enterprise study with broad topical coverage, 200–500 queries is more appropriate.</p>
+
+        <h3>Documenting the Changes</h3>
+        <p>Every content and schema change made during the study period should be logged with date, page URL, nature of change (e.g., "added FAQPage schema," "rewrote H2 as question," "added 52-word definitional opening"), and the specific query or queries the change was intended to target. This log becomes the "treatment" record against which results are evaluated.</p>
+
+        <h3>Reporting Standards</h3>
+        <p>Credible reporting presents: the query set (or a representative sample); the baseline metric values at study start; the post-implementation metric values at the end of the measurement window; the specific changes made; and the timeline. It also acknowledges limitations: any concurrent SEO activity that may have influenced results; algorithm updates during the study period; and queries where the result is ambiguous or counter-intuitive.</p>
+      </section>
+
+      <!-- Section 4: Illustrative Scenarios -->
+      <section id="illustrative-scenarios" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Illustrative Scenarios</h2>
+          <p><strong>The following scenarios are explicitly hypothetical illustrations — they do not represent real clients, real projects, or real data.</strong> They are constructed to demonstrate how AEO improvements play out across different business types, calibrated to outcomes that are consistent with published SERP research and documented AEO principles. Treat them as worked examples of what the methodology would measure, not as proof of what GEOoptimised achieves for clients.</p>
+        </div>
+
+        <!-- Scenario 1 -->
+        <div class="mt-10">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="inline-block rounded border border-[var(--line)] bg-ink-900 px-3 py-1 font-mono text-xs text-ink-400">Illustrative example — not a real client</span>
+          </div>
+          <div class="card p-6 sm:p-8">
+            <h3 class="font-display text-xl font-semibold text-ink-50">Scenario A: Independent Financial Adviser</h3>
+            <p class="mt-2 text-sm text-ink-400">Local professional services firm, 8-page website, existing domain authority of approximately 20</p>
+
+            <div class="mt-6 prose-dark">
+              <p><strong>Starting position:</strong> The site ranks between positions 8 and 15 for its primary target queries ("how much does a financial adviser cost," "do I need a financial adviser," "what does a financial adviser do"). No featured snippets held. No FAQPage schema deployed. Main service page has no question-based headings.</p>
+
+              <p><strong>Changes made:</strong> Over a two-week period, the firm restructures its three main service pages. Each page receives: question-based H2 headings; a 50-word definitional opening paragraph; a five-question FAQ section with self-contained answers; and FAQPage schema implemented via a WordPress plugin. No other changes — no new pages, no new backlinks, no design changes.</p>
+
+              <p><strong>Illustrative outcome (hypothetical, 90 days post-implementation):</strong> In this type of scenario, the pattern documented in AEO literature suggests one or two of the target queries could move from no-snippet to a paragraph featured snippet; PAA appearances could increase from zero to a small number of consistent positions; and the FAQ schema could trigger People Also Ask expansions. Zero-click impressions for these queries would increase while click-through rate for the same queries would decrease — a characteristic AEO trade-off where brand visibility increases even as direct traffic stays flat.</p>
+
+              <p><strong>What this illustrates:</strong> Content restructuring on pages that already have baseline ranking authority is the fastest path to AEO gains for professional services firms. The trade-off between zero-click visibility and direct click-through is genuine and should be planned for.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scenario 2 -->
+        <div class="mt-8">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="inline-block rounded border border-[var(--line)] bg-ink-900 px-3 py-1 font-mono text-xs text-ink-400">Illustrative example — not a real client</span>
+          </div>
+          <div class="card p-6 sm:p-8">
+            <h3 class="font-display text-xl font-semibold text-ink-50">Scenario B: SaaS Company with Documentation Hub</h3>
+            <p class="mt-2 text-sm text-ink-400">B2B software company, 200+ page site including product documentation and a blog, established domain authority</p>
+
+            <div class="mt-6 prose-dark">
+              <p><strong>Starting position:</strong> The company has strong organic rankings for its branded queries but limited featured snippet presence for category-level queries ("what is [software category]," "how to [common task]," "[product type] vs [product type]"). AI Overview citations are not being tracked. Documentation pages are structurally dense but lack FAQ schema.</p>
+
+              <p><strong>Changes made:</strong> A phased programme over twelve weeks: Phase 1 applies AEO restructuring (question headings, definitional openings, FAQPage schema) to the ten highest-traffic blog posts. Phase 2 adds HowTo schema to the twenty most-visited documentation pages. Phase 3 creates five new comparison pages targeting "[product] vs [alternative]" queries, with structured comparison tables and explicit recommendation statements.</p>
+
+              <p><strong>Illustrative outcome (hypothetical, 120 days post-implementation):</strong> The pattern in AEO literature for sites with established authority suggests this type of programme could yield: featured snippet gains across a proportion of the target blog queries; PAA appearances for the HowTo-structured documentation pages; and AI Overview citations for some of the comparison pages, particularly where the structured table provides a clean data extraction surface. The comparison pages — being new — would take longer to accumulate AEO positions than restructured existing pages.</p>
+
+              <p><strong>What this illustrates:</strong> For established domains, phased AEO implementation allows prioritisation by page authority and commercial value. Comparison-intent queries are a particularly high-value AEO target for SaaS companies because they appear at the commercial-investigation stage of the buyer journey.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scenario 3 -->
+        <div class="mt-8">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="inline-block rounded border border-[var(--line)] bg-ink-900 px-3 py-1 font-mono text-xs text-ink-400">Illustrative example — not a real client</span>
+          </div>
+          <div class="card p-6 sm:p-8">
+            <h3 class="font-display text-xl font-semibold text-ink-50">Scenario C: Local Trade Business</h3>
+            <p class="mt-2 text-sm text-ink-400">Electrician serving a single city, five-page website, minimal SEO history</p>
+
+            <div class="mt-6 prose-dark">
+              <p><strong>Starting position:</strong> The site appears in local pack results but has minimal organic visibility. No schema beyond basic Organisation markup. Google Business Profile is claimed but the Q&amp;A section is empty. No FAQ content on the website.</p>
+
+              <p><strong>Changes made:</strong> Two parallel tracks. Website track: add a service page for each main service type, each with question-based headings, a FAQ section, FAQPage schema, and a concise LocalBusiness schema. Google Business Profile track: populate the Q&amp;A section with ten questions covering price, process, certification, and service area.</p>
+
+              <p><strong>Illustrative outcome (hypothetical, 60 days post-implementation):</strong> Local service AEO patterns in the literature suggest Google Business Profile Q&amp;A changes produce faster visible changes than website schema changes, sometimes within two to four weeks. The illustrative outcome in this type of scenario might include voice-search answer selection for basic local-intent queries and PAA appearances for local service pricing queries, where local businesses are often selected over national aggregators because of their geographic specificity. The combination of on-site FAQ schema and GBP Q&amp;A reinforces entity signals for the same questions across two data sources.</p>
+
+              <p><strong>What this illustrates:</strong> For local businesses, the Google Business Profile Q&amp;A section is an overlooked AEO asset that should be treated with the same care as on-site FAQ content. It feeds directly into the local knowledge panel and voice assistant answers for place-intent queries.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: What Drives Results -->
+      <section id="what-drives-results" class="anchor-top prose-dark mb-16">
+        <h2>What the Evidence Says Actually Drives AEO Results</h2>
+        <p><strong>Across documented AEO research and SERP analysis, a consistent set of content and structural factors emerges as the primary drivers of answer-box selection.</strong> These are not theoretical best practices — they are patterns observed in pages that hold featured snippets and AI Overview citations across diverse industries.</p>
+
+        <h3>Content Structure Outperforms Content Length</h3>
+        <p>AEO results are driven by structural clarity, not by word count. A 300-word page with a concise definitional opening, a question-based heading, and a FAQ section consistently outperforms a 2,000-word page with the same topical coverage but no structural AEO signals. Answer engines extract the single most relevant passage — the quality and extractability of that passage matters far more than the total volume of content surrounding it.</p>
+        <p>This has practical implications for SMEs with limited content creation capacity: restructuring ten existing pages delivers more AEO value than writing ten new long-form pages without structural optimisation. For a prioritised action plan, see our <a href="/aeo-for-smes/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO for SMEs guide</a>.</p>
+
+        <h3>Schema Markup as a Confidence Signal</h3>
+        <p>FAQPage schema does not guarantee selection — it signals to the answer engine that the marked-up content is intended for direct-answer extraction, and it reduces the ambiguity the engine faces when deciding whether to select your content over a competitor's. Pages with schema and pages without schema are approximately equal in ranking authority terms; in answer-box terms, schema is a meaningful differentiator.</p>
+
+        <h3>Ranking Position as a Prerequisite</h3>
+        <p>AEO improvements occur within the pool of pages that are already ranking for a query. Google will not select a featured snippet from a page that ranks below position twenty for the underlying query. The first requirement for AEO is therefore sufficient organic authority to rank — which is why <a href="/what-is-aeo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">what AEO is</a> and how it differs from SEO remains important context. AEO is optimisation within a ranking pool, not a path to that pool. For more on <a href="/aeo-best-practices/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO best practices</a>, including how to sequence SEO and AEO investments, see the dedicated guide.</p>
+      </section>
+
+      <!-- Section 6: Attribution Challenges -->
+      <section id="attribution" class="anchor-top prose-dark mb-16">
+        <h2>Attribution Challenges in AEO Measurement</h2>
+        <p><strong>Attribution is the central methodological challenge in AEO case studies, because featured snippet and AI citation changes occur within a dynamic environment where algorithm updates, competitor actions, and SEO changes all affect the same metrics simultaneously.</strong></p>
+
+        <h3>The Algorithm Update Problem</h3>
+        <p>Google makes thousands of algorithm updates per year, including periodic core updates that substantially reorganise which pages hold featured snippets across entire topic categories. A study that runs through a core update cannot cleanly attribute snippet changes to AEO work — the update is a confounding variable of unknown magnitude. Best practice is to log all known algorithm updates during the study period and adjust interpretation accordingly.</p>
+
+        <h3>The Competitor Action Problem</h3>
+        <p>Your featured snippet position can change because a competitor improved their content, not because yours deteriorated. Tracking competitors' content changes on your target queries — particularly any structural AEO changes they make — is part of a comprehensive attribution methodology. If you lose a snippet you previously held, the first question is whether a competitor made a structural improvement, not whether your content degraded.</p>
+
+        <h3>The AI Overview Opacity Problem</h3>
+        <p>AI Overviews do not provide direct measurement APIs. Citation frequency data is available through third-party monitoring tools, but these tools measure samples of queries rather than complete coverage, and their methodology varies. AEO studies that report AI Overview improvements should document which monitoring tool was used, the size of the query sample, and the testing cadence. Without this context, AI Overview citation figures are unverifiable.</p>
+
+        <p>These attribution challenges are not reasons to avoid measuring AEO — they are reasons to measure it carefully, report limitations honestly, and treat all AEO case study data as directionally indicative rather than causally definitive. As the discipline matures and measurement tooling improves, attribution standards will sharpen. For now, honest methodology disclosure is the mark of a credible study.</p>
+      </section>
+
+      <!-- FAQ -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          <a href="/answer-engine-optimisation/" class="card card-hover block p-5 no-underline">
+            <span class="eyebrow">Node</span>
+            <h3 class="mt-2 font-display text-base font-semibold text-white">Answer Engine Optimisation</h3>
+            <p class="mt-2 text-sm text-ink-300">The complete AEO guide — what it is, how it works, best practices, and tools.</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read guide <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a href="/aeo-best-practices/" class="card card-hover block p-5 no-underline">
+            <span class="eyebrow">Guide</span>
+            <h3 class="mt-2 font-display text-base font-semibold text-white">AEO Best Practices</h3>
+            <p class="mt-2 text-sm text-ink-300">The tactical checklist for content structure, schema, and answer-box optimisation.</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read guide <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a href="/aeo-for-smes/" class="card card-hover block p-5 no-underline">
+            <span class="eyebrow">Guide</span>
+            <h3 class="mt-2 font-display text-base font-semibold text-white">AEO for SMEs</h3>
+            <p class="mt-2 text-sm text-ink-300">Practical, budget-aware AEO implementation for small and medium businesses.</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read guide <span aria-hidden="true">&rarr;</span></span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Build Your Own AEO Track Record</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        GEOoptimised helps you implement AEO with the same rigour described on this page — clear baselines, documented changes, honest measurement. Let us build the methodology with you from day one, so your results are attributable and credible.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Start your AEO programme</a>
+        <a href="/aeo-services/" class="btn btn-ghost">View AEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

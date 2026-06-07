@@ -1,0 +1,603 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'AEO Examples: What Good Answer Engine Optimisation Looks Like | GEOoptimised';
+const description = 'AEO examples and illustrative patterns: see what well-structured FAQ blocks, definition passages, comparison tables, and how-to lists that win featured snippets look like in practice.';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "AEO Examples: What Good Answer Engine Optimisation Looks Like",
+  "description": "Illustrative patterns for answer engine optimisation: definition blocks, FAQ structures, comparison tables, and how-to lists with the structural features that earn featured snippets and AI Overview citations.",
+  "datePublished": "2026-06-07",
+  "dateModified": "2026-06-07",
+  "image": "https://geooptimised.com/og-image.png",
+  "inLanguage": "en-GB",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://geooptimised.com/aeo-examples/"
+  },
+  "author": {
+    "@id": "https://geooptimised.com/#organization"
+  },
+  "publisher": {
+    "@id": "https://geooptimised.com/#organization"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does a good AEO definition block look like?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A well-structured AEO definition block opens with a concise 40-60 word answer to the question implied by the heading. It states what the term is, provides one clarifying attribute, and avoids introductory preamble. The answer must be self-contained — readable and meaningful without the surrounding page context — so an answer engine can extract and surface it independently."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do structured FAQ sections perform well in AEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Structured FAQ sections perform well because they mirror the question-answer format answer engines are built to surface. Each FAQ item is a self-contained unit: a specific question followed by a direct, complete answer. Adding FAQPage schema markup explicitly signals this structure to answer engines, making content eligible for People Also Ask boxes and direct snippet selection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes a comparison table AEO-friendly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An AEO-friendly comparison table uses clear column headers with scope attributes, keeps cell content concise (one idea per cell), covers the specific attributes users ask about in comparison queries, and is preceded by a direct-answer sentence summarising the key distinction. HTML tables are preferred over image-based or CSS-only tables because answer engines can extract text from HTML table cells directly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How short should voice-optimised answers be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Voice assistant answers should typically be 20–35 words for direct factual queries. The answer must be self-contained — a complete sentence that makes sense when read aloud without surrounding context. Avoid phrases like 'as mentioned above' or references to visual elements. For 'how to' queries, voice answers can run to 50–70 words across two to three short sentences."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do AEO patterns work for AI Overviews as well as featured snippets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The structural patterns that earn featured snippets — direct opening answers, question-based headings, concise definition blocks, FAQ schema — also improve the probability of being cited in Google's AI Overviews. AI Overviews synthesise from multiple sources, so a single passage may be cited as one of several contributing references rather than as the sole answer, but the selection criteria are similar."
+      }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://geooptimised.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Answer Engine Optimisation", "item": "https://geooptimised.com/answer-engine-optimisation/" },
+    { "@type": "ListItem", "position": 3, "name": "AEO Examples", "item": "https://geooptimised.com/aeo-examples/" }
+  ]
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'why-structure-matters', label: 'Why Structure Matters' },
+  { id: 'definition-block', label: 'Pattern 1: Definition Block' },
+  { id: 'faq-structure', label: 'Pattern 2: FAQ Structure' },
+  { id: 'how-to-list', label: 'Pattern 3: How-To List' },
+  { id: 'comparison-table', label: 'Pattern 4: Comparison Table' },
+  { id: 'voice-answer', label: 'Pattern 5: Voice-Optimised Answer' },
+  { id: 'what-to-avoid', label: 'Common AEO Mistakes' },
+  { id: 'applying-patterns', label: 'Applying These Patterns' },
+  { id: 'faq', label: 'Frequently Asked Questions' },
+];
+
+const faqs = [
+  {
+    q: 'What does a good AEO definition block look like?',
+    a: 'A well-structured AEO definition block opens with a concise 40–60 word answer to the question implied by the heading. It states what the term is, provides one clarifying attribute, and avoids introductory preamble. The answer must be self-contained — readable and meaningful without the surrounding page context — so an answer engine can extract and surface it independently.',
+  },
+  {
+    q: 'Why do structured FAQ sections perform well in AEO?',
+    a: 'Structured FAQ sections perform well because they mirror the question-answer format answer engines are built to surface. Each FAQ item is a self-contained unit: a specific question followed by a direct, complete answer. Adding FAQPage schema markup explicitly signals this structure to answer engines, making content eligible for People Also Ask boxes and direct snippet selection.',
+  },
+  {
+    q: 'What makes a comparison table AEO-friendly?',
+    a: 'An AEO-friendly comparison table uses clear column headers with <code>scope</code> attributes, keeps cell content concise (one idea per cell), covers the specific attributes users ask about in comparison queries, and is preceded by a direct-answer sentence summarising the key distinction. HTML tables are preferred over image-based or CSS-only tables because answer engines can extract text from HTML table cells directly.',
+  },
+  {
+    q: 'How short should voice-optimised answers be?',
+    a: 'Voice assistant answers should typically be 20–35 words for direct factual queries. The answer must be self-contained — a complete sentence that makes sense when read aloud without surrounding context. Avoid phrases like "as mentioned above" or references to visual elements. For "how to" queries, voice answers can run to 50–70 words across two to three short sentences.',
+  },
+  {
+    q: 'Do AEO patterns work for AI Overviews as well as featured snippets?',
+    a: 'Yes. The structural patterns that earn featured snippets — direct opening answers, question-based headings, concise definition blocks, FAQ schema — also improve the probability of being cited in Google\'s AI Overviews. AI Overviews synthesise from multiple sources, so a single passage may be cited as one of several contributing references rather than as the sole answer, but the selection criteria are similar.',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/aeo-examples/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex items-center gap-1.5 font-mono text-xs text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/answer-engine-optimisation/" class="transition hover:text-[var(--accent)]">Answer Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">AEO Examples</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-fade relative overflow-hidden">
+    <div class="container-wide pt-12 pb-16">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Practical Guide</span>
+        <span class="font-mono text-xs text-ink-400">·</span>
+        <time datetime="2026-06-07" class="font-mono text-xs text-ink-400">7 June 2026</time>
+        <span class="font-mono text-xs text-ink-400">·</span>
+        <span class="font-mono text-xs text-ink-400">11 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-4xl font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+        <span class="grad-text">AEO Examples:</span> What Good Answer Engine Optimisation Looks Like
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg text-ink-200 leading-relaxed">
+        Abstract AEO principles are useful — but seeing them rendered as concrete content patterns makes the difference between understanding the theory and knowing how to apply it. This guide presents five illustrative structural patterns that consistently earn featured snippets, AI Overview citations, and voice assistant answers, with annotated notes on why each element works.
+      </p>
+      <p class="mt-3 text-sm text-ink-500">
+        Note: all content examples on this page are illustrative patterns only. They do not represent named clients, real brands, or verified performance data.
+      </p>
+    </div>
+  </header>
+
+  <!-- Two-column layout: TOC + article -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" aria-label="Table of contents">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Article -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 shrink-0 text-[var(--accent)]">&#10003;</span>
+            <span>AEO-optimised content uses five core structural patterns: definition blocks, FAQ structures, how-to lists, comparison tables, and voice-length answers.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 shrink-0 text-[var(--accent)]">&#10003;</span>
+            <span>Each pattern is designed to be extractable — self-contained enough to surface without the surrounding page context.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 shrink-0 text-[var(--accent)]">&#10003;</span>
+            <span>The same page can include multiple patterns targeting different query types and answer surfaces simultaneously.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 shrink-0 text-[var(--accent)]">&#10003;</span>
+            <span>FAQPage schema is the most impactful single markup addition for answer engine visibility across Google's SERP features.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 shrink-0 text-[var(--accent)]">&#10003;</span>
+            <span>AEO patterns apply to both traditional featured snippets and AI Overview citations — the selection criteria overlap significantly.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prose-dark">
+
+        <!-- Why structure matters -->
+        <h2 id="why-structure-matters" class="anchor-top">Why Content Structure Determines AEO Outcomes</h2>
+        <p><strong>Answer engines do not rank content by subject matter alone — they select content based on how clearly it signals that it contains a direct, extractable answer to a specific query.</strong> Two pages with identical factual information can have radically different AEO outcomes if one is structured for human reading and the other is structured for machine extraction.</p>
+        <p>The patterns in this guide reflect how answer engines process content. Google's featured snippet algorithm, its AI Overview synthesis, and voice assistant answer selection all share a common preference: find the most concise, self-contained, directly responsive passage for the query and surface it. Content that buries the answer in a long preamble, uses vague pronouns that depend on surrounding context, or structures information as flowing prose rather than extractable units will consistently lose to structurally superior content, even when it is more comprehensively researched.</p>
+        <p>Understanding AEO through structural patterns is more actionable than understanding it through abstract signals. The five patterns below cover the most common answer surfaces: definitional featured snippets, People Also Ask boxes, how-to list snippets, comparison table snippets, and voice assistant answers. Each pattern is illustrated with a before-and-after approach and annotated to explain what the structural change achieves.</p>
+        <p>For the underlying mechanics of how AEO differs from traditional SEO, see <a href="/aeo-vs-seo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO vs traditional SEO</a>. For the complete framework including best practices beyond structure, see the <a href="/answer-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO complete guide</a>.</p>
+
+      </div>
+
+      <!-- Pattern 1: Definition block -->
+      <div class="mt-16">
+        <h2 id="definition-block" class="anchor-top font-display text-2xl font-bold text-ink-50 mb-2">Pattern 1: The Definition Block</h2>
+        <p class="text-ink-300 mb-8">Used for: definitional queries ("what is X"), explanatory queries ("how does X work"), conceptual queries ("why does X happen"). Target snippet type: paragraph snippet.</p>
+
+        <div class="not-prose grid gap-6 md:grid-cols-2">
+          <!-- Before -->
+          <div class="card p-6 border border-red-900/40">
+            <div class="flex items-center gap-2 mb-4">
+              <svg aria-hidden="true" class="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              <span class="font-mono text-xs uppercase tracking-wider text-red-400">Not AEO-optimised</span>
+            </div>
+            <div class="bg-geo-900 rounded-lg p-4 text-sm text-ink-300 leading-relaxed space-y-2">
+              <p class="font-semibold text-ink-100">What is answer engine optimisation?</p>
+              <p>In today's rapidly evolving digital landscape, the way people search for information is changing significantly. Traditional search has given way to a new era of AI-powered responses. If you're a marketer wondering how to adapt, you've probably heard the term "answer engine optimisation" being used more and more frequently. In this section, we'll explore what that means and why it's important for modern businesses looking to maintain their online visibility.</p>
+            </div>
+            <div class="mt-4 space-y-1.5">
+              <p class="text-xs text-red-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10007;</span> Answer does not appear until after a long preamble</p>
+              <p class="text-xs text-red-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10007;</span> First paragraph contains no extractable definition</p>
+              <p class="text-xs text-red-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10007;</span> "You've probably heard" is not self-contained when extracted</p>
+            </div>
+          </div>
+
+          <!-- After -->
+          <div class="card p-6 border border-green-900/40">
+            <div class="flex items-center gap-2 mb-4">
+              <svg aria-hidden="true" class="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span class="font-mono text-xs uppercase tracking-wider text-green-400">AEO-optimised (illustrative)</span>
+            </div>
+            <div class="bg-geo-900 rounded-lg p-4 text-sm text-ink-300 leading-relaxed space-y-2">
+              <p class="font-semibold text-ink-100">What is answer engine optimisation?</p>
+              <p><strong>Answer engine optimisation (AEO) is the practice of structuring website content so that answer engines — including Google's featured snippets, AI Overviews, and voice assistants — can extract and surface it as a direct response to user queries, without the user needing to click through to the source page.</strong></p>
+              <p>Unlike traditional SEO, which aims for ranking position in a results list, AEO aims for answer selection — being chosen as the extracted response itself. The discipline covers featured snippet optimisation, voice search answers, People Also Ask boxes, and AI Overview citations.</p>
+            </div>
+            <div class="mt-4 space-y-1.5">
+              <p class="text-xs text-green-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10003;</span> Answer appears immediately after the heading</p>
+              <p class="text-xs text-green-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10003;</span> First sentence is a complete, self-contained definition (~45 words)</p>
+              <p class="text-xs text-green-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10003;</span> Standalone: readable and accurate when extracted without context</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 card p-5 not-prose">
+          <span class="font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Why this works</span>
+          <p class="mt-2 text-sm text-ink-300 leading-relaxed">Google's featured snippet algorithm reads the heading as the query and evaluates the first substantive paragraph beneath it as the candidate answer. The answer must be complete at 40–60 words, because the algorithm extracts a passage, not a section. Content that leads with context-setting rather than the answer gives the algorithm nothing to extract from the first pass. The bold treatment of the definition sentence is also an AEO signal: it visually and semantically marks the passage as the primary claim.</p>
+        </div>
+      </div>
+
+      <!-- Pattern 2: FAQ Structure -->
+      <div class="mt-16">
+        <h2 id="faq-structure" class="anchor-top font-display text-2xl font-bold text-ink-50 mb-2">Pattern 2: The Structured FAQ Section</h2>
+        <p class="text-ink-300 mb-8">Used for: informational queries, People Also Ask boxes, long-tail question queries. Target snippet type: PAA expansion, direct paragraph snippet, AI Overview citation.</p>
+
+        <div class="not-prose grid gap-6 md:grid-cols-2">
+          <div class="card p-6 border border-red-900/40">
+            <div class="flex items-center gap-2 mb-4">
+              <svg aria-hidden="true" class="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              <span class="font-mono text-xs uppercase tracking-wider text-red-400">Weak FAQ pattern</span>
+            </div>
+            <div class="bg-geo-900 rounded-lg p-4 text-sm text-ink-300 leading-relaxed space-y-3">
+              <p class="font-semibold text-ink-100">Frequently Asked Questions</p>
+              <p><strong>Q: How long does it take?</strong><br/>A: It depends on the situation and the type of project involved.</p>
+              <p><strong>Q: Is it expensive?</strong><br/>A: Pricing varies. See our pricing page for details.</p>
+            </div>
+            <div class="mt-4 space-y-1.5">
+              <p class="text-xs text-red-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10007;</span> Questions are vague — no entity or topic named</p>
+              <p class="text-xs text-red-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10007;</span> Answers are not self-contained or informative</p>
+              <p class="text-xs text-red-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10007;</span> No FAQPage schema — invisible to structured data extraction</p>
+            </div>
+          </div>
+
+          <div class="card p-6 border border-green-900/40">
+            <div class="flex items-center gap-2 mb-4">
+              <svg aria-hidden="true" class="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span class="font-mono text-xs uppercase tracking-wider text-green-400">Strong FAQ pattern (illustrative)</span>
+            </div>
+            <div class="bg-geo-900 rounded-lg p-4 text-sm text-ink-300 leading-relaxed space-y-3">
+              <p class="font-semibold text-ink-100">Frequently Asked Questions</p>
+              <p><strong>How long does answer engine optimisation take to show results?</strong></p>
+              <p>Most businesses see measurable changes in featured snippet ownership within six to ten weeks of implementing AEO structural changes. Voice answer improvements are often faster — two to four weeks — because voice assistants update their source selections more frequently than featured snippet algorithms. Full AI Overview citation typically requires twelve to sixteen weeks of consistent structural signals.</p>
+              <p class="mt-3"><strong>Does AEO require a large content budget?</strong></p>
+              <p>AEO is primarily a restructuring discipline rather than a creation one. Most of the value comes from editing existing pages to add direct-answer openings, question-based headings, and FAQ schema — not from producing new content. A focused two-to-four-week audit and restructuring sprint can cover the majority of high-value pages on a mid-sized site.</p>
+            </div>
+            <div class="mt-4 space-y-1.5">
+              <p class="text-xs text-green-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10003;</span> Questions name the topic explicitly — matchable to real queries</p>
+              <p class="text-xs text-green-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10003;</span> Each answer is complete and informative without surrounding context</p>
+              <p class="text-xs text-green-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10003;</span> Markup with FAQPage schema signals each Q&A pair for extraction</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 card p-5 not-prose">
+          <span class="font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Why this works</span>
+          <p class="mt-2 text-sm text-ink-300 leading-relaxed">FAQPage schema is the most direct structured data signal you can give an answer engine. It wraps each question-answer pair in markup that says, explicitly: "this is a question, this is its answer, they go together." Google uses this to populate People Also Ask expansions. The questions must be specific enough to match a real user query — "how long does X take" with the entity named — and the answers must stand alone. Each FAQ answer is in effect a mini-definition block: it needs the same self-containment and directness as a featured snippet candidate.</p>
+        </div>
+      </div>
+
+      <!-- Pattern 3: How-To List -->
+      <div class="mt-16">
+        <h2 id="how-to-list" class="anchor-top font-display text-2xl font-bold text-ink-50 mb-2">Pattern 3: The How-To List</h2>
+        <p class="text-ink-300 mb-8">Used for: process queries ("how to X"), step-based queries ("steps to X"), instructional queries ("how do I X"). Target snippet type: ordered list snippet, HowTo rich result.</p>
+
+        <div class="not-prose grid gap-6 md:grid-cols-2">
+          <div class="card p-6 border border-red-900/40">
+            <div class="flex items-center gap-2 mb-4">
+              <svg aria-hidden="true" class="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              <span class="font-mono text-xs uppercase tracking-wider text-red-400">Prose process — not extractable</span>
+            </div>
+            <div class="bg-geo-900 rounded-lg p-4 text-sm text-ink-300 leading-relaxed">
+              <p class="font-semibold text-ink-100">How to implement AEO on an existing page</p>
+              <p class="mt-2">There are several things you should do. First, you'll want to look at your headings and think about whether they could be phrased as questions. Then once you've done that, you should look at the paragraphs underneath each heading and consider whether the answer appears early enough. You might also want to add some FAQ sections. Schema markup is important too, and you'll want to validate it once you've added it.</p>
+            </div>
+            <div class="mt-4 space-y-1.5">
+              <p class="text-xs text-red-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10007;</span> Steps buried in flowing prose — cannot be extracted as a list</p>
+              <p class="text-xs text-red-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10007;</span> No &lt;ol&gt; markup — list snippet cannot be triggered</p>
+              <p class="text-xs text-red-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10007;</span> Vague action verbs ("think about", "consider") reduce clarity</p>
+            </div>
+          </div>
+
+          <div class="card p-6 border border-green-900/40">
+            <div class="flex items-center gap-2 mb-4">
+              <svg aria-hidden="true" class="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span class="font-mono text-xs uppercase tracking-wider text-green-400">Structured list — extractable (illustrative)</span>
+            </div>
+            <div class="bg-geo-900 rounded-lg p-4 text-sm text-ink-300 leading-relaxed">
+              <p class="font-semibold text-ink-100">How to implement AEO on an existing page</p>
+              <p class="mt-2 mb-3"><strong>Implementing AEO on an existing page involves five structural changes that make content machine-extractable without rewriting the underlying information.</strong></p>
+              <ol class="space-y-2 list-none">
+                <li class="flex gap-2"><span class="shrink-0 font-mono text-[var(--accent)]">1.</span><span><strong>Rewrite each heading as a question</strong> that mirrors the natural language query your target audience would ask.</span></li>
+                <li class="flex gap-2"><span class="shrink-0 font-mono text-[var(--accent)]">2.</span><span><strong>Move the direct answer to the first sentence</strong> under each heading — 40–60 words, self-contained.</span></li>
+                <li class="flex gap-2"><span class="shrink-0 font-mono text-[var(--accent)]">3.</span><span><strong>Convert process sections to numbered lists</strong> with action-verb-first step labels.</span></li>
+                <li class="flex gap-2"><span class="shrink-0 font-mono text-[var(--accent)]">4.</span><span><strong>Add a FAQ section</strong> targeting the People Also Ask questions appearing for your primary keyword.</span></li>
+                <li class="flex gap-2"><span class="shrink-0 font-mono text-[var(--accent)]">5.</span><span><strong>Implement FAQPage and Article schema</strong>, then validate with Google's Rich Results Test.</span></li>
+              </ol>
+            </div>
+            <div class="mt-4 space-y-1.5">
+              <p class="text-xs text-green-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10003;</span> Direct-answer sentence precedes the list — paragraph snippet fallback</p>
+              <p class="text-xs text-green-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10003;</span> Each step begins with an action verb + bold key phrase</p>
+              <p class="text-xs text-green-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10003;</span> List structure is extractable as an ordered list snippet</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 card p-5 not-prose">
+          <span class="font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Why this works</span>
+          <p class="mt-2 text-sm text-ink-300 leading-relaxed">Google's list snippet extraction works by identifying an &lt;ol&gt; or &lt;ul&gt; element that directly follows a heading matching the query. The algorithm then extracts the list items verbatim. For this to function, each list item needs to be a standalone instruction rather than a fragment that depends on surrounding context. Steps that begin with action verbs ("Rewrite", "Move", "Add", "Implement") parse more cleanly than steps that begin with pronouns or articles. The direct-answer sentence before the list serves as a fallback — if the algorithm shows a paragraph snippet instead of a list snippet for the query, it still has a clean, extractable definition to surface.</p>
+        </div>
+      </div>
+
+      <!-- Pattern 4: Comparison Table -->
+      <div class="mt-16">
+        <h2 id="comparison-table" class="anchor-top font-display text-2xl font-bold text-ink-50 mb-2">Pattern 4: The AEO-Friendly Comparison Table</h2>
+        <p class="text-ink-300 mb-8">Used for: comparison queries ("X vs Y"), selection queries ("best X for Y"), attribute queries ("features of X vs Z"). Target snippet type: table snippet.</p>
+
+        <div class="card overflow-hidden not-prose mb-4">
+          <div class="px-5 pt-5 pb-2 flex items-center gap-2">
+            <svg aria-hidden="true" class="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span class="font-mono text-xs uppercase tracking-wider text-green-400">AEO-optimised table (illustrative example)</span>
+          </div>
+          <div class="px-5 pb-3 text-sm text-ink-300">
+            <strong>Featured snippet and voice answers require a summary sentence before the table.</strong> Illustrative example: "AEO focuses on answer selection within traditional search, while GEO focuses on LLM citation across AI-native platforms — they address different answer surfaces but share structural content requirements."
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm">
+              <thead>
+                <tr class="border-b border-[var(--line)]">
+                  <th scope="col" class="px-5 py-3 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Attribute</th>
+                  <th scope="col" class="px-5 py-3 font-mono text-xs uppercase tracking-wider text-ink-300">AEO</th>
+                  <th scope="col" class="px-5 py-3 font-mono text-xs uppercase tracking-wider text-ink-300">GEO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Primary surfaces</td>
+                  <td class="px-5 py-3 text-ink-300">Featured snippets, voice assistants, PAA, AI Overviews</td>
+                  <td class="px-5 py-3 text-ink-300">ChatGPT, Perplexity, Gemini, Copilot, AI Overviews</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Core tactic</td>
+                  <td class="px-5 py-3 text-ink-300">Passage structure and FAQ schema</td>
+                  <td class="px-5 py-3 text-ink-300">Entity authority and citation-ready content</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Measurement</td>
+                  <td class="px-5 py-3 text-ink-300">Snippet ownership, PAA rate, GSC feature data</td>
+                  <td class="px-5 py-3 text-ink-300">Citation frequency, brand accuracy, AI visibility share</td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-3 font-medium text-ink-100">SEO dependency</td>
+                  <td class="px-5 py-3 text-ink-300">High — builds on top of SEO foundations</td>
+                  <td class="px-5 py-3 text-ink-300">Moderate — entity building can partially bypass traditional SEO</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="mt-6 card p-5 not-prose">
+          <span class="font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Why this works</span>
+          <p class="mt-2 text-sm text-ink-300 leading-relaxed">Table snippets are triggered by comparison queries. Google extracts the HTML table — including header row text and cell content — and displays it directly in search results. For extraction to work cleanly, the table needs semantic markup (&lt;th scope="col"&gt; for column headers, &lt;th scope="row"&gt; for row headers if applicable) and cell content that is self-explanatory without surrounding prose. The direct-answer sentence before the table is also critical: table snippets are not always shown, and if Google selects a paragraph snippet instead, the sentence provides the extractable alternative. Notice the table above has a direct-answer sentence immediately preceding it — this is the "both answers" approach.</p>
+        </div>
+      </div>
+
+      <!-- Pattern 5: Voice answer -->
+      <div class="mt-16">
+        <h2 id="voice-answer" class="anchor-top font-display text-2xl font-bold text-ink-50 mb-2">Pattern 5: The Voice-Optimised Answer</h2>
+        <p class="text-ink-300 mb-8">Used for: conversational queries, "near me" queries, simple factual queries, quick-reference queries. Target surface: Google Assistant, Amazon Alexa, Apple Siri.</p>
+
+        <div class="not-prose grid gap-6 md:grid-cols-2">
+          <div class="card p-6 border border-red-900/40">
+            <div class="flex items-center gap-2 mb-4">
+              <svg aria-hidden="true" class="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              <span class="font-mono text-xs uppercase tracking-wider text-red-400">Not voice-optimised</span>
+            </div>
+            <div class="bg-geo-900 rounded-lg p-4 text-sm text-ink-300 leading-relaxed">
+              <p class="font-semibold text-ink-100">How long does it take to see AEO results?</p>
+              <p class="mt-2">Results from AEO can vary widely depending on a number of factors. These include the current state of your website's technical SEO, the competitiveness of your target keywords, how much content restructuring is required, and whether you already have some degree of featured snippet presence. In our experience working with various clients across different verticals, we have seen timelines ranging from as short as four weeks in some cases to as long as six months in others, particularly for highly competitive informational terms where established publishers already hold the snippet positions. You should also consider that...</p>
+            </div>
+            <div class="mt-4 space-y-1.5">
+              <p class="text-xs text-red-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10007;</span> Way too long to be read aloud by a voice assistant</p>
+              <p class="text-xs text-red-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10007;</span> Answer is buried after qualification ("can vary widely")</p>
+              <p class="text-xs text-red-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10007;</span> "In our experience" requires context — not extractable alone</p>
+            </div>
+          </div>
+
+          <div class="card p-6 border border-green-900/40">
+            <div class="flex items-center gap-2 mb-4">
+              <svg aria-hidden="true" class="h-5 w-5 text-green-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span class="font-mono text-xs uppercase tracking-wider text-green-400">Voice-optimised (illustrative)</span>
+            </div>
+            <div class="bg-geo-900 rounded-lg p-4 text-sm text-ink-300 leading-relaxed">
+              <p class="font-semibold text-ink-100">How long does it take to see AEO results?</p>
+              <p class="mt-2"><strong>Most websites see measurable AEO results within six to ten weeks. Featured snippet gains typically appear first, within four to six weeks of structural changes. Voice search improvements follow at two to four weeks. Full AI Overview citation usually takes twelve to sixteen weeks of consistent optimisation.</strong></p>
+              <p class="mt-2 text-ink-400 text-xs italic">(The bold paragraph above is the extractable voice answer — 47 words, three complete sentences, no contextual dependency.)</p>
+            </div>
+            <div class="mt-4 space-y-1.5">
+              <p class="text-xs text-green-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10003;</span> Answer is 47 words — within the 20–55 word voice window</p>
+              <p class="text-xs text-green-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10003;</span> Specific numbers make it useful and citation-worthy</p>
+              <p class="text-xs text-green-300 flex items-start gap-1.5"><span class="mt-0.5 shrink-0">&#10003;</span> Reads naturally when spoken aloud — no visual references</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 card p-5 not-prose">
+          <span class="font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Why this works</span>
+          <p class="mt-2 text-sm text-ink-300 leading-relaxed">Voice assistants read answers aloud from a single selected source. The typical voice answer runs 20–55 words — enough for two to four sentences. Anything longer gets truncated or replaced by a more concise competitor. The content must contain no references to visual elements ("see the table above", "as shown in the graph"), no ambiguous pronouns ("it", "they" without clear antecedents), and no modifying qualifiers that extend past the natural answer. Specific numbers — timeframes, percentages, counts — make the answer both useful and quotable. A vague answer ("it depends") will always lose to a specific one, even if the specific one includes a caveat ("typically X; faster if Y").</p>
+        </div>
+      </div>
+
+      <div class="prose-dark mt-16">
+
+        <!-- What to avoid -->
+        <h2 id="what-to-avoid" class="anchor-top">Common AEO Mistakes That Prevent Answer Selection</h2>
+        <p><strong>The most common AEO failure mode is structurally sound content that breaks down at the extraction level — the right information exists on the page, but answer engines cannot cleanly isolate and surface it.</strong></p>
+        <p>The patterns above illustrate what good looks like. The following failures appear consistently in AEO audits:</p>
+        <ul>
+          <li><strong>Answer buried after preamble.</strong> Any sentence before the direct answer reduces extraction probability. Answer engines evaluate the first 40–60 words below a heading. If those words are scene-setting rather than answering, the algorithm moves to the next candidate page.</li>
+          <li><strong>Contextually dependent sentences.</strong> Extracted passages must stand alone. "As discussed in the previous section" or "building on what we said above" are invisible in a snippet — the extracted sentence is all the user sees. Write every candidate answer sentence as if it will be read without context, because it will be.</li>
+          <li><strong>Over-hedged definitions.</strong> "Some people define X as... although others argue..." is poor AEO structure. Answer engines prefer confident, specific statements. This does not mean excluding nuance — it means leading with the primary definition and addressing nuance in the following sentence, not before the definition.</li>
+          <li><strong>Prose-wrapped lists.</strong> "There are three main steps involved in this process. The first step is to..." is a paragraph snippet candidate, not a list snippet candidate. For list snippets, the steps must be in actual &lt;ol&gt; or &lt;ul&gt; markup, not described in flowing text.</li>
+          <li><strong>FAQ questions that are too generic.</strong> "What is the cost?" does not match a real user query. "How much does answer engine optimisation cost?" matches the exact query pattern. FAQ questions that name the specific entity are far more likely to populate People Also Ask boxes.</li>
+          <li><strong>Missing or invalid schema.</strong> FAQPage schema with a syntax error is invisible to structured data processing. Validate every schema implementation with Google's Rich Results Test before publishing. An invalid schema is worse than no schema — it signals unreliable markup to the algorithm.</li>
+        </ul>
+
+        <!-- Applying patterns -->
+        <h2 id="applying-patterns" class="anchor-top">Applying These Patterns at Scale</h2>
+        <p><strong>Applying AEO patterns across an existing content library is primarily a restructuring effort, not a content creation effort — the information already exists; the work is making it extractable.</strong></p>
+        <p>The most efficient approach is a phased audit. Start with your highest-traffic pages and identify which query types they target: definitional, process-based, comparison, or factual. For each page, check whether each section's leading paragraph provides a direct answer within the first 50 words. If not, restructure it. Then check whether process sections are in list markup. Then check schema coverage.</p>
+        <p>Pages targeting comparison queries ("X vs Y") that do not contain an HTML table are leaving table snippet positions open for competitors. Adding a well-structured comparison table to an existing page is one of the highest-return AEO interventions available — no new content required, significant structural improvement delivered in under an hour per page.</p>
+        <p>Voice search deserves its own pass. Review each page's primary target query and ask whether the opening answer paragraph would work when read aloud by a voice assistant. If it references visual elements, runs over 60 words, or uses complex subordinate clauses, shorten and simplify it specifically for voice extraction. This edit rarely degrades the desktop reading experience and directly improves voice answer eligibility.</p>
+        <p>For structured implementation support, our <a href="/aeo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO services</a> cover audit, restructuring, and schema implementation. For the principles behind these patterns, see <a href="/aeo-best-practices/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO best practices</a>. For how these patterns relate to LLM citation in platforms like ChatGPT and Perplexity — which require additional signals beyond structure — see <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Generative Engine Optimisation</a>.</p>
+
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div class="mt-16">
+        <h2 id="faq" class="anchor-top font-display text-2xl font-bold grad-text sm:text-3xl">Frequently Asked Questions</h2>
+        <div class="mt-8 max-w-3xl divide-y divide-[var(--line)]">
+          {faqs.map(faq => (
+            <div class="faq-item">
+              <button
+                type="button"
+                class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors"
+                aria-expanded="false"
+              >
+                <span>{faq.q}</span>
+                <svg aria-hidden="true" focusable="false" class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+                </svg>
+              </button>
+              <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+                <p class="pb-5 text-ink-300 leading-relaxed" set:html={faq.a}></p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="container-wide py-20">
+    <div class="relative overflow-hidden rounded-2xl dot-grid">
+      <div class="absolute inset-0 bg-gradient-to-br from-[rgba(var(--accent-glow),.12)] via-transparent to-transparent"></div>
+      <div class="relative px-8 py-16 text-center sm:px-16">
+        <span class="eyebrow">Get Expert Help</span>
+        <h2 class="mt-4 font-display text-3xl font-bold text-ink-50 sm:text-4xl">Want These Patterns Applied to Your Content?</h2>
+        <p class="mt-4 mx-auto max-w-lg text-ink-300 leading-relaxed">
+          GEOoptimised audits your existing content library, identifies which pages are closest to answer selection, and restructures them using the patterns above. Our <a href="/aeo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO services</a> cover audit, restructuring, schema implementation, and ongoing performance monitoring.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact/" class="btn btn-primary">Request an AEO Audit</a>
+          <a href="/aeo-services/" class="btn btn-ghost">View AEO Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related reading -->
+  <section class="container-wide pb-20">
+    <span class="eyebrow" id="related">Related reading</span>
+    <div class="mt-6 grid gap-6 md:grid-cols-3">
+      <a href="/answer-engine-optimisation/" class="card card-hover block p-5 no-underline">
+        <span class="eyebrow">Guide</span>
+        <h3 class="mt-2 font-display text-base font-semibold text-white">Answer Engine Optimisation</h3>
+        <p class="mt-2 text-sm text-ink-300">The complete AEO guide — what it is, how it works, and ten best practices.</p>
+        <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read guide <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/aeo-vs-seo/" class="card card-hover block p-5 no-underline">
+        <span class="eyebrow">Comparison</span>
+        <h3 class="mt-2 font-display text-base font-semibold text-white">AEO vs Traditional SEO</h3>
+        <p class="mt-2 text-sm text-ink-300">How AEO and SEO differ in goal, ranking unit, signals, and measurement.</p>
+        <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read guide <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/aeo-best-practices/" class="card card-hover block p-5 no-underline">
+        <span class="eyebrow">Guide</span>
+        <h3 class="mt-2 font-display text-base font-semibold text-white">AEO Best Practices</h3>
+        <p class="mt-2 text-sm text-ink-300">The ten principles that underpin effective answer engine optimisation.</p>
+        <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read guide <span aria-hidden="true">&rarr;</span></span>
+      </a>
+    </div>
+  </section>
+
+  <script>
+    // TOC active state
+    const tocLinks = document.querySelectorAll('.toc a');
+    const sections = document.querySelectorAll('.anchor-top');
+    if (tocLinks.length && sections.length) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(l => l.classList.remove('active'));
+            const id = entry.target.id;
+            const active = document.querySelector(`.toc a[href="#${id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-20% 0px -80% 0px' });
+      sections.forEach(s => observer.observe(s));
+    }
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = '0';
+            other.closest('.faq-item').querySelector('.faq-icon').style.transform = '';
+          }
+        });
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+        icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+      });
+    });
+  </script>
+
+</Base>
