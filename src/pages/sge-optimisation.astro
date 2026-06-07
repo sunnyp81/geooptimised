@@ -1,0 +1,668 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'SGE Optimisation: Search Generative Experience Explained';
+const description = 'Search Generative Experience (SGE) was Google\'s experimental name for what launched as AI Overviews. Understand the history, the terminology change, and where to find current tactics.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  url: 'https://geooptimised.com/sge-optimisation/',
+  image: 'https://geooptimised.com/og-image.png',
+  inLanguage: 'en-GB',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/sge-optimisation/'
+  }
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What was Google SGE (Search Generative Experience)?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Google SGE, or Search Generative Experience, was the experimental name for an AI-powered feature that placed AI-generated answers at the top of Google Search results. It was available through Google\'s Search Labs opt-in programme from May 2023 until its transition to AI Overviews. In May 2024, Google renamed and launched the feature as Google AI Overviews at general availability, removing the Search Labs requirement.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Is SGE the same as Google AI Overviews?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SGE (Search Generative Experience) and Google AI Overviews refer to the same product at different stages of development. SGE was the experimental label used from May 2023 to May 2024. AI Overviews is the production name used from May 2024 onwards. The underlying technology evolved between the two phases, and Google made significant changes to scope, query coverage, and content policies between SGE and the AI Overviews launch.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Does "SGE optimization" still apply to AI Overviews?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The term "search generative experience optimization" or "SGE optimization" is still used in industry conversations because many people learned about the feature during its SGE experimental phase. The underlying optimisation principles carry over, though some tactics specific to the SGE experiment are no longer relevant because the product changed significantly at general availability. Current tactics should be framed around AI Overviews rather than SGE.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'When did Google rename SGE to AI Overviews?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Google announced the renaming from SGE (Search Generative Experience) to AI Overviews at Google I/O in May 2024. At the same time, Google moved the feature from the Search Labs opt-in experiment to general availability in the United States. The transition represented not just a name change but a significant expansion of the feature\'s reach and a refinement of its content policies and query coverage.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Where should I go for current AI Overviews optimisation tactics?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'For current tactics on earning inclusion in Google AI Overviews, see our dedicated guide: Google AI Overview Optimisation at geooptimised.com/google-ai-overview-optimisation/. That page covers how AI Overviews are generated today, the signals that influence citation, content structure requirements, technical setup, and performance tracking — all based on the current production product rather than the SGE experiment.'
+      }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+    { '@type': 'ListItem', position: 3, name: 'SGE Optimisation', item: 'https://geooptimised.com/sge-optimisation/' }
+  ]
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'what-was-sge', label: 'What Was Google SGE?' },
+  { id: 'sge-timeline', label: 'SGE Timeline' },
+  { id: 'sge-to-ai-overviews', label: 'SGE to AI Overviews: What Changed' },
+  { id: 'terminology', label: 'Terminology Guide' },
+  { id: 'sge-optimisation-legacy', label: 'What SGE Optimisation Covered' },
+  { id: 'current-state', label: 'Current State: AI Overviews' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' }
+];
+
+const faqs = [
+  {
+    q: 'What was Google SGE (Search Generative Experience)?',
+    a: "Google SGE, or Search Generative Experience, was the experimental name for an AI-powered feature that placed AI-generated answers at the top of Google Search results. It was available through Google's Search Labs opt-in programme from May 2023 until its transition to AI Overviews. In May 2024, Google renamed and launched the feature as Google AI Overviews at general availability, removing the Search Labs requirement."
+  },
+  {
+    q: 'Is SGE the same as Google AI Overviews?',
+    a: 'SGE (Search Generative Experience) and Google AI Overviews refer to the same product at different stages of development. SGE was the experimental label used from May 2023 to May 2024. AI Overviews is the production name used from May 2024 onwards. The underlying technology evolved between the two phases, and Google made significant changes to scope, query coverage, and content policies between SGE and the AI Overviews launch.'
+  },
+  {
+    q: 'Does "SGE optimization" still apply to AI Overviews?',
+    a: 'The term "search generative experience optimization" or "SGE optimization" is still used in industry conversations because many people learned about the feature during its SGE experimental phase. The underlying optimisation principles carry over, though some tactics specific to the SGE experiment are no longer relevant because the product changed significantly at general availability. Current tactics should be framed around AI Overviews rather than SGE.'
+  },
+  {
+    q: 'When did Google rename SGE to AI Overviews?',
+    a: "Google announced the renaming from SGE (Search Generative Experience) to AI Overviews at Google I/O in May 2024. At the same time, Google moved the feature from the Search Labs opt-in experiment to general availability in the United States. The transition represented not just a name change but a significant expansion of the feature's reach and a refinement of its content policies and query coverage."
+  },
+  {
+    q: 'Where should I go for current AI Overviews optimisation tactics?',
+    a: 'For current tactics on earning inclusion in Google AI Overviews, see our dedicated guide: Google AI Overview Optimisation at geooptimised.com/google-ai-overview-optimisation/. That page covers how AI Overviews are generated today, the signals that influence citation, content structure requirements, technical setup, and performance tracking — all based on the current production product rather than the SGE experiment.'
+  }
+];
+
+const related = [
+  {
+    tag: 'Current Tactics',
+    title: 'Google AI Overview Optimisation',
+    excerpt: 'The complete guide to earning citation in Google AI Overviews — how they are generated, what signals matter, and how to structure content for inclusion.',
+    href: '/google-ai-overview-optimisation/'
+  },
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'The full GEO framework covering all major AI platforms, from first principles through to citation strategy and measurement.',
+    href: '/generative-engine-optimisation/'
+  },
+  {
+    tag: 'Visibility',
+    title: 'AI Brand Visibility',
+    excerpt: 'How to measure and improve the frequency and accuracy with which AI systems cite your brand across all major platforms.',
+    href: '/ai-brand-visibility/'
+  }
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/sge-optimisation/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">Generative Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">SGE Optimisation</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Terminology &amp; History</span>
+        <span class="font-mono text-xs text-ink-400">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-400">11 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        SGE Optimisation: Search Generative Experience Explained
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        If you are searching for <strong class="text-white">search generative experience optimization</strong>, you have landed in the right place —
+        but the terminology has moved on. Google's Search Generative Experience (SGE) was the experimental name for a product
+        that launched in 2024 under a new name: Google AI Overviews. This page explains the history,
+        what changed between SGE and AI Overviews, and where to find current optimisation tactics.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/google-ai-overview-optimisation/" class="btn btn-primary">Current AI Overviews Tactics</a>
+        <a href="#what-was-sge" class="btn btn-ghost">Read the History</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prominent redirect notice -->
+  <div class="container-wide">
+    <div class="card p-6 border border-[var(--accent)]/30 bg-[rgba(0,229,204,.04)] mb-2">
+      <div class="flex items-start gap-4">
+        <svg class="h-5 w-5 text-[var(--accent)] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <div>
+          <p class="font-semibold text-ink-100 text-sm mb-1">Looking for current optimisation tactics?</p>
+          <p class="text-sm text-ink-300 leading-relaxed">
+            This page covers the SGE history and terminology. For current how-to guidance on earning inclusion in Google AI Overviews today,
+            see <a href="/google-ai-overview-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Google AI Overview Optimisation</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Two-column layout -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" aria-label="Table of contents">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>SGE (Search Generative Experience) was Google's experimental name for the product that launched as AI Overviews in May 2024.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>The SGE experiment ran from May 2023 to May 2024, accessible only via Google Search Labs opt-in.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Significant changes to query coverage, content policies, and source selection were made between SGE and AI Overviews launch.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>"SGE optimization" and "search generative experience optimization" remain common search terms despite the product rename.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Current tactics should target AI Overviews — the production product — not the deprecated SGE experiment.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Definition callout -->
+      <div class="mb-12 border-l-2 border-[var(--accent)] pl-6">
+        <p class="eyebrow mb-2">Definition</p>
+        <p class="text-xl leading-relaxed text-ink-200">
+          <strong class="text-[var(--accent)]">Google Search Generative Experience (SGE)</strong> was Google's experimental AI search feature,
+          available via Search Labs from May 2023. It placed AI-generated answers above organic search results. The feature launched at
+          general availability in May 2024 under the name <strong class="text-white">Google AI Overviews</strong>,
+          which is the current production product name.
+        </p>
+      </div>
+
+      <!-- Section 1: What Was SGE -->
+      <section id="what-was-sge" class="anchor-top prose-dark mb-16">
+        <h2>What Was Google SGE (Search Generative Experience)?</h2>
+
+        <p>
+          <strong>Google SGE, formally named Search Generative Experience, was an experimental AI search feature that Google made available to opt-in users through its Search Labs programme beginning in May 2023.</strong>
+          It was the first public demonstration of Google integrating a large language model directly into the core Search results page.
+        </p>
+
+        <p>
+          SGE appeared as an AI-generated panel at the top of the search results page for certain query types. The panel displayed a
+          synthesised text answer, typically accompanied by three to five suggested follow-up questions, and showed a small carousel of
+          source pages used to generate the response. Users could click the sources, expand them, or continue the conversation with
+          follow-up queries in a conversational format.
+        </p>
+
+        <p>
+          The experimental nature of SGE was significant. Because it was an opt-in feature accessible only to Search Labs participants,
+          it did not affect the search experience for the vast majority of Google users. Marketers and SEOs who tested SGE during this
+          period were observing a product that was explicitly in development and not representative of a finalised experience.
+        </p>
+
+        <p>
+          Google used the SGE period to observe user behaviour, gather feedback, and refine both the technical architecture and the
+          content policies governing which sources the AI would cite. Many of the early observations about SGE — which query types
+          triggered it, how sources were selected, what content got cited — reflected a product that was intentionally unstable and
+          subject to frequent, sometimes dramatic, changes.
+        </p>
+
+        <p>
+          For the broader context of why this matters for AI search strategy, the
+          <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation guide</a>
+          covers the full landscape of AI search systems and how they differ from one another.
+        </p>
+      </section>
+
+      <!-- Section 2: SGE Timeline -->
+      <section id="sge-timeline" class="anchor-top mb-16">
+        <div class="prose-dark mb-8">
+          <h2>SGE Timeline: From Experiment to Product</h2>
+          <p>
+            <strong>Understanding the SGE-to-AI Overviews timeline clarifies why much early SGE optimisation guidance is now outdated and why the terminology shift matters.</strong>
+          </p>
+        </div>
+
+        <div class="card overflow-hidden mb-8">
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-[var(--line)]">
+                  <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">Date</th>
+                  <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">Event</th>
+                  <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">Significance</th>
+                </tr>
+              </thead>
+              <tbody class="text-ink-200">
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-mono text-xs text-ink-300 whitespace-nowrap">May 2023</td>
+                  <td class="px-5 py-3 font-medium text-ink-100">SGE announced at Google I/O</td>
+                  <td class="px-5 py-3 text-ink-300">Search Labs opt-in experiment launched in the US; AI-generated answers above organic results for the first time</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-mono text-xs text-ink-300 whitespace-nowrap">2023–2024</td>
+                  <td class="px-5 py-3 font-medium text-ink-100">SGE experiment phase</td>
+                  <td class="px-5 py-3 text-ink-300">Feature tested with Search Labs users; frequent changes to query scope, source selection, and UI; limited to opt-in participants</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-mono text-xs text-ink-300 whitespace-nowrap">May 2024</td>
+                  <td class="px-5 py-3 font-medium text-ink-100">AI Overviews launched at Google I/O</td>
+                  <td class="px-5 py-3 text-ink-300">Feature renamed to AI Overviews, moved to general availability in the US, and removed from Search Labs requirement</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-mono text-xs text-ink-300 whitespace-nowrap">May–Jun 2024</td>
+                  <td class="px-5 py-3 font-medium text-ink-100">Post-launch adjustments</td>
+                  <td class="px-5 py-3 text-ink-300">Google significantly reduced AI Overview trigger rate after user feedback and high-profile inaccuracy examples; content policies tightened</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-mono text-xs text-ink-300 whitespace-nowrap">Late 2024</td>
+                  <td class="px-5 py-3 font-medium text-ink-100">International expansion</td>
+                  <td class="px-5 py-3 text-ink-300">AI Overviews rolled out to additional markets including the UK and selected European and Asian markets</td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-3 font-mono text-xs text-ink-300 whitespace-nowrap">2025–2026</td>
+                  <td class="px-5 py-3 font-medium text-ink-100">Ongoing evolution</td>
+                  <td class="px-5 py-3 text-ink-300">Continued expansion of query coverage, integration with Gemini model updates, and development of measurement tools for site owners</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="prose-dark">
+          <p>
+            The timeline illustrates why advice from the SGE experiment phase should be treated with caution. The product changed
+            substantially at the May 2024 launch, and then changed again in the weeks following launch as Google responded to feedback.
+            Tactics that appeared to work during the Search Labs experiment were not always transferable to the production product.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 3: SGE to AI Overviews — What Changed -->
+      <section id="sge-to-ai-overviews" class="anchor-top prose-dark mb-16">
+        <h2>SGE to AI Overviews: What Changed</h2>
+
+        <p>
+          <strong>The transition from SGE to AI Overviews was not simply a name change — Google made substantive changes to query coverage, source selection, and content policies.</strong>
+          Practitioners who built their understanding of the feature during the SGE phase need to account for these changes.
+        </p>
+
+        <h3>Query Coverage</h3>
+        <p>
+          SGE triggered for a wide range of queries during its experimental phase, including many queries where an AI-generated answer
+          added minimal value over traditional search results. At the AI Overviews launch and in subsequent adjustments, Google narrowed
+          the trigger criteria, focusing the feature on queries where synthesis genuinely improves the user experience. The overall
+          trigger rate dropped notably in the weeks after the initial AI Overviews launch as Google refined this scope.
+        </p>
+        <p>
+          The practical implication: a query that triggered SGE during the experiment phase may not trigger an AI Overview today,
+          and vice versa. Query trigger analysis should always be based on the current production product.
+        </p>
+
+        <h3>Source Selection and Citations</h3>
+        <p>
+          SGE's source citation UI changed between the experimental and production phases. The experiment showed a small carousel of
+          source pages; AI Overviews uses an expandable citations panel. More significantly, Google's approach to source selection
+          evolved. The production product applies stricter E-E-A-T criteria and exhibits stronger correlation with traditional organic
+          rankings than early SGE testing suggested.
+        </p>
+
+        <h3>Content Policy and YMYL Handling</h3>
+        <p>
+          Following high-profile examples of AI Overviews producing inaccurate or potentially harmful responses in the weeks after
+          general availability, Google tightened its content policies for sensitive query types. Health, safety, finance, and legal
+          queries now receive more conservative treatment — either suppressing AI Overviews entirely for certain sub-categories or
+          applying stricter sourcing requirements. This represented a meaningful departure from SGE behaviour on similar queries.
+        </p>
+
+        <h3>Model Integration</h3>
+        <p>
+          SGE was built on an earlier generation of Google's AI models. AI Overviews is integrated with Google's Gemini model, which
+          represents a different architecture and capability level. The quality of synthesis, the accuracy of attribution, and the
+          range of query types handled well all changed with this transition. Early SGE observations about what content got cited
+          and why may not generalise cleanly to Gemini-powered AI Overviews.
+        </p>
+      </section>
+
+      <!-- Section 4: Terminology Guide -->
+      <section id="terminology" class="anchor-top mb-16">
+        <div class="prose-dark mb-8">
+          <h2>Terminology Guide: SGE, AI Overviews, and Related Terms</h2>
+          <p>
+            <strong>The AI search space has accumulated multiple overlapping terms that are sometimes used interchangeably but refer to different things.</strong>
+            This glossary clarifies the distinctions.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+
+          <div class="card p-5">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)] mb-2">Search Generative Experience (SGE)</h3>
+            <p class="text-sm leading-relaxed text-ink-300">
+              The experimental name for Google's AI search feature, used from May 2023 to May 2024. SGE was an opt-in experiment
+              available through Search Labs. The term is now deprecated — Google no longer uses it for the current production product.
+              It remains common in industry content, particularly content written during the 2023–2024 period.
+            </p>
+          </div>
+
+          <div class="card p-5">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)] mb-2">Google AI Overviews</h3>
+            <p class="text-sm leading-relaxed text-ink-300">
+              The current production name for Google's AI-generated answer feature in Search, launched at general availability in
+              May 2024. This is the feature that practitioners and brands should be optimising for today. For current tactics,
+              see our <a href="/google-ai-overview-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Google AI Overview Optimisation guide</a>.
+            </p>
+          </div>
+
+          <div class="card p-5">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)] mb-2">AI Overview Optimization / AI Overview Optimisation</h3>
+            <p class="text-sm leading-relaxed text-ink-300">
+              The practice of structuring content, technical setup, and entity signals to earn inclusion as a cited source in
+              Google AI Overviews. This is the current and correct framing for what was previously called SGE optimisation
+              or search generative experience optimization.
+            </p>
+          </div>
+
+          <div class="card p-5">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)] mb-2">SGE Optimization / Search Generative Experience Optimization</h3>
+            <p class="text-sm leading-relaxed text-ink-300">
+              Older terminology for the same practice, coined during the SGE experiment phase. Still common in search queries
+              because many practitioners first encountered the topic under the SGE label. Content using this term is often
+              referring to the same set of practices now more accurately described as AI Overview optimisation — but may
+              contain outdated tactical advice from the experiment period.
+            </p>
+          </div>
+
+          <div class="card p-5">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)] mb-2">Generative Engine Optimisation (GEO)</h3>
+            <p class="text-sm leading-relaxed text-ink-300">
+              The broader discipline of optimising for AI-generated answers across all major AI search platforms — not only Google
+              AI Overviews but also ChatGPT, Perplexity, Microsoft Copilot, and Gemini. GEO encompasses AI Overview optimisation
+              as one component of a multi-platform strategy. For the full framework, see our
+              <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO guide</a>.
+            </p>
+          </div>
+
+          <div class="card p-5">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)] mb-2">Answer Engine Optimisation (AEO)</h3>
+            <p class="text-sm leading-relaxed text-ink-300">
+              An adjacent discipline focused on getting content surfaced in direct-answer formats — featured snippets, Knowledge
+              Panels, voice assistant responses. AEO predates the generative AI search era and focuses on different mechanisms,
+              though there is significant structural overlap with GEO content requirements.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 5: What SGE Optimisation Covered -->
+      <section id="sge-optimisation-legacy" class="anchor-top prose-dark mb-16">
+        <h2>What SGE Optimisation Covered — and What Carries Over</h2>
+
+        <p>
+          <strong>Much of the guidance published under the "SGE optimisation" label during the 2023–2024 period contained accurate principles, even if some specific observations about the feature are now outdated.</strong>
+          Here is what carries over and what does not.
+        </p>
+
+        <h3>What Carries Over to AI Overviews</h3>
+        <p>
+          The core principles that practitioners identified during SGE testing remain directionally correct for AI Overviews:
+        </p>
+        <ul>
+          <li><strong>Strong organic ranking predicts citation.</strong> This observation from SGE testing was confirmed at AI Overviews general availability and remains the most reliable predictor of inclusion.</li>
+          <li><strong>E-E-A-T signals matter.</strong> The emphasis on experience, expertise, authoritativeness, and trustworthiness — particularly for YMYL queries — carried over from SGE to AI Overviews and has if anything intensified.</li>
+          <li><strong>Structured content is more extractable.</strong> Clear headings, declarative statements, and FAQ sections that facilitate passage-level extraction remained effective signals in the transition.</li>
+          <li><strong>Structured data improves classification.</strong> FAQPage, HowTo, and Article schema continued to support accurate passage extraction after the product launch.</li>
+        </ul>
+
+        <h3>What Does Not Carry Over from SGE</h3>
+        <p>
+          Some tactics and observations from the SGE period are no longer reliable guides:
+        </p>
+        <ul>
+          <li><strong>Query trigger lists from SGE testing.</strong> The queries that triggered SGE during the experiment shifted substantially at launch and continued to evolve. Any specific list of "SGE-triggering queries" from before May 2024 is likely inaccurate for AI Overviews.</li>
+          <li><strong>UI-based observations.</strong> SGE and AI Overviews have different interfaces — the source carousel and conversation UI of SGE differ from the AI Overviews citations panel. Advice specific to the SGE UI does not apply.</li>
+          <li><strong>YMYL avoidance patterns from SGE.</strong> Google's handling of health and finance queries changed significantly between SGE and AI Overviews, following the inaccuracy incidents at launch. Query trigger rates for YMYL topics are different in the current product.</li>
+        </ul>
+
+        <p>
+          The practical takeaway: treat SGE-era content as a historical foundation, validate every specific claim against current AI Overviews behaviour,
+          and use current-product observation as your primary reference. Our
+          <a href="/google-ai-overview-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Google AI Overview Optimisation guide</a>
+          is built on the current production product.
+        </p>
+      </section>
+
+      <!-- Section 6: Current State -->
+      <section id="current-state" class="anchor-top prose-dark mb-16">
+        <h2>Current State: Google AI Overviews in 2026</h2>
+
+        <p>
+          <strong>As of mid-2026, Google AI Overviews are an established feature of Google Search, available across major English-language markets and expanding to additional languages.</strong>
+        </p>
+
+        <p>
+          The feature has matured significantly from both the SGE experiment and the initial AI Overviews launch. Query trigger rates
+          stabilised after the post-launch adjustments in mid-2024 and have grown gradually as Google extended the feature to more
+          query types. The product now reflects a more deliberate balance between AI-generated synthesis and traditional search results
+          than the experimental SGE phase suggested.
+        </p>
+
+        <p>
+          Measurement tooling has also improved. While Google Search Console's native AI Overviews reporting remains limited,
+          third-party tools including SE Ranking and Semrush have added AI Overview detection to their rank-tracking features,
+          enabling more systematic monitoring of citation performance.
+        </p>
+
+        <p>
+          The competitive landscape around AI Overview citation has become more sophisticated. Brands that invested early in
+          the signals that support AI Overview inclusion — strong organic rankings, clear content architecture, structured data,
+          and E-E-A-T credentials — hold measurable advantages over brands that treated AI Overviews as an emerging concern
+          rather than a present reality.
+        </p>
+
+        <p>
+          For a current, tactical guide to earning AI Overview citations:
+          <a href="/google-ai-overview-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Google AI Overview Optimisation</a>.
+          For the broader multi-platform AI citation strategy that incorporates Google AI Overviews alongside ChatGPT, Perplexity,
+          and Copilot:
+          <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Generative Engine Optimisation: The Complete Guide</a>.
+        </p>
+
+        <p>
+          Brands looking to understand their current AI citation footprint across Google AI Overviews and other platforms can
+          request an <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility</a> audit
+          through our <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services</a>.
+        </p>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="anchor-top mb-16">
+        <h2 class="font-display text-[28px] font-semibold text-white tracking-tight mb-8">Frequently Asked Questions</h2>
+
+        <div class="space-y-3" id="faq-accordion">
+          {faqs.map((faq, i) => (
+            <div class="card overflow-hidden" data-faq>
+              <button
+                type="button"
+                class="flex w-full items-center justify-between p-5 text-left font-display text-base font-semibold text-ink-50 transition hover:text-[var(--accent)]"
+                aria-expanded={i === 0 ? 'true' : 'false'}
+                data-faq-trigger
+              >
+                <span>{faq.q}</span>
+                <span class="ml-4 text-lg text-[var(--accent)] transition-transform duration-200" data-faq-icon style={i === 0 ? 'transform:rotate(45deg)' : ''}>+</span>
+              </button>
+              <div
+                class="overflow-hidden transition-all duration-300"
+                data-faq-panel
+                style={i === 0 ? 'max-height:400px' : 'max-height:0'}
+              >
+                <div class="border-t border-[var(--line-soft)] px-5 pb-5 pt-4 text-sm leading-relaxed text-ink-300">
+                  {faq.a}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Related Reading -->
+      <div class="mb-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-4 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Ready for the Current AI Search Landscape?</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        The product has moved on from SGE. GEOoptimised helps brands earn citation in Google AI Overviews and across every major
+        AI search platform — with a strategy built on current product behaviour, not experimental-phase observations.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Get in touch</a>
+        <a href="/geo-services/" class="btn btn-ghost">View GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

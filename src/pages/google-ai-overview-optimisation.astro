@@ -1,0 +1,725 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Google AI Overview Optimisation | GEOoptimised';
+const description = 'Learn how to earn inclusion in Google AI Overviews. Understand how AI Overviews are generated, which signals influence citation, and what content changes drive results.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: title,
+  description,
+  url: 'https://geooptimised.com/google-ai-overview-optimisation/',
+  image: 'https://geooptimised.com/og-image.png',
+  inLanguage: 'en-GB',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/google-ai-overview-optimisation/'
+  }
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What are Google AI Overviews?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Google AI Overviews are AI-generated summaries that appear at the top of Google Search results for certain queries. They draw on content from pages across the web, synthesise an answer, and cite the sources used. AI Overviews launched in the US in May 2024 and rolled out to additional markets through 2025 and 2026. They are powered by a version of Google\'s Gemini model integrated with the standard web index and Knowledge Graph.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'How does Google decide which sources to include in AI Overviews?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Google has not published a definitive ranking formula for AI Overview source selection. Based on observable patterns, sources that rank well in the traditional blue-link results for the same query are most frequently cited. Additional factors include structured data clarity, topical authority, content structure that supports passage extraction, and E-E-A-T signals. Pages with clear declarative statements, FAQ schema, and strong entity signals consistently appear as AI Overview sources.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I optimise specifically for Google AI Overviews?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. While Google does not provide a direct submission path for AI Overviews, the signals that influence inclusion are well-documented through observational research. Earning strong traditional rankings for your target queries is the single most reliable predictor of AI Overview inclusion. Beyond that, structured data, E-E-A-T signals, clear content hierarchy, and passage-level answer clarity all improve the probability of citation.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Does appearing in AI Overviews replace traditional organic rankings?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'AI Overviews appear above traditional organic results, but the cited sources still receive links that users can click through. Brands cited in AI Overviews benefit from both visibility in the generated answer and potential referral traffic from the source links. However, the presence of an AI Overview on a results page typically reduces click-through rates to organic blue links, making AI Overview citation increasingly important for query types where Overviews appear frequently.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'What content types are most likely to be cited in Google AI Overviews?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Based on observable patterns, Google AI Overviews most frequently cite content with clear passage-level answers to the query, structured FAQ sections, how-to content with numbered steps, comparison tables, and pages with strong topical authority in the subject area. E-E-A-T signals — experience, expertise, authoritativeness, and trustworthiness — are particularly important for YMYL (Your Money or Your Life) query types.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I track whether my pages are appearing in Google AI Overviews?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Google Search Console does not currently provide a dedicated AI Overviews report, though Google has indicated this is under development. In the meantime, monitoring can be done through manual SERP checks for your target queries, third-party rank-tracking tools that have added AI Overview detection (including SE Ranking and Semrush), and by monitoring referral traffic patterns from Google search in your analytics.'
+      }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+    { '@type': 'ListItem', position: 3, name: 'Google AI Overview Optimisation', item: 'https://geooptimised.com/google-ai-overview-optimisation/' }
+  ]
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'what-are-ai-overviews', label: 'What Are Google AI Overviews?' },
+  { id: 'how-overviews-generated', label: 'How AI Overviews Are Generated' },
+  { id: 'signals-that-influence-citation', label: 'Signals That Influence Citation' },
+  { id: 'content-for-ai-overviews', label: 'Content Structure for AI Overviews' },
+  { id: 'technical-optimisation', label: 'Technical Optimisation' },
+  { id: 'comparison-table', label: 'AI Overview vs Organic Rankings' },
+  { id: 'tracking-performance', label: 'Tracking Performance' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' }
+];
+
+const faqs = [
+  {
+    q: 'What are Google AI Overviews?',
+    a: "Google AI Overviews are AI-generated summaries that appear at the top of Google Search results for certain queries. They draw on content from pages across the web, synthesise an answer, and cite the sources used. AI Overviews launched in the US in May 2024 and rolled out to additional markets through 2025 and 2026. They are powered by a version of Google's Gemini model integrated with the standard web index and Knowledge Graph."
+  },
+  {
+    q: 'How does Google decide which sources to include in AI Overviews?',
+    a: "Google has not published a definitive ranking formula for AI Overview source selection. Based on observable patterns, sources that rank well in the traditional blue-link results for the same query are most frequently cited. Additional factors include structured data clarity, topical authority, content structure that supports passage extraction, and E-E-A-T signals. Pages with clear declarative statements, FAQ schema, and strong entity signals consistently appear as AI Overview sources."
+  },
+  {
+    q: 'Can I optimise specifically for Google AI Overviews?',
+    a: "Yes. While Google does not provide a direct submission path for AI Overviews, the signals that influence inclusion are well-documented through observational research. Earning strong traditional rankings for your target queries is the single most reliable predictor of AI Overview inclusion. Beyond that, structured data, E-E-A-T signals, clear content hierarchy, and passage-level answer clarity all improve the probability of citation."
+  },
+  {
+    q: 'Does appearing in AI Overviews replace traditional organic rankings?',
+    a: "AI Overviews appear above traditional organic results, but the cited sources still receive links that users can click through. Brands cited in AI Overviews benefit from both visibility in the generated answer and potential referral traffic from the source links. However, the presence of an AI Overview on a results page typically reduces click-through rates to organic blue links, making AI Overview citation increasingly important for query types where Overviews appear frequently."
+  },
+  {
+    q: 'What content types are most likely to be cited in Google AI Overviews?',
+    a: "Based on observable patterns, Google AI Overviews most frequently cite content with clear passage-level answers to the query, structured FAQ sections, how-to content with numbered steps, comparison tables, and pages with strong topical authority in the subject area. E-E-A-T signals — experience, expertise, authoritativeness, and trustworthiness — are particularly important for YMYL query types."
+  },
+  {
+    q: 'How do I track whether my pages are appearing in Google AI Overviews?',
+    a: "Google Search Console does not currently provide a dedicated AI Overviews report, though Google has indicated this is under development. In the meantime, monitoring can be done through manual SERP checks for your target queries, third-party rank-tracking tools that have added AI Overview detection (including SE Ranking and Semrush), and by monitoring referral traffic patterns from Google search in your analytics."
+  }
+];
+
+const related = [
+  {
+    tag: 'History',
+    title: 'SGE Optimisation: Search Generative Experience Explained',
+    excerpt: 'Understand the terminology history from SGE to AI Overviews, and how the product has evolved since its experimental phase.',
+    href: '/sge-optimisation/'
+  },
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'The full GEO framework covering all major AI platforms, from first principles through to advanced citation strategy.',
+    href: '/generative-engine-optimisation/'
+  },
+  {
+    tag: 'Platform',
+    title: 'Optimise for Perplexity',
+    excerpt: 'Platform-specific tactics for earning citations in Perplexity AI — a different retrieval model from Google AI Overviews.',
+    href: '/optimise-for-perplexity/'
+  }
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/google-ai-overview-optimisation/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">Generative Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">Google AI Overview Optimisation</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Platform Guide</span>
+        <span class="font-mono text-xs text-ink-400">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-400">14 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        Google AI Overview Optimisation
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        Google AI Overviews now appear for a significant share of search queries, placing AI-generated answers above the traditional
+        blue links. <strong class="text-white">AI overview optimization</strong> is the practice of structuring your content,
+        entity signals, and technical setup so that Google selects your pages as cited sources inside those generated answers.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/geo-services/" class="btn btn-primary">Get GEO Services</a>
+        <a href="#what-are-ai-overviews" class="btn btn-ghost">Read the Guide</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Two-column layout -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" aria-label="Table of contents">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Google AI Overviews are powered by Gemini integrated with Google's live web index — not a separate system.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Traditional organic ranking is the strongest predictor of AI Overview citation — invest in SEO foundations first.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>E-E-A-T signals, structured data, and passage-level clarity each independently improve citation probability.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>AI Overview behaviour has changed substantially since the SGE experiment — tactics evolved significantly at general availability.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Brands cited in AI Overviews receive both answer-level visibility and clickable source links — the commercial value is real.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Definition callout -->
+      <div class="mb-12 border-l-2 border-[var(--accent)] pl-6">
+        <p class="eyebrow mb-2">Definition</p>
+        <p class="text-xl leading-relaxed text-ink-200">
+          <strong class="text-[var(--accent)]">Google AI Overviews</strong> are AI-generated summaries that appear above organic search results for eligible queries,
+          synthesising information from multiple web sources and citing the pages used. Optimising for them means ensuring your content is both retrieved and
+          clearly extractable by Google's Gemini-powered retrieval pipeline.
+        </p>
+      </div>
+
+      <!-- Section 1: What Are AI Overviews -->
+      <section id="what-are-ai-overviews" class="anchor-top prose-dark mb-16">
+        <h2>What Are Google AI Overviews?</h2>
+
+        <p>
+          <strong>Google AI Overviews are AI-generated answer panels that appear at the top of Google Search results, above the traditional list of blue links.</strong>
+          They provide a synthesised answer to the user's query, drawing from multiple web sources, and display source citations that users can expand to see the
+          underlying pages.
+        </p>
+
+        <p>
+          Google announced AI Overviews at Google I/O in May 2024 and began rolling them out in the United States at general availability. The product
+          had previously run in a limited experimental form known as the Search Generative Experience (SGE) — see our companion page
+          <a href="/sge-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">SGE Optimisation: Search Generative Experience Explained</a>
+          for the full terminology history and how the product changed between the SGE phase and the current AI Overviews product.
+        </p>
+
+        <p>
+          AI Overviews are powered by a version of Google's Gemini model working in conjunction with Google's standard web index and Knowledge Graph.
+          This integration is significant: it means AI Overviews share retrieval infrastructure with traditional search, and pages that perform well
+          in organic search tend to perform well in AI Overview citation as well — though the relationship is not deterministic.
+        </p>
+
+        <p>
+          Not every query triggers an AI Overview. Google applies the feature selectively, prioritising queries where a synthesised answer adds value
+          over a list of links. Informational queries, how-to queries, and multi-faceted questions are more likely to trigger Overviews than transactional
+          queries or branded navigational queries. Query trigger rates have varied over time as Google has adjusted the feature's scope.
+        </p>
+
+        <h3>What AI Overviews Look Like</h3>
+
+        <p>
+          A typical AI Overview appears as a bordered panel at the top of the SERP. It contains a generated text answer, typically two to five paragraphs,
+          accompanied by a collapsed panel showing source citations. Users can click "Show more" or expand the sources list to see which pages were cited.
+          Each citation includes the page title and domain, with a link to the source page.
+        </p>
+
+        <p>
+          For brands, this creates a two-level visibility opportunity: presence in the generated text (the highest-value placement) and presence in the
+          source citations panel (secondary but still commercially meaningful). Optimising for both requires attention to content quality, passage-level
+          clarity, and the underlying organic ranking signals that determine retrieval eligibility.
+        </p>
+      </section>
+
+      <!-- Section 2: How AI Overviews Are Generated -->
+      <section id="how-overviews-generated" class="anchor-top prose-dark mb-16">
+        <h2>How Google AI Overviews Are Generated</h2>
+
+        <p>
+          <strong>Google AI Overviews are generated through a multi-stage pipeline that combines live web retrieval with Gemini's language generation capabilities.</strong>
+          Understanding this pipeline is the foundation of effective AI overview optimization.
+        </p>
+
+        <h3>Stage 1: Query Understanding</h3>
+        <p>
+          When a user submits a search query, Google's systems first determine whether the query is eligible for an AI Overview. This involves intent
+          classification — distinguishing informational queries that benefit from synthesis from transactional queries where a direct answer is less
+          appropriate. Complex or multi-part queries are more likely to trigger Overviews; simple navigational queries typically are not.
+        </p>
+
+        <h3>Stage 2: Web Retrieval</h3>
+        <p>
+          For eligible queries, Google retrieves a set of candidate pages from its standard web index. This retrieval step is not fundamentally different
+          from the retrieval underlying traditional search results. Pages that rank well organically — through established signals including backlink
+          authority, topical relevance, and technical health — are disproportionately represented in the retrieved candidate set.
+        </p>
+        <p>
+          Google's Knowledge Graph also contributes at this stage, providing structured entity data that helps the system interpret the query and
+          identify the most relevant entities and their relationships.
+        </p>
+
+        <h3>Stage 3: Passage Extraction and Synthesis</h3>
+        <p>
+          Gemini processes the retrieved pages and extracts the passages most relevant to the query. This is where content structure matters most.
+          The model is looking for clean, extractable units of information — not pages as a whole, but specific passages that answer the query clearly.
+          Pages with well-segmented headings, declarative statements, and self-contained paragraphs are more amenable to extraction than dense, continuous prose.
+        </p>
+        <p>
+          The model synthesises these extracted passages into a coherent answer. Sources used in the synthesis are cited in the Overview's reference panel.
+          Importantly, not every retrieved page becomes a cited source — only those from which the model actually extracts content for the generated answer.
+        </p>
+
+        <h3>Stage 4: Quality and Safety Review</h3>
+        <p>
+          Google applies additional quality filters before displaying an AI Overview. This includes checking for policy compliance, assessing the
+          reliability of sources used, and applying heightened scrutiny to YMYL (Your Money or Your Life) query types. For health, finance, and legal
+          queries, Google applies stricter sourcing standards, favouring established authoritative sources over general-purpose content sites.
+        </p>
+      </section>
+
+      <!-- Section 3: Signals That Influence Citation -->
+      <section id="signals-that-influence-citation" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Signals That Influence AI Overview Citation</h2>
+          <p>
+            <strong>No single signal guarantees AI Overview citation — it results from a combination of retrieval eligibility, content quality, and structured data clarity.</strong>
+            The following signals have the strongest observable influence on citation probability, based on published research and industry observation.
+          </p>
+        </div>
+
+        <div class="mt-8 space-y-5">
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Traditional Organic Ranking</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Studies consistently show that pages ranking in the top 10 organic results for a query are the most frequently cited in AI Overviews
+              for that same query. This is the strongest single predictor. Investing in the SEO signals that drive organic ranking — topical authority,
+              quality backlinks, technical health — is the highest-leverage starting point for AI Overview optimisation.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">E-E-A-T Signals</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Experience, Expertise, Authoritativeness, and Trustworthiness. Google applies E-E-A-T evaluation to AI Overview source selection
+              particularly for YMYL queries. Demonstrable E-E-A-T signals include named authors with verifiable credentials, citations from
+              established publications, transparent organisational information, and consistent entity data across the web.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Structured Data and Schema Markup</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              FAQPage, HowTo, Article, and Product schema each help Google's systems understand the type and structure of your content,
+              reducing ambiguity about what a page covers. Schema does not directly cause AI Overview inclusion, but it improves the
+              precision with which Gemini can extract relevant passages from your pages.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Passage-Level Answer Clarity</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Pages where individual paragraphs function as standalone answers to specific questions are more extractable than pages where
+              information is spread across long, interconnected paragraphs. Each major section should open with a clear declarative statement.
+              The model looks for passages it can extract and reproduce accurately — give it clean, self-contained units.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Topical Depth and Comprehensiveness</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Pages that demonstrate comprehensive topical coverage — addressing the main query, related sub-questions, and adjacent concerns
+              within a single well-structured document — tend to be cited more frequently than pages covering only the narrow query term.
+              Topical depth is a long-standing SEO signal that translates directly into AI Overview citation probability.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 4: Content Structure for AI Overviews -->
+      <section id="content-for-ai-overviews" class="anchor-top prose-dark mb-16">
+        <h2>Content Structure for Google AI Overviews</h2>
+
+        <p>
+          <strong>Content written for AI Overview citation follows the same structural principles as content written for featured snippets — but with greater emphasis on multi-passage extraction and source credibility.</strong>
+        </p>
+
+        <h3>Lead with a Declarative Statement</h3>
+        <p>
+          Every major section — and ideally the page itself — should open with a bold, quotable sentence that defines the concept or answers
+          the implied question. AI Overviews consistently extract these opening statements as the basis for generated answers.
+          "Google AI Overviews are AI-generated summaries that appear above organic results for eligible queries" is the kind of sentence
+          a language model can extract, attribute, and reproduce accurately. A paragraph beginning with contextual scene-setting is not.
+        </p>
+
+        <h3>Use Descriptive Heading Hierarchies</h3>
+        <p>
+          H2 and H3 headings that match the questions users ask — "How does Google decide which sources to cite?" rather than
+          "The Selection Process" — serve dual purposes. They help traditional SEO passage ranking and they help Gemini identify
+          which section of your page answers which sub-query within a multi-faceted AI Overview.
+        </p>
+
+        <h3>Include a Structured FAQ Section</h3>
+        <p>
+          FAQ sections with explicit question-answer pairs are among the most reliably cited content patterns in AI Overviews.
+          Mark them up with FAQPage schema. Each answer should be self-contained — readable in full without requiring the surrounding
+          page context. Aim for four to eight questions covering the most common queries in your topic area.
+        </p>
+
+        <h3>Provide Specific, Attributable Claims</h3>
+        <p>
+          Vague generalisations — "AI search is growing" — give Google's retrieval system no reason to cite your specific page.
+          Specific, attributable claims — mentioning Google's own published statements, named product launches, publicly announced
+          dates, or verifiable observations — give the model a reason to extract your content as the authoritative source.
+          Do not invent statistics. Cite verifiable sources for any quantitative claims, and be explicit about observational versus confirmed findings.
+        </p>
+
+        <h3>Write for Both Users and Extraction</h3>
+        <p>
+          Content should read naturally for human visitors while being structured for machine extraction. These goals are not in
+          conflict. Clear, well-organised writing is both more readable and more extractable. Avoid dense paragraphs that
+          bury the answer mid-sentence, and avoid marketing language that provides nothing extractable.
+          The <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO framework</a>
+          covers content architecture principles in depth.
+        </p>
+      </section>
+
+      <!-- Section 5: Technical Optimisation -->
+      <section id="technical-optimisation" class="anchor-top prose-dark mb-16">
+        <h2>Technical Optimisation for Google AI Overviews</h2>
+
+        <p>
+          <strong>Technical signals that support traditional organic ranking also support AI Overview inclusion — but a few AI-specific technical considerations deserve attention.</strong>
+        </p>
+
+        <h3>Do Not Block Google's AI Crawlers</h3>
+        <p>
+          Google-Extended is the user-agent associated with Google's AI training and retrieval systems, including those that power AI Overviews.
+          If your robots.txt contains a Disallow rule for <code>Google-Extended</code>, you are explicitly excluding your content from consideration
+          for AI Overviews. Audit your robots.txt and ensure Google-Extended is permitted on all pages you want included.
+        </p>
+        <p>
+          Note the distinction: blocking Google-Extended does not block Googlebot (which drives traditional organic ranking), so you may currently
+          rank in blue links while being entirely absent from AI Overviews. This is a common gap found in audits.
+        </p>
+
+        <h3>Implement Core Schema Markup</h3>
+        <p>
+          Implement Article or TechArticle schema on content pages, FAQPage schema on pages with Q&amp;A sections, HowTo schema on
+          process or instructional pages, and BreadcrumbList schema on every non-homepage URL. These schemas help Gemini classify
+          your content correctly and extract the right passages for the right query types.
+        </p>
+        <p>
+          For a full implementation guide covering schema setup, see our
+          <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility guide</a>
+          which covers the structured data layer in detail.
+        </p>
+
+        <h3>Core Web Vitals and Crawl Health</h3>
+        <p>
+          Pages that load quickly, are crawled efficiently, and have clean URL structures are better candidates for retrieval in any
+          AI pipeline that uses Google's index. Core Web Vitals are not a confirmed direct AI Overview signal, but poor page experience
+          reduces organic ranking probability, which indirectly reduces AI Overview citation probability through the ranking correlation.
+        </p>
+
+        <h3>Canonical and Indexation Clarity</h3>
+        <p>
+          Ensure every page you want considered for AI Overviews has a correct canonical tag pointing to itself (or the preferred URL),
+          is not accidentally noindexed, and is accessible to Googlebot without login requirements or JavaScript rendering delays.
+          These are basic indexation hygiene items, but they are frequently the cause of unexplained AI Overview absences.
+        </p>
+      </section>
+
+      <!-- Section 6: Comparison Table -->
+      <section id="comparison-table" class="anchor-top mb-16">
+        <div class="prose-dark mb-6">
+          <h2>Google AI Overviews vs Traditional Organic Rankings</h2>
+          <p>
+            <strong>AI Overviews and traditional organic rankings share infrastructure but serve different purposes and respond to different optimisation levers.</strong>
+            The table below summarises the key distinctions.
+          </p>
+        </div>
+
+        <div class="card overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-[var(--line)]">
+                  <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">Dimension</th>
+                  <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">Traditional Organic</th>
+                  <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Google AI Overviews</th>
+                </tr>
+              </thead>
+              <tbody class="text-ink-200">
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Placement</td>
+                  <td class="px-5 py-3">Below AI Overview</td>
+                  <td class="px-5 py-3">Above organic results</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Primary signal</td>
+                  <td class="px-5 py-3">PageRank, backlinks, relevance</td>
+                  <td class="px-5 py-3">Organic ranking + E-E-A-T + passage clarity</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">User interaction</td>
+                  <td class="px-5 py-3">Click on page title</td>
+                  <td class="px-5 py-3">Read generated answer; optional click on cited source</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Slots per SERP</td>
+                  <td class="px-5 py-3">Up to 10 organic results</td>
+                  <td class="px-5 py-3">Typically 3–8 cited sources per Overview</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Content requirement</td>
+                  <td class="px-5 py-3">Keyword-relevant page</td>
+                  <td class="px-5 py-3">Passage-extractable, declarative, E-E-A-T-credible</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Schema relevance</td>
+                  <td class="px-5 py-3">Rich results (stars, FAQs)</td>
+                  <td class="px-5 py-3">Passage classification, entity clarity</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Measurement tool</td>
+                  <td class="px-5 py-3">Google Search Console, Ahrefs</td>
+                  <td class="px-5 py-3">Manual SERP checks; SE Ranking; Semrush AI</td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-3 font-medium text-ink-100">YMYL sensitivity</td>
+                  <td class="px-5 py-3">E-E-A-T evaluation applies</td>
+                  <td class="px-5 py-3">Stricter sourcing; may suppress low-authority YMYL sites</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="prose-dark mt-8">
+          <p>
+            For brands investing in <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a>
+            across all AI platforms, it is worth noting that Google AI Overviews represent only one part of the AI search landscape.
+            Perplexity, ChatGPT, and Copilot each use different retrieval mechanisms and respond to different signals. Platform-specific
+            guides cover these differences: see <a href="/optimise-for-perplexity/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Optimise for Perplexity</a>
+            and <a href="/optimise-for-chatgpt/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Optimise for ChatGPT</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 7: Tracking Performance -->
+      <section id="tracking-performance" class="anchor-top prose-dark mb-16">
+        <h2>Tracking Your Google AI Overview Performance</h2>
+
+        <p>
+          <strong>Measuring AI Overview performance requires a combination of manual SERP monitoring and third-party tooling, as Google does not yet provide dedicated AI Overview reporting in Search Console.</strong>
+        </p>
+
+        <h3>Manual SERP Monitoring</h3>
+        <p>
+          The most direct method: identify your target queries, run them regularly in Google Search (using incognito or a tool that removes personalisation),
+          and record whether an AI Overview appears and whether your site is cited. For a focused query set of 20 to 50 terms, manual monitoring
+          is feasible on a weekly basis. Document both the trigger rate (does an Overview appear?) and the citation rate (is your site included?).
+        </p>
+
+        <h3>Third-Party Rank Tracking Tools</h3>
+        <p>
+          Several established rank-tracking platforms have added AI Overview detection to their feature sets. SE Ranking, Semrush, and Ahrefs
+          each offer varying levels of AI Overview visibility reporting as of mid-2026. These tools automate monitoring across larger query sets
+          and provide trend data over time, which is essential for measuring the impact of optimisation changes.
+        </p>
+
+        <h3>Traffic and Referral Analysis</h3>
+        <p>
+          If your pages are cited in AI Overviews with clickable source links, you should see referral traffic from Google search reflected
+          in your analytics. While it is difficult to isolate AI Overview clicks from general organic clicks in most analytics setups,
+          significant unexplained shifts in click-through rates for specific queries can be correlated with AI Overview appearance
+          or citation changes for those terms.
+        </p>
+
+        <h3>Connecting to the Broader GEO Picture</h3>
+        <p>
+          Google AI Overview performance is one dimension of a broader <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility</a> measurement
+          programme. A complete picture requires tracking citation across all major AI platforms — not only Google AI Overviews — since
+          different platforms serve different user segments and query intents.
+          Our <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services</a> include
+          cross-platform citation monitoring as a core component.
+        </p>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="anchor-top mb-16">
+        <h2 class="font-display text-[28px] font-semibold text-white tracking-tight mb-8">Frequently Asked Questions</h2>
+
+        <div class="space-y-3" id="faq-accordion">
+          {faqs.map((faq, i) => (
+            <div class="card overflow-hidden" data-faq>
+              <button
+                type="button"
+                class="flex w-full items-center justify-between p-5 text-left font-display text-base font-semibold text-ink-50 transition hover:text-[var(--accent)]"
+                aria-expanded={i === 0 ? 'true' : 'false'}
+                data-faq-trigger
+              >
+                <span>{faq.q}</span>
+                <span class="ml-4 text-lg text-[var(--accent)] transition-transform duration-200" data-faq-icon style={i === 0 ? 'transform:rotate(45deg)' : ''}>+</span>
+              </button>
+              <div
+                class="overflow-hidden transition-all duration-300"
+                data-faq-panel
+                style={i === 0 ? 'max-height:400px' : 'max-height:0'}
+              >
+                <div class="border-t border-[var(--line-soft)] px-5 pb-5 pt-4 text-sm leading-relaxed text-ink-300">
+                  {faq.a}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Related Reading -->
+      <div class="mb-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-4 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Get Cited in Google AI Overviews</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Most brands do not know whether they are appearing in Google AI Overviews for their target queries — or why they are absent.
+        Our AI Overview audit identifies your current citation footprint, technical blockers, and the content changes most likely to
+        earn inclusion.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request an AI Overview audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

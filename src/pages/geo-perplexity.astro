@@ -1,0 +1,580 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO for Perplexity: Where It Fits in Your Strategy';
+const description = 'GEO perplexity strategy: how to prioritise Perplexity within a multi-platform GEO programme, compare it with ChatGPT and AI Overviews, and measure share of voice.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  url: 'https://geooptimised.com/geo-perplexity/',
+  image: 'https://geooptimised.com/og-image.png',
+  inLanguage: 'en-GB',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/geo-perplexity/',
+  },
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Should Perplexity be a priority in a GEO strategy?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Perplexity's priority within a GEO strategy depends on your audience and query type. For research-oriented, B2B, and considered-purchase audiences, Perplexity punches above its traffic-share weight because its users are actively seeking specific information with higher commercial intent than typical search users. For mass-market consumer queries, Google AI Overviews and ChatGPT represent larger audiences. In practice, most GEO strategies should begin with the platform where their audience is most active, then expand to multi-platform coverage — Perplexity is typically a priority-two or priority-three platform after Google AI Overviews and ChatGPT.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does Perplexity compare to Google AI Overviews for GEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Google AI Overviews and Perplexity have fundamentally different audience scales and retrieval mechanics. AI Overviews appears within the Google search interface and reaches the full Google search audience — making it the highest-volume AI citation opportunity for most brands. Perplexity has a dedicated user base that chooses it specifically for its answer-engine format. AI Overviews draws heavily from pages that rank in Google\'s traditional index; Perplexity maintains its own independent index. A brand that appears in AI Overviews for a query is not guaranteed to appear in Perplexity for the same query, and vice versa — the two must be managed as separate channels.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can the same content optimisation work for both Perplexity and ChatGPT?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "The content principles overlap substantially — declarative statements, specific data, FAQ structure, entity authority — because both platforms reward content that is easy to extract and factually specific. The key differences lie in the retrieval mechanism. Perplexity retrieves live web content for every query, so on-page improvements affect Perplexity citation rates within weeks. ChatGPT's base model draws on training data with a fixed cutoff, so content improvements affect it more slowly, as the model is retrained. ChatGPT's browsing mode introduces live retrieval, but it is not the primary mechanism for most queries. A shared content strategy with platform-specific technical configuration (PerplexityBot access, relevant crawler permissions) handles both effectively.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I measure Perplexity share of voice?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Perplexity share of voice is measured by running a structured query set across Perplexity, logging which brands are cited in each response, and calculating the proportion of total citation appearances attributable to your brand versus competitors. For a query set of 50 prompts, if your brand appears in 15 responses and three competitors each appear in 10, 12, and 8 responses respectively, you have a citation count and share of voice across your category. This should be tracked monthly and broken down by query type (informational, commercial, comparative) to identify where you are winning and where competitors are cited instead.',
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+    { '@type': 'ListItem', position: 3, name: 'GEO for Perplexity', item: 'https://geooptimised.com/geo-perplexity/' },
+  ],
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'perplexity-in-geo', label: 'Perplexity in the GEO Landscape' },
+  { id: 'audience-profile', label: 'Who Uses Perplexity' },
+  { id: 'platform-comparison', label: 'Perplexity vs ChatGPT vs AI Overviews' },
+  { id: 'prioritisation', label: 'How to Prioritise Perplexity' },
+  { id: 'share-of-voice', label: 'Measuring Share of Voice' },
+  { id: 'multi-platform', label: 'Multi-Platform GEO Architecture' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const faqs = [
+  {
+    q: 'Should Perplexity be a priority in a GEO strategy?',
+    a: "Perplexity's priority within a GEO strategy depends on your audience and query type. For research-oriented, B2B, and considered-purchase audiences, Perplexity punches above its traffic-share weight because its users are actively seeking specific information. For mass-market consumer queries, Google AI Overviews and ChatGPT represent larger audiences. Most GEO strategies should begin with the platform where their audience is most active, then expand — Perplexity is typically a priority-two or priority-three platform after Google AI Overviews and ChatGPT.",
+  },
+  {
+    q: 'How does Perplexity compare to Google AI Overviews for GEO?',
+    a: "Google AI Overviews and Perplexity have fundamentally different audience scales and retrieval mechanics. AI Overviews appears within the Google search interface and reaches the full Google search audience — making it the highest-volume AI citation opportunity for most brands. Perplexity has a dedicated user base that chooses it specifically for its answer-engine format. AI Overviews draws heavily from pages that rank in Google's traditional index; Perplexity maintains its own independent index. The two must be managed as separate channels.",
+  },
+  {
+    q: 'Can the same content optimisation work for both Perplexity and ChatGPT?',
+    a: "The content principles overlap — declarative statements, specific data, FAQ structure, entity authority — because both reward content that is easy to extract and factually specific. The key differences lie in the retrieval mechanism. Perplexity retrieves live web content for every query, so on-page improvements affect citation rates within weeks. ChatGPT's base model draws on training data with a fixed cutoff, so content improvements affect it more slowly. A shared content strategy with platform-specific technical configuration handles both effectively.",
+  },
+  {
+    q: 'How do I measure Perplexity share of voice?',
+    a: "Perplexity share of voice is measured by running a structured query set across Perplexity, logging which brands are cited in each response, and calculating the proportion of total citation appearances attributable to your brand versus competitors. For a query set of 50 prompts, track your brand's citation count and each competitor's, then calculate shares. Track monthly and break down by query type (informational, commercial, comparative) to identify where you are winning and where competitors are cited instead.",
+  },
+];
+
+const related = [
+  {
+    tag: 'Playbook',
+    title: 'How to Optimise for Perplexity: Step-by-Step',
+    excerpt: 'The practical eight-step playbook for getting your brand cited in Perplexity answers — from crawler access to content structure.',
+    href: '/optimise-for-perplexity/',
+  },
+  {
+    tag: 'Mechanics',
+    title: 'Perplexity AI Optimisation: How the Answer Engine Works',
+    excerpt: 'The technical mechanics behind Perplexity\'s retrieval pipeline, Pro Search, and focus modes.',
+    href: '/perplexity-ai-optimisation/',
+  },
+  {
+    tag: 'Guide',
+    title: 'How to Optimise for ChatGPT',
+    excerpt: 'Platform-specific playbook for increasing citation frequency in ChatGPT responses.',
+    href: '/optimise-for-chatgpt/',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/geo-perplexity/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">Generative Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">GEO for Perplexity</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Strategy Guide</span>
+        <span class="font-mono text-xs text-ink-400">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-400">15 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO for Perplexity: Where It Fits in Your Strategy
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        Not all AI platforms are equal — not in audience size, not in query intent, and not in the effort required to achieve meaningful citation share. This guide places Perplexity within a multi-platform GEO strategy: how it compares to ChatGPT and Google AI Overviews, how to decide when to prioritise it, and how to measure and grow your Perplexity share of voice.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/contact/" class="btn btn-primary">Get a Multi-Platform GEO Audit</a>
+        <a href="#platform-comparison" class="btn btn-ghost">Compare Platforms</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Two-column layout -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Perplexity serves a research-oriented, high-intent audience — making citation value per user higher than raw traffic share suggests.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Perplexity, ChatGPT, and Google AI Overviews have different retrieval mechanics — optimisation for one does not guarantee visibility on another.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Most GEO programmes should prioritise Google AI Overviews first (volume), then ChatGPT, then Perplexity — adjusted for your specific audience.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Perplexity share of voice is a measurable, trackable metric — query sets, citation logging, and competitive benchmarking are the core measurement approach.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>A well-built multi-platform GEO architecture shares content and entity foundations across all platforms, with platform-specific technical configuration layered on top.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1: Perplexity in GEO -->
+      <section id="perplexity-in-geo" class="anchor-top prose-dark mb-16">
+        <h2>Perplexity in the GEO Landscape</h2>
+
+        <p>
+          <strong>Perplexity AI occupies a distinct position in the generative search landscape: a dedicated answer engine with an independently maintained index, a research-oriented user base, and inline citations that attribute every answer to specific sources.</strong>
+          These characteristics make it different from both ChatGPT and Google AI Overviews in ways that matter directly for GEO strategy.
+        </p>
+
+        <p>
+          The broader GEO landscape in 2026 comprises five major platforms that brands need to manage for AI citation: Google AI Overviews, ChatGPT (base model plus browsing), Microsoft Copilot, Perplexity AI, and Gemini. Each platform reaches a different audience, uses different retrieval mechanisms, and weights different signals when selecting sources. A brand that achieves strong citation rates on Google AI Overviews is not automatically visible on Perplexity — the channels require independent management.
+        </p>
+
+        <p>
+          This guide addresses the strategic question: where does Perplexity fit within your GEO programme? For the practical how-to, see <a href="/optimise-for-perplexity/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">How to Optimise for Perplexity: Step-by-Step Playbook</a>. For the technical mechanics of how Perplexity works, see <a href="/perplexity-ai-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Perplexity AI Optimisation: How the Answer Engine Works</a>. For the full <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO framework</a>, start with the pillar guide.
+        </p>
+      </section>
+
+      <!-- Section 2: Audience Profile -->
+      <section id="audience-profile" class="anchor-top prose-dark mb-16">
+        <h2>Who Uses Perplexity</h2>
+
+        <p>
+          <strong>Perplexity's user base is disproportionately composed of technically literate, research-oriented professionals — a profile that gives each citation higher commercial value than raw user numbers suggest.</strong>
+        </p>
+
+        <p>
+          Perplexity was built for users who want sourced, verifiable answers rather than a list of links to evaluate. This design attracts a specific type of user: people who read the citations, follow sources, and are making considered decisions. This profile is particularly prevalent among technology professionals, researchers, B2B buyers, and professionals in knowledge-intensive sectors such as finance, law, and healthcare.
+        </p>
+
+        <p>
+          For brands targeting these segments, Perplexity citation delivers a qualitatively different type of impression than a Google search result. The user has already received an AI-synthesised answer that includes your brand; clicking through to your site means they are continuing a research journey in which your brand is already positioned as relevant. This pre-qualification effect makes Perplexity referral traffic particularly valuable for considered-purchase and B2B categories.
+        </p>
+
+        <p>
+          For consumer brands targeting general audiences at high volume, the audience profile calculus changes. Google AI Overviews reaches the entire Google search audience and therefore represents a larger citation opportunity for most mass-market queries. The right platform prioritisation depends on where your specific buyers spend their research time.
+        </p>
+      </section>
+
+      <!-- Section 3: Platform Comparison -->
+      <section id="platform-comparison" class="anchor-top mb-16">
+        <div class="prose-dark mb-6">
+          <h2>Perplexity vs ChatGPT vs Google AI Overviews</h2>
+          <p>
+            <strong>The three most strategically important AI platforms for citation — Perplexity, ChatGPT, and Google AI Overviews — differ on every dimension that matters for GEO: retrieval mechanism, audience profile, citation format, and optimisation approach.</strong>
+            Understanding these differences is the prerequisite for intelligent platform prioritisation.
+          </p>
+        </div>
+
+        <div class="card overflow-hidden mb-8">
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-[var(--line)]">
+                  <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">Dimension</th>
+                  <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Perplexity</th>
+                  <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">ChatGPT</th>
+                  <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">Google AI Overviews</th>
+                </tr>
+              </thead>
+              <tbody class="text-ink-200">
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Retrieval type</td>
+                  <td class="px-5 py-3 text-[var(--accent)]">Live RAG for all queries</td>
+                  <td class="px-5 py-3">Training data (base); RAG via browsing mode</td>
+                  <td class="px-5 py-3">Google index + live retrieval + Knowledge Graph</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Index source</td>
+                  <td class="px-5 py-3 text-[var(--accent)]">Independent (PerplexityBot)</td>
+                  <td class="px-5 py-3">Bing index (browsing mode); training data</td>
+                  <td class="px-5 py-3">Google's own index</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Citation format</td>
+                  <td class="px-5 py-3 text-[var(--accent)]">Inline numbered citations, always shown</td>
+                  <td class="px-5 py-3">Inline links (browsing); none (base model)</td>
+                  <td class="px-5 py-3">Source cards, expandable citations</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Audience scale</td>
+                  <td class="px-5 py-3 text-[var(--accent)]">Smaller, high-intent</td>
+                  <td class="px-5 py-3">Very large, varied intent</td>
+                  <td class="px-5 py-3">Largest (full Google audience)</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Audience profile</td>
+                  <td class="px-5 py-3 text-[var(--accent)]">Research-oriented, B2B, technical</td>
+                  <td class="px-5 py-3">Broad; consumer and professional</td>
+                  <td class="px-5 py-3">Broadest; matches Google demographics</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Speed of optimisation impact</td>
+                  <td class="px-5 py-3 text-[var(--accent)]">Weeks (live retrieval)</td>
+                  <td class="px-5 py-3">Months (training cycle); weeks (browsing)</td>
+                  <td class="px-5 py-3">Weeks to months (depends on index recrawl)</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">SEO dependency</td>
+                  <td class="px-5 py-3 text-[var(--accent)]">Low (own index)</td>
+                  <td class="px-5 py-3">Low (base); moderate (browsing via Bing)</td>
+                  <td class="px-5 py-3">High (Google rankings strongly correlated)</td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-3 font-medium text-ink-100">Primary GEO lever</td>
+                  <td class="px-5 py-3 text-[var(--accent)]">Content structure + crawler access</td>
+                  <td class="px-5 py-3">Entity authority + training data presence</td>
+                  <td class="px-5 py-3">Traditional SEO + structured data</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="prose-dark">
+          <p>
+            The key strategic insight from this comparison is that Perplexity offers the fastest feedback loop of the three platforms — on-page content changes affect Perplexity citation rates within weeks because of its live retrieval mechanism. This makes Perplexity particularly useful as a testing ground for GEO content improvements. Changes that prove effective on Perplexity can then be applied across the rest of your content estate with confidence, knowing they have been validated against a real retrieval system.
+          </p>
+          <p>
+            For brands with minimal Google SEO authority, Perplexity also offers a disproportionate opportunity: because its index is independent, a well-structured page from a relatively new domain can achieve Perplexity citations even before it ranks in traditional Google search. This is particularly relevant for newer brands and challenger entrants competing against entrenched players with large Google index authority.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4: Prioritisation -->
+      <section id="prioritisation" class="anchor-top prose-dark mb-16">
+        <h2>How to Prioritise Perplexity in Your GEO Programme</h2>
+
+        <p>
+          <strong>Platform prioritisation in GEO should follow your audience — start where your buyers spend the most research time, then expand coverage in order of diminishing marginal return.</strong>
+        </p>
+
+        <h3>Default Prioritisation for Most Brands</h3>
+        <p>
+          For most brands with a general B2B or professional services audience, a sensible default prioritisation is:
+        </p>
+
+        <ol class="space-y-3 pl-0 list-none mb-6">
+          <li class="flex gap-3">
+            <span class="font-mono font-semibold text-[var(--accent)] flex-shrink-0">1.</span>
+            <span><strong>Google AI Overviews.</strong> Highest audience volume. Closely tied to traditional SEO foundations most brands already have. Appearing in AI Overviews for core queries is the single highest-reach GEO win available for the majority of brands.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="font-mono font-semibold text-[var(--accent)] flex-shrink-0">2.</span>
+            <span><strong>ChatGPT.</strong> Largest installed user base for a dedicated AI assistant. Entity authority and training data presence are the primary levers — a long-term investment that compounds over time as models are updated. See <a href="/optimise-for-chatgpt/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">How to Optimise for ChatGPT</a>.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="font-mono font-semibold text-[var(--accent)] flex-shrink-0">3.</span>
+            <span><strong>Perplexity.</strong> Smaller audience but higher research intent, fastest feedback loop, independent index — disproportionately valuable for B2B, considered-purchase, and technical audiences.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="font-mono font-semibold text-[var(--accent)] flex-shrink-0">4.</span>
+            <span><strong>Microsoft Copilot and Gemini.</strong> Growing platforms with Bing-index (Copilot) and Google-index (Gemini) dependencies respectively — covered by a strong traditional SEO foundation combined with cross-platform entity authority.</span>
+          </li>
+        </ol>
+
+        <h3>When to Move Perplexity Up in Priority</h3>
+        <p>
+          Perplexity should move to first or second priority for brands where: (a) the audience is predominantly B2B technology, research, academic, or professional services; (b) competitors are actively appearing in Perplexity answers for category queries; or (c) the brand is new and lacks the Google SEO authority needed to appear in AI Overviews quickly. In these cases, Perplexity's independent index and live retrieval mechanism offer a path to AI citation visibility that is faster and less dependent on accumulated SEO authority than the other major platforms.
+        </p>
+
+        <h3>The Crawl-First Principle</h3>
+        <p>
+          Regardless of where Perplexity sits in your priority order, PerplexityBot access should be confirmed before any other Perplexity work begins. A blocked crawler means zero citation opportunity, making all other investments irrelevant. Check robots.txt for any existing blocks before finalising your platform priorities — the fix takes five minutes and costs nothing.
+        </p>
+      </section>
+
+      <!-- Section 5: Share of Voice -->
+      <section id="share-of-voice" class="anchor-top mb-16">
+        <div class="prose-dark mb-6">
+          <h2>Measuring Perplexity Share of Voice</h2>
+          <p>
+            <strong>Perplexity share of voice measures how often your brand is cited in Perplexity answers relative to competitors, across a defined set of category queries.</strong>
+            It is the primary strategic metric for Perplexity GEO — more informative than raw citation frequency because it reveals your competitive position, not just your absolute performance.
+          </p>
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-2 mb-8">
+          <div class="card p-5">
+            <h3 class="font-display text-base font-semibold text-ink-50 mb-2">Build Your Query Set</h3>
+            <p class="text-sm leading-relaxed text-ink-300">
+              Select 30 to 100 queries that represent your category across informational ("what is GEO"), commercial ("best GEO agencies UK"), and comparative ("GEO vs SEO") intent types. Include both queries where you expect to appear and queries where competitors currently dominate. This becomes your tracking query set — kept stable over time to allow trend comparison.
+            </p>
+          </div>
+          <div class="card p-5">
+            <h3 class="font-display text-base font-semibold text-ink-50 mb-2">Run Structured Prompts</h3>
+            <p class="text-sm leading-relaxed text-ink-300">
+              Submit each query in Perplexity and record: whether your brand is cited, which URL is cited, the citation position (first, second, etc.), and which competitors are cited. Run each query at least twice per measurement cycle to account for Perplexity's response variability. Monthly cadence is the minimum; weekly for priority queries.
+            </p>
+          </div>
+          <div class="card p-5">
+            <h3 class="font-display text-base font-semibold text-ink-50 mb-2">Calculate Share of Voice</h3>
+            <p class="text-sm leading-relaxed text-ink-300">
+              Tally total citation appearances across all queries, per brand. Your share of voice is your appearances divided by total appearances across all tracked brands. Track this as a monthly trend — absolute share matters less than direction. Declining share signals that competitors are gaining ground; rising share confirms the programme is working.
+            </p>
+          </div>
+          <div class="card p-5">
+            <h3 class="font-display text-base font-semibold text-ink-50 mb-2">Segment by Query Type</h3>
+            <p class="text-sm leading-relaxed text-ink-300">
+              Segment your share of voice data by query type: informational, commercial, and comparative. You may win the informational queries but lose the commercial ones — or vice versa. Each segment requires different content strategy to address. Competitors that dominate commercial queries should be analysed for their content structure and authority signals.
+            </p>
+          </div>
+          <div class="card p-5">
+            <h3 class="font-display text-base font-semibold text-ink-50 mb-2">Track Cross-Platform Alignment</h3>
+            <p class="text-sm leading-relaxed text-ink-300">
+              Compare your Perplexity share of voice against your performance on ChatGPT and Google AI Overviews for the same query set. Divergences reveal platform-specific gaps. If you win on Google AI Overviews but lose on Perplexity, the gap is likely a PerplexityBot access or content structure issue. If you win on Perplexity but not ChatGPT, entity authority in training data may be the constraint.
+            </p>
+          </div>
+          <div class="card p-5">
+            <h3 class="font-display text-base font-semibold text-ink-50 mb-2">Connect to Traffic Data</h3>
+            <p class="text-sm leading-relaxed text-ink-300">
+              Track referral traffic from perplexity.ai in Google Analytics or your analytics platform. As Perplexity's user base grows and source-click behaviour increases, attributed referral traffic becomes a tangible business metric. Match traffic spikes against citation wins to validate the connection between citation share and commercial outcomes.
+            </p>
+          </div>
+        </div>
+
+        <div class="prose-dark">
+          <p>
+            For multi-platform share of voice measurement covering ChatGPT, Copilot, and Google AI Overviews in addition to Perplexity, see our guide to <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility measurement</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 6: Multi-Platform Architecture -->
+      <section id="multi-platform" class="anchor-top prose-dark mb-16">
+        <h2>Multi-Platform GEO Architecture</h2>
+
+        <p>
+          <strong>A robust multi-platform GEO architecture shares a single content and entity foundation across all AI platforms, with platform-specific technical layers applied on top — avoiding the duplication of effort that comes from treating each platform as a separate project.</strong>
+        </p>
+
+        <h3>The Shared Foundation</h3>
+        <p>
+          The elements that benefit every AI platform simultaneously are also the highest-value GEO investments. Entity authority — consistent brand data across Wikidata, Google Knowledge Graph, LinkedIn, and industry directories — improves citation rates across all platforms that draw on knowledge graphs or training data. Content structure — declarative opening statements, FAQ sections, specific data points, clear headings — is rewarded by every retrieval system, because all of them are trying to extract clean, relevant passages from your pages. Structured data markup — Organisation, Article, FAQPage — reduces ambiguity for every AI system that processes your content.
+        </p>
+        <p>
+          Investing in the shared foundation first delivers multi-platform benefits from a single investment. It is more efficient than making platform-specific content changes before the foundation is solid.
+        </p>
+
+        <h3>Platform-Specific Layers</h3>
+        <p>
+          Once the shared foundation is in place, platform-specific configuration provides the marginal gains for each channel. For Perplexity: PerplexityBot access and llms.txt implementation. For Google AI Overviews: traditional SEO signals and Google Knowledge Graph entity reinforcement. For ChatGPT: Wikipedia presence, high-authority editorial coverage, and training data presence in the publications that feed OpenAI's training corpora. For Copilot: Bing index presence and Microsoft's own entity signals.
+        </p>
+
+        <h3>Where Perplexity Fits in Execution Sequencing</h3>
+        <p>
+          In a phased GEO implementation, Perplexity-specific work is typically addressed in phase two or three, after the shared foundation (entity audit, schema implementation, content restructuring) is complete. The exception is PerplexityBot access — this is a phase-one technical check that takes minutes and should be completed at the very start of any GEO programme, regardless of where Perplexity sits in your strategic priority order.
+        </p>
+        <p>
+          Phase-one shared work that benefits Perplexity along with all other platforms: entity consistency audit, FAQPage schema implementation, declarative content restructuring, and llms.txt deployment. Phase-two Perplexity-specific work: crawl frequency optimisation, content depth improvements for Pro Search, social focus mode coverage (Reddit and LinkedIn brand presence), and citation monitoring dashboards.
+        </p>
+        <p>
+          GEOoptimised delivers <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">multi-platform GEO programmes</a> that cover all five major AI citation channels, sequenced for maximum efficiency. The <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO strategy guide</a> provides the full framework context.
+        </p>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="anchor-top mb-16">
+        <h2 class="font-display text-[28px] font-semibold text-white tracking-tight mb-8">Frequently Asked Questions</h2>
+        <div class="space-y-3" id="faq-accordion">
+          {faqs.map((faq, i) => (
+            <div class="card overflow-hidden" data-faq>
+              <button
+                type="button"
+                class="flex w-full items-center justify-between p-5 text-left font-display text-base font-semibold text-ink-50 transition hover:text-[var(--accent)]"
+                aria-expanded={i === 0 ? 'true' : 'false'}
+                data-faq-trigger
+              >
+                <span>{faq.q}</span>
+                <span class="ml-4 text-lg text-[var(--accent)] transition-transform duration-200" data-faq-icon style={i === 0 ? 'transform:rotate(45deg)' : ''}>+</span>
+              </button>
+              <div
+                class="overflow-hidden transition-all duration-300"
+                data-faq-panel
+                style={i === 0 ? 'max-height:600px' : 'max-height:0'}
+              >
+                <div class="border-t border-[var(--line-soft)] px-5 pb-5 pt-4 text-sm leading-relaxed text-ink-300">
+                  {faq.a}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Related Reading -->
+      <div id="related" class="mb-16">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-4 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Build Your Multi-Platform GEO Strategy</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Perplexity is one piece of a five-platform AI citation puzzle. GEOoptimised builds and executes multi-platform GEO programmes that cover Google AI Overviews, ChatGPT, Perplexity, Copilot, and Gemini — sequenced to maximise citation share across the platforms that matter most to your audience.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Discuss your GEO strategy</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

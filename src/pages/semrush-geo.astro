@@ -1,0 +1,458 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Semrush for GEO: AI Visibility Features | GEOoptimised';
+const description = 'How Semrush\'s AI and brand-monitoring features fit a GEO workflow. Understand what the platform covers, where its limits lie, and how to use it alongside dedicated GEO tools.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Semrush for GEO: AI Visibility Features",
+    "description": "How Semrush's AI and brand-monitoring features fit a generative engine optimisation workflow — covering capabilities, limitations, and practical integration advice.",
+    "url": "https://geooptimised.com/semrush-geo/",
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "inLanguage": "en-GB",
+    "image": "https://geooptimised.com/og-image.png",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://geooptimised.com/semrush-geo/"
+    },
+    "author": {
+      "@id": "https://geooptimised.com/#organization"
+    },
+    "publisher": {
+      "@id": "https://geooptimised.com/#organization"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does Semrush measure AI citation frequency?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Semrush's core product was built for traditional search and does not natively measure how often AI platforms like ChatGPT or Perplexity cite your brand in generated answers. Some newer Semrush product areas address AI search visibility, but the platform's primary measurement model is built around organic rankings, backlinks, and keyword data. For systematic AI citation tracking, a dedicated GEO tool is required alongside Semrush."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can Semrush support a GEO programme?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Semrush contributes to a GEO programme through its brand monitoring, content audit, and backlink analysis capabilities. Brand monitoring can surface where your brand is being mentioned across the web — the same mentions that inform AI model training and retrieval. Content audit tools help identify thin or unstructured pages that are unlikely to be selected as citation sources. Backlink data informs the authority signals that underpin AI credibility. These are supporting inputs to GEO, not direct AI visibility measurements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I replace Semrush with a GEO-specific tool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Semrush remains a highly capable platform for traditional organic search. The right approach is to use Semrush for what it does well — keyword research, rank tracking, backlink analysis, and site auditing — and add a dedicated GEO tool to cover AI citation tracking and generative platform visibility. The two are complementary. Replacing Semrush entirely would create a gap in your organic search measurement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What Semrush features are most relevant to GEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Semrush features most relevant to GEO work are brand monitoring (tracking brand mentions across the web), the content audit tool (identifying pages that lack the structure AI models prefer), the backlink analytics suite (assessing the authority signals that build AI credibility), and position tracking for featured snippet and People Also Ask opportunities. These are all indirectly GEO-relevant because they support the underlying authority and structure that AI models reward with citations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Semrush cover Google AI Overviews tracking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Semrush has added features related to tracking Google AI Overviews presence as that feature has become more prominent in Google Search results. Feature availability and scope change frequently as both Google and Semrush evolve their products. Check the Semrush product documentation directly for the current state of AI Overviews tracking, as this is an actively developing area."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://geooptimised.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "GEO Tools",
+        "item": "https://geooptimised.com/geo-tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Semrush for GEO",
+        "item": "https://geooptimised.com/semrush-geo/"
+      }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'what-semrush-covers', label: 'What Semrush Covers' },
+  { id: 'geo-relevant-features', label: 'GEO-Relevant Features' },
+  { id: 'ai-overviews-tracking', label: 'AI Overviews Tracking' },
+  { id: 'semrush-geo-limitations', label: 'Where Semrush Falls Short' },
+  { id: 'workflow-integration', label: 'Workflow Integration' },
+  { id: 'comparison-table', label: 'Feature Comparison' },
+  { id: 'faq', label: 'FAQ' },
+];
+
+const faqs = [
+  {
+    q: 'Does Semrush measure AI citation frequency?',
+    a: "Semrush's core product was built for traditional search and does not natively measure how often AI platforms like ChatGPT or Perplexity cite your brand in generated answers. Some newer Semrush product areas address AI search visibility, but the platform's primary measurement model is built around organic rankings, backlinks, and keyword data. For systematic AI citation tracking, a dedicated GEO tool is required alongside Semrush.",
+  },
+  {
+    q: 'How can Semrush support a GEO programme?',
+    a: 'Semrush contributes to a GEO programme through its brand monitoring, content audit, and backlink analysis capabilities. Brand monitoring can surface where your brand is being mentioned across the web — the same mentions that inform AI model training and retrieval. Content audit tools help identify thin or unstructured pages that are unlikely to be selected as citation sources. Backlink data informs the authority signals that underpin AI credibility. These are supporting inputs to GEO, not direct AI visibility measurements.',
+  },
+  {
+    q: 'Should I replace Semrush with a GEO-specific tool?',
+    a: 'No. Semrush remains a highly capable platform for traditional organic search. The right approach is to use Semrush for what it does well — keyword research, rank tracking, backlink analysis, and site auditing — and add a dedicated GEO tool to cover AI citation tracking and generative platform visibility. The two are complementary. Replacing Semrush entirely would create a gap in your organic search measurement.',
+  },
+  {
+    q: 'What Semrush features are most relevant to GEO?',
+    a: 'The Semrush features most relevant to GEO work are brand monitoring (tracking brand mentions across the web), the content audit tool (identifying pages that lack the structure AI models prefer), the backlink analytics suite (assessing the authority signals that build AI credibility), and position tracking for featured snippet and People Also Ask opportunities. These are all indirectly GEO-relevant because they support the underlying authority and structure that AI models reward with citations.',
+  },
+  {
+    q: 'Does Semrush cover Google AI Overviews tracking?',
+    a: 'Semrush has added features related to tracking Google AI Overviews presence as that feature has become more prominent in Google Search results. Feature availability and scope change frequently as both Google and Semrush evolve their products. Check the Semrush product documentation directly for the current state of AI Overviews tracking, as this is an actively developing area.',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/semrush-geo/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex items-center gap-2 font-mono text-xs text-ink-400">
+      <li><a href="/" class="hover:text-[var(--accent)] transition-colors">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/geo-tools/" class="hover:text-[var(--accent)] transition-colors">GEO Tools</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">Semrush for GEO</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-fade relative overflow-hidden">
+    <div class="container-wide grid gap-12 pt-12 pb-20 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-7">
+        <span class="eyebrow">GEO Tools — Semrush</span>
+        <h1 class="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <span class="grad-text">Semrush for GEO: AI Visibility Features</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-300">
+          Semrush is one of the most widely used SEO platforms in the world. This page examines where its feature set intersects with a <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> programme, where it falls short, and how to integrate it with dedicated GEO tooling for a complete picture of your brand's AI and organic visibility.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/contact/" class="btn btn-primary">Discuss Your Toolstack</a>
+          <a href="/geo-tools/" class="btn btn-ghost">All GEO Tools</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="card p-6">
+          <span class="eyebrow">Quick verdict</span>
+          <div class="mt-4 space-y-4">
+            <div class="flex items-start gap-3">
+              <svg aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <p class="text-sm text-ink-300">Strong for organic search, backlinks, and brand mention monitoring</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <p class="text-sm text-ink-300">Developing AI Overviews coverage — check vendor docs for current scope</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0 text-ink-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/></svg>
+              <p class="text-sm text-ink-300">Does not natively track ChatGPT, Perplexity, or Gemini citation frequency</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0 text-ink-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/></svg>
+              <p class="text-sm text-ink-300">Not a standalone solution for a full GEO measurement programme</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky TOC + Prose -->
+  <div class="container-wide py-16 lg:grid lg:grid-cols-12 lg:gap-12">
+
+    <!-- TOC -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-[calc(var(--header-h)+2rem)]">
+        <p class="font-mono text-xs uppercase tracking-widest text-ink-500 mb-4">On this page</p>
+        <nav aria-label="Page sections">
+          <ul class="space-y-2" id="toc-list">
+            {tocItems.map(item => (
+              <li>
+                <a
+                  href={`#${item.id}`}
+                  class="toc-link block rounded px-3 py-1.5 text-sm text-ink-400 hover:text-[var(--accent)] transition-colors"
+                  data-section={item.id}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <article class="lg:col-span-9 prose-dark space-y-16">
+
+      <div>
+        <h2 id="what-semrush-covers" class="anchor-top">What Semrush Covers</h2>
+        <p><strong>Semrush is a comprehensive digital marketing platform built on organic search data, competitive intelligence, and content analysis — not AI citation tracking.</strong> That framing is the essential context for evaluating its relevance to a GEO programme. The platform's strength lies in the breadth of its traditional SEO toolset: keyword research, rank tracking across Google and Bing, site technical auditing, backlink analytics, and paid search analysis. These are capabilities that any serious digital marketing team needs, and Semrush delivers them at scale.</p>
+        <p>The platform has evolved considerably since its origins as a keyword research tool. It now includes content marketing tools, social media management, brand monitoring, local SEO features, and a content optimisation workflow. Each of these has partial relevance to GEO, even if none was designed with AI citation tracking as its primary objective. The key is understanding which parts of the Semrush feature set support GEO work indirectly, and which gaps require a dedicated tool to fill.</p>
+        <p>Semrush's feature set changes regularly as the company develops its product. The general capabilities described here are based on publicly available information and reflect the platform's broadly known offering. Always verify current feature availability and pricing directly on the <a href="https://www.semrush.com/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300" rel="noopener noreferrer" target="_blank">Semrush website</a>, as specific features, tiers, and pricing can change frequently.</p>
+      </div>
+
+      <div>
+        <h2 id="geo-relevant-features" class="anchor-top">GEO-Relevant Features in Semrush</h2>
+        <p><strong>Several Semrush features contribute meaningfully to GEO work even though they were not designed for AI visibility measurement.</strong> Understanding how to use them in a GEO context requires mapping each feature to the specific part of the AI citation process it can inform.</p>
+
+        <h3 class="mt-8 font-display text-xl font-semibold text-ink-100">Brand Monitoring</h3>
+        <p>Semrush's brand monitoring capability tracks mentions of your brand name across the web, including news sites, blogs, and forums. In a GEO context, this is useful because AI models draw on the breadth and sentiment of web-based brand mentions when constructing their understanding of what a brand does and how it is regarded. A brand with widespread, positive, and accurate web mentions is better positioned for AI citation than one with sparse or inconsistent coverage. Brand monitoring helps you identify gaps and respond to inaccurate mentions that could distort how AI models describe you.</p>
+
+        <h3 class="mt-8 font-display text-xl font-semibold text-ink-100">Content Audit</h3>
+        <p>The content audit tool analyses pages on your site against factors including engagement signals, backlink counts, and content freshness. Pages that score poorly on these dimensions are also the pages least likely to be selected as AI citation sources. Running a content audit as part of a GEO programme identifies which pages need structural improvement — adding clear definitions, structured data, authoritative citations, and direct answers — before they can credibly compete for AI citations.</p>
+
+        <h3 class="mt-8 font-display text-xl font-semibold text-ink-100">Backlink Analytics</h3>
+        <p>Authority signals remain a significant factor in AI citation decisions, particularly for retrieval-augmented platforms like Perplexity that actively pull from the live web. Semrush's backlink analytics suite provides granular data on your link profile: referring domains, anchor text distribution, toxic link identification, and competitive gap analysis. Building the kind of link profile that signals genuine topical authority — from relevant, trusted sources in your sector — supports <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility</a> even though backlinks are a traditional SEO metric.</p>
+
+        <h3 class="mt-8 font-display text-xl font-semibold text-ink-100">Featured Snippets and SERP Features</h3>
+        <p>Semrush's position tracking includes visibility into featured snippet appearances, People Also Ask boxes, and other SERP features. These structured answer formats are meaningful for GEO because they indicate that Google's systems have already identified your content as a credible direct answer to a specific query — a signal that correlates with AI citation potential. Tracking and improving your featured snippet performance in Semrush is therefore indirectly beneficial for GEO, even though the two measurement surfaces are distinct.</p>
+      </div>
+
+      <div>
+        <h2 id="ai-overviews-tracking" class="anchor-top">AI Overviews Tracking</h2>
+        <p><strong>Semrush has moved to incorporate Google AI Overviews tracking as AI-generated responses have become a significant part of Google Search results.</strong> This is the area of the platform most directly relevant to GEO, and it is also the area changing most rapidly. Google AI Overviews appear at the top of many commercial and informational search results, and brands that appear within them benefit from significantly increased prominence.</p>
+        <p>The general capability Semrush is developing in this area includes tracking which queries trigger AI Overviews and identifying whether your brand or pages are included. This type of tracking is genuinely GEO-relevant because it measures presence in a generative AI response surface — specifically the one with the largest user base, given Google's market share.</p>
+        <p>However, there are important caveats. AI Overviews are specific to Google Search; they are not the same as citations in ChatGPT, Perplexity, Gemini, or other standalone AI platforms. A tool that measures AI Overviews presence alone does not give you visibility into the broader AI answer ecosystem. Additionally, Semrush's AI Overviews features are actively developing, and the scope, accuracy, and reliability of this tracking should be verified against current product documentation rather than assumed based on any prior description. Feature depth in this area is likely to look different within months of any given review.</p>
+      </div>
+
+      <div>
+        <h2 id="semrush-geo-limitations" class="anchor-top">Where Semrush Falls Short for GEO</h2>
+        <p><strong>The fundamental limitation of Semrush for GEO is that it was not built to measure AI citation frequency across generative platforms.</strong> This is not a criticism; it is a description of what the product is. Semrush is an organic search and digital marketing platform. Its data models, measurement methodologies, and reporting frameworks are built around search engine ranking data, not probabilistic AI response sampling.</p>
+        <p>Specifically, Semrush does not natively track how often your brand is cited in ChatGPT responses, Perplexity answers, Gemini outputs, or Microsoft Copilot results. It cannot tell you which prompt categories trigger your brand's inclusion, which competitor brands are outperforming you in AI citations for specific query types, or how your AI citation rate is trending over time across these platforms. These measurements require querying AI systems at scale with a defined prompt library — a fundamentally different data collection model from scraping search engine results pages.</p>
+        <p>Entity analysis is a further gap. GEO increasingly depends on understanding how AI models represent your brand as an entity — what attributes they associate with it, how accurately they describe your products or services, and what knowledge sources inform their representation. Semrush does not provide tooling for assessing your entity presence across Wikipedia, Wikidata, or the structured knowledge bases that AI models draw on when constructing factual claims. For this, specialist tools or manual auditing against knowledge graph sources is required.</p>
+        <p>These limitations do not diminish Semrush's value within its domain. They simply define the scope of what it can contribute to a GEO programme: supporting the underlying authority and content quality work, while a dedicated GEO tool provides the direct AI visibility measurement. Explore the <a href="/geo-tools-comparison/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO tools comparison</a> for a broader view of the landscape.</p>
+      </div>
+
+      <div>
+        <h2 id="workflow-integration" class="anchor-top">Integrating Semrush into a GEO Workflow</h2>
+        <p><strong>The most effective approach treats Semrush as the organic search layer of a GEO programme, not as its measurement centrepiece.</strong> In practice, this means using Semrush for the tasks it handles well — keyword strategy, technical site health, backlink development, and brand mention monitoring — while using a dedicated GEO tool for AI citation tracking, competitor AI visibility benchmarking, and entity analysis.</p>
+        <p>A practical integration workflow might look like this: use Semrush's content audit to identify which pages have structural weaknesses that are also reducing their GEO potential. Apply the improvements recommended by your GEO framework — clear definitions, structured data, authoritative sourcing, direct answer formats — and then use a dedicated GEO tool to measure whether those changes increase citation frequency on the AI platforms that matter to your audience. The Semrush data informs the optimisation; the GEO tool measures the AI-specific outcome.</p>
+        <p>Brand monitoring in Semrush can also feed your GEO programme's entity accuracy work. If brand monitoring surfaces mentions where your brand is described inaccurately, or where a competitor is consistently discussed in contexts where you should appear, that intelligence can inform your content and PR strategy. The goal is to create the kind of accurate, widespread, and authoritative web presence that gives AI models reliable signals to draw on when they encounter queries in your category.</p>
+        <p>For organisations running a <a href="/geo-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">full GEO toolstack</a>, Semrush typically sits alongside — not instead of — purpose-built GEO platforms. The combined picture is more complete than either provides alone. If budget constraints require prioritisation, consider what phase your programme is in: at the early content improvement and authority-building stage, Semrush delivers significant value; as your programme matures into systematic AI citation measurement and optimisation, the investment in a dedicated GEO tool becomes increasingly justified.</p>
+      </div>
+
+      <!-- Comparison Table -->
+      <div>
+        <h2 id="comparison-table" class="anchor-top">Semrush GEO Feature Overview</h2>
+        <p><strong>The table below summarises which aspects of a GEO programme Semrush can support and where dedicated GEO tooling is required.</strong> This is a functional map, not a product review. Feature availability and naming within Semrush changes regularly; verify current details on the vendor's site before making tool decisions.</p>
+        <div class="mt-6 overflow-x-auto rounded-xl border border-[var(--line)]">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-[var(--line)] bg-[var(--bg-2)]">
+                <th scope="col" class="px-5 py-4 text-left font-display font-semibold text-ink-100">GEO Programme Need</th>
+                <th scope="col" class="px-5 py-4 text-left font-display font-semibold text-ink-100">Semrush Can Help?</th>
+                <th scope="col" class="px-5 py-4 text-left font-display font-semibold text-ink-100">How</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[var(--line)]">
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 text-ink-200">Keyword &amp; topic research</td>
+                <td class="px-5 py-4 text-accent-400 font-medium">Yes</td>
+                <td class="px-5 py-4 text-ink-300">Keyword Magic Tool, Topic Research</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 text-ink-200">Content quality &amp; structure audit</td>
+                <td class="px-5 py-4 text-accent-400 font-medium">Partially</td>
+                <td class="px-5 py-4 text-ink-300">Content Audit tool; GEO-specific structural guidance requires separate framework</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 text-ink-200">Backlink authority analysis</td>
+                <td class="px-5 py-4 text-accent-400 font-medium">Yes</td>
+                <td class="px-5 py-4 text-ink-300">Backlink Analytics, Link Building Tool</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 text-ink-200">Brand mention monitoring</td>
+                <td class="px-5 py-4 text-accent-400 font-medium">Yes</td>
+                <td class="px-5 py-4 text-ink-300">Brand Monitoring tool</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 text-ink-200">Featured snippets &amp; PAA tracking</td>
+                <td class="px-5 py-4 text-accent-400 font-medium">Yes</td>
+                <td class="px-5 py-4 text-ink-300">Position Tracking with SERP features</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 text-ink-200">Google AI Overviews presence</td>
+                <td class="px-5 py-4 text-ink-300 font-medium">Developing</td>
+                <td class="px-5 py-4 text-ink-300">Check current Semrush product documentation for scope</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 text-ink-200">ChatGPT / Perplexity citation tracking</td>
+                <td class="px-5 py-4 text-ink-500 font-medium">No</td>
+                <td class="px-5 py-4 text-ink-300">Requires a dedicated GEO citation tracking tool</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 text-ink-200">Gemini / Copilot citation tracking</td>
+                <td class="px-5 py-4 text-ink-500 font-medium">No</td>
+                <td class="px-5 py-4 text-ink-300">Requires a dedicated GEO citation tracking tool</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 text-ink-200">Entity / knowledge graph analysis</td>
+                <td class="px-5 py-4 text-ink-500 font-medium">No</td>
+                <td class="px-5 py-4 text-ink-300">Requires specialist entity audit tooling or manual review</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 text-ink-200">AI citation trend &amp; competitor benchmarking</td>
+                <td class="px-5 py-4 text-ink-500 font-medium">No</td>
+                <td class="px-5 py-4 text-ink-300">Requires a dedicated GEO platform</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-4 text-xs text-ink-500">Feature availability is subject to change. Verify on the <a href="https://www.semrush.com/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300" rel="noopener noreferrer" target="_blank">Semrush website</a> before making purchasing decisions.</p>
+      </div>
+
+      <!-- FAQ -->
+      <div id="faq">
+        <span class="eyebrow">FAQ</span>
+        <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Frequently Asked Questions</h2>
+        <div class="mt-10 max-w-3xl divide-y divide-[var(--line)]">
+          {faqs.map(faq => (
+            <div class="faq-item">
+              <button
+                type="button"
+                class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors"
+                aria-expanded="false"
+              >
+                <span>{faq.q}</span>
+                <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+                </svg>
+              </button>
+              <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+                <p class="pb-5 text-ink-300 leading-relaxed">{faq.a}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </article>
+  </div>
+
+  <!-- Related Reading -->
+  <section class="container-wide py-16">
+    <span class="eyebrow">Related Reading</span>
+    <h2 class="mt-3 font-display text-2xl font-bold text-ink-50">Continue Exploring</h2>
+    <div class="mt-8 grid gap-6 sm:grid-cols-3">
+      <a href="/geo-tools/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">GEO Tools Hub</h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed">The full landscape of AI visibility trackers, citation monitors, and brand authority analysers.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/ahrefs-geo/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">Ahrefs for GEO</h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed">How Ahrefs' brand radar and AI-related features support a generative engine optimisation programme.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/geo-tools-comparison/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">GEO Tools Comparison</h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed">Side-by-side comparison of GEO-specific platforms across the key evaluation criteria.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="container-wide py-20">
+    <div class="relative overflow-hidden rounded-2xl dot-grid">
+      <div class="absolute inset-0 bg-gradient-to-br from-[rgba(var(--accent-glow),.12)] via-transparent to-transparent"></div>
+      <div class="relative px-8 py-16 text-center sm:px-16">
+        <span class="eyebrow">Get Expert Guidance</span>
+        <h2 class="mt-4 font-display text-3xl font-bold text-ink-50 sm:text-4xl">Not Sure How to Build Your GEO Toolstack?</h2>
+        <p class="mt-4 mx-auto max-w-2xl text-ink-300 leading-relaxed">
+          GEOoptimised is platform-agnostic. We advise on tool selection based on your programme maturity, objectives, and budget — not vendor relationships. If you use Semrush and want to understand how to complement it with GEO-specific measurement, we can help.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact/" class="btn btn-primary">Talk to Us</a>
+          <a href="/generative-engine-optimisation/" class="btn btn-ghost">What is GEO?</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = '0';
+            other.closest('.faq-item').querySelector('.faq-icon').style.transform = '';
+          }
+        });
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+        icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+      });
+    });
+
+    // TOC IntersectionObserver
+    const tocLinks = document.querySelectorAll('.toc-link');
+    const sections = document.querySelectorAll('[id]');
+    if (tocLinks.length && sections.length) {
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              tocLinks.forEach(link => {
+                link.classList.toggle(
+                  'text-[var(--accent)]',
+                  link.dataset.section === entry.target.id
+                );
+                link.classList.toggle(
+                  'text-ink-400',
+                  link.dataset.section !== entry.target.id
+                );
+              });
+            }
+          });
+        },
+        { rootMargin: '-20% 0px -70% 0px' }
+      );
+      sections.forEach(s => observer.observe(s));
+    }
+  </script>
+
+</Base>

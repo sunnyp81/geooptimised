@@ -1,0 +1,541 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO Tools Comparison: How to Evaluate Them | GEOoptimised';
+const description = 'A GEO tools comparison framework: evaluate AI visibility platforms across platform coverage, citation tracking, schema support, reporting, pricing, and integrations.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "GEO Tools Comparison: How to Evaluate Them",
+    "description": "A structured framework for comparing generative engine optimisation tools across consistent evaluation dimensions — platform coverage, citation tracking accuracy, schema support, reporting, price model, and integrations.",
+    "url": "https://geooptimised.com/geo-tools-comparison/",
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "inLanguage": "en-GB",
+    "image": "https://geooptimised.com/og-image.png",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://geooptimised.com/geo-tools-comparison/"
+    },
+    "author": {
+      "@id": "https://geooptimised.com/#organization"
+    },
+    "publisher": {
+      "@id": "https://geooptimised.com/#organization"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What dimensions should I use to compare GEO tools?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The six most important dimensions for a structured GEO tools comparison are: platform coverage (which AI engines the tool monitors), citation tracking accuracy (whether it captures URL-level citations and response context), schema and structured-data support (whether it flags gaps in your markup), reporting quality (trend views, competitive benchmarks, exportability), pricing model (flat subscription versus per-query), and integrations (connections to analytics, CRM, or SEO platforms you already use). Weighting these dimensions according to your programme's current maturity will produce a more defensible selection decision than relying on a single vendor score."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does platform coverage matter more than citation tracking depth?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on your stage. Brands establishing a baseline benefit most from broad platform coverage — knowing which AI engines cite them across the full landscape. Brands with an existing programme and a clear content strategy benefit more from deep citation tracking: URL-level attribution, response-position data, and sentiment accuracy. In practice, the two dimensions are not mutually exclusive, but when budget forces a trade-off, match the priority to your programme's immediate measurement objective."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does the pricing model matter when comparing GEO tools?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Per-query pricing creates unpredictable costs as your prompt library grows and monitoring frequency increases. A tool that charges per API call may appear affordable at ten prompts per week but becomes expensive at the scale needed for meaningful statistical sampling. Flat-subscription models give programmes cost predictability. When comparing tools, always model the cost at the query volume your programme will actually require — not the minimum starter volume."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should schema and structured-data support be a requirement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It should be evaluated rather than required. Structured data supports AI model comprehension of your content by providing unambiguous entity and relationship signals. A tool that actively audits your schema markup — flagging missing types, invalid syntax, or under-used FAQ and HowTo markup — adds GEO-specific value that a generic technical SEO crawler does not. If your programme already has a reliable schema audit workflow through existing tooling, the dimension carries less weight than for teams with no current structured-data coverage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How should I evaluate integrations when selecting a GEO tool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Assess integrations in terms of the workflows they unlock rather than the raw count of connectors. The most practically useful integrations connect the GEO tool to your existing analytics infrastructure (GA4, Looker Studio, or your data warehouse), to your content publishing workflow (so citation insights flow to writers and editors), and to your SEO platform (so traditional authority metrics can be correlated with AI citation rates). A tool with ten integrations you will never use is less valuable than one with two integrations that directly improve your reporting and content decision-making."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do established SEO platforms like SEMrush or Ahrefs cover GEO comparison needs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not comprehensively. Both SEMrush and Ahrefs have added AI visibility features, but their core architecture is built around traditional search indices, not generative AI response sampling. Features like SEMrush's AI Toolkit or Ahrefs' AI answer tracking are useful supplements but do not replace a dedicated GEO tool for programmes where AI citation frequency is a primary KPI. Evaluate them as part of the comparison if you are already invested in those platforms — but hold them to the same six-dimension framework as purpose-built GEO tools."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://geooptimised.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "GEO Tools",
+        "item": "https://geooptimised.com/geo-tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "GEO Tools Comparison",
+        "item": "https://geooptimised.com/geo-tools-comparison/"
+      }
+    ]
+  }
+];
+
+const criteria = [
+  {
+    id: 'platform-coverage',
+    label: 'Platform Coverage',
+    why: 'Determines how representative your data is of the actual AI search landscape.',
+    strong: 'Monitors ChatGPT, Perplexity, Gemini, and Copilot as a minimum; adds Google AI Overviews, Claude, and custom prompt libraries.',
+    adequate: 'Covers two or three major platforms; limited custom prompt support.',
+    weak: 'Single-platform monitoring or relies on pre-set generic prompts only.',
+  },
+  {
+    id: 'citation-tracking',
+    label: 'Citation Tracking Accuracy',
+    why: 'Determines whether you can identify which pages earn citations and why.',
+    strong: 'URL-level attribution, response-position tagging, distinction between direct citation and paraphrase, sentiment accuracy flag.',
+    adequate: 'Brand-name mention tracking with some URL attribution; basic competitor comparison.',
+    weak: 'Boolean present/absent reporting with no URL-level or contextual detail.',
+  },
+  {
+    id: 'schema-support',
+    label: 'Schema & Structured-Data Support',
+    why: 'Structured data helps AI models parse entity relationships; gaps reduce citation potential.',
+    strong: 'Active schema audit across Article, FAQPage, HowTo, and BreadcrumbList types; flags missing or malformed markup with remediation guidance.',
+    adequate: 'Schema validation check on scanned pages; reports missing recommended types.',
+    weak: 'No schema analysis; relies on external technical SEO tools for structured-data coverage.',
+  },
+  {
+    id: 'reporting',
+    label: 'Reporting & Trend Analysis',
+    why: 'Without trend data, you cannot distinguish your work\'s impact from platform-level changes.',
+    strong: 'Configurable dashboards, minimum 12-month history, competitive benchmark overlays, scheduled report delivery, data export (CSV/API).',
+    adequate: 'Rolling 90-day trend views, basic competitor comparison, manual export.',
+    weak: 'Current snapshot only; no historical data; no competitive context.',
+  },
+  {
+    id: 'pricing',
+    label: 'Pricing Model',
+    why: 'Per-query costs become unpredictable as prompt libraries scale; flat models aid budget forecasting.',
+    strong: 'Flat monthly or annual subscription with clearly defined query/seat allowances; transparent overage pricing; meaningful free trial.',
+    adequate: 'Tiered subscription with moderate per-query caps; trial available.',
+    weak: 'Per-query billing with no ceiling; opaque overage pricing; no trial tier.',
+  },
+  {
+    id: 'integrations',
+    label: 'Integrations',
+    why: 'Insights stranded in a separate dashboard rarely influence content and publishing decisions.',
+    strong: 'Native connectors to GA4/Looker Studio or data warehouse; webhook/API for custom pipelines; SEO platform sync (e.g. SEMrush, Ahrefs, Search Console).',
+    adequate: 'CSV/spreadsheet export; Zapier or Make connector; manual data bridge to analytics.',
+    weak: 'No external integrations; data accessible only within the tool\'s own interface.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'What dimensions should I use to compare GEO tools?',
+    a: 'The six most important dimensions for a structured GEO tools comparison are: platform coverage (which AI engines the tool monitors), citation tracking accuracy (whether it captures URL-level citations and response context), schema and structured-data support (whether it flags gaps in your markup), reporting quality (trend views, competitive benchmarks, exportability), pricing model (flat subscription versus per-query), and integrations (connections to analytics, CRM, or SEO platforms you already use). Weighting these dimensions according to your programme\'s current maturity will produce a more defensible selection decision than relying on a single vendor score.',
+  },
+  {
+    q: 'Does platform coverage matter more than citation tracking depth?',
+    a: 'It depends on your stage. Brands establishing a baseline benefit most from broad platform coverage — knowing which AI engines cite them across the full landscape. Brands with an existing programme and a clear content strategy benefit more from deep citation tracking: URL-level attribution, response-position data, and sentiment accuracy. In practice, the two dimensions are not mutually exclusive, but when budget forces a trade-off, match the priority to your programme\'s immediate measurement objective.',
+  },
+  {
+    q: 'Why does the pricing model matter when comparing GEO tools?',
+    a: 'Per-query pricing creates unpredictable costs as your prompt library grows and monitoring frequency increases. A tool that charges per API call may appear affordable at ten prompts per week but becomes expensive at the scale needed for meaningful statistical sampling. Flat-subscription models give programmes cost predictability. When comparing tools, always model the cost at the query volume your programme will actually require — not the minimum starter volume.',
+  },
+  {
+    q: 'Should schema and structured-data support be a requirement?',
+    a: 'It should be evaluated rather than required. Structured data supports AI model comprehension of your content by providing unambiguous entity and relationship signals. A tool that actively audits your schema markup — flagging missing types, invalid syntax, or under-used FAQ and HowTo markup — adds GEO-specific value that a generic technical SEO crawler does not. If your programme already has a reliable schema audit workflow through existing tooling, the dimension carries less weight than for teams with no current structured-data coverage.',
+  },
+  {
+    q: 'How should I evaluate integrations when selecting a GEO tool?',
+    a: 'Assess integrations in terms of the workflows they unlock rather than the raw count of connectors. The most practically useful integrations connect the GEO tool to your existing analytics infrastructure (GA4, Looker Studio, or your data warehouse), to your content publishing workflow (so citation insights flow to writers and editors), and to your SEO platform (so traditional authority metrics can be correlated with AI citation rates). A tool with ten integrations you will never use is less valuable than one with two integrations that directly improve your reporting and content decision-making.',
+  },
+  {
+    q: 'Do established SEO platforms like SEMrush or Ahrefs cover GEO comparison needs?',
+    a: 'Not comprehensively. Both SEMrush and Ahrefs have added AI visibility features, but their core architecture is built around traditional search indices, not generative AI response sampling. Features like SEMrush\'s AI Toolkit or Ahrefs\' AI answer tracking are useful supplements but do not replace a dedicated GEO tool for programmes where AI citation frequency is a primary KPI. Evaluate them as part of the comparison if you are already invested in those platforms — but hold them to the same six-dimension framework as purpose-built GEO tools.',
+  },
+];
+
+const tocItems = [
+  { id: 'why-comparison-matters', label: 'Why a Consistent Framework Matters' },
+  { id: 'six-dimensions', label: 'The Six Comparison Dimensions' },
+  { id: 'criteria-table', label: 'Comparison-Criteria Table' },
+  { id: 'weighting-dimensions', label: 'Weighting Dimensions by Programme Stage' },
+  { id: 'tool-categories', label: 'Tool Categories to Evaluate' },
+  { id: 'faq', label: 'Frequently Asked Questions' },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/geo-tools-comparison/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex items-center gap-2 font-mono text-xs text-ink-400">
+      <li><a href="/" class="hover:text-[var(--accent)] transition-colors">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/geo-tools/" class="hover:text-[var(--accent)] transition-colors">GEO Tools</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">GEO Tools Comparison</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-fade relative overflow-hidden">
+    <div class="container-wide grid gap-12 pt-12 pb-20 lg:grid-cols-12 lg:items-start">
+      <div class="lg:col-span-7">
+        <span class="eyebrow">GEO Tools Hub</span>
+        <h1 class="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <span class="grad-text">GEO Tools Comparison: How to Evaluate Them</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-300">
+          A structured comparison framework for evaluating generative engine optimisation tools across six consistent dimensions — so you can apply the same methodology to any tool, at any budget, at any programme stage.
+        </p>
+        <p class="mt-3 text-sm text-ink-500">
+          <strong class="font-semibold text-ink-400">Note:</strong> The GEO tool market moves fast. Verify current features and pricing directly with vendors before purchasing. This page describes a comparison <em>method</em>, not a ranked product list.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/contact/" class="btn btn-primary">Discuss Tool Selection</a>
+          <a href="/geo-tools/" class="btn btn-ghost">GEO Tools Hub</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="card p-6">
+          <span class="eyebrow">Framework at a glance</span>
+          <div class="mt-4 grid grid-cols-2 gap-6">
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">6</p>
+              <p class="mt-1 text-sm text-ink-400">Evaluation dimensions</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">3</p>
+              <p class="mt-1 text-sm text-ink-400">Programme stages covered</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">Strong / Adequate / Weak</p>
+              <p class="mt-1 text-sm text-ink-400">Rating scale per dimension</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">Method</p>
+              <p class="mt-1 text-sm text-ink-400">Not a ranked product list</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky TOC + Content -->
+  <div class="container-wide py-20 lg:grid lg:grid-cols-12 lg:gap-12">
+
+    <!-- TOC -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-8">
+        <p class="font-mono text-xs font-semibold uppercase tracking-widest text-ink-500 mb-4">On this page</p>
+        <nav aria-label="Table of contents">
+          <ul class="space-y-2" id="toc-list">
+            {tocItems.map(item => (
+              <li>
+                <a
+                  href={`#${item.id}`}
+                  class="toc-link block text-sm text-ink-400 hover:text-[var(--accent)] transition-colors py-0.5 border-l-2 border-transparent pl-3 hover:border-[var(--accent)]"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main prose -->
+    <div class="lg:col-span-9 prose-dark space-y-16">
+
+      <!-- Section 1 -->
+      <section id="why-comparison-matters" class="anchor-top">
+        <h2>Why a Consistent Comparison Framework Matters</h2>
+        <p><strong>The single biggest mistake buyers make when evaluating GEO tools is comparing them on incomparable terms.</strong> One vendor leads with platform count, another with citation accuracy, a third with price, and a fourth with a feature list that conflates measurement and optimisation capabilities. Without a consistent framework applied to every tool under consideration, you end up buying on the basis of the dimension the vendor chose to emphasise rather than the dimension your programme most needs.</p>
+        <p>This is not a problem unique to GEO tools. It exists in every young software category where terminology is not yet standardised and buyers lack the domain experience to probe beneath marketing language. The GEO tool market is young — the category barely existed before 2023 — and terminology is still settling. "AI visibility tracking", "LLM citation monitoring", "generative search optimisation", and "answer engine tracking" are used to describe overlapping but distinct capabilities depending on the vendor.</p>
+        <p>A comparison framework solves this by defining the dimensions in advance, specifying what strong, adequate, and weak performance looks like on each one, and applying those definitions consistently across every tool you evaluate. The six dimensions described below are the ones that practitioners at <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO programmes</a> have found most predictive of whether a tool genuinely advances their measurement capability. They are not the only dimensions that matter, but they cover the core of what separates useful tools from superficially impressive ones.</p>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="six-dimensions" class="anchor-top">
+        <h2>The Six Comparison Dimensions</h2>
+
+        <h3 id="dimension-platform-coverage" class="mt-8 font-display text-xl font-semibold text-ink-100">1. Platform Coverage</h3>
+        <p><strong>Platform coverage determines how representative your AI visibility data actually is.</strong> A tool that monitors only one or two AI platforms will produce a systematically distorted picture of your brand's citation position. The minimum credible set for a meaningful <a href="/geo-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO tool</a> in 2026 is ChatGPT, Perplexity, Google Gemini, and Microsoft Copilot. Beyond that minimum, useful additions include Google AI Overviews (structurally different from Gemini standalone), Claude, and the ability to run custom prompt libraries rather than pre-set generic queries.</p>
+        <p>Platform coverage also extends to geographic and language variants. A brand operating in multiple markets needs to know whether its citation rate differs between the UK, US, and Australian instances of the same AI platform — answers can and do vary by locale. Tools that allow locale-specific querying provide considerably more actionable data for international programmes.</p>
+
+        <h3 id="dimension-citation-tracking" class="mt-8 font-display text-xl font-semibold text-ink-100">2. Citation Tracking Accuracy</h3>
+        <p><strong>Citation tracking accuracy is the dimension that most directly separates useful tools from vanity-metric dashboards.</strong> A tool that tells you only whether your brand name appeared in an AI response is providing information, not intelligence. The questions that drive optimisation decisions are: which specific URL was cited; where in the response did the citation appear; was the citation a direct attribution, a paraphrase, or an incidental mention; and is the description of your brand accurate?</p>
+        <p>URL-level citation tracking is particularly valuable because it reveals which pages in your content estate are functioning as AI citation sources. This information directly informs content investment decisions: pages that earn citations warrant further development, and pages that rank well in traditional search but earn no AI citations may need structural changes to their headings, definitions, or schema markup. Without URL-level data, you cannot draw that distinction.</p>
+
+        <h3 id="dimension-schema-support" class="mt-8 font-display text-xl font-semibold text-ink-100">3. Schema &amp; Structured-Data Support</h3>
+        <p><strong>Structured data reduces ambiguity for AI models, and tools that audit your schema markup surface a class of citation barriers that pure visibility trackers miss.</strong> When an AI model encounters a page with correctly implemented Article, FAQPage, or HowTo schema, it has explicit signals about the content type, the entities involved, and the relationships between them. Pages with incomplete or absent structured data rely on the model's inference — a less reliable path to accurate citation.</p>
+        <p>A tool that audits your schema implementation — identifying missing types, flagging syntax errors, and recommending additional markup for high-value pages — provides GEO-specific value that a generic technical SEO crawler does not. The comparison criterion here is not whether a tool has any schema-related feature, but whether its schema analysis is tuned to GEO outcomes (entity clarity, FAQ and definition markup) rather than just generic SEO validity.</p>
+
+        <h3 id="dimension-reporting" class="mt-8 font-display text-xl font-semibold text-ink-100">4. Reporting &amp; Trend Analysis</h3>
+        <p><strong>Reporting quality determines whether a tool supports strategic decision-making or only tactical spot-checks.</strong> Current-state data — your citation rate today — has limited value without historical context. AI platform behaviour changes as models are updated, retrieval systems are revised, and the competitive landscape shifts. A tool that only shows current data cannot distinguish between a citation rate change caused by your optimisation work and one caused by a platform-level model update. Historical data retention of at minimum ninety days, and preferably twelve months, is the baseline for credible trend analysis.</p>
+        <p>Competitive benchmarking within the reporting layer is the second critical component. Knowing your citation rate in isolation tells you less than knowing how it compares to two or three named competitors for the same query set. This relative context is what allows you to prioritise: if your rate is lower than competitors for a specific topic cluster, that gap represents a measurable opportunity.</p>
+
+        <h3 id="dimension-pricing" class="mt-8 font-display text-xl font-semibold text-ink-100">5. Pricing Model</h3>
+        <p><strong>The pricing model matters as much as the headline price, because per-query billing creates cost uncertainty that caps programme ambition.</strong> Meaningful AI visibility measurement requires running many prompts across multiple platforms at regular intervals — daily or weekly tracking across a prompt library of fifty to two hundred queries is not unusual for a serious programme. A tool that charges per API call will see its costs scale linearly with that volume. What appears affordable at a starter prompt set becomes prohibitively expensive at the scale needed for statistical confidence.</p>
+        <p>Flat-subscription models with clearly defined query allowances and transparent overage pricing give programmes the cost predictability they need to commit to a measurement frequency and stick to it. When evaluating pricing, always model the cost at the query volume your programme will <em>actually</em> run — not the volume you might start with in the first month.</p>
+
+        <h3 id="dimension-integrations" class="mt-8 font-display text-xl font-semibold text-ink-100">6. Integrations</h3>
+        <p><strong>Integrations determine whether GEO insights flow into the workflows where they can change decisions.</strong> A tool whose data lives entirely within its own dashboard faces a fundamental adoption problem: the people who need to act on citation insights — content writers, editors, SEO managers, CMOs — are unlikely to log in to a separate platform to retrieve them. The best integrations connect the GEO tool to the infrastructure teams already use: GA4 or Looker Studio for analytics, Search Console for traditional search correlation, and the SEO platforms (such as <a href="/semrush-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">SEMrush</a> or <a href="/ahrefs-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Ahrefs</a>) where the broader content and authority strategy lives.</p>
+        <p>API access and webhook support are the integration ceiling: they allow you to build custom pipelines that route citation data to your data warehouse, your CMS, or your internal dashboards. Evaluate integrations not by count but by whether they unlock the specific workflow handoffs your programme requires.</p>
+      </section>
+
+      <!-- Section 3: Comparison Table -->
+      <section id="criteria-table" class="anchor-top">
+        <h2>Comparison-Criteria Table</h2>
+        <p><strong>Apply this table directly to any GEO tool you are evaluating.</strong> For each dimension, assess the tool against the three-level descriptors and record your assessment. A tool that scores "Strong" across all six dimensions does not exist — every platform has trade-offs. The goal is a clear-eyed view of where each tool excels and where it requires supplementary capability.</p>
+
+        <div class="overflow-x-auto mt-8 rounded-xl border border-[var(--line)]">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-[var(--line)] bg-geo-900">
+                <th scope="col" class="py-4 px-5 text-left font-display font-semibold text-ink-100 w-40">Dimension</th>
+                <th scope="col" class="py-4 px-5 text-left font-display font-semibold text-accent-400">Strong</th>
+                <th scope="col" class="py-4 px-5 text-left font-display font-semibold text-ink-300">Adequate</th>
+                <th scope="col" class="py-4 px-5 text-left font-display font-semibold text-ink-500">Weak</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[var(--line)]">
+              {criteria.map((row, i) => (
+                <tr class={i % 2 === 0 ? 'bg-geo-950' : 'bg-geo-900/40'}>
+                  <td class="py-4 px-5 font-semibold text-ink-100 align-top">
+                    {row.label}
+                    <p class="mt-1 text-xs font-normal text-ink-500 leading-relaxed">{row.why}</p>
+                  </td>
+                  <td class="py-4 px-5 text-ink-300 align-top leading-relaxed">{row.strong}</td>
+                  <td class="py-4 px-5 text-ink-400 align-top leading-relaxed">{row.adequate}</td>
+                  <td class="py-4 px-5 text-ink-500 align-top leading-relaxed">{row.weak}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p class="mt-5 text-sm text-ink-500 leading-relaxed">
+          <strong class="text-ink-400">Market note:</strong> The GEO tool market is evolving rapidly. Features described here reflect capabilities available as of mid-2026. Verify current functionality and pricing directly with each vendor before making a purchasing decision — capability gaps can close quickly in a young category.
+        </p>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="weighting-dimensions" class="anchor-top">
+        <h2>Weighting Dimensions by Programme Stage</h2>
+        <p><strong>The relative importance of each dimension changes as a GEO programme matures.</strong> A uniform weighting applied to all six dimensions will steer early-stage programmes towards tools that are more sophisticated than their current measurement process can use. It will also steer mature programmes towards tools that are too simple to support the depth of analysis their reporting stakeholders expect.</p>
+
+        <div class="mt-8 grid gap-6 sm:grid-cols-3">
+          <div class="card p-6 border-t-2 border-t-[var(--accent)]">
+            <span class="eyebrow">Stage 1</span>
+            <h3 class="mt-2 font-display text-lg font-semibold text-ink-50">Baseline Measurement</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">No prior GEO data. Primary objective: understand current citation position across the AI landscape.</p>
+            <ul class="mt-4 space-y-1 text-sm text-ink-400">
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5" aria-hidden="true">&#8594;</span> Prioritise: Platform coverage, Pricing model</li>
+              <li class="flex items-start gap-2"><span class="text-ink-600 mt-0.5" aria-hidden="true">&#8594;</span> Defer: Integrations, Advanced reporting</li>
+            </ul>
+          </div>
+          <div class="card p-6 border-t-2 border-t-[var(--accent)]">
+            <span class="eyebrow">Stage 2</span>
+            <h3 class="mt-2 font-display text-lg font-semibold text-ink-50">Active Optimisation</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">Baseline established. Ongoing content and entity work underway. Need to measure programme impact.</p>
+            <ul class="mt-4 space-y-1 text-sm text-ink-400">
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5" aria-hidden="true">&#8594;</span> Prioritise: Citation tracking accuracy, Reporting &amp; trends</li>
+              <li class="flex items-start gap-2"><span class="text-ink-600 mt-0.5" aria-hidden="true">&#8594;</span> Add: Schema support, Competitor benchmarks</li>
+            </ul>
+          </div>
+          <div class="card p-6 border-t-2 border-t-[var(--accent)]">
+            <span class="eyebrow">Stage 3</span>
+            <h3 class="mt-2 font-display text-lg font-semibold text-ink-50">Scaled Programme</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">Multi-market or large content estate. Reporting to senior stakeholders. Data must flow into existing systems.</p>
+            <ul class="mt-4 space-y-1 text-sm text-ink-400">
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5" aria-hidden="true">&#8594;</span> Prioritise: Integrations, API access, Schema audit depth</li>
+              <li class="flex items-start gap-2"><span class="text-ink-600 mt-0.5" aria-hidden="true">&#8594;</span> Require: All six dimensions at Adequate or above</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="tool-categories" class="anchor-top">
+        <h2>Tool Categories to Include in Your Comparison</h2>
+        <p><strong>A thorough GEO tools comparison evaluates candidates from all relevant categories rather than treating the market as a single homogeneous set.</strong> The GEO tool landscape currently spans four broadly distinct categories, and the strongest comparison process includes at least one candidate from each before narrowing to a shortlist.</p>
+        <p>The <a href="/best-ai-tools-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">dedicated GEO tool</a> category includes purpose-built platforms designed from the ground up for AI citation measurement. These typically score highest on citation tracking accuracy and platform coverage because those are their core product propositions. They vary considerably on reporting depth and integration maturity depending on their age and funding stage.</p>
+        <p>The <a href="/best-aeo-platforms-2026/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">answer engine optimisation platform</a> category overlaps significantly with the GEO tool category but tends to emphasise content structure and entity optimisation recommendations alongside measurement. These tools often include schema audit features as a native capability, making them stronger on the structured-data dimension.</p>
+        <p>Established SEO platforms with AI visibility add-ons — including <a href="/semrush-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">SEMrush's GEO features</a> and <a href="/ahrefs-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Ahrefs' AI answer tracking</a> — benefit from integration with existing SEO workflows and typically score highest on the integrations dimension for teams already invested in those platforms. Their GEO-specific capabilities are generally less deep than dedicated tools, but the total cost of the combined stack may be lower than adding a separate GEO tool.</p>
+        <p>The <a href="/best-llm-visibility-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">LLM visibility tool</a> category includes platforms focused specifically on how brands are described and portrayed by large language model responses — emphasising entity accuracy, brand sentiment, and knowledge graph presence rather than citation frequency. These are particularly useful for regulated industries and high-profile brands where how AI describes you matters as much as how often it mentions you.</p>
+        <p>For a complete overview of the functional categories within the GEO tool landscape, see the <a href="/geo-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO Tools hub</a>. For the broader context of why tool selection sits within a larger strategic framework, the <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation guide</a> is the right starting point.</p>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- FAQ Accordion -->
+  <section class="container-wide py-20" id="faq">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Frequently Asked Questions</h2>
+
+    <div class="mt-10 max-w-3xl divide-y divide-[var(--line)]">
+      {faqs.map(faq => (
+        <div class="faq-item">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors"
+            aria-expanded="false"
+          >
+            <span>{faq.q}</span>
+            <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+            </svg>
+          </button>
+          <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+            <p class="pb-5 text-ink-300 leading-relaxed">{faq.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Related Reading -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">Related Reading</span>
+    <h2 class="mt-3 font-display text-2xl font-bold text-ink-50">Continue Your Research</h2>
+    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <a href="/geo-tools/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">GEO Tools Hub</h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed">The four functional categories of GEO tooling — trackers, citation monitors, content optimisers, and entity analysers — explained.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/best-ai-tools-geo/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">Best AI Tools for GEO</h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed">An overview of the AI tools most commonly used within generative engine optimisation programmes.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/best-aeo-platforms-2026/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">Best AEO Platforms 2026</h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed">Answer engine optimisation platforms evaluated for content structure, entity optimisation, and citation measurement.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/best-llm-visibility-tools/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">Best LLM Visibility Tools</h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed">Tools focused on how large language models describe, portray, and cite your brand in generated responses.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/semrush-geo/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">SEMrush for GEO</h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed">How SEMrush's AI visibility features fit into a broader GEO programme and where dedicated tools fill the gaps.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/ahrefs-geo/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">Ahrefs for GEO</h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed">Ahrefs' AI answer tracking capabilities assessed through the GEO comparison framework.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="container-wide py-20">
+    <div class="relative overflow-hidden rounded-2xl dot-grid">
+      <div class="absolute inset-0 bg-gradient-to-br from-[rgba(var(--accent-glow),.12)] via-transparent to-transparent"></div>
+      <div class="relative px-8 py-16 text-center sm:px-16">
+        <span class="eyebrow">Tool Selection Advice</span>
+        <h2 class="mt-4 font-display text-3xl font-bold text-ink-50 sm:text-4xl">Want an Independent View on Which Tools Suit Your Programme?</h2>
+        <p class="mt-4 mx-auto max-w-2xl text-ink-300 leading-relaxed">
+          Tool selection is most straightforward when you know your programme stage, your measurement objectives, and your existing stack. Our team can help you apply this framework to a shortlist and reach a clear recommendation — without vendor affiliation or commercial bias.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact/" class="btn btn-primary">Discuss Tool Selection</a>
+          <a href="/generative-engine-optimisation/" class="btn btn-ghost">GEO Overview</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = '0';
+            other.closest('.faq-item').querySelector('.faq-icon').style.transform = '';
+          }
+        });
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+        icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+      });
+    });
+
+    // Sticky TOC — IntersectionObserver highlights active section
+    const headings = document.querySelectorAll('section[id]');
+    const tocLinks = document.querySelectorAll('.toc-link');
+
+    if (headings.length && tocLinks.length) {
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              tocLinks.forEach(link => {
+                link.classList.remove('text-[var(--accent)]', 'border-[var(--accent)]');
+                link.classList.add('text-ink-400', 'border-transparent');
+              });
+              const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+              if (active) {
+                active.classList.remove('text-ink-400', 'border-transparent');
+                active.classList.add('text-[var(--accent)]', 'border-[var(--accent)]');
+              }
+            }
+          });
+        },
+        { rootMargin: '-10% 0px -80% 0px', threshold: 0 }
+      );
+      headings.forEach(h => observer.observe(h));
+    }
+  </script>
+
+</Base>

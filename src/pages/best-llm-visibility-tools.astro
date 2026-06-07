@@ -1,0 +1,493 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Best LLM Visibility Tools for Citation Monitoring | GEOoptimised';
+const description = 'Review the best LLM visibility optimization tools for tracking citations across ChatGPT, Perplexity, Gemini, and Claude — and learn how to evaluate them.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Best LLM Visibility Tools",
+    "description": "A guide to the best LLM visibility optimization tools focused on citation monitoring across ChatGPT, Perplexity, Gemini, and Claude — with an evaluation framework for practitioners.",
+    "url": "https://geooptimised.com/best-llm-visibility-tools/",
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "inLanguage": "en-GB",
+    "image": "https://geooptimised.com/og-image.png",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://geooptimised.com/best-llm-visibility-tools/"
+    },
+    "author": {
+      "@id": "https://geooptimised.com/#organization"
+    },
+    "publisher": {
+      "@id": "https://geooptimised.com/#organization"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does an LLM citation monitoring tool actually measure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An LLM citation monitoring tool measures how often your brand, product, or content is cited or mentioned within AI-generated responses across platforms such as ChatGPT, Perplexity, Gemini, and Claude. It typically tracks citation frequency (the percentage of sampled queries in which your brand appears), which specific URLs or sources are referenced, how your brand is described in those responses, and how your citation rate compares to named competitors for the same query set."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many AI platforms should an LLM visibility tool cover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A credible LLM visibility tool should cover at minimum ChatGPT, Perplexity, Google Gemini, and Microsoft Copilot. These four platforms handle the majority of AI-driven information queries. Coverage of Claude and Google AI Overviews is a useful addition. The most capable tools let you add custom prompts tailored to your industry so you can monitor the specific queries your target audience is likely to use."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use a traditional SEO rank tracker to monitor LLM citations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Traditional rank trackers are built to record fixed positions on a search results page. LLM platforms do not produce stable ranked lists — they generate probabilistic, synthesised responses that vary by query phrasing, model version, and retrieval context. Measuring LLM citation frequency requires a different approach: statistical sampling across many query variations, not position tracking at a fixed point in time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is citation frequency and why does it matter?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Citation frequency is the proportion of sampled AI queries in a given topic area for which your brand or a specific URL appears in the generated response. It matters because it is the primary performance metric for generative engine optimisation — the equivalent of search ranking position in traditional SEO. A brand with a high citation frequency for its key topic categories is being recommended by AI platforms to users asking relevant questions, which drives awareness, authority, and ultimately demand."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I know if a tool's citation data is reliable?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Reliable citation data comes from tools that are transparent about their data collection methodology, query how many responses they sample per query, and how they handle the probabilistic variation inherent in LLM outputs. Look for vendors who publish their sampling methodology, use official APIs or documented query mechanisms rather than opaque scraping, and provide confidence intervals or sample sizes alongside their metrics. A tool that presents a single 'score' without explaining how it was derived should be treated with caution."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is a free LLM visibility tool good enough for a serious GEO programme?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Free tools are useful for establishing an initial baseline and understanding the general shape of your AI visibility — particularly in the early stages of a GEO programme. Their limitations typically include restricted platform coverage, limited query volumes, no historical data retention, and no competitive benchmarking. For an ongoing optimisation programme where you need to track change over time and measure the impact of specific interventions, a paid tool with historical data and multi-platform coverage is necessary."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://geooptimised.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "GEO Tools",
+        "item": "https://geooptimised.com/geo-tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Best LLM Visibility Tools",
+        "item": "https://geooptimised.com/best-llm-visibility-tools/"
+      }
+    ]
+  }
+];
+
+const criteria = [
+  {
+    id: 'platform-coverage',
+    label: 'Platform Coverage',
+    description: 'How many LLM platforms does the tool query? At minimum: ChatGPT, Perplexity, Gemini, Copilot.',
+    weight: 'High',
+  },
+  {
+    id: 'citation-granularity',
+    label: 'Citation Granularity',
+    description: 'Does it identify cited URLs, response position, and attribution type — not just brand-name presence?',
+    weight: 'High',
+  },
+  {
+    id: 'sampling-methodology',
+    label: 'Sampling Methodology',
+    description: 'Is the approach to handling LLM probabilistic variation documented and statistically defensible?',
+    weight: 'High',
+  },
+  {
+    id: 'prompt-customisation',
+    label: 'Prompt Customisation',
+    description: 'Can you build and manage your own prompt library rather than relying on vendor-defined templates?',
+    weight: 'Medium',
+  },
+  {
+    id: 'historical-retention',
+    label: 'Historical Data Retention',
+    description: 'How far back does the tool store data? Ninety days minimum; twelve months for trend analysis.',
+    weight: 'Medium',
+  },
+  {
+    id: 'competitive-benchmarking',
+    label: 'Competitive Benchmarking',
+    description: 'Can you compare your citation frequency against named competitors for the same query set?',
+    weight: 'Medium',
+  },
+  {
+    id: 'alert-reporting',
+    label: 'Alerts &amp; Reporting',
+    description: 'Does it notify you of significant changes in citation frequency and support scheduled reports?',
+    weight: 'Lower',
+  },
+];
+
+const faqs = [
+  {
+    q: 'What does an LLM citation monitoring tool actually measure?',
+    a: 'An LLM citation monitoring tool measures how often your brand, product, or content is cited or mentioned within AI-generated responses across platforms such as ChatGPT, Perplexity, Gemini, and Claude. It typically tracks citation frequency (the percentage of sampled queries in which your brand appears), which specific URLs or sources are referenced, how your brand is described in those responses, and how your citation rate compares to named competitors for the same query set.',
+  },
+  {
+    q: 'How many AI platforms should an LLM visibility tool cover?',
+    a: 'A credible LLM visibility tool should cover at minimum ChatGPT, Perplexity, Google Gemini, and Microsoft Copilot. These four platforms handle the majority of AI-driven information queries. Coverage of Claude and Google AI Overviews is a useful addition. The most capable tools let you add custom prompts tailored to your industry so you can monitor the specific queries your target audience is likely to use.',
+  },
+  {
+    q: 'Can I use a traditional SEO rank tracker to monitor LLM citations?',
+    a: 'No. Traditional rank trackers are built to record fixed positions on a search results page. LLM platforms do not produce stable ranked lists — they generate probabilistic, synthesised responses that vary by query phrasing, model version, and retrieval context. Measuring LLM citation frequency requires a different approach: statistical sampling across many query variations, not position tracking at a fixed point in time.',
+  },
+  {
+    q: 'What is citation frequency and why does it matter?',
+    a: 'Citation frequency is the proportion of sampled AI queries in a given topic area for which your brand or a specific URL appears in the generated response. It matters because it is the primary performance metric for generative engine optimisation — the equivalent of search ranking position in traditional SEO.',
+  },
+  {
+    q: 'How do I know if a tool\'s citation data is reliable?',
+    a: 'Reliable citation data comes from tools that are transparent about their data collection methodology, how many responses they sample per query, and how they handle the probabilistic variation inherent in LLM outputs. Look for vendors who publish their sampling methodology, use official APIs or documented query mechanisms, and provide sample sizes alongside their metrics.',
+  },
+  {
+    q: 'Is a free LLM visibility tool good enough for a serious GEO programme?',
+    a: 'Free tools are useful for establishing an initial baseline and understanding the general shape of your AI visibility. Their limitations typically include restricted platform coverage, limited query volumes, no historical data retention, and no competitive benchmarking. For an ongoing optimisation programme, a paid tool with historical data and multi-platform coverage is necessary.',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/best-llm-visibility-tools/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-2 font-mono text-xs text-ink-400">
+      <li><a href="/" class="hover:text-[var(--accent)] transition-colors">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/geo-tools/" class="hover:text-[var(--accent)] transition-colors">GEO Tools</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">Best LLM Visibility Tools</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-fade relative overflow-hidden">
+    <div class="container-wide grid gap-12 pt-12 pb-20 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-7">
+        <span class="eyebrow">LLM Citation Monitoring</span>
+        <h1 class="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <span class="grad-text">Best LLM Visibility Tools</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-300">
+          Citation monitoring is the core measurement discipline of generative engine optimisation. This guide covers what the best LLM visibility optimization tools actually track, how to evaluate them rigorously, and what to look for before committing to a platform.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#evaluation-criteria" class="btn btn-primary">See Evaluation Criteria</a>
+          <a href="/geo-tools/" class="btn btn-ghost">All GEO Tools</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="card p-6">
+          <span class="eyebrow">Quick Reference</span>
+          <div class="mt-4 grid grid-cols-2 gap-6">
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">4+</p>
+              <p class="mt-1 text-sm text-ink-400">Platforms to monitor</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">7</p>
+              <p class="mt-1 text-sm text-ink-400">Evaluation criteria</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">90 days</p>
+              <p class="mt-1 text-sm text-ink-400">Minimum data retention</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">Free &amp; Paid</p>
+              <p class="mt-1 text-sm text-ink-400">Tiers available</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky TOC -->
+  <nav aria-label="Table of contents" class="container-wide mb-2">
+    <div class="card p-5 lg:hidden">
+      <p class="font-mono text-xs text-ink-500 mb-3 uppercase tracking-widest">On this page</p>
+      <ol class="space-y-2 text-sm text-ink-300">
+        <li><a href="#what-citation-monitoring-is" class="hover:text-[var(--accent)] transition-colors">What citation monitoring is</a></li>
+        <li><a href="#why-llm-visibility-differs" class="hover:text-[var(--accent)] transition-colors">Why LLM visibility differs from SEO</a></li>
+        <li><a href="#evaluation-criteria" class="hover:text-[var(--accent)] transition-colors">Evaluation criteria</a></li>
+        <li><a href="#tool-categories" class="hover:text-[var(--accent)] transition-colors">Tool categories in the market</a></li>
+        <li><a href="#known-tools" class="hover:text-[var(--accent)] transition-colors">Known tools and platforms</a></li>
+        <li><a href="#honesty-note" class="hover:text-[var(--accent)] transition-colors">A note on market accuracy</a></li>
+        <li><a href="#faq" class="hover:text-[var(--accent)] transition-colors">FAQ</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Main prose -->
+  <div class="container-wide lg:grid lg:grid-cols-12 lg:gap-12 py-12">
+
+    <!-- Sticky TOC — desktop -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 card p-5">
+        <p class="font-mono text-xs text-ink-500 mb-3 uppercase tracking-widest">On this page</p>
+        <ol class="space-y-2 text-sm text-ink-300" id="toc-list">
+          <li><a href="#what-citation-monitoring-is" class="toc-link hover:text-[var(--accent)] transition-colors">What citation monitoring is</a></li>
+          <li><a href="#why-llm-visibility-differs" class="toc-link hover:text-[var(--accent)] transition-colors">Why LLM visibility differs</a></li>
+          <li><a href="#evaluation-criteria" class="toc-link hover:text-[var(--accent)] transition-colors">Evaluation criteria</a></li>
+          <li><a href="#tool-categories" class="toc-link hover:text-[var(--accent)] transition-colors">Tool categories</a></li>
+          <li><a href="#known-tools" class="toc-link hover:text-[var(--accent)] transition-colors">Known tools</a></li>
+          <li><a href="#honesty-note" class="toc-link hover:text-[var(--accent)] transition-colors">Market accuracy note</a></li>
+          <li><a href="#faq" class="toc-link hover:text-[var(--accent)] transition-colors">FAQ</a></li>
+        </ol>
+      </div>
+    </aside>
+
+    <!-- Article body -->
+    <article class="lg:col-span-9 prose-dark space-y-16">
+
+      <section id="what-citation-monitoring-is">
+        <h2 class="anchor-top">What LLM Citation Monitoring Actually Measures</h2>
+        <p><strong>LLM citation monitoring is the discipline of systematically tracking how often, and in what context, AI language models mention or reference your brand across a defined set of queries.</strong> It is distinct from traditional mention monitoring, which scans social media and news sources for brand name appearances. Citation monitoring is concerned specifically with the synthesised outputs of generative AI platforms — the answers that ChatGPT, Perplexity, Gemini, Claude, and Microsoft Copilot construct in response to user questions.</p>
+        <p>The core metric is <strong>citation frequency</strong>: the proportion of sampled queries in a given topic category for which your brand appears in the generated response. A brand with a 40% citation frequency for queries in its core category is mentioned in approximately four out of every ten AI answers sampled. A brand with a 5% citation frequency has a substantial AI visibility gap relative to competitors who may be appearing far more often.</p>
+        <p>Beyond raw frequency, credible citation monitoring covers three additional dimensions. <strong>Source attribution</strong> identifies which of your URLs the AI platform is drawing on — a critical signal for content strategy, because it reveals which pages are functioning as citation sources and which are being overlooked. <strong>Sentiment and description accuracy</strong> records how your brand is characterised in AI responses, flagging misattributions or outdated descriptions that could damage trust. <strong>Competitive benchmarking</strong> situates your citation rate in context by running the same query set against named competitors.</p>
+        <p>This is the foundation of any serious <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> programme. You cannot improve what you cannot measure, and citation frequency — tracked over time, broken down by platform and topic cluster — is the primary performance signal for GEO work.</p>
+      </section>
+
+      <section id="why-llm-visibility-differs">
+        <h2 class="anchor-top">Why LLM Visibility Differs from Traditional SEO Measurement</h2>
+        <p><strong>The fundamental difference between LLM visibility measurement and traditional search ranking is that LLM responses are probabilistic, not deterministic.</strong> A search engine returns a fixed ranked list for a given query at a given moment. An LLM generates a unique synthesised response each time it is queried, meaning the same brand may appear in one response and be absent from the next, even with identical query text.</p>
+        <p>This probabilistic nature has significant implications for tooling. A rank tracker records your position with precision because the position is fixed. An LLM visibility tool must instead sample many responses to estimate a citation frequency — a fundamentally statistical exercise. Tools that present citation data without disclosing their sampling methodology, sample sizes, or confidence intervals are obscuring important uncertainty in their numbers.</p>
+        <p>The other structural difference is <strong>retrieval mechanism</strong>. Many modern LLM platforms, including Perplexity and ChatGPT with web browsing enabled, use retrieval-augmented generation (RAG) — they query live web content before generating a response. This means your traditional SEO authority (domain authority, backlinks, page rankings) influences your LLM citation rate indirectly, through the probability that your pages appear in the retrieved context. But the relationship is not direct or linear. A page can rank highly in traditional search and be ignored by LLM retrievers because it is structured in a way that resists extraction. Understanding this disconnect is part of what good <a href="/geo-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO tooling</a> should surface.</p>
+        <p>Tools built on SEO infrastructure — existing rank trackers with an AI monitoring tab bolted on — often fail to address this distinction adequately. Purpose-built LLM citation monitors are designed from the ground up to handle probabilistic sampling, platform-specific retrieval behaviour, and the structural characteristics of AI-generated text.</p>
+      </section>
+
+      <section id="evaluation-criteria">
+        <h2 class="anchor-top">Evaluation Criteria for LLM Visibility Tools</h2>
+        <p><strong>Seven criteria separate genuinely useful LLM citation monitoring tools from superficial platforms that collect citation data without producing actionable insight.</strong> Use this framework when assessing any tool, whether free or paid.</p>
+
+        <div class="overflow-x-auto mt-8 rounded-xl border border-[var(--line)]">
+          <table class="w-full text-sm">
+            <thead class="bg-[rgba(var(--accent-glow),.06)]">
+              <tr>
+                <th scope="col" class="px-5 py-4 text-left font-semibold text-ink-100">Criterion</th>
+                <th scope="col" class="px-5 py-4 text-left font-semibold text-ink-100">What to assess</th>
+                <th scope="col" class="px-5 py-4 text-left font-semibold text-ink-100 whitespace-nowrap">Priority</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[var(--line)]">
+              {criteria.map((c, i) => (
+                <tr class={i % 2 === 0 ? '' : 'bg-[rgba(255,255,255,.01)]'}>
+                  <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">{c.label}</td>
+                  <td class="px-5 py-4 text-ink-300 leading-relaxed" set:html={c.description}></td>
+                  <td class="px-5 py-4 text-ink-400 whitespace-nowrap">{c.weight}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p class="mt-6 text-ink-300 leading-relaxed">Platform coverage and citation granularity carry the most weight because they determine whether the tool produces data you can act on. Sampling methodology is equally critical but harder to assess without vendor transparency — treat evasive answers here as a red flag. Prompt customisation, historical retention, and competitive benchmarking become more important as your programme matures and you need to measure the impact of specific interventions over time.</p>
+      </section>
+
+      <section id="tool-categories">
+        <h2 class="anchor-top">Tool Categories in the LLM Visibility Market</h2>
+        <p><strong>The LLM visibility tool market has coalesced around three broad functional approaches, each with different strengths depending on your programme stage.</strong></p>
+
+        <div class="mt-8 grid gap-6 sm:grid-cols-3">
+          <div class="card p-6 border-t-2 border-t-[var(--accent)]">
+            <h3 class="font-display text-lg font-semibold text-ink-50">Purpose-built GEO platforms</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">Dedicated tools built specifically for AI visibility measurement. These typically offer the deepest citation tracking, most flexible prompt libraries, and strongest historical retention. They are usually subscription-based and priced for marketing and agency teams.</p>
+          </div>
+          <div class="card p-6 border-t-2 border-t-[var(--accent)]">
+            <h3 class="font-display text-lg font-semibold text-ink-50">SEO platforms with AI modules</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">Established SEO tools that have added LLM monitoring features. Convenient if you already use the platform, but often limited in sampling depth, prompt flexibility, and platform coverage compared to purpose-built alternatives. Verify that the AI module is genuinely functional rather than a roadmap item.</p>
+          </div>
+          <div class="card p-6 border-t-2 border-t-[var(--accent)]">
+            <h3 class="font-display text-lg font-semibold text-ink-50">DIY query frameworks</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">Open-source or scripted approaches using LLM APIs directly. Highly flexible and low-cost, but require engineering resource, ongoing maintenance, and manual reporting. Appropriate for technically capable teams who need control over sampling methodology or have requirements that commercial tools do not address.</p>
+          </div>
+        </div>
+
+        <p class="mt-6 text-ink-300 leading-relaxed">The right category depends on your team's technical capacity, budget, and programme maturity. Brands beginning their GEO journey typically benefit from a purpose-built platform because it provides immediate structure and removes the overhead of building measurement infrastructure. Larger organisations with existing data teams sometimes prefer to build on top of LLM APIs for deeper customisation.</p>
+      </section>
+
+      <section id="known-tools">
+        <h2 class="anchor-top">Known Tools and Platforms in This Category</h2>
+        <p><strong>The LLM visibility tool landscape is evolving rapidly, and any specific tool list requires constant verification — pricing, features, and company status change frequently in this space.</strong> The following are categories and examples of tools that have been publicly active in this area. This is not a ranked list or endorsement; treat it as a starting point for your own evaluation.</p>
+
+        <p class="mt-4 text-ink-300 leading-relaxed">Publicly known platforms in the dedicated GEO / AI visibility monitoring category have included names such as <strong>Profound</strong>, <strong>Peec AI</strong>, <strong>Otterly.ai</strong>, <strong>Brandwatch</strong> (AI listening features), and <strong>Semrush AI Toolkit</strong>. Established SEO platforms including <strong>Ahrefs</strong>, <strong>Moz</strong>, and <strong>BrightEdge</strong> have announced or shipped features in this direction. The open-source community has also produced query-runner scripts that use the OpenAI and Perplexity APIs directly for manual citation audits.</p>
+
+        <div class="mt-6 rounded-xl border border-[var(--line)] bg-[rgba(var(--accent-glow),.04)] p-6">
+          <p class="font-semibold text-ink-100 mb-2">Important: verify before committing</p>
+          <p class="text-sm text-ink-300 leading-relaxed">Feature sets, pricing tiers, platform coverage, and company viability in this category change quickly. Always conduct your own evaluation using a trial account and test your specific use case before purchasing. The tool that best fits a large e-commerce brand's citation monitoring needs will differ substantially from the best fit for a professional services firm or a SaaS company. See our <a href="/geo-tools-comparison/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO tools comparison</a> for a more detailed side-by-side evaluation.</p>
+        </div>
+
+        <p class="mt-6 text-ink-300 leading-relaxed">When evaluating any tool in a trial, run your own prompt library — not the vendor's defaults — across at least three of the four core platforms. Compare the results to what you get from manual spot-checking the same platforms directly. The gap between a tool's reported citation frequency and what you observe manually is an indication of data quality. A perfect match is unlikely given sampling variation, but a large systematic discrepancy warrants investigation.</p>
+      </section>
+
+      <section id="honesty-note">
+        <h2 class="anchor-top">A Note on Market Accuracy</h2>
+        <p><strong>The LLM visibility tool market is one of the fastest-moving categories in marketing technology, and any published comparison has a limited shelf life.</strong> Tools that were in closed beta in early 2025 are now mature products; tools that appeared promising have pivoted or wound down. This guide focuses on evaluation criteria rather than point-in-time scores precisely because the criteria remain stable even as the tools evolve.</p>
+
+        <p class="mt-4 text-ink-300 leading-relaxed">We do not publish specific pricing figures, feature scores, or platform-coverage claims for individual tools on this page because those details are liable to become inaccurate within months. What we do provide — and what will remain useful — is the framework for evaluating any tool you encounter: the seven criteria above, the three product category questions, and the trial methodology for validating data quality against your own use case.</p>
+
+        <p class="mt-4 text-ink-300 leading-relaxed">For guidance on which specific tools are currently worth evaluating for your situation, <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">contact our team</a>. We evaluate GEO tooling regularly as part of our <a href="/geo-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO tools</a> advisory work and can provide up-to-date, unbiased recommendations based on your specific requirements and budget. See also our guidance on <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility</a> for the broader strategic context in which citation monitoring sits.</p>
+      </section>
+
+    </article>
+  </div>
+
+  <!-- FAQ Accordion -->
+  <section class="container-wide py-20" id="faq">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Frequently Asked Questions</h2>
+
+    <div class="mt-10 max-w-3xl divide-y divide-[var(--line)]">
+      {faqs.map(faq => (
+        <div class="faq-item">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors"
+            aria-expanded="false"
+          >
+            <span>{faq.q}</span>
+            <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+            </svg>
+          </button>
+          <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+            <p class="pb-5 text-ink-300 leading-relaxed">{faq.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Related Reading -->
+  <section class="container-wide py-12">
+    <span class="eyebrow">Related Reading</span>
+    <h2 class="mt-3 font-display text-2xl font-bold text-ink-50">Explore More</h2>
+    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <a href="/geo-tools/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">GEO Tools Hub</h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed">All four categories of GEO tooling — AI visibility trackers, citation monitors, content optimisers, and brand authority analysers.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/best-ai-tools-visibility/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">Best AI Tools for Visibility</h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed">A broader look at the AI tools that support visibility across generative platforms, from content optimisation to entity management.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/best-aeo-platforms-2026/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">Best AEO Platforms 2026</h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed">Answer engine optimisation platforms reviewed for 2026 — what to look for and which categories are worth evaluating.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/geo-tools-comparison/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">GEO Tools Comparison</h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed">Side-by-side evaluation of the leading GEO monitoring platforms across the seven criteria that matter most.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/best-ai-brand-visibility-tool/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">Choosing the Best AI Brand Visibility Tool</h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed">A decision guide for selecting the single right tool for your organisation — by size, budget, and platform priority.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/generative-engine-optimisation/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">Generative Engine Optimisation</h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed">The complete guide to GEO — what it is, how it works, and why AI citations are the new frontier of brand visibility.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="container-wide py-20">
+    <div class="relative overflow-hidden rounded-2xl dot-grid">
+      <div class="absolute inset-0 bg-gradient-to-br from-[rgba(var(--accent-glow),.12)] via-transparent to-transparent"></div>
+      <div class="relative px-8 py-16 text-center sm:px-16">
+        <span class="eyebrow">Tools Advice</span>
+        <h2 class="mt-4 font-display text-3xl font-bold text-ink-50 sm:text-4xl">Need Guidance on Which LLM Visibility Tool Is Right for You?</h2>
+        <p class="mt-4 mx-auto max-w-2xl text-ink-300 leading-relaxed">
+          Tool selection depends on your programme maturity, team size, and the AI platforms most relevant to your audience. Our team evaluates GEO tooling continuously and can advise without vendor bias. Get in touch to discuss your requirements.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact/" class="btn btn-primary">Get Unbiased Advice</a>
+          <a href="/geo-tools/" class="btn btn-ghost">Browse All GEO Tools</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = '0';
+            other.closest('.faq-item').querySelector('.faq-icon').style.transform = '';
+          }
+        });
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+        icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+      });
+    });
+
+    // TOC IntersectionObserver
+    const sections = document.querySelectorAll('article section[id]');
+    const tocLinks = document.querySelectorAll('.toc-link');
+    if (sections.length && tocLinks.length) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(l => l.classList.remove('text-[var(--accent)]'));
+            const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+            if (active) active.classList.add('text-[var(--accent)]');
+          }
+        });
+      }, { rootMargin: '-20% 0px -70% 0px' });
+      sections.forEach(s => observer.observe(s));
+    }
+  </script>
+
+</Base>

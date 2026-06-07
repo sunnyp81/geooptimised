@@ -1,0 +1,600 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Best AI Visibility Tools for Brand Tracking | GEOoptimised';
+const description = 'The best ai optimization tools for visibility: a practical guide to AI visibility tracking and monitoring platforms that measure where your brand appears in AI-generated answers.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Best AI Visibility Tools for Brand Tracking",
+    "description": "A practical guide to AI visibility tracking and monitoring platforms that measure where your brand appears across AI-generated answers from ChatGPT, Perplexity, Gemini, and Copilot.",
+    "url": "https://geooptimised.com/best-ai-tools-visibility/",
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "inLanguage": "en-GB",
+    "image": "https://geooptimised.com/og-image.png",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://geooptimised.com/best-ai-tools-visibility/"
+    },
+    "author": {
+      "@id": "https://geooptimised.com/#organization"
+    },
+    "publisher": {
+      "@id": "https://geooptimised.com/#organization"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "AI Visibility Tracking Tool Categories",
+    "description": "The main categories of AI visibility tracking and monitoring tools for brand presence measurement.",
+    "numberOfItems": 5,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "AI Answer Presence Trackers",
+        "url": "https://geooptimised.com/best-ai-tools-visibility/#presence-trackers"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Citation Source Monitors",
+        "url": "https://geooptimised.com/best-ai-tools-visibility/#citation-monitors"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Brand Sentiment Trackers",
+        "url": "https://geooptimised.com/best-ai-tools-visibility/#sentiment-trackers"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Competitive AI Benchmarking Platforms",
+        "url": "https://geooptimised.com/best-ai-tools-visibility/#competitive-benchmarking"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Multi-Platform Coverage Dashboards",
+        "url": "https://geooptimised.com/best-ai-tools-visibility/#multi-platform"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What do AI visibility tracking tools actually measure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI visibility tracking tools measure whether and how often your brand, products, or content appear in AI-generated answers. Specifically, they submit a library of target prompts to AI platforms such as ChatGPT, Perplexity, Gemini, and Copilot, then record citation frequency, brand mention rate, which URLs are cited, how your brand is described, and how competitor presence compares for the same queries. The output is a statistical picture of your AI answer presence rather than a rank position."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is AI visibility tracking different from traditional rank tracking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Traditional rank trackers record a deterministic position — your page ranks number three for a given keyword. AI visibility trackers record a probabilistic presence — your brand was cited in 41% of responses to a given prompt category. This is a fundamentally different measurement model because generative AI outputs vary with each query: the same prompt can produce different answers with different citations on consecutive requests. Visibility trackers handle this by running multiple samples per prompt and reporting aggregate citation rates, not fixed positions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which AI platforms should a visibility tracker cover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At minimum: ChatGPT, Perplexity, Google Gemini, and Microsoft Copilot. These four platforms account for the large majority of consumer AI answer queries. Coverage of Google AI Overviews (which surfaces in traditional Google search results), Anthropic Claude, and Meta AI is a useful addition for brands that need comprehensive market coverage. The best tools also allow you to define your own prompt library so you can track the specific queries your audience actually uses."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How frequently should AI visibility data be refreshed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For most programmes, weekly tracking provides sufficient resolution to detect meaningful changes in citation frequency. Daily tracking is valuable for brands running active optimisation campaigns or responding to reputational events. The key requirement is consistency: the same prompts, the same platforms, and the same sample size per reporting period, so that trend lines reflect genuine change rather than sampling variation. Monthly snapshots are the minimum useful frequency; anything less frequent makes it difficult to isolate the cause of changes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can AI visibility tools track how my brand is described, not just whether it appears?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the better platforms capture the full text of AI responses alongside citation flags and brand mention data. This allows you to audit how AI models describe your brand's products, positioning, and expertise — and to identify cases where the description is outdated, inaccurate, or inconsistent with your current messaging. This qualitative layer is distinct from citation frequency metrics and requires different analytical approaches, but it is increasingly supported by leading visibility tracking platforms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are there free AI visibility tracking tools worth using?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Several platforms offer limited free tiers that provide genuine value for establishing an initial baseline: manual spot-checking across AI platforms at no cost, limited prompt queries per month on entry-tier paid plans, and some vendors' free trial periods that allow fuller evaluation before committing to a subscription. For a systematic programme, however, a paid tool with customisable prompt libraries and historical data retention is necessary. Free tiers are best used for orientation, not ongoing tracking."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://geooptimised.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "GEO Tools",
+        "item": "https://geooptimised.com/geo-tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Best AI Visibility Tools",
+        "item": "https://geooptimised.com/best-ai-tools-visibility/"
+      }
+    ]
+  }
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/best-ai-tools-visibility/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex items-center gap-2 font-mono text-xs text-ink-400">
+      <li><a href="/" class="hover:text-[var(--accent)] transition-colors">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/geo-tools/" class="hover:text-[var(--accent)] transition-colors">GEO Tools</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">Best AI Visibility Tools</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-fade relative overflow-hidden">
+    <div class="container-wide grid gap-12 pt-12 pb-20 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-7">
+        <span class="eyebrow">AI Visibility Tracking</span>
+        <h1 class="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <span class="grad-text">Best AI Visibility Tools</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-300">
+          The best ai optimization tools for visibility are those that measure where your brand actually appears in AI-generated answers — not where you hope it appears. This guide covers the tracking and monitoring platforms that turn AI presence into a measurable, comparable metric.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/contact/" class="btn btn-primary">Discuss Your Tracking Needs</a>
+          <a href="/geo-tools/" class="btn btn-ghost">All GEO Tools</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="card p-6">
+          <span class="eyebrow">What this page covers</span>
+          <ul class="mt-4 space-y-3 text-sm text-ink-300">
+            <li class="flex items-start gap-2">
+              <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0z"/></svg>
+              <span>The five categories of AI visibility tracking tools</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0z"/></svg>
+              <span>What signals matter most in tracking tools</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0z"/></svg>
+              <span>Known platforms and what to evaluate</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0z"/></svg>
+              <span>A comparison table of key evaluation criteria</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky TOC -->
+  <nav aria-label="On this page" class="container-wide pb-4 lg:pb-0">
+    <div class="card px-6 py-4 lg:sticky lg:top-[calc(var(--header-h)+1rem)] lg:z-10">
+      <span class="font-mono text-xs text-ink-500 uppercase tracking-widest">On this page</span>
+      <ol class="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-300">
+        <li><a href="#what-visibility-tracking-measures" class="hover:text-[var(--accent)] transition-colors">What tracking measures</a></li>
+        <li><a href="#five-tool-categories" class="hover:text-[var(--accent)] transition-colors">Five tool categories</a></li>
+        <li><a href="#platform-coverage-table" class="hover:text-[var(--accent)] transition-colors">Platform comparison</a></li>
+        <li><a href="#known-tools" class="hover:text-[var(--accent)] transition-colors">Known tools</a></li>
+        <li><a href="#what-to-look-for" class="hover:text-[var(--accent)] transition-colors">Evaluation criteria</a></li>
+        <li><a href="#faq" class="hover:text-[var(--accent)] transition-colors">FAQ</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Main prose -->
+  <div class="container-wide py-20">
+    <div class="prose-dark space-y-20">
+
+      <!-- Section 1 -->
+      <section id="what-visibility-tracking-measures">
+        <div class="grid gap-8 lg:grid-cols-12">
+          <div class="lg:col-span-4">
+            <span class="eyebrow">Foundation</span>
+            <h2 class="anchor-top !mt-3">What AI Visibility Tracking Actually Measures</h2>
+          </div>
+          <div class="lg:col-span-8 space-y-4">
+            <p><strong>AI visibility tracking tools measure a fundamentally different signal from any existing digital marketing metric: the probability that your brand appears in an AI-generated answer to a given category of question.</strong></p>
+            <p>Traditional SEO tools record deterministic positions. When a rank tracker says your page is number four for a keyword, that is a stable, replicable observation. You can check it yourself and get the same result. AI answers do not work this way. The same prompt submitted to ChatGPT or Perplexity on consecutive requests will often produce different responses, drawing on different sources, describing brands in different terms, and sometimes citing or omitting brands with no consistent logic visible to the observer.</p>
+            <p>This probabilistic nature is why AI visibility tracking tools use a statistical approach rather than a positional one. They submit each target prompt many times, across multiple sessions, and record the aggregate: your brand appeared in 38% of responses for the prompt cluster "best [category] tools", Competitor A appeared in 61%, and Competitor B appeared in 22%. That citation rate — measured consistently over time using the same methodology — is the core metric of the discipline.</p>
+            <p>Beyond presence rate, good tracking tools capture additional signals: which specific URLs were cited as sources; how your brand was described in the AI's answer text; whether citations were direct (your site named as a source) or paraphrased (your content used without attribution); and how the response context positions your brand relative to competitors. These secondary signals are what distinguish monitoring tools from mere presence trackers, and they are what enable practitioners to move from observation to optimisation.</p>
+            <p>See the parent <a href="/geo-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO Tools hub</a> for an overview of how visibility trackers fit into the broader category landscape, and <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> for the strategic context these tools serve.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Five categories -->
+      <section id="five-tool-categories">
+        <span class="eyebrow">Tool Types</span>
+        <h2 class="anchor-top !mt-3">Five Categories of AI Visibility Tracking Tool</h2>
+        <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed"><strong>AI visibility tracking tools split into five distinct categories based on what they measure and how they present data.</strong> Most programmes will use tools from two or three of these categories simultaneously.</p>
+
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div id="presence-trackers" class="card p-6 border-t-2 border-t-[var(--accent)]">
+            <span class="font-mono text-xs text-ink-500">Category 1</span>
+            <h3 class="mt-2 font-display text-lg font-semibold text-ink-50">AI Answer Presence Trackers</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300"><strong>Presence trackers automate the task of submitting prompts to AI platforms and recording whether your brand appears in the response.</strong> They are the foundation of any AI visibility programme. Core outputs: brand mention rate per prompt, per platform, and over time. They tell you where you stand but not why, making them a starting point rather than a complete solution.</p>
+          </div>
+
+          <div id="citation-monitors" class="card p-6 border-t-2 border-t-[var(--accent)]">
+            <span class="font-mono text-xs text-ink-500">Category 2</span>
+            <h3 class="mt-2 font-display text-lg font-semibold text-ink-50">Citation Source Monitors</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300"><strong>Citation monitors go beyond brand mention tracking to record which specific URLs and domains AI platforms are pulling from when they reference your category.</strong> This answers the more useful question: which of your pages (or a competitor's) is being cited as the source, and which pages are being ignored despite ranking well in traditional search? URL-level citation data directly informs content prioritisation decisions.</p>
+          </div>
+
+          <div id="sentiment-trackers" class="card p-6 border-t-2 border-t-[var(--accent)]">
+            <span class="font-mono text-xs text-ink-500">Category 3</span>
+            <h3 class="mt-2 font-display text-lg font-semibold text-ink-50">Brand Sentiment Trackers</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300"><strong>Sentiment trackers capture and analyse the actual text of AI responses to assess how AI models describe your brand — not just whether they mention it.</strong> This category is the most relevant for reputation management: it surfaces cases where AI platforms describe your organisation inaccurately, use outdated positioning, or associate your brand with attributes you do not endorse. Detection is the first step to correction.</p>
+          </div>
+
+          <div id="competitive-benchmarking" class="card p-6 border-t-2 border-t-[var(--accent)]">
+            <span class="font-mono text-xs text-ink-500">Category 4</span>
+            <h3 class="mt-2 font-display text-lg font-semibold text-ink-50">Competitive AI Benchmarking Platforms</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300"><strong>Competitive benchmarking platforms track your brand's AI visibility in direct comparison with named competitors across the same prompt library.</strong> Rather than reporting your presence in isolation, they present share-of-voice data: for the queries your target audience asks, what proportion of AI answers feature your brand versus your top three or five competitors? This framing is more commercially meaningful and directly informs where to focus optimisation effort.</p>
+          </div>
+
+          <div id="multi-platform" class="card p-6 border-t-2 border-t-[var(--accent)]">
+            <span class="font-mono text-xs text-ink-500">Category 5</span>
+            <h3 class="mt-2 font-display text-lg font-semibold text-ink-50">Multi-Platform Coverage Dashboards</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300"><strong>Multi-platform dashboards unify visibility data from ChatGPT, Perplexity, Gemini, Copilot, and other AI platforms into a single reporting interface.</strong> Rather than querying each platform separately, they normalise results across different AI systems so you can compare your brand's presence on Perplexity versus Gemini without managing separate tracking pipelines. Platform breadth and normalisation quality are the critical differentiators in this category.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 3: Comparison table -->
+      <section id="platform-coverage-table">
+        <span class="eyebrow">Comparison</span>
+        <h2 class="anchor-top !mt-3">Tracking Tool Categories: Capability Comparison</h2>
+        <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed"><strong>Different categories of visibility tracking tool address different measurement needs.</strong> The table below maps each category to its primary measurement output and typical use case, to help you identify where to start.</p>
+
+        <div class="mt-8 overflow-x-auto rounded-xl border border-[var(--line)]">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-[var(--bg-2)] text-ink-200">
+              <tr>
+                <th scope="col" class="px-5 py-4 font-semibold">Tool category</th>
+                <th scope="col" class="px-5 py-4 font-semibold">Primary output</th>
+                <th scope="col" class="px-5 py-4 font-semibold">Key metric</th>
+                <th scope="col" class="px-5 py-4 font-semibold">Best for</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[var(--line)]">
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 font-medium text-ink-100">Presence trackers</td>
+                <td class="px-5 py-4 text-ink-300">Brand mention rate per prompt</td>
+                <td class="px-5 py-4 text-ink-300">% of answers citing brand</td>
+                <td class="px-5 py-4 text-ink-300">Establishing baseline; early-stage programmes</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 font-medium text-ink-100">Citation monitors</td>
+                <td class="px-5 py-4 text-ink-300">URL-level citation data</td>
+                <td class="px-5 py-4 text-ink-300">Which pages are cited as sources</td>
+                <td class="px-5 py-4 text-ink-300">Content prioritisation; optimisation targeting</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 font-medium text-ink-100">Sentiment trackers</td>
+                <td class="px-5 py-4 text-ink-300">Brand description analysis</td>
+                <td class="px-5 py-4 text-ink-300">Accuracy and tone of AI descriptions</td>
+                <td class="px-5 py-4 text-ink-300">Reputation monitoring; messaging alignment</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 font-medium text-ink-100">Competitive benchmarking</td>
+                <td class="px-5 py-4 text-ink-300">Share-of-voice vs. named rivals</td>
+                <td class="px-5 py-4 text-ink-300">AI citation share relative to competitors</td>
+                <td class="px-5 py-4 text-ink-300">Competitive strategy; board-level reporting</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 font-medium text-ink-100">Multi-platform dashboards</td>
+                <td class="px-5 py-4 text-ink-300">Unified cross-platform view</td>
+                <td class="px-5 py-4 text-ink-300">Visibility by platform and prompt cluster</td>
+                <td class="px-5 py-4 text-ink-300">Mature programmes; multi-market brands</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-4 text-xs text-ink-500">Note: tool capabilities evolve rapidly. Verify current feature sets directly with each vendor before selecting a platform.</p>
+      </section>
+
+      <!-- Section 4: Known tools -->
+      <section id="known-tools">
+        <span class="eyebrow">Market overview</span>
+        <h2 class="anchor-top !mt-3">Known AI Visibility Tracking Platforms</h2>
+        <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed"><strong>The AI visibility tracking market emerged between 2023 and 2025 and remains highly fluid — new entrants launch regularly while early platforms iterate their feature sets.</strong> The following notes are based on publicly available information at time of writing. The market moves fast; always verify current capabilities and pricing directly with vendors.</p>
+
+        <div class="mt-8 space-y-6">
+
+          <div class="card p-6">
+            <div class="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <h3 class="font-display text-lg font-semibold text-ink-50">Authoritas / AI Visibility features</h3>
+                <span class="mt-1 inline-block font-mono text-xs text-ink-500">Established SEO platform adding AI visibility layer</span>
+              </div>
+              <span class="rounded-full bg-[var(--bg-2)] px-3 py-1 text-xs text-ink-300 border border-[var(--line)]">Established vendor</span>
+            </div>
+            <p class="mt-4 text-sm leading-relaxed text-ink-300">Authoritas is a well-established UK-based SEO platform that has been adding AI visibility tracking functionality. For brands already using it for traditional rank tracking, the addition of AI citation monitoring within a familiar interface reduces onboarding friction. Worth evaluating if you want AI visibility data alongside existing SEO data in one place.</p>
+          </div>
+
+          <div class="card p-6">
+            <div class="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <h3 class="font-display text-lg font-semibold text-ink-50">Semrush AI Toolkit / AI Overview Tracker</h3>
+                <span class="mt-1 inline-block font-mono text-xs text-ink-500">Major SEO platform AI expansion</span>
+              </div>
+              <span class="rounded-full bg-[var(--bg-2)] px-3 py-1 text-xs text-ink-300 border border-[var(--line)]">Established vendor</span>
+            </div>
+            <p class="mt-4 text-sm leading-relaxed text-ink-300">Semrush has been adding tools focused on Google AI Overviews tracking specifically. For brands heavily reliant on Google organic traffic, monitoring AI Overview presence for target queries is a meaningful addition. Coverage is strongest for Google AI Overviews rather than third-party AI platforms like Perplexity or ChatGPT; factor this into your evaluation if cross-platform coverage is a priority.</p>
+          </div>
+
+          <div class="card p-6">
+            <div class="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <h3 class="font-display text-lg font-semibold text-ink-50">Ahrefs AI search visibility features</h3>
+                <span class="mt-1 inline-block font-mono text-xs text-ink-500">Major SEO platform AI expansion</span>
+              </div>
+              <span class="rounded-full bg-[var(--bg-2)] px-3 py-1 text-xs text-ink-300 border border-[var(--line)]">Established vendor</span>
+            </div>
+            <p class="mt-4 text-sm leading-relaxed text-ink-300">Ahrefs has been publicly developing AI search visibility features as part of its broader platform roadmap. As with Semrush, the core strength is in traditional search data; AI visibility capabilities are additions to an existing product rather than the primary use case. Evaluate the current feature set carefully against purpose-built AI monitoring tools before assuming parity.</p>
+          </div>
+
+          <div class="card p-6">
+            <div class="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <h3 class="font-display text-lg font-semibold text-ink-50">Purpose-built GEO / LLM visibility platforms</h3>
+                <span class="mt-1 inline-block font-mono text-xs text-ink-500">Dedicated AI citation tracking category</span>
+              </div>
+              <span class="rounded-full bg-[var(--bg-2)] px-3 py-1 text-xs text-ink-300 border border-[var(--line)]">Emerging category</span>
+            </div>
+            <p class="mt-4 text-sm leading-relaxed text-ink-300">A number of purpose-built platforms have launched specifically to address AI citation and visibility tracking — tools such as Profound, Otterly.ai, and similar entrants in the LLM visibility monitoring space. These platforms are built from the ground up around the AI answer measurement problem, which generally means better platform coverage breadth, more flexible prompt libraries, and citation-first data models. They vary significantly in data quality, platform coverage, and pricing; direct evaluation is essential before committing. See our <a href="/best-llm-visibility-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">LLM visibility tools guide</a> for more detail on this category.</p>
+          </div>
+
+        </div>
+
+        <div class="mt-6 rounded-xl border border-[var(--line)] bg-[var(--bg-2)] px-6 py-4 text-sm text-ink-300">
+          <strong class="text-ink-100">A note on this market:</strong> The AI tooling landscape is moving faster than any comparable technology sector. Platforms that launched in 2024 may have changed significantly by the time you read this, and new entrants will have appeared. Treat all tool-specific claims — including those on this page — as a starting point for evaluation, not a definitive assessment. Verify current capabilities and pricing directly with each vendor.
+        </div>
+      </section>
+
+      <!-- Section 5: What to look for -->
+      <section id="what-to-look-for">
+        <span class="eyebrow">Evaluation guide</span>
+        <h2 class="anchor-top !mt-3">What to Look for When Evaluating AI Visibility Tools</h2>
+        <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed"><strong>Five criteria determine whether an AI visibility tracking tool will support a genuine optimisation programme or simply generate dashboard data you cannot act on.</strong></p>
+
+        <div class="mt-8 grid gap-6 sm:grid-cols-2">
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">1. Platform breadth</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">Does the tool cover the four minimum platforms: ChatGPT, Perplexity, Gemini, and Copilot? A tool that only monitors one or two platforms is measuring a partial picture of AI answer visibility. Your audience uses multiple AI tools; your tracking should reflect that. Check whether the vendor's roadmap includes platforms you consider strategically important.</p>
+          </div>
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">2. Custom prompt libraries</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">Can you build your own prompt library using the queries your actual customers use? Generic preset prompts will not reflect your specific business context. Tools that allow you to organise prompts by intent type, persona, or topic cluster produce data that maps directly to your content and commercial strategy rather than generic category-level observations.</p>
+          </div>
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">3. Historical data retention</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">How far back does the tool retain data, and can you access trend lines rather than just current snapshots? Without historical data, you cannot determine whether a change in citation frequency resulted from your optimisation work, a platform model update, or a competitor's campaign. Minimum useful retention is ninety days; twelve months is the standard for serious programmes.</p>
+          </div>
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">4. Citation vs. mention distinction</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">Does the tool distinguish between a direct citation (your URL named as a source) and an incidental brand mention (your name appears in the answer text without a source link)? These are different signals with different implications. Conflating them inflates apparent visibility and obscures where genuine citation work needs to be done.</p>
+          </div>
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">5. Data methodology transparency</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">Is the vendor transparent about how they query AI platforms, how many samples per prompt they take, and how they handle the inherent variability in AI responses? Vendors who are vague about their methodology are a yellow flag; robust statistical sampling with documented confidence intervals is the standard you should expect from tools you are using for strategic decision-making.</p>
+          </div>
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">6. Competitive benchmarking</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">Can you track named competitors alongside your own brand using the same prompt library? Absolute citation rates are useful, but relative share-of-voice — knowing that you are cited in 35% of relevant queries while your primary competitor is cited in 58% — is what drives prioritisation decisions and communicates the opportunity clearly to business stakeholders.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related reading -->
+      <section>
+        <span class="eyebrow">Related reading</span>
+        <h2 class="anchor-top !mt-3">Further Resources</h2>
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <a href="/geo-tools/" class="card card-hover block p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">GEO Tools Hub</h3>
+            <p class="mt-2 text-sm text-ink-400 leading-relaxed">The full category guide: all four types of GEO tool, evaluation criteria, and framework for building your tooling stack.</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a href="/best-llm-visibility-tools/" class="card card-hover block p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">Best LLM Visibility Tools</h3>
+            <p class="mt-2 text-sm text-ink-400 leading-relaxed">A focused guide to the purpose-built LLM monitoring platforms in the visibility tracking space.</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a href="/best-ai-tools-geo/" class="card card-hover block p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">Best AI Tools for GEO</h3>
+            <p class="mt-2 text-sm text-ink-400 leading-relaxed">The full-workflow category map: tools grouped by job across audit, optimise, monitor, and report.</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a href="/best-aeo-platforms-2026/" class="card card-hover block p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">Best AEO Platforms 2026</h3>
+            <p class="mt-2 text-sm text-ink-400 leading-relaxed">Answer engine optimisation platforms reviewed for 2026, covering their AI visibility measurement capabilities.</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a href="/geo-tools-comparison/" class="card card-hover block p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">GEO Tools Comparison</h3>
+            <p class="mt-2 text-sm text-ink-400 leading-relaxed">Head-to-head comparison of leading GEO tools across the six evaluation criteria that matter most.</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a href="/ai-brand-visibility/" class="card card-hover block p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">AI Brand Visibility</h3>
+            <p class="mt-2 text-sm text-ink-400 leading-relaxed">The brand signals that make AI models recognise and cite your organisation — the strategic context your tracking data serves.</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- FAQ Accordion -->
+  <section id="faq" class="container-wide py-20">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Frequently Asked Questions</h2>
+
+    <div class="mt-10 max-w-3xl divide-y divide-[var(--line)]">
+
+      <div class="faq-item">
+        <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
+          <span>What do AI visibility tracking tools actually measure?</span>
+          <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+        </button>
+        <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+          <p class="pb-5 text-ink-300 leading-relaxed">AI visibility tracking tools measure whether and how often your brand, products, or content appear in AI-generated answers. Specifically, they submit a library of target prompts to AI platforms such as ChatGPT, Perplexity, Gemini, and Copilot, then record citation frequency, brand mention rate, which URLs are cited, how your brand is described, and how competitor presence compares for the same queries. The output is a statistical picture of your AI answer presence rather than a rank position.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
+          <span>How is AI visibility tracking different from traditional rank tracking?</span>
+          <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+        </button>
+        <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+          <p class="pb-5 text-ink-300 leading-relaxed">Traditional rank trackers record a deterministic position — your page ranks number three for a given keyword. AI visibility trackers record a probabilistic presence — your brand was cited in 41% of responses to a given prompt category. This is a fundamentally different measurement model because generative AI outputs vary with each query. Visibility trackers handle this by running multiple samples per prompt and reporting aggregate citation rates, not fixed positions.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
+          <span>Which AI platforms should a visibility tracker cover?</span>
+          <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+        </button>
+        <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+          <p class="pb-5 text-ink-300 leading-relaxed">At minimum: ChatGPT, Perplexity, Google Gemini, and Microsoft Copilot. These four platforms account for the large majority of consumer AI answer queries. Coverage of Google AI Overviews, Anthropic Claude, and Meta AI is a useful addition for brands that need comprehensive market coverage. The best tools also allow you to define your own prompt library so you can track the specific queries your audience actually uses.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
+          <span>How frequently should AI visibility data be refreshed?</span>
+          <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+        </button>
+        <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+          <p class="pb-5 text-ink-300 leading-relaxed">For most programmes, weekly tracking provides sufficient resolution to detect meaningful changes in citation frequency. Daily tracking is valuable for brands running active optimisation campaigns or responding to reputational events. The key requirement is consistency: the same prompts, the same platforms, and the same sample size per reporting period, so that trend lines reflect genuine change rather than sampling variation. Monthly snapshots are the minimum useful frequency.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
+          <span>Can AI visibility tools track how my brand is described, not just whether it appears?</span>
+          <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+        </button>
+        <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+          <p class="pb-5 text-ink-300 leading-relaxed">Yes, the better platforms capture the full text of AI responses alongside citation flags and brand mention data. This allows you to audit how AI models describe your brand's products, positioning, and expertise — and to identify cases where the description is outdated, inaccurate, or inconsistent with your current messaging. This qualitative layer is distinct from citation frequency metrics and is increasingly supported by leading visibility tracking platforms.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
+          <span>Are there free AI visibility tracking tools worth using?</span>
+          <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+        </button>
+        <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+          <p class="pb-5 text-ink-300 leading-relaxed">Several platforms offer limited free tiers that provide genuine value for establishing an initial baseline. Manual spot-checking across AI platforms at no cost, limited prompt queries per month on entry-tier paid plans, and trial periods are all worth using to orient your programme. For a systematic programme requiring custom prompt libraries and historical data retention, a paid tool is necessary. Free tiers are best used for orientation, not ongoing tracking.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="container-wide py-20">
+    <div class="relative overflow-hidden rounded-2xl dot-grid">
+      <div class="absolute inset-0 bg-gradient-to-br from-[rgba(var(--accent-glow),.12)] via-transparent to-transparent"></div>
+      <div class="relative px-8 py-16 text-center sm:px-16">
+        <span class="eyebrow">Get expert guidance</span>
+        <h2 class="mt-4 font-display text-3xl font-bold text-ink-50 sm:text-4xl">Not Sure Which AI Visibility Tool Fits Your Programme?</h2>
+        <p class="mt-4 mx-auto max-w-2xl text-ink-300 leading-relaxed">
+          Tool selection depends on your programme maturity, the AI platforms your audience uses, and the metrics your stakeholders care about. GEOoptimised evaluates tracking tools regularly and can advise on the right setup for your situation — without vendor bias.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact/" class="btn btn-primary">Discuss Your Tracking Needs</a>
+          <a href="/generative-engine-optimisation/" class="btn btn-ghost">What Is GEO?</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = '0';
+            other.closest('.faq-item').querySelector('.faq-icon').style.transform = '';
+          }
+        });
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+        icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+      });
+    });
+
+    // Sticky TOC highlight via IntersectionObserver
+    const sections = document.querySelectorAll('section[id], div[id]');
+    const tocLinks = document.querySelectorAll('nav[aria-label="On this page"] a');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(link => {
+            link.classList.toggle(
+              'text-[var(--accent)]',
+              link.getAttribute('href') === '#' + entry.target.id
+            );
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</Base>
