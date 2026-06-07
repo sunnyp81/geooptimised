@@ -206,7 +206,7 @@ const related = [
 <Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/aeo-roi/" ogType="article">
 
   <nav aria-label="Breadcrumb" class="container-wide pt-8">
-    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-400">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-300">
       <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
       <li aria-hidden="true">/</li>
       <li><a href="/geo-metrics/" class="transition hover:text-[var(--accent)]">GEO Metrics</a></li>
@@ -219,8 +219,8 @@ const related = [
     <div class="container-wide pt-16 pb-14">
       <div class="flex flex-wrap items-center gap-3">
         <span class="eyebrow">Measurement</span>
-        <span class="font-mono text-xs text-ink-400">7 June 2026</span>
-        <span class="font-mono text-xs text-ink-400">10 min read</span>
+        <span class="font-mono text-xs text-ink-300">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">10 min read</span>
       </div>
       <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
         AEO ROI: Measuring Answer Engine Returns
@@ -405,7 +405,7 @@ const related = [
               <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Attribution Strength</th>
             </tr>
           </thead>
-          <tbody class="divide-y hair">
+          <tbody class="divide-y divide-[var(--line)]">
             <tr class="transition hover:bg-white/[.02]">
               <td class="px-4 py-3 font-semibold text-white">Citation frequency</td>
               <td class="px-4 py-3 text-ink-300">Leading</td>
@@ -462,7 +462,7 @@ const related = [
               <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Key Limitation</th>
             </tr>
           </thead>
-          <tbody class="divide-y hair">
+          <tbody class="divide-y divide-[var(--line)]">
             {attributionMethods.map(row => (
               <tr class="transition hover:bg-white/[.02]">
                 <td class="px-4 py-3 font-semibold text-white">{row.method}</td>

@@ -129,7 +129,7 @@ const schema = [
 
   <!-- Breadcrumb -->
   <nav aria-label="Breadcrumb" class="container-wide pt-8">
-    <ol class="flex items-center gap-2 font-mono text-xs text-ink-400">
+    <ol class="flex items-center gap-2 font-mono text-xs text-ink-300">
       <li><a href="/" class="hover:text-[var(--accent)] transition-colors">Home</a></li>
       <li aria-hidden="true" class="text-ink-600">/</li>
       <li><a href="/geo-tools/" class="hover:text-[var(--accent)] transition-colors">GEO Tools</a></li>
@@ -165,21 +165,21 @@ const schema = [
               <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[rgba(var(--accent-glow),.15)] font-mono text-xs font-bold text-[var(--accent)]">1</span>
               <div>
                 <p class="font-semibold text-ink-100 text-sm">Snippet &amp; Schema Tooling</p>
-                <p class="text-xs text-ink-400 mt-0.5">Structured data, FAQ markup, rich result generation</p>
+                <p class="text-xs text-ink-300 mt-0.5">Structured data, FAQ markup, rich result generation</p>
               </div>
             </div>
             <div class="flex items-start gap-3">
               <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[rgba(var(--accent-glow),.15)] font-mono text-xs font-bold text-[var(--accent)]">2</span>
               <div>
                 <p class="font-semibold text-ink-100 text-sm">Answer Tracking Software</p>
-                <p class="text-xs text-ink-400 mt-0.5">Citation frequency, brand mention, competitive benchmarking</p>
+                <p class="text-xs text-ink-300 mt-0.5">Citation frequency, brand mention, competitive benchmarking</p>
               </div>
             </div>
             <div class="flex items-start gap-3">
               <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[rgba(var(--accent-glow),.15)] font-mono text-xs font-bold text-[var(--accent)]">3</span>
               <div>
                 <p class="font-semibold text-ink-100 text-sm">Content Optimisation Software</p>
-                <p class="text-xs text-ink-400 mt-0.5">AI-readiness scoring, structure analysis, semantic gaps</p>
+                <p class="text-xs text-ink-300 mt-0.5">AI-readiness scoring, structure analysis, semantic gaps</p>
               </div>
             </div>
           </div>
@@ -193,7 +193,7 @@ const schema = [
     <nav aria-label="On this page" class="sticky top-4 z-20 hidden lg:block">
       <div class="card inline-block p-4 text-sm">
         <p class="font-mono text-xs text-ink-500 mb-3 uppercase tracking-wider">On this page</p>
-        <ol class="space-y-1.5 text-ink-400">
+        <ol class="space-y-1.5 text-ink-300">
           <li><a href="#framework" class="hover:text-[var(--accent)] transition-colors">The job-to-be-done framework</a></li>
           <li><a href="#snippet-schema" class="hover:text-[var(--accent)] transition-colors">Snippet &amp; schema tooling</a></li>
           <li><a href="#answer-tracking" class="hover:text-[var(--accent)] transition-colors">Answer tracking software</a></li>
@@ -441,7 +441,7 @@ const schema = [
       ].map(item => (
         <a href={item.href} class="card card-hover block p-6">
           <h3 class="font-display text-lg font-semibold text-ink-50">{item.title}</h3>
-          <p class="mt-2 text-sm text-ink-400 leading-relaxed">{item.desc}</p>
+          <p class="mt-2 text-sm text-ink-300 leading-relaxed">{item.desc}</p>
           <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">
             Read more <span aria-hidden="true">&rarr;</span>
           </span>

@@ -142,7 +142,7 @@ const faqs = [
 
   <!-- Breadcrumb -->
   <nav aria-label="Breadcrumb" class="container-wide pt-8">
-    <ol class="flex items-center gap-2 font-mono text-xs text-ink-400">
+    <ol class="flex items-center gap-2 font-mono text-xs text-ink-300">
       <li><a href="/" class="hover:text-[var(--accent)] transition-colors">Home</a></li>
       <li aria-hidden="true" class="text-ink-600">/</li>
       <li><a href="/geo-tools/" class="hover:text-[var(--accent)] transition-colors">GEO Tools</a></li>
@@ -206,7 +206,7 @@ const faqs = [
               <li>
                 <a
                   href={`#${item.id}`}
-                  class="toc-link block rounded px-3 py-1.5 text-sm text-ink-400 hover:text-[var(--accent)] transition-colors"
+                  class="toc-link block rounded px-3 py-1.5 text-sm text-ink-300 hover:text-[var(--accent)] transition-colors"
                   data-section={item.id}
                 >
                   {item.label}
@@ -373,17 +373,17 @@ const faqs = [
     <div class="mt-8 grid gap-6 sm:grid-cols-3">
       <a href="/geo-tools/" class="card card-hover block p-6">
         <h3 class="font-display text-lg font-semibold text-ink-50">GEO Tools Hub</h3>
-        <p class="mt-2 text-sm text-ink-400 leading-relaxed">The full landscape of AI visibility trackers, citation monitors, and brand authority analysers.</p>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">The full landscape of AI visibility trackers, citation monitors, and brand authority analysers.</p>
         <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
       </a>
       <a href="/ahrefs-geo/" class="card card-hover block p-6">
         <h3 class="font-display text-lg font-semibold text-ink-50">Ahrefs for GEO</h3>
-        <p class="mt-2 text-sm text-ink-400 leading-relaxed">How Ahrefs' brand radar and AI-related features support a generative engine optimisation programme.</p>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">How Ahrefs' brand radar and AI-related features support a generative engine optimisation programme.</p>
         <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
       </a>
       <a href="/geo-tools-comparison/" class="card card-hover block p-6">
         <h3 class="font-display text-lg font-semibold text-ink-50">GEO Tools Comparison</h3>
-        <p class="mt-2 text-sm text-ink-400 leading-relaxed">Side-by-side comparison of GEO-specific platforms across the key evaluation criteria.</p>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">Side-by-side comparison of GEO-specific platforms across the key evaluation criteria.</p>
         <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
       </a>
     </div>
@@ -442,7 +442,7 @@ const faqs = [
                   link.dataset.section === entry.target.id
                 );
                 link.classList.toggle(
-                  'text-ink-400',
+                  'text-ink-300',
                   link.dataset.section !== entry.target.id
                 );
               });

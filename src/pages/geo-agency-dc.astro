@@ -59,7 +59,7 @@ const schema = [
         "name": "How long before a D.C. business sees GEO results?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most clients see measurable changes in AI citation frequency within 60 to 90 days of implementation starting. Full competitive positioning across platforms typically takes four to six months. Every engagement begins with a GEO audit that establishes a clear baseline and prioritises actions by estimated impact."
+          "text": "GEO programmes are designed to surface measurable changes in AI citation frequency within 60 to 90 days of implementation starting. Full competitive positioning across platforms typically takes four to six months. Every engagement begins with a GEO audit that establishes a clear baseline and prioritises actions by estimated impact."
         }
       },
       {
@@ -146,7 +146,7 @@ const faqs = [
   },
   {
     q: 'How long before a D.C. business sees GEO results?',
-    a: 'Most clients see measurable changes in AI citation frequency within 60 to 90 days of implementation starting. Full competitive positioning across platforms typically takes four to six months. Every engagement begins with a GEO audit that establishes a clear baseline and prioritises actions by estimated impact.',
+    a: 'GEO programmes are designed to surface measurable changes in AI citation frequency within 60 to 90 days of implementation starting. Full competitive positioning across platforms typically takes four to six months. Every engagement begins with a GEO audit that establishes a clear baseline and prioritises actions by estimated impact.',
   },
   {
     q: 'Does GEO replace or complement our existing SEO programme?',
@@ -165,7 +165,7 @@ const faqs = [
 
   <!-- Breadcrumb -->
   <nav aria-label="Breadcrumb" class="container-wide pt-8">
-    <ol class="flex items-center gap-1.5 text-sm text-ink-400">
+    <ol class="flex items-center gap-1.5 text-sm text-ink-300">
       <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
       <li aria-hidden="true">/</li>
       <li><a href="/geo-near-you/" class="transition hover:text-[var(--accent)]">GEO Agency Near You</a></li>
@@ -179,7 +179,7 @@ const faqs = [
     <div class="container-wide pt-16 pb-14">
       <div class="flex flex-wrap items-center gap-3">
         <span class="eyebrow">Local Service</span>
-        <span class="font-mono text-xs text-ink-400">Remote delivery &bull; Washington, D.C.</span>
+        <span class="font-mono text-xs text-ink-300">Remote delivery &bull; Washington, D.C.</span>
       </div>
       <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
         GEO Agency for Washington, D.C. Businesses
@@ -305,7 +305,7 @@ const faqs = [
               {deliverables.map((row, i) => (
                 <tr class={i < deliverables.length - 1 ? 'border-b border-[var(--line-soft)]' : ''}>
                   <td class="px-6 py-4 font-semibold text-ink-100 align-top">{row.phase}</td>
-                  <td class="px-6 py-4 font-mono text-xs text-ink-400 align-top whitespace-nowrap">{row.weeks}</td>
+                  <td class="px-6 py-4 font-mono text-xs text-ink-300 align-top whitespace-nowrap">{row.weeks}</td>
                   <td class="px-6 py-4 align-top">
                     <ul class="space-y-1">
                       {row.items.map(item => (

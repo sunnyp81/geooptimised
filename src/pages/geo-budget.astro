@@ -210,7 +210,7 @@ const related = [
 >
 
   <nav aria-label="Breadcrumb" class="container-wide pt-8">
-    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-400">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-300">
       <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
       <li aria-hidden="true">/</li>
       <li><a href="/geo-metrics/" class="transition hover:text-[var(--accent)]">GEO Metrics</a></li>
@@ -223,8 +223,8 @@ const related = [
     <div class="container-wide pt-16 pb-14">
       <div class="flex flex-wrap items-center gap-3">
         <span class="eyebrow">Investment Planning</span>
-        <span class="font-mono text-xs text-ink-400">7 June 2026</span>
-        <span class="font-mono text-xs text-ink-400">10 min read</span>
+        <span class="font-mono text-xs text-ink-300">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">10 min read</span>
       </div>
       <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
         GEO Budget: How to Plan Your Investment
@@ -306,7 +306,7 @@ const related = [
               <h3 class="font-display text-base font-semibold text-white">{d.driver}</h3>
             </div>
             <p class="mt-3 text-sm leading-relaxed text-ink-300">{d.description}</p>
-            <p class="mt-2 text-xs text-ink-400"><strong class="text-ink-300">Scales with:</strong> {d.scaleFactors}</p>
+            <p class="mt-2 text-xs text-ink-300"><strong class="text-ink-300">Scales with:</strong> {d.scaleFactors}</p>
           </div>
         ))}
       </div>
@@ -328,7 +328,7 @@ const related = [
               <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Rationale</th>
             </tr>
           </thead>
-          <tbody class="divide-y hair">
+          <tbody class="divide-y divide-[var(--line)]">
             {allocationRows.map(row => (
               <tr class="transition hover:bg-white/[.02]">
                 <td class="px-4 py-3 font-mono text-xs text-[var(--accent)] whitespace-nowrap">{row.phase}</td>
@@ -366,7 +366,7 @@ const related = [
               <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Illustrative Range (monthly, ongoing)</th>
             </tr>
           </thead>
-          <tbody class="divide-y hair">
+          <tbody class="divide-y divide-[var(--line)]">
             <tr class="transition hover:bg-white/[.02]">
               <td class="px-4 py-3 font-semibold text-white">Audit only</td>
               <td class="px-4 py-3 text-ink-300">One-off baseline assessment; no ongoing component</td>

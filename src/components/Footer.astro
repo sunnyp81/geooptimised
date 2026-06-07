@@ -32,6 +32,18 @@ const groups = [
       { label: 'Contact', href: '/contact/' },
     ],
   },
+  {
+    title: 'Explore',
+    links: [
+      { label: 'Optimise for AI Platforms', href: '/optimise-for-ai-platforms/' },
+      { label: 'GEO by Industry', href: '/geo-by-industry/' },
+      { label: 'GEO Metrics', href: '/geo-metrics/' },
+      { label: 'GEO Monitoring', href: '/geo-monitoring/' },
+      { label: 'GEO Near You', href: '/geo-near-you/' },
+      { label: 'Tool Reviews', href: '/reviews/' },
+      { label: 'Insights', href: '/blog/' },
+    ],
+  },
 ];
 ---
 <footer class="border-t hair mt-24 bg-ink-950">
@@ -47,7 +59,7 @@ const groups = [
       </div>
 
       <!-- Link columns -->
-      <div class="md:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="md:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
         {groups.map(g => (
           <div>
             <p class="eyebrow mb-4 !text-ink-400">{g.title}</p>

@@ -10,7 +10,7 @@ const schema = [
     "@type": "Service",
     "name": "Answer Engine Optimisation Services",
     "serviceType": "Answer Engine Optimisation",
-    "provider": { "@type": "Organization", "name": "GEOoptimised", "url": "https://geooptimised.com/", "logo": { "@type": "ImageObject", "url": "https://geooptimised.com/icon-512.png" } },
+    "provider": { "@id": "https://geooptimised.com/#organization" },
     "description": "Comprehensive answer engine optimisation services including featured snippet capture, voice search optimisation, and AI answer targeting.",
     "areaServed": { "@type": "Country", "name": "United Kingdom" },
     "url": "https://geooptimised.com/aeo-services/"
@@ -73,7 +73,7 @@ const related = [
 <Base title={title} description={description} schema={schema} ogType="website">
 
   <nav aria-label="Breadcrumb" class="container-wide pt-8">
-    <ol class="flex items-center gap-1.5 text-sm text-ink-400">
+    <ol class="flex items-center gap-1.5 text-sm text-ink-300">
       <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
       <li aria-hidden="true">/</li>
       <li><a href="/geo-services/" class="transition hover:text-[var(--accent)]">Services</a></li>
@@ -86,7 +86,7 @@ const related = [
     <div class="container-wide pt-12 pb-14">
       <div class="flex flex-wrap items-center gap-3">
         <span class="eyebrow">Service</span>
-        <span class="font-mono text-xs text-ink-400">9 min read</span>
+        <span class="font-mono text-xs text-ink-300">9 min read</span>
       </div>
       <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
         Answer Engine Optimisation Services

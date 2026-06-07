@@ -35,7 +35,7 @@ const schema = [
         'name': 'What is generative engine optimisation (GEO)?',
         'acceptedAnswer': {
           '@type': 'Answer',
-          'text': 'Generative engine optimisation is the practice of making your brand visible, quotable, and citable inside AI-generated answers. When a user asks ChatGPT, Perplexity, or Google AI Overviews for a recommendation, GEO determines whether your brand is cited or invisible. It is a distinct discipline from traditional SEO, with different signals, content structures, and measurement frameworks.'
+          'text': 'GEO is the practice of ensuring your brand is selected as a cited source inside AI-generated answers — the synthesised responses produced by ChatGPT, Perplexity, Google AI Overviews, and similar platforms. Unlike traditional SEO, which targets ranked links, GEO targets the one-to-three sources an AI model quotes in its answer. See our full explanation at geooptimised.com/what-is-geo/ and geooptimised.com/generative-engine-optimisation/.'
         }
       },
       {
@@ -59,7 +59,7 @@ const schema = [
         'name': 'How long does it take to see results?',
         'acceptedAnswer': {
           '@type': 'Answer',
-          'text': 'Most clients see measurable changes in citation frequency within 60 to 90 days of implementation. Entity authority and cross-platform visibility compound over 6 to 12 months as the programme matures. We begin every engagement with an AI visibility audit so you know your baseline before a single recommendation is made.'
+          'text': 'GEO programmes are designed to surface measurable citation changes within 60 to 90 days of implementation. Entity authority and cross-platform visibility compound progressively over the following 6 to 12 months. Every engagement opens with an AI visibility audit to establish a clear, documented baseline before any optimisation work begins.'
         }
       },
       {
@@ -67,7 +67,7 @@ const schema = [
         'name': 'How does remote GEO delivery work in practice?',
         'acceptedAnswer': {
           '@type': 'Answer',
-          'text': 'Onboarding is completed via a structured video call and shared briefing document. Ongoing work is delivered asynchronously with weekly written updates and monthly strategy calls. All deliverables — audits, content rewrites, schema implementations, monitoring reports — are shared through a dedicated project workspace. Time-zone differences between the UK and New York are managed proactively, with overlap hours used for live sessions.'
+          'text': 'Engagements begin with a structured discovery call and a shared briefing document that captures your brand context, competitive landscape, and AI visibility objectives. From there, work proceeds on a weekly delivery cadence with written progress updates and a monthly strategy call. All deliverables — audit reports, content rewrites, schema implementations, monitoring dashboards — are accessible in a shared project workspace throughout the engagement. UK and Eastern Time share a four-hour overlap window each working day, used for any live sessions.'
         }
       }
     ]
@@ -94,7 +94,7 @@ const deliverables = [
     phase: 'Phase 2',
     label: 'Foundation',
     weeks: 'Weeks 3–8',
-    desc: 'Structured data implementation, entity strengthening across Wikipedia, Wikidata, and industry knowledge bases, llms.txt configuration, and initial content optimisation of your highest-priority pages.'
+    desc: 'Schema deployment aligned to GEO requirements, entity strengthening across Wikidata, Google Knowledge Graph, and sector-specific databases relevant to New York industries, llms.txt configuration, and content restructuring on your highest-priority pages.'
   },
   {
     phase: 'Phase 3',
@@ -106,7 +106,7 @@ const deliverables = [
     phase: 'Phase 4',
     label: 'Iteration',
     weeks: 'Ongoing',
-    desc: 'Monthly citation monitoring, competitive benchmarking, continuous content refinement, and quarterly strategy reviews aligned to your commercial objectives and changes in AI platform behaviour.'
+    desc: 'Monthly citation frequency reporting across all platforms, competitive positioning benchmarking within New York market segments, continuous content refinement driven by live monitoring data, and quarterly strategy reviews responding to platform behaviour changes.'
   }
 ];
 
@@ -117,7 +117,7 @@ const faqs = [
   },
   {
     q: 'What is generative engine optimisation (GEO)?',
-    a: 'Generative engine optimisation is the practice of making your brand visible, quotable, and citable inside AI-generated answers. When a user asks ChatGPT, Perplexity, or Google AI Overviews for a recommendation, GEO determines whether your brand is cited or invisible. It is a distinct discipline from traditional SEO, with different signals, content structures, and measurement frameworks.'
+    a: 'GEO is the practice of ensuring your brand is selected as a cited source inside AI-generated answers — the synthesised responses produced by ChatGPT, Perplexity, Google AI Overviews, and similar platforms. Unlike traditional SEO, which targets ranked links, GEO targets the one-to-three sources an AI model quotes in its answer. See our full explanation at geooptimised.com/what-is-geo/ and geooptimised.com/generative-engine-optimisation/.'
   },
   {
     q: 'Why do New York businesses need GEO now?',
@@ -129,7 +129,7 @@ const faqs = [
   },
   {
     q: 'How long does it take to see results?',
-    a: 'Most clients see measurable changes in citation frequency within 60 to 90 days of implementation. Entity authority and cross-platform visibility compound over 6 to 12 months as the programme matures. We begin every engagement with an AI visibility audit so you know your baseline before a single recommendation is made.'
+    a: 'GEO programmes are designed to surface measurable citation changes within 60 to 90 days of implementation. Entity authority and cross-platform visibility compound progressively over the following 6 to 12 months. Every engagement opens with an AI visibility audit to establish a clear, documented baseline before any optimisation work begins.'
   },
   {
     q: 'How does remote GEO delivery work in practice?',
@@ -175,7 +175,7 @@ const related = [
 
   <!-- Breadcrumb -->
   <nav aria-label="Breadcrumb" class="container-wide pt-8">
-    <ol class="flex items-center gap-1.5 text-sm text-ink-400">
+    <ol class="flex items-center gap-1.5 text-sm text-ink-300">
       <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
       <li aria-hidden="true">/</li>
       <li><a href="/geo-near-you/" class="transition hover:text-[var(--accent)]">GEO Agency Near You</a></li>
@@ -189,17 +189,16 @@ const related = [
     <div class="container-wide pt-16 pb-14">
       <div class="flex flex-wrap items-center gap-3">
         <span class="eyebrow">Local Service</span>
-        <span class="font-mono text-xs text-ink-400">Remote delivery &middot; UK-based specialist agency</span>
+        <span class="font-mono text-xs text-ink-300">Remote delivery &middot; UK-based specialist agency</span>
       </div>
       <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
         GEO Agency for New York Businesses
       </h1>
       <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
-        <strong class="text-white">New York brands are losing ground in AI search — and most do not know it yet.</strong>
-        When a B2B buyer asks ChatGPT for the best agency in your category, or a consumer asks Perplexity to compare providers in NYC,
-        your brand is either cited or invisible. GEOoptimised delivers specialist
+        <strong class="text-white">In New York's hyper-competitive market, AI citation gaps cost you business before a prospect ever reaches your website.</strong>
+        A finance director in Midtown asking ChatGPT to shortlist compliance vendors, or a startup founder using Perplexity to compare growth agencies in NYC — the brands that appear in those answers are already ahead. GEOoptimised delivers specialist
         <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a>
-        to New York businesses entirely remotely — no local office, no compromise on expertise.
+        to New York businesses entirely remotely — built on technical depth, not geographic proximity.
       </p>
       <div class="mt-8 flex flex-wrap gap-4">
         <a href="/contact/" class="btn btn-primary">Request a free GEO audit</a>
@@ -229,7 +228,7 @@ const related = [
         </li>
         <li class="flex items-start gap-2">
           <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
-          <span>Most clients see measurable citation changes within 60–90 days; authority compounds over 6–12 months.</span>
+          <span>GEO programmes are designed to surface measurable citation changes within 60–90 days; entity authority compounds steadily over 6–12 months.</span>
         </li>
       </ul>
     </div>
@@ -238,21 +237,13 @@ const related = [
     <div class="prose-dark max-w-3xl">
       <h2 id="what-geo-is" class="anchor-top">What Generative Engine Optimisation Is</h2>
       <p>
-        <strong>Generative engine optimisation (GEO) is the discipline of making your brand the source AI models choose to cite.</strong>
-        Traditional search engine optimisation targets ranked lists of web pages. GEO targets something fundamentally different:
-        the synthesised, AI-generated responses that ChatGPT, Perplexity, Gemini, Microsoft Copilot, and Google AI Overviews
-        deliver to users in place of those lists.
+        <strong>GEO is the discipline of earning inclusion in AI-generated answers — the responses ChatGPT, Perplexity, Gemini, and Google AI Overviews produce when someone asks a question instead of running a search.</strong>
+        When an AI model cites a source, it is not pulling from a ranked list; it is selecting the brand or entity it treats as most authoritative on that specific question.
+        For a full technical explanation of how this works, see <a href="/what-is-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">What is GEO?</a> and our <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">complete GEO guide</a>.
       </p>
       <p>
-        In a generative AI response, there is no page two. Typically one to three sources are cited. The competitive stakes are
-        proportionally higher than any organic ranking, and the signals that determine inclusion — entity authority, structured data,
-        citation-ready content architecture — bear little resemblance to traditional ranking factors.
-      </p>
-      <p>
-        A specialist <a href="/geo-agency/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO agency</a>
-        builds the infrastructure that puts your brand in those answers. The work spans technical implementation, content restructuring,
-        entity graph reinforcement, and continuous cross-platform monitoring. For the full picture of what this involves,
-        see our <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services overview</a>.
+        Building that authority requires structured data implementation, entity graph reinforcement, and content architecture designed for LLM extraction — work that a specialist <a href="/geo-agency/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO agency</a> structures as a programme, not a one-off checklist.
+        The <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services overview</a> covers the full scope.
       </p>
 
       <h2 id="why-new-york" class="anchor-top mt-12">Why New York Businesses Cannot Afford to Ignore AI Citations</h2>
@@ -275,23 +266,13 @@ const related = [
         decisions — and in New York, they do — then your absence from AI answers is a measurable commercial problem.
       </p>
 
-      <h2 id="remote-delivery" class="anchor-top mt-12">How Remote GEO Delivery Works</h2>
+      <h2 id="remote-delivery" class="anchor-top mt-12">How We Work With New York Clients</h2>
       <p>
-        <strong>Remote delivery is how GEOoptimised works with every client, regardless of location — and it does not limit what we can achieve.</strong>
-        Generative engine optimisation is a technical and strategic discipline. The work — auditing AI visibility, restructuring content,
-        implementing structured data, monitoring citation frequency — is performed on your digital assets and measured through AI platforms.
-        None of it requires our team to be in the same city as yours.
+        <strong>GEOoptimised is UK-based and works with every client remotely — including all New York businesses.</strong>
+        There is no New York office. The nature of GEO work makes this irrelevant: everything happens on digital assets, across global AI platforms and knowledge graphs. What matters is the quality of the analysis and implementation, not the postcode of the practitioner.
       </p>
       <p>
-        In practice, engagements with New York clients operate as follows: onboarding is completed through a structured discovery call and
-        shared briefing document. Work is delivered on a weekly cadence with written updates and a monthly strategy call.
-        All deliverables are shared through a dedicated project workspace. For live sessions, we schedule within overlapping business hours
-        between UK and US Eastern time — typically 9am–1pm ET — which gives four hours of productive overlap on any working day.
-      </p>
-      <p>
-        The constraint that matters is expertise, not location. What separates effective GEO from ineffective GEO is depth of knowledge
-        about how large language models select and cite sources, how entity graphs work, and how to structure content that AI models
-        extract accurately. Those capabilities travel across time zones.
+        New York engagements run on Eastern Time. UK and ET overlap by four hours each working day (roughly 9am–1pm ET), which is sufficient for structured onboarding calls, monthly strategy sessions, and any ad hoc live reviews. Between those sessions, work is delivered through a shared project workspace with weekly written updates. For a complete account of what each service involves, see our <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services overview</a>.
       </p>
     </div>
 
@@ -314,7 +295,7 @@ const related = [
                 <tr class={i < deliverables.length - 1 ? 'border-b border-[var(--line-soft)]' : ''}>
                   <td class="px-5 py-4 font-mono text-xs text-ink-500 whitespace-nowrap">{row.phase}</td>
                   <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">{row.label}</td>
-                  <td class="px-5 py-4 text-ink-400 whitespace-nowrap">{row.weeks}</td>
+                  <td class="px-5 py-4 text-ink-300 whitespace-nowrap">{row.weeks}</td>
                   <td class="px-5 py-4 leading-relaxed">{row.desc}</td>
                 </tr>
               ))}
@@ -328,19 +309,12 @@ const related = [
     <div class="prose-dark max-w-3xl mt-14">
       <h2 id="geo-vs-seo" class="anchor-top">GEO vs SEO for New York Brands</h2>
       <p>
-        <strong>GEO and SEO are complementary disciplines — but they solve different problems and should not be conflated.</strong>
-        Traditional SEO for New York businesses focuses on ranking pages for location-qualified queries: "law firm NYC," "marketing agency New York,"
-        "B2B SaaS consultant Manhattan." These queries still matter. The click-through traffic from organic rankings remains a significant channel.
+        <strong>For New York businesses, the distinction matters because the competitive stakes in both channels are unusually high.</strong>
+        Traditional SEO targets location-qualified queries — "compliance software NYC," "M&amp;A lawyer Manhattan" — and those rankings remain valuable.
+        GEO targets the AI-generated answers that intercept research before a user reaches the SERP at all: when a procurement lead asks ChatGPT for a shortlist of RegTech vendors in New York, the brands cited have already won the first stage of the evaluation.
       </p>
       <p>
-        GEO addresses the layer above that: the AI-generated answers that increasingly intercept research before a user even reaches the SERP.
-        When someone asks Perplexity "which B2B marketing agencies in New York specialise in financial services?" — a query with clear
-        commercial intent — the answer they receive will cite two or three agencies. That citation is worth more than any organic ranking
-        because it appears as a recommendation, not a link in a list.
-      </p>
-      <p>
-        The right approach for most New York businesses is to run both programmes in parallel, ensuring that SEO technical health supports
-        GEO authority building, and that GEO content assets reinforce organic ranking signals. Neither discipline should be sacrificed for the other.
+        The two disciplines share underlying content and technical infrastructure but require separate strategic attention. Running them in parallel is the most effective approach for most New York businesses. For a detailed comparison, see our <a href="/geo-vs-seo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO vs SEO guide</a>.
       </p>
     </div>
 

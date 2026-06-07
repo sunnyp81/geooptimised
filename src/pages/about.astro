@@ -11,35 +11,7 @@ const schema = [
     "name": "About GEOoptimised",
     "url": "https://geooptimised.com/about/",
     "description": "GEOoptimised is a specialist Generative Engine Optimisation agency focused exclusively on AI search visibility, founded in 2026.",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "GEOoptimised",
-      "url": "https://geooptimised.com",
-      "email": "hello@geooptimised.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://geooptimised.com/icon-512.png"
-      },
-      "description": "Generative Engine Optimisation agency helping brands earn citations from AI search engines including ChatGPT, Perplexity, Gemini and Google AI Overviews.",
-      "foundingDate": "2026",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "hello@geooptimised.com",
-        "contactType": "customer enquiries"
-      },
-      "knowsAbout": [
-        "Generative Engine Optimisation",
-        "Answer Engine Optimisation",
-        "AI search visibility",
-        "Entity authority",
-        "Structured data and schema markup",
-        "LLM retrieval mechanics",
-        "llms.txt optimisation",
-        "Cross-platform AI citation strategy",
-        "Knowledge graph optimisation",
-        "Topical authority architecture"
-      ]
-    }
+    "mainEntity": { "@id": "https://geooptimised.com/#organization" }
   },
   {
     "@context": "https://schema.org",
@@ -83,7 +55,7 @@ const expertise = [
 
   <!-- Breadcrumb -->
   <nav aria-label="Breadcrumb" class="container-wide pt-8">
-    <ol class="flex items-center gap-2 font-mono text-xs text-ink-400">
+    <ol class="flex items-center gap-2 font-mono text-xs text-ink-300">
       <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
       <li aria-hidden="true" class="select-none">/</li>
       <li class="text-ink-300">About</li>

@@ -263,7 +263,7 @@ const related = [
 >
 
   <nav aria-label="Breadcrumb" class="container-wide pt-8">
-    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-400">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-300">
       <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
       <li aria-hidden="true">/</li>
       <li><a href="/geo-strategy/" class="transition hover:text-[var(--accent)]">GEO Strategy</a></li>
@@ -276,8 +276,8 @@ const related = [
     <div class="container-wide pt-16 pb-14">
       <div class="flex flex-wrap items-center gap-3">
         <span class="eyebrow">Roadmap</span>
-        <span class="font-mono text-xs text-ink-400">7 June 2026</span>
-        <span class="font-mono text-xs text-ink-400">13 min read</span>
+        <span class="font-mono text-xs text-ink-300">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">13 min read</span>
       </div>
       <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
         GEO Roadmap 2026: A Phased Plan
@@ -358,7 +358,7 @@ const related = [
             <div>
               <div class="flex flex-wrap items-center gap-3 mb-1">
                 <h3 class="font-display text-base font-semibold text-white">{item.task}</h3>
-                <span class="font-mono text-xs text-ink-400">{item.week}</span>
+                <span class="font-mono text-xs text-ink-300">{item.week}</span>
               </div>
               <p class="text-sm leading-relaxed text-ink-300">{item.detail}</p>
             </div>
@@ -382,7 +382,7 @@ const related = [
             <div>
               <div class="flex flex-wrap items-center gap-3 mb-1">
                 <h3 class="font-display text-base font-semibold text-white">{item.task}</h3>
-                <span class="font-mono text-xs text-ink-400">{item.sprint}</span>
+                <span class="font-mono text-xs text-ink-300">{item.sprint}</span>
               </div>
               <p class="text-sm leading-relaxed text-ink-300">{item.detail}</p>
             </div>
@@ -412,7 +412,7 @@ const related = [
             <div>
               <div class="flex flex-wrap items-center gap-3 mb-1">
                 <h3 class="font-display text-base font-semibold text-white">{item.task}</h3>
-                <span class="font-mono text-xs text-ink-400">{item.sprint}</span>
+                <span class="font-mono text-xs text-ink-300">{item.sprint}</span>
               </div>
               <p class="text-sm leading-relaxed text-ink-300">{item.detail}</p>
             </div>
@@ -437,7 +437,7 @@ const related = [
               <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Success Metric</th>
             </tr>
           </thead>
-          <tbody class="divide-y hair">
+          <tbody class="divide-y divide-[var(--line)]">
             {roadmapRows.map(row => (
               <tr class="transition hover:bg-white/[.02]">
                 <td class="px-4 py-3 font-mono text-xs text-[var(--accent)] whitespace-nowrap">{row.days}</td>

@@ -225,7 +225,7 @@ const faqs = [
 
   <!-- Breadcrumb -->
   <nav aria-label="Breadcrumb" class="container-wide pt-8">
-    <ol class="flex flex-wrap items-center gap-2 font-mono text-xs text-ink-400">
+    <ol class="flex flex-wrap items-center gap-2 font-mono text-xs text-ink-300">
       <li><a href="/" class="hover:text-[var(--accent)] transition-colors">Home</a></li>
       <li aria-hidden="true" class="text-ink-600">/</li>
       <li><a href="/geo-monitoring/" class="hover:text-[var(--accent)] transition-colors">GEO Tracking &amp; Monitoring</a></li>
@@ -256,19 +256,19 @@ const faqs = [
           <div class="mt-4 grid grid-cols-2 gap-6">
             <div>
               <p class="font-display text-3xl font-bold text-[var(--accent)]">Weekly</p>
-              <p class="mt-1 text-sm text-ink-400">Recommended cadence</p>
+              <p class="mt-1 text-sm text-ink-300">Recommended cadence</p>
             </div>
             <div>
               <p class="font-display text-3xl font-bold text-[var(--accent)]">90 days</p>
-              <p class="mt-1 text-sm text-ink-400">Minimum data retention</p>
+              <p class="mt-1 text-sm text-ink-300">Minimum data retention</p>
             </div>
             <div>
               <p class="font-display text-3xl font-bold text-[var(--accent)]">4+</p>
-              <p class="mt-1 text-sm text-ink-400">Platforms to cover</p>
+              <p class="mt-1 text-sm text-ink-300">Platforms to cover</p>
             </div>
             <div>
               <p class="font-display text-3xl font-bold text-[var(--accent)]">9</p>
-              <p class="mt-1 text-sm text-ink-400">Key tool features</p>
+              <p class="mt-1 text-sm text-ink-300">Key tool features</p>
             </div>
           </div>
         </div>
@@ -347,7 +347,7 @@ const faqs = [
               {toolFeatureRows.map((row, i) => (
                 <tr class={i % 2 === 0 ? '' : 'bg-[rgba(255,255,255,.01)]'}>
                   <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">{row.feature}</td>
-                  <td class="px-5 py-4 text-ink-400 whitespace-nowrap">{row.importance}</td>
+                  <td class="px-5 py-4 text-ink-300 whitespace-nowrap">{row.importance}</td>
                   <td class="px-5 py-4 text-ink-300 leading-relaxed">{row.notes}</td>
                 </tr>
               ))}
@@ -441,32 +441,32 @@ const faqs = [
     <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <a href="/geo-monitoring/" class="card card-hover block p-6">
         <h3 class="font-display text-lg font-semibold text-ink-50">GEO Monitoring Hub</h3>
-        <p class="mt-2 text-sm text-ink-400 leading-relaxed">The complete guide to GEO monitoring — from initial baseline checks through to continuous tracking, alerting, and stakeholder reporting.</p>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">The complete guide to GEO monitoring — from initial baseline checks through to continuous tracking, alerting, and stakeholder reporting.</p>
         <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
       </a>
       <a href="/geo-checker/" class="card card-hover block p-6">
         <h3 class="font-display text-lg font-semibold text-ink-50">GEO Checker</h3>
-        <p class="mt-2 text-sm text-ink-400 leading-relaxed">How to check your AI visibility in a point-in-time audit — manually and with dedicated checker tools — before setting up continuous tracking.</p>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">How to check your AI visibility in a point-in-time audit — manually and with dedicated checker tools — before setting up continuous tracking.</p>
         <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
       </a>
       <a href="/how-to-measure-geo/" class="card card-hover block p-6">
         <h3 class="font-display text-lg font-semibold text-ink-50">How to Measure GEO</h3>
-        <p class="mt-2 text-sm text-ink-400 leading-relaxed">The metrics framework for GEO performance measurement — what to track, how to calculate it, and how to report it to stakeholders.</p>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">The metrics framework for GEO performance measurement — what to track, how to calculate it, and how to report it to stakeholders.</p>
         <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
       </a>
       <a href="/geo-tools/" class="card card-hover block p-6">
         <h3 class="font-display text-lg font-semibold text-ink-50">GEO Tools Hub</h3>
-        <p class="mt-2 text-sm text-ink-400 leading-relaxed">All four categories of GEO tooling — AI visibility trackers, citation monitors, content optimisers, and brand authority analysers — in one hub.</p>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">All four categories of GEO tooling — AI visibility trackers, citation monitors, content optimisers, and brand authority analysers — in one hub.</p>
         <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
       </a>
       <a href="/generative-engine-optimisation/" class="card card-hover block p-6">
         <h3 class="font-display text-lg font-semibold text-ink-50">Generative Engine Optimisation</h3>
-        <p class="mt-2 text-sm text-ink-400 leading-relaxed">The ROOT guide to GEO — what it is, why AI citations matter, and how tracking fits into a complete optimisation programme.</p>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">The ROOT guide to GEO — what it is, why AI citations matter, and how tracking fits into a complete optimisation programme.</p>
         <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
       </a>
       <a href="/contact/" class="card card-hover block p-6">
         <h3 class="font-display text-lg font-semibold text-ink-50">Talk to a GEO Specialist</h3>
-        <p class="mt-2 text-sm text-ink-400 leading-relaxed">Need help choosing a GEO tracking tool or designing a monitoring workflow? Get vendor-neutral guidance matched to your programme stage.</p>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">Need help choosing a GEO tracking tool or designing a monitoring workflow? Get vendor-neutral guidance matched to your programme stage.</p>
         <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Get in touch <span aria-hidden="true">&rarr;</span></span>
       </a>
     </div>

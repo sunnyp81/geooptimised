@@ -142,7 +142,7 @@ const schema = [
 
   <!-- Breadcrumb -->
   <nav aria-label="Breadcrumb" class="container-wide pt-8">
-    <ol class="flex items-center gap-2 font-mono text-xs text-ink-400">
+    <ol class="flex items-center gap-2 font-mono text-xs text-ink-300">
       <li><a href="/" class="hover:text-[var(--accent)] transition-colors">Home</a></li>
       <li aria-hidden="true" class="text-ink-600">/</li>
       <li><a href="/geo-tools/" class="hover:text-[var(--accent)] transition-colors">GEO Tools</a></li>
@@ -205,7 +205,7 @@ const schema = [
     <nav aria-label="On this page" class="sticky top-4 z-20 hidden lg:block">
       <div class="card inline-block p-4 text-sm">
         <p class="font-mono text-xs text-ink-500 mb-3 uppercase tracking-wider">On this page</p>
-        <ol class="space-y-1.5 text-ink-400">
+        <ol class="space-y-1.5 text-ink-300">
           <li><a href="#what-is-an-aeo-platform" class="hover:text-[var(--accent)] transition-colors">What is an AEO platform?</a></li>
           <li><a href="#platform-categories" class="hover:text-[var(--accent)] transition-colors">Platform categories in 2026</a></li>
           <li><a href="#selection-criteria" class="hover:text-[var(--accent)] transition-colors">Selection criteria</a></li>
@@ -466,7 +466,7 @@ const schema = [
       ].map(item => (
         <a href={item.href} class="card card-hover block p-6">
           <h3 class="font-display text-lg font-semibold text-ink-50">{item.title}</h3>
-          <p class="mt-2 text-sm text-ink-400 leading-relaxed">{item.desc}</p>
+          <p class="mt-2 text-sm text-ink-300 leading-relaxed">{item.desc}</p>
           <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">
             Read more <span aria-hidden="true">&rarr;</span>
           </span>

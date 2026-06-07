@@ -16,24 +16,8 @@ const schema = [
       '@id': 'https://geooptimised.com/geo-framework/'
     },
     image: 'https://geooptimised.com/og-image.png',
-    author: {
-      '@type': 'Organization',
-      name: 'GEOoptimised',
-      url: 'https://geooptimised.com/',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://geooptimised.com/icon-512.png'
-      }
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'GEOoptimised',
-      url: 'https://geooptimised.com/',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://geooptimised.com/icon-512.png'
-      }
-    },
+    author: { '@id': 'https://geooptimised.com/#organization' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' },
     datePublished: '2026-06-06',
     dateModified: '2026-06-06',
     inLanguage: 'en-GB'
@@ -273,7 +257,7 @@ const related = [
 >
 
   <nav aria-label="Breadcrumb" class="container-wide pt-8">
-    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-400">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-300">
       <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
       <li aria-hidden="true">/</li>
       <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">GEO</a></li>
@@ -288,8 +272,8 @@ const related = [
     <div class="container-wide pt-16 pb-14">
       <div class="flex flex-wrap items-center gap-3">
         <span class="eyebrow">Framework Reference</span>
-        <span class="font-mono text-xs text-ink-400">6 June 2026</span>
-        <span class="font-mono text-xs text-ink-400">13 min read</span>
+        <span class="font-mono text-xs text-ink-300">6 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">13 min read</span>
       </div>
       <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
         The GEO Framework: A Repeatable System for AI Citations
@@ -402,7 +386,7 @@ const related = [
                 <h3 class="font-display text-xl font-semibold text-white">{stage.name}</h3>
                 <p class="mt-1 text-sm text-[var(--accent)]">{stage.tagline}</p>
               </div>
-              <span class="ml-auto shrink-0 font-mono text-xs text-ink-400">{stage.duration}</span>
+              <span class="ml-auto shrink-0 font-mono text-xs text-ink-300">{stage.duration}</span>
             </div>
             <div class="p-6">
               <p class="text-sm leading-relaxed text-ink-200">{stage.description}</p>
@@ -452,7 +436,7 @@ const related = [
               <tr class={i % 2 === 0 ? 'border-b hair' : 'border-b hair bg-white/[.02]'}>
                 <td class="px-4 py-3 font-medium text-white">{row.dimension}</td>
                 <td class="px-4 py-3 text-ink-300">{row.framework}</td>
-                <td class="px-4 py-3 text-ink-400">{row.adHoc}</td>
+                <td class="px-4 py-3 text-ink-300">{row.adHoc}</td>
               </tr>
             ))}
           </tbody>
