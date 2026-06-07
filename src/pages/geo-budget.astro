@@ -1,15 +1,15 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const title = 'GEO Budget: How to Plan Your Investment | GEOoptimised';
-const description = 'How to plan a GEO budget: cost drivers, allocation across audit, content, and monitoring, and illustrative investment ranges for programmes of different scales.';
+const title = 'GEO Budget Planning: How to Allocate Internal GEO Spend | GEOoptimised';
+const description = 'How to plan and allocate a GEO budget: structuring spend across audit, content, entity management, and monitoring; sequencing investments for maximum return; and framing GEO ROI for internal stakeholders.';
 
 const schema = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'GEO Budget: How to Plan Your Investment',
-    description: 'How to plan a GEO budget: cost drivers, allocation across audit, content, and monitoring, and illustrative investment ranges for programmes of different scales.',
+    headline: 'GEO Budget: How to Plan and Allocate Your Internal GEO Spend',
+    description: 'How to plan and allocate a GEO budget: structuring spend across audit, content, entity management, and monitoring; sequencing investments for maximum return; and framing GEO ROI for internal stakeholders.',
     url: 'https://geooptimised.com/geo-budget/',
     mainEntityOfPage: {
       '@type': 'WebPage',
@@ -32,10 +32,10 @@ const schema = [
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'How much does a GEO programme cost?',
+        name: 'How should I structure a GEO budget internally?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'GEO programme costs vary significantly by scope, starting point, and competitive intensity. A standalone GEO audit is typically the most efficient first investment, establishing a baseline before committing to ongoing spend. Ongoing monthly programmes range from focused monitoring-and-content retainers to comprehensive managed programmes covering audit, content production, entity management, and reporting. The figures that matter are specific to your programme — contact GEOoptimised for a scoped proposal rather than relying on industry averages that may not reflect your situation.'
+          text: 'A GEO budget is most effectively structured around the four cost drivers: audit and baseline, content production, entity management, and monitoring and reporting. Allocate the majority of initial budget to the audit, which calibrates all subsequent spend. Then scale content and entity work based on the audit findings, and maintain a steady-state monitoring allocation throughout. This phased approach prevents misallocation on content that addresses the wrong gaps. For indicative price ranges by engagement type and organisation size, see the GEO pricing guide at geooptimised.com/geo-pricing/.'
         }
       },
       {
@@ -95,7 +95,7 @@ const tocItems = [
   { id: 'why-budget-differently', label: 'Why GEO Needs Its Own Budget' },
   { id: 'cost-drivers', label: 'The Four Cost Drivers' },
   { id: 'allocation', label: 'Budget Allocation' },
-  { id: 'illustrative-ranges', label: 'Illustrative Ranges' },
+  { id: 'illustrative-ranges', label: 'Cost Reference' },
   { id: 'sequencing', label: 'How to Sequence Spend' },
   { id: 'roi-frame', label: 'Framing ROI for Stakeholders' },
   { id: 'faq', label: 'FAQ' },
@@ -154,8 +154,8 @@ const allocationRows = [
 
 const faqs = [
   {
-    q: 'How much does a GEO programme cost?',
-    a: 'GEO programme costs vary significantly by scope, starting point, and competitive intensity. A standalone GEO audit is typically the most efficient first investment, establishing a baseline before committing to ongoing spend. Ongoing monthly programmes range from focused monitoring-and-content retainers to comprehensive managed programmes covering audit, content production, entity management, and reporting. The figures that matter are specific to your programme — contact GEOoptimised for a scoped proposal rather than relying on industry averages that may not reflect your situation.',
+    q: 'How should I structure a GEO budget internally?',
+    a: 'A GEO budget is most effectively structured around the four cost drivers: audit and baseline, content production, entity management, and monitoring and reporting. Allocate the majority of initial budget to the audit, which calibrates all subsequent spend. Then scale content and entity work based on the audit findings, and maintain a steady-state monitoring allocation throughout. This phased approach prevents misallocation on content that addresses the wrong gaps. For indicative price ranges by engagement type and organisation size, see the GEO pricing guide.',
   },
   {
     q: 'What are the main cost drivers in a GEO budget?',
@@ -227,10 +227,10 @@ const related = [
         <span class="font-mono text-xs text-ink-300">10 min read</span>
       </div>
       <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
-        GEO Budget: How to Plan Your Investment
+        GEO Budget Planning: How to Allocate Internal GEO Spend
       </h1>
       <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
-        <strong class="text-white">A GEO budget is best structured around four cost drivers — audit, content, entity management, and monitoring — rather than set as an arbitrary percentage of marketing spend.</strong> This guide explains what drives GEO costs, how to allocate investment across programme phases, illustrative ranges to orient planning (labelled as illustrative throughout), and how to frame GEO ROI for stakeholders who are used to evaluating traditional search spend.
+        <strong class="text-white">This guide is for planners and buyers who need to structure and justify internal GEO spend — not for comparing vendor quotes.</strong> It covers how to allocate budget across the four cost drivers (audit, content, entity management, and monitoring), how to sequence spend so each phase validates the next, and how to frame GEO ROI for stakeholders who are used to evaluating traditional search investment. For indicative price ranges by engagement type and organisation size, and for guidance on reading and comparing vendor proposals, see the <a href="/geo-pricing/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO pricing guide</a>.
       </p>
     </div>
   </section>
@@ -351,49 +351,16 @@ const related = [
       </div>
 
       <div class="prose-dark mt-16">
-        <h2 id="illustrative-ranges" class="anchor-top">Illustrative Investment Ranges</h2>
+        <h2 id="illustrative-ranges" class="anchor-top">Cost Reference: Where to Find Indicative Figures</h2>
         <p>
-          <strong>The following ranges are illustrative only — they are included to give planning teams a starting frame of reference and should not be treated as quotes or commitments.</strong> Actual investment varies materially based on the factors described in the cost driver section above. These figures reflect the kinds of investment levels that clients across different sectors and competitive intensities typically consider; your programme may fall above or below these ranges.
+          <strong>This guide focuses on allocation methodology, not vendor pricing — the detailed indicative ranges by engagement type and organisation size live on the GEO pricing page.</strong> That page covers what audits, retainers, and project engagements typically cost across focused, mid-market, and enterprise scopes, why GEO is priced at a premium to equivalent SEO work, and how to read and compare vendor proposals.
         </p>
       </div>
 
-      <div class="mt-8 overflow-x-auto rounded-xl border hair">
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b hair bg-white/[.03]">
-              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Programme Scale</th>
-              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Typical Characteristics</th>
-              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Illustrative Range (monthly, ongoing)</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-[var(--line)]">
-            <tr class="transition hover:bg-white/[.02]">
-              <td class="px-4 py-3 font-semibold text-white">Audit only</td>
-              <td class="px-4 py-3 text-ink-300">One-off baseline assessment; no ongoing component</td>
-              <td class="px-4 py-3 text-ink-300">One-time project fee — <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">contact us for scope</a></td>
-            </tr>
-            <tr class="transition hover:bg-white/[.02]">
-              <td class="px-4 py-3 font-semibold text-white">Monitoring &amp; optimisation</td>
-              <td class="px-4 py-3 text-ink-300">Monthly measurement, entity corrections, limited new content; suits brands with existing strong content foundations</td>
-              <td class="px-4 py-3 text-ink-300">Lower end of the market — <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">get a quote</a></td>
-            </tr>
-            <tr class="transition hover:bg-white/[.02]">
-              <td class="px-4 py-3 font-semibold text-white">Active content programme</td>
-              <td class="px-4 py-3 text-ink-300">Regular new content alongside entity management and full monitoring; suits brands building topical authority from a competitive baseline</td>
-              <td class="px-4 py-3 text-ink-300">Mid-market — <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">get a quote</a></td>
-            </tr>
-            <tr class="transition hover:bg-white/[.02]">
-              <td class="px-4 py-3 font-semibold text-white">Full managed programme</td>
-              <td class="px-4 py-3 text-ink-300">Comprehensive audit, high-volume content, entity management, multi-platform monitoring, and integrated reporting; for brands in competitive markets with significant AI channel ambitions</td>
-              <td class="px-4 py-3 text-ink-300">Higher investment — <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">get a quote</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="card border-accent-500/20 bg-accent-500/5 p-5 mt-8">
-        <p class="text-sm text-ink-200">
-          <strong class="text-white">Important:</strong> These programme labels and range descriptors are illustrative only. They are intended to help you frame an internal conversation about investment scale, not to set price expectations. Every GEO programme is scoped individually based on your current citation baseline, competitive landscape, and objectives. <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Contact GEOoptimised</a> for a scoped proposal with specific investment figures.
+      <div class="card border border-[var(--accent)]/20 p-6 mt-8 max-w-2xl">
+        <span class="eyebrow">Cost reference</span>
+        <p class="mt-3 text-sm leading-relaxed text-ink-300">
+          For indicative investment ranges by engagement type (audit, retainer, project) and organisation size (focused, mid-market, enterprise), see the <a href="/geo-pricing/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO pricing guide</a>. All figures there are clearly labelled as indicative — every programme is scoped individually. <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Contact GEOoptimised</a> for a scoped proposal specific to your programme.
         </p>
       </div>
 
@@ -423,7 +390,11 @@ const related = [
         </p>
       </div>
 
-      <div class="prose-dark mt-16">
+      <div class="card border border-[var(--accent)]/20 p-5 mt-16 max-w-3xl">
+        <p class="text-sm text-ink-300 leading-relaxed"><strong class="text-ink-100">Evaluating vendor proposals or comparing agency quotes?</strong> This page covers internal budget planning and allocation methodology. For the pricing models vendors use, what legitimately drives costs up or down, and indicative price ranges by engagement type and organisation size, see the <a href="/geo-pricing/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO pricing guide</a>.</p>
+      </div>
+
+      <div class="prose-dark mt-12">
         <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
       </div>
 

@@ -65,7 +65,7 @@ const schema = [
         name: 'How long does it take to complete all seven stages?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Stages 1–3 (audit, entity architecture, content gap mapping) typically take three to four weeks. Stages 4–6 (content production, technical configuration, authority building) run concurrently over weeks four through twelve. Stage 7 (continuous monitoring) begins at week four and runs indefinitely. The full framework is designed as a 90-day sprint to establish foundations, followed by an ongoing programme. Measurable citation improvements are typically observable within sixty to ninety days of Stage 4 content publication.'
+          text: 'Stages 1–3 (audit, entity architecture, content gap mapping) typically take three to four weeks. Stages 4–6 (content production, technical configuration, authority building) run concurrently over weeks four through twelve. Stage 7 (continuous monitoring) begins at week four and runs indefinitely. Measurable citation improvements are typically observable within sixty to ninety days of Stage 4 content publication. For the phased milestone schedule mapped to specific day ranges, see the GEO roadmap at geooptimised.com/geo-roadmap/.'
         }
       },
       {
@@ -86,6 +86,7 @@ const tocItems = [
   { id: 'stage-details', label: 'Stage-by-Stage Reference' },
   { id: 'framework-comparison', label: 'Framework vs Ad Hoc GEO' },
   { id: 'failure-modes', label: 'Common Failure Modes' },
+  { id: 'related-guides', label: 'How These Guides Differ' },
   { id: 'faq', label: 'FAQ' },
   { id: 'related', label: 'Related Reading' }
 ];
@@ -218,7 +219,7 @@ const faqs = [
   },
   {
     q: 'How long does it take to complete all seven stages?',
-    a: 'Stages 1–3 (audit, entity architecture, content gap mapping) typically take three to four weeks. Stages 4–6 (content production, technical configuration, authority building) run concurrently over weeks four through twelve. Stage 7 (continuous monitoring) begins at week four and runs indefinitely. The full framework is designed as a 90-day sprint to establish foundations, followed by an ongoing programme. Measurable citation improvements are typically observable within sixty to ninety days of Stage 4 content publication.'
+    a: 'Stages 1–3 (audit, entity architecture, content gap mapping) typically take three to four weeks. Stages 4–6 (content production, technical configuration, authority building) run concurrently over weeks four through twelve. Stage 7 (continuous monitoring) begins at week four and runs indefinitely. Measurable citation improvements are typically observable within sixty to ninety days of Stage 4 content publication. For the full phased delivery schedule mapped to specific day ranges, see the GEO roadmap.'
   },
   {
     q: 'Can I apply the GEO framework to an existing website?',
@@ -236,14 +237,14 @@ const related = [
   {
     tag: 'How-To',
     title: 'How to Do GEO: A Step-by-Step Guide',
-    excerpt: 'The eight-step implementation sequence for executing the GEO framework, with practical actions for each step.',
+    excerpt: 'The tactical execution guide: eight hands-on steps with actions, tools, and common mistakes for each.',
     href: '/how-to-do-geo/'
   },
   {
-    tag: 'Best Practices',
-    title: 'GEO Best Practices',
-    excerpt: 'The content, technical, and entity practices that consistently drive citation improvements across all major AI platforms.',
-    href: '/geo-best-practices/'
+    tag: 'Roadmap',
+    title: 'GEO Roadmap 2026',
+    excerpt: 'The time-phased delivery plan: milestones and deliverables across 0–30, 30–90, and 90–180 day phases.',
+    href: '/geo-roadmap/'
   }
 ];
 ---
@@ -279,7 +280,7 @@ const related = [
         The GEO Framework: A Repeatable System for AI Citations
       </h1>
       <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
-        <strong class="text-white">A GEO framework is the structured, repeatable system that separates brands with compounding citation share from brands running one-off experiments.</strong> The GEOoptimised framework consists of seven stages, each with defined inputs, outputs, and success criteria — so that progress is measurable and every decision is traceable back to data.
+        <strong class="text-white">The GEOoptimised framework is the named, seven-stage conceptual model that defines what the work is, how the stages relate to each other, and what each stage must produce before the next can begin.</strong> It is the methodology itself — not a step-by-step execution guide, and not a calendar. For hands-on task guidance, see <a href="/how-to-do-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how to do GEO</a>. For the phased delivery timeline, see the <a href="/geo-roadmap/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO roadmap</a>.
       </p>
     </div>
   </section>
@@ -328,20 +329,20 @@ const related = [
       <div class="prose-dark">
         <h2 id="what-is-the-framework" class="anchor-top">What the GEO Framework Is</h2>
         <p>
-          <strong>A GEO framework is a structured, repeatable system for improving brand visibility in AI-generated answers across all major generative platforms.</strong> It is a programme architecture, not a checklist. The distinction matters: a checklist describes what to do; a framework describes what to do in what order, why that order matters, what inputs each stage requires, and what outputs each stage must produce before the next stage can begin.
+          <strong>The GEO framework is the named, repeatable conceptual model that defines how every layer of a GEO programme fits together — what each stage is, what it requires as inputs, what it must produce as outputs, and why it must precede the next stage.</strong> It is a methodology reference, not an execution guide and not a project timeline. Understanding the model is the precondition for executing it well or evaluating someone else's execution.
         </p>
         <p>
           The GEOoptimised framework is built around seven stages because seven is the minimum number of distinct workstreams required to address all three layers of GEO simultaneously: the entity layer (how your brand is defined and resolved by AI models), the content layer (how your pages are structured for extraction by retrieval systems), and the authority layer (how your citation footprint signals credibility to AI models selecting sources). Frameworks that collapse these into fewer stages — combining entity work with content work, or skipping the audit — consistently produce slower results because they introduce sequencing errors that force expensive remediation later.
         </p>
         <p>
-          The framework is also the reference architecture behind the <a href="/generative-engine-optimisation/#geo-framework" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO framework section</a> in the complete guide to <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a>. This page expands each stage with full definitions, success criteria, and failure modes that the overview format does not accommodate.
+          The framework is the reference architecture behind the <a href="/generative-engine-optimisation/#geo-framework" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO framework section</a> in the complete guide to <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a>. This page expands each stage with full definitions, success criteria, and common failure modes. For the practical task-by-task implementation of each stage, see <a href="/how-to-do-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how to do GEO</a>. For the time-phased delivery schedule, see the <a href="/geo-roadmap/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO roadmap</a>.
         </p>
       </div>
 
       <div class="prose-dark mt-16">
         <h2 id="seven-stages" class="anchor-top">The Seven Stages at a Glance</h2>
         <p>
-          <strong>The seven stages of the GEO framework form a complete implementation sequence from zero visibility to compounding citation share.</strong> The table below summarises each stage, its duration within a standard 90-day programme, and its primary output.
+          <strong>The seven stages of the GEO framework form a complete implementation sequence from zero visibility to compounding citation share.</strong> The table below summarises each stage, its typical duration, and its primary output. For the full delivery calendar with milestones, see the <a href="/geo-roadmap/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO roadmap</a>.
         </p>
       </div>
 
@@ -481,6 +482,19 @@ const related = [
         <p>
           If your current GEO programme has stalled, the most effective diagnostic is to review each stage against its success criteria and identify the first stage where the criteria were not met. In the majority of cases, the root cause is in Stages 1–3 — specifically, content production that was prioritised before the audit and entity mapping were complete. Remediation requires going back to complete those stages properly before advancing, even if it means pausing content production temporarily. The cost of the pause is almost always lower than the cost of continuing to optimise on a broken foundation. If you would rather have a specialist conduct this diagnostic, an <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI visibility audit</a> from GEOoptimised will identify which stage failed and what remediation is required.
         </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="related-guides" class="anchor-top">Related GEO Guides — and How They Differ</h2>
+        <p>
+          <strong>The GEO framework is the conceptual model — the other three guides operate at different layers of the same programme.</strong> Use the right one for your current question:
+        </p>
+        <ul class="mt-4 space-y-3 text-sm text-ink-200">
+          <li><strong>GEO Framework (this page)</strong> — the named, repeatable methodology with stage definitions, inputs, outputs, and success criteria. The "what the model is."</li>
+          <li><strong><a href="/how-to-do-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">How to Do GEO</a></strong> — the tactical execution guide: eight hands-on steps with practical actions and tools. The "how to actually do the work."</li>
+          <li><strong><a href="/geo-roadmap/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO Roadmap</a></strong> — the time-phased delivery plan with milestones across 0–30, 30–90, and 90–180 days. The "when."</li>
+          <li><strong><a href="/geo-strategy/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO Strategy</a></strong> — the decision layer covering when to invest, how to prioritise, and agency vs DIY. The "whether and why."</li>
+        </ul>
       </div>
 
       <div class="prose-dark mt-16">
