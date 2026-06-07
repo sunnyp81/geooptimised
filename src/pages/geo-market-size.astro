@@ -1,0 +1,545 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO Market Size & Growth Opportunity | GEOoptimised';
+const description = 'GEO market size explained: the structural drivers of AI search growth, how to think about the emerging GEO services market, and a framework for evaluating the opportunity without invented TAM figures.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'GEO Market Size & Growth',
+    description: 'GEO market size explained: the structural drivers of AI search growth, how to think about the emerging GEO services market, and a framework for evaluating the opportunity without invented TAM figures.',
+    url: 'https://geooptimised.com/geo-market-size/',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://geooptimised.com/geo-market-size/'
+    },
+    datePublished: '2026-06-07',
+    dateModified: '2026-06-07',
+    image: 'https://geooptimised.com/og-image.png',
+    inLanguage: 'en-GB',
+    author: { '@id': 'https://geooptimised.com/#organization' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' }
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How large is the GEO market?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Precise GEO market size figures are not yet reliably established because the discipline is too young for consensus methodologies to exist. What can be assessed qualitatively is that the market is emerging from the broader AI search transition, which itself is a subset of the digital marketing services market. The appropriate framing is not a single TAM figure but a structural analysis: GEO addresses a real capability gap that grows in proportion to AI search adoption, which multiple credible sources confirm is increasing rapidly across major markets.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What is driving growth in the GEO market?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The primary driver of GEO market growth is the shift of informational query volume from traditional search engines to AI-generated answer platforms. Secondary drivers include increasing brand awareness of AI citation risk (brands discovering they are misrepresented or absent from AI answers), the proliferation of AI-native interfaces in consumer and enterprise software, and the growing recognition that traditional SEO skills do not transfer directly to AI citation optimisation. These structural drivers are independent of any single platform and compound as AI search becomes more deeply embedded in how people find information.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Is GEO a new market or a sub-segment of SEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'GEO is best understood as an adjacent discipline to SEO rather than a direct sub-segment. It addresses a distinct retrieval mechanism (generative AI synthesis versus ranked document lists), uses different optimisation signals (entity consistency and extraction architecture versus PageRank and keyword relevance), and requires different measurement tools. The markets overlap in buyer persona and some technical foundations, but the skill sets, tools, and success metrics are sufficiently different to treat GEO as a distinct service category. The most useful analogy is the emergence of local SEO as a distinct practice from organic SEO in the mid-2010s.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Which industries have the most GEO demand?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Demand for GEO is highest in industries where informational queries are common and where AI-generated answers carry significant influence over purchase or trust decisions. Professional services (legal, financial, medical), technology and SaaS, B2B services, and e-commerce categories with high consideration purchases all show strong early GEO demand. Sectors where brand reputation is particularly sensitive to how AI describes them — financial advice, healthcare, legal services — have additional urgency around citation accuracy as well as citation frequency.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How should organisations assess the ROI of GEO investment?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'GEO ROI is best assessed through the lens of brand visibility risk rather than direct revenue attribution, at least in the early stages. The relevant question is not "how much revenue did this citation generate?" but "what is the cost of being absent or misrepresented when a potential customer asks an AI engine about our category?" As GEO measurement tools mature, attribution models that link AI citation presence to pipeline and revenue are becoming possible, but the more immediately defensible case is the risk-mitigation framing: organisations that establish citation presence early face lower remediation costs than those who address it reactively.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Will GEO replace SEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'GEO will not replace SEO in the near term; the two disciplines will coexist as AI search and traditional search coexist. The more accurate framing is that GEO will grow as a proportion of total search marketing investment as AI search handles a larger share of queries. Organisations that invest in GEO alongside SEO, rather than instead of it, are positioned to maintain visibility across both channels as the balance shifts.'
+        }
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'GEO Metrics', item: 'https://geooptimised.com/geo-metrics/' },
+      { '@type': 'ListItem', position: 3, name: 'GEO Market Size', item: 'https://geooptimised.com/geo-market-size/' }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'the-market-context', label: 'The Market Context' },
+  { id: 'structural-drivers', label: 'Structural Growth Drivers' },
+  { id: 'market-segments', label: 'Market Segments' },
+  { id: 'sizing-the-opportunity', label: 'How to Think About Sizing' },
+  { id: 'industry-demand', label: 'Industry Demand Signals' },
+  { id: 'roi-framework', label: 'ROI & Investment Framework' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const growthDrivers = [
+  {
+    driver: 'AI search adoption',
+    description: 'The share of informational queries handled by AI-generated answer platforms is growing across all major markets. Each percentage point shift in query volume from traditional search to AI search increases the importance of AI citation presence relative to keyword rankings.',
+    trajectory: 'Upward — consistent across credible source categories; rate disputed but direction is not',
+  },
+  {
+    driver: 'Enterprise AI integration',
+    description: 'AI assistants are being embedded in enterprise software, customer service tools, and internal knowledge systems. These enterprise AI deployments retrieve and synthesise web content, extending the GEO surface area beyond consumer search engines.',
+    trajectory: 'Upward — enterprise AI adoption is accelerating independently of consumer search',
+  },
+  {
+    driver: 'Brand citation risk awareness',
+    description: 'Brands are increasingly discovering that AI engines misrepresent them, omit them, or favour competitors. This awareness is converting latent demand into active GEO investment. The discovery phase of the market creates a pull dynamic independent of marketing by GEO providers.',
+    trajectory: 'Upward — awareness lags adoption, so demand growth from this driver is still early',
+  },
+  {
+    driver: 'SEO skill gap',
+    description: 'Traditional SEO agencies and in-house teams lack the entity architecture, structured data expertise, and citation monitoring capabilities that GEO requires. This creates a specialist services gap that grows as demand increases, supporting a premium pricing structure for qualified GEO providers.',
+    trajectory: 'Upward in the near term; likely to moderate as SEO skills adapt over a multi-year horizon',
+  },
+  {
+    driver: 'Platform proliferation',
+    description: 'The number of AI platforms that retrieve and cite web content is increasing — ChatGPT, Perplexity, Gemini, Copilot, Google AI Overviews, and numerous vertical AI tools. Each additional platform multiplies the surface area that GEO programmes must address.',
+    trajectory: 'Upward — new AI-powered interfaces continue to launch across consumer and enterprise contexts',
+  },
+];
+
+const marketSegments = [
+  {
+    segment: 'GEO audits & strategy',
+    buyers: 'Marketing directors, SEO leads, digital agencies',
+    description: 'One-time or periodic assessment of current AI citation presence, gap analysis, and prioritised remediation plan. The entry point for most organisations beginning a GEO programme.',
+  },
+  {
+    segment: 'Ongoing citation management',
+    buyers: 'Enterprise marketing teams, brand managers',
+    description: 'Continuous monitoring, content optimisation, and entity maintenance to sustain and grow citation share across target AI platforms. Subscription or retainer model.',
+  },
+  {
+    segment: 'GEO content production',
+    buyers: 'Content teams, publishers, agencies',
+    description: 'Writing and structuring content specifically for AI extraction: extraction-first copy, FAQ architecture, structured data deployment. Often bundled with strategy or sold standalone.',
+  },
+  {
+    segment: 'GEO tools & software',
+    buyers: 'In-house teams, agencies at scale',
+    description: 'Citation monitoring platforms, query tracking tools, and entity management software. A nascent but growing software segment as the practice matures.',
+  },
+  {
+    segment: 'GEO training & education',
+    buyers: 'Marketing teams, agencies, consultants',
+    description: 'Workshops, courses, and certification programmes for practitioners building GEO capability in-house. Demand correlates with overall market awareness.',
+  },
+];
+
+const industryDemand = [
+  {
+    sector: 'Professional services (legal, financial, consulting)',
+    driver: 'High AI query volume for "best" and "recommended" queries; significant brand risk from misrepresentation',
+    urgency: 'High',
+  },
+  {
+    sector: 'Technology & SaaS',
+    driver: 'B2B buyers use AI for category research and vendor comparison; citation presence affects consideration set inclusion',
+    urgency: 'High',
+  },
+  {
+    sector: 'Healthcare & life sciences',
+    driver: 'Patients and carers use AI for health information; citation accuracy has safety and compliance implications',
+    urgency: 'High',
+  },
+  {
+    sector: 'E-commerce (considered purchases)',
+    driver: 'AI product research queries grow as purchase consideration period lengthens; brand mention in AI answers precedes search and purchase',
+    urgency: 'Medium–high',
+  },
+  {
+    sector: 'Media & publishing',
+    driver: 'Publishers face traffic displacement from AI-generated summaries; GEO is both a defensive and a monetisation strategy',
+    urgency: 'Medium–high',
+  },
+  {
+    sector: 'Hospitality & travel',
+    driver: 'Destination and accommodation queries increasingly handled by AI; citation presence in planning-phase AI answers drives bookings',
+    urgency: 'Medium',
+  },
+];
+
+const faqs = [
+  {
+    q: 'How large is the GEO market?',
+    a: 'Precise GEO market size figures are not yet reliably established because the discipline is too young for consensus methodologies to exist. The appropriate framing is structural: GEO addresses a real capability gap that grows in proportion to AI search adoption, which multiple credible sources confirm is increasing rapidly. Estimates that claim specific TAM figures should be treated as illustrative projections, not established facts.',
+  },
+  {
+    q: 'What is driving growth in the GEO market?',
+    a: 'The primary driver is the shift of informational query volume from traditional search to AI-generated answer platforms. Secondary drivers include brand awareness of AI citation risk, proliferation of AI-native interfaces in enterprise software, and the recognition that traditional SEO skills do not transfer directly to AI citation optimisation. These structural drivers compound independently of any single platform.',
+  },
+  {
+    q: 'Is GEO a new market or a sub-segment of SEO?',
+    a: 'GEO is best understood as an adjacent discipline to SEO rather than a direct sub-segment. It addresses a distinct retrieval mechanism, uses different optimisation signals, and requires different measurement tools. The most useful analogy is the emergence of local SEO as a distinct practice from organic SEO — related buyer persona, different technical practice.',
+  },
+  {
+    q: 'Which industries have the most GEO demand?',
+    a: 'Demand is highest in industries where informational queries are common and AI-generated answers carry significant influence over purchase or trust decisions: professional services, technology and SaaS, healthcare, and e-commerce with high consideration purchases. Sectors with particular citation accuracy sensitivity — financial advice, legal services, healthcare — have additional urgency.',
+  },
+  {
+    q: 'How should organisations assess the ROI of GEO investment?',
+    a: 'GEO ROI is best assessed through brand visibility risk in the early stages. The key question is not "how much revenue did this citation generate?" but "what is the cost of being absent when a potential customer asks an AI about our category?" As measurement tools mature, attribution models linking AI citation to pipeline are becoming possible.',
+  },
+  {
+    q: 'Will GEO replace SEO?',
+    a: 'GEO will not replace SEO in the near term. The two disciplines coexist as AI search and traditional search coexist. The accurate framing is that GEO will grow as a proportion of total search marketing investment as AI search handles a larger share of queries. Organisations investing in GEO alongside SEO maintain visibility across both channels.',
+  },
+];
+
+const related = [
+  {
+    tag: 'NODE',
+    title: 'GEO Metrics: How to Measure AI Citation Performance',
+    excerpt: 'The full measurement framework for tracking citation frequency, share of voice, and brand accuracy.',
+    href: '/geo-metrics/',
+  },
+  {
+    tag: 'Insight',
+    title: 'The Future of GEO',
+    excerpt: 'How the AI search landscape is likely to evolve and what that means for citation strategy over the next two to five years.',
+    href: '/future-of-geo/',
+  },
+  {
+    tag: 'Guide',
+    title: 'GEO Statistics: AI Search Trends',
+    excerpt: 'A framework for sourcing and interpreting GEO statistics without fabricated figures.',
+    href: '/geo-statistics/',
+  },
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/geo-market-size/" ogType="article">
+
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-metrics/" class="transition hover:text-[var(--accent)]">GEO Metrics</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">GEO Market Size</li>
+    </ol>
+  </nav>
+
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">GEO Metrics</span>
+        <span class="font-mono text-xs text-ink-400">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-400">11 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO Market Size &amp; Growth
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">The GEO market is emerging from the intersection of AI search adoption and brand visibility risk — two independently accelerating forces.</strong> Published estimates of AI search market size vary widely and should be treated as directional rather than precise. This page explains the structural drivers that make GEO a durable growth category, how to think about the opportunity without relying on invented TAM figures, and how to assess the market demand in your own sector.
+      </p>
+    </div>
+  </section>
+
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" id="toc-nav">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <div>
+
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Precise GEO TAM figures do not exist yet; the market is too nascent for reliable consensus estimates. Treat any specific figure as illustrative.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>The structural case for market growth is strong: AI search adoption, enterprise AI integration, and brand citation risk awareness all compound independently.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>GEO is best positioned as an adjacent discipline to SEO, not a replacement — the two will coexist as AI and traditional search coexist.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Demand is highest in professional services, technology, healthcare, and e-commerce — sectors with high-consideration purchases or significant brand reputation sensitivity.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>ROI framing for GEO investment works best as brand visibility risk mitigation in the early stages, shifting to revenue attribution as measurement tools mature.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prose-dark">
+        <h2 id="the-market-context" class="anchor-top">The Market Context: Why GEO Is Emerging Now</h2>
+        <p>
+          <strong>The GEO market is a direct consequence of a structural shift in how people find information — the transition of a meaningful and growing share of informational queries from ranked document lists to AI-generated synthesised answers.</strong> This transition creates a new visibility surface that existing SEO practices do not address, and with it, a new category of specialist services and tools.
+        </p>
+        <p>
+          To understand the GEO market, it helps to understand the broader AI search transition. Traditional search engines return a ranked list of documents; the searcher selects which document to visit. AI search engines generate a synthesised answer and, in most cases, cite the sources used. This changes the competitive dynamic fundamentally: instead of competing for a position in a ranked list, brands compete to be cited in a generated answer. The skills, signals, and tools required are different from those used in traditional <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a>.
+        </p>
+        <p>
+          The timing of GEO's emergence as a distinct practice reflects the pace of AI search platform adoption. When AI search tools handled a negligible share of queries, the business case for specialist investment was weak. As that share has grown to a level that represents material visibility risk for brands in high-consideration categories, the business case has become compelling. The market is still early — most organisations have not yet begun structured GEO programmes — which means the window for early-mover advantage remains open. For the longer-term trajectory, see the <a href="/future-of-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">future of GEO</a> analysis.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="structural-drivers" class="anchor-top">Structural Growth Drivers</h2>
+        <p>
+          <strong>The GEO market is driven by five structural forces that operate independently of one another — meaning that even if one driver slows, the others continue to support market growth.</strong> This structural diversity is what gives the category durability rather than making it a single-platform bet.
+        </p>
+      </div>
+
+      <div class="mt-8 space-y-4">
+        {growthDrivers.map(driver => (
+          <div class="card p-6">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <h3 class="font-display text-base font-semibold text-white">{driver.driver}</h3>
+              <span class="shrink-0 rounded-full border hair px-3 py-0.5 font-mono text-xs text-[var(--accent)]">{driver.trajectory}</span>
+            </div>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">{driver.description}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          It is worth being explicit about what this analysis is and is not: it is a qualitative assessment of directional forces, not a quantitative market model. Precise figures for AI search query share, GEO services spend, or market growth rates are not reliably available at the time of writing. Any specific TAM or CAGR figure you encounter in GEO-adjacent content should be treated with the same scrutiny applied to any statistic in a fast-moving, under-researched market — verified against its source methodology before being cited. For guidance on evaluating AI search statistics generally, see the <a href="/geo-statistics/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO statistics</a> page.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="market-segments" class="anchor-top">Market Segments Within GEO</h2>
+        <p>
+          <strong>The GEO services market is not homogeneous — it comprises at least five distinct service segments, each at a different stage of maturity and each serving a different buyer need.</strong> Understanding the segment structure helps organisations assess where to invest and helps agencies position their service offerings.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Service Segment</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Primary Buyers</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Description</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y hair">
+            {marketSegments.map(row => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class="px-4 py-3 font-semibold text-white">{row.segment}</td>
+                <td class="px-4 py-3 text-ink-300">{row.buyers}</td>
+                <td class="px-4 py-3 text-ink-300">{row.description}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          The audit and strategy segment is the most developed because it has the lowest barrier to entry and the most immediate business case — organisations can commission a one-time audit to understand their current position before committing to ongoing investment. Ongoing citation management is the highest-value recurring segment but requires buyers to have enough GEO awareness to justify a retainer. The GEO tools and software segment is the least mature but arguably has the highest long-term value potential as the practice scales beyond what manual monitoring can support.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="sizing-the-opportunity" class="anchor-top">How to Think About Sizing the GEO Opportunity</h2>
+        <p>
+          <strong>The right framework for sizing the GEO opportunity is not a top-down TAM calculation but a bottom-up assessment of AI query share in your specific category and the competitive cost of citation absence.</strong> Top-down TAM figures for GEO are not yet reliably available and those that are published typically extrapolate from AI market forecasts using assumptions that are not disclosed.
+        </p>
+        <p>
+          A more grounded approach works from three variables. First, estimate the proportion of informational queries in your category that are now handled by AI-generated answers rather than traditional search click-throughs. This is category-specific and can be estimated by monitoring the AI response rate for your target query set over a defined period. Second, assess the competitive cost of citation absence: how often do competitors appear in AI answers where you do not, and what is the implied visibility gap? Third, establish the improvement potential: given your current content architecture and entity signals, what citation frequency could a structured GEO programme realistically achieve?
+        </p>
+        <p>
+          These three variables — current AI query share in your category, your citation gap relative to competitors, and your improvement potential — give you a defensible basis for GEO investment sizing that is grounded in your actual competitive situation rather than in industry-level projections. The <a href="/geo-metrics/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO metrics</a> framework and the <a href="/how-to-measure-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how to measure GEO</a> guide provide the measurement tools to populate this model with real data.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="industry-demand" class="anchor-top">Industry Demand Signals by Sector</h2>
+        <p>
+          <strong>GEO demand is not evenly distributed across industries — it concentrates in sectors where AI-generated answers carry material influence over trust, purchase, or recommendation decisions.</strong> The table below maps sectors to their primary demand driver and relative urgency, based on the characteristics of typical query patterns and the stakes of citation presence or absence.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Sector</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Primary Demand Driver</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Relative Urgency</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y hair">
+            {industryDemand.map(row => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class="px-4 py-3 font-semibold text-white">{row.sector}</td>
+                <td class="px-4 py-3 text-ink-300">{row.driver}</td>
+                <td class="px-4 py-3">
+                  <span class={`inline-block rounded-full px-2 py-0.5 font-mono text-xs ${row.urgency === 'High' ? 'bg-accent-600/20 text-accent-300' : 'bg-white/[.06] text-ink-300'}`}>
+                    {row.urgency}
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          The urgency gradations in this table reflect the combination of AI query volume in the sector and the consequence of citation gaps. A financial services firm that is absent from AI-generated answers to "best investment platforms" questions faces a different risk level than a hospitality brand absent from "best hotels in city" queries — not because one matters more than the other, but because AI search handles a different share of consideration-stage queries in each category.
+        </p>
+        <p>
+          Every sector will see increasing GEO urgency over time as AI search adoption grows. The question is not whether to build GEO capability but when — and the evidence consistently shows that early movers in new search disciplines establish citation authority that is expensive for late movers to displace.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="roi-framework" class="anchor-top">ROI &amp; Investment Framework for GEO</h2>
+        <p>
+          <strong>GEO investment is most convincingly justified through a combination of brand visibility risk mitigation and long-term citation authority building — not through direct revenue attribution, which is difficult to establish in the current state of GEO measurement.</strong>
+        </p>
+        <p>
+          The risk-mitigation framing runs as follows. Organisations that delay GEO investment until they have lost significant AI citation share face two costs: the ongoing visibility gap (potential customers ask AI about their category and do not encounter their brand), and the remediation cost (re-establishing citation presence once competitors have consolidated it is measurably harder than building it from a standing start). The earlier-mover advantage in GEO is structurally similar to the early-mover advantage in domain authority for traditional SEO — authority accumulates over time and compounds, making it increasingly difficult for later entrants to match.
+        </p>
+        <p>
+          The positive ROI framing — citation presence driving awareness, pipeline, and revenue — is directionally sound but harder to attribute cleanly with current tools. As GEO monitoring platforms develop more sophisticated attribution models, the revenue case will become increasingly quantifiable. In the interim, the most defensible investment justification is the risk-mitigation model combined with tracking intermediate metrics: citation frequency, citation accuracy, and AI share of voice on target queries.
+        </p>
+        <p>
+          For organisations at the evaluation stage, a structured GEO audit provides the baseline data needed to move from abstract market analysis to a business case grounded in your actual citation position. <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Contact our team</a> to discuss how we approach GEO audit and strategy engagements.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="relative border-t hair mt-12 overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Assess Your Position in the GEO Market</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        A GEO audit establishes your current citation share, identifies your gaps relative to competitors, and produces a prioritised plan for building the citation authority that early movers are establishing now. No ongoing commitment required to start.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request a GEO audit</a>
+        <a href="/geo-metrics/" class="btn btn-ghost">Explore GEO metrics</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const faqBtns = document.querySelectorAll('#faq-accordion button');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+
+    const tocLinks = document.querySelectorAll('#toc-nav a');
+    const headings = Array.from(
+      document.querySelectorAll('h2[id], h3[id]')
+    ) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(link => {
+              link.classList.remove('text-[var(--accent)]');
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.classList.add('text-[var(--accent)]');
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+
+    headings.forEach(h => observer.observe(h));
+  </script>
+
+</Base>

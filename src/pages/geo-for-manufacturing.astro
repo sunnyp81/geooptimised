@@ -1,0 +1,546 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO for Manufacturing: AI Search for Industrial Brands | GEOoptimised';
+const description = 'GEO for manufacturing: make spec-driven content, technical product data, and distributor discovery AI-citable across ChatGPT, Perplexity, and Google AI Overviews.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'GEO for Manufacturing',
+  description,
+  url: 'https://geooptimised.com/geo-for-manufacturing/',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  inLanguage: 'en-GB',
+  image: 'https://geooptimised.com/og-image.png',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/geo-for-manufacturing/',
+  },
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is GEO for manufacturing?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'GEO for manufacturing is the practice of structuring a manufacturer\'s technical product content, specification data, and entity signals so that AI search engines — including ChatGPT, Perplexity, Google AI Overviews, and Gemini — cite the manufacturer when engineers, procurement teams, and distributors submit product-related queries. It addresses the specific challenges of industrial AI search: specification-heavy content, distributor channel complexity, long evaluation cycles, and the need to influence technical decision-makers who rely on precise, verifiable product data.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Why do manufacturers struggle with AI search visibility?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most manufacturers struggle with AI search visibility for three reasons. First, their technical product content is held in PDFs, CAD files, and proprietary product information management systems that AI crawlers cannot access. Second, specification data is often presented in formats that are not easily extractable by language models — dense tables without proper semantic markup, or inline specs buried in paragraph text. Third, manufacturer entity data is frequently inconsistent across distributor catalogues, industry registries, and the manufacturer\'s own website, creating ambiguity that suppresses citation confidence.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do engineers use AI search when specifying products?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Engineers use AI assistants at multiple stages of the product specification process. In the early design stage, they ask category-definition questions: "what type of bearing is best for high-temperature applications", "which sealing material is compatible with hydraulic fluid". During comparative evaluation, they ask specific technical questions: "what is the load rating of [product]", "does [manufacturer] produce ATEX-rated motors". At the procurement stage, they ask about availability, lead times, and approved distributor networks. Each stage requires different content — and a manufacturer absent from AI answers at any stage loses influence over the specification decision.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should manufacturers use Product schema for GEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Product schema in JSON-LD format provides machine-readable signals about product names, model numbers, material specifications, certifications, and dimensions. AI retrieval systems use structured product data to answer specific specification queries with confidence. At minimum, each product page should include Product schema with name, description, model, manufacturer reference (linking to the Organisation entity), and any applicable certification or compliance data. For product ranges, aggregate ratings and available variants should also be marked up.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does distributor channel complexity affect manufacturing GEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Distributor channel complexity creates an entity ambiguity problem for AI systems. When the same product is listed under slightly different names, part numbers, or descriptions across dozens of distributor catalogues, AI models receive conflicting signals about what the product is and who manufactures it. Manufacturers should establish a canonical product entity on their own website — with definitive naming, specifications, and schema markup — and work to ensure distributor listings reference the manufacturer\'s canonical data rather than creating independent product descriptions.',
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'GEO by Industry', item: 'https://geooptimised.com/geo-by-industry/' },
+    { '@type': 'ListItem', position: 3, name: 'GEO for Manufacturing', item: 'https://geooptimised.com/geo-for-manufacturing/' },
+  ],
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'manufacturing-ai-search', label: 'Manufacturing and AI Search' },
+  { id: 'how-engineers-search', label: 'How Engineers Use AI' },
+  { id: 'spec-content', label: 'Spec-Driven Content Strategy' },
+  { id: 'distributor-discovery', label: 'Distributor and B2B Discovery' },
+  { id: 'technical-entity', label: 'Technical Entity Authority' },
+  { id: 'schema-markup', label: 'Schema for Manufacturing' },
+  { id: 'content-accessibility', label: 'Making Content AI-Accessible' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const faqs = [
+  {
+    q: 'What is GEO for manufacturing?',
+    a: "GEO for manufacturing is the practice of structuring a manufacturer's technical product content, specification data, and entity signals so that AI search engines — including ChatGPT, Perplexity, Google AI Overviews, and Gemini — cite the manufacturer when engineers, procurement teams, and distributors submit product-related queries. It addresses the specific challenges of industrial AI search: specification-heavy content, distributor channel complexity, long evaluation cycles, and the need to influence technical decision-makers who rely on precise, verifiable product data.",
+  },
+  {
+    q: 'Why do manufacturers struggle with AI search visibility?',
+    a: "Most manufacturers struggle with AI search visibility for three reasons. First, their technical product content is held in PDFs, CAD files, and proprietary product information management systems that AI crawlers cannot access. Second, specification data is often presented in formats that are not easily extractable by language models — dense tables without proper semantic markup, or inline specs buried in paragraph text. Third, manufacturer entity data is frequently inconsistent across distributor catalogues, industry registries, and the manufacturer's own website, creating ambiguity that suppresses citation confidence.",
+  },
+  {
+    q: 'How do engineers use AI search when specifying products?',
+    a: 'Engineers use AI assistants at multiple stages of the product specification process. In the early design stage, they ask category-definition questions: "what type of bearing is best for high-temperature applications", "which sealing material is compatible with hydraulic fluid". During comparative evaluation, they ask specific technical questions: "what is the load rating of [product]", "does [manufacturer] produce ATEX-rated motors". At the procurement stage, they ask about availability, lead times, and approved distributor networks. Each stage requires different content — and a manufacturer absent from AI answers at any stage loses influence over the specification decision.',
+  },
+  {
+    q: 'Should manufacturers use Product schema for GEO?',
+    a: 'Yes. Product schema in JSON-LD format provides machine-readable signals about product names, model numbers, material specifications, certifications, and dimensions. AI retrieval systems use structured product data to answer specific specification queries with confidence. At minimum, each product page should include Product schema with name, description, model, manufacturer reference (linking to the Organisation entity), and any applicable certification or compliance data. For product ranges, aggregate ratings and available variants should also be marked up.',
+  },
+  {
+    q: 'How does distributor channel complexity affect manufacturing GEO?',
+    a: "Distributor channel complexity creates an entity ambiguity problem for AI systems. When the same product is listed under slightly different names, part numbers, or descriptions across dozens of distributor catalogues, AI models receive conflicting signals about what the product is and who manufactures it. Manufacturers should establish a canonical product entity on their own website — with definitive naming, specifications, and schema markup — and work to ensure distributor listings reference the manufacturer's canonical data rather than creating independent product descriptions.",
+  },
+];
+
+const related = [
+  {
+    tag: 'Industry',
+    title: 'GEO for B2B Companies',
+    excerpt: 'Buying-committee discovery, long sales cycles, and technical content strategy for B2B brands navigating AI search.',
+    href: '/geo-for-b2b/',
+  },
+  {
+    tag: 'Services',
+    title: 'GEO Services Overview',
+    excerpt: 'The full range of generative engine optimisation services — from technical audits to content strategy and entity authority building.',
+    href: '/geo-services/',
+  },
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation',
+    excerpt: 'The complete GEO framework covering entity authority, content citability, structured data, and cross-platform measurement.',
+    href: '/generative-engine-optimisation/',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/geo-for-manufacturing/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/geo-by-industry/" class="transition hover:text-[var(--accent)]">GEO by Industry</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">GEO for Manufacturing</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Industry Guide</span>
+        <span class="font-mono text-xs text-ink-400">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-400">13 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO for Manufacturing
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        Engineers and procurement teams are using AI assistants to shortlist suppliers, compare specifications, and verify compliance credentials — before they visit a single manufacturer website.
+        <strong class="text-white">GEO for manufacturing</strong> is the discipline of making your technical product content, specification data, and distributor network discoverable and citable in the AI-generated answers that shape specification decisions.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Engineers use AI to shortlist manufacturers and verify specifications at every stage of the design-to-procurement cycle — making AI citation a primary discovery channel.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Most manufacturer technical content is inaccessible to AI crawlers — locked in PDFs, PIM systems, or gated portals — creating a structural citation gap.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Specification data structured as semantic HTML tables with proper column headers is far more AI-citable than specifications embedded in paragraph text or PDF datasheets.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Distributor channel complexity creates entity ambiguity that actively suppresses manufacturer citation — canonical product entity data is the solution.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Product schema, Manufacturer schema, and certification markup enable AI systems to answer specification queries with confidence, increasing citation frequency.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1 -->
+      <section id="manufacturing-ai-search" class="anchor-top prose-dark mb-16">
+        <h2>Manufacturing and AI Search: The Specification Discovery Shift</h2>
+
+        <p>
+          <strong>AI search has entered the industrial specification process, and manufacturers that are absent from AI-generated answers are being removed from supplier shortlists before formal evaluation begins.</strong>
+          The traditional route — engineer searches Google, visits manufacturer website, downloads datasheet — is being compressed. Engineers now frequently begin with an AI query that generates a shortlist and preliminary specification comparison, then proceed directly to the shortlisted manufacturers' websites for detailed evaluation.
+        </p>
+
+        <p>
+          This shift is most pronounced in the early stages of the design process, where engineers are defining product categories and identifying potential suppliers for a given application. An AI assistant asked "what type of motor is suitable for a dusty, explosive atmosphere" or "which UK manufacturer produces stainless steel hygienic valves to EHEDG standard" is generating a specification shortlist in real time. The manufacturers cited in that answer gain immediate consideration; those absent are excluded without being evaluated.
+        </p>
+
+        <p>
+          The principle is identical to the dynamic described in our <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO guide</a> and <a href="/geo-for-b2b/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO for B2B</a>: AI citation is a first-touch acquisition channel. For manufacturers, the commercial stakes are particularly high because specification decisions are often sticky — once an engineer specifies a particular manufacturer's component in a design, switching requires re-validation and adds significant cost.
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="how-engineers-search" class="anchor-top prose-dark mb-16">
+        <h2>How Engineers and Procurement Teams Use AI Search</h2>
+
+        <p>
+          <strong>Engineers interact with AI search in three distinct modes across the product specification lifecycle, and each mode requires a different type of citation-ready content.</strong>
+        </p>
+
+        <div class="mt-8 overflow-x-auto">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b border-white/10">
+                <th scope="col" class="text-left py-3 px-4 font-semibold text-ink-50 bg-geo-900/60">Specification Stage</th>
+                <th scope="col" class="text-left py-3 px-4 font-semibold text-ink-50 bg-geo-900/60">Typical AI Query</th>
+                <th scope="col" class="text-left py-3 px-4 font-semibold text-ink-50 bg-geo-900/60">Content Required for Citation</th>
+                <th scope="col" class="text-left py-3 px-4 font-semibold text-ink-50 bg-geo-900/60">Priority</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-white/5 hover:bg-white/[.02]">
+                <td class="py-3 px-4 text-ink-200 font-medium">Design / category selection</td>
+                <td class="py-3 px-4 text-ink-300">"What type of pump is suitable for viscous fluids"</td>
+                <td class="py-3 px-4 text-ink-300">Application guides, category definitions, selection tables</td>
+                <td class="py-3 px-4 text-accent-400">High</td>
+              </tr>
+              <tr class="border-b border-white/5 hover:bg-white/[.02]">
+                <td class="py-3 px-4 text-ink-200 font-medium">Manufacturer shortlisting</td>
+                <td class="py-3 px-4 text-ink-300">"UK manufacturers of ATEX-certified motors"</td>
+                <td class="py-3 px-4 text-ink-300">Entity authority, certification schema, industry directory presence</td>
+                <td class="py-3 px-4 text-accent-400">High</td>
+              </tr>
+              <tr class="border-b border-white/5 hover:bg-white/[.02]">
+                <td class="py-3 px-4 text-ink-200 font-medium">Technical verification</td>
+                <td class="py-3 px-4 text-ink-300">"Operating temperature range for [product name]"</td>
+                <td class="py-3 px-4 text-ink-300">Product schema, structured spec tables, accessible HTML datasheets</td>
+                <td class="py-3 px-4 text-accent-400">High</td>
+              </tr>
+              <tr class="border-b border-white/5 hover:bg-white/[.02]">
+                <td class="py-3 px-4 text-ink-200 font-medium">Compliance checking</td>
+                <td class="py-3 px-4 text-ink-300">"Does [manufacturer] produce products to ISO 9001"</td>
+                <td class="py-3 px-4 text-ink-300">Certification pages with schema markup, compliance statements</td>
+                <td class="py-3 px-4 text-accent-400">High</td>
+              </tr>
+              <tr class="border-b border-white/5 hover:bg-white/[.02]">
+                <td class="py-3 px-4 text-ink-200 font-medium">Distributor / sourcing</td>
+                <td class="py-3 px-4 text-ink-300">"Where can I buy [product] in the UK"</td>
+                <td class="py-3 px-4 text-ink-300">Approved distributor pages, reseller schema, consistent channel data</td>
+                <td class="py-3 px-4 text-yellow-400">Medium</td>
+              </tr>
+              <tr class="hover:bg-white/[.02]">
+                <td class="py-3 px-4 text-ink-200 font-medium">Lead time / availability</td>
+                <td class="py-3 px-4 text-ink-300">"What is the lead time for [product range]"</td>
+                <td class="py-3 px-4 text-ink-300">Product availability content, lead time guides</td>
+                <td class="py-3 px-4 text-yellow-400">Medium</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="mt-6">
+          The highest-priority stages — design, shortlisting, technical verification, and compliance checking — are where AI citation has the most direct influence on the specification decision. Manufacturers that produce citation-ready content for these stages gain a structural advantage before procurement teams and purchasing departments become involved.
+        </p>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="spec-content" class="anchor-top prose-dark mb-16">
+        <h2>Spec-Driven Content Strategy</h2>
+
+        <p>
+          <strong>Specification-driven content is the highest-value GEO asset for manufacturers — and the most underused.</strong>
+          Most manufacturers hold detailed technical knowledge in formats that AI crawlers cannot read: PDF datasheets, proprietary product catalogues, engineering tables in locked file formats. Converting this knowledge into accessible, structured web content is the single most impactful GEO investment available to industrial brands.
+        </p>
+
+        <h3>Application Selection Guides</h3>
+        <p>
+          Application guides answer the category-selection queries that engineers submit at the earliest stage of the specification process. A page titled "How to Select the Right Sealing Solution for Chemical Processing Applications" that opens with a clear definition, includes a selection matrix table, and addresses the most common engineering trade-offs provides exactly the kind of content that AI systems cite in response to application-category queries. Each guide should be authored or reviewed by a named engineering expert with credentials referenced in the page's schema.
+        </p>
+
+        <h3>HTML Specification Tables</h3>
+        <p>
+          Specification data structured as semantic HTML — with <code>&lt;table&gt;</code>, <code>&lt;th scope="col"&gt;</code>, and consistent units — is significantly more AI-citable than the same data in a PDF datasheet or an image. For each product or product range, publish a web-accessible specification table covering the key parameters that engineers query: dimensions, material grades, operating temperature range, pressure ratings, certifications, and available configurations. These pages should include Product schema referencing the manufacturer entity.
+        </p>
+
+        <h3>Certification and Compliance Pages</h3>
+        <p>
+          Compliance queries — "is [manufacturer] ISO 9001 certified", "do [manufacturer] products meet ATEX Directive requirements" — are among the most specific and commercially valuable queries in industrial AI search. A dedicated certifications page that lists all held standards, includes the certification body, certificate number where permissible, and expiry or renewal date provides highly specific, verifiable information that AI systems cite with confidence. Mark up certifications using <code>hasCredential</code> or <code>certification</code> properties in the organisation's schema.
+        </p>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="distributor-discovery" class="anchor-top prose-dark mb-16">
+        <h2>Distributor and B2B Discovery</h2>
+
+        <p>
+          <strong>Distributor channel complexity is one of the most significant and least-addressed GEO challenges facing manufacturers.</strong>
+          When the same product appears under multiple names, part numbers, and descriptions across dozens of distributor catalogues, AI systems receive conflicting entity signals — and respond by either omitting the manufacturer from their answers or generating inaccurate product descriptions.
+        </p>
+
+        <p>
+          The solution is canonical entity management. The manufacturer's own website must be the authoritative source of product entity data: definitive product names, canonical model numbers, accurate specifications, and controlled descriptions. Distributor listings should reference the manufacturer's canonical product data rather than creating independent product descriptions. This principle — establishing a single authoritative entity record and ensuring downstream sources reference it — is fundamental to entity authority, as explained in our <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility guide</a>.
+        </p>
+
+        <p>
+          For manufacturers with complex distributor networks, practical steps include:
+        </p>
+
+        <ul class="mt-4 space-y-2 text-sm text-ink-200 list-disc list-inside">
+          <li>Publishing a canonical approved distributor page with consistent entity data for each authorised distributor</li>
+          <li>Providing distributors with a content kit containing manufacturer-approved product descriptions, schema data, and imagery</li>
+          <li>Using Offer schema on product pages to reference distributor availability without fragmenting the product entity</li>
+          <li>Monitoring distributor listings for entity inconsistencies — particularly around product naming, specifications, and certification claims</li>
+        </ul>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="technical-entity" class="anchor-top prose-dark mb-16">
+        <h2>Technical Entity Authority for Manufacturers</h2>
+
+        <p>
+          <strong>A manufacturer's entity authority is determined by the consistency and completeness of its identity signals across every source that AI systems use to verify industrial credentials.</strong>
+          For manufacturers, these sources extend beyond the general business directories relevant to service companies — they include industry-specific registries, standards bodies, and trade association directories that carry significant weight in technical AI queries.
+        </p>
+
+        <div class="mt-8 space-y-5">
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Industry Registry and Trade Association Presence</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Membership and listing in relevant trade associations — Make UK, the British Fluid Power Association, the British Valve and Actuator Association, the GAMBICA trade association — provides entity signals that AI systems weight heavily for industrial queries. These sources are authoritative within their domains and are well-represented in AI training data. Ensure your listing in each relevant association is complete, consistent with your website entity data, and includes your product categories and certifications.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Companies House and Regulatory Records</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              For UK manufacturers, the Companies House record is a foundational entity signal. The registered company name, registered address, and SIC code in your Organisation schema must be consistent with the Companies House record. Inconsistencies between your trading name and registered name — common in acquired businesses operating under legacy brands — should be addressed with explicit AKA or <code>alternateName</code> schema properties.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Named Engineering Expertise</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Technical content authored by or attributed to named engineers with verifiable credentials is treated as more authoritative by AI systems than anonymously published content. Product guides, application notes, and technical papers should reference a named author with an engineering qualification and professional membership — for example, a Chartered Engineer (CEng) or Incorporated Engineer (IEng) status referenced in Person schema with the <code>hasCredential</code> property.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6 -->
+      <section id="schema-markup" class="anchor-top prose-dark mb-16">
+        <h2>Schema Markup for Manufacturing GEO</h2>
+
+        <p>
+          <strong>Structured data markup is the machine-readable layer that allows AI retrieval systems to extract and verify manufacturing credentials, product specifications, and distributor relationships.</strong>
+          For manufacturers, schema implementation extends beyond the standard Article and FAQPage types to cover product-specific and organisation-specific structured data.
+        </p>
+
+        <p>
+          The priority schema types for manufacturers are:
+        </p>
+
+        <ul class="mt-4 space-y-2 text-sm text-ink-200 list-disc list-inside">
+          <li><strong>Organization</strong> with <code>sameAs</code> referencing Companies House, trade association directories, LinkedIn, and Wikidata; include <code>knowsAbout</code> listing product categories and manufacturing specialisms</li>
+          <li><strong>Product</strong> on each product page: <code>name</code>, <code>description</code>, <code>model</code>, <code>manufacturer</code> (referencing the Organisation entity by @id), and applicable <code>material</code>, <code>weight</code>, and <code>additionalProperty</code> for specifications</li>
+          <li><strong>Article</strong> with credentialed author on all technical guides and application notes</li>
+          <li><strong>FAQPage</strong> on any page containing product selection or specification Q&amp;A</li>
+          <li><strong>BreadcrumbList</strong> on all pages — particularly important for deep product hierarchies to help AI systems understand your product taxonomy</li>
+        </ul>
+
+        <p class="mt-6">
+          Schema implementation guidance and examples are covered in our <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services overview</a>. For manufacturers with large product catalogues, schema implementation at scale typically requires integration with the product information management system.
+        </p>
+      </section>
+
+      <!-- Section 7 -->
+      <section id="content-accessibility" class="anchor-top prose-dark mb-16">
+        <h2>Making Manufacturing Content AI-Accessible</h2>
+
+        <p>
+          <strong>The single most impactful action most manufacturers can take to improve AI search visibility is making their existing technical knowledge accessible to AI crawlers.</strong>
+          The majority of a manufacturer's authoritative product knowledge exists in formats that AI retrieval systems cannot read — and converting that knowledge to crawlable, structured HTML is the highest-leverage GEO investment available.
+        </p>
+
+        <h3>PDF Datasheet Migration</h3>
+        <p>
+          PDF datasheets are invisible to AI retrieval systems. Each datasheet contains precisely the specification data that engineers query AI systems to find — and it is entirely inaccessible. The priority action is to publish HTML equivalents of the most-queried datasheets: specification tables, key operating parameters, dimensional data, and certification listings in structured, crawlable web pages. The PDF versions can remain for download; the HTML versions capture the AI citation opportunity.
+        </p>
+
+        <h3>Gating and Content Accessibility</h3>
+        <p>
+          Lead-gated content — requiring form completion before accessing technical documentation — is invisible to AI crawlers. Manufacturers who gate their application engineering guides, selection tools, and technical FAQs are actively suppressing their AI citation potential. A tiered approach is more effective: publish a freely crawlable technical overview optimised for AI citation, and gate premium content such as full engineering support, custom specification tools, or detailed integration guides.
+        </p>
+
+        <h3>Robots.txt and Crawler Access</h3>
+        <p>
+          Manufacturers with legacy websites or aggressive crawler-blocking configurations should audit their robots.txt to ensure that AI bots — including <code>GPTBot</code>, <code>PerplexityBot</code>, <code>ClaudeBot</code>, and <code>Google-Extended</code> — are not blocked from crawling product and technical content pages. For guidance on the broader crawler access strategy, see our <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO fundamentals guide</a>.
+        </p>
+      </section>
+
+      <!-- FAQ Accordion -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Get Your Products Specified via AI</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Engineers are building specification shortlists through AI search right now.
+        Our manufacturing GEO audit identifies which of your products and product categories are invisible to AI systems, and delivers a structured plan to make your technical content citable.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request a manufacturing GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

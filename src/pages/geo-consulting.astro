@@ -1,0 +1,411 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO Consulting Services | GEOoptimised';
+const description = 'Expert GEO consulting for brands that need strategic AI visibility advice. Advisory engagements covering AEO consulting, audits, and roadmap design.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "GEO Consulting Services",
+    "serviceType": "Generative Engine Optimisation Consulting",
+    "provider": {
+      "@id": "https://geooptimised.com/#organization"
+    },
+    "description": "Advisory and consulting engagements helping organisations develop and execute generative engine optimisation strategies, including AEO consulting, AI visibility audits, and roadmap design.",
+    "url": "https://geooptimised.com/geo-consulting/",
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Kingdom"
+    },
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "inLanguage": "en-GB",
+    "image": "https://geooptimised.com/og-image.png"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is GEO consulting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GEO consulting is an advisory engagement in which a specialist helps an organisation understand its AI visibility position, identify the highest-value optimisation opportunities, and design or review the strategy required to earn citations in AI-generated answers. Consulting can be a standalone project or the upstream phase of a managed services programme."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is GEO consulting different from a GEO retainer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A consulting engagement is advisory and typically time-bounded: it produces a strategy, roadmap, or audit rather than ongoing implementation work. A retainer involves continuous execution — content optimisation, monitoring, iteration — delivered month-to-month. Many organisations start with consulting to establish direction, then move to a retainer for delivery."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does GEO consulting cover AEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Answer engine optimisation and generative engine optimisation share a common foundation: structuring content so that machines can extract and cite it accurately. Our consulting engagements address both disciplines together, since they are most effective when coordinated rather than treated as separate workstreams."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who is GEO consulting suited to?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GEO consulting suits organisations that have a capable internal team but lack specialist GEO knowledge, companies evaluating whether to invest in a full GEO programme, brands that need an independent audit of an existing GEO strategy, and businesses facing a specific AI visibility problem — such as being incorrectly described by a major AI model — that requires targeted expert input."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does a GEO consulting engagement typically produce?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Deliverables depend on the engagement scope, but typically include an AI visibility baseline report, a prioritised GEO roadmap, content and schema recommendations, entity gap analysis, and a set of platform-specific action items. Some engagements also include an advisory session or working document for an internal team to execute against."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://geooptimised.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "GEO Services",
+        "item": "https://geooptimised.com/geo-services/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "GEO Consulting",
+        "item": "https://geooptimised.com/geo-consulting/"
+      }
+    ]
+  }
+];
+
+const engagementTypes = [
+  {
+    tag: 'Discovery',
+    title: 'AI Visibility Audit',
+    body: 'A systematic assessment of where your brand appears — and where it does not — across the major generative platforms. Produces a baseline visibility map, competitor citation analysis, and a prioritised gap list.',
+  },
+  {
+    tag: 'Advisory',
+    title: 'Strategy & Roadmap',
+    body: 'Working with your team to translate audit findings into an ordered, resourced action plan. Covers content priorities, technical schema work, entity gaps, and platform-specific approaches.',
+  },
+  {
+    tag: 'Specialist',
+    title: 'AEO Consulting',
+    body: 'Focused advisory on answer engine optimisation: structuring content for direct answers, FAQPage and HowTo schema, voice search readiness, and featured snippet strategy that feeds into broader AI visibility.',
+  },
+  {
+    tag: 'Review',
+    title: 'GEO Strategy Audit',
+    body: 'Independent review of an existing GEO programme. Identifies strategic gaps, mis-prioritised work, and opportunities that the current approach is missing. Useful for in-house teams or organisations reviewing agency output.',
+  },
+  {
+    tag: 'Embedded',
+    title: 'Team Advisory',
+    body: 'Ongoing expert input for internal marketing or SEO teams executing GEO work themselves. Structured as regular advisory sessions, document reviews, and on-demand specialist input rather than hands-on delivery.',
+  },
+  {
+    tag: 'Platform',
+    title: 'Platform-Specific Consulting',
+    body: 'Targeted advice for a specific AI platform — for example, improving citation frequency in Perplexity, or understanding why your brand is described inaccurately in ChatGPT. Scoped to the specific problem.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'What is GEO consulting?',
+    a: 'GEO consulting is an advisory engagement in which a specialist helps an organisation understand its AI visibility position, identify the highest-value optimisation opportunities, and design or review the strategy required to earn citations in AI-generated answers. Consulting can be a standalone project or the upstream phase of a managed services programme.',
+  },
+  {
+    q: 'How is GEO consulting different from a GEO retainer?',
+    a: 'A consulting engagement is advisory and typically time-bounded: it produces a strategy, roadmap, or audit rather than ongoing implementation work. A retainer involves continuous execution — content optimisation, monitoring, iteration — delivered month-to-month. Many organisations start with consulting to establish direction, then move to a retainer for delivery.',
+  },
+  {
+    q: 'Does GEO consulting cover AEO?',
+    a: 'Yes. Answer engine optimisation and generative engine optimisation share a common foundation: structuring content so that machines can extract and cite it accurately. Our consulting engagements address both disciplines together, since they are most effective when coordinated rather than treated as separate workstreams.',
+  },
+  {
+    q: 'Who is GEO consulting suited to?',
+    a: 'GEO consulting suits organisations that have a capable internal team but lack specialist GEO knowledge, companies evaluating whether to invest in a full GEO programme, brands that need an independent audit of an existing GEO strategy, and businesses facing a specific AI visibility problem — such as being incorrectly described by a major AI model — that requires targeted expert input.',
+  },
+  {
+    q: 'What does a GEO consulting engagement typically produce?',
+    a: 'Deliverables depend on the engagement scope, but typically include an AI visibility baseline report, a prioritised GEO roadmap, content and schema recommendations, entity gap analysis, and a set of platform-specific action items. Some engagements also include an advisory session or working document for an internal team to execute against.',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/geo-consulting/"
+  ogType="website"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex items-center gap-1.5 text-sm text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-services/" class="transition hover:text-[var(--accent)]">GEO Services</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">GEO Consulting</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-fade relative overflow-hidden">
+    <div class="container-wide grid gap-12 pt-14 pb-20 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-7">
+        <span class="eyebrow">Advisory Services</span>
+        <h1 class="mt-4 font-display text-4xl font-bold tracking-tight grad-text sm:text-5xl lg:text-6xl">
+          GEO Consulting Services
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-300">
+          <strong class="text-ink-100">GEO consulting translates specialist knowledge into a strategy your organisation can act on.</strong> Whether you need an independent AI visibility audit, a GEO roadmap, AEO consulting, or ongoing expert input for an in-house team, an advisory engagement gives you specialist direction without requiring a full managed services commitment.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/contact/" class="btn btn-primary">Discuss a Consulting Brief</a>
+          <a href="/geo-services/" class="btn btn-ghost">View All Services</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="card p-6 space-y-4">
+          <span class="eyebrow">Consulting scope at a glance</span>
+          <ul class="mt-4 space-y-3 text-sm text-ink-300">
+            <li class="flex items-start gap-2">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>AI visibility audits across ChatGPT, Perplexity, Gemini, Copilot, Claude</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>GEO and AEO strategy design and roadmapping</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Independent review of existing GEO programmes</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Embedded advisory for in-house teams executing GEO</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- What GEO Consulting Is -->
+  <section class="container-wide py-20">
+    <div class="prose-dark max-w-3xl">
+      <span class="eyebrow">Definition</span>
+      <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">What GEO Consulting Means in Practice</h2>
+      <p class="mt-6"><strong class="text-ink-100">GEO consulting is the advisory layer that separates random AI optimisation activity from purposeful, evidence-based strategy.</strong> The discipline of <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> is too new and too rapidly changing for most organisations to develop genuine expertise internally without external input. A consulting engagement fills that gap.</p>
+      <p>Unlike a managed services retainer — where a <a href="/geo-agency/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO agency</a> executes the work directly — consulting positions the specialist as an advisor: diagnosing the situation, designing the approach, and transferring enough knowledge that the organisation can make informed decisions, whether they execute internally or engage an agency for delivery.</p>
+      <p>This model suits a range of situations. An organisation that already has a capable content team but lacks specialist GEO knowledge can use consulting to design a strategy their team executes. A business evaluating whether GEO investment is warranted can commission an audit before committing to a retainer. A brand that suspects its current GEO programme is misdirected can commission an independent review. In each case, the value of consulting is clarity and direction — not volume of deliverables.</p>
+      <p>AEO consulting sits naturally within this scope. Answer engine optimisation — structuring content for direct answers, voice search, and featured snippet capture — is closely adjacent to GEO, sharing both technical foundations and content principles. Most organisations benefit from addressing both together rather than treating them as separate briefs.</p>
+    </div>
+  </section>
+
+  <!-- Engagement Types -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">Engagement Types</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">How GEO Consulting Engagements Are Structured</h2>
+    <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed">
+      <strong class="text-ink-100">There is no single consulting model that suits every brief.</strong> Engagements are scoped according to what the organisation actually needs: the size of the problem, the maturity of existing GEO activity, and the capability of the internal team. The six most common formats are set out below.
+    </p>
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {engagementTypes.map(e => (
+        <div class="card card-hover p-7 flex flex-col">
+          <span class="eyebrow">{e.tag}</span>
+          <h3 class="mt-2 font-display text-xl font-semibold text-ink-50">{e.title}</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300 flex-1">{e.body}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Consulting vs Retainer comparison table -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">Side-by-side</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Consulting vs Managed Services: Key Differences</h2>
+    <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed mb-10">
+      <strong class="text-ink-100">Consulting and managed services are not competing options — they address different needs and often work in sequence.</strong> Understanding the distinction helps organisations choose the right starting point.
+    </p>
+
+    <div class="card overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead>
+            <tr class="border-b border-[var(--line)]">
+              <th scope="col" class="px-6 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Dimension</th>
+              <th scope="col" class="px-6 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">GEO Consulting</th>
+              <th scope="col" class="px-6 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Managed Retainer</th>
+            </tr>
+          </thead>
+          <tbody class="text-ink-300 divide-y divide-[var(--line-soft)]">
+            <tr>
+              <td class="px-6 py-4 font-medium text-ink-100">Primary output</td>
+              <td class="px-6 py-4">Strategy, roadmap, audit report</td>
+              <td class="px-6 py-4">Ongoing implementation and monitoring</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-ink-100">Who executes the work</td>
+              <td class="px-6 py-4">Client team (advised by consultant)</td>
+              <td class="px-6 py-4">Agency team on behalf of client</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-ink-100">Engagement duration</td>
+              <td class="px-6 py-4">Typically weeks to a quarter</td>
+              <td class="px-6 py-4">Ongoing, typically 6–12+ months</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-ink-100">Best suited to</td>
+              <td class="px-6 py-4">Teams with capability; orgs evaluating GEO</td>
+              <td class="px-6 py-4">Orgs needing end-to-end delivery</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-ink-100">Covers AEO</td>
+              <td class="px-6 py-4">Yes — integrated into strategy</td>
+              <td class="px-6 py-4">Yes — as part of full programme</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-ink-100">Typical sequence</td>
+              <td class="px-6 py-4">Often the starting point</td>
+              <td class="px-6 py-4">Often follows consulting</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who Consults -->
+  <section class="container-wide py-20">
+    <div class="prose-dark">
+      <span class="eyebrow">Fit</span>
+      <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Who Uses GEO Consulting</h2>
+      <p class="mt-6"><strong class="text-ink-100">GEO consulting is most valuable when specialist knowledge is the constraint, not resource or execution capacity.</strong> Four types of organisation find it particularly useful.</p>
+
+      <h3>In-house teams building a GEO capability</h3>
+      <p>Content, SEO, and digital marketing teams that understand their discipline well but lack the specialist GEO knowledge to direct their own programme. Consulting provides the strategic blueprint and knowledge transfer so the internal team can execute with confidence rather than guesswork.</p>
+
+      <h3>Organisations evaluating a GEO investment</h3>
+      <p>An audit-first consulting engagement gives decision-makers the evidence they need to evaluate whether a full GEO programme is justified, what outcomes to expect, and what timescales are realistic. This is more useful than generic sales conversations because it is grounded in your specific situation.</p>
+
+      <h3>Brands reviewing an existing GEO programme</h3>
+      <p>Organisations working with a generalist agency that has bolted GEO onto an SEO retainer, or that have run an in-house GEO programme for several months without measurable results, benefit from an independent specialist review. It identifies what is working, what is not, and what to change.</p>
+
+      <h3>Larger organisations with specific AI visibility problems</h3>
+      <p>Brands that are being misrepresented by AI models, or that are absent from AI answers despite strong traditional search presence, often need targeted expert input rather than a long-term programme. A scoped consulting engagement addresses the specific problem efficiently. For organisations with more complex, multi-brand requirements, our <a href="/enterprise-ai-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">enterprise AI optimisation</a> offering may be more appropriate.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Frequently Asked Questions</h2>
+
+    <div class="mt-10 max-w-3xl divide-y divide-[var(--line)]" id="faq-accordion">
+      {faqs.map(faq => (
+        <div class="faq-item">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between py-5 text-left font-display text-base font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors"
+            aria-expanded="false"
+          >
+            <span>{faq.q}</span>
+            <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200 text-xl leading-none">+</span>
+          </button>
+          <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+            <p class="pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Related Reading -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">Related</span>
+    <h2 class="mt-3 font-display text-2xl font-bold text-ink-50">Related Reading</h2>
+    <div class="mt-8 grid gap-6 sm:grid-cols-3">
+      <a href="/geo-services/" class="card card-hover block p-6 no-underline">
+        <span class="eyebrow">Services</span>
+        <h3 class="mt-2 font-display text-base font-semibold text-ink-50">GEO Services Overview</h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed">The full scope of generative engine optimisation services: audits, entity work, content, monitoring, and more.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/geo-agency/" class="card card-hover block p-6 no-underline">
+        <span class="eyebrow">Agency</span>
+        <h3 class="mt-2 font-display text-base font-semibold text-ink-50">GEO Agency</h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed">End-to-end generative engine optimisation delivery: strategy, implementation, monitoring, and iteration.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/geo-pricing/" class="card card-hover block p-6 no-underline">
+        <span class="eyebrow">Pricing</span>
+        <h3 class="mt-2 font-display text-base font-semibold text-ink-50">GEO Pricing</h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed">How GEO consulting and services are priced: models, drivers of cost, and indicative ranges.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="container-wide py-20">
+    <div class="relative overflow-hidden rounded-2xl dot-grid">
+      <div class="absolute inset-0 bg-gradient-to-br from-[rgba(var(--accent-glow),.12)] via-transparent to-transparent"></div>
+      <div class="relative px-8 py-16 text-center sm:px-16">
+        <span class="eyebrow">Get Started</span>
+        <h2 class="mt-4 font-display text-3xl font-bold text-ink-50 sm:text-4xl">Ready to Commission a GEO Consulting Engagement?</h2>
+        <p class="mt-4 mx-auto max-w-2xl text-ink-300 leading-relaxed">
+          Describe your situation and we will propose a consulting scope matched to what you actually need — whether that is an audit, a strategy review, or embedded advisory for your team.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact/" class="btn btn-primary">Discuss a Consulting Brief</a>
+          <a href="/generative-engine-optimisation/" class="btn btn-ghost">Read the GEO Guide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('#faq-accordion .faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('#faq-accordion .faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            (other.nextElementSibling as HTMLElement).style.maxHeight = '0';
+            (other.querySelector('.faq-icon') as HTMLElement).style.transform = 'rotate(0deg)';
+          }
+        });
+        btn.setAttribute('aria-expanded', String(!open));
+        body.style.maxHeight = open ? '0' : body.scrollHeight + 'px';
+        icon.style.transform = open ? 'rotate(0deg)' : 'rotate(45deg)';
+      });
+    });
+  </script>
+
+</Base>

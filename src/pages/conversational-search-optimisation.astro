@@ -1,0 +1,603 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Conversational Search Optimisation | GEOoptimised';
+const description = 'Conversational search optimization: how to structure content for multi-turn, natural-language AI queries so your brand gets cited across ChatGPT, Perplexity, and Gemini.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: 'Conversational Search Optimisation',
+  description,
+  url: 'https://geooptimised.com/conversational-search-optimisation/',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  inLanguage: 'en-GB',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/conversational-search-optimisation/',
+  },
+  image: 'https://geooptimised.com/og-image.png',
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is conversational search optimisation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Conversational search optimisation is the practice of structuring content so it performs well in multi-turn, natural-language queries processed by AI systems such as ChatGPT, Perplexity, and Google AI Overviews. Unlike traditional keyword-based SEO, it focuses on intent chains, contextual continuity, and self-contained answer formats that AI platforms can extract and cite across a sequence of related questions.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How is conversational search different from traditional search?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Traditional search treats each query as independent — a user types a phrase and receives a ranked list of links. Conversational search maintains context across multiple exchanges: the second question builds on the first, and the AI system uses that accumulated context to generate a response. This means content optimised for conversational search must anticipate follow-up questions and provide answers that hold meaning both as standalone extracts and as part of a longer topic sequence.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What content formats perform best in conversational AI search?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Self-contained definitions, structured Q&A sections, comparison tables, and numbered explanations consistently outperform unstructured prose in conversational AI retrieval. Each content block should open with a bold declarative statement that stands alone as a citable answer. Hierarchical heading structures (H2 > H3) help AI systems map the content\'s logical flow when processing multi-turn queries across a topic cluster.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does schema markup help with conversational search?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. FAQPage schema is particularly effective for conversational search because it maps on-page Q&A pairs into a structured format that AI retrieval systems can parse directly. Each Question/acceptedAnswer pair in your FAQPage schema represents a single exchange in a potential conversation — making it easier for AI platforms to surface your content at the relevant turn in a multi-step dialogue. TechArticle and BreadcrumbList schemas provide additional topical hierarchy signals that improve contextual relevance scoring.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I optimise for follow-up questions in AI conversations?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Map the full intent chain around your target topic: identify the likely first question, then the two or three most probable follow-ups. Create content that addresses each stage explicitly — ideally on a single page, using clear heading structure to delineate each answer. Internal linking between closely related pages reinforces topical authority and increases the probability that an AI system draws from your domain across multiple turns of a conversation rather than switching to a competing source.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which AI platforms are most important to target for conversational search?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The highest-priority platforms for conversational search are ChatGPT (including the browse and search modes), Perplexity AI (which provides cited sources by default), and Google AI Overviews (integrated into standard search results). Secondary platforms include Microsoft Copilot, Gemini Advanced, and Claude. Each platform uses different retrieval and ranking mechanisms, but all respond positively to the same core signals: clear content structure, self-contained answers, valid schema markup, and strong entity authority.',
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'AI Brand Visibility', item: 'https://geooptimised.com/ai-brand-visibility/' },
+    { '@type': 'ListItem', position: 3, name: 'Conversational Search Optimisation', item: 'https://geooptimised.com/conversational-search-optimisation/' },
+  ],
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'what-is-conversational-search', label: 'What Conversational Search Is' },
+  { id: 'how-it-works', label: 'How AI Conversations Work' },
+  { id: 'intent-chains', label: 'Mapping Intent Chains' },
+  { id: 'content-formats', label: 'Content Formats That Work' },
+  { id: 'platform-signals', label: 'Platform-Specific Signals' },
+  { id: 'comparison-table', label: 'Platform Comparison' },
+  { id: 'implementation', label: 'Implementation Steps' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const faqs = [
+  {
+    q: 'What is conversational search optimisation?',
+    a: 'Conversational search optimisation is the practice of structuring content so it performs well in multi-turn, natural-language queries processed by AI systems such as ChatGPT, Perplexity, and Google AI Overviews. Unlike traditional keyword-based SEO, it focuses on intent chains, contextual continuity, and self-contained answer formats that AI platforms can extract and cite across a sequence of related questions.',
+  },
+  {
+    q: 'How is conversational search different from traditional search?',
+    a: 'Traditional search treats each query as independent — a user types a phrase and receives a ranked list of links. Conversational search maintains context across multiple exchanges: the second question builds on the first, and the AI system uses that accumulated context to generate a response. This means content optimised for conversational search must anticipate follow-up questions and provide answers that hold meaning both as standalone extracts and as part of a longer topic sequence.',
+  },
+  {
+    q: 'What content formats perform best in conversational AI search?',
+    a: "Self-contained definitions, structured Q&A sections, comparison tables, and numbered explanations consistently outperform unstructured prose in conversational AI retrieval. Each content block should open with a bold declarative statement that stands alone as a citable answer. Hierarchical heading structures (H2 > H3) help AI systems map the content's logical flow when processing multi-turn queries across a topic cluster.",
+  },
+  {
+    q: 'Does schema markup help with conversational search?',
+    a: 'Yes. FAQPage schema is particularly effective for conversational search because it maps on-page Q&A pairs into a structured format that AI retrieval systems can parse directly. Each Question/acceptedAnswer pair in your FAQPage schema represents a single exchange in a potential conversation — making it easier for AI platforms to surface your content at the relevant turn in a multi-step dialogue. TechArticle and BreadcrumbList schemas provide additional topical hierarchy signals that improve contextual relevance scoring.',
+  },
+  {
+    q: 'How do I optimise for follow-up questions in AI conversations?',
+    a: 'Map the full intent chain around your target topic: identify the likely first question, then the two or three most probable follow-ups. Create content that addresses each stage explicitly — ideally on a single page, using clear heading structure to delineate each answer. Internal linking between closely related pages reinforces topical authority and increases the probability that an AI system draws from your domain across multiple turns of a conversation rather than switching to a competing source.',
+  },
+  {
+    q: 'Which AI platforms are most important to target for conversational search?',
+    a: 'The highest-priority platforms for conversational search are ChatGPT (including the browse and search modes), Perplexity AI (which provides cited sources by default), and Google AI Overviews (integrated into standard search results). Secondary platforms include Microsoft Copilot, Gemini Advanced, and Claude. Each platform uses different retrieval and ranking mechanisms, but all respond positively to the same core signals: clear content structure, self-contained answers, valid schema markup, and strong entity authority.',
+  },
+];
+
+const related = [
+  {
+    tag: 'Parent NODE',
+    title: 'AI Brand Visibility: How to Get Cited by LLMs',
+    excerpt: 'The five pillars of AI brand visibility, measurement framework, and content patterns that drive LLM citations.',
+    href: '/ai-brand-visibility/',
+  },
+  {
+    tag: 'Deep Dive',
+    title: 'Answer Box Optimisation',
+    excerpt: 'Winning featured snippets and answer boxes that feed AI-generated answers — the technical and content signals that matter.',
+    href: '/answer-box-optimisation/',
+  },
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'The full GEO framework — from first principles through to advanced entity strategy and measurement.',
+    href: '/generative-engine-optimisation/',
+  },
+  {
+    tag: 'Technical',
+    title: 'Schema Markup for AI',
+    excerpt: 'The exact JSON-LD types and properties that help LLMs parse, trust, and cite your content across generative platforms.',
+    href: '/schema-markup-ai/',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/conversational-search-optimisation/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/ai-brand-visibility/" class="transition hover:text-[var(--accent)]">AI Brand Visibility</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">Conversational Search Optimisation</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Strategic Guide</span>
+        <span class="font-mono text-xs text-ink-400">7 Jun 2026</span>
+        <span class="font-mono text-xs text-ink-400">12 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        Conversational Search Optimisation
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">Conversational search optimization</strong> is the discipline of structuring content for multi-turn, natural-language AI conversations — the dominant query format on ChatGPT, Perplexity, Google AI Overviews, and Gemini. Traditional keyword optimisation targets isolated queries. Conversational search optimisation targets intent chains: the sequence of questions a user asks as they navigate a topic, and the sources an AI system cites at each turn.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Conversational search maintains context across multiple exchanges — content must answer both the immediate question and the follow-up questions that naturally follow.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Each section of content should open with a bold, self-contained declarative statement that stands alone as a citable answer fragment.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Intent chain mapping — identifying the sequence of queries around a topic — is the strategic foundation of conversational search optimisation.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>FAQPage schema maps on-page Q&A directly to the conversational response format AI platforms use, making it the highest-value schema type for this discipline.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Topical depth — covering a subject at ROOT, NODE, and SEED levels — increases the probability that an AI system cites your domain at multiple turns in a conversation.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1: What Conversational Search Is -->
+      <section id="what-is-conversational-search" class="anchor-top prose-dark mb-16">
+        <h2>What Conversational Search Is</h2>
+
+        <p>
+          <strong>Conversational search is the mode of information retrieval in which queries are expressed as natural-language questions and answers are generated — not just ranked — by AI systems that maintain context across multiple exchanges.</strong>
+          It is the default interface of ChatGPT, Perplexity, and Gemini, and increasingly the surface through which Google delivers answers via AI Overviews in standard search results.
+        </p>
+
+        <p>
+          The shift from keyword search to conversational search represents a fundamental change in how content is retrieved and cited. In keyword search, a page ranks for a phrase. In conversational search, a page is retrieved, parsed, and potentially cited as the source of a specific claim within a generated response. The citation decision is made by the AI system — not by a user clicking a link — and it is governed by the system's confidence in the relevance, accuracy, and citability of the retrieved content.
+        </p>
+
+        <p>
+          For brands, the strategic implication is significant: being discoverable in conversational search requires more than ranking for individual keywords. It requires being the source an AI system chooses to cite when a user asks a question that your content answers — and maintaining that citation position across the follow-up questions that define how users explore topics in multi-turn AI interfaces.
+        </p>
+
+        <p>
+          Conversational search optimisation is a core component of <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility</a> strategy. For the broader framework that contextualises it, see our <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation guide</a>.
+        </p>
+      </section>
+
+      <!-- Section 2: How AI Conversations Work -->
+      <section id="how-it-works" class="anchor-top prose-dark mb-16">
+        <h2>How AI Conversations Work: Retrieval and Context Windows</h2>
+
+        <p>
+          <strong>AI conversational systems operate on a retrieve-then-generate model: they first retrieve candidate content from an index or the live web, then use a large language model to synthesise that content into a response that fits the conversational context.</strong>
+          Understanding this two-stage process is essential for optimising content effectively.
+        </p>
+
+        <p>
+          In the retrieval stage, the AI system processes the current query alongside the conversation history (the "context window") to determine what information is needed. A user who asks "what is GEO?" followed by "how does it differ from SEO?" and then "which platforms should I prioritise?" is providing an accumulating context that shapes each retrieval decision. The system is not searching for three independent queries — it is searching for content that addresses the third question <em>in the context</em> of the first two.
+        </p>
+
+        <p>
+          In the generation stage, the model synthesises retrieved content into a response. Pages that are already structured around self-contained, citable answer units require less synthesis effort — the AI can extract and attribute a passage directly, rather than reconstructing an answer from scattered signals. This reduces the error rate in citation and increases the probability that the cited source is yours.
+        </p>
+
+        <p>
+          Two structural properties of your content govern performance at both stages: <strong>answer density</strong> (how many standalone, citable answers a single page contains) and <strong>contextual coherence</strong> (how clearly the page signals the relationship between those answers). Pages with high answer density and clear hierarchical structure consistently outperform pages that bury equivalent information in unbroken prose.
+        </p>
+      </section>
+
+      <!-- Section 3: Mapping Intent Chains -->
+      <section id="intent-chains" class="anchor-top prose-dark mb-16">
+        <h2>Mapping Intent Chains: The Strategic Foundation</h2>
+
+        <p>
+          <strong>An intent chain is the sequence of questions a user asks when exploring a topic in a conversational AI interface — and mapping that chain is the starting point for every conversational search optimisation project.</strong>
+          A single keyword target is no longer sufficient; you need to understand the full trajectory of the conversation your audience is likely to have.
+        </p>
+
+        <p>
+          To map an intent chain for a target topic, begin with the most common entry-point question — typically a definitional or category query ("what is X?"). Then identify the two to four most probable follow-up questions: explanatory queries ("how does X work?"), comparative queries ("how is X different from Y?"), evaluative queries ("what are the best X approaches?"), and action queries ("how do I implement X?"). These follow-up questions define the full topical territory your content cluster must cover.
+        </p>
+
+        <p>
+          Each stage in the intent chain should have a dedicated answer unit within your content — either a distinct section on a comprehensive page, or a dedicated SEED page linked from a parent NODE. When your content addresses every stage of the most common intent chains for a topic, an AI system can draw from your domain throughout the conversation rather than switching to a competitor at the second or third turn.
+        </p>
+
+        <h3>Intent Chain Example: Conversational Search Optimisation</h3>
+        <p>
+          A realistic intent chain for this topic might progress as follows: the user opens with "what is conversational search?" → follows with "how is it different from regular SEO?" → then asks "how do I optimise my content for it?" → and finally "which tools can I use to measure my AI search visibility?". Content that addresses all four stages in a structured, citable format is significantly more valuable for AI citation than content that addresses only the first stage.
+        </p>
+      </section>
+
+      <!-- Section 4: Content Formats That Work -->
+      <section id="content-formats" class="anchor-top prose-dark mb-16">
+        <h2>Content Formats That Perform in Conversational Search</h2>
+
+        <p>
+          <strong>Not all content formats are equally retrievable in conversational AI search — formats that make citable answers immediately extractable without requiring synthesis consistently outperform prose-heavy alternatives.</strong>
+          The following formats have the strongest performance evidence across major AI platforms.
+        </p>
+
+        <div class="not-prose mt-8 space-y-5">
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Bold declarative openings</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Every section should open with a bolded sentence that states its key claim directly and completely. This sentence should be interpretable in isolation — without the surrounding paragraph — and specific enough to be attributable to your brand. AI systems preferentially extract bold, sentence-level claims when generating cited answers.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Structured Q&A sections</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              FAQ sections with matching FAQPage schema are the highest-value content format for conversational search. Each question maps to a likely turn in a user conversation; each answer provides a self-contained response that AI systems can cite directly. Aim for answers of two to four sentences — long enough to be substantive, short enough to be extractable without truncation.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Comparison tables</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Tabular comparisons address the "how does X differ from Y?" class of conversational queries directly. A well-structured comparison table provides AI systems with the specific, attributable data points they need to answer comparative questions accurately. Include clear column headers and keep cell content concise — AI systems parse table content row by row, not as prose.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Numbered process explanations</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Step-based content addresses "how do I…" conversational queries and maps directly onto the HowTo schema type. Number each step explicitly; give each step a named header and a two-to-three sentence explanation. AI systems processing "how do I implement X?" queries strongly prefer content with an explicit step structure over undifferentiated prose instructions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Platform-Specific Signals -->
+      <section id="platform-signals" class="anchor-top prose-dark mb-16">
+        <h2>Platform-Specific Retrieval Signals</h2>
+
+        <p>
+          <strong>Each major conversational AI platform uses a different retrieval architecture, which means the same content can perform very differently across platforms without targeted optimisation.</strong>
+          Understanding the dominant signal for each platform allows you to prioritise effort where it will have the most impact.
+        </p>
+
+        <p>
+          <strong>Perplexity AI</strong> is retrieval-heavy and citation-first: it fetches live web content for most queries and attributes sources directly in its responses. Content authority signals (domain age, backlink profile, topical depth) are major determinants of Perplexity citation. Pages with clear, structured answers and valid schema consistently outperform thin or poorly structured pages.
+        </p>
+
+        <p>
+          <strong>ChatGPT with browsing</strong> uses Bing's web index when activated and favours content that ranks well in Bing's organic results. Traditional SEO signals (authority, relevance, freshness) are more significant here than for other platforms. However, the generation layer still benefits from structured, self-contained answer formats — pages that rank but cannot be cited cleanly are disadvantaged in the synthesis stage.
+        </p>
+
+        <p>
+          <strong>Google AI Overviews</strong> draws primarily from pages that already rank in Google's top organic results for the query. Ranking for the target keyword is a prerequisite for AI Overview citation. Once ranking is established, structured content with FAQPage schema and bold declarative statements has a measurable advantage in extraction. For more on <a href="/answer-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">answer engine optimisation</a> and Google-specific signals, see the dedicated guide.
+        </p>
+
+        <p>
+          <strong>Gemini Advanced</strong> integrates with Google's index and knowledge graph. Entity authority — your brand's representation in Google's knowledge graph — is an outsized signal here. Organisations with a verified Google Business Profile, a Wikidata entry, and strong <code class="text-sm bg-geo-800 px-1 py-0.5 rounded">sameAs</code> schema are cited more reliably than those without these identity anchors. See <a href="/schema-markup-ai/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">schema markup for AI</a> for implementation guidance.
+        </p>
+      </section>
+
+      <!-- Section 6: Platform Comparison Table -->
+      <section id="comparison-table" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Conversational AI Platform Comparison: Retrieval Signals</h2>
+          <p>
+            <strong>The table below summarises the dominant retrieval signals for each major conversational AI platform</strong> and maps them to the optimisation actions with the greatest citation impact.
+          </p>
+        </div>
+
+        <div class="mt-8 overflow-x-auto rounded-lg border border-geo-700">
+          <table class="min-w-full text-sm">
+            <thead>
+              <tr class="border-b border-geo-700 bg-geo-900">
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Platform</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Retrieval Mechanism</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Dominant Signal</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Priority Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-geo-800">
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">Perplexity AI</td>
+                <td class="px-4 py-3 text-ink-300">Live web retrieval + own index</td>
+                <td class="px-4 py-3 text-ink-300">Topical authority, structured answers</td>
+                <td class="px-4 py-3 text-ink-300">FAQPage schema, bold declarative format</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-ink-100">ChatGPT (browse)</td>
+                <td class="px-4 py-3 text-ink-300">Bing web index</td>
+                <td class="px-4 py-3 text-ink-300">Traditional SEO authority + content structure</td>
+                <td class="px-4 py-3 text-ink-300">Rank in Bing top results; use answer-dense format</td>
+              </tr>
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">Google AI Overviews</td>
+                <td class="px-4 py-3 text-ink-300">Google's organic index</td>
+                <td class="px-4 py-3 text-ink-300">Google ranking + structured extraction</td>
+                <td class="px-4 py-3 text-ink-300">Rank for target keyword; FAQPage + TechArticle schema</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-ink-100">Gemini Advanced</td>
+                <td class="px-4 py-3 text-ink-300">Google index + knowledge graph</td>
+                <td class="px-4 py-3 text-ink-300">Entity authority, knowledge graph presence</td>
+                <td class="px-4 py-3 text-ink-300">sameAs schema, Google Business Profile, Wikidata entry</td>
+              </tr>
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">Microsoft Copilot</td>
+                <td class="px-4 py-3 text-ink-300">Bing web index</td>
+                <td class="px-4 py-3 text-ink-300">Bing ranking signals + freshness</td>
+                <td class="px-4 py-3 text-ink-300">IndexNow submission, Bing Webmaster Tools, structured content</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-ink-100">Claude (claude.ai)</td>
+                <td class="px-4 py-3 text-ink-300">Training data + optional web search</td>
+                <td class="px-4 py-3 text-ink-300">Training corpus coverage, entity mentions</td>
+                <td class="px-4 py-3 text-ink-300">High-authority placements, knowledge base citations</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 7: Implementation Steps -->
+      <section id="implementation" class="anchor-top prose-dark mb-16">
+        <h2>Implementation: A Conversational Search Optimisation Workflow</h2>
+
+        <p>
+          <strong>A practical conversational search optimisation workflow runs across five stages, from intent mapping through to measurement — and each stage builds directly on the last.</strong>
+          Skipping the intent mapping stage and jumping to content creation is the most common mistake: it produces content that answers an isolated query well but misses the surrounding intent chain entirely.
+        </p>
+
+        <ol class="mt-6 space-y-6 list-none pl-0">
+          <li class="card p-5">
+            <div class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-accent-600/20 flex items-center justify-center text-[var(--accent)] font-mono font-bold text-sm">1</span>
+              <div>
+                <h3 class="font-display text-base font-semibold text-white">Map the intent chain</h3>
+                <p class="mt-2 text-sm leading-relaxed text-ink-300">Identify the entry-point query and the two to four most probable follow-up questions. Use AI platforms directly — ask them questions in your target topic and observe the follow-up suggestions they generate. This is more reliable than keyword research tools, which are not designed for conversational query modelling.</p>
+              </div>
+            </div>
+          </li>
+          <li class="card p-5">
+            <div class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-accent-600/20 flex items-center justify-center text-[var(--accent)] font-mono font-bold text-sm">2</span>
+              <div>
+                <h3 class="font-display text-base font-semibold text-white">Audit existing content for answer density</h3>
+                <p class="mt-2 text-sm leading-relaxed text-ink-300">Review your existing pages against the intent chain. Identify which stages are covered, which are missing, and which have answers buried in prose that should be surfaced as explicit, structured content units. Score each page on how many self-contained citable answers it contains per 500 words.</p>
+              </div>
+            </div>
+          </li>
+          <li class="card p-5">
+            <div class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-accent-600/20 flex items-center justify-center text-[var(--accent)] font-mono font-bold text-sm">3</span>
+              <div>
+                <h3 class="font-display text-base font-semibold text-white">Restructure and expand content</h3>
+                <p class="mt-2 text-sm leading-relaxed text-ink-300">Rewrite each section to open with a bold declarative statement. Add a structured FAQ section with four to six Q&A pairs covering the intent chain stages. Add FAQPage schema matching the visible Q&A. Expand thin sections that address high-probability follow-up questions.</p>
+              </div>
+            </div>
+          </li>
+          <li class="card p-5">
+            <div class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-accent-600/20 flex items-center justify-center text-[var(--accent)] font-mono font-bold text-sm">4</span>
+              <div>
+                <h3 class="font-display text-base font-semibold text-white">Strengthen internal linking across the intent chain</h3>
+                <p class="mt-2 text-sm leading-relaxed text-ink-300">Ensure every page in your intent chain cluster links to adjacent pages in the chain. An AI system retrieving your page for stage two of a conversation is more likely to also retrieve your stage three page if it is explicitly linked and contextually related. Cross-links also reinforce topical authority signals.</p>
+              </div>
+            </div>
+          </li>
+          <li class="card p-5">
+            <div class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-accent-600/20 flex items-center justify-center text-[var(--accent)] font-mono font-bold text-sm">5</span>
+              <div>
+                <h3 class="font-display text-base font-semibold text-white">Measure AI citation coverage</h3>
+                <p class="mt-2 text-sm leading-relaxed text-ink-300">Test each stage of the intent chain across Perplexity, ChatGPT, and Google AI Overviews. Record which queries cite your domain and which cite competitors. This gap analysis defines the next content sprint. Repeat quarterly, as AI platform retrieval behaviour shifts with model and index updates.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+
+        <p class="mt-8">
+          For help implementing this workflow across your content estate, including intent chain mapping and AI citation auditing, <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">contact GEOoptimised</a>.
+        </p>
+      </section>
+
+      <!-- FAQ Accordion -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Optimise Your Content for Conversational AI Search</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Most brands are not visible in conversational AI search because their content addresses isolated keywords rather than intent chains.
+        GEOoptimised maps your audience's full conversational journey, restructures your content for maximum citation probability, and measures your AI search coverage across every major platform.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Get a conversational search audit</a>
+        <a href="/ai-brand-visibility/" class="btn btn-ghost">Explore AI brand visibility</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

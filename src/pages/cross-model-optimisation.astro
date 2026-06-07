@@ -1,0 +1,559 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Cross-Model Optimisation: One Strategy, Every AI Platform — GEOoptimised';
+const description = 'Cross model optimization: build a shared GEO foundation that performs across ChatGPT, Perplexity, Gemini, Claude, and Copilot — plus per-model nuances that move the needle.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: 'Cross-Model Optimisation: One Strategy, Every AI Platform',
+  description,
+  url: 'https://geooptimised.com/cross-model-optimisation/',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  inLanguage: 'en-GB',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/cross-model-optimisation/'
+  },
+  image: 'https://geooptimised.com/og-image.png',
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' }
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is cross-model optimisation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Cross-model optimisation is the practice of building a GEO strategy that performs consistently across multiple AI platforms — ChatGPT, Perplexity, Gemini, Claude, and Microsoft Copilot — rather than optimising for a single model at the expense of others. It recognises that brands cannot control which AI platform a prospective customer uses, so the goal is to build a shared foundation of entity authority, citation-ready content, and technical accessibility that satisfies the common requirements of all major platforms, then layer in per-model refinements where they produce measurable incremental gains.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Do different AI platforms cite brands differently?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, materially so. Perplexity and Bing Copilot are heavily RAG-dependent and cite live web sources with explicit links — they are most responsive to content structure, schema markup, and crawler accessibility. ChatGPT (without Browse) relies primarily on parametric knowledge and is therefore most influenced by training data coverage — press, Wikipedia, Wikidata, and third-party mentions. Google Gemini is deeply integrated with Google\'s search index and Knowledge Graph, making traditional SEO authority signals more directly relevant. Claude tends to surface sources with strong entity definition and self-contained content. Understanding these distinctions allows brands to prioritise per-model tactics on top of a shared foundation.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Should I create separate content for each AI platform?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. Creating platform-specific content is neither scalable nor necessary for most brands. The correct approach is to build content that satisfies the shared requirements of all major platforms — self-contained passages, explicit entity attribution, valid schema markup, and clear topical authority signals — and then make platform-specific adjustments at the technical and distribution layer. For example, ensuring your sitemap is submitted to Bing (for Copilot) alongside Google, or prioritising Wikidata record completeness (which benefits Claude and ChatGPT parametric knowledge). Content remains unified; the distribution and technical signal layer is where platform-specific optimisation occurs.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Which AI platform should I prioritise for GEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Platform prioritisation depends on your target audience and the nature of queries your brand needs to appear in. For B2B and research-oriented queries, Perplexity has disproportionate influence — its users are high-intent researchers who act on its citations. For consumer brand visibility, Google AI Overviews (Gemini-powered) dominate because of Google\'s search volume. For enterprise software and productivity tools, Microsoft Copilot is increasingly influential. A cross-model programme monitors citation rate across all five major platforms and invests proportionally based on where your target audience concentrates.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I measure cross-model citation performance?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Cross-model citation measurement requires running a consistent set of target queries across each platform on a regular cadence and recording brand mention frequency, citation accuracy, and source link inclusion. The most reliable approach is a structured prompt-testing protocol: a fixed set of 20–50 queries, run weekly or fortnightly, with results logged in a spreadsheet or monitoring tool. Track separately for each platform to identify where performance is strongest and where gaps exist. Changes in citation rate following specific content or technical interventions provide attribution data for the tactics that are driving results on each platform.'
+      }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Optimising for Specific AI Platforms', item: 'https://geooptimised.com/optimise-for-ai-platforms/' },
+    { '@type': 'ListItem', position: 3, name: 'Cross-Model Optimisation', item: 'https://geooptimised.com/cross-model-optimisation/' }
+  ]
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'what-is-cross-model', label: 'What Cross-Model Means' },
+  { id: 'shared-foundation', label: 'The Shared Foundation' },
+  { id: 'platform-profiles', label: 'Platform-by-Platform Profiles' },
+  { id: 'platform-table', label: 'Platform Comparison Table' },
+  { id: 'per-model-nuances', label: 'Per-Model Nuances' },
+  { id: 'measurement', label: 'Cross-Model Measurement' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' }
+];
+
+const faqs = [
+  {
+    q: 'What is cross-model optimisation?',
+    a: 'Cross-model optimisation is the practice of building a GEO strategy that performs consistently across multiple AI platforms — ChatGPT, Perplexity, Gemini, Claude, and Microsoft Copilot — rather than optimising for a single model at the expense of others. It recognises that brands cannot control which AI platform a prospective customer uses, so the goal is to build a shared foundation of entity authority, citation-ready content, and technical accessibility that satisfies the common requirements of all major platforms, then layer in per-model refinements where they produce measurable incremental gains.'
+  },
+  {
+    q: 'Do different AI platforms cite brands differently?',
+    a: 'Yes, materially so. Perplexity and Bing Copilot are heavily RAG-dependent and cite live web sources with explicit links — they are most responsive to content structure, schema markup, and crawler accessibility. ChatGPT (without Browse) relies primarily on parametric knowledge and is therefore most influenced by training data coverage — press, Wikipedia, Wikidata, and third-party mentions. Google Gemini is deeply integrated with Google\'s search index and Knowledge Graph, making traditional SEO authority signals more directly relevant. Claude tends to surface sources with strong entity definition and self-contained content. Understanding these distinctions allows brands to prioritise per-model tactics on top of a shared foundation.'
+  },
+  {
+    q: 'Should I create separate content for each AI platform?',
+    a: 'No. Creating platform-specific content is neither scalable nor necessary for most brands. The correct approach is to build content that satisfies the shared requirements of all major platforms — self-contained passages, explicit entity attribution, valid schema markup, and clear topical authority signals — and then make platform-specific adjustments at the technical and distribution layer. For example, ensuring your sitemap is submitted to Bing (for Copilot) alongside Google, or prioritising Wikidata record completeness (which benefits Claude and ChatGPT parametric knowledge). Content remains unified; the distribution and technical signal layer is where platform-specific optimisation occurs.'
+  },
+  {
+    q: 'Which AI platform should I prioritise for GEO?',
+    a: 'Platform prioritisation depends on your target audience and the nature of queries your brand needs to appear in. For B2B and research-oriented queries, Perplexity has disproportionate influence — its users are high-intent researchers who act on its citations. For consumer brand visibility, Google AI Overviews (Gemini-powered) dominate because of Google\'s search volume. For enterprise software and productivity tools, Microsoft Copilot is increasingly influential. A cross-model programme monitors citation rate across all five major platforms and invests proportionally based on where your target audience concentrates.'
+  },
+  {
+    q: 'How do I measure cross-model citation performance?',
+    a: 'Cross-model citation measurement requires running a consistent set of target queries across each platform on a regular cadence and recording brand mention frequency, citation accuracy, and source link inclusion. The most reliable approach is a structured prompt-testing protocol: a fixed set of 20–50 queries, run weekly or fortnightly, with results logged in a spreadsheet or monitoring tool. Track separately for each platform to identify where performance is strongest and where gaps exist. Changes in citation rate following specific content or technical interventions provide attribution data for the tactics that are driving results on each platform.'
+  }
+];
+
+const related = [
+  {
+    tag: 'Parent NODE',
+    title: 'Optimising for Specific AI Platforms',
+    excerpt: 'Platform-by-platform playbooks for ChatGPT, Perplexity, Gemini, Claude, and Copilot — where the signals differ and how to exploit them.',
+    href: '/optimise-for-ai-platforms/'
+  },
+  {
+    tag: 'Foundation',
+    title: 'AI Brand Visibility: How to Get Cited by LLMs',
+    excerpt: 'The five pillars of AI brand visibility, measurement framework, and content patterns that drive LLM citations.',
+    href: '/ai-brand-visibility/'
+  },
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'The full GEO framework — from first principles through to advanced entity strategy and measurement.',
+    href: '/generative-engine-optimisation/'
+  }
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/cross-model-optimisation/" ogType="article">
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/optimise-for-ai-platforms/" class="transition hover:text-[var(--accent)]">Optimising for Specific AI Platforms</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">Cross-Model Optimisation</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Strategy Guide</span>
+        <span class="font-mono text-xs text-ink-400">7 Jun 2026</span>
+        <span class="font-mono text-xs text-ink-400">13 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        Cross-Model Optimisation
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">Cross model optimization</strong> is the discipline of building a GEO programme that produces consistent brand visibility across ChatGPT, Perplexity, Gemini, Claude, and Microsoft Copilot — not by creating five separate strategies, but by identifying the shared foundations that satisfy all platforms and layering in the per-model nuances that genuinely move the needle.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>A shared GEO foundation — entity authority, citation-ready content, schema markup, crawler access — drives the majority of citation gains across all five major platforms.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Platforms differ primarily in their balance of RAG vs. parametric knowledge — Perplexity and Copilot favour RAG; ChatGPT (no Browse) and Claude favour parametric.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Per-model nuances are real but secondary — they produce incremental gains on top of a strong foundation, not transformative results from scratch.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Cross-model measurement requires a structured prompt-testing protocol run consistently across all target platforms, not a single-platform snapshot.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1 -->
+      <section id="what-is-cross-model" class="anchor-top prose-dark mb-16">
+        <h2>What Cross-Model Optimisation Means</h2>
+
+        <p>
+          <strong>Cross-model optimisation is the recognition that your brand's AI visibility is determined by its performance across an ecosystem of AI platforms, not by a single model — and that the most efficient path to broad visibility is building shared foundations rather than isolated per-platform strategies.</strong>
+          A brand that is well-cited on Perplexity but invisible on Google AI Overviews has an AI visibility problem that a Perplexity-only strategy cannot solve.
+        </p>
+
+        <p>
+          The five major AI platforms that most brands need to target in 2026 are: ChatGPT (OpenAI), Perplexity, Google Gemini / AI Overviews, Claude (Anthropic), and Microsoft Copilot (Bing-powered). These platforms serve different user bases, use different retrieval architectures, and weight different signals — but they share a common requirement: content must be structured, attributed, accessible, and authoritative to earn consistent citations.
+        </p>
+
+        <p>
+          Cross-model optimisation sits within the broader <a href="/optimise-for-ai-platforms/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">optimising for specific AI platforms</a> topic cluster and is the strategic complement to platform-specific playbooks. It answers the question: what do you build once, to perform everywhere? The per-platform guides answer: what do you layer on top for each specific platform? The full strategic context sits within <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> as a discipline.
+        </p>
+
+        <h3>Why Not Just Optimise for the Biggest Platform?</h3>
+        <p>
+          Platform market share in AI search is volatile and fragmented. Perplexity's user base skews towards high-value B2B researchers; Google AI Overviews reaches the widest consumer audience; Copilot is embedded in Microsoft 365 for enterprise users. A brand that optimises exclusively for ChatGPT may be invisible to the Perplexity user researching vendors before a purchasing decision. Cross-model optimisation is the risk-management answer to a fragmented platform landscape — it diversifies visibility rather than concentrating it in a single model's behaviour.
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="shared-foundation" class="anchor-top prose-dark mb-16">
+        <h2>The Shared Foundation: What Works Everywhere</h2>
+
+        <p>
+          <strong>Approximately 80% of measurable AI citation gains come from a shared foundation of five practices that improve performance across every major platform simultaneously.</strong>
+          These are not platform-specific optimisations — they are universal requirements that any AI system capable of retrieving and citing content will respond to.
+        </p>
+
+        <div class="not-prose mt-8 space-y-5">
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Entity Authority</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              A well-defined brand entity — with a Wikidata record, consistent sameAs references, and accurate third-party descriptions — is the single most universally beneficial signal in cross-model optimisation. Every major platform uses entity resolution to identify and describe brands. A brand whose entity record is incomplete, inconsistent, or absent from knowledge graphs is described inaccurately or omitted entirely, regardless of how well-optimised its content is.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Citation-Ready Content Structure</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Self-contained passages, declarative topic sentences, and explicit headings that function as standalone labels are structural properties that improve citation rates across all platforms. They work because they reduce the interpretive overhead that any retrieval system — regardless of the underlying model — must apply to extract a citable answer from a document. For the full mechanics of this approach, see our page on <a href="/llm-context-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">LLM context optimisation</a>.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Valid JSON-LD Schema</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Organisation, Article, FAQPage, and BreadcrumbList schemas in valid JSON-LD are processed by retrieval systems across all major platforms. Schema markup reduces parse ambiguity, signals content type and authority, and maps Q&A content directly onto the response format that generative platforms prefer. Deploying valid schema sitewide is a low-difficulty, high-impact action that benefits every platform simultaneously. For implementation detail, see our guide to <a href="/schema-markup-ai/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">schema markup for AI</a>.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">AI Crawler Accessibility</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Content that is blocked to AI crawlers cannot appear in RAG-based responses on any platform. A correctly configured robots.txt that permits GPTBot, PerplexityBot, ClaudeBot, and Bingbot — alongside a complete, current sitemap — is the prerequisite for cross-model RAG visibility. An llms.txt file provides an additional signal that benefits all platforms supporting the standard.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Topical Authority Depth</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              A content cluster that covers a subject comprehensively — with pages addressing core concepts, sub-topics, adjacent questions, and specific use cases — signals domain expertise to all retrieval systems. Retrieval systems prefer sources that demonstrate systematic coverage of a topic over sources with a single high-quality page on a topic. Building topical depth through a structured content architecture (ROOT → NODE → SEED) is the most sustainable approach to cross-model authority.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 3: Platform Profiles -->
+      <section id="platform-profiles" class="anchor-top prose-dark mb-16">
+        <h2>Platform-by-Platform Profiles</h2>
+
+        <p>
+          <strong>Each major AI platform has a distinct retrieval architecture, user base, and signal weighting — understanding these profiles allows brands to prioritise per-model investments on top of their shared foundation.</strong>
+        </p>
+
+        <h3>ChatGPT (OpenAI)</h3>
+        <p>
+          ChatGPT operates in two modes. Without Browse enabled, it relies entirely on parametric knowledge — information compressed into model weights during training. In this mode, brands with strong third-party coverage in the training corpus (press, Wikipedia, Wikidata, industry publications) surface reliably; brands without that coverage are absent regardless of their website's content quality. With Browse or GPT-4 with Search enabled, ChatGPT retrieves live web content and citations become directly influenced by content structure and schema. The split between user sessions with and without Browse is significant enough to require optimising for both modes.
+        </p>
+
+        <h3>Perplexity</h3>
+        <p>
+          Perplexity is the most RAG-intensive of the major platforms — it retrieves live web sources for almost every response and displays citations with source links prominently. This makes Perplexity the most immediately responsive platform to content structure and schema improvements. Brands that publish well-structured, self-contained content on accessible pages typically see measurable Perplexity citation improvements within weeks of deployment. Perplexity's user base is disproportionately high-intent — researchers, analysts, and professionals — making it high-value even with lower total traffic than Google.
+        </p>
+
+        <h3>Google Gemini and AI Overviews</h3>
+        <p>
+          Google AI Overviews are powered by Gemini and are deeply integrated with Google's traditional search index and Knowledge Graph. This means traditional SEO signals — domain authority, page authority, E-E-A-T signals, structured data, and indexation quality — are more directly relevant here than on any other AI platform. Brands with strong Google Search performance typically see corresponding AI Overviews visibility. The Key differentiator for Gemini-specific optimisation is Knowledge Graph presence: ensuring your brand entity is well-represented in Google's Knowledge Graph, particularly through Wikipedia, structured data, and verified Google Business profiles.
+        </p>
+
+        <h3>Claude (Anthropic)</h3>
+        <p>
+          Claude's citation behaviour in its Claude.ai interface favours sources with well-defined entity authority and clearly structured, self-contained content. Its training data emphasis on reliability and accuracy means brands with consistent, fact-dense content and verifiable entity records tend to surface more reliably than brands relying on narrative-heavy pages. Claude is increasingly used in enterprise contexts for research tasks, making visibility in Claude particularly valuable for B2B brands targeting high-value accounts.
+        </p>
+
+        <h3>Microsoft Copilot</h3>
+        <p>
+          Microsoft Copilot is powered by Bing's search and retrieval infrastructure, meaning Bing indexation quality is a direct prerequisite for Copilot visibility. Brands that neglect Bing indexation in favour of a Google-only strategy may have strong Google AI Overviews presence but weak Copilot visibility. Copilot's integration into Microsoft 365 products — Teams, Word, Outlook — gives it significant enterprise reach that is not fully reflected in public usage statistics.
+        </p>
+      </section>
+
+      <!-- Section 4: Platform Comparison Table -->
+      <section id="platform-table" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>AI Platform Comparison: Signal Weighting</h2>
+          <p>
+            <strong>The relative importance of different GEO signals varies meaningfully across platforms.</strong>
+            The table below summarises how each major platform weights the core cross-model signals, based on observed citation behaviour and published platform documentation.
+          </p>
+        </div>
+
+        <div class="mt-8 overflow-x-auto rounded-lg border border-geo-700">
+          <table class="min-w-full text-sm">
+            <thead>
+              <tr class="border-b border-geo-700 bg-geo-900">
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Signal</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">ChatGPT</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Perplexity</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Gemini / AI Overviews</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Claude</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Copilot</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-geo-800">
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">Entity / Wikidata record</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">Critical</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">High</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">Critical</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">Critical</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">High</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-ink-100">Content structure (self-contained passages)</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">High</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">Critical</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">High</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">Critical</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">Critical</td>
+              </tr>
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">JSON-LD schema markup</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">High</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">Critical</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">Critical</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">High</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">High</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-ink-100">Third-party press / Wikipedia</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">Critical</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">High</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">High</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">Critical</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">High</td>
+              </tr>
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">Google Search authority (E-E-A-T)</td>
+                <td class="px-4 py-3 text-ink-400 font-semibold">Low</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">Medium</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">Critical</td>
+                <td class="px-4 py-3 text-ink-400 font-semibold">Low</td>
+                <td class="px-4 py-3 text-ink-400 font-semibold">Low</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-ink-100">Bing indexation quality</td>
+                <td class="px-4 py-3 text-ink-400 font-semibold">Low</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">Medium</td>
+                <td class="px-4 py-3 text-ink-400 font-semibold">Low</td>
+                <td class="px-4 py-3 text-ink-400 font-semibold">Low</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">Critical</td>
+              </tr>
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">llms.txt / AI crawler access</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">Medium</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">Critical</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">Medium</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">Medium</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">High</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="per-model-nuances" class="anchor-top prose-dark mb-16">
+        <h2>Per-Model Nuances That Move the Needle</h2>
+
+        <p>
+          <strong>Per-model nuances are the incremental optimisations that produce measurable citation gains on a specific platform, on top of the shared foundation that drives performance everywhere.</strong>
+          They are not alternatives to the shared foundation — they are multipliers that amplify it.
+        </p>
+
+        <h3>For ChatGPT: Invest in Training Data Coverage</h3>
+        <p>
+          Because non-Browse ChatGPT relies on parametric knowledge, the highest-leverage per-model investment for ChatGPT visibility is third-party press and reference site coverage. Profiles on Crunchbase, G2, Capterra, and industry analyst reports all contribute to the training corpus coverage that determines whether ChatGPT "knows" your brand in the first place. This is a medium-to-long horizon investment, but its effects compound across successive OpenAI model versions.
+        </p>
+
+        <h3>For Perplexity: Maximise Structured Content and Crawler Access</h3>
+        <p>
+          Perplexity's retrieval-first architecture means that content structure optimisations produce the fastest and most measurable citation gains on this platform. Ensure PerplexityBot is permitted in robots.txt, pages are indexed, and content sections are structured as self-contained 150–400 word passages with explicit headings. Perplexity also surfaces FAQ content prominently — pages with valid FAQPage schema and well-formed Q&A sections consistently outperform pages without this structure.
+        </p>
+
+        <h3>For Google Gemini: Strengthen Knowledge Graph Presence</h3>
+        <p>
+          Google AI Overviews draw on Google's Knowledge Graph for entity resolution alongside its traditional search index. The highest-leverage per-model investment for Gemini is ensuring your entity is well-represented in the Knowledge Graph: a verified Google Business profile, consistent NAP data across citation sources, and Wikipedia/Wikidata entries that Google's systems can crawl and trust. Traditional Google SEO authority — page speed, Core Web Vitals, quality backlinks — also contributes to Gemini visibility in ways that are less relevant on non-Google platforms.
+        </p>
+
+        <h3>For Copilot: Do Not Neglect Bing</h3>
+        <p>
+          Microsoft Copilot's citation pool is Bing's index — not Google's. Brands that have submitted sitemaps exclusively to Google Search Console may be invisible to Copilot, regardless of their Google visibility. Submit your sitemap to Bing Webmaster Tools, monitor Bing crawl coverage, and ensure Bingbot is not blocked. This is the single highest-leverage per-model investment for Copilot, because it addresses a structural gap rather than a marginal signal optimisation.
+        </p>
+
+        <p>
+          For deeper platform-specific playbooks, see the <a href="/optimise-for-ai-platforms/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">optimising for specific AI platforms</a> NODE, which covers each platform individually. For the LLM visibility concepts that underpin this work, see our page on <a href="/llm-visibility-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">LLM visibility optimisation</a>.
+        </p>
+      </section>
+
+      <!-- Section 6 -->
+      <section id="measurement" class="anchor-top prose-dark mb-16">
+        <h2>Measuring Cross-Model Performance</h2>
+
+        <p>
+          <strong>Cross-model measurement is the discipline of tracking citation performance across all five major platforms systematically — using a consistent query set, consistent testing protocol, and platform-separated reporting.</strong>
+          It is the feedback mechanism that turns a cross-model strategy from a set of theoretical best practices into a data-driven programme.
+        </p>
+
+        <p>
+          A functional cross-model measurement programme requires three components. First, a target query set: 20–50 queries that represent the brand's core informational and commercial intent space — the questions its target audience asks AI systems. Second, a testing protocol: each query run on each target platform on a consistent cadence (weekly or fortnightly), with results recorded against a standard template that captures mention presence, mention accuracy, citation link inclusion, and the competitor brands mentioned alongside. Third, a reporting framework: platform-separated citation rate tracking that identifies which platforms are improving, which are stagnant, and which interventions are driving changes.
+        </p>
+
+        <p>
+          The most common mistake in cross-model measurement is testing on a single platform and assuming results generalise. A brand can improve its Perplexity citation rate significantly through content structure work while remaining absent from Gemini AI Overviews due to weak Knowledge Graph presence. Only platform-separated tracking reveals these gaps. For the broader AI brand visibility measurement framework, see the <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility</a> guide.
+        </p>
+      </section>
+
+      <!-- FAQ -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Build Visibility Across Every AI Platform</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Cross-model optimisation is not five separate programmes — it is one well-constructed GEO strategy with targeted refinements for each platform. GEOoptimised audits your current cross-model citation baseline, identifies the shared foundation gaps and platform-specific weaknesses, and builds a programme designed for consistent, measurable visibility across ChatGPT, Perplexity, Gemini, Claude, and Copilot.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request a cross-model audit</a>
+        <a href="/optimise-for-ai-platforms/" class="btn btn-ghost">Explore platform playbooks</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

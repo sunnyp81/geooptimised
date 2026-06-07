@@ -1,0 +1,586 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'How to Prepare Your Website for AI | GEOoptimised';
+const description = 'A practical readiness checklist to prepare your website for generative AI: technical access, entity consistency, content structure, and schema markup covered step by step.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to Prepare Your Website for AI',
+    description: 'A practical readiness checklist covering technical access, entity consistency, content structure, and schema markup to prepare any website for generative AI citation.',
+    url: 'https://geooptimised.com/prepare-website-ai/',
+    image: 'https://geooptimised.com/og-image.png',
+    datePublished: '2026-06-07',
+    dateModified: '2026-06-07',
+    inLanguage: 'en-GB',
+    author: { '@id': 'https://geooptimised.com/#organization' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' },
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Audit AI crawler access in robots.txt',
+        text: 'Check your robots.txt file and explicitly allow GPTBot, PerplexityBot, ClaudeBot, Googlebot-Extended, and other major AI user-agents. Many sites inadvertently block these crawlers via wildcard rules added in 2023–24.'
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: 'Add an llms.txt file',
+        text: 'Create a plain-text llms.txt at your domain root declaring your site purpose, expertise areas, and key page URLs. This signals directly to AI crawlers how your content should be categorised.'
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Consolidate and verify canonical URLs',
+        text: 'Ensure every page has exactly one canonical URL and that duplicate or near-duplicate pages are resolved. Entity signals fragmented across multiple URLs are treated as weaker than consolidated signals on a single authoritative URL.'
+      },
+      {
+        '@type': 'HowToStep',
+        position: 4,
+        name: 'Define and standardise your brand entity',
+        text: 'Agree on a canonical one-sentence brand description, category label, and differentiating attributes. Apply these identically across your website, schema markup, Google Business Profile, LinkedIn, and all directory listings.'
+      },
+      {
+        '@type': 'HowToStep',
+        position: 5,
+        name: 'Deploy Organisation and Article schema',
+        text: 'Implement Organisation schema with name, url, logo, and sameAs fields on every page. Add Article or TechArticle schema on content pages with correct author, publisher, datePublished, and dateModified fields.'
+      },
+      {
+        '@type': 'HowToStep',
+        position: 6,
+        name: 'Restructure content for extraction',
+        text: 'Rewrite page openings to lead with a definitional statement answering the primary query. Break long paragraphs into two-to-four-sentence single-point units. Add FAQ sections matching real query phrasing.'
+      },
+      {
+        '@type': 'HowToStep',
+        position: 7,
+        name: 'Verify Core Web Vitals',
+        text: 'Confirm LCP is under 2.5 seconds and CLS is under 0.1. Slow pages receive lower crawl priority from AI retrieval pipelines, reducing the freshness of your content in generative answers.'
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'How to Prepare Your Website for AI',
+    description: 'A practical readiness checklist covering technical access, entity consistency, content structure, and schema markup to prepare any website for generative AI citation.',
+    url: 'https://geooptimised.com/prepare-website-ai/',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://geooptimised.com/prepare-website-ai/'
+    },
+    image: 'https://geooptimised.com/og-image.png',
+    datePublished: '2026-06-07',
+    dateModified: '2026-06-07',
+    inLanguage: 'en-GB',
+    author: { '@id': 'https://geooptimised.com/#organization' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' }
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How do I prepare my website for generative AI?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Preparing your website for generative AI requires action across three layers: technical (allow AI crawlers in robots.txt, add llms.txt, consolidate canonical URLs, pass Core Web Vitals), entity (define your brand attributes consistently across all platforms, deploy Organisation schema with sameAs links), and content (lead every page with a definitional statement, write short single-point paragraphs, add FAQ sections, deploy Article and FAQPage schema). All three layers must be addressed — optimising only one produces inconsistent citation results.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Which AI crawlers should my robots.txt allow?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The primary AI crawlers to allow are: GPTBot (OpenAI / ChatGPT), PerplexityBot (Perplexity), ClaudeBot (Anthropic), Google-Extended (Google AI products), Applebot-Extended (Apple Intelligence), and Amazonbot (Amazon Alexa). Review your robots.txt for wildcard Disallow rules that may block these agents. Explicitly listing each user-agent with Allow: / is the safest approach if you have legacy Disallow rules.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What is an llms.txt file and do I need one?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'An llms.txt file is a plain-text declaration at your domain root (e.g., geooptimised.com/llms.txt) that describes your site purpose, expertise areas, and key page URLs for AI crawlers. It follows a convention analogous to robots.txt but designed for large language model crawlers rather than search engine bots. Not all AI platforms read it, but those that do use it to categorise your domain correctly. It takes under an hour to create and is a net-positive signal with no downside.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How does schema markup help prepare a website for AI?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Schema markup provides machine-readable metadata that AI retrieval systems use to classify and weight your content. Organisation schema with sameAs links anchors your entity identity so AI models can resolve your brand accurately. Article schema marks your content as a published, attributed piece rather than an anonymous document. FAQPage schema maps your Q&A content to conversational query patterns. HowTo schema matches procedural queries. Together they reduce ambiguity and increase the probability that AI engines cite your content accurately.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Does website speed affect AI citation performance?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Website speed affects AI citation performance indirectly through crawl priority and retrieval freshness. AI retrieval systems allocate crawl budget based partly on page speed signals: slow pages (LCP above 2.5 seconds) receive lower crawl frequency, meaning your content is less likely to be up to date in retrieval pipelines. For platforms like Perplexity that rely on real-time RAG retrieval, a page that loads slowly may be deprioritised in favour of faster-loading competitors covering the same topic.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How long does it take to prepare a website for AI?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'A basic AI readiness pass — robots.txt audit, llms.txt creation, canonical URL check, Organisation schema deployment — takes two to four hours for a developer familiar with the site. The content layer — restructuring existing pages for extraction, adding FAQ sections, deploying Article and FAQPage schema — typically takes one to two weeks depending on the size of the content inventory. Entity consistency work (auditing third-party profiles, updating directory listings, building sameAs links) is ongoing and typically spans four to eight weeks for the initial pass.'
+        }
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'GEO Strategy', item: 'https://geooptimised.com/geo-strategy/' },
+      { '@type': 'ListItem', position: 3, name: 'Prepare Website for AI', item: 'https://geooptimised.com/prepare-website-ai/' }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'why-preparation-matters', label: 'Why Preparation Matters' },
+  { id: 'technical-checklist', label: 'Technical Readiness' },
+  { id: 'entity-checklist', label: 'Entity & Schema Readiness' },
+  { id: 'content-checklist', label: 'Content Readiness' },
+  { id: 'readiness-table', label: 'Readiness Signal Table' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' }
+];
+
+const technicalChecklist = [
+  {
+    item: 'Allow AI crawlers in robots.txt',
+    detail: 'Explicitly permit GPTBot, PerplexityBot, ClaudeBot, Google-Extended, and Applebot-Extended. Wildcard Disallow rules added in 2023–24 as a training-data defence often block these agents, silently preventing citation earning. Check with a robots.txt tester against each user-agent string.',
+    priority: 'Critical'
+  },
+  {
+    item: 'Create and deploy llms.txt',
+    detail: 'Add a plain-text llms.txt at your domain root. Include a one-paragraph site description, a bulleted list of expertise areas, and URLs of your most important pages. This is the closest equivalent to a manifest for AI crawlers and takes under an hour to produce.',
+    priority: 'High'
+  },
+  {
+    item: 'Consolidate canonical URLs',
+    detail: 'Every page must have exactly one canonical URL. HTTP/HTTPS, www/non-www, and trailing-slash variants must all resolve to a single canonical. Fragmented entity signals across multiple URLs are treated as weaker than consolidated signals on one authoritative URL.',
+    priority: 'Critical'
+  },
+  {
+    item: 'Verify Core Web Vitals',
+    detail: 'Target LCP under 2.5 seconds and CLS under 0.1. AI retrieval systems crawl faster pages more frequently, which directly affects content freshness in real-time RAG pipelines. Use PageSpeed Insights or the CrUX dashboard to identify failing pages.',
+    priority: 'Medium'
+  },
+  {
+    item: 'Check XML sitemap accuracy',
+    detail: 'Ensure your sitemap is up to date, submitted to Google Search Console, and accessible at /sitemap.xml or /sitemap-index.xml. A current sitemap accelerates the discovery of new pages by AI crawlers that follow standard web conventions.',
+    priority: 'Medium'
+  }
+];
+
+const entityChecklist = [
+  {
+    item: 'Define canonical brand entity attributes',
+    detail: 'Agree on a single canonical description covering: brand name (exact capitalisation), one-sentence brand description, category label, founding date, location, key services, and differentiating claims. This entity definition is the master reference for all subsequent work.',
+    priority: 'Critical'
+  },
+  {
+    item: 'Deploy Organisation schema with sameAs',
+    detail: 'Implement Organisation schema on every page, not just the homepage. Include name, url, logo, foundingDate, and sameAs fields linking to your LinkedIn page, Wikidata entry, Companies House record, and any authoritative directory where your brand is definitively described.',
+    priority: 'Critical'
+  },
+  {
+    item: 'Audit third-party entity consistency',
+    detail: 'Check that your canonical brand description matches exactly across Google Business Profile, LinkedIn, Wikidata, Crunchbase, relevant trade directories, and any publication that covers your category. Contradictions between these sources create entity ambiguity that AI models resolve by defaulting to more consistent competitors.',
+    priority: 'High'
+  },
+  {
+    item: 'Create or claim a Wikidata entry',
+    detail: 'Wikidata is a primary knowledge graph source for multiple AI systems. If your brand has a Wikidata entry, verify its accuracy and completeness. If not, assess whether your organisation meets notability criteria and create one. A well-maintained Wikidata entry is one of the most durable entity signals available.',
+    priority: 'High'
+  }
+];
+
+const contentChecklist = [
+  {
+    item: 'Lead every page with a definitional opening',
+    detail: 'The first sentence of every page and every section should answer the primary query directly and completely. No preamble, no rhetorical questions, no context-building. LLMs extract definitional openings because they function as standalone, citable units.',
+    priority: 'Critical'
+  },
+  {
+    item: 'Restructure paragraphs to single-point units',
+    detail: 'Each paragraph should cover exactly one point in two to four sentences. Multi-concept paragraphs are difficult for retrieval systems to extract cleanly. If a paragraph spans two topics, split it. The extraction quality of a page is directly related to how cleanly each unit of content can be isolated.',
+    priority: 'High'
+  },
+  {
+    item: 'Add FAQ sections with real query phrasing',
+    detail: 'FAQ sections are the highest-density citation targets on any page. Each question should match the exact phrasing your audience uses when querying AI engines — not the phrasing you prefer. Each answer should be 40 to 100 words and complete without surrounding context.',
+    priority: 'High'
+  },
+  {
+    item: 'Deploy Article and FAQPage schema',
+    detail: 'Article or TechArticle schema marks your content as an attributed, published piece. FAQPage schema maps your Q&A content to conversational query patterns. Both must mirror the on-page content exactly. Validate using the Google Rich Results Test before publishing.',
+    priority: 'Critical'
+  },
+  {
+    item: 'Add tables for comparative and structured data',
+    detail: 'Tables are natively extractable — AI systems can pull a table as a discrete unit, preserving relational structure. Any comparison, attribute list, or data set should be presented as a table with clear column headers using scope="col". Avoid merged cells that break extraction logic.',
+    priority: 'Medium'
+  }
+];
+
+const readinessSignals = [
+  { signal: 'AI crawler access (robots.txt)', category: 'Technical', impact: 'Critical', timeToFix: '< 1 hour' },
+  { signal: 'llms.txt present', category: 'Technical', impact: 'High', timeToFix: '< 1 hour' },
+  { signal: 'Canonical URL consolidation', category: 'Technical', impact: 'Critical', timeToFix: '2–4 hours' },
+  { signal: 'Core Web Vitals (LCP, CLS)', category: 'Technical', impact: 'Medium', timeToFix: '1–5 days' },
+  { signal: 'Organisation schema + sameAs', category: 'Entity', impact: 'Critical', timeToFix: '2–4 hours' },
+  { signal: 'Third-party entity consistency', category: 'Entity', impact: 'High', timeToFix: '1–2 weeks' },
+  { signal: 'Wikidata entry', category: 'Entity', impact: 'High', timeToFix: '4–8 hours' },
+  { signal: 'Definitional content openings', category: 'Content', impact: 'Critical', timeToFix: '1–2 weeks' },
+  { signal: 'Article / TechArticle schema', category: 'Content', impact: 'Critical', timeToFix: '2–4 hours' },
+  { signal: 'FAQPage schema on Q&A sections', category: 'Content', impact: 'High', timeToFix: '4–8 hours' },
+  { signal: 'Single-point paragraph structure', category: 'Content', impact: 'High', timeToFix: '1–2 weeks' },
+  { signal: 'Tables for comparative data', category: 'Content', impact: 'Medium', timeToFix: '4–8 hours' }
+];
+
+const faqs = [
+  {
+    q: 'How do I prepare my website for generative AI?',
+    a: 'Preparing your website for generative AI requires action across three layers: technical (allow AI crawlers in robots.txt, add llms.txt, consolidate canonical URLs, pass Core Web Vitals), entity (define your brand attributes consistently across all platforms, deploy Organisation schema with sameAs links), and content (lead every page with a definitional statement, write short single-point paragraphs, add FAQ sections, deploy Article and FAQPage schema). All three layers must be addressed — optimising only one produces inconsistent citation results.'
+  },
+  {
+    q: 'Which AI crawlers should my robots.txt allow?',
+    a: 'The primary AI crawlers to allow are: GPTBot (OpenAI / ChatGPT), PerplexityBot (Perplexity), ClaudeBot (Anthropic), Google-Extended (Google AI products), Applebot-Extended (Apple Intelligence), and Amazonbot. Review your robots.txt for wildcard Disallow rules that may inadvertently block these agents. Explicitly listing each user-agent with Allow: / is the safest approach alongside any legacy Disallow rules.'
+  },
+  {
+    q: 'What is an llms.txt file and do I need one?',
+    a: 'An llms.txt file is a plain-text declaration at your domain root that describes your site purpose, expertise areas, and key page URLs for AI crawlers. It follows a convention analogous to robots.txt but designed for large language model crawlers. Not all AI platforms read it currently, but those that do use it to categorise your domain correctly. It takes under an hour to create and carries no downside.'
+  },
+  {
+    q: 'How does schema markup help prepare a website for AI?',
+    a: 'Schema markup provides machine-readable metadata that AI retrieval systems use to classify and weight your content. Organisation schema anchors your entity identity so AI models can resolve your brand accurately. Article schema marks your content as a published, attributed piece. FAQPage schema maps Q&A content to conversational query patterns. Together they reduce ambiguity and increase citation accuracy.'
+  },
+  {
+    q: 'Does website speed affect AI citation performance?',
+    a: 'Website speed affects AI citation performance indirectly through crawl priority and retrieval freshness. AI retrieval systems allocate crawl budget partly based on page speed: slow pages receive lower crawl frequency, meaning your content is less likely to be current in retrieval pipelines. For platforms like Perplexity that rely on real-time RAG retrieval, a slow-loading page may be deprioritised in favour of faster-loading competitors on the same topic.'
+  },
+  {
+    q: 'How long does it take to prepare a website for AI?',
+    a: 'A basic AI readiness pass — robots.txt audit, llms.txt creation, canonical URL check, Organisation schema deployment — takes two to four hours for a developer familiar with the site. Content restructuring typically takes one to two weeks depending on inventory size. Entity consistency work across third-party profiles spans four to eight weeks for the initial pass. Ongoing maintenance is quarterly.'
+  }
+];
+
+const related = [
+  {
+    tag: 'NODE',
+    title: 'GEO Strategy Framework',
+    excerpt: 'The systematic framework for building durable citation share across all major AI platforms — sequenced by impact.',
+    href: '/geo-strategy/'
+  },
+  {
+    tag: 'Checklist',
+    title: 'GEO Checklist: Every Signal Covered',
+    excerpt: 'A structured audit checklist covering content, technical, entity, and monitoring signals for ongoing GEO programmes.',
+    href: '/geo-checklist/'
+  },
+  {
+    tag: 'Guide',
+    title: 'How to Do GEO: A Step-by-Step Guide',
+    excerpt: 'The complete eight-step process for moving from AI-invisible to consistently cited across ChatGPT, Perplexity, and Gemini.',
+    href: '/how-to-do-geo/'
+  }
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/prepare-website-ai/"
+  ogType="article"
+>
+
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-strategy/" class="transition hover:text-[var(--accent)]">GEO Strategy</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">Prepare Website for AI</li>
+    </ol>
+  </nav>
+
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Readiness Guide</span>
+        <span class="font-mono text-xs text-ink-400">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-400">11 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        How to Prepare Your Website for AI
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">Preparing your website for generative AI means making it crawlable, citable, and clearly attributed.</strong> Most sites are not AI-ready by default: they block AI crawlers, define their brand inconsistently across platforms, and bury their main claims in context-heavy paragraphs that retrieval systems cannot cleanly extract. This guide walks through the technical, entity, and content readiness checklist that forms the foundation of any <a href="/geo-strategy/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO strategy</a>.
+      </p>
+    </div>
+  </section>
+
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" id="toc-nav">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <div>
+
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Many sites inadvertently block AI crawlers via legacy robots.txt rules — this is the highest-priority fix and takes under an hour.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Brand entity inconsistency across platforms is the single most common reason AI models cite competitors rather than you.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Content must be restructured for extraction — definitional openings, single-point paragraphs, and FAQ sections are the three most impactful changes.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Schema markup (Organisation, Article, FAQPage) provides the machine-readable signals that tell AI systems your content is an attributed, credible source.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>AI readiness is not a one-time project — entity consistency and content freshness require ongoing maintenance to sustain citation performance.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prose-dark">
+        <h2 id="why-preparation-matters" class="anchor-top">Why Preparation Matters for Generative AI</h2>
+        <p>
+          <strong>Generative AI engines do not retrieve pages — they retrieve entities and passages, weighted by how clearly each source is identified and how cleanly its content can be extracted.</strong> A website that has not been prepared for AI is structurally invisible to this process even if it ranks well in traditional search. The AI retrieval layer operates on different signals than the ranking algorithm, and preparation for one does not guarantee readiness for the other.
+        </p>
+        <p>
+          The three failure modes that prevent websites from earning AI citations are consistent: AI crawlers cannot access the content (blocked in robots.txt or by slow load times), the brand entity is ambiguously or inconsistently defined (AI models cannot resolve which entity is speaking), and content is structured as narrative prose rather than discrete extractable units. Any one of these failure modes significantly reduces citation frequency. All three together produce near-zero AI visibility regardless of domain authority or keyword rankings.
+        </p>
+        <p>
+          Preparation is not the same as optimisation. Preparation creates the conditions in which optimisation becomes possible. A brand that has addressed all three failure modes can then build citation share through <a href="/geo-best-practices/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO best practices</a> and the systematic approach described in <a href="/how-to-do-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how to do GEO</a>. A brand that skips preparation and jumps to optimisation is building on an unstable foundation — citation gains will be inconsistent and difficult to compound.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="technical-checklist" class="anchor-top">Technical Readiness Checklist</h2>
+        <p>
+          <strong>Technical readiness determines whether AI crawlers can access your content and how efficiently they process it.</strong> These are foundational checks that precede any content or entity work. A technically blocked or slow site cannot earn citations regardless of content quality.
+        </p>
+      </div>
+
+      <ol class="mt-8 space-y-6">
+        {technicalChecklist.map((item, i) => (
+          <li class="flex gap-5">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border hair font-display text-sm font-bold text-[var(--accent)]">
+              {i + 1}
+            </span>
+            <div>
+              <div class="flex flex-wrap items-center gap-3">
+                <h3 class="font-display text-base font-semibold text-white">{item.item}</h3>
+                <span class={`rounded px-2 py-0.5 text-xs font-mono ${item.priority === 'Critical' ? 'bg-red-900/40 text-red-300' : item.priority === 'High' ? 'bg-amber-900/40 text-amber-300' : 'bg-geo-700/40 text-ink-300'}`}>{item.priority}</span>
+              </div>
+              <p class="mt-1 text-sm leading-relaxed text-ink-300">{item.detail}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      <div class="prose-dark mt-16">
+        <h2 id="entity-checklist" class="anchor-top">Entity &amp; Schema Readiness Checklist</h2>
+        <p>
+          <strong>Entity readiness determines whether AI models can resolve your brand as a distinct, authoritative source — the prerequisite for accurate, consistent citation.</strong> Brands with excellent content structure but weak entity definition generate vague or inaccurate mentions. Entity work is less visible than content work but has a greater impact on citation quality.
+        </p>
+      </div>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        {entityChecklist.map(item => (
+          <div class="card p-6">
+            <div class="flex flex-wrap items-center gap-2 mb-3">
+              <h3 class="font-display text-base font-semibold text-[var(--accent)]">{item.item}</h3>
+              <span class={`rounded px-2 py-0.5 text-xs font-mono ${item.priority === 'Critical' ? 'bg-red-900/40 text-red-300' : 'bg-amber-900/40 text-amber-300'}`}>{item.priority}</span>
+            </div>
+            <p class="text-sm leading-relaxed text-ink-300">{item.detail}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="content-checklist" class="anchor-top">Content Readiness Checklist</h2>
+        <p>
+          <strong>Content readiness determines whether your pages can be extracted and cited by large language models — the layer most brands have the most work to do on.</strong> Traditional web content is optimised for human reading behaviour: narrative flow, context-building, and engagement hooks. AI extraction requires the opposite: immediate answers, short units, and structural labels that confirm what type of content each section contains.
+        </p>
+      </div>
+
+      <ol class="mt-8 space-y-6">
+        {contentChecklist.map((item, i) => (
+          <li class="flex gap-5">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border hair font-display text-sm font-bold text-[var(--accent)]">
+              {i + 1}
+            </span>
+            <div>
+              <div class="flex flex-wrap items-center gap-3">
+                <h3 class="font-display text-base font-semibold text-white">{item.item}</h3>
+                <span class={`rounded px-2 py-0.5 text-xs font-mono ${item.priority === 'Critical' ? 'bg-red-900/40 text-red-300' : item.priority === 'High' ? 'bg-amber-900/40 text-amber-300' : 'bg-geo-700/40 text-ink-300'}`}>{item.priority}</span>
+              </div>
+              <p class="mt-1 text-sm leading-relaxed text-ink-300">{item.detail}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      <div class="prose-dark mt-16">
+        <h2 id="readiness-table" class="anchor-top">AI Readiness Signals: Priority &amp; Time-to-Fix</h2>
+        <p>
+          <strong>Not all readiness signals require the same time investment, and prioritising by impact-to-effort ratio produces faster citation gains than working through the list alphabetically.</strong> The table below maps every signal from the checklists above to its category, citation impact, and estimated time-to-fix for a site with a standard CMS and an experienced developer.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Signal</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Category</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Impact</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Time to Fix</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y hair">
+            {readinessSignals.map(row => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class="px-4 py-3 text-white">{row.signal}</td>
+                <td class="px-4 py-3 font-mono text-xs text-[var(--accent)]">{row.category}</td>
+                <td class="px-4 py-3 text-ink-300">{row.impact}</td>
+                <td class="px-4 py-3 text-ink-300">{row.timeToFix}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          The highest-return starting point for most brands is the combination of robots.txt AI crawler access, Organisation schema, and definitional content openings. These three changes collectively address all three failure modes and can typically be implemented within one working day. The remaining signals compound on this foundation. For a complete sequenced programme that takes you from AI-invisible to consistently cited, see the <a href="/geo-checklist/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO checklist</a> and the full <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation guide</a>.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="relative border-t hair mt-12 overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Get Your AI Readiness Audit</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        We audit your current technical, entity, and content readiness across all three layers — and deliver a prioritised remediation plan sequenced by impact. Results within two weeks.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request an AI readiness audit</a>
+        <a href="/geo-best-practices/" class="btn btn-ghost">View GEO best practices</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const faqBtns = document.querySelectorAll('#faq-accordion button');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+
+    const tocLinks = document.querySelectorAll('#toc-nav a');
+    const headings = Array.from(
+      document.querySelectorAll('h2[id], h3[id]')
+    ) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(link => {
+              link.classList.remove('text-[var(--accent)]');
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.classList.add('text-[var(--accent)]');
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+
+    headings.forEach(h => observer.observe(h));
+  </script>
+
+</Base>

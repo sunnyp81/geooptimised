@@ -1,0 +1,432 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO Metrics, KPIs & ROI | GEOoptimised';
+const description = 'Master GEO metrics, KPIs and ROI measurement for generative engine optimisation. Benchmarks, reporting frameworks and data for AI visibility programmes.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "headline": "GEO Metrics, KPIs & ROI",
+    "description": "A hub for GEO metrics, KPIs, ROI measurement and performance benchmarks covering AI citation analytics, budget planning, and the future of generative engine optimisation.",
+    "url": "https://geooptimised.com/geo-metrics/",
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "inLanguage": "en-GB",
+    "image": "https://geooptimised.com/og-image.png",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://geooptimised.com/#organization"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://geooptimised.com/#organization"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are the primary KPIs for a GEO programme?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The four primary KPIs for generative engine optimisation are citation frequency (the percentage of relevant queries for which your brand is cited across target AI platforms), AI share of voice (your citation rate relative to competitors for the same query set), brand accuracy score (how correctly AI platforms describe your brand when they do cite it), and cross-platform reach (the number of distinct AI platforms on which your brand is cited consistently). These four metrics form a minimum viable GEO measurement framework."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you calculate ROI for a GEO programme?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GEO ROI is calculated by attributing a monetary value to AI-driven demand — typically through incrementality testing, assisted conversion tracking, and brand search uplift analysis. The most reliable method is to establish a pre-programme baseline of AI citation frequency and brand search volume, implement optimisation changes, and measure the incremental change in both metrics over 90-day periods. For B2B brands, pipeline influence attribution via CRM tracking provides the most actionable ROI signal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should GEO metrics be reported?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Citation frequency and AI share of voice should be tracked weekly to detect rapid changes caused by platform updates or competitor activity. Monthly reporting is the standard cadence for stakeholder dashboards, combining weekly data into trend lines. Quarterly business reviews should cover ROI, budget efficiency, and strategic adjustments. Annual benchmarking against industry baselines contextualises performance relative to the wider GEO landscape."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a realistic budget for a GEO programme?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GEO programme budgets vary by organisation size and ambition. Entry-level programmes with manual tracking and basic content optimisation typically require GBP 1,500 to GBP 4,000 per month inclusive of tooling. Mid-tier programmes with dedicated tooling, regular content production, and entity optimisation run GBP 5,000 to GBP 15,000 per month. Enterprise programmes incorporating structured data overhauls, original research production, and full-stack monitoring can exceed GBP 20,000 per month. Budget allocation should weight measurement infrastructure and content production most heavily in the first six months."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do GEO metrics differ from AEO metrics?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GEO metrics and AEO (answer engine optimisation) metrics overlap substantially but are not identical. AEO metrics focus on featured snippet capture rate, voice search answer presence, and People Also Ask visibility — all of which are traditional search signals. GEO metrics focus on citation frequency in generative AI responses, brand entity accuracy, and AI share of voice across LLM platforms. The two frameworks complement each other: AEO metrics improve the content foundations that GEO depends on, while GEO metrics measure whether those foundations are translating into AI citation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does the future of GEO measurement look like?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GEO measurement is converging towards unified AI visibility dashboards that aggregate citation data across all major generative platforms, attribute AI-driven demand to specific content assets, and benchmark performance against category-level baselines. The emergence of first-party AI analytics — Google's Search Console beginning to surface AI Overview data, and OpenAI introducing publisher analytics — will give brands direct visibility into AI-driven traffic for the first time. Organisations building measurement infrastructure now will be best positioned to leverage these capabilities as they mature."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://geooptimised.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Generative Engine Optimisation",
+        "item": "https://geooptimised.com/generative-engine-optimisation/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "GEO Metrics, KPIs & ROI",
+        "item": "https://geooptimised.com/geo-metrics/"
+      }
+    ]
+  }
+];
+
+const seeds = [
+  {
+    icon: `<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>`,
+    tag: 'Data & Research',
+    title: 'GEO Statistics',
+    body: 'The latest data on AI search adoption, citation rates, and brand visibility benchmarks across major generative platforms.',
+    href: '/geo-statistics/',
+  },
+  {
+    icon: `<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>`,
+    tag: 'Market Intelligence',
+    title: 'GEO Market Size',
+    body: 'How large is the generative engine optimisation market, which verticals are growing fastest, and what investment levels are typical.',
+    href: '/geo-market-size/',
+  },
+  {
+    icon: `<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19v-6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2zm0 0V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v10m-6 0a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2m0 0V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"/></svg>`,
+    tag: 'Measurement',
+    title: 'How to Measure GEO',
+    body: 'A practical framework for setting up GEO measurement: query sets, platforms, reporting cadence, and baseline methodology.',
+    href: '/how-to-measure-geo/',
+  },
+  {
+    icon: `<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>`,
+    tag: 'Planning',
+    title: 'GEO Budget',
+    body: 'What to budget for a GEO programme at each maturity stage — tooling, content, entity work, and agency or in-house resource costs.',
+    href: '/geo-budget/',
+  },
+  {
+    icon: `<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>`,
+    tag: 'ROI',
+    title: 'AEO ROI',
+    body: 'How to attribute and calculate the return on investment from answer engine and generative engine optimisation programmes.',
+    href: '/aeo-roi/',
+  },
+  {
+    icon: `<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3m0 14v3M4.22 4.22l2.12 2.12m11.32 11.32 2.12 2.12M2 12h3m14 0h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>`,
+    tag: 'Strategy',
+    title: 'Future of GEO',
+    body: 'Where generative engine optimisation is heading: platform evolution, measurement maturation, and the long-term strategic outlook.',
+    href: '/future-of-geo/',
+  },
+  {
+    icon: `<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`,
+    tag: 'Analytics',
+    title: 'AI Citations Analytics',
+    body: 'Tools, techniques, and data models for tracking where, how often, and how accurately AI platforms cite your brand and content.',
+    href: '/ai-citations-analytics/',
+  },
+];
+
+const faqs = [
+  {
+    q: 'What are the primary KPIs for a GEO programme?',
+    a: 'The four primary KPIs for generative engine optimisation are citation frequency (the percentage of relevant queries for which your brand is cited across target AI platforms), AI share of voice (your citation rate relative to competitors for the same query set), brand accuracy score (how correctly AI platforms describe your brand when they do cite it), and cross-platform reach (the number of distinct AI platforms on which your brand is cited consistently). These four metrics form a minimum viable GEO measurement framework.',
+  },
+  {
+    q: 'How do you calculate ROI for a GEO programme?',
+    a: 'GEO ROI is calculated by attributing a monetary value to AI-driven demand — typically through incrementality testing, assisted conversion tracking, and brand search uplift analysis. The most reliable method is to establish a pre-programme baseline of AI citation frequency and brand search volume, implement optimisation changes, and measure the incremental change in both metrics over 90-day periods. For B2B brands, pipeline influence attribution via CRM tracking provides the most actionable ROI signal.',
+  },
+  {
+    q: 'How often should GEO metrics be reported?',
+    a: 'Citation frequency and AI share of voice should be tracked weekly to detect rapid changes caused by platform updates or competitor activity. Monthly reporting is the standard cadence for stakeholder dashboards, combining weekly data into trend lines. Quarterly business reviews should cover ROI, budget efficiency, and strategic adjustments. Annual benchmarking against industry baselines contextualises performance relative to the wider GEO landscape.',
+  },
+  {
+    q: 'What is a realistic budget for a GEO programme?',
+    a: 'GEO programme budgets vary by organisation size and ambition. Entry-level programmes with manual tracking and basic content optimisation typically require GBP 1,500 to GBP 4,000 per month inclusive of tooling. Mid-tier programmes with dedicated tooling, regular content production, and entity optimisation run GBP 5,000 to GBP 15,000 per month. Enterprise programmes incorporating structured data overhauls, original research production, and full-stack monitoring can exceed GBP 20,000 per month.',
+  },
+  {
+    q: 'Do GEO metrics differ from AEO metrics?',
+    a: 'GEO metrics and AEO (answer engine optimisation) metrics overlap substantially but are not identical. AEO metrics focus on featured snippet capture rate, voice search answer presence, and People Also Ask visibility — all of which are traditional search signals. GEO metrics focus on citation frequency in generative AI responses, brand entity accuracy, and AI share of voice across LLM platforms. The two frameworks complement each other: AEO metrics improve the content foundations that GEO depends on, while GEO metrics measure whether those foundations are translating into AI citation.',
+  },
+  {
+    q: 'What does the future of GEO measurement look like?',
+    a: 'GEO measurement is converging towards unified AI visibility dashboards that aggregate citation data across all major generative platforms, attribute AI-driven demand to specific content assets, and benchmark performance against category-level baselines. The emergence of first-party AI analytics — Google Search Console surfacing AI Overview data, and OpenAI introducing publisher analytics — will give brands direct visibility into AI-driven traffic for the first time.',
+  },
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/geo-metrics/" ogType="website">
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">Generative Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">GEO Metrics, KPIs &amp; ROI</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-fade relative overflow-hidden">
+    <div class="container-wide grid gap-12 pt-12 pb-20 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-7">
+        <span class="eyebrow">N9 — Metrics &amp; ROI Hub</span>
+        <h1 class="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <span class="grad-text">GEO Metrics, KPIs &amp; ROI</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-300">
+          <strong class="text-white">GEO metrics are the measurement layer that turns AI visibility from aspiration into accountable business performance.</strong> This hub covers every quantitative dimension of a generative engine optimisation programme — from citation frequency KPIs and AI share of voice through to budget planning, ROI attribution, and the statistical benchmarks that contextualise your results against the market.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/contact/" class="btn btn-primary">Discuss Your GEO Measurement</a>
+          <a href="/generative-engine-optimisation/" class="btn btn-ghost">GEO Root Guide</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="card p-6">
+          <span class="eyebrow">At a glance</span>
+          <div class="mt-4 grid grid-cols-2 gap-6">
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">4</p>
+              <p class="mt-1 text-sm text-ink-400">Primary KPIs tracked</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">5+</p>
+              <p class="mt-1 text-sm text-ink-400">AI platforms measured</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">7</p>
+              <p class="mt-1 text-sm text-ink-400">Topic guides below</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">90-day</p>
+              <p class="mt-1 text-sm text-ink-400">Baseline period</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Seed Card Grid -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">Topics in this hub</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Metrics, Data &amp; ROI Guides</h2>
+    <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed">
+      Each guide below covers a distinct dimension of GEO measurement — from raw statistics and market data through to ROI methodology and long-term strategic forecasting. Use them as a curriculum to build a full-stack GEO measurement capability.
+    </p>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {seeds.map(seed => (
+        <a href={seed.href} class="card card-hover block p-7 flex flex-col no-underline group">
+          <div class="flex h-11 w-11 items-center justify-center rounded-lg border border-[var(--line)] text-[var(--accent)]">
+            <Fragment set:html={seed.icon} />
+          </div>
+          <span class="eyebrow mt-5">{seed.tag}</span>
+          <h3 class="mt-2 font-display text-lg font-semibold text-ink-50 group-hover:text-[var(--accent)] transition-colors">{seed.title}</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300 flex-1">{seed.body}</p>
+          <span class="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-[var(--accent)]">
+            Read guide <span aria-hidden="true">&rarr;</span>
+          </span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- What to Measure Section with table -->
+  <section class="container-wide py-20 border-t hair">
+    <span class="eyebrow">Measurement Framework</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">What to Measure in a GEO Programme</h2>
+    <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed">
+      <strong class="text-white">A robust GEO measurement framework covers four reporting layers: platform metrics, brand metrics, content metrics, and commercial metrics.</strong> Each layer answers a different question and informs a different set of decisions. Programmes that track only one layer — typically citation frequency — lack the diagnostic depth to identify root causes and prioritise interventions.
+    </p>
+
+    <p class="mt-5 max-w-2xl text-ink-300 leading-relaxed">
+      The table below maps each metric to its reporting layer, measurement cadence, and the decision it drives. Use it to design a reporting structure that matches your programme's maturity and your stakeholders' requirements.
+    </p>
+
+    <div class="mt-10 overflow-x-auto rounded-xl border border-[var(--line)]">
+      <table class="w-full text-sm text-left">
+        <thead class="bg-geo-900/60">
+          <tr>
+            <th scope="col" class="px-5 py-4 font-display font-semibold text-ink-100 whitespace-nowrap">Metric</th>
+            <th scope="col" class="px-5 py-4 font-display font-semibold text-ink-100 whitespace-nowrap">Reporting Layer</th>
+            <th scope="col" class="px-5 py-4 font-display font-semibold text-ink-100 whitespace-nowrap">Cadence</th>
+            <th scope="col" class="px-5 py-4 font-display font-semibold text-ink-100">Decision Driven</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-[var(--line)]">
+          <tr class="hover:bg-geo-900/30 transition-colors">
+            <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">Citation Frequency</td>
+            <td class="px-5 py-4 text-ink-300">Platform</td>
+            <td class="px-5 py-4 text-ink-300">Weekly</td>
+            <td class="px-5 py-4 text-ink-300">Overall programme health; platform prioritisation</td>
+          </tr>
+          <tr class="hover:bg-geo-900/30 transition-colors">
+            <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">AI Share of Voice</td>
+            <td class="px-5 py-4 text-ink-300">Platform</td>
+            <td class="px-5 py-4 text-ink-300">Monthly</td>
+            <td class="px-5 py-4 text-ink-300">Competitive positioning; budget allocation vs rivals</td>
+          </tr>
+          <tr class="hover:bg-geo-900/30 transition-colors">
+            <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">Brand Accuracy Score</td>
+            <td class="px-5 py-4 text-ink-300">Brand</td>
+            <td class="px-5 py-4 text-ink-300">Monthly</td>
+            <td class="px-5 py-4 text-ink-300">Entity data corrections; content clarification priorities</td>
+          </tr>
+          <tr class="hover:bg-geo-900/30 transition-colors">
+            <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">Cross-Platform Reach</td>
+            <td class="px-5 py-4 text-ink-300">Brand</td>
+            <td class="px-5 py-4 text-ink-300">Monthly</td>
+            <td class="px-5 py-4 text-ink-300">Platform gap identification; retrieval optimisation focus</td>
+          </tr>
+          <tr class="hover:bg-geo-900/30 transition-colors">
+            <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">Citation Position</td>
+            <td class="px-5 py-4 text-ink-300">Brand</td>
+            <td class="px-5 py-4 text-ink-300">Monthly</td>
+            <td class="px-5 py-4 text-ink-300">Content authority investment; competitive differentiation</td>
+          </tr>
+          <tr class="hover:bg-geo-900/30 transition-colors">
+            <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">Cited URL Coverage</td>
+            <td class="px-5 py-4 text-ink-300">Content</td>
+            <td class="px-5 py-4 text-ink-300">Monthly</td>
+            <td class="px-5 py-4 text-ink-300">Content audit; underperforming page optimisation</td>
+          </tr>
+          <tr class="hover:bg-geo-900/30 transition-colors">
+            <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">Query Coverage Rate</td>
+            <td class="px-5 py-4 text-ink-300">Content</td>
+            <td class="px-5 py-4 text-ink-300">Monthly</td>
+            <td class="px-5 py-4 text-ink-300">Content gap analysis; SEED page production roadmap</td>
+          </tr>
+          <tr class="hover:bg-geo-900/30 transition-colors">
+            <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">AI-Attributed Pipeline</td>
+            <td class="px-5 py-4 text-ink-300">Commercial</td>
+            <td class="px-5 py-4 text-ink-300">Quarterly</td>
+            <td class="px-5 py-4 text-ink-300">Board-level ROI reporting; budget justification</td>
+          </tr>
+          <tr class="hover:bg-geo-900/30 transition-colors">
+            <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">Brand Search Uplift</td>
+            <td class="px-5 py-4 text-ink-300">Commercial</td>
+            <td class="px-5 py-4 text-ink-300">Quarterly</td>
+            <td class="px-5 py-4 text-ink-300">Demand generation attribution; GEO vs paid comparison</td>
+          </tr>
+          <tr class="hover:bg-geo-900/30 transition-colors">
+            <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">Cost per AI Citation</td>
+            <td class="px-5 py-4 text-ink-300">Commercial</td>
+            <td class="px-5 py-4 text-ink-300">Quarterly</td>
+            <td class="px-5 py-4 text-ink-300">Programme efficiency; tooling and agency spend review</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-12 space-y-6 max-w-3xl">
+      <p class="text-ink-300 leading-relaxed">
+        <strong class="text-white">Platform metrics tell you the scale of your AI visibility; content metrics tell you why you have it.</strong> Brands that measure only citation frequency can confirm whether their programme is working in aggregate but cannot identify which pages are driving citations, which query intents are covered, or where competitors are gaining ground. Content-layer metrics — cited URL coverage and query coverage rate — provide the diagnostic depth that drives optimisation decisions.
+      </p>
+      <p class="text-ink-300 leading-relaxed">
+        Commercial metrics are the bridge between GEO activity and business outcomes. Without them, GEO remains a marketing KPI rather than a boardroom conversation. The most important commercial metric is AI-attributed pipeline: deals where the prospect's first touchpoint was an AI-generated answer citing your brand. Capturing this attribution requires first-touch UTM tagging on AI referral traffic, CRM integration, and periodic customer survey data asking prospects how they first encountered your brand.
+      </p>
+      <p class="text-ink-300 leading-relaxed">
+        For a full guide to building a measurement system for your programme, see <a href="/how-to-measure-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how to measure GEO</a>. For the statistical context that frames your results, visit our <a href="/geo-statistics/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO statistics</a> guide. The broader discipline is covered in our <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> root guide.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="container-wide py-20 border-t hair">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">GEO Metrics: Frequently Asked Questions</h2>
+
+    <div class="mt-10 max-w-3xl divide-y divide-[var(--line)]">
+      {faqs.map(faq => (
+        <div class="faq-item">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between py-5 text-left font-display text-base font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors"
+            aria-expanded="false"
+          >
+            <span>{faq.q}</span>
+            <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+            </svg>
+          </button>
+          <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+            <p class="pb-5 text-sm text-ink-300 leading-relaxed">{faq.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="container-wide py-20">
+    <div class="relative overflow-hidden rounded-2xl dot-grid">
+      <div class="absolute inset-0 bg-gradient-to-br from-[rgba(var(--accent-glow),.12)] via-transparent to-transparent"></div>
+      <div class="relative px-8 py-16 text-center sm:px-16">
+        <span class="eyebrow">GEO Measurement</span>
+        <h2 class="mt-4 font-display text-3xl font-bold text-ink-50 sm:text-4xl">Ready to Put Numbers on Your AI Visibility?</h2>
+        <p class="mt-4 mx-auto max-w-2xl text-ink-300 leading-relaxed">
+          GEOoptimised builds measurement frameworks that connect AI citation data to commercial outcomes. Whether you need a baseline assessment, an ongoing reporting infrastructure, or help making the ROI case internally, we can help. Get in touch to discuss your programme.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact/" class="btn btn-primary">Discuss GEO Measurement</a>
+          <a href="/generative-engine-optimisation/" class="btn btn-ghost">Back to GEO Root Guide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = '0';
+            other.closest('.faq-item').querySelector('.faq-icon').style.transform = '';
+          }
+        });
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+        icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+      });
+    });
+  </script>
+
+</Base>

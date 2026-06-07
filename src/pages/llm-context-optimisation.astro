@@ -1,0 +1,542 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'LLM Context Optimisation: Survive Chunking & Retrieval — GEOoptimised';
+const description = 'LLM context optimization: how to write and structure content so it survives chunking, fits retrieval windows, and gets extracted accurately by AI systems.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: 'LLM Context Optimisation: Survive Chunking and Retrieval',
+  description,
+  url: 'https://geooptimised.com/llm-context-optimisation/',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  inLanguage: 'en-GB',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/llm-context-optimisation/'
+  },
+  image: 'https://geooptimised.com/og-image.png',
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' }
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is LLM context optimisation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'LLM context optimisation is the practice of structuring content so that it survives the chunking and retrieval process intact and can be extracted accurately by AI systems operating within a finite context window. When an AI retrieval system processes a document, it breaks it into chunks, retrieves the most relevant chunks, and inserts them into a context window for the language model to read. Content that is poorly structured loses critical context during this process; content that is optimised for chunking retains its meaning at the passage level and produces more accurate AI citations.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'What is a context window and why does it matter for content?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A context window is the maximum amount of text a language model can process in a single inference — measured in tokens, where roughly 750 words equals 1,000 tokens. When a RAG pipeline retrieves documents, it inserts selected chunks into the context window alongside the user query. Only content that fits within this window is read by the model. Content optimised for context windows is divided into self-contained sections of 150–400 words, uses explicit headings that provide context without the surrounding prose, and avoids dense preambles that consume token budget before the key information appears.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'How does content chunking work in AI retrieval systems?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Content chunking is the process by which a retrieval system divides a document into segments before indexing. Common chunking strategies include fixed-size chunking (splitting at every N tokens), sentence-level chunking (splitting at sentence boundaries), and semantic chunking (splitting at natural topic transitions). Each strategy has different failure modes. Fixed-size chunking can split mid-sentence; sentence chunking can lose structural context; semantic chunking is most accurate but computationally expensive. Content writers cannot control which strategy a given platform uses, but writing in self-contained paragraphs with explicit topic sentences ensures reasonable fidelity across all three approaches.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'What is a self-contained passage and how do I write one?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A self-contained passage is a paragraph or section that conveys complete, accurate meaning without requiring the reader to reference surrounding content. To write self-contained passages: open every section with a topic sentence that states the key claim; avoid pronouns that reference earlier sections (use the full noun instead); include all necessary context — dates, units, entity names — within the passage itself; and close with a sentence that summarises the takeaway. A reader who encounters only this passage in isolation should receive a complete and accurate impression of the point being made.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Does page length affect how well content is retrieved by AI systems?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Page length affects retrieval in two ways. Very short pages (under 400 words) may lack the depth signals that retrieval systems use to assess authority — they can be retrieved but may score lower on relevance. Very long pages (over 5,000 words) introduce chunking complexity: retrieval systems may select only the most relevant chunks, which may or may not include your key claims. The optimal range for citation-targeted pages is 1,000–2,500 words, structured as discrete self-contained sections of 150–400 words each, so that any single chunk retrieved contains a complete, citable answer.'
+      }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'AI Brand Visibility', item: 'https://geooptimised.com/ai-brand-visibility/' },
+    { '@type': 'ListItem', position: 3, name: 'LLM Context Optimisation', item: 'https://geooptimised.com/llm-context-optimisation/' }
+  ]
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'what-is-context-optimisation', label: 'What Context Optimisation Means' },
+  { id: 'chunking-mechanics', label: 'How Chunking Works' },
+  { id: 'context-window', label: 'Context Windows Explained' },
+  { id: 'writing-self-contained', label: 'Self-Contained Passages' },
+  { id: 'structure-table', label: 'Structure Reference Table' },
+  { id: 'common-failures', label: 'Common Chunking Failures' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' }
+];
+
+const faqs = [
+  {
+    q: 'What is LLM context optimisation?',
+    a: 'LLM context optimisation is the practice of structuring content so that it survives the chunking and retrieval process intact and can be extracted accurately by AI systems operating within a finite context window. When an AI retrieval system processes a document, it breaks it into chunks, retrieves the most relevant chunks, and inserts them into a context window for the language model to read. Content that is poorly structured loses critical context during this process; content that is optimised for chunking retains its meaning at the passage level and produces more accurate AI citations.'
+  },
+  {
+    q: 'What is a context window and why does it matter for content?',
+    a: 'A context window is the maximum amount of text a language model can process in a single inference — measured in tokens, where roughly 750 words equals 1,000 tokens. When a RAG pipeline retrieves documents, it inserts selected chunks into the context window alongside the user query. Only content that fits within this window is read by the model. Content optimised for context windows is divided into self-contained sections of 150–400 words, uses explicit headings that provide context without the surrounding prose, and avoids dense preambles that consume token budget before the key information appears.'
+  },
+  {
+    q: 'How does content chunking work in AI retrieval systems?',
+    a: 'Content chunking is the process by which a retrieval system divides a document into segments before indexing. Common chunking strategies include fixed-size chunking (splitting at every N tokens), sentence-level chunking (splitting at sentence boundaries), and semantic chunking (splitting at natural topic transitions). Each strategy has different failure modes. Fixed-size chunking can split mid-sentence; sentence chunking can lose structural context; semantic chunking is most accurate but computationally expensive. Content writers cannot control which strategy a given platform uses, but writing in self-contained paragraphs with explicit topic sentences ensures reasonable fidelity across all three approaches.'
+  },
+  {
+    q: 'What is a self-contained passage and how do I write one?',
+    a: 'A self-contained passage is a paragraph or section that conveys complete, accurate meaning without requiring the reader to reference surrounding content. To write self-contained passages: open every section with a topic sentence that states the key claim; avoid pronouns that reference earlier sections (use the full noun instead); include all necessary context — dates, units, entity names — within the passage itself; and close with a sentence that summarises the takeaway. A reader who encounters only this passage in isolation should receive a complete and accurate impression of the point being made.'
+  },
+  {
+    q: 'Does page length affect how well content is retrieved by AI systems?',
+    a: 'Page length affects retrieval in two ways. Very short pages (under 400 words) may lack the depth signals that retrieval systems use to assess authority — they can be retrieved but may score lower on relevance. Very long pages (over 5,000 words) introduce chunking complexity: retrieval systems may select only the most relevant chunks, which may or may not include your key claims. The optimal range for citation-targeted pages is 1,000–2,500 words, structured as discrete self-contained sections of 150–400 words each, so that any single chunk retrieved contains a complete, citable answer.'
+  }
+];
+
+const related = [
+  {
+    tag: 'Parent NODE',
+    title: 'AI Brand Visibility: How to Get Cited by LLMs',
+    excerpt: 'The five pillars of AI brand visibility, measurement framework, and content patterns that drive LLM citations.',
+    href: '/ai-brand-visibility/'
+  },
+  {
+    tag: 'Companion Guide',
+    title: 'LLM Visibility Optimisation',
+    excerpt: 'The concepts and tactics that determine whether your brand appears inside AI-generated answers — from entity authority to citation-ready content.',
+    href: '/llm-visibility-optimisation/'
+  },
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'The full GEO framework — from first principles through to advanced entity strategy and measurement.',
+    href: '/generative-engine-optimisation/'
+  }
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/llm-context-optimisation/" ogType="article">
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/ai-brand-visibility/" class="transition hover:text-[var(--accent)]">AI Brand Visibility</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">LLM Context Optimisation</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Technical Guide</span>
+        <span class="font-mono text-xs text-ink-400">7 Jun 2026</span>
+        <span class="font-mono text-xs text-ink-400">13 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        LLM Context Optimisation
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">LLM context optimization</strong> addresses a problem most content teams have never considered: your content may be excellent, but if it doesn't survive the chunking and retrieval process intact, the AI never reads the part that matters. This guide covers the mechanics of how language models process documents and the structural techniques that maximise the accuracy of what gets extracted.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>AI retrieval systems chunk documents before indexing — content that spans chunk boundaries loses context and is cited inaccurately or not at all.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Self-contained passages of 150–400 words are the fundamental unit of context-optimised content — interpretable in isolation, regardless of where chunking cuts.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Context windows are finite — front-load key claims so they appear in the first 150 words of any section, not buried after long preambles.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Explicit section headings that function as standalone labels — not clever titles — significantly improve chunk-level retrieval accuracy.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1 -->
+      <section id="what-is-context-optimisation" class="anchor-top prose-dark mb-16">
+        <h2>What LLM Context Optimisation Means</h2>
+
+        <p>
+          <strong>LLM context optimisation is the practice of engineering content structure so that the right information is preserved — and correctly attributed — after the retrieval and extraction process that AI systems apply before generating a response.</strong>
+          It is a layer of technical content work that sits beneath the visible quality of writing and determines whether good content is actually usable by an AI system.
+        </p>
+
+        <p>
+          Most content strategy discussions focus on what is written: the quality of arguments, the depth of evidence, the accuracy of claims. Context optimisation focuses on how content is written: the size of paragraphs, the structure of headings, the self-sufficiency of individual passages, and the token efficiency of each section. These structural properties determine what survives when an AI system breaks a document into pieces, retrieves the most relevant pieces, and assembles them into a context window.
+        </p>
+
+        <p>
+          LLM context optimisation is closely related to — but distinct from — <a href="/llm-visibility-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">LLM visibility optimisation</a>. Visibility optimisation addresses whether your brand appears in AI responses; context optimisation addresses whether the content that does appear is extracted accurately and completely. Both are required for a functional <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility</a> programme, and both feed into the broader <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> discipline.
+        </p>
+
+        <h3>Why This Is a Separate Discipline</h3>
+        <p>
+          A page with excellent prose quality but poor context structure can produce misleading AI citations: the model retrieves a chunk that contains part of a nuanced argument, extracts it without the qualifications in adjacent chunks, and presents a simplified or distorted version as a citation. The brand is cited — but inaccurately. Context optimisation is the structural discipline that prevents this failure mode, ensuring that every extractable unit of content delivers an accurate, attributable representation of the brand's expertise.
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="chunking-mechanics" class="anchor-top prose-dark mb-16">
+        <h2>How Content Chunking Works in AI Retrieval</h2>
+
+        <p>
+          <strong>Chunking is the process by which a retrieval system divides a document into discrete segments before indexing — and it is the single most consequential processing step for determining whether content is cited accurately.</strong>
+          Understanding how it works allows content writers to structure documents that perform well regardless of which chunking strategy a given platform uses.
+        </p>
+
+        <p>
+          Retrieval-augmented generation (RAG) systems cannot insert an entire document into a context window — documents are too long and context windows are finite. Instead, the system chunks documents into segments, embeds each chunk as a vector, and stores those vectors in an index. At query time, the system embeds the query, retrieves the most semantically similar chunks, and inserts them into the context window alongside the query.
+        </p>
+
+        <h3>Fixed-Size Chunking</h3>
+        <p>
+          Fixed-size chunking splits documents at regular token intervals — for example, every 256 or 512 tokens — with or without an overlap window. It is the simplest and most commonly used approach. Its failure mode is boundary splitting: a chunk that begins mid-argument or mid-sentence provides incomplete context to the model. Content writers can mitigate this by ensuring every paragraph is a complete, self-contained unit that makes sense at any position within a fixed-size window.
+        </p>
+
+        <h3>Sentence and Paragraph Chunking</h3>
+        <p>
+          Sentence and paragraph chunking splits at natural language boundaries — full stops or paragraph breaks. This approach preserves grammatical completeness but can still lose structural context when a paragraph references concepts established many paragraphs earlier. The mitigation is the same: write paragraphs that are contextually self-sufficient, not reliant on cross-paragraph reference chains.
+        </p>
+
+        <h3>Semantic Chunking</h3>
+        <p>
+          Semantic chunking uses embeddings to identify topic transitions within a document and splits at those boundaries. It is the most context-preserving approach but is computationally expensive and not universally deployed. Content structured with clear topical sections — each introduced by an explicit heading and developed within 150–400 words before transitioning — performs optimally under semantic chunking because the section boundaries align naturally with the semantic splits.
+        </p>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="context-window" class="anchor-top prose-dark mb-16">
+        <h2>Context Windows: What They Are and Why They Constrain Content</h2>
+
+        <p>
+          <strong>A context window is the total amount of text a language model can read and reason over in a single inference — and the chunks retrieved from your content must fit within it alongside the query and the model's system prompt.</strong>
+          Even models with large context windows (100,000+ tokens) typically insert only a small number of retrieved chunks per query, because relevance scoring limits how many sources are injected.
+        </p>
+
+        <p>
+          In practice, a RAG pipeline typically inserts between two and eight retrieved chunks into the context window. If each chunk is 300 tokens, that represents 600–2,400 tokens of retrieved content. This means that for any given query, only a small fraction of your total content is ever read by the model — specifically, the chunks that scored highest on semantic similarity to the query.
+        </p>
+
+        <p>
+          The implication for content structure is significant: every section of your content must be capable of independently supporting a citation, because you cannot predict or control which sections will be retrieved for a given query. A page with a strong introduction but a weak middle section will be cited well when the introduction's chunk is retrieved and cited poorly or not at all when a middle-section chunk is retrieved.
+        </p>
+
+        <h3>Token Budget Efficiency</h3>
+        <p>
+          Token budget efficiency is the ratio of meaningful, citable content to total tokens in a chunk. Long preambles, transitional phrases, and hedging language consume token budget without contributing citable content. Content optimised for token efficiency places the key claim in the first sentence of each paragraph, uses precise language rather than hedged commentary, and avoids throat-clearing introductions that delay the informational payload. This is not a stylistic choice — it is a structural property that directly affects which claims appear in the retrievable portion of each chunk.
+        </p>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="writing-self-contained" class="anchor-top prose-dark mb-16">
+        <h2>Writing Self-Contained Passages</h2>
+
+        <p>
+          <strong>The self-contained passage — a unit of text that delivers complete, accurate meaning without requiring surrounding context — is the fundamental building block of context-optimised content.</strong>
+          Every paragraph on a citation-targeted page should meet this criterion: if extracted in isolation by a retrieval system, it should convey a correct and attributable representation of the point being made.
+        </p>
+
+        <p>
+          Writing self-contained passages requires five structural disciplines applied consistently:
+        </p>
+
+        <div class="not-prose mt-6 space-y-4">
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">1. Topic sentence first</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Begin every paragraph with a sentence that states the key claim or definition. Do not build to the point — state it, then support it. "Schema markup reduces AI retrieval ambiguity" is a topic sentence. "When thinking about how structured data interacts with language model retrieval, one consideration worth noting is..." is not.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">2. Eliminate pronoun dependencies</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Pronouns that refer to entities named in earlier paragraphs break self-containedness. Replace "it", "they", "this approach", and "the above" with full noun references. A chunk that begins "This is most effective when combined with..." is uninterpretable in isolation; a chunk that begins "Entity schema optimisation is most effective when combined with FAQPage markup..." is not.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">3. Include contextual metadata within passages</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Dates, units, platform names, version numbers, and source names should appear within each passage that cites them, not assumed from a surrounding section header. A reader (or model) who encounters only this paragraph should not need to look elsewhere to understand what platform, timeframe, or organisation is being discussed.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">4. Use headings as standalone labels</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Section headings serve a dual purpose: they organise the document for human readers and they provide context for the chunks that follow. Headings that function as standalone labels — "Schema Markup for AI Retrieval" rather than "Going Further" — improve the accuracy of semantic chunking and provide context that some retrieval systems prepend to the chunks beneath each heading.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">5. Limit passages to 150–400 words</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Passages shorter than 150 words often lack sufficient context for accurate extraction. Passages longer than 400 words increase the risk of spanning chunk boundaries and losing tail content. The 150–400 word range optimises for self-containedness, token efficiency, and boundary alignment across the most common chunking strategies deployed in production RAG systems.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 5: Structure Reference Table -->
+      <section id="structure-table" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Content Structure Reference: Context Optimisation</h2>
+          <p>
+            <strong>Different structural choices have measurably different effects on chunk quality and retrieval accuracy.</strong>
+            The table below contrasts context-optimised patterns with common anti-patterns, with notes on the retrieval impact of each.
+          </p>
+        </div>
+
+        <div class="mt-8 overflow-x-auto rounded-lg border border-geo-700">
+          <table class="min-w-full text-sm">
+            <thead>
+              <tr class="border-b border-geo-700 bg-geo-900">
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Structural Element</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Optimised Pattern</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Anti-Pattern</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Retrieval Impact</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-geo-800">
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">Paragraph opening</td>
+                <td class="px-4 py-3 text-ink-300">Declarative topic sentence with key claim</td>
+                <td class="px-4 py-3 text-ink-300">Build-up / contextual preamble</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">High</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-ink-100">Pronoun use</td>
+                <td class="px-4 py-3 text-ink-300">Full noun references throughout</td>
+                <td class="px-4 py-3 text-ink-300">Cross-paragraph pronouns (it / they / this)</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">High</td>
+              </tr>
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">Section headings</td>
+                <td class="px-4 py-3 text-ink-300">Descriptive labels ("Schema Types for AI")</td>
+                <td class="px-4 py-3 text-ink-300">Vague or clever titles ("The Next Level")</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">High</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-ink-100">Passage length</td>
+                <td class="px-4 py-3 text-ink-300">150–400 words per section</td>
+                <td class="px-4 py-3 text-ink-300">Under 100 or over 800 words</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">Medium</td>
+              </tr>
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">Contextual metadata</td>
+                <td class="px-4 py-3 text-ink-300">Dates/platforms/entities named in each section</td>
+                <td class="px-4 py-3 text-ink-300">Assumed from earlier sections or headings</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">Medium</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-ink-100">Language precision</td>
+                <td class="px-4 py-3 text-ink-300">Specific, quantified, attributable claims</td>
+                <td class="px-4 py-3 text-ink-300">Hedged, vague, or heavily qualified prose</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">Medium</td>
+              </tr>
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">FAQ answers</td>
+                <td class="px-4 py-3 text-ink-300">2–5 sentences, self-contained, specific</td>
+                <td class="px-4 py-3 text-ink-300">Single sentence or multi-paragraph</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">High</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 6 -->
+      <section id="common-failures" class="anchor-top prose-dark mb-16">
+        <h2>Common Context Optimisation Failures</h2>
+
+        <p>
+          <strong>Most context optimisation failures are invisible to human readers but detectable in AI citation outputs — the brand is cited, but inaccurately, incompletely, or out of context.</strong>
+          Understanding the most common failure modes allows content teams to audit existing pages systematically and prioritise fixes.
+        </p>
+
+        <h3>The Inverted Pyramid Problem</h3>
+        <p>
+          Many content writers follow a journalistic inverted pyramid structure at the page level — leading with the most important information — but then write individual sections in a build-up style that buries the key claim at the end of each paragraph. When a retrieval system extracts the first 200 tokens of such a section, it captures the preamble but not the conclusion. The fix is to apply inverted pyramid structure at the paragraph level, not just the page level: state the claim first, then elaborate.
+        </p>
+
+        <h3>The Shared Context Problem</h3>
+        <p>
+          Content that relies on context established earlier in the same document creates shared-context dependencies that break under chunking. A section titled "Applying This Approach" that refers to a method described three sections earlier becomes meaningless if extracted in isolation. Every section should be written as though the reader has not read the preceding sections — because, in a chunked retrieval context, the model often hasn't.
+        </p>
+
+        <h3>The Hedge Chain Problem</h3>
+        <p>
+          Heavily hedged content — "it might be worth considering whether, in some contexts, there could be an argument that…" — is tokeniser-inefficient and citation-resistant. AI systems prefer confident, attributable claims. Hedging is appropriate where genuine uncertainty exists, but reflexive hedging applied to well-established practices consumes token budget and reduces the extractability of the underlying claim. Replace hedge chains with specific caveats: "This approach is most effective for B2B SaaS brands; consumer product brands may see lower citation uplift."
+        </p>
+
+        <p>
+          Context optimisation is one layer of the full <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility</a> framework. For platform-specific retrieval patterns across ChatGPT, Perplexity, and Gemini, see our guide to <a href="/optimise-for-ai-platforms/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">optimising for specific AI platforms</a>. For the complete strategic context, see the <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> guide.
+        </p>
+      </section>
+
+      <!-- FAQ -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Audit Your Content for Context Optimisation</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Most content teams publish pages that are well-written but structurally unsuitable for AI retrieval. GEOoptimised audits your key pages against the full context optimisation framework — identifying chunking vulnerabilities, shared-context dependencies, and passage-level extractability failures — and delivers a prioritised remediation plan.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request a content structure audit</a>
+        <a href="/ai-brand-visibility/" class="btn btn-ghost">Explore AI brand visibility</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

@@ -1,0 +1,604 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Answer Box Optimisation: Win Featured Snippets | GEOoptimised';
+const description = 'Google answer box optimization: the content structure, schema markup, and formatting signals that win featured snippets and feed AI-generated answers across search platforms.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: 'Answer Box Optimisation',
+  description,
+  url: 'https://geooptimised.com/answer-box-optimisation/',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  inLanguage: 'en-GB',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/answer-box-optimisation/',
+  },
+  image: 'https://geooptimised.com/og-image.png',
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is a Google answer box?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A Google answer box — also called a featured snippet — is a highlighted result that appears at the top of Google search results, above the ranked blue links. It displays a direct answer to the query, pulled from a web page, along with the page title and URL. Answer boxes take several forms: paragraph snippets (a concise written answer), list snippets (ordered or unordered steps or items), and table snippets (structured data comparisons). They are the primary source from which Google AI Overviews extract cited content for informational queries.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does winning a featured snippet help with AI search?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Winning a featured snippet for a query significantly increases the probability that your content is cited in Google AI Overviews for the same query. Google AI Overviews draw preferentially from pages that already occupy high organic positions and featured snippet positions for the target query. A page with a featured snippet has already been evaluated by Google as the best direct answer to that question — making it a high-confidence retrieval candidate for the AI Overview system as well.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What content structure wins featured snippets?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Featured snippets are won by content that directly and concisely answers the query question within the first 40 to 60 words of a section, uses the query phrase or a close variant as a heading, and structures the answer in a format that matches the expected snippet type for that query (paragraph, ordered list, or table). The answer should be preceded by a subheading that mirrors the user\'s question. Definition-style openings — beginning the answer with "X is..." or "X refers to..." — are particularly effective for paragraph snippets.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does schema markup help win answer boxes?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Schema markup does not directly cause Google to award a featured snippet — featured snippets are determined by content quality and relevance, not schema. However, FAQPage schema increases the surface area of content that Google and other AI platforms can extract for direct answers, and it maps directly onto the structured answer format used by AI Overview systems. For non-Google AI platforms like Perplexity and ChatGPT, FAQPage and TechArticle schema are more directly influential on retrieval and citation.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between a featured snippet and an AI Overview?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A featured snippet displays a single extracted passage from a single page, with attribution. A Google AI Overview synthesises content from multiple sources into a generated response, with citations to the contributing pages. AI Overviews are more likely to appear for complex, multi-faceted queries; featured snippets dominate for direct, definitional queries. Pages that win featured snippets frequently also appear as cited sources in AI Overviews for related queries — making featured snippet optimisation a foundation strategy for both surfaces.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I lose a featured snippet after winning it?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Featured snippets are reassigned continuously as Google re-evaluates search results. Common causes of featured snippet loss include: a competitor publishing more directly structured content for the same query; your page dropping in organic ranking (featured snippets are almost always drawn from pages in the top 10); your content becoming outdated relative to the query intent; and Google changing the snippet format for the query type (e.g., switching from paragraph to list). Monitoring featured snippet holdings with a tool like Semrush or Ahrefs and updating content when positions are lost is essential maintenance.',
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'AI Brand Visibility', item: 'https://geooptimised.com/ai-brand-visibility/' },
+    { '@type': 'ListItem', position: 3, name: 'Answer Box Optimisation', item: 'https://geooptimised.com/answer-box-optimisation/' },
+  ],
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'what-is-answer-box', label: 'What an Answer Box Is' },
+  { id: 'answer-box-types', label: 'Answer Box Types' },
+  { id: 'ai-connection', label: 'Answer Boxes and AI Search' },
+  { id: 'content-signals', label: 'Content Signals That Win' },
+  { id: 'snippet-types-table', label: 'Snippet Type Reference' },
+  { id: 'schema-role', label: 'Role of Schema Markup' },
+  { id: 'implementation', label: 'Optimisation Checklist' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const faqs = [
+  {
+    q: 'What is a Google answer box?',
+    a: 'A Google answer box — also called a featured snippet — is a highlighted result that appears at the top of Google search results, above the ranked blue links. It displays a direct answer to the query, pulled from a web page, along with the page title and URL. Answer boxes take several forms: paragraph snippets (a concise written answer), list snippets (ordered or unordered steps or items), and table snippets (structured data comparisons). They are the primary source from which Google AI Overviews extract cited content for informational queries.',
+  },
+  {
+    q: 'How does winning a featured snippet help with AI search?',
+    a: 'Winning a featured snippet for a query significantly increases the probability that your content is cited in Google AI Overviews for the same query. Google AI Overviews draw preferentially from pages that already occupy high organic positions and featured snippet positions for the target query. A page with a featured snippet has already been evaluated by Google as the best direct answer to that question — making it a high-confidence retrieval candidate for the AI Overview system as well.',
+  },
+  {
+    q: 'What content structure wins featured snippets?',
+    a: "Featured snippets are won by content that directly and concisely answers the query question within the first 40 to 60 words of a section, uses the query phrase or a close variant as a heading, and structures the answer in a format that matches the expected snippet type for that query (paragraph, ordered list, or table). The answer should be preceded by a subheading that mirrors the user's question. Definition-style openings — beginning the answer with \"X is...\" or \"X refers to...\" — are particularly effective for paragraph snippets.",
+  },
+  {
+    q: 'Does schema markup help win answer boxes?',
+    a: 'Schema markup does not directly cause Google to award a featured snippet — featured snippets are determined by content quality and relevance, not schema. However, FAQPage schema increases the surface area of content that Google and other AI platforms can extract for direct answers, and it maps directly onto the structured answer format used by AI Overview systems. For non-Google AI platforms like Perplexity and ChatGPT, FAQPage and TechArticle schema are more directly influential on retrieval and citation.',
+  },
+  {
+    q: 'What is the difference between a featured snippet and an AI Overview?',
+    a: 'A featured snippet displays a single extracted passage from a single page, with attribution. A Google AI Overview synthesises content from multiple sources into a generated response, with citations to the contributing pages. AI Overviews are more likely to appear for complex, multi-faceted queries; featured snippets dominate for direct, definitional queries. Pages that win featured snippets frequently also appear as cited sources in AI Overviews for related queries — making featured snippet optimisation a foundation strategy for both surfaces.',
+  },
+  {
+    q: 'Can I lose a featured snippet after winning it?',
+    a: 'Yes. Featured snippets are reassigned continuously as Google re-evaluates search results. Common causes of featured snippet loss include: a competitor publishing more directly structured content for the same query; your page dropping in organic ranking (featured snippets are almost always drawn from pages in the top 10); your content becoming outdated relative to the query intent; and Google changing the snippet format for the query type (e.g., switching from paragraph to list). Monitoring featured snippet holdings with a tool like Semrush or Ahrefs and updating content when positions are lost is essential maintenance.',
+  },
+];
+
+const related = [
+  {
+    tag: 'Parent NODE',
+    title: 'AI Brand Visibility: How to Get Cited by LLMs',
+    excerpt: 'The five pillars of AI brand visibility, measurement framework, and content patterns that drive LLM citations.',
+    href: '/ai-brand-visibility/',
+  },
+  {
+    tag: 'Deep Dive',
+    title: 'Conversational Search Optimisation',
+    excerpt: 'Structuring content for multi-turn, natural-language AI conversations to maintain citation position across a full intent chain.',
+    href: '/conversational-search-optimisation/',
+  },
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'The full GEO framework — from first principles through to advanced entity strategy and measurement.',
+    href: '/generative-engine-optimisation/',
+  },
+  {
+    tag: 'Technical',
+    title: 'Schema Markup for AI',
+    excerpt: 'The exact JSON-LD types and properties that help LLMs parse, trust, and cite your content across generative platforms.',
+    href: '/schema-markup-ai/',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/answer-box-optimisation/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/ai-brand-visibility/" class="transition hover:text-[var(--accent)]">AI Brand Visibility</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">Answer Box Optimisation</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Technical Guide</span>
+        <span class="font-mono text-xs text-ink-400">7 Jun 2026</span>
+        <span class="font-mono text-xs text-ink-400">11 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        Answer Box Optimisation
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">Google answer box optimization</strong> — winning featured snippets — is not just a traditional SEO tactic. Answer boxes are the primary source layer from which Google AI Overviews extract and cite content. A brand that holds featured snippets across its target queries has a structural advantage in AI search visibility: it has already passed Google's highest editorial bar for direct-answer relevance, and AI systems treat that signal as a high-confidence citation candidate.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Featured snippets and Google AI Overviews share the same source pool — winning one dramatically increases your probability of appearing in the other.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>The three answer box formats — paragraph, list, and table — each require different content structures. Identify the dominant format for each target query before writing.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>The most reliable paragraph snippet trigger is a subheading that mirrors the query question, followed immediately by a 40–60 word direct answer beginning with "X is...".</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Ranking in the organic top 10 for the target query is a prerequisite for featured snippet eligibility — answer box optimisation cannot compensate for weak ranking.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>FAQPage schema is the structured data type most directly aligned with Google's answer box extraction logic and AI Overview citation patterns.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1: What an Answer Box Is -->
+      <section id="what-is-answer-box" class="anchor-top prose-dark mb-16">
+        <h2>What a Google Answer Box Is</h2>
+
+        <p>
+          <strong>A Google answer box — also called a featured snippet — is a specially formatted result placed above the standard ranked links in Google Search that displays a direct answer to the user's query, extracted from a web page Google has identified as the most authoritative source for that specific question.</strong>
+          It appears in a box at the top of the search results page, includes the extracted text, the page title, and the URL, and is sometimes accompanied by an image.
+        </p>
+
+        <p>
+          Answer boxes are triggered for informational queries where Google's systems determine that a single, direct answer exists and can be attributed to a specific source. They are most common for definitional queries ("what is X?"), process queries ("how do I Y?"), and comparative queries ("what is the difference between X and Y?"). For these query types, the answer box replaces the need for the user to click through to a website — which makes owning the answer box both strategically valuable (your brand is the cited answer) and commercially competitive.
+        </p>
+
+        <p>
+          Understanding answer box optimisation is inseparable from understanding the broader <a href="/answer-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">answer engine optimisation</a> discipline, which addresses all the platforms that generate direct answers from retrieved content. Answer boxes sit within that discipline as the Google-specific expression of a wider shift in how AI systems surface and attribute information.
+        </p>
+
+        <p>
+          For the strategic context that encompasses featured snippets alongside other AI visibility mechanisms, see <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility</a> and the <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation guide</a>.
+        </p>
+      </section>
+
+      <!-- Section 2: Answer Box Types -->
+      <section id="answer-box-types" class="anchor-top prose-dark mb-16">
+        <h2>The Three Answer Box Formats</h2>
+
+        <p>
+          <strong>Google answer boxes appear in three distinct formats — paragraph, list, and table — and each format requires a different content structure to win.</strong>
+          Identifying which format Google uses for your target query before you write is the most important step in answer box optimisation. Writing a paragraph-format answer for a query Google treats as a list query will not win the snippet regardless of quality.
+        </p>
+
+        <div class="not-prose mt-8 space-y-5">
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Paragraph snippet</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              The most common format, typically triggered for definitional, explanatory, and conceptual queries. Google extracts a single passage of 40 to 60 words. The winning structure is: a subheading that mirrors the query question, followed immediately by a definition-style sentence ("X is..."), followed by two to three supporting sentences. The passage should be self-contained — interpretable without the surrounding page context — and should contain no lists, tables, or other formatting within the passage itself.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">List snippet (ordered and unordered)</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Triggered for process queries ("how to..."), ranking queries ("best ways to..."), and component queries ("types of..."). Ordered list snippets (numbered) dominate for step-based process queries; unordered list snippets (bulleted) dominate for category and component queries. The winning structure uses HTML list elements (<code class="text-xs bg-geo-800 px-1 py-0.5 rounded">&lt;ol&gt;</code> or <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">&lt;ul&gt;</code>) with each item as a concise, action-oriented phrase. Google typically displays four to eight list items in a snippet; items beyond that threshold are collapsed behind a "More items..." link.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Table snippet</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Triggered for comparative queries ("X vs Y", "comparison of X types", "prices of X") where the answer is inherently multi-dimensional. The winning structure uses a properly marked-up HTML table with <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">&lt;thead&gt;</code>, <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">&lt;th scope="col"&gt;</code> column headers, and concise cell content. Google typically extracts three to six columns and three to eight rows. Tables that use merged cells, complex nesting, or CSS-positioned layouts rather than semantic HTML are significantly less likely to be extracted.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Answer Boxes and AI Search -->
+      <section id="ai-connection" class="anchor-top prose-dark mb-16">
+        <h2>The Connection Between Answer Boxes and AI Search</h2>
+
+        <p>
+          <strong>Featured snippet positions and Google AI Overview citations are not independent — pages that hold featured snippets for a query are significantly more likely to be cited in AI Overviews for the same and related queries.</strong>
+          This is not coincidence: both surfaces draw from the same retrieval and relevance signals. A page that Google trusts enough to feature as a direct answer has already cleared the highest bar in Google's quality evaluation.
+        </p>
+
+        <p>
+          Google AI Overviews are generated responses that synthesise information from multiple sources. The sources cited in AI Overviews are selected from Google's organic index, weighted towards pages that rank well for the query and that contain well-structured, directly extractable answers. Featured snippet pages are, by definition, highly ranked pages with highly extractable answers — which places them at the top of the AI Overview source selection pool.
+        </p>
+
+        <p>
+          The implication for GEO strategy is that answer box optimisation and AI Overview optimisation are not separate programmes. The same content improvements that win featured snippets — clear structure, direct answers, query-mirroring headings, semantic HTML — also improve AI Overview citation rates. Investing in featured snippet optimisation delivers returns across both surfaces simultaneously.
+        </p>
+
+        <p>
+          For non-Google platforms including Perplexity and ChatGPT, the mechanism is different but the content requirements overlap substantially. Perplexity prioritises pages with structured, self-contained answers and valid schema; ChatGPT Browse favours pages that rank well in Bing. See <a href="/conversational-search-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">conversational search optimisation</a> for platform-specific guidance.
+        </p>
+      </section>
+
+      <!-- Section 4: Content Signals That Win -->
+      <section id="content-signals" class="anchor-top prose-dark mb-16">
+        <h2>Content Signals That Win Answer Boxes</h2>
+
+        <p>
+          <strong>Every element of a featured snippet winner — the heading, the first sentence, the answer length, the HTML structure — is optimisable, and each element contributes independently to snippet eligibility.</strong>
+          The following signals are derived from analysis of pages that hold featured snippets across competitive informational queries.
+        </p>
+
+        <h3>Query-mirroring headings</h3>
+        <p>
+          The single most reliable trigger for a paragraph snippet is a subheading (<code>h2</code> or <code>h3</code>) that closely mirrors the query question. If the target query is "what is answer box optimisation?", the optimal subheading is "What Is Answer Box Optimisation?" — not a creative variant. Google's extraction logic identifies the Q&A structure by matching the heading to the query and extracting the following passage.
+        </p>
+
+        <h3>Immediate, definition-style answers</h3>
+        <p>
+          The answer to the query question should appear in the first sentence of the content under the subheading — not in the third paragraph. Delay is the primary cause of snippet failure for otherwise well-structured pages. The first sentence should follow the pattern "X is [definition]." or "X is a [type] that [function]." — the definition style that Google's extraction algorithm most reliably identifies as a direct answer.
+        </p>
+
+        <h3>Controlled answer length</h3>
+        <p>
+          Paragraph snippets are extracted at approximately 40 to 60 words. Answers that are shorter than 40 words may be considered insufficient; answers significantly longer than 60 words are typically truncated, which can create an incomplete or misleading impression. Write the core answer in 45 to 55 words, then continue with supporting detail in the subsequent sentences that are not part of the snippet itself.
+        </p>
+
+        <h3>Semantic HTML for list and table snippets</h3>
+        <p>
+          List snippets require proper <code>&lt;ol&gt;</code> or <code>&lt;ul&gt;</code> markup with <code>&lt;li&gt;</code> items. Table snippets require proper <code>&lt;table&gt;</code> markup with <code>&lt;thead&gt;</code>, <code>&lt;th scope="col"&gt;</code>, and <code>&lt;td&gt;</code> cells. CSS-styled divs that visually resemble lists or tables will not be extracted. Using the correct semantic HTML elements is a prerequisite, not an optimisation — without it, the content is invisible to Google's snippet extraction system.
+        </p>
+      </section>
+
+      <!-- Section 5: Snippet Type Reference Table -->
+      <section id="snippet-types-table" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Answer Box Format Reference</h2>
+          <p>
+            <strong>The table below maps query types to the expected snippet format and the content structure required to win each.</strong>
+            Use this as a planning reference when assessing which queries in your target set are realistic snippet opportunities and what content changes each one requires.
+          </p>
+        </div>
+
+        <div class="mt-8 overflow-x-auto rounded-lg border border-geo-700">
+          <table class="min-w-full text-sm">
+            <thead>
+              <tr class="border-b border-geo-700 bg-geo-900">
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Query Type</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Example</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Likely Format</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Winning Structure</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-geo-800">
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">Definition</td>
+                <td class="px-4 py-3 text-ink-300">"what is GEO?"</td>
+                <td class="px-4 py-3 text-ink-300">Paragraph</td>
+                <td class="px-4 py-3 text-ink-300">H2 mirrors query; 45–55 word definition-style answer immediately after</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-ink-100">Process / How-to</td>
+                <td class="px-4 py-3 text-ink-300">"how to optimise for AI search"</td>
+                <td class="px-4 py-3 text-ink-300">Ordered list</td>
+                <td class="px-4 py-3 text-ink-300">&lt;ol&gt; with 4–8 concise action-phrase &lt;li&gt; items under query-mirroring heading</td>
+              </tr>
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">Comparison</td>
+                <td class="px-4 py-3 text-ink-300">"GEO vs SEO"</td>
+                <td class="px-4 py-3 text-ink-300">Table or paragraph</td>
+                <td class="px-4 py-3 text-ink-300">Semantic &lt;table&gt; with &lt;th scope="col"&gt; headers, or 50-word direct comparison paragraph</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-ink-100">Types / Categories</td>
+                <td class="px-4 py-3 text-ink-300">"types of schema markup"</td>
+                <td class="px-4 py-3 text-ink-300">Unordered list</td>
+                <td class="px-4 py-3 text-ink-300">&lt;ul&gt; with named, distinct &lt;li&gt; items; 4–8 items optimal</td>
+              </tr>
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">Ranking / Best</td>
+                <td class="px-4 py-3 text-ink-300">"best GEO tools"</td>
+                <td class="px-4 py-3 text-ink-300">Ordered list or table</td>
+                <td class="px-4 py-3 text-ink-300">Numbered list or table with tool name + concise descriptor per row</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-ink-100">Cause / Reason</td>
+                <td class="px-4 py-3 text-ink-300">"why AI doesn't cite my brand"</td>
+                <td class="px-4 py-3 text-ink-300">Paragraph or list</td>
+                <td class="px-4 py-3 text-ink-300">Short paragraph giving the primary reason; or numbered list of top causes</td>
+              </tr>
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">Calculation / Data</td>
+                <td class="px-4 py-3 text-ink-300">"AI search market share 2025"</td>
+                <td class="px-4 py-3 text-ink-300">Table</td>
+                <td class="px-4 py-3 text-ink-300">Semantic table with labelled columns, specific numeric values, and source attribution</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 6: Role of Schema Markup -->
+      <section id="schema-role" class="anchor-top prose-dark mb-16">
+        <h2>The Role of Schema Markup in Answer Box Strategy</h2>
+
+        <p>
+          <strong>Schema markup is not the primary mechanism for winning Google featured snippets — content structure is — but it plays a critical supporting role by expanding the surface area of extractable content and by significantly improving citation rates on AI platforms beyond Google.</strong>
+          Understanding the distinction matters because it affects where you invest optimisation effort.
+        </p>
+
+        <p>
+          For Google featured snippets, the content structure signals (query-mirroring headings, direct definition-style answers, semantic HTML) are primary. Schema markup does not override these. A page with excellent structure but no FAQPage schema can win a featured snippet; a page with perfect FAQPage schema but poor content structure will not. The schema contribution is indirect: it increases Google's confidence in the content's authority and accuracy, which may contribute at the margin for competitive queries.
+        </p>
+
+        <p>
+          For Google AI Overviews, FAQPage schema becomes more directly influential. AI Overview systems use structured data to identify and extract Q&A content more efficiently than prose extraction alone. A page with FAQPage schema and well-structured answers is easier for the AI Overview system to process as a citation source, particularly for conversational and follow-up queries where the schema's question-answer structure maps directly to the conversational context.
+        </p>
+
+        <p>
+          For non-Google AI platforms — Perplexity, ChatGPT Browse, Gemini — FAQPage schema combined with TechArticle or Article schema provides the clearest structured signal of page type, authority, and content format. These platforms do not have access to a featured snippet signal equivalent to Google's — schema markup is the closest substitute for that kind of structured content endorsement. Implementing both <a href="/schema-markup-ai/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">schema markup for AI</a> and content structure optimisation delivers returns across the full platform set.
+        </p>
+      </section>
+
+      <!-- Section 7: Optimisation Checklist -->
+      <section id="implementation" class="anchor-top prose-dark mb-16">
+        <h2>Answer Box Optimisation Checklist</h2>
+
+        <p>
+          <strong>A systematic answer box optimisation programme works through a fixed sequence: identify target queries, audit existing coverage, apply structural changes, validate HTML, and monitor positions.</strong>
+          The checklist below covers the full sequence for a content page targeting one or more featured snippet positions.
+        </p>
+
+        <div class="not-prose mt-6 space-y-4">
+
+          <div class="card p-5">
+            <h3 class="text-sm font-semibold text-ink-50 mb-3">Query Research and Prioritisation</h3>
+            <ul class="space-y-2 text-sm text-ink-300">
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> Identify queries for which a featured snippet exists (use Semrush, Ahrefs, or manual Google search review)</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> Confirm the snippet format for each query (paragraph, list, or table)</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> Confirm your page ranks in the top 10 for each target query (prerequisite for eligibility)</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> Prioritise queries where a competitor currently holds the snippet (displacement opportunity) over queries with no snippet (creation required)</li>
+            </ul>
+          </div>
+
+          <div class="card p-5">
+            <h3 class="text-sm font-semibold text-ink-50 mb-3">Content Structure</h3>
+            <ul class="space-y-2 text-sm text-ink-300">
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> Add or update an H2 or H3 subheading that closely mirrors the target query question</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> Place the direct answer immediately under the subheading — no preamble</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> For paragraph snippets: write the answer in 45–55 words, beginning with "X is..." or "X refers to..."</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> For list snippets: use semantic <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">&lt;ol&gt;</code> or <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">&lt;ul&gt;</code> with 5–8 concise <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">&lt;li&gt;</code> items</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> For table snippets: use semantic <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">&lt;table&gt;</code> with <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">&lt;thead&gt;</code> and <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">&lt;th scope="col"&gt;</code> — no merged cells</li>
+            </ul>
+          </div>
+
+          <div class="card p-5">
+            <h3 class="text-sm font-semibold text-ink-50 mb-3">Schema and AI Platform Readiness</h3>
+            <ul class="space-y-2 text-sm text-ink-300">
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> Add FAQPage schema with Q&A pairs matching the target queries (each answer self-contained, 2–4 sentences)</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> Add TechArticle or Article schema with <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">datePublished</code>, <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">dateModified</code>, author, and publisher referencing <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">&#123;"@id":"https://geooptimised.com/#organization"&#125;</code></li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> Add BreadcrumbList schema reflecting the page's topical hierarchy</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> Validate all schema via Google Rich Results Test — zero errors</li>
+            </ul>
+          </div>
+
+          <div class="card p-5">
+            <h3 class="text-sm font-semibold text-ink-50 mb-3">Monitoring and Maintenance</h3>
+            <ul class="space-y-2 text-sm text-ink-300">
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> Track featured snippet positions weekly for all target queries</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> Monitor for format changes on held snippets (Google may switch from paragraph to list — update content to match)</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> Update <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">dateModified</code> whenever content is revised — freshness is a tiebreaker on competitive snippets</li>
+              <li class="flex items-start gap-2"><span class="text-[var(--accent)] mt-0.5">&#9744;</span> When a snippet is lost: identify the page that displaced it, analyse its structural advantages, and revise accordingly</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <p class="mt-8">
+          For a full featured snippet audit — including competitive gap analysis and prioritised content recommendations — <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">contact GEOoptimised</a>. Our programmes address both traditional featured snippet capture and the broader AI visibility picture across all major generative platforms.
+        </p>
+      </section>
+
+      <!-- FAQ Accordion -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Win Answer Boxes That Feed AI Citations</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Featured snippets and AI Overview citations share the same source pool.
+        GEOoptimised audits your content against every target query, identifies structural gaps, and delivers a prioritised
+        implementation plan that captures answer boxes and improves AI citation rates simultaneously.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request a featured snippet audit</a>
+        <a href="/ai-brand-visibility/" class="btn btn-ghost">Explore AI brand visibility</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

@@ -1,0 +1,498 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'The Future of GEO: Where AI Search Is Heading | GEOoptimised';
+const description = 'Informed analysis of where generative engine optimisation and AI search are heading: platform evolution, competitive dynamics, and the strategic implications for brands.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'The Future of GEO',
+    description: 'Informed analysis of where generative engine optimisation and AI search are heading: platform evolution, competitive dynamics, and the strategic implications for brands.',
+    url: 'https://geooptimised.com/future-of-geo/',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://geooptimised.com/future-of-geo/'
+    },
+    author: { '@id': 'https://geooptimised.com/#organization' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' },
+    datePublished: '2026-06-07',
+    dateModified: '2026-06-07',
+    image: 'https://geooptimised.com/og-image.png',
+    inLanguage: 'en-GB'
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is the future of GEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The future of GEO involves increasing competition for AI citations as more brands adopt the discipline, greater platform diversity as new AI search products enter the market, and a shift from experimental investment to core marketing infrastructure. The brands that build entity authority and citation footprints now will be significantly harder to displace than those who enter later, because AI models weight established, consistently-cited sources more heavily than newly-appearing ones. GEO is transitioning from an early-adopter advantage to a competitive necessity.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Will traditional SEO still matter as AI search grows?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Traditional SEO will continue to matter, but its role is shifting. Organic search rankings remain a significant citation signal for platforms like Google AI Overviews, which correlates heavily with traditional ranking factors. However, AI search platforms like Perplexity and ChatGPT retrieve sources using mechanisms that are partially independent of organic rankings. The most resilient strategy combines GEO practices with a maintained organic foundation — brands that abandon SEO entirely in favour of GEO risk the correlation between organic authority and AI citation weight.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How will AI model updates affect GEO strategies?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'AI model updates will continue to cause citation volatility, just as algorithm updates cause ranking volatility in traditional SEO. The most durable response is to build strategies that target structural factors — entity consistency, content extractability, topical authority depth — rather than platform-specific retrieval quirks that change with model updates. Brands that optimise for genuine topical authority and clean entity resolution are less vulnerable to update-driven citation loss than those who exploit narrow technical signals.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What new AI platforms should brands prepare for?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Brands should monitor AI-native browser integrations, vertical AI search tools (industry-specific AI assistants), and voice-interface AI assistants alongside the established platforms. The common thread across emerging platforms is that they share retrieval architecture — content that is structured for extraction and backed by clear entity signals performs consistently regardless of which platform surfaces it. Rather than building platform-specific content, the more durable investment is in the foundational practices that transfer across platforms.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Will GEO become commoditised like SEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'GEO will follow a similar trajectory to SEO in terms of commoditisation of basic practices — schema markup, robots.txt configuration, and structural writing patterns will become standard. However, genuine topical authority, entity trust built over time, and first-mover citation footprints are not commoditisable. The GEO practitioners who invest in depth, original analysis, and proprietary data now are building assets that scale poorly for late-arriving competitors — which is the same competitive moat that deep domain authority provides in organic search.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How should brands think about GEO investment over the next three years?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Over the next three years, GEO investment should be treated as infrastructure rather than campaign spend. The compounding nature of entity authority, citation footprint, and topical depth means that early, consistent investment produces disproportionate returns relative to later, reactive investment. Brands should establish measurement baselines now, build content architecture for extraction, and invest in entity resolution across all major platforms — treating these as foundational assets rather than short-term initiatives.'
+        }
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'GEO Metrics', item: 'https://geooptimised.com/geo-metrics/' },
+      { '@type': 'ListItem', position: 3, name: 'The Future of GEO', item: 'https://geooptimised.com/future-of-geo/' }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'where-ai-search-is-now', label: 'Where AI Search Is Now' },
+  { id: 'platform-evolution', label: 'Platform Evolution' },
+  { id: 'competitive-dynamics', label: 'Competitive Dynamics' },
+  { id: 'content-and-entity', label: 'Content & Entity Trends' },
+  { id: 'measurement-maturity', label: 'Measurement Maturity' },
+  { id: 'strategic-implications', label: 'Strategic Implications' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' }
+];
+
+const platformTrends = [
+  {
+    platform: 'Perplexity',
+    currentState: 'RAG-first, transparent citations, growing enterprise adoption',
+    direction: 'Deeper vertical integrations, API distribution through third-party products, and richer source attribution UI'
+  },
+  {
+    platform: 'ChatGPT',
+    currentState: 'Dominant consumer share, training-data + browsing hybrid, uneven citation transparency',
+    direction: 'Increasing retrieval-augmented answers, memory features creating persistent brand context, and operator integrations distributing responses across products'
+  },
+  {
+    platform: 'Google AI Overviews',
+    currentState: 'Deeply correlated with organic ranking, Knowledge Graph-heavy, UK/US rollout ongoing',
+    direction: 'Expanding query coverage, increasing commercial query inclusion, and tighter integration with Google Merchant and Business Profile data'
+  },
+  {
+    platform: 'Microsoft Copilot',
+    currentState: 'Bing-index-backed, strong enterprise distribution via Microsoft 365 suite',
+    direction: 'Deeper enterprise workflow integration, making B2B AI search influence a significant vector for brand visibility inside business tools'
+  },
+  {
+    platform: 'Emerging platforms',
+    currentState: 'AI browser sidebars, vertical AI assistants, voice-first interfaces',
+    direction: 'Fragmentation of the AI search landscape into specialised tools; each retrieves differently but most share structural content preferences'
+  }
+];
+
+const competitiveDynamics = [
+  {
+    dynamic: 'First-mover citation depth',
+    implication: 'Brands with established citation footprints across AI platforms are harder to displace than newcomers. Citation frequency compounds: cited sources become training data for future model generations, reinforcing their authority.'
+  },
+  {
+    dynamic: 'Entity authority as a moat',
+    implication: 'Entity trust — built through consistent description across web, structured data, and third-party sources — accrues over time and cannot be replicated quickly. This is the GEO equivalent of domain authority: a compounding asset.'
+  },
+  {
+    dynamic: 'Content depth vs content volume',
+    implication: 'AI models prefer definitive, extractable answers over comprehensive but verbose content. Brands that invest in depth and precision of coverage, rather than volume, produce better citation candidates. Quality scales better than quantity in GEO.'
+  },
+  {
+    dynamic: 'Commoditisation of basic practices',
+    implication: 'Schema markup, robots.txt AI access, and structural writing conventions will become table stakes within the next twelve to twenty-four months as GEO awareness spreads. Differentiation will shift to topical authority depth and proprietary data.'
+  }
+];
+
+const faqs = [
+  {
+    q: 'What is the future of GEO?',
+    a: 'The future of GEO involves increasing competition for AI citations as more brands adopt the discipline, greater platform diversity, and a shift from experimental investment to core marketing infrastructure. Brands that build entity authority and citation footprints now will be significantly harder to displace than those who enter later.'
+  },
+  {
+    q: 'Will traditional SEO still matter as AI search grows?',
+    a: 'Traditional SEO will continue to matter — organic search rankings remain a significant citation signal for platforms like Google AI Overviews. The most resilient strategy combines GEO practices with a maintained organic foundation, since organic authority and AI citation weight are correlated for several major platforms.'
+  },
+  {
+    q: 'How will AI model updates affect GEO strategies?',
+    a: 'AI model updates will continue to cause citation volatility. The most durable response is to build strategies targeting structural factors — entity consistency, content extractability, topical authority — rather than platform-specific retrieval quirks. Brands that build genuine topical authority are less vulnerable to update-driven citation loss.'
+  },
+  {
+    q: 'What new AI platforms should brands prepare for?',
+    a: 'Brands should monitor AI-native browser integrations, vertical AI search tools, and voice-interface assistants. Content structured for extraction and backed by clear entity signals performs consistently across platforms. The more durable investment is in foundational practices that transfer across platforms rather than platform-specific optimisation.'
+  },
+  {
+    q: 'Will GEO become commoditised like SEO?',
+    a: 'Basic GEO practices will commoditise, but genuine topical authority, entity trust built over time, and first-mover citation footprints are not commoditisable. Practitioners who invest in depth and original analysis now are building assets that scale poorly for late-arriving competitors — the same competitive moat that deep domain authority provides in organic search.'
+  },
+  {
+    q: 'How should brands think about GEO investment over the next three years?',
+    a: 'GEO investment should be treated as infrastructure rather than campaign spend. The compounding nature of entity authority, citation footprint, and topical depth means that early, consistent investment produces disproportionate returns relative to later, reactive investment. Establish measurement baselines now and build content architecture for extraction.'
+  }
+];
+
+const related = [
+  {
+    tag: 'NODE',
+    title: 'GEO Metrics: Measuring AI Search Performance',
+    excerpt: 'The full framework for measuring citation frequency, accuracy, share of voice, and prompt coverage across all major AI platforms.',
+    href: '/geo-metrics/'
+  },
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'First principles through advanced entity strategies — the definitive GEO reference for understanding the discipline in full.',
+    href: '/generative-engine-optimisation/'
+  },
+  {
+    tag: 'Guide',
+    title: 'How to Measure GEO Performance',
+    excerpt: 'Step-by-step methodology for setting baselines, tracking leading indicators, and reporting GEO programme progress.',
+    href: '/how-to-measure-geo/'
+  }
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/future-of-geo/" ogType="article">
+
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-metrics/" class="transition hover:text-[var(--accent)]">GEO Metrics</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">The Future of GEO</li>
+    </ol>
+  </nav>
+
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Perspective</span>
+        <span class="font-mono text-xs text-ink-400">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-400">11 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        The Future of GEO
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">GEO is transitioning from an early-adopter experiment to a mainstream marketing discipline — and that transition will change the competitive dynamics significantly.</strong> This page presents an informed perspective on where AI search and generative engine optimisation are heading, based on observable platform behaviour and structural market trends. It does not offer fabricated statistics or predictions dressed as certainty.
+      </p>
+    </div>
+  </section>
+
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" id="toc-nav">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <div>
+
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>AI search is becoming a mainstream discovery channel, not a niche tool — brand visibility in AI answers will matter as much as organic rankings within the next few years.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Platform fragmentation is increasing: the AI search landscape will not converge on a single dominant platform in the near term.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>First-mover citation authority compounds — brands building citation footprints now are establishing positions that are structurally harder to displace than late entrants.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Basic GEO practices will commoditise; topical depth, entity authority, and original analysis will become the primary differentiators.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>GEO and SEO are complementary, not competing — organic authority remains a meaningful citation signal for several major AI platforms.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prose-dark">
+        <h2 id="where-ai-search-is-now" class="anchor-top">Where AI Search Is Now</h2>
+        <p>
+          <strong>AI search has moved from novelty to habit for a meaningful segment of information-seeking behaviour — and that segment is growing in commercial significance.</strong> The shift is observable in search query data, in platform adoption curves, and in the buying journey surveys that show AI tools appearing increasingly early in the consideration process. The discipline of <a href="/generative-engine-optimisation/">generative engine optimisation</a> exists because this shift is real and its marketing implications are underserved by existing frameworks.
+        </p>
+        <p>
+          The current landscape is characterised by rapid platform development and no clear dominant standard. Perplexity, ChatGPT, Google AI Overviews, and Microsoft Copilot have each established distinct user bases and retrieval architectures. None has achieved the kind of dominant market position that Google held in traditional search during the 2010s. This fragmentation is not a temporary condition waiting to resolve — it reflects the different use cases, enterprise needs, and integration strategies of the platforms involved.
+        </p>
+        <p>
+          For brands, the practical consequence is that AI search visibility is not a single optimisation target. It is a multi-platform citation landscape that requires structured monitoring, not occasional spot-checks. The <a href="/geo-metrics/">GEO metrics</a> framework addresses this directly: measuring citation performance across platforms rather than treating AI search as a monolithic channel.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="platform-evolution" class="anchor-top">Platform Evolution: Observed Directions</h2>
+        <p>
+          <strong>Each major AI search platform is evolving along a trajectory shaped by its underlying architecture and commercial model — and those trajectories have different implications for GEO strategy.</strong> The following table maps current platform states and the directions that observable platform behaviour and product announcements suggest.
+        </p>
+        <p class="text-sm text-ink-400 italic">Note: These are informed observations based on current platform behaviour, not forecasts. Platform development is rapid and directions can change.</p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Platform</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Current State</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Observed Direction</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y hair">
+            {platformTrends.map(row => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class="px-4 py-3 font-semibold text-white">{row.platform}</td>
+                <td class="px-4 py-3 text-ink-300">{row.currentState}</td>
+                <td class="px-4 py-3 text-ink-300">{row.direction}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          The single most important structural observation across all platforms is that retrieval-augmented generation — fetching live or recently-indexed content to answer queries — is becoming the default, not the exception. This means that GEO is increasingly a live-web optimisation discipline, not purely a training-data influence exercise. Content that is well-structured, recently updated, and accessible to AI crawlers performs better across all platforms as RAG adoption increases.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="competitive-dynamics" class="anchor-top">Competitive Dynamics: The First-Mover Advantage</h2>
+        <p>
+          <strong>The GEO competitive landscape has a first-mover property that makes early investment structurally more valuable than late investment.</strong> This is not marketing rhetoric — it follows from how AI systems work.
+        </p>
+      </div>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        {competitiveDynamics.map(d => (
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">{d.dynamic}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">{d.implication}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          The competitive implication is that the cost of catching up increases over time. A brand that establishes citation authority in its category in mid-2026 will have accumulated entity trust and citation frequency data that a new entrant in 2027 or 2028 cannot replicate quickly. This is the same dynamic that makes domain authority valuable in organic search — it is time-in-market multiplied by consistent quality, not a one-time achievable asset. Brands sitting on the sidelines of GEO are not in a neutral position; they are falling behind competitors who are investing.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="content-and-entity" class="anchor-top">Content and Entity Trends</h2>
+        <p>
+          <strong>The direction of travel for content and entity signals in AI search is towards higher standards, not lower barriers.</strong> As AI models become more sophisticated at evaluating source quality, the factors that drive citation authority are shifting from structural compliance (having schema markup) to genuine expertise signals (being the source that most accurately and completely answers a query).
+        </p>
+        <p>
+          <strong>Original analysis and proprietary data</strong> are becoming more important as citation differentiators. AI models retrieving sources for competitive or research queries increasingly surface content that offers a perspective or data point not available elsewhere. Generic summaries of publicly available information — common in the first wave of GEO content — produce weaker citation signals as model quality improves.
+        </p>
+        <p>
+          <strong>Entity resolution precision</strong> is becoming a baseline expectation. Brands with inconsistent entity descriptions across platforms — different founding dates, different category descriptors, conflicting service descriptions — face increasing penalty as AI models become better at detecting and penalising inconsistency. The effort required to establish entity consistency is lower now than it will be once competitors have also built clean entity foundations.
+        </p>
+        <p>
+          <strong>Multimodal content</strong> is an emerging consideration as AI platforms expand beyond text. The structural principles of GEO — clear entities, extractable content, accurate metadata — apply to structured data about images, videos, and audio content as well as text. Brands that build multimodal content with consistent entity signals position themselves for citation across an expanding range of answer formats.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="measurement-maturity" class="anchor-top">Measurement Maturity: From Experimental to Operational</h2>
+        <p>
+          <strong>GEO measurement is at an early stage, and the tooling, methodologies, and attribution frameworks will mature significantly over the next two to three years.</strong> Brands investing in measurement infrastructure now are building capabilities that will give them a head start when AI search attribution becomes a standard marketing reporting requirement.
+        </p>
+        <p>
+          The current state of GEO measurement is characterised by manual query testing, limited platform API access for citation data, and indirect attribution via branded search and pipeline surveys. This is the same state that social media measurement was in circa 2010 — functional but labour-intensive, and heavily reliant on correlation rather than direct attribution.
+        </p>
+        <p>
+          The expected maturation path includes: richer platform APIs that expose citation frequency data directly, standardised share-of-voice metrics across AI platforms, and tighter integration between AI citation events and CRM attribution models. Brands that establish their measurement baseline and methodology now will be best positioned to adopt and act on these improvements as they arrive. For the current state of GEO measurement practice, see <a href="/how-to-measure-geo/">how to measure GEO performance</a> and the <a href="/geo-monitoring/">GEO monitoring guide</a>.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="strategic-implications" class="anchor-top">Strategic Implications for Brands</h2>
+        <p>
+          <strong>The strategic conclusion from observable AI search trends is that GEO should be treated as infrastructure investment, not campaign spend.</strong> The compounding nature of entity authority and citation footprint means that consistent, early investment produces returns that cannot be replicated by larger but later spending.
+        </p>
+      </div>
+
+      <ol class="mt-8 space-y-6">
+        <li class="flex gap-5">
+          <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border hair font-display text-sm font-bold text-[var(--accent)]">1</span>
+          <div>
+            <h3 class="font-display text-lg font-semibold text-white">Establish baselines now, not when the channel matures</h3>
+            <p class="mt-1 text-sm leading-relaxed text-ink-300">Measurement baselines have no value unless they capture the state before significant programme activity. Brands that wait until GEO is mainstream before measuring will have no baseline from which to demonstrate impact. Baseline citation audits are low-cost to conduct and high-value as historical reference points.</p>
+          </div>
+        </li>
+        <li class="flex gap-5">
+          <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border hair font-display text-sm font-bold text-[var(--accent)]">2</span>
+          <div>
+            <h3 class="font-display text-lg font-semibold text-white">Invest in entity authority before competitors do</h3>
+            <p class="mt-1 text-sm leading-relaxed text-ink-300">Entity resolution — consistent descriptions across web, schema, and third-party sources — is time-consuming to build but structurally durable once established. The window where this can be done without competitive pressure from better-resourced rivals is narrowing.</p>
+          </div>
+        </li>
+        <li class="flex gap-5">
+          <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border hair font-display text-sm font-bold text-[var(--accent)]">3</span>
+          <div>
+            <h3 class="font-display text-lg font-semibold text-white">Treat SEO and GEO as complementary, not competing</h3>
+            <p class="mt-1 text-sm leading-relaxed text-ink-300">Organic authority remains a meaningful input to AI citation weight for Google-family platforms. A maintained organic foundation amplifies GEO performance; abandoning it to redirect resources into GEO exclusively creates a structural dependency on platforms that are SEO-independent, which is a narrower and riskier position.</p>
+          </div>
+        </li>
+        <li class="flex gap-5">
+          <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border hair font-display text-sm font-bold text-[var(--accent)]">4</span>
+          <div>
+            <h3 class="font-display text-lg font-semibold text-white">Build depth, not just coverage</h3>
+            <p class="mt-1 text-sm leading-relaxed text-ink-300">As basic GEO practices commoditise, the differentiation will shift to which brand is the most authoritative and extractable source for a given topic. Shallow topical coverage is easily matched by competitors; deep, original analysis of narrow topics creates citation positions that are durable.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="relative border-t hair mt-12 overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Position Your Brand for the AI Search Future</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        The window for establishing first-mover citation authority is open now, not indefinitely. We help brands build the entity foundations, content architecture, and measurement infrastructure that compound over time.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Start a GEO programme</a>
+        <a href="/generative-engine-optimisation/" class="btn btn-ghost">Read the GEO guide</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const faqBtns = document.querySelectorAll('#faq-accordion button');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+
+    const tocLinks = document.querySelectorAll('#toc-nav a');
+    const headings = Array.from(
+      document.querySelectorAll('h2[id], h3[id]')
+    ) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(link => {
+              link.classList.remove('text-[var(--accent)]');
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.classList.add('text-[var(--accent)]');
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+
+    headings.forEach(h => observer.observe(h));
+  </script>
+
+</Base>

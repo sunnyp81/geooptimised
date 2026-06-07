@@ -1,0 +1,396 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO Tracking & Monitoring | GEOoptimised';
+const description = 'GEO monitoring: track AI citations, run audits, score your brand visibility, and use the right tools to measure generative engine optimisation performance.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "headline": "GEO Tracking & Monitoring",
+    "description": "A hub for generative engine optimisation tracking and monitoring — covering GEO checkers, tracking tools, audits, scoring frameworks, and measurement methodology.",
+    "url": "https://geooptimised.com/geo-monitoring/",
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "inLanguage": "en-GB",
+    "image": "https://geooptimised.com/og-image.png",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://geooptimised.com/#organization"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://geooptimised.com/#organization"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is GEO monitoring?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GEO monitoring is the ongoing process of measuring a brand's citation frequency, brand accuracy, and competitive share of voice across generative AI platforms including ChatGPT, Perplexity, Google Gemini, Microsoft Copilot, and Google AI Overviews. It involves systematic prompt testing at regular intervals, tracking changes over time, and alerting teams to significant shifts in AI visibility performance. GEO monitoring is the operational layer that makes generative engine optimisation accountable and repeatable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does a GEO checker work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A GEO checker submits a defined set of prompts to one or more AI platforms, captures the generated responses, and analyses them for brand mentions, citation sources, and competitor presence. More sophisticated GEO checkers apply natural language processing to score brand accuracy, detect sentiment, and classify citation type (primary recommendation, secondary mention, implicit reference). The results are stored over time to produce trend data and benchmark comparisons. Some checkers operate via official APIs; others use browser automation to capture responses as a real user would see them."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a GEO audit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A GEO audit is a structured assessment of all the factors that influence a brand's visibility in AI-generated answers. It covers four areas: technical access (are AI crawlers able to index your content?), entity authority (is your brand correctly defined in knowledge graphs and structured databases?), content citability (are your pages structured to be extracted and cited accurately by AI models?), and competitive positioning (how does your citation footprint compare to rivals?). A GEO audit produces a prioritised action plan with estimated impact for each intervention."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a GEO score?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A GEO score is a composite metric that summarises a brand's generative engine optimisation performance across multiple dimensions. Common GEO scoring frameworks weight citation frequency (typically 40%), brand accuracy (20%), cross-platform reach (20%), and competitive share of voice (20%), though weighting varies by tool and methodology. GEO scores are most useful as a benchmark for tracking improvement over time and for communicating programme progress to non-specialist stakeholders. Raw metrics are always more diagnostically useful than composite scores alone."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is GEO tracking different from SEO rank tracking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SEO rank tracking records your page's position for a given keyword in a traditional search engine results page — a stable, ordinal metric that changes slowly and predictably. GEO tracking records your brand's citation frequency across AI-generated responses — a probabilistic metric that varies with prompt phrasing, model version, retrieval context, and response length. Because AI responses are non-deterministic, GEO tracking requires statistical sampling (typically 10 to 30 response samples per prompt per platform) rather than single-point measurement. This is a fundamentally different data collection problem requiring different tooling and different interpretation frameworks."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://geooptimised.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Generative Engine Optimisation",
+        "item": "https://geooptimised.com/generative-engine-optimisation/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "GEO Tracking & Monitoring",
+        "item": "https://geooptimised.com/geo-monitoring/"
+      }
+    ]
+  }
+];
+
+const seeds = [
+  {
+    icon: `<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>`,
+    tag: 'Visibility Check',
+    title: 'GEO Checker',
+    body: 'How to spot-check your brand\'s presence in AI-generated answers: manual methods, free tools, and when to move to a dedicated platform.',
+    href: '/geo-checker/',
+  },
+  {
+    icon: `<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
+    tag: 'Ongoing Monitoring',
+    title: 'GEO Tracking Tools',
+    body: 'The platforms that automate AI citation tracking at scale — how they work, what to look for, and how to choose between them.',
+    href: '/geo-tracking-tools/',
+  },
+  {
+    icon: `<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>`,
+    tag: 'Structured Review',
+    title: 'GEO Audit',
+    body: 'A complete GEO audit covers crawler access, entity authority, content citability, and competitive gap analysis — here is what each involves.',
+    href: '/geo-audit/',
+  },
+  {
+    icon: `<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>`,
+    tag: 'Composite Metric',
+    title: 'GEO Scoring',
+    body: 'How GEO scoring frameworks are built, what dimensions they weight, and how to use a composite score to communicate programme progress.',
+    href: '/geo-scoring/',
+  },
+  {
+    icon: `<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19v-6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2zm0 0V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v10m-6 0a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2m0 0V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"/></svg>`,
+    tag: 'Measurement',
+    title: 'How to Measure GEO',
+    body: 'Practical methodology for setting up GEO measurement: query set design, platform selection, sampling strategy, and reporting cadence.',
+    href: '/how-to-measure-geo/',
+  },
+];
+
+const faqs = [
+  {
+    q: 'What is GEO monitoring?',
+    a: 'GEO monitoring is the ongoing process of measuring a brand\'s citation frequency, brand accuracy, and competitive share of voice across generative AI platforms including ChatGPT, Perplexity, Google Gemini, Microsoft Copilot, and Google AI Overviews. It involves systematic prompt testing at regular intervals, tracking changes over time, and alerting teams to significant shifts in AI visibility performance. GEO monitoring is the operational layer that makes generative engine optimisation accountable and repeatable.',
+  },
+  {
+    q: 'How does a GEO checker work?',
+    a: 'A GEO checker submits a defined set of prompts to one or more AI platforms, captures the generated responses, and analyses them for brand mentions, citation sources, and competitor presence. More sophisticated GEO checkers apply natural language processing to score brand accuracy, detect sentiment, and classify citation type. The results are stored over time to produce trend data and benchmark comparisons. Some checkers operate via official APIs; others use browser automation to capture responses as a real user would see them.',
+  },
+  {
+    q: 'What is a GEO audit?',
+    a: 'A GEO audit is a structured assessment of all the factors that influence a brand\'s visibility in AI-generated answers. It covers four areas: technical access (are AI crawlers able to index your content?), entity authority (is your brand correctly defined in knowledge graphs?), content citability (are your pages structured to be extracted and cited accurately?), and competitive positioning (how does your citation footprint compare to rivals?). A GEO audit produces a prioritised action plan with estimated impact for each intervention.',
+  },
+  {
+    q: 'What is a GEO score?',
+    a: 'A GEO score is a composite metric that summarises a brand\'s generative engine optimisation performance across multiple dimensions. Common GEO scoring frameworks weight citation frequency (typically 40%), brand accuracy (20%), cross-platform reach (20%), and competitive share of voice (20%). GEO scores are most useful as a benchmark for tracking improvement over time and for communicating programme progress to non-specialist stakeholders.',
+  },
+  {
+    q: 'How is GEO tracking different from SEO rank tracking?',
+    a: 'SEO rank tracking records your page\'s position for a given keyword in a traditional search results page — a stable, ordinal metric. GEO tracking records your brand\'s citation frequency across AI-generated responses — a probabilistic metric that varies with prompt phrasing, model version, and retrieval context. Because AI responses are non-deterministic, GEO tracking requires statistical sampling (typically 10 to 30 response samples per prompt per platform) rather than single-point measurement.',
+  },
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/geo-monitoring/" ogType="website">
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">Generative Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">GEO Tracking &amp; Monitoring</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-fade relative overflow-hidden">
+    <div class="container-wide grid gap-12 pt-12 pb-20 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-7">
+        <span class="eyebrow">N11 — Tracking &amp; Monitoring Hub</span>
+        <h1 class="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <span class="grad-text">GEO Tracking &amp; Monitoring</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-300">
+          <strong class="text-white">GEO monitoring is the operational layer that turns a one-time AI visibility audit into a continuously improving programme.</strong> This hub covers every aspect of tracking your brand's presence in AI-generated answers — from quick manual spot-checks through to automated tracking platforms, structured audit frameworks, and composite scoring methodologies that make performance legible to stakeholders at every level.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/contact/" class="btn btn-primary">Set Up GEO Monitoring</a>
+          <a href="/geo-tools/" class="btn btn-ghost">Explore GEO Tools</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="card p-6">
+          <span class="eyebrow">At a glance</span>
+          <div class="mt-4 grid grid-cols-2 gap-6">
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">5</p>
+              <p class="mt-1 text-sm text-ink-400">Topic guides below</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">5+</p>
+              <p class="mt-1 text-sm text-ink-400">AI platforms tracked</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">Weekly</p>
+              <p class="mt-1 text-sm text-ink-400">Recommended cadence</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">4</p>
+              <p class="mt-1 text-sm text-ink-400">Audit dimensions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Seed Card Grid -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">Topics in this hub</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Tracking &amp; Monitoring Guides</h2>
+    <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed">
+      The guides below move from simple spot-checking through to enterprise-grade monitoring infrastructure. Work through them in order to build a complete GEO tracking capability, or jump directly to the guide that matches your current programme stage.
+    </p>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {seeds.map(seed => (
+        <a href={seed.href} class="card card-hover block p-7 flex flex-col no-underline group">
+          <div class="flex h-11 w-11 items-center justify-center rounded-lg border border-[var(--line)] text-[var(--accent)]">
+            <Fragment set:html={seed.icon} />
+          </div>
+          <span class="eyebrow mt-5">{seed.tag}</span>
+          <h3 class="mt-2 font-display text-lg font-semibold text-ink-50 group-hover:text-[var(--accent)] transition-colors">{seed.title}</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300 flex-1">{seed.body}</p>
+          <span class="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-[var(--accent)]">
+            Read guide <span aria-hidden="true">&rarr;</span>
+          </span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- What to Monitor section with table -->
+  <section class="container-wide py-20 border-t hair">
+    <span class="eyebrow">Monitoring Framework</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">What to Monitor — and How Often</h2>
+    <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed">
+      <strong class="text-white">Effective GEO monitoring requires matching the right data collection method to the right signal at the right frequency.</strong> Over-monitoring wastes resource and produces noise; under-monitoring misses material changes before they compound. The framework below balances coverage, cost, and actionability across the five monitoring dimensions that matter most.
+    </p>
+
+    <p class="mt-5 max-w-2xl text-ink-300 leading-relaxed">
+      The table maps each monitoring dimension to its recommended method, frequency, and the action it triggers. Use it to design a monitoring schedule appropriate to your programme's scale and team capacity.
+    </p>
+
+    <div class="mt-10 overflow-x-auto rounded-xl border border-[var(--line)]">
+      <table class="w-full text-sm text-left">
+        <thead class="bg-geo-900/60">
+          <tr>
+            <th scope="col" class="px-5 py-4 font-display font-semibold text-ink-100 whitespace-nowrap">Dimension</th>
+            <th scope="col" class="px-5 py-4 font-display font-semibold text-ink-100 whitespace-nowrap">Method</th>
+            <th scope="col" class="px-5 py-4 font-display font-semibold text-ink-100 whitespace-nowrap">Frequency</th>
+            <th scope="col" class="px-5 py-4 font-display font-semibold text-ink-100 whitespace-nowrap">Alert Threshold</th>
+            <th scope="col" class="px-5 py-4 font-display font-semibold text-ink-100">Action Triggered</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-[var(--line)]">
+          <tr class="hover:bg-geo-900/30 transition-colors">
+            <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">Citation Frequency</td>
+            <td class="px-5 py-4 text-ink-300">Automated platform queries</td>
+            <td class="px-5 py-4 text-ink-300">Weekly</td>
+            <td class="px-5 py-4 text-ink-300 whitespace-nowrap">&gt;10% week-on-week drop</td>
+            <td class="px-5 py-4 text-ink-300">Investigate platform change or competitor activity</td>
+          </tr>
+          <tr class="hover:bg-geo-900/30 transition-colors">
+            <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">Brand Accuracy</td>
+            <td class="px-5 py-4 text-ink-300">LLM-assisted response review</td>
+            <td class="px-5 py-4 text-ink-300">Monthly</td>
+            <td class="px-5 py-4 text-ink-300 whitespace-nowrap">Any new inaccuracy detected</td>
+            <td class="px-5 py-4 text-ink-300">Entity data audit; content correction</td>
+          </tr>
+          <tr class="hover:bg-geo-900/30 transition-colors">
+            <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">Competitor Citations</td>
+            <td class="px-5 py-4 text-ink-300">Share-of-voice tracking</td>
+            <td class="px-5 py-4 text-ink-300">Weekly</td>
+            <td class="px-5 py-4 text-ink-300 whitespace-nowrap">Rival gains &gt;5% SoV</td>
+            <td class="px-5 py-4 text-ink-300">Competitive content gap analysis</td>
+          </tr>
+          <tr class="hover:bg-geo-900/30 transition-colors">
+            <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">Crawler Access</td>
+            <td class="px-5 py-4 text-ink-300">Robots.txt &amp; server log audit</td>
+            <td class="px-5 py-4 text-ink-300">Monthly</td>
+            <td class="px-5 py-4 text-ink-300 whitespace-nowrap">Any new Disallow for AI bots</td>
+            <td class="px-5 py-4 text-ink-300">Immediate robots.txt correction</td>
+          </tr>
+          <tr class="hover:bg-geo-900/30 transition-colors">
+            <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">Entity Consistency</td>
+            <td class="px-5 py-4 text-ink-300">Cross-source data comparison</td>
+            <td class="px-5 py-4 text-ink-300">Quarterly</td>
+            <td class="px-5 py-4 text-ink-300 whitespace-nowrap">Any data conflict found</td>
+            <td class="px-5 py-4 text-ink-300">Entity data reconciliation across directories</td>
+          </tr>
+          <tr class="hover:bg-geo-900/30 transition-colors">
+            <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">Cited URL Coverage</td>
+            <td class="px-5 py-4 text-ink-300">Source URL extraction from responses</td>
+            <td class="px-5 py-4 text-ink-300">Monthly</td>
+            <td class="px-5 py-4 text-ink-300 whitespace-nowrap">High-priority page drops off</td>
+            <td class="px-5 py-4 text-ink-300">Page-level content review and citability update</td>
+          </tr>
+          <tr class="hover:bg-geo-900/30 transition-colors">
+            <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">Schema Validity</td>
+            <td class="px-5 py-4 text-ink-300">Automated structured data testing</td>
+            <td class="px-5 py-4 text-ink-300">On deploy</td>
+            <td class="px-5 py-4 text-ink-300 whitespace-nowrap">Any validation error</td>
+            <td class="px-5 py-4 text-ink-300">Schema fix before next publish cycle</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-12 space-y-6 max-w-3xl">
+      <p class="text-ink-300 leading-relaxed">
+        <strong class="text-white">Crawler access monitoring is the most neglected dimension and carries the highest risk if it fails silently.</strong> A single robots.txt change that blocks <code class="font-mono text-xs bg-geo-900 px-1.5 py-0.5 rounded">GPTBot</code> or <code class="font-mono text-xs bg-geo-900 px-1.5 py-0.5 rounded">PerplexityBot</code> removes your content from the retrieval layer of every RAG-based platform overnight. Because the impact shows up as a citation frequency drop rather than a crawl error, teams without explicit crawler access monitoring may spend weeks investigating content quality changes before identifying the true cause.
+      </p>
+      <p class="text-ink-300 leading-relaxed">
+        Entity consistency monitoring operates on a different cadence because entity data propagates slowly across knowledge graphs and training pipelines. A discrepancy between your website's Organisation schema and your Wikidata entry will not cause an immediate citation drop — but over a 3 to 6 month training cycle it will degrade your brand accuracy score as models absorb conflicting entity signals. Quarterly reconciliation catches drift before it compounds.
+      </p>
+      <p class="text-ink-300 leading-relaxed">
+        For the tooling that supports this monitoring framework, visit our <a href="/geo-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO tools hub</a>. For the methodology behind setting up your initial measurement baseline, see <a href="/how-to-measure-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how to measure GEO</a>. The broader discipline is covered in our <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> root guide.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="container-wide py-20 border-t hair">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">GEO Monitoring: Frequently Asked Questions</h2>
+
+    <div class="mt-10 max-w-3xl divide-y divide-[var(--line)]">
+      {faqs.map(faq => (
+        <div class="faq-item">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between py-5 text-left font-display text-base font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors"
+            aria-expanded="false"
+          >
+            <span>{faq.q}</span>
+            <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+            </svg>
+          </button>
+          <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+            <p class="pb-5 text-sm text-ink-300 leading-relaxed">{faq.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="container-wide py-20">
+    <div class="relative overflow-hidden rounded-2xl dot-grid">
+      <div class="absolute inset-0 bg-gradient-to-br from-[rgba(var(--accent-glow),.12)] via-transparent to-transparent"></div>
+      <div class="relative px-8 py-16 text-center sm:px-16">
+        <span class="eyebrow">GEO Monitoring Setup</span>
+        <h2 class="mt-4 font-display text-3xl font-bold text-ink-50 sm:text-4xl">Start Tracking Your AI Visibility Today</h2>
+        <p class="mt-4 mx-auto max-w-2xl text-ink-300 leading-relaxed">
+          Most brands do not know whether AI platforms are citing them, misrepresenting them, or ignoring them entirely. GEOoptimised builds and operates GEO monitoring programmes that give you a clear, current picture of your AI visibility — and alert you when it changes. Get in touch to discuss a monitoring setup for your organisation.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact/" class="btn btn-primary">Set Up GEO Monitoring</a>
+          <a href="/generative-engine-optimisation/" class="btn btn-ghost">Back to GEO Root Guide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = '0';
+            other.closest('.faq-item').querySelector('.faq-icon').style.transform = '';
+          }
+        });
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+        icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+      });
+    });
+  </script>
+
+</Base>

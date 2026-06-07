@@ -1,0 +1,378 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO Agency Near You — Remote GEO Services | GEOoptimised';
+const description = 'GEOoptimised is a UK-based GEO agency serving clients remotely worldwide. Expert generative engine optimisation for businesses in New York, Los Angeles, DC, and beyond.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Generative Engine Optimisation Services",
+    "serviceType": "Generative Engine Optimisation",
+    "description": "Remote generative engine optimisation services delivered by GEOoptimised, a UK-based specialist agency. We serve businesses in New York, Los Angeles, Long Island, San Antonio, Washington DC, and clients worldwide.",
+    "provider": {
+      "@id": "https://geooptimised.com/#organization"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "New York" },
+      { "@type": "City", "name": "Los Angeles" },
+      { "@type": "City", "name": "Long Island" },
+      { "@type": "City", "name": "San Antonio" },
+      { "@type": "City", "name": "Washington DC" },
+      { "@type": "AdministrativeArea", "name": "Worldwide" }
+    ],
+    "url": "https://geooptimised.com/geo-near-you/",
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "inLanguage": "en-GB",
+    "image": "https://geooptimised.com/og-image.png"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does GEOoptimised work with clients outside the UK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. GEOoptimised is a UK-based agency that works with clients remotely worldwide. Generative engine optimisation is a fully remote discipline: audits, entity work, content strategy, structured data, and monitoring are all delivered digitally. We have clients across North America, Europe, and further afield. Geography does not constrain delivery quality."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a local GEO agency in my city?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. GEO is a remote-first discipline. The work requires deep technical and content expertise, not physical proximity. What matters is the agency's understanding of AI platforms, content architecture, and knowledge graph signals, not their postcode. GEOoptimised delivers identical work quality to clients in New York, Los Angeles, Washington DC, or anywhere else worldwide."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does GEOoptimised manage remote client engagements?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Engagements run through a structured four-phase process: discovery and audit, foundation, optimisation, and ongoing iteration. Communication is via scheduled calls, shared reporting dashboards, and asynchronous updates. We adapt to client time zones for live sessions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is generative engine optimisation relevant for businesses in the United States?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Generative engine optimisation is highly relevant for US businesses. ChatGPT, Perplexity, Google Gemini, and Microsoft Copilot are used heavily across North America, and AI-driven information queries are growing fastest in B2B and considered-purchase consumer categories. US businesses face the same GEO challenge as UK and European companies: earning citations in AI-generated answers rather than simply ranking in traditional search results."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What US cities do you have specific GEO guides for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We publish location-specific GEO guides for New York, Los Angeles, Long Island, San Antonio, and Washington DC. Each guide covers the local business landscape, the types of queries AI platforms receive about businesses in that area, and how GEO strategy applies to companies operating in those markets."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you handle billing and contracts for international clients?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We invoice in GBP as standard but can accommodate USD or EUR billing by arrangement. Contracts are governed by English law. Payment is handled digitally. Initial consultations are free, with no obligation, and are conducted via video call regardless of client location."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://geooptimised.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Generative Engine Optimisation",
+        "item": "https://geooptimised.com/generative-engine-optimisation/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "GEO Agency Near You",
+        "item": "https://geooptimised.com/geo-near-you/"
+      }
+    ]
+  }
+];
+
+const cities = [
+  {
+    name: 'New York',
+    slug: '/geo-agency-new-york/',
+    desc: 'GEO services for New York businesses: competitive AI visibility strategy for finance, media, professional services, and the most demanding B2B markets in the world.',
+    icon: `<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="1"/><polyline points="16 7 12 3 8 7"/><line x1="12" y1="3" x2="12" y2="22"/></svg>`,
+  },
+  {
+    name: 'Los Angeles',
+    slug: '/geo-agency-los-angeles/',
+    desc: 'GEO services for LA businesses: AI citation strategy for entertainment, tech, e-commerce, and the diverse industries that define the California market.',
+    icon: `<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`,
+  },
+  {
+    name: 'Long Island',
+    slug: '/geo-agency-long-island/',
+    desc: 'GEO services for Long Island businesses: earn AI citations in competitive New York metro queries across healthcare, legal, real estate, and B2B services.',
+    icon: `<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+  },
+  {
+    name: 'San Antonio',
+    slug: '/geo-agency-san-antonio/',
+    desc: "GEO services for San Antonio businesses: AI visibility strategy for Texas's defence, healthcare, tourism, and fast-growing professional services sectors.",
+    icon: `<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
+  },
+  {
+    name: 'Washington DC',
+    slug: '/geo-agency-dc/',
+    desc: 'GEO services for Washington DC businesses: AI citation strategy for government contractors, think tanks, law firms, associations, and policy-adjacent organisations.',
+    icon: `<svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M4 20V10l8-8 8 8v10"/><path d="M10 20v-5h4v5"/></svg>`,
+  },
+];
+
+const faqs = [
+  {
+    q: 'Does GEOoptimised work with clients outside the UK?',
+    a: 'Yes. GEOoptimised is a UK-based agency that works with clients remotely worldwide. Generative engine optimisation is a fully remote discipline: audits, entity work, content strategy, structured data, and monitoring are all delivered digitally. We have clients across North America, Europe, and further afield. Geography does not constrain delivery quality.',
+  },
+  {
+    q: 'Do I need a local GEO agency in my city?',
+    a: "No. GEO is a remote-first discipline. The work requires deep technical and content expertise, not physical proximity. What matters is the agency's understanding of AI platforms, content architecture, and knowledge graph signals, not their postcode. GEOoptimised delivers identical work quality to clients in New York, Los Angeles, Washington DC, or anywhere else worldwide.",
+  },
+  {
+    q: 'How does GEOoptimised manage remote client engagements?',
+    a: 'Engagements run through a structured four-phase process: discovery and audit, foundation, optimisation, and ongoing iteration. Communication is via scheduled calls, shared reporting dashboards, and asynchronous updates. We adapt to client time zones for live sessions. Most clients find that regular structured reviews are more useful than ad-hoc in-person meetings — GEO is a data-driven discipline and the evidence speaks in dashboards, not offices.',
+  },
+  {
+    q: 'Is generative engine optimisation relevant for businesses in the United States?',
+    a: 'Generative engine optimisation is highly relevant for US businesses. ChatGPT, Perplexity, Google Gemini, and Microsoft Copilot are used heavily across North America, and AI-driven information queries are growing fastest in B2B and considered-purchase consumer categories. US businesses face the same GEO challenge as UK and European companies: earning citations in AI-generated answers rather than simply ranking in traditional search results.',
+  },
+  {
+    q: 'What US cities do you have specific GEO guides for?',
+    a: 'We publish location-specific GEO guides for New York, Los Angeles, Long Island, San Antonio, and Washington DC. Each guide covers the local business landscape, the types of queries AI platforms receive about businesses in that area, and how GEO strategy applies to companies operating in those markets.',
+  },
+  {
+    q: 'How do you handle billing and contracts for international clients?',
+    a: 'We invoice in GBP as standard but can accommodate USD or EUR billing by arrangement. Contracts are governed by English law. Payment is handled digitally. Initial consultations are free, with no obligation, and are conducted via video call regardless of client location.',
+  },
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/geo-near-you/" ogType="website">
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex items-center gap-2 font-mono text-xs text-ink-400">
+      <li><a href="/" class="hover:text-[var(--accent)] transition-colors">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/generative-engine-optimisation/" class="hover:text-[var(--accent)] transition-colors">Generative Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">GEO Agency Near You</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-fade relative overflow-hidden">
+    <div class="container-wide grid gap-12 pt-12 pb-20 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-7">
+        <span class="eyebrow">Location Hub · N12</span>
+        <h1 class="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <span class="grad-text">GEO Agency Near You</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-300">
+          <strong class="text-ink-100">GEOoptimised is a UK-based specialist agency delivering generative engine optimisation services to clients remotely worldwide.</strong> We do not maintain local offices in any city — and we do not need to. GEO is a remote discipline. What your business needs is deep expertise in AI citation strategy, not a postcode match.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/contact/" class="btn btn-primary">Start a Conversation</a>
+          <a href="/geo-services/" class="btn btn-ghost">Explore GEO Services</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="card p-6">
+          <span class="eyebrow">How we work</span>
+          <div class="mt-4 grid grid-cols-2 gap-6">
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">100%</p>
+              <p class="mt-1 text-sm text-ink-400">Remote delivery</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">5</p>
+              <p class="mt-1 text-sm text-ink-400">US city guides</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">6+</p>
+              <p class="mt-1 text-sm text-ink-400">AI platforms covered</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">Global</p>
+              <p class="mt-1 text-sm text-ink-400">Client reach</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Transparency callout -->
+  <section class="container-wide py-12">
+    <div class="card border-l-4 border-l-[var(--accent)] p-8 max-w-3xl">
+      <span class="eyebrow">Transparency</span>
+      <h2 class="mt-3 font-display text-xl font-semibold text-ink-50">We Are UK-Based. We Work Everywhere.</h2>
+      <p class="mt-3 text-ink-300 leading-relaxed">
+        Many agencies fabricate local office listings to rank for "agency near me" queries. We will not do that. GEOoptimised is headquartered in the United Kingdom and has no physical offices in New York, Los Angeles, or anywhere else in the United States. What we do have is a specialist team with deep expertise in <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> and a proven process for delivering results remotely to clients on any continent. If you need a GEO specialist, location should not be your filter — expertise should be.
+      </p>
+    </div>
+  </section>
+
+  <!-- City Grid -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">City Guides</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">GEO Services by Location</h2>
+    <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed">
+      Each guide below covers the GEO landscape for that city's business environment — the industries driving AI search queries, the competitive dynamics, and how GEOoptimised's remote service model applies to businesses operating in those markets.
+    </p>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {cities.map(city => (
+        <a href={city.slug} class="card card-hover block p-8 flex flex-col">
+          <div class="flex h-12 w-12 items-center justify-center rounded-lg border border-[var(--line)] text-[var(--accent)]">
+            <Fragment set:html={city.icon} />
+          </div>
+          <h3 class="mt-5 font-display text-xl font-semibold text-ink-50">{city.name}</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300 flex-1">{city.desc}</p>
+          <span class="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-[var(--accent)]">
+            Read city guide <span aria-hidden="true">&rarr;</span>
+          </span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Why Remote Works -->
+  <section class="container-wide py-20">
+    <div class="prose-dark space-y-16">
+
+      <div class="grid gap-8 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <span class="eyebrow">Why It Works</span>
+          <h2 id="why-remote-works" class="anchor-top !mt-3">Why Remote GEO Works as Well as Local</h2>
+        </div>
+        <div class="lg:col-span-7">
+          <p><strong class="text-ink-100">Generative engine optimisation is a technical and content discipline — proximity adds no value.</strong> When a GEO specialist is auditing your AI visibility across ChatGPT, Perplexity, and Gemini, assessing your entity presence on Wikidata, reviewing your structured data, or restructuring your content for LLM citation, none of that work requires being in the same city as your offices. The data lives in AI platforms. The analysis lives in dashboards. The deliverables are documents, code, and content.</p>
+          <p>Compare this to disciplines that genuinely benefit from local presence — brand campaigns requiring knowledge of local culture, physical event production, or regional media relationships. <a href="/geo-services/">GEO services</a> do not share those dependencies. The signals that matter to AI platforms — entity authority, structured data, citation-ready content architecture, third-party corroboration — are identical regardless of which city your business operates from.</p>
+          <p>The "near me" instinct is understandable. For many agency relationships, proximity once mattered: for in-person workshops, regular site visits, or local market knowledge. But <a href="/geo-agency/">GEO agencies</a> succeed on the strength of their AI platform expertise and optimisation methodology, not their office address. A remote specialist with genuine GEO expertise will consistently outperform a generalist local agency that has added "GEO" to their service list without the technical depth to support it.</p>
+          <p>Our remote engagement model ensures US clients receive the same rigour as UK clients: dedicated project management, time-zone-adapted calls, shared reporting dashboards, and a four-phase delivery process that creates clear accountability at every stage. We align sprint timings to client preferences and provide asynchronous updates so nothing is blocked by time differences.</p>
+        </div>
+      </div>
+
+      <div>
+        <h2 id="what-us-businesses-need">What US Businesses Need From GEO</h2>
+        <p><strong class="text-ink-100">US businesses face a more competitive AI visibility environment than almost any other market.</strong> North American users are among the heaviest users of ChatGPT, Perplexity, and Google Gemini. The queries being asked — for professional services recommendations, B2B solution comparisons, industry expertise — are exactly the queries where AI citations translate most directly into commercial opportunities.</p>
+        <p>A New York law firm, a Los Angeles production company, a San Antonio healthcare provider, and a Washington DC government contractor all face the same underlying GEO challenge: when a potential client asks an AI platform for a recommendation in their category, are they being cited or are their competitors? The answer is determined not by geography but by entity authority, content structure, and technical optimisation — the disciplines GEOoptimised specialises in.</p>
+        <p>American businesses also tend to operate in categories where brand authority is highly contestable. Well-funded competitors are investing in content, SEO, and increasingly GEO. The window for establishing first-mover advantage in AI citations is narrowing. For businesses in competitive US markets, the question is not whether to invest in GEO but how quickly to get started. For the strategic framework that underpins our work, see our <a href="/geo-strategy/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO strategy guide</a>.</p>
+        <p>The underlying <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> methodology is platform-agnostic and market-agnostic. Whether your target queries originate from a user in Manhattan or Manchester, the AI platforms process them the same way, draw on the same knowledge sources, and apply the same citation logic. What varies is the competitive landscape and the specific query vocabulary — differences a competent GEO team accounts for in its prompt research and competitive analysis, not differences that require a local office.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Frequently Asked Questions</h2>
+
+    <div class="mt-10 max-w-3xl divide-y divide-[var(--line)]">
+      {faqs.map(faq => (
+        <div class="faq-item">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors"
+            aria-expanded="false"
+          >
+            <span>{faq.q}</span>
+            <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+            </svg>
+          </button>
+          <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+            <p class="pb-5 text-ink-300 leading-relaxed">{faq.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="container-wide py-20">
+    <div class="relative overflow-hidden rounded-2xl dot-grid">
+      <div class="absolute inset-0 bg-gradient-to-br from-[rgba(var(--accent-glow),.12)] via-transparent to-transparent"></div>
+      <div class="relative px-8 py-16 text-center sm:px-16">
+        <span class="eyebrow">Work With Us</span>
+        <h2 class="mt-4 font-display text-3xl font-bold text-ink-50 sm:text-4xl">Ready to Improve Your AI Visibility — Wherever You Are?</h2>
+        <p class="mt-4 mx-auto max-w-2xl text-ink-300 leading-relaxed">
+          Whether your business is in New York, Los Angeles, San Antonio, or anywhere else, GEOoptimised delivers the same specialist GEO expertise remotely. The first step is a free, no-obligation consultation to assess your current AI visibility position.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact/" class="btn btn-primary">Start a Conversation</a>
+          <a href="/geo-services/" class="btn btn-ghost">Explore GEO Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Hubs -->
+  <section class="container-wide py-20 border-t hair">
+    <span class="eyebrow">Related</span>
+    <h2 class="mt-3 font-display text-2xl font-bold text-ink-50">Explore More</h2>
+    <div class="mt-8 grid gap-6 sm:grid-cols-3">
+      <a href="/generative-engine-optimisation/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">Generative Engine Optimisation</h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed">The complete guide to GEO: what it is, how it works, and why it matters for every business with an online presence.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/geo-services/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">GEO Services</h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed">The full scope of generative engine optimisation services: audits, entity work, structured data, content, and ongoing monitoring.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/geo-strategy/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">GEO Strategy</h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed">How to build a prioritised, repeatable GEO programme — from baseline audit to competitive positioning.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = '0';
+            other.closest('.faq-item').querySelector('.faq-icon').style.transform = '';
+          }
+        });
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+        icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+      });
+    });
+  </script>
+
+</Base>

@@ -1,0 +1,535 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO Statistics: AI Search Trends | GEOoptimised';
+const description = 'GEO statistics explained: the categories of data that matter, how to find reliable sources, and a framework for tracking AI search adoption trends without fabricated numbers.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'GEO Statistics: AI Search Trends',
+    description: 'GEO statistics explained: the categories of data that matter, how to find reliable sources, and a framework for tracking AI search adoption trends without fabricated numbers.',
+    url: 'https://geooptimised.com/geo-statistics/',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://geooptimised.com/geo-statistics/'
+    },
+    datePublished: '2026-06-07',
+    dateModified: '2026-06-07',
+    image: 'https://geooptimised.com/og-image.png',
+    inLanguage: 'en-GB',
+    author: { '@id': 'https://geooptimised.com/#organization' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' }
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What statistics are most relevant to GEO performance?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The statistics most relevant to GEO performance fall into three groups: AI platform adoption metrics (how many people are using AI search tools as a primary information source), citation behaviour data (how often AI engines cite external sources rather than synthesising from training data alone), and brand-level citation tracking (how frequently your brand appears in AI-generated answers for target queries). The first two are sourced from industry research; the third is measured directly using GEO monitoring tools.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How quickly is AI search adoption growing?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Reported estimates vary widely depending on the study, geography, and definition used. The consistent directional finding across multiple industry surveys is that AI search tool usage has grown rapidly since 2023 and continues to increase. The more useful question for practitioners is not the absolute adoption rate but the rate at which AI-assisted queries are displacing traditional search on specific intent categories — particularly informational and navigational queries where AI-generated answers reduce the need to click through to a source.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Where should I find reliable GEO and AI search statistics?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Reliable primary sources for GEO and AI search statistics include: platform-published data from Google, Microsoft, and OpenAI (treat with awareness of commercial incentive); independent research firms such as Gartner, Forrester, and Nielsen; academic papers on retrieval-augmented generation and LLM citation behaviour; and industry analyst reports from organisations tracking search market share. For brand-level citation statistics, primary measurement using GEO monitoring tools is the only reliable source.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Can I measure my own GEO statistics?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. Brand-level GEO statistics — citation frequency, citation accuracy, share of voice across AI platforms, and topic coverage — are measurable using dedicated GEO monitoring tools. These tools submit target queries to AI engines on a scheduled basis, parse the responses, and track whether your brand is cited, how it is described, and which competitors appear. This category of first-party data is more actionable than industry-level adoption statistics because it reflects your specific competitive position.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the relationship between traditional SEO metrics and GEO statistics?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Traditional SEO metrics (organic sessions, keyword rankings, click-through rate) and GEO statistics (citation frequency, AI share of voice) are related but distinct. As AI-generated answers intercept an increasing share of informational queries, the click-through value of ranking positions changes. Brands that track both sets of metrics are better positioned to detect when AI search is affecting organic traffic and to attribute changes correctly.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How often should GEO statistics be tracked?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Brand-level GEO citation statistics should be tracked at least weekly for actively optimised query sets, and monthly for broader topic coverage. AI models update frequently, and citation patterns can shift after model updates even without changes to your content. Weekly tracking provides early warning of citation losses and allows rapid investigation before competitive gaps widen.'
+        }
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'GEO Metrics', item: 'https://geooptimised.com/geo-metrics/' },
+      { '@type': 'ListItem', position: 3, name: 'GEO Statistics', item: 'https://geooptimised.com/geo-statistics/' }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'what-statistics-matter', label: 'What Statistics Matter' },
+  { id: 'categories-of-data', label: 'Categories of GEO Data' },
+  { id: 'sourcing-reliable-data', label: 'Sourcing Reliable Data' },
+  { id: 'measuring-your-own', label: 'Measuring Your Own Citations' },
+  { id: 'tracking-framework', label: 'A Tracking Framework' },
+  { id: 'honesty-caveat', label: 'A Note on Data Honesty' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const dataCategories = [
+  {
+    category: 'AI Platform Adoption',
+    what: 'Monthly active users, query volume, share of informational searches handled by AI',
+    sources: 'Platform announcements, Gartner/Forrester reports, web analytics panels',
+    caveat: 'Definitions vary; treat headline figures as directional, not precise',
+  },
+  {
+    category: 'Citation Behaviour',
+    what: 'Rate at which AI engines cite external sources; citation depth per response; source diversity',
+    sources: 'Academic RAG research; platform documentation; practitioner studies',
+    caveat: 'Highly variable by platform and query type; no single universal figure',
+  },
+  {
+    category: 'Brand Citation Frequency',
+    what: 'How often your brand is cited for target queries across specific AI platforms',
+    sources: 'First-party GEO monitoring tools; manual audits',
+    caveat: 'The only category where primary measurement is practical and reliable',
+  },
+  {
+    category: 'Competitor Citation Share',
+    what: 'Relative citation presence of competing brands on shared target queries',
+    sources: 'GEO monitoring tools with competitor tracking',
+    caveat: 'Share data is only meaningful relative to a defined query set',
+  },
+  {
+    category: 'Citation Accuracy',
+    what: 'Whether AI-generated descriptions of your brand are factually correct and on-message',
+    sources: 'Manual review and automated sentiment/entity extraction',
+    caveat: 'Qualitative dimension; needs structured review against brand guidelines',
+  },
+  {
+    category: 'Topic Coverage',
+    what: 'The range of target topics on which your brand earns citations',
+    sources: 'GEO monitoring across a broad query set mapped to your topical map',
+    caveat: 'Breadth metrics require a pre-defined topic taxonomy to be meaningful',
+  },
+];
+
+const reliableSources = [
+  {
+    source: 'Platform-published data',
+    examples: 'Google I/O announcements, Microsoft Build reports, OpenAI usage posts',
+    strengths: 'First-hand figures, often largest sample sizes',
+    limitations: 'Commercial incentive to present growth positively; metric definitions curated',
+  },
+  {
+    source: 'Independent research firms',
+    examples: 'Gartner Hype Cycle, Forrester Wave, Nielsen digital measurement',
+    strengths: 'Methodologically rigorous; peer-reviewed or auditable methods',
+    limitations: 'Often paywalled; may lag fast-moving platform changes by 6–12 months',
+  },
+  {
+    source: 'Academic research',
+    examples: 'Papers on RAG citation behaviour, LLM hallucination rates, source selection',
+    strengths: 'Methodologically transparent; reproducible findings',
+    limitations: 'Focused on specific models or tasks; may not reflect current production systems',
+  },
+  {
+    source: 'Industry analyst reports',
+    examples: 'Search market share trackers, SEO industry surveys, AI tool usage panels',
+    strengths: 'Practitioner-relevant framing; trend data over time',
+    limitations: 'Methodology variation between publishers; self-selection in survey samples',
+  },
+];
+
+const faqs = [
+  {
+    q: 'What statistics are most relevant to GEO performance?',
+    a: 'The statistics most relevant to GEO performance fall into three groups: AI platform adoption metrics (how many people are using AI search tools as a primary information source), citation behaviour data (how often AI engines cite external sources), and brand-level citation tracking (how frequently your brand appears in AI-generated answers for target queries). The first two are sourced from industry research; the third is measured directly using GEO monitoring tools.',
+  },
+  {
+    q: 'How quickly is AI search adoption growing?',
+    a: 'Reported estimates vary widely depending on the study, geography, and definition used. The consistent directional finding is that AI search tool usage has grown rapidly since 2023 and continues to increase. The more useful question for practitioners is not the absolute adoption rate but the rate at which AI-assisted queries are displacing traditional search on specific intent categories.',
+  },
+  {
+    q: 'Where should I find reliable GEO and AI search statistics?',
+    a: 'Reliable primary sources include platform-published data from Google, Microsoft, and OpenAI; independent research firms such as Gartner and Forrester; academic papers on RAG and LLM citation behaviour; and industry analyst reports tracking search market share. For brand-level citation statistics, primary measurement using GEO monitoring tools is the only reliable source.',
+  },
+  {
+    q: 'Can I measure my own GEO statistics?',
+    a: 'Yes. Brand-level GEO statistics — citation frequency, citation accuracy, share of voice across AI platforms, and topic coverage — are measurable using dedicated GEO monitoring tools. These tools submit target queries to AI engines on a scheduled basis and track whether your brand is cited and how it is described.',
+  },
+  {
+    q: 'What is the relationship between traditional SEO metrics and GEO statistics?',
+    a: 'Traditional SEO metrics and GEO statistics are related but distinct. As AI-generated answers intercept an increasing share of informational queries, the click-through value of ranking positions changes. Brands that track both sets of metrics are better positioned to detect when AI search is affecting organic traffic and to attribute changes correctly.',
+  },
+  {
+    q: 'How often should GEO statistics be tracked?',
+    a: 'Brand-level GEO citation statistics should be tracked at least weekly for actively optimised query sets, and monthly for broader topic coverage. AI models update frequently and citation patterns can shift after model updates even without changes to your content.',
+  },
+];
+
+const related = [
+  {
+    tag: 'NODE',
+    title: 'GEO Metrics: How to Measure AI Citation Performance',
+    excerpt: 'The full metrics framework for tracking citation frequency, share of voice, and brand accuracy across AI platforms.',
+    href: '/geo-metrics/',
+  },
+  {
+    tag: 'Guide',
+    title: 'How to Measure GEO',
+    excerpt: 'Step-by-step guidance on setting up GEO measurement, choosing monitoring tools, and interpreting citation data.',
+    href: '/how-to-measure-geo/',
+  },
+  {
+    tag: 'Insight',
+    title: 'The Future of GEO',
+    excerpt: 'How the AI search landscape is likely to evolve and what that means for citation strategy.',
+    href: '/future-of-geo/',
+  },
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/geo-statistics/" ogType="article">
+
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-metrics/" class="transition hover:text-[var(--accent)]">GEO Metrics</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">GEO Statistics</li>
+    </ol>
+  </nav>
+
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">GEO Metrics</span>
+        <span class="font-mono text-xs text-ink-400">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-400">10 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO Statistics: AI Search Trends
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">GEO statistics are only as useful as the framework used to interpret them.</strong> The AI search landscape is moving quickly, published figures vary between studies, and many widely-cited numbers are based on methodologies that do not stand up to scrutiny. This page explains which categories of statistics matter for practitioners, where to source reliable data, and how to build a measurement programme grounded in first-party evidence rather than industry conjecture.
+      </p>
+    </div>
+  </section>
+
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" id="toc-nav">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <div>
+
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Industry-level AI adoption statistics are directionally useful but should not be cited as precise facts — methodology and definitions vary significantly between studies.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>The most actionable GEO statistics are brand-level: citation frequency, citation accuracy, and share of voice on specific target queries.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Reliable sources include platform announcements, independent research firms, and peer-reviewed academic work — each with its own limitations to account for.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>First-party GEO monitoring is the only way to obtain statistics that directly reflect your competitive position in AI-generated answers.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>The direction of travel — increasing AI search adoption, growing AI citation of web sources — is well-established. Precise figures for any given moment are not.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prose-dark">
+        <h2 id="what-statistics-matter" class="anchor-top">What Statistics Matter for GEO Practitioners</h2>
+        <p>
+          <strong>The statistics that matter for GEO practice are those that inform decisions about where to invest optimisation effort — not those that justify the existence of GEO as a discipline.</strong> The distinction matters because a large proportion of AI search statistics circulating in marketing content are advocacy figures: designed to persuade, not to measure. A practitioner building a GEO programme needs a different set of numbers than a CMO deciding whether to fund one.
+        </p>
+        <p>
+          For practitioners, the relevant statistical questions are: How often is your brand cited across target AI platforms? What is your citation share relative to competitors? Are the AI-generated descriptions of your brand accurate? Which topics earn citations and which do not? These are brand-level, first-party questions that can only be answered through direct measurement. No industry report answers them for your specific brand.
+        </p>
+        <p>
+          Industry-level statistics — AI search adoption rates, the percentage of queries receiving AI-generated answers, projected market growth — provide useful context for understanding the scale and direction of change. They are inputs to strategy conversations, not substitutes for measurement. We address both in this page: how to find reliable macro-level data, and how to build the micro-level measurement programme that drives actual optimisation decisions. For the broader measurement framework, see the <a href="/geo-metrics/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO metrics guide</a> and the <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> pillar.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="categories-of-data" class="anchor-top">Categories of GEO Statistical Data</h2>
+        <p>
+          <strong>GEO statistics fall into six distinct categories, each measuring a different layer of the AI search landscape — from macro adoption trends down to brand-specific citation performance.</strong> Understanding which category a statistic belongs to is the first step in assessing its relevance and reliability.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Category</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">What It Measures</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Primary Sources</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Key Caveat</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y hair">
+            {dataCategories.map(row => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class="px-4 py-3 font-semibold text-white">{row.category}</td>
+                <td class="px-4 py-3 text-ink-300">{row.what}</td>
+                <td class="px-4 py-3 text-ink-300">{row.sources}</td>
+                <td class="px-4 py-3 text-ink-300">{row.caveat}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          The first two categories — AI platform adoption and citation behaviour — are macro statistics. They establish the strategic case for investing in GEO and provide context for interpreting brand-level results. The remaining four categories are operational metrics that drive day-to-day optimisation decisions. A complete GEO measurement programme tracks all six, sourcing the first two from external research and measuring the final four directly.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="sourcing-reliable-data" class="anchor-top">Sourcing Reliable GEO Statistics</h2>
+        <p>
+          <strong>Reliable GEO and AI search statistics come from sources with transparent methodology, a defined sample, and a clear disclosure of what was measured.</strong> Statistics that lack these attributes — those presented as precise percentages without a cited source, or with a source that turns out to be a platform's own marketing material — should be treated as illustrative at best.
+        </p>
+        <p>
+          The table below maps the main source categories for AI search statistics to their typical strengths and limitations. No single source is comprehensive; a well-researched understanding of the landscape draws from multiple categories and cross-references where figures diverge.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Source Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Examples</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Strengths</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Limitations</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y hair">
+            {reliableSources.map(row => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class="px-4 py-3 font-semibold text-white">{row.source}</td>
+                <td class="px-4 py-3 text-ink-300">{row.examples}</td>
+                <td class="px-4 py-3 text-ink-300">{row.strengths}</td>
+                <td class="px-4 py-3 text-ink-300">{row.limitations}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          When evaluating any AI search statistic, ask four questions: Who funded the research? What was the sample and how was it defined? How was the key metric operationalised (for example, "AI search user" — does that include someone who used Gemini once)? And when was the data collected, given that this market changes substantially within a single quarter?
+        </p>
+        <p>
+          The direction of change — increasing AI search adoption, growing share of informational queries handled by AI-generated answers — is well-evidenced and consistent across credible sources. The precise figures are not consistent, and presenting any single number as authoritative overstates what the evidence supports. If you need to cite AI adoption statistics in a business case or client presentation, qualify them: "reported estimates vary; industry surveys consistently show rapid growth" is more accurate than any specific percentage.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="measuring-your-own" class="anchor-top">Measuring Your Own GEO Statistics</h2>
+        <p>
+          <strong>First-party citation data is the most actionable GEO statistic available to any brand, because it reflects your actual competitive position rather than an industry average.</strong> Measuring it requires a systematic approach: defining the query set, selecting monitoring tools, establishing a baseline, and tracking changes over time.
+        </p>
+        <p>
+          The process begins with a target query set — the specific questions your customers are asking AI engines that you want to appear in. These should map to your topical architecture: pillar topics, major sub-topics, and high-intent queries at the category level. A representative query set of 50 to 100 queries provides a meaningful baseline without being unwieldy to maintain.
+        </p>
+        <p>
+          GEO monitoring tools submit these queries to the major AI platforms on a scheduled basis, parse the responses for brand mentions and citation links, and report citation frequency as a percentage and as a raw count. This gives you a baseline citation rate for each platform and each query category. Changes in this rate — up or down — are the leading indicator of whether your GEO programme is working. For detailed guidance on setting up this measurement process, see the <a href="/how-to-measure-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how to measure GEO</a> guide.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="tracking-framework" class="anchor-top">A Framework for Tracking GEO Statistics</h2>
+        <p>
+          <strong>A structured GEO statistics tracking framework separates context metrics (macro AI adoption data) from performance metrics (brand-level citation data) and reviews each on appropriate cadences.</strong> Mixing the two categories — or measuring the wrong one to answer a given question — produces misleading conclusions.
+        </p>
+      </div>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        <div class="card p-6">
+          <h3 class="font-display text-base font-semibold text-[var(--accent)]">Quarterly: Context metrics</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300">Review macro AI search adoption data from industry sources each quarter. Update your understanding of platform-level citation behaviour. Track any major changes to platform retrieval mechanisms or citation policies. Use this data to calibrate strategy priorities, not to measure programme performance. Document sources so comparisons over time use consistent methodology.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-display text-base font-semibold text-[var(--accent)]">Weekly: Brand citation metrics</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300">Run your target query set through GEO monitoring tools weekly. Record citation frequency by platform, by query category, and overall. Compare against the prior week and the rolling four-week average. Flag queries where citation frequency has dropped more than a defined threshold for investigation. Track competitor citation share on the same query set for context.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-display text-base font-semibold text-[var(--accent)]">Monthly: Citation accuracy review</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300">Sample a subset of AI-generated answers where your brand is cited. Assess whether descriptions are accurate, on-message, and up to date. Record any instances of hallucination, incorrect attribution, or outdated information. Update content and entity signals to correct inaccurate descriptions. Accurate citation is as important as citation frequency — a consistently wrong description can be more damaging than no citation.</p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-display text-base font-semibold text-[var(--accent)]">Quarterly: Topic coverage audit</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300">Map your citation data against your full topic taxonomy. Identify topics where you have no citation presence. Prioritise content development for high-value uncovered topics. This is the bridge between GEO statistics and GEO content strategy — the data directly informs which pages to create or improve next.</p>
+        </div>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          Reporting GEO statistics to stakeholders works best when the context and performance layers are clearly separated. Macro adoption trends establish the strategic relevance of the programme; brand-level citation metrics demonstrate its operational results. Conflating the two — using industry growth figures to imply your own programme is working — undermines credibility and makes it harder to identify when genuine improvements or problems are occurring.
+        </p>
+        <p>
+          For the broader picture of where this market is heading, see the <a href="/future-of-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">future of GEO</a>. For the operational measurement detail, see <a href="/how-to-measure-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how to measure GEO</a>.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="honesty-caveat" class="anchor-top">A Note on Data Honesty in GEO Reporting</h2>
+        <p>
+          <strong>The GEO industry has a data honesty problem: marketing content routinely presents illustrative or estimated figures as established facts, and practitioners who repeat those figures without qualification damage their own credibility.</strong> This is worth addressing directly because the temptation to cite impressive-sounding statistics is strong, and the AI search space is young enough that verification is difficult.
+        </p>
+        <p>
+          When you encounter a statistic claiming that a specific percentage of searches now return AI-generated answers, or that AI search is growing at a particular rate, the first question to ask is whether the source methodology is disclosed. In most cases, it is not, or it relies on a panel-based methodology with significant self-selection bias. That does not make the number meaningless, but it does mean it should be presented as an estimate with caveats, not as a fact.
+        </p>
+        <p>
+          The stronger position for any GEO practitioner is to lead with first-party measurement data from your own brand's citation programme, and to use industry statistics only as contextual background with appropriate qualification. "Our citation frequency on this query set increased by a specified amount over a defined period" is a statistically honest claim that you can defend. "AI search is growing at a published rate" is a contextual framing that should be sourced and caveated.
+        </p>
+        <p>
+          For the strategic context around these market-level trends, see the <a href="/geo-market-size/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO market size</a> analysis. For guidance on building the citation measurement programme that produces defensible first-party data, <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">get in touch with our team</a>.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="relative border-t hair mt-12 overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Build Your Own GEO Data</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Industry statistics tell you the direction of the market. A first-party citation audit tells you where your brand stands within it. We set up and run GEO monitoring programmes that produce the kind of defensible, brand-specific data that actually informs decisions.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request a citation audit</a>
+        <a href="/geo-metrics/" class="btn btn-ghost">Explore GEO metrics</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const faqBtns = document.querySelectorAll('#faq-accordion button');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+
+    const tocLinks = document.querySelectorAll('#toc-nav a');
+    const headings = Array.from(
+      document.querySelectorAll('h2[id], h3[id]')
+    ) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(link => {
+              link.classList.remove('text-[var(--accent)]');
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.classList.add('text-[var(--accent)]');
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+
+    headings.forEach(h => observer.observe(h));
+  </script>
+
+</Base>

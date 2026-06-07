@@ -1,0 +1,590 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO Tips: Quick Wins for AI Visibility | GEOoptimised';
+const description = 'Actionable GEO tips for faster AI citation wins: tactical quick fixes for content structure, entity signals, schema, and crawler access — implementable in hours, not months.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'GEO Tips: Quick Wins for AI Visibility',
+    description: 'Actionable GEO tips for faster AI citation wins: tactical quick fixes for content structure, entity signals, schema, and crawler access — implementable in hours, not months.',
+    url: 'https://geooptimised.com/geo-tips/',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://geooptimised.com/geo-tips/'
+    },
+    image: 'https://geooptimised.com/og-image.png',
+    datePublished: '2026-06-07',
+    dateModified: '2026-06-07',
+    inLanguage: 'en-GB',
+    author: { '@id': 'https://geooptimised.com/#organization' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' }
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is the fastest GEO quick win?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The fastest GEO quick win is checking your robots.txt for AI crawler blocks. Many sites inadvertently block GPTBot, PerplexityBot, or ClaudeBot via wildcard Disallow rules added in 2023–24. Unblocking these agents takes under an hour and is the single change most likely to produce immediate citation improvements on sites where the content quality is already reasonable. A technically blocked site earns zero citations regardless of how well its content is structured.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How can I quickly improve my AI citation frequency?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The three fastest content changes that improve AI citation frequency are: rewriting your page openings to lead with a direct definitional statement (instead of a context-building introduction), splitting long multi-concept paragraphs into two-to-four-sentence single-point units, and adding a FAQ section whose questions match the exact phrasing used in queries submitted to AI engines. These changes can be made to existing pages without rebuilding them from scratch and typically produce measurable citation improvements within 30–60 days of re-indexation.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Do GEO quick wins work without schema markup?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Content structure quick wins produce citation improvements without schema markup, but the gains are smaller and less consistent. Schema markup (Article, FAQPage, Organisation) acts as a multiplier on well-structured content — it labels your content as an attributed, published piece and maps your Q&A content to conversational query patterns. Adding FAQPage schema to an existing FAQ section is itself a quick win that takes under two hours to implement and validate, so there is no strong reason to defer it.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Which GEO tip has the best effort-to-impact ratio?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Rewriting page openings to lead with a definitional statement has the best effort-to-impact ratio in GEO. It requires no technical changes, no new content production, and no schema deployment — just editing the first sentence or two of existing pages. AI retrieval systems extract the opening of a passage disproportionately often because it most reliably contains the answer to the query that retrieved the page. Changing twenty page openings in a working day can measurably shift citation frequency within weeks.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Are GEO tips different from GEO best practices?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'GEO tips and GEO best practices address the same goal — AI citation — but at different scope and time horizons. Tips are tactical, self-contained actions implementable in hours: fix this robots.txt rule, rewrite this sentence, add this schema. Best practices are structural patterns that must be applied consistently across an entire content programme to produce durable results: always open with a definitional statement, always deploy Article schema on content pages, always monitor citation frequency weekly. Tips are the fastest path to early wins; best practices are what makes those wins compound over time.'
+        }
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'GEO Strategy', item: 'https://geooptimised.com/geo-strategy/' },
+      { '@type': 'ListItem', position: 3, name: 'GEO Tips', item: 'https://geooptimised.com/geo-tips/' }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'why-quick-wins', label: 'Why Quick Wins Matter' },
+  { id: 'technical-tips', label: 'Technical Quick Wins' },
+  { id: 'content-tips', label: 'Content Quick Wins' },
+  { id: 'entity-tips', label: 'Entity Quick Wins' },
+  { id: 'schema-tips', label: 'Schema Quick Wins' },
+  { id: 'tips-table', label: 'Quick Wins Comparison' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' }
+];
+
+const technicalTips = [
+  {
+    tip: 'Unblock AI crawlers in robots.txt',
+    time: '< 1 hour',
+    impact: 'Critical',
+    how: 'Open your robots.txt and check for wildcard Disallow rules (e.g., User-agent: * / Disallow: /) or explicit blocks on GPTBot, PerplexityBot, ClaudeBot, or Google-Extended. Add explicit Allow: / directives for each. Test each user-agent in a robots.txt checker before deploying. This is the most common blocker on otherwise well-prepared sites and takes under an hour to fix.'
+  },
+  {
+    tip: 'Add your llms.txt in under 60 minutes',
+    time: '< 1 hour',
+    impact: 'High',
+    how: 'Create a plain-text file at /llms.txt with three sections: a one-paragraph site description, a bulleted list of five to eight expertise areas, and a list of your five most important page URLs with one-line descriptions. Publish at your domain root. No build pipeline changes required for most static sites — just add the file to your public directory and deploy.'
+  },
+  {
+    tip: 'Fix your XML sitemap and resubmit',
+    time: '< 1 hour',
+    impact: 'Medium',
+    how: 'Verify your sitemap at /sitemap.xml or /sitemap-index.xml is up to date and includes all live content pages. Resubmit to Google Search Console and Bing Webmaster Tools. A current sitemap accelerates the discovery of new or restructured pages by AI crawlers that follow standard web indexation conventions, reducing the lag between publishing and citation eligibility.'
+  },
+  {
+    tip: 'Confirm HTTPS redirects are clean',
+    time: '< 30 min',
+    impact: 'Medium',
+    how: 'Test that http:// and www. variants redirect correctly to your canonical HTTPS non-www (or www, depending on your preference) base URL. Check that the redirect chain is a single 301 — not a chain of two or three redirects. Each additional redirect in the chain is a small crawl budget cost; chains of three or more can cause pages to be skipped entirely by tight crawl budgets.'
+  }
+];
+
+const contentTips = [
+  {
+    tip: 'Rewrite your page opening as a definitional statement',
+    time: '10–20 min per page',
+    impact: 'Critical',
+    how: 'Delete the first paragraph of your highest-priority pages and replace it with a single sentence that answers the primary query the page targets. Not "In this article, we\'ll explore..." — instead, "GEO is the practice of optimising content to earn citations in AI-generated answers." Run through your top ten pages first. This single change is measurably the highest-return content action in GEO and requires no technical work.'
+  },
+  {
+    tip: 'Split multi-concept paragraphs',
+    time: '30–60 min per page',
+    impact: 'High',
+    how: 'Scan each page for paragraphs longer than five sentences or covering more than one topic. Split them. Each paragraph should cover exactly one point, stated in the opening sentence, supported by two to three additional sentences. Retrieval systems that cannot cleanly extract a half-paragraph will skip it. Single-point paragraphs are extractable in their entirety.'
+  },
+  {
+    tip: 'Add an FAQ section to every content page',
+    time: '30–60 min per page',
+    impact: 'High',
+    how: 'Identify five to eight questions your audience submits to AI engines about this page\'s topic — use the "People also ask" box, Reddit, and Quora to find real phrasing. Write four-to-six Q&A pairs with complete answers of 40 to 80 words each. Add FAQPage schema matching the on-page content. FAQ sections are the highest-density citation targets on any page because they present questions in the exact format AI engines receive them.'
+  },
+  {
+    tip: 'Convert list content into tables',
+    time: '20–40 min per table',
+    impact: 'Medium',
+    how: 'Identify any content currently presented as bullet points that has two or more attributes per item — comparisons, feature lists, data sets. Convert to a table with clear column headers using scope="col". Tables are natively extractable units: AI systems can pull the entire table without surrounding context. A page with two well-structured tables generates more citation opportunities than a page with ten bullet-point lists.'
+  },
+  {
+    tip: 'Write bold declarative sentences at the start of each section',
+    time: '15–30 min per page',
+    impact: 'High',
+    how: 'Add a bold statement to the opening of every H2 and H3 section. Not a teaser or a question — a confident claim that states the section\'s main conclusion. "Technical GEO signals act as multipliers on content quality — they do not substitute for it." These declarative openers match the pattern of reliable, citable sources and are extracted disproportionately often by LLMs seeking quotable definitions.'
+  },
+  {
+    tip: 'Update publication dates when you edit content',
+    time: '5 min per page',
+    impact: 'Medium',
+    how: 'Every time you substantially edit a page, update the dateModified field in your Article schema and visually on the page. Retrieval-augmented generation systems like Perplexity weight recently updated content higher for time-sensitive queries. A page last modified in 2023 will lose citation share to a competitor page updated this month on queries where recency is relevant.'
+  }
+];
+
+const entityTips = [
+  {
+    tip: 'Write one canonical brand description and use it everywhere',
+    time: '1–2 hours',
+    impact: 'Critical',
+    how: 'Draft a single sentence that describes your brand — what it does, who it serves, and its primary differentiator. Use this sentence verbatim in your homepage meta description, Organisation schema description field, Google Business Profile description, LinkedIn company page description, and any profile where you have edit access. Exact consistency across these sources is the fastest path to reliable AI entity resolution.'
+  },
+  {
+    tip: 'Check your Google Business Profile category and description',
+    time: '< 30 min',
+    impact: 'High',
+    how: 'Log in to Google Business Profile and verify that your primary category matches your canonical category label and your description matches your canonical brand description. Google Business Profile is a primary input to Google\'s Knowledge Graph, which feeds Gemini and Google AI Overviews. Incorrect category data here directly reduces citation accuracy in Google\'s AI products.'
+  },
+  {
+    tip: 'Add sameAs links to your Organisation schema',
+    time: '< 1 hour',
+    impact: 'High',
+    how: 'In your Organisation schema, add a sameAs array with URLs to your LinkedIn company page, Wikidata entry (if one exists), Companies House record, and any authoritative directory where your brand is definitively described. These links tell knowledge graph crawlers that all these representations are the same entity, consolidating authority signals rather than fragmenting them across disconnected records.'
+  },
+  {
+    tip: 'Claim and verify your Wikidata entry',
+    time: '2–4 hours',
+    impact: 'High',
+    how: 'Search Wikidata for your brand name. If an entry exists, verify all attributes match your canonical entity document and correct any inaccuracies. If no entry exists, assess notability criteria — Wikidata requires verifiable references from independent sources. A verified Wikidata entry is one of the most durable entity signals available to AI systems and is referenced by multiple knowledge graphs.'
+  }
+];
+
+const schemaTips = [
+  {
+    tip: 'Deploy FAQPage schema on every page with a Q&A section',
+    time: '< 2 hours',
+    impact: 'Critical',
+    how: 'For every page that has an FAQ section, add FAQPage schema in JSON-LD that mirrors the on-page Q&A exactly. The schema question text and answer text must match the visible content. Validate with the Google Rich Results Test before publishing. This is the schema type with the strongest direct correlation to conversational AI citation patterns.'
+  },
+  {
+    tip: 'Add BreadcrumbList schema to all non-homepage pages',
+    time: '< 1 hour (sitewide)',
+    impact: 'Medium',
+    how: 'Implement BreadcrumbList schema on every page below the homepage, mapping the full hierarchy from Home to the current page. If you have a Base layout or template, add it there so it deploys automatically. BreadcrumbList signals topical hierarchy to AI knowledge graphs — it tells retrieval systems that this page is part of a structured, topic-clustered domain rather than an isolated document.'
+  },
+  {
+    tip: 'Add datePublished and dateModified to all Article schema',
+    time: '< 1 hour',
+    impact: 'Medium',
+    how: 'Check every Article or TechArticle schema deployment on your site for datePublished and dateModified fields. If either is missing, add it. ISO 8601 format (YYYY-MM-DD). These fields tell retrieval systems when the content was written and last updated, which affects citation weighting for time-sensitive queries. Missing dates are treated as unknown — which is worse than having an old date on evergreen content.'
+  },
+  {
+    tip: 'Validate all existing schema deployments',
+    time: '1–2 hours',
+    impact: 'High',
+    how: 'Run your top ten pages through the Google Rich Results Test and the schema.org validator. Invalid schema is not neutral — it creates conflicting signals that can reduce entity resolution accuracy. Common errors include trailing commas in JSON-LD (invalid JSON), mismatched @type values, and missing required fields. Fix every validation error before investing in new schema deployments.'
+  }
+];
+
+const tipsTable = [
+  { tip: 'Unblock AI crawlers (robots.txt)', category: 'Technical', time: '< 1 hr', impact: 'Critical' },
+  { tip: 'Add llms.txt', category: 'Technical', time: '< 1 hr', impact: 'High' },
+  { tip: 'Rewrite page openings as definitional statements', category: 'Content', time: '10–20 min/page', impact: 'Critical' },
+  { tip: 'Write bold declarative sentence per section', category: 'Content', time: '15–30 min/page', impact: 'High' },
+  { tip: 'Add FAQ sections with real query phrasing', category: 'Content', time: '30–60 min/page', impact: 'High' },
+  { tip: 'Split multi-concept paragraphs', category: 'Content', time: '30–60 min/page', impact: 'High' },
+  { tip: 'Canonical brand description — use verbatim everywhere', category: 'Entity', time: '1–2 hrs', impact: 'Critical' },
+  { tip: 'Check Google Business Profile category', category: 'Entity', time: '< 30 min', impact: 'High' },
+  { tip: 'Add sameAs links to Organisation schema', category: 'Entity', time: '< 1 hr', impact: 'High' },
+  { tip: 'Deploy FAQPage schema on Q&A sections', category: 'Schema', time: '< 2 hrs', impact: 'Critical' },
+  { tip: 'Validate all existing schema', category: 'Schema', time: '1–2 hrs', impact: 'High' },
+  { tip: 'Add BreadcrumbList schema sitewide', category: 'Schema', time: '< 1 hr', impact: 'Medium' },
+  { tip: 'Convert bullet lists to tables where data is relational', category: 'Content', time: '20–40 min/table', impact: 'Medium' },
+  { tip: 'Update dateModified on edited pages', category: 'Schema', time: '5 min/page', impact: 'Medium' }
+];
+
+const faqs = [
+  {
+    q: 'What is the fastest GEO quick win?',
+    a: 'The fastest GEO quick win is checking your robots.txt for AI crawler blocks. Many sites inadvertently block GPTBot, PerplexityBot, or ClaudeBot via wildcard Disallow rules. Unblocking these agents takes under an hour and is the single change most likely to produce immediate citation improvements on sites where the content quality is already reasonable.'
+  },
+  {
+    q: 'How can I quickly improve my AI citation frequency?',
+    a: 'The three fastest content changes that improve AI citation frequency are: rewriting page openings to lead with a direct definitional statement, splitting long multi-concept paragraphs into two-to-four-sentence single-point units, and adding a FAQ section whose questions match the exact phrasing used in queries submitted to AI engines. These changes can be made to existing pages without rebuilding them from scratch.'
+  },
+  {
+    q: 'Do GEO quick wins work without schema markup?',
+    a: 'Content structure quick wins produce citation improvements without schema markup, but the gains are smaller and less consistent. Schema markup acts as a multiplier on well-structured content. Adding FAQPage schema to an existing FAQ section is itself a quick win that takes under two hours to implement and validate, so there is no strong reason to defer it.'
+  },
+  {
+    q: 'Which GEO tip has the best effort-to-impact ratio?',
+    a: 'Rewriting page openings to lead with a definitional statement has the best effort-to-impact ratio in GEO. It requires no technical changes, no new content production, and no schema deployment. AI retrieval systems extract the opening of a passage disproportionately often because it most reliably contains the answer to the query. Changing twenty page openings in a working day can measurably shift citation frequency within weeks.'
+  },
+  {
+    q: 'Are GEO tips different from GEO best practices?',
+    a: 'GEO tips are tactical, self-contained actions implementable in hours: fix this robots.txt rule, rewrite this sentence, add this schema. GEO best practices are structural patterns applied consistently across an entire content programme. Tips are the fastest path to early wins; best practices are what makes those wins compound over time. The two are complementary, not competing approaches.'
+  }
+];
+
+const related = [
+  {
+    tag: 'Best Practices',
+    title: 'GEO Best Practices: What Earns AI Citations',
+    excerpt: 'The structural patterns, entity signals, and technical practices that produce durable citation share — the long game behind the quick wins.',
+    href: '/geo-best-practices/'
+  },
+  {
+    tag: 'Readiness',
+    title: 'How to Prepare Your Website for AI',
+    excerpt: 'The full technical, entity, and content readiness checklist for making your site AI-citation-ready from the ground up.',
+    href: '/prepare-website-ai/'
+  },
+  {
+    tag: 'NODE',
+    title: 'GEO Strategy Framework',
+    excerpt: 'The systematic framework for sequencing all GEO work — from baseline audit to compounding citation share.',
+    href: '/geo-strategy/'
+  }
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/geo-tips/"
+  ogType="article"
+>
+
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-strategy/" class="transition hover:text-[var(--accent)]">GEO Strategy</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">GEO Tips</li>
+    </ol>
+  </nav>
+
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Quick Wins</span>
+        <span class="font-mono text-xs text-ink-400">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-400">10 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO Tips: Quick Wins for AI Visibility
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">GEO quick wins are discrete, self-contained actions implementable in hours that produce measurable citation improvements without waiting for a full programme to mature.</strong> This is not a list of best practices — it is a set of tactical fixes for the specific signals that most commonly block or undermine AI citation performance. Each tip below includes the implementation approach, time estimate, and citation impact. For the structural programme behind these actions, see <a href="/geo-best-practices/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO best practices</a> and the <a href="/geo-strategy/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO strategy framework</a>.
+      </p>
+    </div>
+  </section>
+
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" id="toc-nav">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <div>
+
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>robots.txt AI crawler unblocking takes under an hour and is the most common high-impact blocker on otherwise well-prepared sites.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Rewriting page openings as definitional statements has the best effort-to-impact ratio of any content change in GEO.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>A canonical brand description used verbatim across all platforms is a two-hour entity fix that prevents AI models from misrepresenting your brand.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>FAQPage schema on existing Q&A sections is the fastest schema win — under two hours per site, high citation impact, and zero new content required.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Quick wins produce faster visible results but compound most powerfully when followed by the structural practices in the GEO best practices guide.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prose-dark">
+        <h2 id="why-quick-wins" class="anchor-top">Why Quick Wins Matter in GEO</h2>
+        <p>
+          <strong>Quick wins in GEO are high-leverage because they address the discrete blockers that prevent citation earning, not the marginal improvements that compound slowly.</strong> A site with a blocked robots.txt earns zero citations regardless of content investment. A site whose Organisation schema is missing earns fewer citations than a directly comparable site whose entity is explicitly labelled. These are binary failures — either the signal is present or it is not — and fixing them produces step-change citation improvements rather than incremental gains.
+        </p>
+        <p>
+          The tips in this guide are selected for two properties: they are self-contained (each can be implemented without waiting for other work to complete) and they are disproportionately impactful relative to the time they take. They are distinct from the structural practices in the <a href="/geo-best-practices/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO best practices guide</a>, which describe patterns to apply consistently across an entire content programme. Tips are the fastest path to early wins; best practices are what makes those wins compound.
+        </p>
+        <p>
+          For brands starting a GEO programme, running through this tips list in the first week — before any content production or schema strategy work — identifies and removes blockers that would otherwise silently undermine every subsequent investment. For brands already running a programme, these tips serve as a diagnostic checklist for underperforming pages that are not earning citations despite reasonable content quality.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="technical-tips" class="anchor-top">Technical Quick Wins</h2>
+        <p>
+          <strong>Technical quick wins address access and discoverability — they determine whether AI retrieval systems can reach your content at all.</strong> Each tip below can be implemented and deployed without a content or design change. They are the first things to check on any site reporting low citation frequency despite good content quality.
+        </p>
+      </div>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        {technicalTips.map(tip => (
+          <div class="card p-6">
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+              <h3 class="font-display text-base font-semibold text-[var(--accent)]">{tip.tip}</h3>
+              <div class="flex gap-2 shrink-0">
+                <span class={`rounded px-2 py-0.5 text-xs font-mono ${tip.impact === 'Critical' ? 'bg-red-900/40 text-red-300' : tip.impact === 'High' ? 'bg-amber-900/40 text-amber-300' : 'bg-geo-700/40 text-ink-300'}`}>{tip.impact}</span>
+                <span class="rounded px-2 py-0.5 text-xs font-mono bg-geo-700/40 text-ink-300">{tip.time}</span>
+              </div>
+            </div>
+            <p class="text-sm leading-relaxed text-ink-300">{tip.how}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="content-tips" class="anchor-top">Content Quick Wins</h2>
+        <p>
+          <strong>Content quick wins address extractability — they make it easier for AI retrieval systems to pull your content as a discrete, citable unit without surrounding context.</strong> These tips apply to existing pages: they do not require new content production, only structural edits to pages that are already published. Prioritise your highest-traffic and highest-citation-potential pages first.
+        </p>
+      </div>
+
+      <ol class="mt-8 space-y-6">
+        {contentTips.map((tip, i) => (
+          <li class="flex gap-5">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border hair font-display text-sm font-bold text-[var(--accent)]">
+              {i + 1}
+            </span>
+            <div>
+              <div class="flex flex-wrap items-center gap-3 mb-1">
+                <h3 class="font-display text-base font-semibold text-white">{tip.tip}</h3>
+                <span class={`rounded px-2 py-0.5 text-xs font-mono ${tip.impact === 'Critical' ? 'bg-red-900/40 text-red-300' : tip.impact === 'High' ? 'bg-amber-900/40 text-amber-300' : 'bg-geo-700/40 text-ink-300'}`}>{tip.impact}</span>
+                <span class="font-mono text-xs text-ink-400">{tip.time}</span>
+              </div>
+              <p class="text-sm leading-relaxed text-ink-300">{tip.how}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      <div class="prose-dark mt-16">
+        <h2 id="entity-tips" class="anchor-top">Entity Quick Wins</h2>
+        <p>
+          <strong>Entity quick wins address how AI models resolve and describe your brand — and they directly determine whether citations are accurate, not just frequent.</strong> A brand cited inaccurately — wrong category, wrong description, wrong attribution — is in some respects worse than a brand not cited at all. These four tips are the fastest path to accurate entity representation across all five major AI platforms.
+        </p>
+      </div>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        {entityTips.map(tip => (
+          <div class="card p-6">
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+              <h3 class="font-display text-base font-semibold text-[var(--accent)]">{tip.tip}</h3>
+              <div class="flex gap-2 shrink-0">
+                <span class={`rounded px-2 py-0.5 text-xs font-mono ${tip.impact === 'Critical' ? 'bg-red-900/40 text-red-300' : 'bg-amber-900/40 text-amber-300'}`}>{tip.impact}</span>
+                <span class="rounded px-2 py-0.5 text-xs font-mono bg-geo-700/40 text-ink-300">{tip.time}</span>
+              </div>
+            </div>
+            <p class="text-sm leading-relaxed text-ink-300">{tip.how}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="schema-tips" class="anchor-top">Schema Quick Wins</h2>
+        <p>
+          <strong>Schema quick wins provide machine-readable metadata that AI retrieval systems use to classify, attribute, and weight your content.</strong> Each of the four tips below addresses a specific, high-impact schema signal that is commonly missing or incorrectly implemented. They are sequenced by the combination of implementation speed and citation impact.
+        </p>
+      </div>
+
+      <ol class="mt-8 space-y-6">
+        {schemaTips.map((tip, i) => (
+          <li class="flex gap-5">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border hair font-display text-sm font-bold text-[var(--accent)]">
+              {i + 1}
+            </span>
+            <div>
+              <div class="flex flex-wrap items-center gap-3 mb-1">
+                <h3 class="font-display text-base font-semibold text-white">{tip.tip}</h3>
+                <span class={`rounded px-2 py-0.5 text-xs font-mono ${tip.impact === 'Critical' ? 'bg-red-900/40 text-red-300' : tip.impact === 'High' ? 'bg-amber-900/40 text-amber-300' : 'bg-geo-700/40 text-ink-300'}`}>{tip.impact}</span>
+                <span class="font-mono text-xs text-ink-400">{tip.time}</span>
+              </div>
+              <p class="text-sm leading-relaxed text-ink-300">{tip.how}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      <div class="prose-dark mt-16">
+        <h2 id="tips-table" class="anchor-top">All Quick Wins: Impact &amp; Time Comparison</h2>
+        <p>
+          <strong>The table below consolidates all fourteen quick wins by category, implementation time, and citation impact — use it to prioritise your implementation sequence.</strong> Start with any Critical-impact fix that takes under one hour. Those represent the highest return on time invested and should be executed before beginning longer-effort improvements.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Quick Win</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Category</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Time</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Impact</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y hair">
+            {tipsTable.map(row => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class="px-4 py-3 text-white">{row.tip}</td>
+                <td class="px-4 py-3 font-mono text-xs text-[var(--accent)]">{row.category}</td>
+                <td class="px-4 py-3 text-ink-300 whitespace-nowrap">{row.time}</td>
+                <td class="px-4 py-3">
+                  <span class={`rounded px-2 py-0.5 text-xs font-mono ${row.impact === 'Critical' ? 'bg-red-900/40 text-red-300' : row.impact === 'High' ? 'bg-amber-900/40 text-amber-300' : 'bg-geo-700/40 text-ink-300'}`}>{row.impact}</span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          Once you have worked through the Critical and High impact items, the next step is implementing the structural practices that make these quick wins compound over time. The <a href="/geo-checklist/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO checklist</a> covers every signal — including the quick wins above — in a structured audit format with ongoing maintenance tasks. For the phased programme that sequences all of this work, see the <a href="/geo-roadmap/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO roadmap</a>.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="relative border-t hair mt-12 overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Turn Quick Wins into Compounding Gains</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        We implement the technical, entity, and content quick wins — then build the full programme that makes them compound. GEO audit delivered in two weeks with a prioritised action list.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Get your GEO audit</a>
+        <a href="/how-to-do-geo/" class="btn btn-ghost">How to do GEO</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const faqBtns = document.querySelectorAll('#faq-accordion button');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+
+    const tocLinks = document.querySelectorAll('#toc-nav a');
+    const headings = Array.from(
+      document.querySelectorAll('h2[id], h3[id]')
+    ) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(link => {
+              link.classList.remove('text-[var(--accent)]');
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.classList.add('text-[var(--accent)]');
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+
+    headings.forEach(h => observer.observe(h));
+  </script>
+
+</Base>

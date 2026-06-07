@@ -1,0 +1,561 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO for B2B Companies: AI Search Strategy | GEOoptimised';
+const description = 'GEO for B2B: win buying-committee discovery, long sales-cycle queries, and technical content citations across ChatGPT, Perplexity, and Google AI Overviews.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'GEO for B2B Companies',
+  description,
+  url: 'https://geooptimised.com/geo-for-b2b/',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  inLanguage: 'en-GB',
+  image: 'https://geooptimised.com/og-image.png',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/geo-for-b2b/',
+  },
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is GEO for B2B?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'GEO for B2B is the practice of optimising a B2B company\'s content, entity signals, and structured data so that AI search engines — including ChatGPT, Perplexity, Google AI Overviews, and Gemini — cite the company when buying committees, procurement teams, and senior decision-makers submit relevant queries. It addresses the specific challenges of B2B discovery: long sales cycles, multi-stakeholder consensus, technical content requirements, and the need to influence buyers across multiple touchpoints before a commercial conversation begins.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does AI search affect the B2B buying process?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'AI search is accelerating the early stages of B2B buying. Buyers increasingly use AI assistants to build their shortlists, understand solution categories, compare vendor approaches, and define evaluation criteria — all before contacting any vendor. Research consistently shows that B2B buyers complete 60 to 80 percent of their research before initiating a conversation with a sales team. AI-generated answers are now a significant channel within that pre-contact research phase. Brands that are cited in those answers are placed on shortlists; brands that are not cited are excluded before the formal evaluation process begins.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which members of the buying committee use AI search?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'In a typical B2B buying committee of six to ten stakeholders, AI search is most commonly used by junior researchers and analysts building initial shortlists, technical evaluators comparing solution architectures, and finance stakeholders assessing cost and ROI. Senior decision-makers and procurement teams tend to use AI for category-level understanding rather than vendor evaluation. An effective B2B GEO strategy produces content that addresses each persona\'s query types: technical documentation for evaluators, commercial overviews for finance, and category-defining content for strategic decision-makers.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What content types perform best for B2B GEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The highest-performing content formats for B2B AI citation are: category definition pages that establish your firm\'s authority in a solution area; comparison content covering your approach versus alternatives; technical guides addressing the specific questions that evaluators and architects submit; ROI and business case frameworks used by finance stakeholders; and structured FAQ content aligned to the questions buying committees ask at each stage of the evaluation process. All formats benefit from bold declarative opening statements, specific data points, and FAQPage schema markup.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do long B2B sales cycles affect GEO strategy?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Long B2B sales cycles mean that buyers interact with AI search at multiple points over weeks or months. A GEO strategy for a six-to-twelve month sales cycle must produce content that is citable at each stage: awareness queries early in the process, comparative and evaluative queries in the middle, and vendor-specific and implementation queries in later stages. Brands that are cited consistently across all stages of the buying journey build stronger parametric representation in AI models — and are more likely to be named when the buyer finally submits a "best X vendors" query.',
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'GEO by Industry', item: 'https://geooptimised.com/geo-by-industry/' },
+    { '@type': 'ListItem', position: 3, name: 'GEO for B2B Companies', item: 'https://geooptimised.com/geo-for-b2b/' },
+  ],
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'ai-and-b2b-buying', label: 'AI and the B2B Buying Process' },
+  { id: 'buying-committee', label: 'Buying-Committee Discovery' },
+  { id: 'long-sales-cycles', label: 'Long Sales Cycles and GEO' },
+  { id: 'technical-content', label: 'Technical Content Strategy' },
+  { id: 'entity-authority', label: 'Entity Authority for B2B' },
+  { id: 'content-formats', label: 'B2B Content Formats for AI' },
+  { id: 'measurement', label: 'Measuring B2B AI Visibility' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const faqs = [
+  {
+    q: 'What is GEO for B2B?',
+    a: "GEO for B2B is the practice of optimising a B2B company's content, entity signals, and structured data so that AI search engines — including ChatGPT, Perplexity, Google AI Overviews, and Gemini — cite the company when buying committees, procurement teams, and senior decision-makers submit relevant queries. It addresses the specific challenges of B2B discovery: long sales cycles, multi-stakeholder consensus, technical content requirements, and the need to influence buyers across multiple touchpoints before a commercial conversation begins.",
+  },
+  {
+    q: 'How does AI search affect the B2B buying process?',
+    a: 'AI search is accelerating the early stages of B2B buying. Buyers increasingly use AI assistants to build their shortlists, understand solution categories, compare vendor approaches, and define evaluation criteria — all before contacting any vendor. Research consistently shows that B2B buyers complete 60 to 80 percent of their research before initiating a conversation with a sales team. AI-generated answers are now a significant channel within that pre-contact research phase. Brands that are cited in those answers are placed on shortlists; brands that are not cited are excluded before the formal evaluation process begins.',
+  },
+  {
+    q: 'Which members of the buying committee use AI search?',
+    a: "In a typical B2B buying committee of six to ten stakeholders, AI search is most commonly used by junior researchers and analysts building initial shortlists, technical evaluators comparing solution architectures, and finance stakeholders assessing cost and ROI. Senior decision-makers and procurement teams tend to use AI for category-level understanding rather than vendor evaluation. An effective B2B GEO strategy produces content that addresses each persona's query types: technical documentation for evaluators, commercial overviews for finance, and category-defining content for strategic decision-makers.",
+  },
+  {
+    q: 'What content types perform best for B2B GEO?',
+    a: 'The highest-performing content formats for B2B AI citation are: category definition pages that establish your firm\'s authority in a solution area; comparison content covering your approach versus alternatives; technical guides addressing the specific questions that evaluators and architects submit; ROI and business case frameworks used by finance stakeholders; and structured FAQ content aligned to the questions buying committees ask at each stage of the evaluation process. All formats benefit from bold declarative opening statements, specific data points, and FAQPage schema markup.',
+  },
+  {
+    q: 'How do long B2B sales cycles affect GEO strategy?',
+    a: 'Long B2B sales cycles mean that buyers interact with AI search at multiple points over weeks or months. A GEO strategy for a six-to-twelve month sales cycle must produce content that is citable at each stage: awareness queries early in the process, comparative and evaluative queries in the middle, and vendor-specific and implementation queries in later stages. Brands that are cited consistently across all stages of the buying journey build stronger parametric representation in AI models — and are more likely to be named when the buyer finally submits a "best X vendors" query.',
+  },
+];
+
+const related = [
+  {
+    tag: 'Industry',
+    title: 'GEO for Manufacturing',
+    excerpt: 'Spec-driven content, distributor discovery, and technical product information optimised for AI citation in industrial sectors.',
+    href: '/geo-for-manufacturing/',
+  },
+  {
+    tag: 'Industry',
+    title: 'GEO for Law Firms',
+    excerpt: 'YMYL sensitivity, entity authority for solicitors, and citation in high-stakes legal queries — the GEO playbook for professional services.',
+    href: '/geo-for-law-firms/',
+  },
+  {
+    tag: 'Guide',
+    title: 'AI Brand Visibility',
+    excerpt: 'The five pillars of AI citation, measurement frameworks, and content patterns that drive consistent visibility across all major generative platforms.',
+    href: '/ai-brand-visibility/',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/geo-for-b2b/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/geo-by-industry/" class="transition hover:text-[var(--accent)]">GEO by Industry</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">GEO for B2B Companies</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Industry Guide</span>
+        <span class="font-mono text-xs text-ink-400">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-400">13 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO for B2B Companies
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        B2B buying committees are using AI assistants to build shortlists, define evaluation criteria, and compare vendors — before a single sales conversation takes place.
+        <strong class="text-white">GEO for B2B</strong> is the strategy of ensuring your company is cited at every stage of that AI-mediated research journey, from category discovery through to final vendor evaluation.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>B2B buyers use AI search to build shortlists and define evaluation criteria before contacting vendors — making AI citation a first-touch acquisition channel.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Buying committees have six to ten stakeholders, each submitting different query types — GEO strategy must address each persona's information needs.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Long sales cycles require citation-ready content across awareness, evaluation, and decision stages — not just at the top of the funnel.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Technical content — integration docs, architecture guides, specification comparisons — is among the most cited B2B content in AI-generated answers.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>B2B GEO measurement requires query sets mapped to each stage of the sales cycle and each buying committee persona, not a single aggregate citation score.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1 -->
+      <section id="ai-and-b2b-buying" class="anchor-top prose-dark mb-16">
+        <h2>AI Search and the B2B Buying Process</h2>
+
+        <p>
+          <strong>AI search has restructured the B2B buying process by enabling buyers to complete a significant portion of their vendor research without engaging with any supplier directly.</strong>
+          Where the traditional B2B research journey began with a web search and progressed through vendor websites, whitepapers, and analyst reports, an increasing share of that journey now begins with an AI assistant query — and may never reach a traditional search results page.
+        </p>
+
+        <p>
+          The practical consequence for B2B marketing teams is stark. A buyer asking ChatGPT "what are the leading enterprise CRM platforms" or asking Perplexity "how do I choose a managed security services provider" is constructing their evaluation shortlist in real time. The vendors cited in those AI-generated answers are placed on that shortlist. Vendors who are not cited are excluded — often permanently, because buyers rarely revisit their initial shortlist once the formal evaluation process has begun.
+        </p>
+
+        <p>
+          This dynamic is explained in detail in our foundational <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">guide to generative engine optimisation</a>. For B2B companies specifically, the implication is that <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility</a> is not a supplementary marketing concern — it is a first-touch demand generation channel that determines which companies enter the buying process at all.
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="buying-committee" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Buying-Committee Discovery: Multiple Personas, Multiple Queries</h2>
+          <p>
+            <strong>B2B buying decisions involve an average of six to ten stakeholders, and each stakeholder submits fundamentally different queries to AI systems.</strong>
+            A GEO strategy that produces content for only one persona will be invisible to the majority of the committee during their independent research phases.
+          </p>
+        </div>
+
+        <div class="mt-8 overflow-x-auto">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b border-white/10">
+                <th scope="col" class="text-left py-3 px-4 font-semibold text-ink-50 bg-geo-900/60">Buying Committee Role</th>
+                <th scope="col" class="text-left py-3 px-4 font-semibold text-ink-50 bg-geo-900/60">Typical AI Query Type</th>
+                <th scope="col" class="text-left py-3 px-4 font-semibold text-ink-50 bg-geo-900/60">Content That Gets Cited</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-white/5 hover:bg-white/[.02]">
+                <td class="py-3 px-4 text-ink-200 font-medium">Junior researcher / analyst</td>
+                <td class="py-3 px-4 text-ink-300">"Best [solution category] vendors" — building the initial longlist</td>
+                <td class="py-3 px-4 text-ink-300">Category definition pages, comparison tables, vendor overviews</td>
+              </tr>
+              <tr class="border-b border-white/5 hover:bg-white/[.02]">
+                <td class="py-3 px-4 text-ink-200 font-medium">Technical evaluator / architect</td>
+                <td class="py-3 px-4 text-ink-300">"How does [solution] integrate with [stack]" — validating technical fit</td>
+                <td class="py-3 px-4 text-ink-300">Integration docs, architecture guides, technical specifications</td>
+              </tr>
+              <tr class="border-b border-white/5 hover:bg-white/[.02]">
+                <td class="py-3 px-4 text-ink-200 font-medium">Finance / procurement</td>
+                <td class="py-3 px-4 text-ink-300">"What does [solution category] cost" — establishing budget range</td>
+                <td class="py-3 px-4 text-ink-300">Pricing models, TCO guides, ROI frameworks</td>
+              </tr>
+              <tr class="border-b border-white/5 hover:bg-white/[.02]">
+                <td class="py-3 px-4 text-ink-200 font-medium">End user / department head</td>
+                <td class="py-3 px-4 text-ink-300">"How easy is [solution] to use" — assessing adoption risk</td>
+                <td class="py-3 px-4 text-ink-300">Onboarding guides, workflow explainers, use-case content</td>
+              </tr>
+              <tr class="hover:bg-white/[.02]">
+                <td class="py-3 px-4 text-ink-200 font-medium">C-suite / board</td>
+                <td class="py-3 px-4 text-ink-300">"What are the risks of [approach]" — strategic risk assessment</td>
+                <td class="py-3 px-4 text-ink-300">Category authority content, named leadership thought leadership</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose-dark mt-8">
+          <p>
+            The implication for content strategy is that B2B GEO is not a single content programme — it is a matrix of content types, each mapped to a persona's query behaviour at a specific stage of the buying journey. Brands that produce content across this full matrix are cited at every committee touchpoint; brands that produce only top-of-funnel awareness content are cited once and then absent.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="long-sales-cycles" class="anchor-top prose-dark mb-16">
+        <h2>Long Sales Cycles and GEO Content Architecture</h2>
+
+        <p>
+          <strong>A B2B sales cycle of six to twelve months means buyers interact with AI search at dozens of distinct moments — and each interaction is an opportunity to either appear or be absent.</strong>
+          GEO content architecture for long-cycle B2B must map citation-ready content to each stage of the purchase journey.
+        </p>
+
+        <h3>Awareness Stage</h3>
+        <p>
+          At the awareness stage, buyers are defining the problem and understanding solution categories. AI queries at this stage are broad: "what is [solution category]", "what are the benefits of [approach]", "how do companies solve [problem]". Content that defines categories authoritatively — with bold declarative opening statements, clear problem framing, and FAQPage schema — performs strongly at this stage. This is also where entity authority matters most: a brand that AI systems recognise as a credible authority within a solution category will be cited consistently across all awareness-stage queries.
+        </p>
+
+        <h3>Evaluation Stage</h3>
+        <p>
+          During evaluation, buyers are comparing vendors and narrowing to a shortlist. AI queries become more specific: "how does [vendor A] compare to [vendor B]", "[vendor] pricing", "[solution] implementation timeline". Comparison tables, structured feature matrices, and explicit positioning content perform strongly at this stage. Each comparison page should use clear HTML tables with <code>th scope="col"</code> headers, definitive conclusions, and specific differentiators expressed as quotable statements rather than marketing prose.
+        </p>
+
+        <h3>Decision Stage</h3>
+        <p>
+          In the final stages, buyers seek validation and implementation clarity: "how to implement [solution]", "[vendor] support quality", "how long does [solution] take to deploy". Detailed technical documentation, customer journey content, and onboarding guides are most relevant. At this stage, parametric representation — your brand's presence in AI training data as a well-described entity — becomes especially important, as buyers may be asking models that rely heavily on learned weights rather than live retrieval.
+        </p>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="technical-content" class="anchor-top prose-dark mb-16">
+        <h2>Technical Content Strategy for B2B GEO</h2>
+
+        <p>
+          <strong>Technical content is the most under-invested and highest-return GEO asset for the majority of B2B companies.</strong>
+          AI systems cite technical documentation at rates that significantly exceed general marketing content, because technical specifications, integration guides, and architecture documents provide precisely the kind of specific, verifiable, structured information that AI retrieval systems prioritise.
+        </p>
+
+        <p>
+          The key principles for B2B technical content GEO are:
+        </p>
+
+        <div class="mt-6 space-y-5">
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Specification Clarity</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Technical specifications must be expressed in structured, extractable formats. A table listing supported integrations, API rate limits, SLA tiers, or compliance certifications is significantly more citable than a paragraph describing the same information in prose. Use HTML tables with clear column headers for any comparative or structured technical data.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Acronym and Term Definition</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Technical B2B content often assumes familiarity with industry-specific acronyms and terminology. AI systems — particularly for queries from junior evaluators or non-technical committee members — prefer sources that define terms clearly. Each technical guide should include a definitions section or inline explanations for specialist terms. This increases citability for a broader range of query formulations.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Crawl Accessibility</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Many B2B companies gate their best technical content behind lead forms. Gated content cannot be crawled by AI retrieval systems, which means it contributes nothing to AI citation. The solution is a tiered content strategy: publish ungated technical overviews optimised for AI citation, and gate only premium or proprietary content such as full implementation guides or bespoke ROI calculators. The ungated content builds citation authority; the gated content captures intent.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Author Entity Signals</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Technical content authored by named subject-matter experts with linked profiles, verified credentials, and LinkedIn presence is treated as more credible by AI systems than anonymously published content. For technical guides and architecture documentation, attribute authorship to the most senior qualified expert available, and ensure their entity is established with consistent data across their professional profiles and the company website.
+            </p>
+          </div>
+
+        </div>
+
+        <p class="mt-8">
+          This technical content strategy aligns directly with the content citability principles covered in our <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services overview</a>.
+        </p>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="entity-authority" class="anchor-top prose-dark mb-16">
+        <h2>Entity Authority for B2B Brands</h2>
+
+        <p>
+          <strong>B2B brand entity authority is the degree to which AI systems can accurately classify, describe, and cite your company within its solution category.</strong>
+          For B2B companies operating in specialist or emerging solution categories, this is a particular challenge: AI systems may not yet have sufficient training data to accurately represent niche vendors, or may conflate similar-sounding products within a category.
+        </p>
+
+        <p>
+          Building B2B entity authority requires:
+        </p>
+
+        <ul class="mt-4 space-y-2 text-sm text-ink-200 list-disc list-inside">
+          <li>Complete Organisation schema with <code>sameAs</code> referencing Crunchbase, LinkedIn, Companies House, and relevant industry directories</li>
+          <li>Consistent company description across all external profiles — LinkedIn, Crunchbase, G2, Capterra, Trustpilot — using the same entity language as your website's schema</li>
+          <li>Category ownership content: a definitive page that establishes your company's position within its solution category, clearly distinguishing it from adjacent categories</li>
+          <li>Named leadership profiles with Person schema, linking to the company entity via <code>worksFor</code></li>
+          <li>Press release and editorial coverage in industry publications — these are training data sources that reinforce parametric entity representation</li>
+        </ul>
+
+        <p class="mt-6">
+          The entity authority principles that apply to B2B companies are the same as those described in our foundational <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO guide</a>, with the additional complexity that B2B solution categories are often more narrowly defined and less well-represented in general AI training data than consumer categories.
+        </p>
+      </section>
+
+      <!-- Section 6 -->
+      <section id="content-formats" class="anchor-top prose-dark mb-16">
+        <h2>B2B Content Formats That Drive AI Citation</h2>
+
+        <p>
+          <strong>The B2B content formats with the highest AI citation rates are those that provide structured, extractable answers to specific evaluative questions.</strong>
+          Generic thought leadership and brand awareness content, however well-written, is rarely cited in the buying-journey queries that matter commercially.
+        </p>
+
+        <p>The highest-performing formats are:</p>
+
+        <div class="mt-6 space-y-4">
+          <div class="card p-5">
+            <h3 class="font-display text-sm font-semibold text-ink-50">Category Definition Pages</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">Pages that authoritatively define a solution category — "what is [solution type]", "how [solution] works" — establish your brand as the primary source on a topic. Open with a single definitive statement. Include a comparison with adjacent categories. Add FAQPage schema.</p>
+          </div>
+          <div class="card p-5">
+            <h3 class="font-display text-sm font-semibold text-ink-50">Vendor Comparison Pages</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">Structured comparisons of your solution against alternatives, using HTML tables with specific attributes. Avoid self-serving framing; focus on objective criteria that evaluators actually care about. AI systems cite balanced, specific comparison content significantly more often than one-sided promotional comparisons.</p>
+          </div>
+          <div class="card p-5">
+            <h3 class="font-display text-sm font-semibold text-ink-50">ROI and Business Case Frameworks</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">Finance stakeholders frequently ask AI systems to help build business cases. Pages that provide structured ROI calculation frameworks, cost-benefit analysis templates, or documented efficiency metrics are cited in these queries. Include specific figures and calculation methods — vague claims about "significant ROI" are never cited.</p>
+          </div>
+          <div class="card p-5">
+            <h3 class="font-display text-sm font-semibold text-ink-50">Implementation and Onboarding Guides</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">Decision-stage buyers use AI to de-risk implementation. Guides covering typical deployment timelines, resource requirements, integration complexity, and change management considerations are cited in queries from both technical evaluators and senior decision-makers assessing operational risk.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7 -->
+      <section id="measurement" class="anchor-top prose-dark mb-16">
+        <h2>Measuring B2B AI Visibility</h2>
+
+        <p>
+          <strong>B2B AI visibility measurement requires a more granular query architecture than consumer GEO measurement, because the commercial value of a citation varies significantly by query type, persona, and sales cycle stage.</strong>
+        </p>
+
+        <p>
+          An effective B2B AI visibility measurement framework includes:
+        </p>
+
+        <ul class="mt-4 space-y-2 text-sm text-ink-200 list-disc list-inside">
+          <li><strong>Category citation rate:</strong> what percentage of category-definition queries cite your brand versus competitors</li>
+          <li><strong>Persona-specific citation rate:</strong> separate measurement for technical, finance, and strategic query sets</li>
+          <li><strong>Sales cycle stage coverage:</strong> citation rates at awareness, evaluation, and decision stages</li>
+          <li><strong>Competitive share of voice:</strong> your citation frequency relative to named competitors across all query sets</li>
+          <li><strong>Cross-platform reach:</strong> citation consistency across ChatGPT, Perplexity, Gemini, and Copilot</li>
+        </ul>
+
+        <p class="mt-6">
+          Establishing a baseline requires a structured query set of 80 to 200 queries covering each persona and sales cycle stage. This is too large for manual testing at meaningful frequency; dedicated tools such as Profound or Semrush AI Toolkit are appropriate at this scale. The full measurement framework is detailed in our <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility guide</a>.
+        </p>
+      </section>
+
+      <!-- FAQ Accordion -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Win the B2B AI Search Channel</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Most B2B companies do not know which stage of their buying funnel is losing out to AI-invisible competitors.
+        Our B2B GEO audit maps your citation footprint across buying committee personas, sales cycle stages, and all major AI platforms — and delivers a prioritised content and entity plan.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request a B2B GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

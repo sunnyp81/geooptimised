@@ -1,0 +1,644 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO for Retail: AI Visibility for Omnichannel Brands | GEOoptimised';
+const description = 'Retail AI optimization for omnichannel and brick-and-mortar brands. Get your stores and products discovered in local and shopping AI answers.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: 'GEO for Retail',
+  description,
+  url: 'https://geooptimised.com/geo-for-retail/',
+  image: 'https://geooptimised.com/og-image.png',
+  inLanguage: 'en-GB',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/geo-for-retail/',
+  },
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is GEO for retail?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'GEO for retail is the application of generative engine optimisation to retail brands — particularly those operating physical stores, concessions, or an omnichannel model combining online and in-store. It focuses on ensuring that AI engines cite your retail brand and store locations in response to local discovery queries ("where to buy X near me"), category queries ("best sports retailer in London"), and product research queries relevant to your category. It is distinct from pure ecommerce AI optimisation because it must address local AI discovery signals alongside brand and product citation.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do AI engines handle local retail queries?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'AI engines handling local retail queries draw on multiple data sources: Google\'s Knowledge Graph (which includes LocalBusiness entity data from Google Business Profile), web retrieval of store locator and location pages, and training data that includes directory listings, local editorial content, and review platforms. For location-specific queries, AI systems use the user\'s location context to filter and rank retail entities by proximity and relevance. Retailers with complete, consistent LocalBusiness schema and well-maintained Google Business Profiles are significantly more likely to appear in local AI answers.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is GEO for retail different from local SEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, though there is substantial overlap. Local SEO focuses on ranking in Google\'s local pack, maps, and organic results for location-specific queries. GEO for retail extends this to AI-generated answers, which use different mechanisms: entity graph data, natural language understanding of local context, and knowledge base cross-referencing rather than proximity and review count alone. Retail brands that have invested in local SEO have a strong foundation, but need additional GEO-specific work — particularly on structured data, LocalBusiness schema, and editorial AI signal building — to perform well in AI-generated local answers.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How important is Google Business Profile for retail AI visibility?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Google Business Profile (GBP) is essential for retail AI visibility via Google AI Overviews and Gemini. GBP data feeds directly into Google\'s Knowledge Graph, which AI Overviews uses when generating location-based and retail brand answers. A complete, verified, and up-to-date GBP profile — with accurate opening hours, categories, attributes, and high-quality images — directly improves the accuracy and frequency with which Google AI Overviews cites your store locations. It is the single most important data source for local retail AI visibility.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What structured data should retail location pages use?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Retail location pages should implement LocalBusiness schema (or a more specific subtype such as ClothingStore, ElectronicsStore, or FurnitureStore) with name, address (PostalAddress), telephone, openingHoursSpecification, geo (with latitude and longitude), and hasMap. The schema should include a sameAs reference to the Google Business Profile URL and any relevant directory listings. BreadcrumbList schema should also be implemented on all location pages to signal the site structure to AI retrieval systems.',
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'GEO by Industry', item: 'https://geooptimised.com/geo-by-industry/' },
+    { '@type': 'ListItem', position: 3, name: 'GEO for Retail', item: 'https://geooptimised.com/geo-for-retail/' },
+  ],
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'what-it-means', label: 'What GEO for Retail Means' },
+  { id: 'omnichannel-challenge', label: 'The Omnichannel AI Challenge' },
+  { id: 'local-ai-discovery', label: 'Local AI Discovery' },
+  { id: 'structured-data', label: 'Structured Data for Retail' },
+  { id: 'brand-vs-location', label: 'Brand vs Location Signals' },
+  { id: 'multi-location', label: 'Multi-Location Retailers' },
+  { id: 'priority-actions', label: 'Priority Actions' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const faqs = [
+  {
+    q: 'What is GEO for retail?',
+    a: 'GEO for retail is the application of generative engine optimisation to retail brands — particularly those operating physical stores, concessions, or an omnichannel model combining online and in-store. It focuses on ensuring that AI engines cite your retail brand and store locations in response to local discovery queries ("where to buy X near me"), category queries ("best sports retailer in London"), and product research queries relevant to your category. It is distinct from pure ecommerce AI optimisation because it must address local AI discovery signals alongside brand and product citation.',
+  },
+  {
+    q: 'How do AI engines handle local retail queries?',
+    a: "AI engines handling local retail queries draw on multiple data sources: Google's Knowledge Graph (which includes LocalBusiness entity data from Google Business Profile), web retrieval of store locator and location pages, and training data that includes directory listings, local editorial content, and review platforms. For location-specific queries, AI systems use the user's location context to filter and rank retail entities by proximity and relevance. Retailers with complete, consistent LocalBusiness schema and well-maintained Google Business Profiles are significantly more likely to appear in local AI answers.",
+  },
+  {
+    q: 'Is GEO for retail different from local SEO?',
+    a: "Yes, though there is substantial overlap. Local SEO focuses on ranking in Google's local pack, maps, and organic results for location-specific queries. GEO for retail extends this to AI-generated answers, which use different mechanisms: entity graph data, natural language understanding of local context, and knowledge base cross-referencing rather than proximity and review count alone. Retail brands that have invested in local SEO have a strong foundation, but need additional GEO-specific work — particularly on structured data, LocalBusiness schema, and editorial AI signal building — to perform well in AI-generated local answers.",
+  },
+  {
+    q: 'How important is Google Business Profile for retail AI visibility?',
+    a: "Google Business Profile (GBP) is essential for retail AI visibility via Google AI Overviews and Gemini. GBP data feeds directly into Google's Knowledge Graph, which AI Overviews uses when generating location-based and retail brand answers. A complete, verified, and up-to-date GBP profile — with accurate opening hours, categories, attributes, and high-quality images — directly improves the accuracy and frequency with which Google AI Overviews cites your store locations. It is the single most important data source for local retail AI visibility.",
+  },
+  {
+    q: 'What structured data should retail location pages use?',
+    a: 'Retail location pages should implement LocalBusiness schema (or a more specific subtype such as ClothingStore, ElectronicsStore, or FurnitureStore) with name, address (PostalAddress), telephone, openingHoursSpecification, geo (with latitude and longitude), and hasMap. The schema should include a sameAs reference to the Google Business Profile URL and any relevant directory listings. BreadcrumbList schema should also be implemented on all location pages to signal the site structure to AI retrieval systems.',
+  },
+];
+
+const related = [
+  {
+    tag: 'Node',
+    title: 'GEO by Industry',
+    excerpt: 'The full index of generative engine optimisation strategies broken down by industry and vertical.',
+    href: '/geo-by-industry/',
+  },
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'The full GEO framework — from first principles through to advanced entity strategy and measurement.',
+    href: '/generative-engine-optimisation/',
+  },
+  {
+    tag: 'Related',
+    title: 'AI Optimisation for Ecommerce',
+    excerpt: 'GEO strategy for online stores focused on product and brand citation in AI shopping answers.',
+    href: '/ai-optimisation-ecommerce/',
+  },
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/geo-for-retail/" ogType="article">
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/geo-by-industry/" class="transition hover:text-[var(--accent)]">GEO by Industry</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">GEO for Retail</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Retail GEO</span>
+        <span class="font-mono text-xs text-ink-400">7 Jun 2026</span>
+        <span class="font-mono text-xs text-ink-400">11 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO for Retail
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        When a shopper asks Google AI Overviews "where can I buy cycling gear in Manchester" or asks Perplexity "best outdoor clothing retailers UK",
+        the retailers cited in those answers capture footfall and online demand before a single search result is clicked.
+        <strong class="text-white">Retail AI optimization</strong> is the practice of ensuring your stores and brand appear in AI-generated local discovery
+        and shopping answers — covering both physical retail locations and omnichannel presence.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Retail AI visibility operates at two distinct levels: brand citation (who is the best retailer for X?) and location citation (where can I buy X near me?).</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Google Business Profile data feeds directly into Google's Knowledge Graph — it is the single most important data source for retail AI local discovery.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>LocalBusiness schema (with specific subtypes) on individual store location pages is the technical foundation for AI-readable store data.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Omnichannel retailers must maintain consistent entity data across their online brand presence, physical location listings, and product catalogue to avoid AI citation fragmentation.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Multi-location retailers should treat each store location page as an independent AI citation asset, not a templated duplicate of the main site.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1 -->
+      <section id="what-it-means" class="anchor-top prose-dark mb-16">
+        <h2>What GEO for Retail Means</h2>
+
+        <p>
+          <strong>GEO for retail is the application of generative engine optimisation principles to retail brands that operate physical store locations, concessions, or omnichannel models combining in-store and online.</strong>
+          It is a distinct discipline from pure ecommerce AI optimisation because physical retail introduces a layer of local AI discovery
+          — queries about store locations, opening hours, in-store availability, and local category leadership — that online-only stores do not face.
+        </p>
+
+        <p>
+          A retail brand operating ten stores across three cities faces AI visibility challenges at multiple levels simultaneously.
+          At the brand level: is the retailer cited as a credible option when AI engines answer category queries such as "best sports retailers in the UK"?
+          At the location level: are individual store locations cited when AI engines answer proximity queries such as "sports shops near King's Cross"?
+          At the product level: are specific products cited when AI engines answer comparative queries relevant to the retailer's category?
+        </p>
+
+        <p>
+          Retail GEO requires a structured approach across all three levels. A brand with strong AI citation but invisible store locations will lose
+          in-store footfall to competitors whose locations appear in local AI answers. A brand with well-optimised location pages but weak brand-level
+          entity authority will underperform in category leadership queries. Effective retail GEO coordinates brand, location, and product signals
+          into a coherent AI visibility strategy.
+        </p>
+
+        <p>
+          If your brand operates exclusively online without physical retail, the considerations are different — see our guide to
+          <a href="/ai-optimisation-ecommerce/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI optimisation for ecommerce</a>.
+          For the broader GEO framework that underpins both retail and ecommerce approaches, see our guide to
+          <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a>.
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="omnichannel-challenge" class="anchor-top prose-dark mb-16">
+        <h2>The Omnichannel AI Challenge</h2>
+
+        <p>
+          <strong>Omnichannel retail creates a specific AI visibility challenge: the same brand has multiple entity representations across different platforms and data sources, and inconsistency between them suppresses citation confidence.</strong>
+          An omnichannel retailer might appear in Google's Knowledge Graph as a brand entity, in Google Maps as tens of location entities,
+          in Yell and Yelp as individual store listings, in its own website's Organisation schema, and in product review platforms with
+          a merchant profile. If these representations are inconsistent — different trading names, conflicting category descriptions,
+          outdated addresses — AI systems encounter ambiguous data and respond by reducing citation frequency or generating inaccurate descriptions.
+        </p>
+
+        <h3>Entity Fragmentation</h3>
+        <p>
+          Entity fragmentation occurs when a retail brand's digital presence is split across multiple partially overlapping entity records
+          with no clear canonical representation. A common pattern: the corporate website uses the full trading name
+          ("Acorn Outdoor Equipment Limited"), the Google Business Profile uses a shortened version ("Acorn Outdoor"),
+          and directory listings use a third variant ("Acorn Equipment"). AI systems encountering all three cannot confidently
+          resolve them to the same entity, which suppresses brand-level citations and produces inconsistent store-level data.
+        </p>
+        <p>
+          Resolving entity fragmentation requires an entity audit: mapping every external representation of the brand against
+          a canonical set of entity attributes (official trading name, primary category, registered address, website URL, phone)
+          and systematically updating inconsistencies across all platforms.
+        </p>
+
+        <h3>Online/Offline Signal Alignment</h3>
+        <p>
+          Omnichannel retailers must ensure their website's structured data accurately reflects the physical reality of their retail
+          network. An Organisation schema on the homepage should reference the primary trading entity. Individual location pages
+          should implement LocalBusiness schema with accurate, up-to-date opening hours, addresses, and store-specific attributes.
+          Product pages should accurately reflect in-store availability where possible, using the <code>offers.availabilityAtOrFrom</code>
+          property to signal physical store stock.
+        </p>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="local-ai-discovery" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Local AI Discovery for Retail</h2>
+          <p>
+            <strong>Local AI discovery is the most commercially significant AI visibility opportunity for physical retailers.</strong>
+            Queries with local intent — "shops near me", "where to buy X in [city]", "outdoor retailers open now" — are answered by AI systems
+            drawing heavily on local entity data. The retailers that appear in these answers capture high-intent, proximity-qualified demand.
+          </p>
+        </div>
+
+        <div class="mt-8 space-y-6">
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Google Business Profile as AI Signal</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Google Business Profile (GBP) data is the primary input to Google's Knowledge Graph for local business entities.
+              When Google AI Overviews generates responses to local retail queries, it draws on GBP data — business name,
+              category, address, opening hours, attributes, and review aggregates — to populate entity-level details.
+              A complete, verified GBP profile with accurate primary and secondary categories, current hours (including
+              holiday exceptions), and a minimum of 50 reviews is the baseline requirement for retail local AI visibility
+              within Google's ecosystem.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Perplexity and Local Retail</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Perplexity uses real-time web retrieval for local queries, fetching content from store locator pages,
+              local directory listings, and editorial sources. Store locator and individual location pages need to be
+              crawlable, contain complete address and hours information in both HTML and structured data,
+              and be indexed in Perplexity's web crawler. Location pages that are JavaScript-rendered and not
+              server-side or statically generated risk not being crawled effectively by all AI platform bots.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Local Editorial Presence</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              AI training data includes local editorial sources: city guides, regional lifestyle publications, local news
+              coverage, and "best of [city]" roundup articles. Retail brands featured in local editorial content —
+              particularly in named, descriptive references ("Acorn Outdoor on Marylebone High Street is the go-to for
+              technical hiking gear in central London") — benefit from stronger local parametric representation in
+              AI systems trained on that content. Local PR strategy is a legitimate GEO signal for physical retail brands.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="structured-data" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Structured Data for Retail</h2>
+          <p>
+            <strong>Retail structured data requirements differ from ecommerce because they must represent both the brand entity and multiple physical location entities.</strong>
+            A retail chain with twenty stores needs twenty sets of location-level structured data, each accurate and distinct,
+            in addition to the brand-level Organisation schema on the main site.
+          </p>
+        </div>
+
+        <div class="mt-8 overflow-x-auto">
+          <table class="w-full border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-white/10">
+                <th scope="col" class="py-3 pr-4 text-left font-semibold text-ink-50">Schema Type</th>
+                <th scope="col" class="py-3 pr-4 text-left font-semibold text-ink-50">Used On</th>
+                <th scope="col" class="py-3 pr-4 text-left font-semibold text-ink-50">Key Properties</th>
+                <th scope="col" class="py-3 text-left font-semibold text-ink-50">AI Value</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+              <tr>
+                <td class="py-3 pr-4 font-medium text-accent-400">Organization</td>
+                <td class="py-3 pr-4 text-ink-300">Homepage / brand pages</td>
+                <td class="py-3 pr-4 text-ink-300">name, url, sameAs, logo</td>
+                <td class="py-3 text-ink-300">Brand entity resolution</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-medium text-accent-400">LocalBusiness (subtype)</td>
+                <td class="py-3 pr-4 text-ink-300">Each store location page</td>
+                <td class="py-3 pr-4 text-ink-300">address, openingHours, geo, telephone</td>
+                <td class="py-3 text-ink-300">Local AI discovery</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-medium text-accent-400">Product</td>
+                <td class="py-3 pr-4 text-ink-300">Product pages</td>
+                <td class="py-3 pr-4 text-ink-300">name, brand, offers, aggregateRating</td>
+                <td class="py-3 text-ink-300">Product citation</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-medium text-accent-400">BreadcrumbList</td>
+                <td class="py-3 pr-4 text-ink-300">All pages</td>
+                <td class="py-3 pr-4 text-ink-300">itemListElement with position</td>
+                <td class="py-3 text-ink-300">Site structure clarity</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-medium text-accent-400">ItemList</td>
+                <td class="py-3 pr-4 text-ink-300">Store finder / category pages</td>
+                <td class="py-3 pr-4 text-ink-300">listItem referencing locations</td>
+                <td class="py-3 text-ink-300">Multi-location enumeration</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose-dark mt-8">
+          <h3>LocalBusiness Subtypes</h3>
+          <p>
+            Using the correct LocalBusiness subtype — rather than the generic <code>LocalBusiness</code> — provides AI systems with
+            categorical context that improves query matching. Schema.org offers specific subtypes for common retail categories:
+            <code>ClothingStore</code>, <code>ElectronicsStore</code>, <code>FurnitureStore</code>, <code>BookStore</code>,
+            <code>SportingGoodsStore</code>, <code>HomeGoodsStore</code>, and others. Each location page should implement the
+            most specific applicable subtype alongside the parent <code>LocalBusiness</code> type.
+          </p>
+          <p>
+            For comprehensive guidance on implementing all relevant schema types, including retail-specific examples, see our guide to
+            <a href="/schema-markup-ai/">schema markup for AI</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="brand-vs-location" class="anchor-top prose-dark mb-16">
+        <h2>Brand Signals vs Location Signals: Getting the Balance Right</h2>
+
+        <p>
+          <strong>Retail AI visibility requires parallel investment in brand-level signals and location-level signals — optimising for one without the other produces gaps that competitors can exploit.</strong>
+          A retailer with strong brand-level AI presence but incomplete location data will appear in category leadership answers
+          but not in local discovery answers. A retailer with excellent location pages but weak brand authority will appear in
+          proximity queries but not in "best retailer for X" queries.
+        </p>
+
+        <h3>Brand-Level Signals</h3>
+        <p>
+          Brand-level AI signals for retail include: Organisation schema with accurate entity data and <code>sameAs</code> references,
+          editorial coverage in retail trade publications and consumer media, Wikipedia presence (for brands that meet notability criteria),
+          consistent entity data across Wikidata, Companies House, and business directories, and brand content targeting category
+          leadership queries ("best outdoor retailers UK", "top cycling stores London").
+        </p>
+        <p>
+          Brand authority content — editorial pieces positioning the retailer as a specialist within its category — directly
+          improves parametric representation in AI models trained on web data. A page titled "Our Approach to Technical Outdoor Equipment"
+          that defines the retailer's specialist positioning in clear, citable language contributes to brand-level AI authority
+          in a way that product category pages alone cannot.
+        </p>
+
+        <h3>Location-Level Signals</h3>
+        <p>
+          Location-level signals require treating each store as a distinct entity within the AI knowledge ecosystem. Each store location
+          should have a dedicated page on the retailer's website with unique content (not a template with only the address swapped),
+          complete LocalBusiness schema, a verified Google Business Profile linked via <code>sameAs</code>, and local editorial
+          presence in city or neighbourhood-specific content. Stores that share identical templated pages are more likely to be
+          consolidated into a single entity representation by AI systems, losing the location-specific citation value of individual pages.
+        </p>
+      </section>
+
+      <!-- Section 6 -->
+      <section id="multi-location" class="anchor-top prose-dark mb-16">
+        <h2>Multi-Location Retailers: Scaling AI Visibility</h2>
+
+        <p>
+          <strong>For retailers operating ten or more locations, AI visibility must be treated as a programmatic challenge rather than a page-by-page task.</strong>
+          Manual optimisation of fifty store location pages is impractical as an ongoing operation. Scaling retail GEO requires systematic
+          data management, templated schema generation from accurate source data, and programmatic monitoring of citation performance
+          across locations.
+        </p>
+
+        <h3>Source Data Accuracy</h3>
+        <p>
+          The foundation of multi-location retail GEO is a single, authoritative source of record for location data: addresses,
+          opening hours, phone numbers, store categories, and attributes. This source data feeds all downstream implementations —
+          website location pages, LocalBusiness schema, Google Business Profile updates, directory submissions, and AI visibility
+          monitoring. Location data that is allowed to drift out of sync across platforms creates the entity inconsistency that
+          suppresses AI citation confidence.
+        </p>
+
+        <h3>Location Page Content Differentiation</h3>
+        <p>
+          AI systems penalise thin, duplicate content on location pages. For multi-location retailers, content differentiation
+          at scale requires a systematic approach: each location page should include genuinely location-specific content —
+          neighbourhood context, nearby transport links, what the store is specifically known for (if different from others),
+          and location-specific customer reviews. This content does not need to be long; 150 to 200 words of unique, factual
+          content per location page is sufficient to differentiate the page from a template.
+        </p>
+
+        <h3>Google Business Profile Management at Scale</h3>
+        <p>
+          For retailers with ten or more locations, Google Business Profile management through the Business Profile API or a
+          third-party listings management platform is the most efficient approach to maintaining accuracy at scale. Consistent
+          GBP data — particularly opening hours, which are frequently incorrect due to holiday changes and seasonal adjustments —
+          directly feeds the AI citation accuracy for local retail queries via Google AI Overviews.
+        </p>
+      </section>
+
+      <!-- Section 7: Priority Actions -->
+      <section id="priority-actions" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Priority Actions for Retail AI Visibility</h2>
+          <p>
+            <strong>Retail AI optimisation should be sequenced from entity accuracy through to content and then editorial authority.</strong>
+            The most common failure mode is investing in content before entity data is clean — producing well-written pages that
+            AI systems cannot reliably attribute to the correct entity.
+          </p>
+        </div>
+
+        <div class="mt-8 grid gap-5 sm:grid-cols-2">
+          <div class="card p-5">
+            <h3 class="font-display text-sm font-semibold text-ink-50 mb-3">Entity Audit (Week 1–2)</h3>
+            <ul class="space-y-2 text-sm text-ink-300">
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#10003;</span><span>Map all existing entity representations across GBP, directories, website schema</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#10003;</span><span>Identify and document all naming inconsistencies</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#10003;</span><span>Establish canonical entity attributes across the retail estate</span></li>
+            </ul>
+          </div>
+          <div class="card p-5">
+            <h3 class="font-display text-sm font-semibold text-ink-50 mb-3">Technical Foundation (Week 2–4)</h3>
+            <ul class="space-y-2 text-sm text-ink-300">
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#10003;</span><span>Implement LocalBusiness schema with correct subtypes on all store pages</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#10003;</span><span>Add sameAs to GBP, Wikidata, and key directories in Organisation schema</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#10003;</span><span>Verify all AI crawler bots are not blocked in robots.txt</span></li>
+            </ul>
+          </div>
+          <div class="card p-5">
+            <h3 class="font-display text-sm font-semibold text-ink-50 mb-3">GBP Optimisation (Week 3–6)</h3>
+            <ul class="space-y-2 text-sm text-ink-300">
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#10003;</span><span>Verify and complete all GBP profiles for every location</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#10003;</span><span>Audit opening hours for accuracy (including holiday schedules)</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#10003;</span><span>Add store-specific attributes and Q&A content to each GBP profile</span></li>
+            </ul>
+          </div>
+          <div class="card p-5">
+            <h3 class="font-display text-sm font-semibold text-ink-50 mb-3">Content and Authority (Ongoing)</h3>
+            <ul class="space-y-2 text-sm text-ink-300">
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#10003;</span><span>Add unique content blocks to each store location page</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#10003;</span><span>Build editorial presence in local and regional publications</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#10003;</span><span>Monitor citation frequency in AI platforms for key local queries monthly</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="prose-dark mt-8">
+          <p>
+            Our <a href="/geo-services/">GEO services</a> include a retail AI visibility audit that covers entity consistency,
+            structured data completeness, GBP accuracy, and citation frequency across all major AI platforms.
+            <a href="/contact/">Contact us</a> to discuss your retail estate.
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Audit Your Retail AI Visibility</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Find out whether your stores are appearing in local and category AI answers — and where entity inconsistencies
+        are suppressing your citation frequency. Our retail GEO audit covers all locations, all platforms.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request your retail GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

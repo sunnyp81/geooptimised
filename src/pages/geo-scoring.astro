@@ -1,0 +1,551 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO Scoring: How to Score AI Readiness | GEOoptimised';
+const description = 'How to build and interpret a GEO score: scoring dimensions, weighting rationale, a sample scoring rubric, and how to use your score to prioritise AI visibility improvements.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'GEO Scoring: How to Score AI Readiness',
+    description: 'How to build and interpret a GEO score: scoring dimensions, weighting rationale, a sample scoring rubric, and how to use your score to prioritise AI visibility improvements.',
+    url: 'https://geooptimised.com/geo-scoring/',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://geooptimised.com/geo-scoring/'
+    },
+    image: 'https://geooptimised.com/og-image.png',
+    datePublished: '2026-06-07',
+    dateModified: '2026-06-07',
+    inLanguage: 'en-GB',
+    author: { '@id': 'https://geooptimised.com/#organization' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' }
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is a GEO score?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'A GEO score is a composite readiness metric that quantifies how well a website is optimised to earn citations in AI-generated answers. It aggregates individual scores across five weighted dimensions — entity clarity, schema coverage, content extractability, technical AI access, and citation performance — into a single number on a 0–100 scale. A GEO score is diagnostic, not definitive: it converts audit findings into a comparable, trackable figure that makes progress visible and helps teams prioritise the highest-impact improvements first.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What is a good GEO score?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'A GEO score of 75 or above indicates strong AI visibility readiness — the site has solid foundations across entity, schema, content, and technical dimensions. Scores between 50 and 74 indicate a functional but incomplete implementation with specific gaps that are limiting citation frequency. Scores below 50 indicate foundational issues — typically entity inconsistency, missing schema, or technical blocks — that need to be resolved before content improvements will produce meaningful citation gains. The most useful benchmark is not an absolute target but consistent improvement: a site moving from 42 to 65 in 90 days is performing well regardless of its absolute position.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How often should a GEO score be recalculated?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'A GEO score should be recalculated monthly to track improvement against your remediation backlog, and after any significant site change (major content publish, schema update, or technical deployment). Monthly recalculation aligns with the monthly content review cadence recommended in the GEO monitoring framework. Recalculating more frequently than monthly rarely reveals meaningful change, as citation frequency improvements typically take three to six weeks to manifest after schema and content fixes are deployed.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Which GEO scoring dimension has the most impact?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Entity clarity carries the most weight in a well-designed GEO scoring model (typically 30% of the composite score) because it is the prerequisite dimension: a site with poor entity clarity will underperform on all other dimensions regardless of how well schema and content are optimised. Technical AI access is the most binary — a single robots.txt block can set this dimension to zero regardless of other scores. Content extractability has the largest surface area (it applies to every page) and therefore the most room for incremental improvement over time.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Can competitor GEO scores be benchmarked?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Competitor GEO scores can be estimated using the same scoring rubric applied to your own site, provided you have access to their publicly visible signals: robots.txt, deployed schema (visible in page source), content structure (readable on-page), and citation frequency from running the same query set against AI platforms. Entity signals on third-party sources (Wikidata, Google Business Profile, LinkedIn) are also publicly visible. A competitive GEO score benchmark is most useful when run quarterly — it reveals whether competitors are improving faster than you and helps identify which dimensions represent the largest displacement opportunity.'
+        }
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'GEO Tracking & Monitoring', item: 'https://geooptimised.com/geo-monitoring/' },
+      { '@type': 'ListItem', position: 3, name: 'GEO Scoring', item: 'https://geooptimised.com/geo-scoring/' }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'what-is-a-geo-score', label: 'What Is a GEO Score' },
+  { id: 'scoring-dimensions', label: 'Scoring Dimensions' },
+  { id: 'weighting-rationale', label: 'Weighting Rationale' },
+  { id: 'sample-scoring-rubric', label: 'Sample Scoring Rubric' },
+  { id: 'interpreting-your-score', label: 'Interpreting Your Score' },
+  { id: 'improving-your-score', label: 'Improving Your Score' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' }
+];
+
+const dimensions = [
+  {
+    name: 'Entity Clarity',
+    weight: 30,
+    description: 'How consistently and unambiguously your brand entity is described across your website, Google Business Profile, Wikidata, LinkedIn, and structured data. This is the prerequisite dimension — poor entity clarity limits the impact of all other improvements.',
+    checks: 'Brand name consistency, category descriptor alignment, sameAs links, attribute accuracy, Wikidata completeness'
+  },
+  {
+    name: 'Schema Coverage',
+    weight: 25,
+    description: 'Whether the correct structured data types are deployed, complete, and valid on each page type. Schema is the primary signal that labels your content as an attributable, authoritative source for AI retrieval systems.',
+    checks: 'Article/TechArticle, FAQPage, BreadcrumbList, Organization, HowTo presence and validity'
+  },
+  {
+    name: 'Content Extractability',
+    weight: 25,
+    description: 'Whether your content is structured so that AI systems can cleanly pull and cite relevant passages. This dimension has the largest remediation surface area — it applies to every page — and the most room for incremental improvement.',
+    checks: 'Definitional openings, paragraph length, heading style, FAQ presence, table usage'
+  },
+  {
+    name: 'Technical AI Access',
+    weight: 15,
+    description: 'Whether AI crawlers can reach, index, and retrieve your content. This dimension is the most binary — a single robots.txt block can zero out your score here regardless of performance on other dimensions.',
+    checks: 'robots.txt AI crawler policy, llms.txt deployment, Core Web Vitals, indexation status'
+  },
+  {
+    name: 'Citation Performance',
+    weight: 5,
+    description: 'Observed citation frequency and accuracy across the five major AI platforms. This is the outcome dimension — it reflects the combined effect of the other four dimensions as measured in actual platform responses.',
+    checks: 'Citation rate across 5 platforms, description accuracy, competitor citation share'
+  }
+];
+
+const rubricRows = [
+  {
+    dimension: 'Entity Clarity',
+    weight: '30%',
+    score4: 'All attributes identical across all sources; Wikidata complete; sameAs covers 4+ authoritative sources',
+    score3: 'Minor variations in 1–2 attributes across sources; sameAs present but incomplete',
+    score2: 'Category descriptor varies across sources; Wikidata missing or inaccurate',
+    score1: 'Brand name varies; no sameAs links; entity description materially inconsistent'
+  },
+  {
+    dimension: 'Schema Coverage',
+    weight: '25%',
+    score4: 'All required schema types present and valid on all priority pages; no Rich Results Test errors',
+    score3: 'Most schema types present; 1–2 pages missing FAQPage or BreadcrumbList; minor field gaps',
+    score2: 'Article schema present but missing author/publisher; FAQPage absent on FAQ sections',
+    score1: 'No Article schema; no FAQPage; Organization schema absent or on homepage only without sameAs'
+  },
+  {
+    dimension: 'Content Extractability',
+    weight: '25%',
+    score4: 'All priority pages open with definitional statement; all paragraphs 2–4 sentences; FAQ on every page',
+    score3: 'Most pages have definitional openings; majority of paragraphs correctly scoped; FAQs on most pages',
+    score2: 'Some pages have definitional openings; FAQ sections present but without FAQPage schema',
+    score1: 'No pages use definitional openings; long multi-concept paragraphs; no FAQ sections'
+  },
+  {
+    dimension: 'Technical AI Access',
+    weight: '15%',
+    score4: 'All AI crawlers explicitly allowed; llms.txt deployed and current; CWV passing; all priority pages indexed',
+    score3: 'AI crawlers allowed; llms.txt absent; CWV mostly passing; 1–2 pages not indexed',
+    score2: 'AI crawlers implicitly allowed (no explicit allow or disallow); CWV failing on key pages',
+    score1: 'One or more major AI crawlers blocked in robots.txt; critical pages not indexed'
+  },
+  {
+    dimension: 'Citation Performance',
+    weight: '5%',
+    score4: 'Cited in 3+ platforms for core queries; description consistently accurate',
+    score3: 'Cited in 1–2 platforms for core queries; occasional description inaccuracies',
+    score2: 'Cited only on secondary queries; description inaccurate when cited',
+    score1: 'No citations across any platform for core queries'
+  }
+];
+
+const interpretationBands = [
+  {
+    band: '80–100',
+    label: 'Excellent readiness',
+    colour: 'text-green-300',
+    description: 'Strong foundations across all dimensions. Focus is on expanding content coverage, monitoring competitor activity, and refining citation accuracy. At this level, incremental improvements compound faster.'
+  },
+  {
+    band: '60–79',
+    label: 'Good readiness with gaps',
+    colour: 'text-[var(--accent)]',
+    description: 'Solid core implementation with identifiable gaps — typically in schema coverage completeness or content extractability on secondary pages. Prioritise the lowest-scoring dimension and work systematically upward.'
+  },
+  {
+    band: '40–59',
+    label: 'Partial implementation',
+    colour: 'text-amber-300',
+    description: 'Some foundations in place but significant gaps in at least two dimensions. Entity clarity and technical access issues are common in this band. A structured 90-day remediation programme will move most sites out of this band.'
+  },
+  {
+    band: '0–39',
+    label: 'Foundational gaps',
+    colour: 'text-red-300',
+    description: 'Critical issues present — usually a combination of AI crawler blocks, entity inconsistency, and absent schema. Content improvements will have minimal effect until the Critical-priority findings are resolved.'
+  }
+];
+
+const faqs = [
+  {
+    q: 'What is a GEO score?',
+    a: 'A GEO score is a composite readiness metric that quantifies how well a website is optimised to earn citations in AI-generated answers. It aggregates individual scores across five weighted dimensions — entity clarity, schema coverage, content extractability, technical AI access, and citation performance — into a single number on a 0–100 scale. A GEO score converts audit findings into a comparable, trackable figure that makes progress visible and helps teams prioritise the highest-impact improvements first.'
+  },
+  {
+    q: 'What is a good GEO score?',
+    a: 'A GEO score of 75 or above indicates strong AI visibility readiness. Scores between 50 and 74 indicate a functional but incomplete implementation with specific gaps limiting citation frequency. Scores below 50 indicate foundational issues — entity inconsistency, missing schema, or technical blocks — that need resolving before content improvements produce meaningful citation gains. The most useful benchmark is consistent improvement: moving from 42 to 65 in 90 days is strong performance regardless of absolute position.'
+  },
+  {
+    q: 'How often should a GEO score be recalculated?',
+    a: 'A GEO score should be recalculated monthly to track improvement against your remediation backlog, and after any significant site change. Monthly recalculation aligns with the monthly content review cadence recommended in the GEO monitoring framework. Recalculating more frequently than monthly rarely reveals meaningful change, as citation frequency improvements typically take three to six weeks to manifest after fixes are deployed.'
+  },
+  {
+    q: 'Which GEO scoring dimension has the most impact?',
+    a: 'Entity clarity carries the most weight (30%) because it is the prerequisite dimension — poor entity clarity limits the impact of all other improvements. Technical AI access is the most binary: a single robots.txt block can set this dimension to zero. Content extractability has the largest surface area (every page) and therefore the most room for incremental improvement over time.'
+  },
+  {
+    q: 'Can competitor GEO scores be benchmarked?',
+    a: 'Competitor GEO scores can be estimated using the same scoring rubric applied to publicly visible signals: robots.txt, deployed schema (in page source), content structure (on-page), and citation frequency from running the same query set. Entity signals on Wikidata, Google Business Profile, and LinkedIn are also publicly visible. Quarterly competitive benchmarking reveals whether competitors are improving faster and which dimensions represent the largest displacement opportunity.'
+  }
+];
+
+const related = [
+  {
+    tag: 'NODE',
+    title: 'GEO Tracking & Monitoring',
+    excerpt: 'The hub for all measurement, tracking, and audit methodologies within a GEO programme.',
+    href: '/geo-monitoring/'
+  },
+  {
+    tag: 'Framework',
+    title: 'GEO Audit: Assessing AI Visibility Readiness',
+    excerpt: 'Run the full audit that feeds your GEO score — entity, schema, content, and citation baseline.',
+    href: '/geo-audit/'
+  },
+  {
+    tag: 'Guide',
+    title: 'How to Measure GEO Performance',
+    excerpt: 'Metrics, tracking cadences, and reporting frameworks for ongoing AI visibility measurement.',
+    href: '/how-to-measure-geo/'
+  },
+  {
+    tag: 'Tool',
+    title: 'GEO Checklist: Pre-Launch and Ongoing',
+    excerpt: 'The implementation checklist that turns score improvements into concrete, sequenced tasks.',
+    href: '/geo-checklist/'
+  }
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/geo-scoring/" ogType="article">
+
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-monitoring/" class="transition hover:text-[var(--accent)]">GEO Monitoring</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">GEO Scoring</li>
+    </ol>
+  </nav>
+
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Measurement Framework</span>
+        <span class="font-mono text-xs text-ink-400">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-400">13 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO Scoring: How to Score AI Readiness
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">A GEO score translates audit findings into a single, trackable readiness metric — making it possible to benchmark current AI visibility, measure improvement over time, and prioritise the dimensions with the largest citation impact.</strong> This guide explains how to build a GEO score, the rationale behind each dimension's weighting, a sample scoring rubric you can apply immediately, and how to interpret your score to drive remediation decisions. This page is a companion to <a href="/geo-audit/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO audit</a> and <a href="/geo-monitoring/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO monitoring</a>.
+      </p>
+    </div>
+  </section>
+
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" id="toc-nav">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <div>
+
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>A GEO score is a composite 0–100 metric built from five weighted dimensions: entity clarity (30%), schema coverage (25%), content extractability (25%), technical AI access (15%), and citation performance (5%).</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Entity clarity is weighted highest because it is the prerequisite dimension — poor entity clarity suppresses performance across all other dimensions.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>The sample scoring rubric uses a four-point scale per dimension; multiply each dimension score by its weight to produce the composite GEO score.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>A score above 75 indicates strong readiness; below 50 indicates foundational gaps that must be resolved before content improvements produce meaningful citation gains.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Recalculate monthly to track progress; always fix the lowest-scoring dimension first regardless of its weighting — gaps compound across dimensions.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prose-dark">
+        <h2 id="what-is-a-geo-score" class="anchor-top">What Is a GEO Score</h2>
+        <p>
+          <strong>A GEO score is a composite readiness metric that quantifies how well a website is optimised to earn citations in AI-generated answers, expressed as a single number on a 0–100 scale.</strong> It aggregates assessments across five dimensions — entity clarity, schema coverage, content extractability, technical AI access, and citation performance — weighted by their relative importance to overall citation frequency.
+        </p>
+        <p>
+          The GEO score serves three practical purposes. First, it provides a diagnostic snapshot: a single figure that communicates AI readiness to stakeholders who do not need to understand every underlying audit signal. Second, it enables progress tracking: recalculating the score monthly against a consistent rubric shows whether remediation work is producing measurable improvement. Third, it guides prioritisation: by seeing which dimension contributes least to the current score, teams can focus effort on the highest-leverage improvement area rather than spreading attention across all dimensions simultaneously.
+        </p>
+        <p>
+          A GEO score is a diagnostic tool, not a definitive measure of citation quality. It reflects the signals that are most reliably associated with citation frequency based on the <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> framework — it does not capture every variable that influences whether a specific AI platform cites a specific page for a specific query. Use it as a directional benchmark and a motivation for consistent improvement, not as a guaranteed predictor of citation volume.
+        </p>
+        <p>
+          The scoring model described in this guide is an illustrative framework — clearly representative of the dimensions and weighting principles used in professional GEO practice. Teams and agencies may calibrate weights differently based on their sector, competitive context, and platform focus. The structure and rationale are sound regardless of the exact weighting applied.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="scoring-dimensions" class="anchor-top">Scoring Dimensions</h2>
+        <p>
+          <strong>A GEO score is only as useful as its dimensions — each dimension must correspond to a signal that is directly actionable and measurably connected to citation frequency.</strong> The five dimensions below each map to a discrete, auditable set of signals. They are sequenced in dependency order: entity clarity is the foundation, citation performance is the outcome.
+        </p>
+      </div>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {dimensions.map(d => (
+          <div class="card p-6">
+            <div class="flex items-start justify-between gap-3">
+              <h3 class="font-display text-base font-semibold text-[var(--accent)]">{d.name}</h3>
+              <span class="shrink-0 rounded-full border hair px-2.5 py-0.5 font-mono text-xs text-ink-300">{d.weight}%</span>
+            </div>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">{d.description}</p>
+            <p class="mt-3 font-mono text-xs text-ink-400">{d.checks}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="weighting-rationale" class="anchor-top">Weighting Rationale</h2>
+        <p>
+          <strong>The weights assigned to each GEO scoring dimension reflect their relative ability to constrain or enable citation frequency — not their relative importance to good content or technical hygiene generally.</strong> Entity clarity receives the highest weight (30%) because it is the single dimension that most consistently explains the gap between content quality and citation frequency. Brands with authoritative, consistent entities are cited more reliably than brands with identical content but ambiguous entity signals.
+        </p>
+        <p>
+          Schema coverage and content extractability each receive 25%. These dimensions are equally important but operate on different layers: schema labels your content for AI retrieval systems, while content extractability determines whether individual passages are suitable for citation once retrieved. Improving one without the other produces partial gains — the highest citation density comes from well-structured content correctly labelled with structured data.
+        </p>
+        <p>
+          Technical AI access is weighted at 15% — lower than its criticality might suggest, because it is largely binary. Either your content is accessible to AI crawlers or it is not. A site that passes the technical access checks fully scores maximum points on this dimension; a site that fails even one (typically a robots.txt block) scores near zero. The 15% weighting reflects that once technical access is established, it is relatively stable and does not require continuous improvement investment.
+        </p>
+        <p>
+          Citation performance is weighted at only 5% because it is an outcome, not an input. It reflects the current state of all other dimensions combined. Including it in the score allows teams to see when citation gains are outpacing or lagging behind their structural improvements — a useful diagnostic — without letting observed citation frequency dominate the score calculation and obscure the structural improvements that will drive future citations.
+        </p>
+        <p>
+          To conduct the full audit that feeds your GEO score inputs, see the <a href="/geo-audit/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO audit framework</a>. For the ongoing monitoring that tracks citation performance over time, see <a href="/how-to-measure-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how to measure GEO</a>.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="sample-scoring-rubric" class="anchor-top">Sample Scoring Rubric</h2>
+        <p>
+          <strong>The rubric below uses a four-point scale per dimension (1 = significant gaps, 4 = excellent implementation) — multiply each dimension score by its weight percentage and sum the results to produce a composite GEO score out of 100.</strong> This is an illustrative rubric: the criteria are representative of professional GEO practice and clearly labelled as a guide framework. Adapt the specific thresholds to your organisation's context, platform focus, and content type as needed.
+        </p>
+        <p>
+          To use the rubric: score each dimension from 1 to 4 based on the criteria below. Multiply the score by the dimension weight (e.g., Entity Clarity score of 3 × 30% weight = 90 points out of a possible 120, which normalises to 22.5 out of 30). Sum the five normalised scores. The resulting total is your composite GEO score out of 100.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Dimension (Weight)</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Score 4 — Excellent</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Score 3 — Good</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Score 2 — Partial</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Score 1 — Poor</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y hair">
+            {rubricRows.map(row => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class="px-4 py-3 font-semibold text-[var(--accent)]">{row.dimension}<br /><span class="font-mono text-xs text-ink-400">{row.weight}</span></td>
+                <td class="px-4 py-3 text-ink-300 text-xs">{row.score4}</td>
+                <td class="px-4 py-3 text-ink-300 text-xs">{row.score3}</td>
+                <td class="px-4 py-3 text-ink-300 text-xs">{row.score2}</td>
+                <td class="px-4 py-3 text-ink-300 text-xs">{row.score1}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          A worked example: a site that scores 3 on Entity Clarity (= 22.5/30), 2 on Schema Coverage (= 12.5/25), 3 on Content Extractability (= 18.75/25), 4 on Technical AI Access (= 15/15), and 2 on Citation Performance (= 2.5/5) produces a composite GEO score of approximately 71 — placing it in the "Good readiness with gaps" band. The schema gap is the clearest improvement priority given the dimension's weight and the score's distance from 4.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="interpreting-your-score" class="anchor-top">Interpreting Your GEO Score</h2>
+        <p>
+          <strong>A GEO score's value is not in the number itself but in how it compares to previous scores and which dimensions are pulling the composite down.</strong> The four interpretation bands below provide a reference framework for communicating your score to stakeholders and deciding where to focus remediation effort.
+        </p>
+      </div>
+
+      <div class="mt-8 grid gap-4 md:grid-cols-2">
+        {interpretationBands.map(band => (
+          <div class="card p-6">
+            <div class="flex items-center gap-3">
+              <span class={`font-display text-2xl font-bold ${band.colour}`}>{band.band}</span>
+              <span class={`text-sm font-semibold ${band.colour}`}>{band.label}</span>
+            </div>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">{band.description}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          When presenting a GEO score to stakeholders, always show the dimension breakdown alongside the composite figure. A composite score of 65 earned through excellent entity clarity and schema but weak content extractability tells a very different remediation story to a 65 built from strong content but poor entity signals. The breakdown is the diagnostic; the composite is the headline.
+        </p>
+        <p>
+          Month-on-month score movement of five to ten points is a strong result — it indicates consistent, systematic remediation work. Movement of more than fifteen points in a month typically reflects a single high-impact fix (resolving a robots.txt block or deploying schema across all pages at once) rather than broad-based improvement. Distinguish between structural score gains (entity and schema improvements that persist) and one-off gains (fixing a single technical issue) when reporting progress.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="improving-your-score" class="anchor-top">Improving Your GEO Score</h2>
+        <p>
+          <strong>Improving a GEO score requires working in dependency order — fixing the lowest-scoring prerequisite dimension first, regardless of whether a higher-level dimension has a lower score.</strong> The dependency chain is: Technical AI Access → Entity Clarity → Schema Coverage → Content Extractability → Citation Performance. Improving content extractability on a site where AI crawlers are partially blocked will produce smaller gains than fixing the block first.
+        </p>
+        <p>
+          The fastest score gains come from Critical-priority fixes identified in the <a href="/geo-audit/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO audit</a>: resolving a robots.txt AI crawler block (immediately raises Technical AI Access to maximum), aligning entity attributes across all sources (can raise Entity Clarity by a full dimension level within two weeks), and deploying missing schema types across priority pages (Schema Coverage gains are typically the largest single-step improvement available on sites with partial schema implementations).
+        </p>
+        <p>
+          Content extractability improvements are more incremental — they require rewriting individual pages rather than making domain-wide changes. Prioritise your highest-traffic pages and your pages targeting your most important citation queries. Each page that moves from a score of 1 to a score of 3 on the content extractability rubric raises your composite score by approximately 2.5 points. Across twenty priority pages, that is a fifty-point improvement on the content dimension — worth 12.5 points on the composite score.
+        </p>
+        <p>
+          For a task-level implementation guide to each dimension, use the <a href="/geo-checklist/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO checklist</a>. For the strategic framework that sequences score improvements into a 90-day programme, see <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a>. If you want a professionally scored baseline and prioritised improvement roadmap, the <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEOoptimised audit service</a> delivers this as a standalone engagement.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="relative border-t hair mt-12 overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Get Your GEO Score Benchmarked</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        We score your AI readiness across all five dimensions, benchmark against your top three competitors, and deliver a prioritised improvement roadmap with 90-day milestones. The score report is included in every GEO audit we deliver.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request a GEO score</a>
+        <a href="/geo-monitoring/" class="btn btn-ghost">Explore GEO monitoring</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const faqBtns = document.querySelectorAll('#faq-accordion button');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+
+    const tocLinks = document.querySelectorAll('#toc-nav a');
+    const headings = Array.from(
+      document.querySelectorAll('h2[id], h3[id]')
+    ) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(link => {
+              link.classList.remove('text-[var(--accent)]');
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.classList.add('text-[var(--accent)]');
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+
+    headings.forEach(h => observer.observe(h));
+  </script>
+
+</Base>

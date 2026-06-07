@@ -1,0 +1,422 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO Agency for Los Angeles Businesses | GEOoptimised';
+const description = 'Remote GEO agency serving Los Angeles businesses. We help LA brands earn citations in ChatGPT, Perplexity, Gemini and Google AI Overviews. Specialist remote delivery.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'name': 'Generative Engine Optimisation for Los Angeles Businesses',
+    'serviceType': 'Generative Engine Optimisation',
+    'provider': { '@id': 'https://geooptimised.com/#organization' },
+    'areaServed': { '@type': 'City', 'name': 'Los Angeles' },
+    'description': 'Remote generative engine optimisation services for Los Angeles businesses. We help LA brands earn citations in AI-generated answers across ChatGPT, Perplexity, Gemini, Microsoft Copilot and Google AI Overviews.',
+    'url': 'https://geooptimised.com/geo-agency-los-angeles/',
+    'datePublished': '2026-06-07',
+    'dateModified': '2026-06-07',
+    'inLanguage': 'en-GB'
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': [
+      {
+        '@type': 'Question',
+        'name': 'Do you have a Los Angeles office?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'No. GEOoptimised is a UK-based agency that delivers all services remotely. We work with Los Angeles businesses entirely online — via video calls, shared workspaces, and async collaboration. Generative engine optimisation is a technical and strategic discipline; the quality of the work depends on specialist expertise, not on being in the same city as our clients.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'What is generative engine optimisation (GEO)?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Generative engine optimisation is the practice of making your brand visible, quotable, and citable inside AI-generated answers. When a user asks ChatGPT, Perplexity, or Google AI Overviews for a recommendation, GEO determines whether your brand is cited or invisible. It is a distinct discipline from traditional SEO, requiring different signals, content structures, and measurement frameworks.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'Why do Los Angeles businesses need GEO?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Los Angeles is a market defined by creative industries, entertainment, technology, and a strong consumer economy. Buyers and decision-makers across these sectors increasingly use AI tools — ChatGPT, Perplexity, Gemini — to research vendors and shortlist providers before reaching out. Brands not cited in those AI answers are invisible at the top of the purchase funnel, regardless of how well they perform on traditional search.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'Which AI platforms do you optimise for?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'We optimise for ChatGPT, Perplexity, Google Gemini, Microsoft Copilot, Claude, and Google AI Overviews. Each platform uses different retrieval and citation mechanisms. A strategy calibrated for one will often underperform on the others, so we maintain platform-specific playbooks and monitor across all major generative engines.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'How long does it take to see results?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Most clients see measurable changes in AI citation frequency within 60 to 90 days of implementation. Entity authority and cross-platform visibility compound over 6 to 12 months as the programme matures. Every engagement starts with a baseline AI visibility audit so you understand your starting point before any recommendations are made.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'How does remote GEO delivery work across time zones?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Onboarding is completed via a structured video call and shared briefing document. Work is delivered asynchronously with weekly written updates and monthly strategy calls. All deliverables — audits, content rewrites, schema implementations, monitoring reports — are shared through a dedicated project workspace. UK and US Pacific time share a morning overlap window (9am–12pm PT) which we use for any live sessions.'
+        }
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://geooptimised.com/' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'GEO Agency Near You', 'item': 'https://geooptimised.com/geo-near-you/' },
+      { '@type': 'ListItem', 'position': 3, 'name': 'GEO Agency for Los Angeles Businesses', 'item': 'https://geooptimised.com/geo-agency-los-angeles/' }
+    ]
+  }
+];
+
+const deliverables = [
+  {
+    phase: 'Phase 1',
+    label: 'AI Visibility Audit',
+    weeks: 'Weeks 1–3',
+    desc: 'Systematic querying of ChatGPT, Perplexity, Gemini, Copilot, and Claude with the prompts your Los Angeles customers use. We map where your brand appears, where competitors are cited instead, and which sources AI models draw upon in your sector.'
+  },
+  {
+    phase: 'Phase 2',
+    label: 'Foundation',
+    weeks: 'Weeks 3–8',
+    desc: 'Structured data implementation, entity strengthening across Wikipedia, Wikidata, and industry knowledge bases, llms.txt configuration, and initial content optimisation of your highest-priority pages.'
+  },
+  {
+    phase: 'Phase 3',
+    label: 'Optimisation',
+    weeks: 'Weeks 8–16',
+    desc: 'Systematic content restructuring for LLM citation, platform-specific adjustments, creation of new citation-target assets for Los Angeles market queries, and third-party source development to reinforce entity authority.'
+  },
+  {
+    phase: 'Phase 4',
+    label: 'Iteration',
+    weeks: 'Ongoing',
+    desc: 'Monthly citation monitoring, competitive benchmarking, continuous content refinement, and quarterly strategy reviews aligned to your commercial objectives and changes in AI platform behaviour.'
+  }
+];
+
+const faqs = [
+  {
+    q: 'Do you have a Los Angeles office?',
+    a: 'No. GEOoptimised is a UK-based agency that delivers all services remotely. We work with Los Angeles businesses entirely online — via video calls, shared workspaces, and async collaboration. Generative engine optimisation is a technical and strategic discipline; the quality of the work depends on specialist expertise, not on being in the same city as our clients.'
+  },
+  {
+    q: 'What is generative engine optimisation (GEO)?',
+    a: 'Generative engine optimisation is the practice of making your brand visible, quotable, and citable inside AI-generated answers. When a user asks ChatGPT, Perplexity, or Google AI Overviews for a recommendation, GEO determines whether your brand is cited or invisible. It is a distinct discipline from traditional SEO, requiring different signals, content structures, and measurement frameworks.'
+  },
+  {
+    q: 'Why do Los Angeles businesses need GEO?',
+    a: 'Los Angeles is a market defined by creative industries, entertainment, technology, and a strong consumer economy. Buyers and decision-makers across these sectors increasingly use AI tools — ChatGPT, Perplexity, Gemini — to research vendors and shortlist providers before reaching out. Brands not cited in those AI answers are invisible at the top of the purchase funnel, regardless of how well they perform on traditional search.'
+  },
+  {
+    q: 'Which AI platforms do you optimise for?',
+    a: 'We optimise for ChatGPT, Perplexity, Google Gemini, Microsoft Copilot, Claude, and Google AI Overviews. Each platform uses different retrieval and citation mechanisms. A strategy calibrated for one will often underperform on the others, so we maintain platform-specific playbooks and monitor across all major generative engines.'
+  },
+  {
+    q: 'How long does it take to see results?',
+    a: 'Most clients see measurable changes in AI citation frequency within 60 to 90 days of implementation. Entity authority and cross-platform visibility compound over 6 to 12 months as the programme matures. Every engagement starts with a baseline AI visibility audit so you understand your starting point before any recommendations are made.'
+  },
+  {
+    q: 'How does remote GEO delivery work across time zones?',
+    a: 'Onboarding is completed via a structured video call and shared briefing document. Work is delivered asynchronously with weekly written updates and monthly strategy calls. All deliverables — audits, content rewrites, schema implementations, monitoring reports — are shared through a dedicated project workspace. UK and US Pacific time share a morning overlap window (9am–12pm PT) which we use for any live sessions.'
+  }
+];
+
+const related = [
+  {
+    tag: 'Node',
+    title: 'GEO Agency Near You',
+    excerpt: 'The hub for all location-specific GEO agency pages — find remote GEO services for your city.',
+    href: '/geo-near-you/'
+  },
+  {
+    tag: 'Sibling',
+    title: 'GEO Agency for New York Businesses',
+    excerpt: 'Remote generative engine optimisation services for NYC and the broader New York market.',
+    href: '/geo-agency-new-york/'
+  },
+  {
+    tag: 'Service',
+    title: 'GEO Services Overview',
+    excerpt: 'The full range of generative engine optimisation services we deliver for any market.',
+    href: '/geo-services/'
+  },
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'Everything you need to know about GEO — from first principles to advanced entity strategy.',
+    href: '/generative-engine-optimisation/'
+  }
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/geo-agency-los-angeles/"
+  ogType="website"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex items-center gap-1.5 text-sm text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-near-you/" class="transition hover:text-[var(--accent)]">GEO Agency Near You</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">Los Angeles</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Local Service</span>
+        <span class="font-mono text-xs text-ink-400">Remote delivery &middot; UK-based specialist agency</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO Agency for Los Angeles Businesses
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">Los Angeles brands competing for AI citations face a structural disadvantage if they have not started.</strong>
+        When a creative director asks ChatGPT to recommend a production partner, or a tech buyer uses Perplexity to shortlist vendors in LA,
+        the brands cited in those answers are winning deals invisibly. GEOoptimised delivers specialist
+        <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a>
+        to Los Angeles businesses entirely remotely — no local office, full specialist depth.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="/contact/" class="btn btn-primary">Request a free GEO audit</a>
+        <a href="/geo-agency/" class="btn btn-ghost">About our agency</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <div class="container-wide py-12">
+
+    <!-- Key Takeaways -->
+    <div class="card p-6 mb-14 max-w-3xl">
+      <span class="eyebrow">Key Takeaways</span>
+      <ul class="mt-4 space-y-2 text-sm text-ink-200">
+        <li class="flex items-start gap-2">
+          <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+          <span>GEO is not SEO — it targets AI-generated answers, not blue-link rankings, and demands a completely different methodology.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+          <span>Los Angeles spans entertainment, technology, and consumer sectors where AI-driven research is already shaping buying decisions.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+          <span>All services are delivered remotely — full audit, implementation, monitoring, and iteration — without geographic limits on quality.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+          <span>Most clients see measurable citation changes within 60–90 days; entity authority compounds over 6–12 months.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- What GEO Is -->
+    <div class="prose-dark max-w-3xl">
+      <h2 id="what-geo-is" class="anchor-top">What Generative Engine Optimisation Is</h2>
+      <p>
+        <strong>Generative engine optimisation (GEO) is the discipline of making your brand the source AI models choose to cite.</strong>
+        Traditional search engine optimisation targets ranked lists of web pages. GEO targets something fundamentally different:
+        the synthesised, AI-generated responses that ChatGPT, Perplexity, Gemini, Microsoft Copilot, and Google AI Overviews
+        deliver to users in place of those lists.
+      </p>
+      <p>
+        In a generative AI response, there is no page two. Typically one to three sources are cited per answer.
+        The competitive stakes are proportionally higher than any organic ranking, and the signals that determine inclusion —
+        entity authority, structured data, citation-ready content architecture — bear little resemblance to traditional ranking factors.
+      </p>
+      <p>
+        A specialist <a href="/geo-agency/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO agency</a>
+        builds the infrastructure that puts your brand in those answers. The work spans technical implementation, content restructuring,
+        entity graph reinforcement, and continuous cross-platform monitoring. For the complete picture,
+        see our <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services overview</a>.
+      </p>
+
+      <h2 id="why-los-angeles" class="anchor-top mt-12">Why Los Angeles Businesses Need GEO Now</h2>
+      <p>
+        <strong>Los Angeles is not a single-sector market — it is a convergence of entertainment, technology, consumer brands, and professional services that collectively represent one of the highest-value commercial ecosystems in the United States.</strong>
+        Across each of these sectors, buyers increasingly use AI tools to conduct research before contacting vendors. A studio executive
+        asking ChatGPT to identify post-production companies. A startup founder using Perplexity to compare growth agencies in LA.
+        A consumer asking Gemini for the best sustainable furniture brands in California. In each case, the brands cited in the AI response
+        have a decisive advantage over those that are absent.
+      </p>
+      <p>
+        LA's technology sector — spanning Silicon Beach, Pasadena's research institutions, and the broader Southern California startup ecosystem —
+        is particularly AI-forward. Decision-makers at tech companies habitually use generative AI tools for vendor research, making AI citation
+        authority a tangible commercial asset for any B2B business serving this market.
+      </p>
+      <p>
+        The creative economy presents a different dynamic. Entertainment and media brands are regularly discussed by AI models in response to
+        queries about production partners, talent agencies, and creative services. The question is not whether AI models will mention companies
+        in your category — they already do. The question is whether your brand is the one cited, or a competitor's.
+      </p>
+
+      <h2 id="remote-delivery" class="anchor-top mt-12">How Remote GEO Delivery Works</h2>
+      <p>
+        <strong>Remote delivery is the standard model for every GEOoptimised engagement — and it functions without compromise.</strong>
+        Generative engine optimisation is a technical and strategic discipline. The core work — auditing AI visibility, restructuring content
+        for LLM citation, implementing structured data, monitoring brand mentions across platforms — is performed on digital assets and
+        measured through AI platforms. Geographic proximity between agency and client plays no role in any of it.
+      </p>
+      <p>
+        For Los Angeles clients, engagements work as follows: an initial discovery call establishes objectives, competitive context, and
+        current AI visibility. A shared briefing document captures all relevant brand, sector, and content information. From there, work
+        proceeds on a weekly delivery cadence with written updates and a monthly strategy call. All deliverables are accessible through
+        a shared project workspace at all times.
+      </p>
+      <p>
+        The UK–US Pacific time difference is managed straightforwardly. There is a three-to-four-hour overlap in business hours — typically
+        9am to 12pm PT — which is sufficient for live sessions. Most of the actual work happens asynchronously, which is standard practice
+        for knowledge-work engagements and imposes no practical constraint on delivery speed or quality.
+      </p>
+    </div>
+
+    <!-- Deliverables table -->
+    <div class="mt-14">
+      <h2 class="font-display text-2xl font-bold grad-text mb-6" id="deliverables">What We Deliver: Engagement Phases</h2>
+      <div class="card overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead>
+              <tr class="border-b border-[var(--line)]">
+                <th class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Phase</th>
+                <th class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Deliverable</th>
+                <th class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Timeline</th>
+                <th class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">What happens</th>
+              </tr>
+            </thead>
+            <tbody class="text-ink-300">
+              {deliverables.map((row, i) => (
+                <tr class={i < deliverables.length - 1 ? 'border-b border-[var(--line-soft)]' : ''}>
+                  <td class="px-5 py-4 font-mono text-xs text-ink-500 whitespace-nowrap">{row.phase}</td>
+                  <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">{row.label}</td>
+                  <td class="px-5 py-4 text-ink-400 whitespace-nowrap">{row.weeks}</td>
+                  <td class="px-5 py-4 leading-relaxed">{row.desc}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- GEO vs SEO for LA -->
+    <div class="prose-dark max-w-3xl mt-14">
+      <h2 id="geo-vs-seo" class="anchor-top">GEO vs SEO for Los Angeles Brands</h2>
+      <p>
+        <strong>GEO and traditional SEO are complementary disciplines that address different stages of the same discovery journey.</strong>
+        For Los Angeles businesses, traditional SEO continues to matter: local-intent queries like "video production company Los Angeles,"
+        "growth marketing agency LA," and "SaaS consultant Southern California" drive meaningful organic traffic. Those rankings are
+        worth maintaining and improving.
+      </p>
+      <p>
+        GEO operates at a different layer: the AI-generated answers that intercept research before a user reaches the SERP at all.
+        When someone asks Perplexity "which entertainment law firms in Los Angeles are best for independent film producers?" or
+        asks Gemini to compare digital agencies in LA by specialisation, the resulting AI answer cites specific firms.
+        Those citations function as editorial recommendations — carrying far more weight than a ranked listing — and they
+        appear before the user has even articulated a search query in the traditional sense.
+      </p>
+      <p>
+        The most effective programmes run both in parallel. A strong SEO foundation improves the technical and content signals
+        that GEO builds upon. GEO authority development reinforces the entity signals that help organic rankings too.
+        The disciplines share DNA even when the execution differs.
+      </p>
+    </div>
+
+    <!-- FAQ Accordion -->
+    <div class="mt-14 max-w-3xl">
+      <h2 class="font-display text-2xl font-bold grad-text mb-8" id="faq">Frequently Asked Questions</h2>
+      <div class="space-y-2" id="faq-accordion-la">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Related Reading -->
+    <div class="mt-16">
+      <span class="eyebrow" id="related">Related reading</span>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {related.map(item => (
+          <a href={item.href} class="card card-hover block p-5 no-underline">
+            <span class="eyebrow">{item.tag}</span>
+            <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+            <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read <span aria-hidden="true">&rarr;</span></span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12">
+    <div class="container-wide py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Find Out Where Your LA Brand Stands in AI Search</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        We begin every engagement with a comprehensive AI visibility audit — mapping your current citation presence across
+        ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews. No assumptions, no guesswork: just a clear baseline
+        and a prioritised plan for closing the gap.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request your free GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('#faq-accordion-la button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+  </script>
+
+</Base>

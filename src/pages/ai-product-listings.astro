@@ -1,0 +1,670 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Optimising Product Listings for AI | GEOoptimised';
+const description = 'AI optimization for product listings: Product schema, structured data feeds, and listing content strategies that get your products extracted by AI engines.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: 'Optimising Product Listings for AI',
+  description,
+  url: 'https://geooptimised.com/ai-product-listings/',
+  image: 'https://geooptimised.com/og-image.png',
+  inLanguage: 'en-GB',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/ai-product-listings/',
+  },
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is AI optimization for product listings?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'AI optimization for product listings is the practice of structuring product data, schema markup, and listing content so that AI engines can accurately extract, represent, and cite specific products in generated answers. It covers both on-page structured data (Product schema in JSON-LD) and the written content of product listings — specifications, descriptions, and comparison elements — that AI retrieval systems parse when answering product-specific queries.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the minimum Product schema required for AI citation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The minimum viable Product schema for AI citation includes: @type "Product", name, brand (as a Brand type), description, sku, image (as an ImageObject), offers (with price, priceCurrency, availability, and url), and aggregateRating (with ratingValue, bestRating, worstRating, and reviewCount). Missing any of these properties creates data gaps that reduce citation confidence. For products with multiple variants, each variant should have its own offers block with accurate price and availability.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How should product descriptions be written to maximise AI extraction?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Product descriptions optimised for AI extraction should open with a single declarative sentence defining what the product is and its primary use case. Follow with a specifications section using structured HTML (a table or definition list) that lists key attributes consistently. Avoid marketing language that does not convey factual information. Include a "best suited for" or "ideal use case" statement that matches the natural language patterns of AI shopping queries. Descriptions of 150 to 300 words with this structure perform significantly better in AI extraction tests than longer, prose-heavy descriptions.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do product data feeds (Google Merchant Centre, Meta Catalogue) affect AI citation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, indirectly. Google Merchant Centre feeds inform Google Shopping, which in turn provides product data signals to Google AI Overviews and Gemini when those systems are answering shopping-intent queries. A product in Google Merchant Centre with complete, accurate attributes is more likely to appear in Google AI Overviews shopping panels than a product not in the feed. Meta Catalogue and other feed platforms have less direct influence on current AI citation, but contribute to the breadth of platforms on which product data exists — which strengthens training data representation over time.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do variant products affect AI citation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Product variants — different sizes, colours, or configurations of the same base product — require careful structured data handling to perform well in AI citation. Each meaningful variant should have its own offers block within the parent Product schema, with accurate price and availability per variant. If variants have significantly different specifications (e.g., different technical performance per size), those differences should appear in the listing content. AI systems that encounter a single product listing with no variant distinction may cite incorrect availability or pricing when answering specific variant queries.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between Product schema on a DTC site and a marketplace listing?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'On a DTC (direct-to-consumer) website, the brand controls the complete structured data implementation and can ensure all properties are populated accurately. On a marketplace (Amazon, eBay, Google Shopping), the product data is structured by the platform according to its own schema, and the brand controls only the input data submitted via catalogue or feed. For AI citation purposes, DTC Product schema is more directly controllable and should be prioritised. Marketplace listings still contribute to AI citation via training data and retrieval, but the brand has less control over the structured data quality.',
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'GEO by Industry', item: 'https://geooptimised.com/geo-by-industry/' },
+    { '@type': 'ListItem', position: 3, name: 'Optimising Product Listings for AI', item: 'https://geooptimised.com/ai-product-listings/' },
+  ],
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'what-it-means', label: 'What Product Listing AI Optimisation Means' },
+  { id: 'product-schema', label: 'Product Schema: Complete Specification' },
+  { id: 'listing-content', label: 'Writing Listings for AI Extraction' },
+  { id: 'specifications', label: 'Specifications and Structured Attributes' },
+  { id: 'feeds-and-catalogues', label: 'Feeds, Catalogues, and Platforms' },
+  { id: 'variants', label: 'Handling Variants Correctly' },
+  { id: 'audit-checklist', label: 'Product Listing AI Audit Checklist' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const faqs = [
+  {
+    q: 'What is AI optimization for product listings?',
+    a: 'AI optimization for product listings is the practice of structuring product data, schema markup, and listing content so that AI engines can accurately extract, represent, and cite specific products in generated answers. It covers both on-page structured data (Product schema in JSON-LD) and the written content of product listings — specifications, descriptions, and comparison elements — that AI retrieval systems parse when answering product-specific queries.',
+  },
+  {
+    q: 'What is the minimum Product schema required for AI citation?',
+    a: 'The minimum viable Product schema for AI citation includes: @type "Product", name, brand (as a Brand type), description, sku, image (as an ImageObject), offers (with price, priceCurrency, availability, and url), and aggregateRating (with ratingValue, bestRating, worstRating, and reviewCount). Missing any of these properties creates data gaps that reduce citation confidence. For products with multiple variants, each variant should have its own offers block with accurate price and availability.',
+  },
+  {
+    q: 'How should product descriptions be written to maximise AI extraction?',
+    a: 'Product descriptions optimised for AI extraction should open with a single declarative sentence defining what the product is and its primary use case. Follow with a specifications section using structured HTML (a table or definition list) that lists key attributes consistently. Avoid marketing language that does not convey factual information. Include a "best suited for" or "ideal use case" statement that matches the natural language patterns of AI shopping queries. Descriptions of 150 to 300 words with this structure perform significantly better in AI extraction tests than longer, prose-heavy descriptions.',
+  },
+  {
+    q: 'Do product data feeds (Google Merchant Centre, Meta Catalogue) affect AI citation?',
+    a: 'Yes, indirectly. Google Merchant Centre feeds inform Google Shopping, which in turn provides product data signals to Google AI Overviews and Gemini when those systems are answering shopping-intent queries. A product in Google Merchant Centre with complete, accurate attributes is more likely to appear in Google AI Overviews shopping panels than a product not in the feed. Meta Catalogue and other feed platforms have less direct influence on current AI citation, but contribute to the breadth of platforms on which product data exists — which strengthens training data representation over time.',
+  },
+  {
+    q: 'How do variant products affect AI citation?',
+    a: 'Product variants — different sizes, colours, or configurations of the same base product — require careful structured data handling to perform well in AI citation. Each meaningful variant should have its own offers block within the parent Product schema, with accurate price and availability per variant. If variants have significantly different specifications (e.g., different technical performance per size), those differences should appear in the listing content. AI systems that encounter a single product listing with no variant distinction may cite incorrect availability or pricing when answering specific variant queries.',
+  },
+  {
+    q: 'What is the difference between Product schema on a DTC site and a marketplace listing?',
+    a: 'On a DTC (direct-to-consumer) website, the brand controls the complete structured data implementation and can ensure all properties are populated accurately. On a marketplace (Amazon, eBay, Google Shopping), the product data is structured by the platform according to its own schema, and the brand controls only the input data submitted via catalogue or feed. For AI citation purposes, DTC Product schema is more directly controllable and should be prioritised. Marketplace listings still contribute to AI citation via training data and retrieval, but the brand has less control over the structured data quality.',
+  },
+];
+
+const related = [
+  {
+    tag: 'Node',
+    title: 'GEO by Industry',
+    excerpt: 'The full index of generative engine optimisation strategies broken down by industry and vertical.',
+    href: '/geo-by-industry/',
+  },
+  {
+    tag: 'Technical',
+    title: 'Schema Markup for AI: Implementation Guide',
+    excerpt: 'Complete guide to implementing JSON-LD structured data that AI retrieval systems parse and cite accurately.',
+    href: '/schema-markup-ai/',
+  },
+  {
+    tag: 'Related',
+    title: 'AI Optimisation for Ecommerce',
+    excerpt: 'How online stores get products and brand cited in AI shopping and research answers at the store level.',
+    href: '/ai-optimisation-ecommerce/',
+  },
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/ai-product-listings/" ogType="article">
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-400">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/geo-by-industry/" class="transition hover:text-[var(--accent)]">GEO by Industry</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">Optimising Product Listings for AI</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Product Data GEO</span>
+        <span class="font-mono text-xs text-ink-400">7 Jun 2026</span>
+        <span class="font-mono text-xs text-ink-400">13 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        Optimising Product Listings for AI
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        AI engines extract product data from structured markup, listing content, and data feeds — then synthesise that data into
+        shopping answers. <strong class="text-white">AI optimization for product listings</strong> is the discipline of ensuring your
+        product data is structured, complete, and written in a way that AI systems can accurately extract, represent, and
+        cite in response to specific shopping and comparison queries.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Product schema with complete attributes is the primary technical signal through which AI engines extract and represent product data in generated answers.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Product descriptions written for AI extraction open with a declarative definition sentence and include structured specifications — not just marketing copy.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Google Merchant Centre feed quality directly influences Google AI Overviews shopping panel citation for product queries.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Variant products require individual offers blocks per variant to avoid AI systems citing incorrect pricing or availability in specific variant queries.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>The most common product listing AI failure is schema present but incomplete — missing aggregateRating, availability, or brand properties that AI systems require for confident citation.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1 -->
+      <section id="what-it-means" class="anchor-top prose-dark mb-16">
+        <h2>What Product Listing AI Optimisation Means</h2>
+
+        <p>
+          <strong>AI optimisation for product listings is the process of structuring every layer of product data — schema markup, listing descriptions, specification content, and data feeds — so that AI engines can extract accurate, complete product information and cite it confidently in generated answers.</strong>
+          It is more granular than broader ecommerce GEO because it focuses specifically on the product data layer: the individual page,
+          the individual listing, the individual structured data object.
+        </p>
+
+        <p>
+          When a user asks an AI engine "what is the best DSLR camera for beginners under £600", the system retrieves candidate pages
+          and extracts product data from them. The quality of that extraction depends directly on how the product data is structured.
+          A product page with incomplete schema, a description that leads with "introducing the revolutionary X500 camera", and a
+          specifications section buried three screens down will be extracted poorly — or not at all. A page with complete Product schema,
+          a declarative opening description, and specifications in a structured table will be extracted with high confidence and cited accurately.
+        </p>
+
+        <p>
+          This page focuses specifically on the product data and listing content layer. For the broader strategy of getting an ecommerce
+          brand cited in AI answers — including brand-level entity authority and category page editorial content — see our guide to
+          <a href="/ai-optimisation-ecommerce/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI optimisation for ecommerce</a>.
+          For the full GEO framework, see our guide to
+          <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a>.
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="product-schema" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Product Schema: Complete Specification</h2>
+          <p>
+            <strong>Product schema in JSON-LD is the machine-readable foundation of product AI citation.</strong>
+            AI retrieval systems parse JSON-LD before body content because it provides unambiguous, structured signals
+            that do not require natural language interpretation. A product page without valid Product schema relies entirely
+            on the AI system's ability to parse prose — a significantly less reliable extraction mechanism.
+          </p>
+        </div>
+
+        <div class="mt-8 overflow-x-auto">
+          <table class="w-full border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-white/10">
+                <th scope="col" class="py-3 pr-4 text-left font-semibold text-ink-50">Property</th>
+                <th scope="col" class="py-3 pr-4 text-left font-semibold text-ink-50">Type</th>
+                <th scope="col" class="py-3 pr-4 text-left font-semibold text-ink-50">Required for AI</th>
+                <th scope="col" class="py-3 text-left font-semibold text-ink-50">Notes</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+              <tr>
+                <td class="py-3 pr-4 font-mono text-xs text-accent-400">name</td>
+                <td class="py-3 pr-4 text-ink-300">Text</td>
+                <td class="py-3 pr-4 text-ink-300">Essential</td>
+                <td class="py-3 text-ink-300">Exact product name as sold</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-mono text-xs text-accent-400">brand</td>
+                <td class="py-3 pr-4 text-ink-300">Brand</td>
+                <td class="py-3 pr-4 text-ink-300">Essential</td>
+                <td class="py-3 text-ink-300">Use Brand type with name property</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-mono text-xs text-accent-400">description</td>
+                <td class="py-3 pr-4 text-ink-300">Text</td>
+                <td class="py-3 pr-4 text-ink-300">Essential</td>
+                <td class="py-3 text-ink-300">Factual, declarative; avoid marketing language</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-mono text-xs text-accent-400">sku</td>
+                <td class="py-3 pr-4 text-ink-300">Text</td>
+                <td class="py-3 pr-4 text-ink-300">Recommended</td>
+                <td class="py-3 text-ink-300">Unique identifier; helps deduplication</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-mono text-xs text-accent-400">image</td>
+                <td class="py-3 pr-4 text-ink-300">ImageObject</td>
+                <td class="py-3 pr-4 text-ink-300">Essential</td>
+                <td class="py-3 text-ink-300">Include width, height, url</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-mono text-xs text-accent-400">offers</td>
+                <td class="py-3 pr-4 text-ink-300">Offer</td>
+                <td class="py-3 pr-4 text-ink-300">Essential</td>
+                <td class="py-3 text-ink-300">price, priceCurrency, availability, url</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-mono text-xs text-accent-400">aggregateRating</td>
+                <td class="py-3 pr-4 text-ink-300">AggregateRating</td>
+                <td class="py-3 pr-4 text-ink-300">Essential</td>
+                <td class="py-3 text-ink-300">ratingValue, bestRating, reviewCount</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-mono text-xs text-accent-400">additionalProperty</td>
+                <td class="py-3 pr-4 text-ink-300">PropertyValue</td>
+                <td class="py-3 pr-4 text-ink-300">Recommended</td>
+                <td class="py-3 text-ink-300">Technical specs; one PropertyValue per attribute</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-mono text-xs text-accent-400">gtin13 / gtin8</td>
+                <td class="py-3 pr-4 text-ink-300">Text</td>
+                <td class="py-3 pr-4 text-ink-300">Recommended</td>
+                <td class="py-3 text-ink-300">Global identifier; improves cross-platform deduplication</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose-dark mt-8">
+          <h3>The aggregateRating Gap</h3>
+          <p>
+            The most common Product schema deficiency across ecommerce sites is a missing or unpopulated <code>aggregateRating</code>.
+            Many sites implement the base Product schema but omit review data — either because their review system is not connected
+            to schema generation, or because they have fewer than the minimum review count they consider worthy of display.
+            AI engines treat <code>aggregateRating</code> as a quality proxy for commercial queries. A product with no rating data
+            in schema is materially less likely to be cited in "best X" answers than an equivalent product with a populated
+            <code>ratingValue</code> and <code>reviewCount</code>, even if the underlying review data is modest.
+          </p>
+          <p>
+            For a complete implementation guide with worked JSON-LD examples for all product schema types, see our technical guide to
+            <a href="/schema-markup-ai/">schema markup for AI</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="listing-content" class="anchor-top prose-dark mb-16">
+        <h2>Writing Product Listing Content for AI Extraction</h2>
+
+        <p>
+          <strong>Product listing descriptions written for AI extraction follow a specific structural pattern that maximises the probability of accurate citation.</strong>
+          The pattern contrasts sharply with traditional product copywriting, which typically opens with a brand statement or lifestyle hook.
+          AI retrieval systems need factual, extractable content from the opening sentence.
+        </p>
+
+        <h3>The Declarative Opening Pattern</h3>
+        <p>
+          Every product description should open with a single sentence that defines the product and its primary use case in plain, factual language.
+          The pattern is: "[Product name] is a [category] [designed/built/intended] for [primary use case]."
+          For example: "The Vortex 500 is a full-frame mirrorless camera designed for amateur photographers transitioning from DSLR systems."
+          This sentence provides an AI system with everything it needs to accurately represent the product in a generated answer without reading further.
+        </p>
+        <p>
+          Follow the opening sentence with two to four sentences covering the product's key distinguishing features — the attributes that make it
+          different from competitors. These should be specific and factual: sensor resolution, battery life, materials, certifications.
+          Avoid comparative language without specifics ("best in class", "industry-leading") — AI systems cannot extract or verify these claims,
+          and they reduce the citability of the surrounding content.
+        </p>
+
+        <h3>Use-Case Statements</h3>
+        <p>
+          Include an explicit "best suited for" or "ideal for" statement that names specific use cases in natural language.
+          "Ideal for trail runners seeking a minimal drop shoe for technical terrain" or "best suited for home bakers who want consistent
+          results without a professional oven". These statements directly match the query patterns used in AI shopping searches and
+          dramatically improve citation frequency for long-tail, use-case-specific queries.
+        </p>
+
+        <h3>What to Avoid</h3>
+        <p>
+          Listing content that suppresses AI extraction includes: opening sentences that begin with brand statements or campaign language;
+          dense paragraphs without clear factual claims; specifications embedded in prose rather than structured tables; and benefit statements
+          that lack specific evidence. Marketing language does not reduce citation per se, but it reduces the density of extractable information
+          per sentence — which makes the AI system's job harder and reduces citation confidence.
+        </p>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="specifications" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Specifications and Structured Attributes</h2>
+          <p>
+            <strong>Product specifications presented in structured HTML tables are among the most reliably extracted content elements by AI retrieval systems.</strong>
+            A specifications table provides clear attribute-value pairs that an AI system can parse directly — without needing to interpret
+            prose context or infer what value applies to which attribute. This is particularly critical for technical products where
+            specifications are the primary basis for comparison.
+          </p>
+        </div>
+
+        <div class="mt-8 space-y-6">
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">HTML Table Structure</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Specifications tables should use <code>&lt;th scope="row"&gt;</code> for attribute names and <code>&lt;td&gt;</code> for values,
+              within a two-column <code>&lt;table&gt;</code>. Each row should be a single attribute. Avoid merging cells, using images
+              to represent values, or embedding specifications in inline styles. AI retrieval systems parse standard HTML table structure;
+              non-standard implementations reduce extraction reliability.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">additionalProperty Schema</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              The same specifications should be represented in structured data using <code>additionalProperty</code> within the
+              Product schema, with each specification as a <code>PropertyValue</code> containing <code>name</code> and <code>value</code>.
+              Duplicate representation — in both HTML and JSON-LD — reinforces the structured signal and is significantly more
+              AI-extractable than either representation alone. For products with many specifications, prioritise the ten to fifteen
+              attributes most relevant to common comparison queries.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Consistency Across the Catalogue</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Specifications attributes should be consistent in naming and units across all products in a category. If one product
+              uses "Weight: 250g" and another uses "Weight (grams): 250", AI systems may fail to compare them accurately in
+              generated answers. Establish a controlled vocabulary for specification attributes per product category and enforce
+              it across the entire catalogue. This consistency benefit extends to Google Merchant Centre feeds and comparison
+              aggregators, as well as AI citation.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="feeds-and-catalogues" class="anchor-top prose-dark mb-16">
+        <h2>Feeds, Catalogues, and Platform Distribution</h2>
+
+        <p>
+          <strong>Product data feeds are a parallel channel through which AI systems access product information — independent of web crawling.</strong>
+          Google Merchant Centre, Meta Commerce Manager, Microsoft Shopping, and Amazon Vendor/Seller Central all process product feeds that
+          populate their respective shopping platforms. These platforms in turn feed AI engines — directly in Google's case, and indirectly
+          through training data and retrieval indexing in others.
+        </p>
+
+        <h3>Google Merchant Centre and AI Overviews</h3>
+        <p>
+          Google Merchant Centre (GMC) feeds provide Google AI Overviews with product data that supplements web crawling. Products with
+          complete GMC feed attributes — title, description, category, brand, GTIN, price, availability, images, and product highlights —
+          are more likely to appear in Google AI Overviews shopping panels for relevant queries. Feed quality matters as much as feed
+          completeness: a well-optimised GMC title follows the same declarative pattern as an AI-optimised product description — product name,
+          key attribute, use case — rather than the promotional titles often submitted for text ad campaigns.
+        </p>
+
+        <h3>Feed Attribute Quality</h3>
+        <p>
+          The attributes that most directly influence AI citation via GMC feeds are: <code>product_type</code> (Google's taxonomy category),
+          <code>google_product_category</code> (the standardised Google taxonomy ID), <code>brand</code> (consistent with the brand name
+          in Product schema), <code>gtin</code> (for cross-platform deduplication), and <code>product_highlight</code> (up to five
+          bullet-point highlights that appear in Shopping panels). <code>product_highlight</code> is particularly underutilised;
+          well-written highlights following the declarative pattern significantly improve citation accuracy in AI-generated comparisons.
+        </p>
+
+        <h3>Marketplace Listings</h3>
+        <p>
+          Marketplace product listings on Amazon, eBay, and similar platforms contribute to AI citation through two mechanisms:
+          the marketplace's own structured data is indexed by AI crawlers, and editorial coverage referencing marketplace listings
+          contributes to training data. For brands that sell through Amazon, the Amazon listing title, bullet points, and A+ content
+          are all potential AI citation sources — particularly for AI systems that use Amazon's product catalogue as a data source.
+          Optimising Amazon bullet points using the declarative + specification pattern improves citation quality on platforms that
+          retrieve Amazon content.
+        </p>
+      </section>
+
+      <!-- Section 6 -->
+      <section id="variants" class="anchor-top prose-dark mb-16">
+        <h2>Handling Product Variants Correctly</h2>
+
+        <p>
+          <strong>Product variants — multiple sizes, colours, or configurations sold under a single product listing — are one of the most common sources of AI citation error for ecommerce brands.</strong>
+          When variant data is not correctly represented in structured data, AI systems either cite the default variant (often the first listed,
+          regardless of relevance to the query) or aggregate variant data incorrectly — producing wrong pricing or availability in generated answers.
+        </p>
+
+        <h3>Individual Offers per Variant</h3>
+        <p>
+          For products with meaningful variant differences — particularly price or availability — implement a separate <code>Offer</code> block
+          within the Product schema for each significant variant. Each offer should include the variant-specific <code>price</code>,
+          <code>availability</code>, and a <code>url</code> pointing to the canonical URL for that variant. An AI system encountering
+          a product schema with a single offer block for a multi-variant product cannot distinguish between a sold-out size and an
+          available size — and may cite the product as "in stock" when the relevant variant is not.
+        </p>
+
+        <h3>Variant-Specific Content</h3>
+        <p>
+          Where variants differ in meaningful technical specifications — different battery life per model tier, different weight per size,
+          different compatibility per edition — those differences should appear in the visible content of the variant page or variant section.
+          AI queries that target specific variant attributes ("lightest version of X", "X with longest battery life") can only be answered
+          correctly if the variant-level specification data exists in the page content and structured data for the relevant variant.
+        </p>
+      </section>
+
+      <!-- Section 7: Audit Checklist -->
+      <section id="audit-checklist" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Product Listing AI Audit Checklist</h2>
+          <p>
+            <strong>A systematic audit of product listing AI readiness identifies the specific gaps suppressing citation frequency before any optimisation work begins.</strong>
+            The checklist below covers the complete product data layer across schema, content, and feed dimensions.
+          </p>
+        </div>
+
+        <div class="mt-8 grid gap-5 md:grid-cols-2">
+          <div class="card p-6">
+            <h3 class="font-display text-sm font-semibold text-ink-50 mb-4">Schema Audit</h3>
+            <ul class="space-y-2 text-sm text-ink-300">
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#9744;</span><span>Product schema present on 100% of product pages</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#9744;</span><span>brand property populated as Brand type with name</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#9744;</span><span>aggregateRating present with ratingValue and reviewCount</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#9744;</span><span>offers.availability using schema.org values (InStock etc.)</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#9744;</span><span>gtin present for all branded products</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#9744;</span><span>additionalProperty blocks for key specifications</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#9744;</span><span>BreadcrumbList schema on every product page</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#9744;</span><span>No schema validation errors in Rich Results Test</span></li>
+            </ul>
+          </div>
+          <div class="card p-6">
+            <h3 class="font-display text-sm font-semibold text-ink-50 mb-4">Content Audit</h3>
+            <ul class="space-y-2 text-sm text-ink-300">
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#9744;</span><span>Description opens with declarative product definition sentence</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#9744;</span><span>Use-case statement present in description</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#9744;</span><span>Specifications in visible HTML table with consistent attributes</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#9744;</span><span>Specification attribute names consistent across category</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#9744;</span><span>No marketing-only claims without supporting specifics</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#9744;</span><span>Variant-specific differences described per variant</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#9744;</span><span>GPTBot and PerplexityBot not blocked in robots.txt</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">&#9744;</span><span>Product pages server-rendered (not client-only JavaScript)</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="prose-dark mt-8">
+          <p>
+            Our <a href="/geo-services/">GEO services</a> include a product data AI audit that runs this checklist systematically
+            across your full product catalogue and prioritises remediation by citation impact. For Shopify stores, see our platform-specific
+            guidance in our <a href="/geo-for-shopify/">GEO for Shopify</a> guide.
+            <a href="/contact/">Contact us</a> to discuss your product catalogue.
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Audit Your Product Listing AI Readiness</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Find out which products in your catalogue are invisible to AI engines — and exactly what data gaps are causing it.
+        Our product data AI audit covers schema completeness, content quality, feed health, and citation frequency testing.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request your product data audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>
