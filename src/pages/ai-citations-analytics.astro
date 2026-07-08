@@ -1,0 +1,489 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'AI Citations Analytics: Track Brand Citations | GEOoptimised';
+const description = 'How to analyse where and why your brand is cited across AI engines. Build a systematic AI citations analytics practice covering tools, query sets, and reporting workflows.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'AI Citations Analytics',
+    description: 'How to analyse where and why your brand is cited across AI engines. Build a systematic AI citations analytics practice covering tools, query sets, and reporting workflows.',
+    url: 'https://geooptimised.com/ai-citations-analytics/',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://geooptimised.com/ai-citations-analytics/'
+    },
+    author: { '@id': 'https://geooptimised.com/#organization' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' },
+    datePublished: '2026-06-07',
+    dateModified: '2026-06-07',
+    image: 'https://geooptimised.com/og-image.png',
+    inLanguage: 'en-GB'
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is AI citations analytics?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'AI citations analytics is the systematic practice of tracking, analysing, and reporting on how and where your brand is cited in AI-generated answers across platforms such as ChatGPT, Perplexity, Google Gemini, and Microsoft Copilot. It involves defining a target query set, running those queries across AI platforms on a regular cadence, recording citation presence and accuracy, and using that data to guide content and entity optimisation decisions. It is the measurement layer of a GEO programme.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What tools can you use for AI citations analytics?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'AI citations analytics can be conducted using a combination of dedicated GEO monitoring platforms (such as Profound, Otterly, and AI Rank Tracker), manual query testing using API calls to AI platforms, and structured logging in spreadsheets or BI tools. Dedicated platforms automate query running and citation recording across multiple AI engines simultaneously, reducing the labour cost of tracking. Manual testing is useful for deep investigation of specific citation patterns that automated tools may not surface.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How do you define the query set for AI citations tracking?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The query set for AI citations tracking should include: commercial-intent queries where your brand is a relevant solution (e.g. "best [category] tools"), informational queries where your expertise makes you a credible source (e.g. "how does [your discipline] work"), comparison queries against named competitors, and brand-name queries that test how AI engines describe your organisation. The set should be large enough to be representative but small enough to track consistently — typically 30 to 80 queries for most B2B programmes.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What should AI citations analytics reports include?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'A complete AI citations analytics report should include: citation frequency rate (citations received / queries tested), citation accuracy score (proportion of citations that correctly describe your brand), platform breakdown (which AI engines are citing you and which are not), share of voice relative to named competitors, prompt coverage (proportion of your query set where you appear at least once), trend data showing movement against prior periods, and a qualitative summary of how AI engines are describing your brand category and value proposition.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How often should AI citation data be collected?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'AI citation data should be collected monthly as a minimum for ongoing programme tracking. For competitive categories where citation positions shift frequently, a fortnightly cadence produces more actionable data. Weekly tracking is appropriate during periods of active content or entity optimisation, when you need to detect the impact of specific changes quickly. Infrequent spot-checks — quarterly or less — are insufficient to identify trends or act on them in time to correct course.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Why do AI engines cite some sources and not others?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'AI engines cite sources based on a combination of factors: content extractability (how cleanly the relevant passage can be isolated), entity authority (how reliably the source is associated with the topic in the model\'s training data or retrieval index), topical depth (whether the source covers the topic with sufficient precision to be a definitive reference), structural signals (schema markup, clear headings, FAQ patterns), and retrieval accessibility (whether AI crawlers can reach and index the content). Citations analytics helps identify which of these factors is limiting your citation performance for specific queries.'
+        }
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'GEO Metrics', item: 'https://geooptimised.com/geo-metrics/' },
+      { '@type': 'ListItem', position: 3, name: 'AI Citations Analytics', item: 'https://geooptimised.com/ai-citations-analytics/' }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'what-is-citations-analytics', label: 'What Is Citations Analytics' },
+  { id: 'building-the-query-set', label: 'Building Your Query Set' },
+  { id: 'collection-methodology', label: 'Collection Methodology' },
+  { id: 'what-to-measure', label: 'What to Measure' },
+  { id: 'tools-and-platforms', label: 'Tools and Platforms' },
+  { id: 'reporting-framework', label: 'Reporting Framework' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' }
+];
+
+const metricsToTrack = [
+  {
+    metric: 'Citation frequency rate',
+    definition: 'Citations received ÷ total queries tested, expressed as a percentage.',
+    usecase: 'Primary programme health metric. Track trend over time to assess whether GEO activity is producing more citations across the query set.'
+  },
+  {
+    metric: 'Citation accuracy score',
+    definition: 'Proportion of citations that correctly describe your brand, products, or services — assessed qualitatively.',
+    usecase: 'Brand integrity metric. Inaccurate citations that misrepresent your offering require entity remediation, not just content optimisation.'
+  },
+  {
+    metric: 'Platform share of voice',
+    definition: 'Your proportion of citations relative to named competitors, per platform.',
+    usecase: 'Competitive position metric. Tracks whether you are gaining or losing ground relative to specific competitors on each AI engine.'
+  },
+  {
+    metric: 'Prompt coverage',
+    definition: 'Percentage of your target query set for which you receive at least one citation on at least one platform.',
+    usecase: 'Gap identification metric. Low coverage on commercial-intent queries signals priority content opportunities.'
+  },
+  {
+    metric: 'Citation position',
+    definition: 'Where in the AI-generated answer your brand appears — first mention, alongside others, in a list, or in a source link.',
+    usecase: 'Prominence metric. First-mention citations carry greater brand influence than buried list inclusions.'
+  },
+  {
+    metric: 'Cross-platform consistency',
+    definition: 'Whether your brand is cited consistently across all monitored platforms or only on a subset.',
+    usecase: 'Risk metric. Brands cited on only one or two platforms have concentrated citation exposure that is vulnerable to model updates.'
+  }
+];
+
+const toolTypes = [
+  {
+    category: 'Dedicated GEO monitoring platforms',
+    examples: 'Profound, Otterly, AI Rank Tracker, and similar specialist tools',
+    strengths: 'Automated query running, multi-platform coverage, structured citation logging, trend reporting',
+    limitations: 'Subscription cost; may not cover all AI platforms equally; response sampling may differ from live user experience'
+  },
+  {
+    category: 'AI platform APIs',
+    examples: 'OpenAI API, Perplexity API, Gemini API',
+    strengths: 'Programmatic access for custom query sets; reproducible testing conditions; integrates with existing data infrastructure',
+    limitations: 'Requires development resource to build and maintain; API responses may differ from consumer-facing interface'
+  },
+  {
+    category: 'Manual testing with structured logging',
+    examples: 'Direct platform queries, results logged to Google Sheets or Airtable',
+    strengths: 'Zero cost; matches live user experience; allows qualitative assessment of answer quality and positioning',
+    limitations: 'Time-intensive; not scalable to large query sets; difficult to maintain consistent testing conditions'
+  },
+  {
+    category: 'BI and data visualisation',
+    examples: 'Looker Studio, Power BI, Tableau connected to citation data exports',
+    strengths: 'Enables trend analysis, competitive benchmarking, and executive reporting from citation data',
+    limitations: 'Requires clean, structured citation data input; adds tooling overhead without providing data collection capability'
+  }
+];
+
+const faqs = [
+  {
+    q: 'What is AI citations analytics?',
+    a: 'AI citations analytics is the systematic practice of tracking, analysing, and reporting on how and where your brand is cited in AI-generated answers across platforms such as ChatGPT, Perplexity, Google Gemini, and Microsoft Copilot. It involves defining a target query set, running those queries on a regular cadence, recording citation presence and accuracy, and using that data to guide content and entity optimisation decisions.'
+  },
+  {
+    q: 'What tools can you use for AI citations analytics?',
+    a: 'AI citations analytics can be conducted using dedicated GEO monitoring platforms (such as Profound, Otterly, and AI Rank Tracker), manual query testing using API calls to AI platforms, and structured logging in spreadsheets or BI tools. Dedicated platforms automate query running across multiple AI engines simultaneously. Manual testing is useful for deep investigation of specific citation patterns.'
+  },
+  {
+    q: 'How do you define the query set for AI citations tracking?',
+    a: 'The query set should include: commercial-intent queries where your brand is a relevant solution, informational queries where your expertise makes you a credible source, comparison queries against named competitors, and brand-name queries that test how AI engines describe your organisation. A representative set typically contains 30 to 80 queries for most B2B programmes.'
+  },
+  {
+    q: 'What should AI citations analytics reports include?',
+    a: 'A complete report should include: citation frequency rate, citation accuracy score, platform breakdown, share of voice relative to competitors, prompt coverage, trend data against prior periods, and a qualitative summary of how AI engines describe your brand. These metrics together tell the story of programme health and competitive position.'
+  },
+  {
+    q: 'How often should AI citation data be collected?',
+    a: 'Monthly as a minimum for ongoing tracking. Fortnightly for competitive categories. Weekly during active optimisation periods to detect the impact of specific changes. Infrequent spot-checks (quarterly or less) are insufficient to identify trends or act on them in time.'
+  },
+  {
+    q: 'Why do AI engines cite some sources and not others?',
+    a: 'AI engines cite sources based on content extractability, entity authority, topical depth, structural signals (schema, headings, FAQ patterns), and retrieval accessibility. Citations analytics helps identify which of these factors is limiting your citation performance for specific queries, enabling targeted remediation.'
+  }
+];
+
+const related = [
+  {
+    tag: 'NODE',
+    title: 'GEO Metrics: Measuring AI Search Performance',
+    excerpt: 'The full framework for measuring citation frequency, accuracy, share of voice, and prompt coverage across all major AI platforms.',
+    href: '/geo-metrics/'
+  },
+  {
+    tag: 'Guide',
+    title: 'GEO Monitoring: Tracking AI Citations',
+    excerpt: 'Tools, cadences, and workflows for ongoing AI citation monitoring across ChatGPT, Perplexity, Gemini, and Copilot.',
+    href: '/geo-monitoring/'
+  },
+  {
+    tag: 'Guide',
+    title: 'How to Measure GEO Performance',
+    excerpt: 'Step-by-step methodology for setting baselines, tracking leading indicators, and reporting GEO programme progress.',
+    href: '/how-to-measure-geo/'
+  }
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/ai-citations-analytics/" ogType="article">
+
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-metrics/" class="transition hover:text-[var(--accent)]">GEO Metrics</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">AI Citations Analytics</li>
+    </ol>
+  </nav>
+
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Analytics</span>
+        <span class="font-mono text-xs text-ink-300">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">10 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        AI Citations Analytics
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">AI citations analytics is the measurement practice that tells you whether your GEO programme is working — and, critically, why.</strong> Without a structured approach to tracking citation presence, accuracy, and competitive position across AI platforms, you are optimising blind. This guide covers how to build a citations analytics practice from scratch: what to measure, how to collect data, which tools to use, and how to report results in a way that drives action.
+      </p>
+    </div>
+  </section>
+
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" id="toc-nav">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <div>
+
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>AI citations analytics requires a defined query set, consistent collection cadence, and six metrics that together tell the full story of citation performance.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Citation accuracy is as important as citation frequency — a high volume of inaccurate citations actively damages brand positioning in AI answers.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Each AI platform must be tracked separately: citation performance on Perplexity and on Google AI Overviews are driven by different factors and require different responses.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Share of voice against named competitors is more actionable than absolute citation frequency — it reveals whether your programme is keeping pace with the market.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Monthly collection is the minimum viable cadence; weekly tracking during active optimisation phases gives faster feedback on content and entity changes.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prose-dark">
+        <h2 id="what-is-citations-analytics" class="anchor-top">What Is AI Citations Analytics</h2>
+        <p>
+          <strong>AI citations analytics is the systematic discipline of tracking, analysing, and acting on data about how your brand appears in AI-generated answers across multiple platforms.</strong> It is the measurement layer of a <a href="/generative-engine-optimisation/">generative engine optimisation</a> programme — the practice that converts GEO activity into observable, reportable evidence of performance.
+        </p>
+        <p>
+          The distinction between citation analytics and simple citation monitoring is important. Monitoring is the act of checking whether you are cited. Analytics is the practice of understanding why you are (or are not) cited, how your citation profile is changing over time, how you compare to competitors, and which content and entity investments are driving the most citation improvement. A monitoring programme tells you what is happening; an analytics practice tells you what to do about it.
+        </p>
+        <p>
+          The <a href="/geo-metrics/">GEO metrics</a> framework provides the strategic context for citation analytics: it defines which metrics matter and why. This page focuses on the operational practice — how to set up the data collection, analysis, and reporting workflows that make those metrics actionable. For the tools and cadences specifically, the <a href="/geo-monitoring/">GEO monitoring guide</a> covers implementation in detail.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="building-the-query-set" class="anchor-top">Building Your Query Set</h2>
+        <p>
+          <strong>The query set is the foundation of AI citations analytics — every metric is only as meaningful as the queries used to generate it.</strong> A poorly constructed query set produces data that is unrepresentative of your actual citation exposure, leading to misallocated optimisation effort.
+        </p>
+        <p>
+          A well-constructed query set for most B2B programmes contains three types of queries. Commercial-intent queries test whether your brand appears when users are evaluating solutions — these are the citations with the highest commercial value. Informational queries test whether your brand is cited as a credible expert source on topics where your content should be authoritative. Competitive queries test how AI engines position your brand relative to named competitors — asking directly for comparisons or recommendations between you and specific rivals.
+        </p>
+        <p>
+          Query construction should reflect how users actually phrase requests to AI engines, which differs from how they phrase web searches. AI queries tend to be more conversational, more specific, and more likely to include context about the user's situation. "What is the best tool for X?" and "I need to [achieve outcome], what should I use?" are representative AI query patterns. Optimising your query set to match these phrasings produces more representative citation data than repurposing keyword research from traditional SEO.
+        </p>
+        <p>
+          Review the query set quarterly. As your target market's AI search behaviour evolves and as you add new products or service areas, the query set should expand accordingly. Queries that consistently show zero citation activity after six months of optimisation effort should be reviewed — they may be outside the citation reach of your current authority level, or they may indicate a content gap that has not yet been addressed.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="collection-methodology" class="anchor-top">Collection Methodology</h2>
+        <p>
+          <strong>Consistent collection methodology is what turns citation data into trend data — and trend data is what drives programme decisions.</strong> A one-off citation audit tells you where you are. Monthly collection over twelve months tells you whether you are improving, stagnating, or declining relative to competitors and platform changes.
+        </p>
+        <p>
+          Each collection run should test every query in the set against every monitored platform, in consistent conditions. Vary the query phrasing slightly across runs to reduce the risk of artificially stable results that reflect cached or repeated responses rather than live citation behaviour. Record not just whether your brand appears, but what the AI says about it — the accuracy and framing of citations matter as much as their presence.
+        </p>
+        <p>
+          Platforms respond differently to the same query depending on interface (web, API, mobile) and query context. Establish a standard collection environment — using the API or the web interface consistently for each platform — and document it. If you change collection method, flag the change in your data to avoid misattributing trend changes to programme activity when they may reflect methodology variation.
+        </p>
+        <p>
+          For qualitative citation content, record the exact text of the AI response containing your brand mention, not just a binary present/absent score. This text becomes your source material for accuracy analysis, brand description monitoring, and competitive framing assessment. It is also the evidence base for arguing for specific content changes — "the AI describes us as [X] but we want to be described as [Y]" is a much stronger brief for a content writer than "we need more citations".
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="what-to-measure" class="anchor-top">What to Measure: The Six Citation Metrics</h2>
+        <p>
+          <strong>Six metrics together provide a complete picture of AI citation performance — tracking fewer than all six leaves systematic blind spots that allow preventable problems to go undetected.</strong>
+        </p>
+      </div>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        {metricsToTrack.map(m => (
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">{m.metric}</h3>
+            <p class="mt-2 text-sm text-ink-300"><strong class="text-white">Definition:</strong> {m.definition}</p>
+            <p class="mt-2 text-sm text-ink-300"><strong class="text-white">Use case:</strong> {m.usecase}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="tools-and-platforms" class="anchor-top">Tools and Platforms</h2>
+        <p>
+          <strong>AI citations analytics can be conducted at any level of tooling investment — from free manual testing to specialist platforms — with the choice determined by query set size, team capacity, and required reporting frequency.</strong> The following table maps the four main tool categories to their strengths and limitations.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Tool Category</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Examples</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Strengths</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Limitations</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[var(--line)]">
+            {toolTypes.map(row => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class="px-4 py-3 font-semibold text-white">{row.category}</td>
+                <td class="px-4 py-3 text-ink-300">{row.examples}</td>
+                <td class="px-4 py-3 text-ink-300">{row.strengths}</td>
+                <td class="px-4 py-3 text-ink-300">{row.limitations}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          For most programmes, a combination of a dedicated monitoring platform for automated frequency tracking and manual testing for accuracy and qualitative analysis produces the best coverage. The dedicated platform handles the scale of monthly query testing; manual investigation handles the depth of understanding why specific citations are or are not appearing.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="reporting-framework" class="anchor-top">Reporting Framework</h2>
+        <p>
+          <strong>An AI citations analytics report should answer three questions: where are we, where are we trending, and what actions are indicated?</strong> Reports that answer only the first question describe performance without driving decisions. Reports that include all three questions create accountability and focus.
+        </p>
+
+        <p>
+          A monthly citations analytics report for most programmes should include the following components. A headline scorecard covering citation frequency rate, citation accuracy score, and prompt coverage — these three metrics in a simple table with prior-period comparisons tell the core story in under thirty seconds. A platform breakdown showing citation performance per platform, highlighting where performance has changed significantly and whether those changes correlate with known platform updates or your own content activity.
+        </p>
+        <p>
+          A competitive share-of-voice table showing your position relative to two or three named competitors for commercial-intent queries. This is often the most politically impactful element of an executive report — finance and leadership teams respond more viscerally to competitive position than to absolute metrics. A qualitative citation review covering a sample of recent citations: how AI engines are framing your brand, whether accuracy has improved or deteriorated, and any new patterns in how you are being positioned relative to competitors.
+        </p>
+        <p>
+          Finally, an action list: the three to five content, entity, or technical changes indicated by the data, ranked by expected citation impact. This section converts the analytics into a programme backlog — it closes the loop between measurement and optimisation that makes citations analytics a management tool rather than a reporting exercise. Connect this to your full GEO measurement approach via the <a href="/how-to-measure-geo/">how to measure GEO performance</a> guide.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="relative border-t hair mt-12 overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Get Your AI Citations Baseline</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        We run a structured citation audit across all major AI platforms, covering your target query set, competitor share of voice, and citation accuracy. It is the measurement foundation every GEO programme needs.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request a citations audit</a>
+        <a href="/geo-metrics/" class="btn btn-ghost">Explore GEO metrics</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const faqBtns = document.querySelectorAll('#faq-accordion button');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+
+    const tocLinks = document.querySelectorAll('#toc-nav a');
+    const headings = Array.from(
+      document.querySelectorAll('h2[id], h3[id]')
+    ) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(link => {
+              link.classList.remove('text-[var(--accent)]');
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.classList.add('text-[var(--accent)]');
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+
+    headings.forEach(h => observer.observe(h));
+  </script>
+
+</Base>

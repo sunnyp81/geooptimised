@@ -1,8 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const title = 'GEO Services: What a Generative Engine Optimisation Agency Delivers';
-const description = 'Explore the full scope of generative engine optimisation services: AI visibility audits, entity optimisation, structured data, LLM citation strategy, and ongoing monitoring.';
+const title = 'GEO Services — Generative Engine Optimisation Agency';
+const description = 'Full-scope generative engine optimisation services: AI visibility audits, entity optimisation, structured data, LLM citation strategy, and ongoing monitoring.';
 
 const schema = [
   {
@@ -10,11 +10,7 @@ const schema = [
     "@type": "Service",
     "name": "Generative Engine Optimisation Services",
     "serviceType": "Generative Engine Optimisation",
-    "provider": {
-      "@type": "Organization",
-      "name": "GEOoptimised",
-      "url": "https://geooptimised.com"
-    },
+    "provider": { "@id": "https://geooptimised.com/#organization" },
     "description": "Comprehensive generative engine optimisation services that position brands for citation and visibility across AI-powered search platforms including ChatGPT, Perplexity, Gemini, and Copilot.",
     "areaServed": {
       "@type": "Country",
@@ -35,8 +31,60 @@ const schema = [
       {
         "@type": "ListItem",
         "position": 2,
+        "name": "Generative Engine Optimisation",
+        "item": "https://geooptimised.com/generative-engine-optimisation/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
         "name": "GEO Services",
         "item": "https://geooptimised.com/geo-services/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is included in a GEO audit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A GEO audit maps your current AI visibility across all major platforms (ChatGPT, Perplexity, Gemini, Copilot, Claude), analyses competitor citations, assesses entity presence, reviews structured data, and produces a prioritised action plan. It typically takes two to three weeks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long until I see results from GEO services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most businesses see measurable changes in AI citation frequency within eight to twelve weeks of Phase 2 completion. Full competitive positioning typically takes four to six months, depending on your starting point and competitive landscape."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I still need SEO if I invest in GEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. GEO and SEO are complementary. A strong SEO foundation makes GEO more effective, and GEO insights often improve SEO performance. The disciplines share DNA but address different problems with different methods."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much do GEO services cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "One-off audits typically range from GBP 2,000 to GBP 5,000. Ongoing retainers run GBP 2,000 to GBP 8,000 per month for continuous optimisation, monitoring, and content work. Enterprise programmes can exceed GBP 10,000 per month."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which AI platforms do you optimise for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We optimise for ChatGPT, Perplexity, Google Gemini, Microsoft Copilot, Claude, Google AI Overviews, and any sector-specific AI tools relevant to your industry. Each platform has different retrieval and citation behaviour."
+        }
       }
     ]
   }
@@ -106,11 +154,13 @@ const relatedHubs = [
 <Base title={title} description={description} schema={schema} ogType="website">
 
   <!-- Breadcrumb -->
-  <nav aria-label="Breadcrumb" class="container-wide pt-28">
-    <ol class="flex items-center gap-2 font-mono text-xs text-ink-400">
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex items-center gap-2 font-mono text-xs text-ink-300">
       <li><a href="/" class="hover:text-[var(--accent)] transition-colors">Home</a></li>
       <li aria-hidden="true" class="text-ink-600">/</li>
-      <li class="text-ink-200">GEO Services</li>
+      <li><a href="/generative-engine-optimisation/" class="hover:text-[var(--accent)] transition-colors">GEO</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">GEO Services</li>
     </ol>
   </nav>
 
@@ -136,19 +186,19 @@ const relatedHubs = [
           <div class="mt-4 grid grid-cols-2 gap-6">
             <div>
               <p class="font-display text-3xl font-bold text-[var(--accent)]">8</p>
-              <p class="mt-1 text-sm text-ink-400">Core service areas</p>
+              <p class="mt-1 text-sm text-ink-300">Core service areas</p>
             </div>
             <div>
               <p class="font-display text-3xl font-bold text-[var(--accent)]">6+</p>
-              <p class="mt-1 text-sm text-ink-400">AI platforms covered</p>
+              <p class="mt-1 text-sm text-ink-300">AI platforms covered</p>
             </div>
             <div>
               <p class="font-display text-3xl font-bold text-[var(--accent)]">8-12</p>
-              <p class="mt-1 text-sm text-ink-400">Weeks to first results</p>
+              <p class="mt-1 text-sm text-ink-300">Weeks to first results</p>
             </div>
             <div>
               <p class="font-display text-3xl font-bold text-[var(--accent)]">4</p>
-              <p class="mt-1 text-sm text-ink-400">Engagement phases</p>
+              <p class="mt-1 text-sm text-ink-300">Engagement phases</p>
             </div>
           </div>
         </div>
@@ -250,7 +300,7 @@ const relatedHubs = [
       <div id="monitoring" class="anchor-top">
         <h2>7. Monitoring and Reporting</h2>
         <p>You cannot optimise what you do not measure. GEO monitoring tracks your brand's citation frequency, sentiment, accuracy, and competitive position across AI platforms over time. This is fundamentally different from traditional rank tracking, because there are no fixed positions to monitor. Instead, the metrics focus on presence, prominence, and the quality of how your brand is represented.</p>
-        <p>Reporting typically includes citation tracking (how often your brand appears in AI answers for target queries), source attribution analysis (which of your pages or third-party mentions are being cited), competitive benchmarking (how your AI visibility compares to key competitors), and sentiment monitoring (whether AI models describe your brand accurately and favourably).</p>
+        <p>Reporting typically includes citation tracking (how often your brand appears in AI answers for target queries), source attribution analysis (which of your pages or third-party mentions are being cited), competitive benchmarking (how your AI visibility compares to key competitors), and sentiment monitoring (whether AI models describe your brand accurately and favourably). For a breakdown of the platforms and tools used, see our <a href="/geo-tools/">GEO tools guide</a>.</p>
         <p>This data informs every iteration of the strategy. Without it, you are flying blind in a channel that changes faster than any other in digital marketing.</p>
       </div>
 
@@ -339,7 +389,7 @@ const relatedHubs = [
             </tr>
             <tr class="border-t border-[var(--line)]">
               <td class="px-6 py-4 font-medium text-ink-100">Typical pricing</td>
-              <td class="px-6 py-4 text-ink-400">GBP 500 - 5,000/mo</td>
+              <td class="px-6 py-4 text-ink-300">GBP 500 - 5,000/mo</td>
               <td class="px-6 py-4 font-medium text-[var(--accent)]">GBP 2,000 - 10,000+/mo</td>
             </tr>
           </tbody>
@@ -349,7 +399,7 @@ const relatedHubs = [
 
     <div class="prose-dark mt-10 max-w-3xl">
       <p>The most significant practical difference is competition density. In traditional search, ten brands share the first page. In a generative AI response, typically one to three sources are cited. The bar for inclusion is higher, but the reward for clearing it is disproportionately large. Being the cited source in an AI answer is closer to a featured snippet than a position-seven ranking.</p>
-      <p>Businesses that treat GEO as a bolt-on to existing SEO usually underperform. The disciplines share DNA, but the execution differs enough that specialist expertise matters. The best outcomes come from teams that understand both and can coordinate them, which is why <a href="/aeo-agency/">answer engine optimisation</a> and GEO are increasingly delivered together as a unified visibility strategy.</p>
+      <p>Businesses that treat GEO as a bolt-on to existing SEO usually underperform. The disciplines share DNA, but the execution differs enough that specialist expertise matters. For a detailed breakdown, see our <a href="/geo-vs-seo/">GEO vs SEO comparison</a>. The best outcomes come from teams that understand both disciplines and coordinate them — which is why <a href="/answer-engine-optimisation/">answer engine optimisation</a> and GEO are increasingly delivered together as a unified visibility strategy.</p>
     </div>
   </section>
 
@@ -423,7 +473,7 @@ const relatedHubs = [
     </div>
 
     <p class="mt-10 max-w-3xl text-ink-300 leading-relaxed">
-      Most businesses begin to see measurable changes in AI citation frequency within eight to twelve weeks of Phase 2 completion. Full competitive positioning typically takes four to six months, depending on the starting point and the intensity of the competitive landscape. Patience and consistency matter more than speed.
+      Most businesses begin to see measurable changes in AI citation frequency within eight to twelve weeks of Phase 2 completion. Full competitive positioning typically takes four to six months, depending on the starting point and the intensity of the competitive landscape. Patience and consistency matter more than speed. For the underlying methodology and 90-day planning structure, see our <a href="/geo-strategy/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO strategy framework</a>.
     </p>
   </section>
 
@@ -479,7 +529,7 @@ const relatedHubs = [
       {relatedHubs.map(hub => (
         <a href={hub.href} class="card card-hover block p-6">
           <h3 class="font-display text-lg font-semibold text-ink-50">{hub.title}</h3>
-          <p class="mt-2 text-sm text-ink-400 leading-relaxed">{hub.desc}</p>
+          <p class="mt-2 text-sm text-ink-300 leading-relaxed">{hub.desc}</p>
           <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">
             Read more <span aria-hidden="true">&rarr;</span>
           </span>

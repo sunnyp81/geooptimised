@@ -1,0 +1,537 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'AI Optimisation Is the New SEO | GEOoptimised';
+const description = 'How AI optimization is the new SEO: the shift from ranking to citation, why blue-link thinking is becoming obsolete, and what marketers must do now.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'AI Optimisation Is the New SEO',
+  description: 'The shift from ranking to citation: why AI optimization is the new SEO, how the mechanics of search have fundamentally changed, and what brands must do to remain visible.',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  inLanguage: 'en-GB',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/ai-optimisation-is-the-new-seo/',
+  },
+  image: 'https://geooptimised.com/og-image.png',
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is AI optimization really replacing SEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'AI optimization is not eliminating SEO — it is extending it into a new domain. Traditional SEO remains necessary for maintaining the technical foundations and topical authority that AI retrieval systems rely on. But AI optimization adds a distinct set of requirements: entity clarity, structured data depth, quotable content patterns, and cross-model citation strategy. Brands that treat SEO as sufficient for AI search visibility will lose ground to those who invest in both.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How is AI optimization different from traditional SEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Traditional SEO optimises for ranking position within a list of results, measured by click-through rate and organic traffic. AI optimization — or GEO — optimises for citation within a generated answer, measured by citation frequency, accuracy, and AI share of voice. SEO competes for one of ten positions on a page; GEO competes for one of one to three citations in an AI response. The stakes and the mechanics are different.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is GEO and how does it relate to AI optimization?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Generative Engine Optimisation (GEO) is the formal discipline of optimising for AI-generated search results. It is the practitioner framework for what the market loosely calls "AI optimization" or "AI SEO." GEO covers entity authority, structured data, content architecture for citability, llms.txt configuration, cross-model visibility, and citation measurement. It is both the strategy and the methodology for getting cited by AI search engines.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which AI platforms should I optimise for?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The priority platforms for AI optimization are Google AI Overviews (the highest volume AI search surface), Perplexity (the fastest-growing dedicated AI search engine), Microsoft Copilot (deeply integrated into Windows and Microsoft 365), and ChatGPT with web browsing (the most widely recognised AI assistant). Each platform uses different retrieval mechanisms, which is why a cross-model GEO strategy is more effective than optimising for a single platform.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I know if AI is affecting my organic traffic?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The clearest signal is declining organic click-through rates despite stable or improved rankings — a phenomenon caused by AI Overviews and featured snippets absorbing queries that previously generated clicks. You can also check Google Search Console for queries where your impressions are high but clicks are low, which often indicates an AI answer is satisfying the query before a click occurs. Monitoring referral traffic from AI platforms (chatgpt.com, perplexity.ai, copilot.microsoft.com) provides a positive signal of AI-driven visits.',
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+    { '@type': 'ListItem', position: 3, name: 'AI Optimisation Is the New SEO', item: 'https://geooptimised.com/ai-optimisation-is-the-new-seo/' },
+  ],
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'the-shift', label: 'The Fundamental Shift' },
+  { id: 'what-changed', label: 'What Actually Changed' },
+  { id: 'seo-not-dead', label: 'SEO Is Not Dead — But It Is Insufficient' },
+  { id: 'new-rules', label: 'The New Rules of AI Visibility' },
+  { id: 'comparison', label: 'AI Optimization vs Traditional SEO' },
+  { id: 'what-brands-must-do', label: 'What Brands Must Do Now' },
+  { id: 'faq', label: 'FAQ' },
+];
+
+const faqs = [
+  {
+    q: 'Is AI optimization really replacing SEO?',
+    a: 'AI optimization is not eliminating SEO — it is extending it into a new domain. Traditional SEO remains necessary for maintaining the technical foundations and topical authority that AI retrieval systems rely on. But AI optimization adds a distinct set of requirements: entity clarity, structured data depth, quotable content patterns, and cross-model citation strategy. Brands that treat SEO as sufficient for AI search visibility will lose ground to those who invest in both.',
+  },
+  {
+    q: 'How is AI optimization different from traditional SEO?',
+    a: 'Traditional SEO optimises for ranking position within a list of results, measured by click-through rate and organic traffic. AI optimization — or GEO — optimises for citation within a generated answer, measured by citation frequency, accuracy, and AI share of voice. SEO competes for one of ten positions on a page; GEO competes for one of one to three citations in an AI response. The stakes and the mechanics are different.',
+  },
+  {
+    q: 'What is GEO and how does it relate to AI optimization?',
+    a: 'Generative Engine Optimisation (GEO) is the formal discipline of optimising for AI-generated search results. It is the practitioner framework for what the market loosely calls "AI optimization" or "AI SEO." GEO covers entity authority, structured data, content architecture for citability, llms.txt configuration, cross-model visibility, and citation measurement. It is both the strategy and the methodology for getting cited by AI search engines.',
+  },
+  {
+    q: 'Which AI platforms should I optimise for?',
+    a: 'The priority platforms for AI optimization are Google AI Overviews (the highest volume AI search surface), Perplexity (the fastest-growing dedicated AI search engine), Microsoft Copilot (deeply integrated into Windows and Microsoft 365), and ChatGPT with web browsing (the most widely recognised AI assistant). Each platform uses different retrieval mechanisms, which is why a cross-model GEO strategy is more effective than optimising for a single platform.',
+  },
+  {
+    q: 'How do I know if AI is affecting my organic traffic?',
+    a: 'The clearest signal is declining organic click-through rates despite stable or improved rankings — a phenomenon caused by AI Overviews and featured snippets absorbing queries that previously generated clicks. You can also check Google Search Console for queries where your impressions are high but clicks are low, which often indicates an AI answer is satisfying the query before a click occurs. Monitoring referral traffic from AI platforms (chatgpt.com, perplexity.ai, copilot.microsoft.com) provides a positive signal of AI-driven visits.',
+  },
+];
+
+const related = [
+  {
+    tag: 'Root',
+    title: 'Generative Engine Optimisation: Complete Guide',
+    excerpt: 'The full GEO pillar — what it is, how it works, the 7-step framework, and who needs it.',
+    href: '/generative-engine-optimisation/',
+  },
+  {
+    tag: 'Seed',
+    title: 'GEO vs SEO: What Is the Difference?',
+    excerpt: 'A detailed comparison of how GEO and traditional SEO overlap, diverge, and complement each other.',
+    href: '/geo-vs-seo/',
+  },
+  {
+    tag: 'Seed',
+    title: 'How GEO Works',
+    excerpt: 'The mechanics of retrieval-augmented generation and how to align your content with AI retrieval.',
+    href: '/how-geo-works/',
+  },
+  {
+    tag: 'Node',
+    title: 'GEO Services',
+    excerpt: 'End-to-end generative engine optimisation services: audit, implementation, and ongoing monitoring.',
+    href: '/geo-services/',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/ai-optimisation-is-the-new-seo/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">Generative Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">AI Optimisation Is the New SEO</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Opinion &amp; Analysis</span>
+        <span class="font-mono text-xs text-ink-300">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">12 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        AI Optimisation Is the New SEO
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        Search has moved from ranking to citation. The brands winning in AI search are not necessarily the ones with the highest PageRank — they are the ones structured to be quoted. Here is the case for why AI optimization is the defining shift in search marketing, and what it demands from practitioners.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" aria-label="Table of contents">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>AI search has moved the competitive battleground from the results page to the generated answer — ranking is no longer the end goal.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>SEO is a necessary prerequisite for AI visibility, not a substitute for it. The two disciplines are complementary, not competing.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>Entity authority, structured data, and quotable content patterns are the new ranking factors for AI search citation.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>The window for early-mover advantage is open now. GEO authority, like domain authority, compounds over time.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1: The Fundamental Shift -->
+      <section id="the-shift" class="anchor-top prose-dark mb-16">
+        <h2>The Fundamental Shift: From Ranking to Citation</h2>
+
+        <p>
+          <strong>The search paradigm that defined digital marketing for two decades — optimise to rank, rank to be found — is being replaced by a different model: optimise to be cited, be cited to be known.</strong>
+        </p>
+
+        <p>
+          This is not a gradual evolution. It is a categorical change in how information reaches people. When a user types a query into Google in 2026, a substantial proportion of the results page is now occupied by an AI-generated answer that synthesises information from multiple sources before the user has read a single blue link. When they ask ChatGPT, Perplexity, or Microsoft Copilot a research question, there is no results page at all — only an answer, with one to three sources named.
+        </p>
+
+        <p>
+          The implications for search marketing are profound. A brand that ranks third on page one of Google for a competitive query may still be invisible in the AI-generated answer that appears above those results. A brand with a modest backlink profile but exceptional entity clarity and content structure may be cited in every major AI platform for its target queries. Rank and citation are correlated, but they are not the same thing, and the gap between them is widening.
+        </p>
+
+        <p>
+          This is the claim at the heart of AI optimization: getting cited by AI systems requires a distinct strategy — one that the traditional SEO playbook does not fully address. The discipline that addresses it is <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Generative Engine Optimisation (GEO)</a>.
+        </p>
+      </section>
+
+      <!-- Section 2: What Actually Changed -->
+      <section id="what-changed" class="anchor-top prose-dark mb-16">
+        <h2>What Actually Changed in Search</h2>
+
+        <p>
+          <strong>Three technical developments, arriving in close succession, have permanently altered the mechanics of search visibility.</strong>
+        </p>
+
+        <h3>Retrieval-Augmented Generation at Scale</h3>
+        <p>
+          Modern AI search systems do not simply retrieve a list of documents ranked by relevance — they synthesise those documents into a single coherent response. This process, known as retrieval-augmented generation (RAG), means the intermediary step of "user clicks link, user reads page" has been removed for a growing proportion of queries. The AI reads the pages and delivers the distilled answer. Your content is consumed — but the user may never visit your site.
+        </p>
+
+        <p>
+          For brands, this changes the economics of content. The value is no longer only in clicks generated; it is also in the citation and attribution that shapes brand perception at the moment of answer delivery. Being named as the source in a synthesised response carries authority signals that accrue even without a page visit.
+        </p>
+
+        <h3>The Winner-Takes-Most Dynamic</h3>
+        <p>
+          Traditional search distributes attention across ten results on page one. AI search concentrates it in one to three cited sources. The competitive stakes are fundamentally different. In SEO, ranking fifth is suboptimal but not invisible. In AI search, if your brand is not among the cited sources, it does not exist for that query.
+        </p>
+
+        <p>
+          This concentration effect is most pronounced on commercial and research queries — precisely the queries that drive business outcomes. When a buyer asks an AI assistant "which project management tools are best for remote agencies?", the tools named in the response have already won the consideration set. The others are not competing — they are absent.
+        </p>
+
+        <h3>Cross-Platform Fragmentation</h3>
+        <p>
+          A decade ago, "search" meant Google. Today, meaningful search activity occurs across Google AI Overviews, Perplexity, ChatGPT, Copilot, Gemini, and increasingly within voice interfaces and embedded AI assistants. Each platform uses different retrieval mechanisms, different training data, and different citation preferences. A brand can be prominently cited on Perplexity and effectively invisible on Google AI Overviews, or vice versa.
+        </p>
+
+        <p>
+          This fragmentation creates a new requirement: cross-model visibility strategy. Understanding how to optimise for each platform — and which platforms matter most for your target audience — is a core competency of modern search marketing that did not exist five years ago.
+        </p>
+      </section>
+
+      <!-- Section 3: SEO Is Not Dead -->
+      <section id="seo-not-dead" class="anchor-top prose-dark mb-16">
+        <h2>SEO Is Not Dead — But It Is Insufficient</h2>
+
+        <p>
+          <strong>The assertion that "SEO is dead" is wrong, and it is counterproductive — a strong SEO foundation is a prerequisite for AI search visibility, not an obstacle to it.</strong>
+        </p>
+
+        <p>
+          AI retrieval systems do not operate in a vacuum. Google AI Overviews draw directly from pages that rank in Google's traditional index. Perplexity and ChatGPT use their own crawlers, but they weight authority signals that correlate heavily with SEO fundamentals: domain trust, backlink profiles, consistent topical depth, and technical crawlability. A site with poor SEO foundations will struggle in AI search, because AI systems will not retrieve pages they cannot efficiently crawl and process.
+        </p>
+
+        <p>
+          What SEO does not address is the layer above retrieval: the selection and citation layer. Even if an AI system retrieves your page, it does not automatically cite your brand in the response. It selects the passages and sources that best serve the user's query, based on clarity, authority, and extractability. A page optimised purely for keyword density and backlinks may rank well in traditional search yet fail to be cited in AI-generated answers — because its content is not structured for extraction.
+        </p>
+
+        <p>
+          The right mental model is one of stacked disciplines. SEO provides the technical and authority foundation. <a href="/geo-vs-seo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO builds on top of that foundation</a>, adding the content architecture, entity signals, and structured data that AI systems use to decide what to cite. Neither replaces the other. The brands that invest in both will outperform those invested in only one.
+        </p>
+      </section>
+
+      <!-- Comparison Table -->
+      <section id="comparison" class="anchor-top mb-16">
+        <div class="prose-dark mb-6">
+          <h2>AI Optimization vs Traditional SEO: A Direct Comparison</h2>
+          <p>
+            <strong>Understanding where traditional SEO ends and AI optimization begins requires comparing the two disciplines across their core dimensions.</strong>
+          </p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead>
+              <tr class="border-b border-[var(--line)]">
+                <th scope="col" class="px-5 py-3 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Dimension</th>
+                <th scope="col" class="px-5 py-3 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Traditional SEO</th>
+                <th scope="col" class="px-5 py-3 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">AI Optimization (GEO)</th>
+              </tr>
+            </thead>
+            <tbody class="text-ink-300">
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-ink-100">What you optimise for</td>
+                <td class="px-5 py-3">A position in a ranked list of results</td>
+                <td class="px-5 py-3">Citation within a generated answer</td>
+              </tr>
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-ink-100">Primary authority signal</td>
+                <td class="px-5 py-3">Backlinks and PageRank</td>
+                <td class="px-5 py-3">Entity authority across knowledge bases</td>
+              </tr>
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-ink-100">Content goal</td>
+                <td class="px-5 py-3">Comprehensive coverage of a keyword topic</td>
+                <td class="px-5 py-3">Declarative, extractable, quotable passages</td>
+              </tr>
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-ink-100">Technical layer</td>
+                <td class="px-5 py-3">Crawlability, Core Web Vitals, site architecture</td>
+                <td class="px-5 py-3">Structured data, entity markup, llms.txt</td>
+              </tr>
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-ink-100">Primary KPI</td>
+                <td class="px-5 py-3">Organic traffic and ranking position</td>
+                <td class="px-5 py-3">Citation frequency and AI share of voice</td>
+              </tr>
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-ink-100">Competition model</td>
+                <td class="px-5 py-3">Ten positions on page one</td>
+                <td class="px-5 py-3">One to three citations per AI answer</td>
+              </tr>
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-ink-100">Measurement tools</td>
+                <td class="px-5 py-3">Search Console, Ahrefs, SEMrush</td>
+                <td class="px-5 py-3">Citation trackers, AI auditing tools, prompt testing</td>
+              </tr>
+              <tr>
+                <td class="px-5 py-3 font-medium text-ink-100">Update cycle</td>
+                <td class="px-5 py-3">Quarterly algorithm updates</td>
+                <td class="px-5 py-3">Continuous model updates — sometimes weekly</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 4: New Rules -->
+      <section id="new-rules" class="anchor-top prose-dark mb-16">
+        <h2>The New Rules of AI Visibility</h2>
+
+        <p>
+          <strong>AI search systems cite content based on a different set of criteria than the signals that determine traditional organic rankings.</strong> Understanding these criteria is the foundation of effective AI optimization.
+        </p>
+
+        <h3>Rule 1: Entity Clarity Precedes Content Quality</h3>
+        <p>
+          Before an AI system can cite your brand, it must recognise your brand as a defined entity. Entity clarity means being consistently and accurately represented across the knowledge sources that large language models use as authority references: Wikipedia, Wikidata, Crunchbase, LinkedIn, industry directories, and major publications. A brand that exists only on its own website is effectively anonymous to AI models. Establishing entity presence across the knowledge ecosystem is the foundational step of AI optimization — and it is one that traditional SEO rarely addressed.
+        </p>
+
+        <h3>Rule 2: Declarative Statements Are the New Keywords</h3>
+        <p>
+          In traditional SEO, the keyword was the atomic unit of optimisation — the signal the content needed to contain to match a query. In AI search, the atomic unit is the declarative statement: a clear, confident, standalone sentence that defines or explains a concept. AI systems extract passages, not whole pages. A sentence like "Generative Engine Optimisation is the practice of structuring content and entity signals so that AI search engines cite your brand in generated responses" is far more extractable — and therefore citable — than a paragraph that circuitously covers the same territory.
+        </p>
+        <p>
+          Writing for AI citability means opening every major section with a bold, quotable statement and building the supporting detail around it. This is the opposite of how much SEO content is structured, which buries the definition in background and context before arriving at the point.
+        </p>
+
+        <h3>Rule 3: Structured Data Is Not Optional</h3>
+        <p>
+          JSON-LD schema markup has always been recommended for SEO but rarely been a make-or-break factor. For AI optimization, it is closer to essential infrastructure. Structured data communicates to AI retrieval systems exactly what your content represents, who produced it, what entities it references, and how its claims relate to each other. FAQPage schema explicitly marks up question-answer pairs as extractable content. Article schema with <code>inLanguage</code>, <code>dateModified</code>, and <code>author</code> properties signals recency and authority. Organisation schema with <code>sameAs</code> properties linking to authoritative entity references connects your brand to the knowledge graph that AI models rely on.
+        </p>
+
+        <h3>Rule 4: Original Data Creates Uncopyable Citations</h3>
+        <p>
+          When your content contains a unique data point — a statistic, a proprietary benchmark, an original survey finding — AI systems must cite you as the source because that information cannot be sourced elsewhere. Generic explanations of widely known concepts compete with hundreds of other sources. Original data creates a citation monopoly: the AI has no choice but to name you when it uses your number.
+        </p>
+        <p>
+          This is why the most AI-visible content is typically research-driven: studies, benchmarks, proprietary data analyses, and surveys that produce novel findings. If you have access to data your competitors do not, publishing it in a citable format is one of the highest-leverage investments in AI optimization available.
+        </p>
+      </section>
+
+      <!-- Section 5: What Brands Must Do Now -->
+      <section id="what-brands-must-do" class="anchor-top prose-dark mb-16">
+        <h2>What Brands Must Do Now</h2>
+
+        <p>
+          <strong>The window for establishing AI citation authority is open now, and the brands that act first will compound advantage over those that wait.</strong> GEO authority, like domain authority, is built incrementally and defensively — it takes time to establish and becomes progressively harder for competitors to displace.
+        </p>
+
+        <h3>Audit Your Current AI Visibility</h3>
+        <p>
+          Before investing in AI optimization, establish your baseline. Run your top twenty target queries across ChatGPT, Perplexity, Microsoft Copilot, and Google AI Overviews. Note which queries your brand appears in, which it does not, and which competitors are being cited instead. This audit reveals your actual competitive position in AI search — which is often strikingly different from your traditional SEO rankings.
+        </p>
+
+        <h3>Build Entity Authority Systematically</h3>
+        <p>
+          Identify the gaps in your entity presence and close them. If your brand is not on Wikipedia, assess whether the notability threshold is achievable through media coverage and citations. Ensure Wikidata, Crunchbase, and LinkedIn reflect accurate, consistent information about your brand. Build relationships with industry publications that AI systems treat as authority sources. Each new authoritative mention of your brand in a knowledge-graph-connected source strengthens your AI citation profile.
+        </p>
+
+        <h3>Restructure Content for Extraction</h3>
+        <p>
+          Audit your existing content through the lens of AI extractability. Does every major section begin with a clear declarative statement? Are FAQ sections backed by FAQPage schema? Do headings mirror the natural language questions users ask? Are statistics and specific claims clearly attributed? For most sites with established content, restructuring existing pages yields faster results than writing new ones — the topical authority is already there; the extraction-readiness is not.
+        </p>
+
+        <h3>Deploy Technical AI Infrastructure</h3>
+        <p>
+          Implement or audit your structured data for completeness and entity coherence. Deploy an <code>llms.txt</code> file that gives AI crawlers a curated index of your most authoritative content. Review your <code>robots.txt</code> to ensure AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended) have access to the content you want cited. These technical elements are the infrastructure layer of AI optimization — they do not guarantee citation, but their absence can prevent it.
+        </p>
+
+        <p>
+          For a structured introduction to the full methodology, see our guide to <a href="/how-geo-works/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how GEO works</a>. For a comparison of where your current SEO investment carries over and where it does not, see <a href="/geo-vs-seo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO vs SEO</a>. And for practical support implementing an AI optimization strategy, explore our <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services</a>.
+        </p>
+      </section>
+
+      <!-- FAQ Accordion -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-2">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t border-[var(--line)] mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <span class="eyebrow">Take Action</span>
+      <h2 class="mt-4 font-display text-3xl font-bold grad-text md:text-4xl">Start Building AI Citation Authority</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        GEOoptimised helps brands move from ranking in results to being cited in answers. Whether you need an initial AI visibility audit or an end-to-end GEO programme, we can help you understand your current position and build a strategy that compounds over time.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Get in touch</a>
+        <a href="/geo-services/" class="btn btn-ghost">View GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

@@ -1,22 +1,32 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const title = 'Contact GEOoptimised | Get a GEO Audit';
-const description = 'Get in touch with GEOoptimised for a free AI visibility assessment. Find out how your brand performs in ChatGPT, Perplexity, Gemini and Google AI Overviews.';
+const title = 'Contact GEOoptimised — Free AI Visibility Audit';
+const description = 'Request a free AI visibility audit from GEOoptimised. We assess your brand citation performance across ChatGPT, Perplexity, Gemini and Google AI Overviews, then show you exactly what to fix.';
 
 const schema = [
   {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "Contact GEOoptimised",
+    "name": "Contact GEOoptimised — Free AI Visibility Audit",
     "url": "https://geooptimised.com/contact/",
-    "description": "Contact GEOoptimised to start your Generative Engine Optimisation journey with a free AI visibility assessment.",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "GEOoptimised",
-      "url": "https://geooptimised.com",
-      "email": "hello@geooptimised.com"
-    }
+    "description": "Contact GEOoptimised to start your Generative Engine Optimisation journey with a free AI visibility assessment across ChatGPT, Perplexity, Gemini and Google AI Overviews.",
+    "mainEntity": { "@id": "https://geooptimised.com/#organization" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Free AI Visibility Audit",
+    "provider": { "@id": "https://geooptimised.com/#organization" },
+    "serviceType": "Generative Engine Optimisation Audit",
+    "description": "A no-obligation audit assessing how your brand is cited across ChatGPT, Perplexity, Gemini, Google AI Overviews and Microsoft Copilot, with a competitor benchmark and prioritised action plan.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "GBP",
+      "description": "Free initial AI visibility audit with no obligation"
+    },
+    "areaServed": "Worldwide"
   },
   {
     "@context": "https://schema.org",
@@ -50,7 +60,7 @@ const timeline = [
 
   <!-- Breadcrumb -->
   <nav aria-label="Breadcrumb" class="container-wide pt-8">
-    <ol class="flex items-center gap-1.5 text-sm text-ink-400">
+    <ol class="flex items-center gap-1.5 text-sm text-ink-300">
       <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
       <li aria-hidden="true">/</li>
       <li class="text-ink-200" aria-current="page">Contact</li>
@@ -67,11 +77,22 @@ const timeline = [
       <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-200">
         We start every engagement with a <strong class="text-white">free AI visibility assessment</strong>. We audit how your brand currently performs across ChatGPT, Perplexity, Gemini and Google AI Overviews — and show you exactly where the opportunities are. No commitment, no obligation. Just data.
       </p>
-      <p class="mt-3 text-ink-400">
+      <p class="mt-3 text-ink-300">
         You can also reach us directly at <a href="mailto:hello@geooptimised.com" class="text-[var(--accent)] border-b border-[var(--accent)]/35 hover:border-[var(--accent)] transition">hello@geooptimised.com</a>.
       </p>
     </div>
   </section>
+
+  <!-- Success message (shown after formsubmit redirect) -->
+  <div id="success-banner" class="hidden container-wide mb-8">
+    <div class="card p-6 border-[var(--accent)]/40 bg-[var(--accent)]/5 flex items-start gap-4" role="alert">
+      <svg aria-hidden="true" class="w-6 h-6 text-[var(--accent)] mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <div>
+        <p class="font-semibold text-white">Message sent — thank you.</p>
+        <p class="mt-1 text-sm text-ink-300">We will review your details and be in touch within one business day to confirm your audit is underway.</p>
+      </div>
+    </div>
+  </div>
 
   <!-- Form + Sidebar -->
   <section class="container-wide pb-20">
@@ -104,9 +125,9 @@ const timeline = [
           <fieldset>
             <legend class="block text-sm font-medium text-ink-200 mb-2">Primary focus</legend>
             <div class="flex flex-wrap gap-2" id="focus-group">
-              <button type="button" data-value="GEO" class="focus-btn btn btn-ghost text-sm px-4 py-2">GEO</button>
-              <button type="button" data-value="AEO" class="focus-btn btn btn-ghost text-sm px-4 py-2">AEO</button>
-              <button type="button" data-value="Both" class="focus-btn btn btn-ghost text-sm px-4 py-2">Both / Not sure</button>
+              <button type="button" data-value="GEO" aria-pressed="false" class="focus-btn btn btn-ghost text-sm px-4 py-2">GEO</button>
+              <button type="button" data-value="AEO" aria-pressed="false" class="focus-btn btn btn-ghost text-sm px-4 py-2">AEO</button>
+              <button type="button" data-value="Both" aria-pressed="false" class="focus-btn btn btn-ghost text-sm px-4 py-2">Both / Not sure</button>
             </div>
             <input type="hidden" name="focus" id="focus-input" value="" />
           </fieldset>
@@ -115,10 +136,10 @@ const timeline = [
           <fieldset>
             <legend class="block text-sm font-medium text-ink-200 mb-2">Monthly budget range</legend>
             <div class="flex flex-wrap gap-2" id="budget-group">
-              <button type="button" data-value="Under £1k" class="budget-btn btn btn-ghost text-sm px-4 py-2">Under &pound;1k</button>
-              <button type="button" data-value="£1k-3k" class="budget-btn btn btn-ghost text-sm px-4 py-2">&pound;1k-3k</button>
-              <button type="button" data-value="£3k-5k" class="budget-btn btn btn-ghost text-sm px-4 py-2">&pound;3k-5k</button>
-              <button type="button" data-value="£5k+" class="budget-btn btn btn-ghost text-sm px-4 py-2">&pound;5k+</button>
+              <button type="button" data-value="Under £1k" aria-pressed="false" class="budget-btn btn btn-ghost text-sm px-4 py-2">Under &pound;1k</button>
+              <button type="button" data-value="£1k-3k" aria-pressed="false" class="budget-btn btn btn-ghost text-sm px-4 py-2">&pound;1k-3k</button>
+              <button type="button" data-value="£3k-5k" aria-pressed="false" class="budget-btn btn btn-ghost text-sm px-4 py-2">&pound;3k-5k</button>
+              <button type="button" data-value="£5k+" aria-pressed="false" class="budget-btn btn btn-ghost text-sm px-4 py-2">&pound;5k+</button>
             </div>
             <input type="hidden" name="budget" id="budget-input" value="" />
           </fieldset>
@@ -172,20 +193,28 @@ const timeline = [
           </ol>
         </div>
 
-        <!-- Testimonial -->
+        <!-- What clients say -->
         <div class="card p-6">
-          <div class="flex gap-0.5 text-[var(--accent)]" aria-label="5 out of 5 stars">
-            {[1,2,3,4,5].map(() => (
-              <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            ))}
+          <span class="eyebrow">What to expect</span>
+          <p class="mt-4 text-sm text-ink-200 leading-relaxed">
+            <strong class="text-white">Most brands are surprised by what the audit reveals.</strong> Many are invisible across AI platforms despite strong Google rankings. The audit typically uncovers both quick-win content fixes and longer-term structural opportunities.
+          </p>
+          <p class="mt-3 text-sm text-ink-300 leading-relaxed">
+            The strategy call on Day 5 walks through the findings in plain language — no jargon, just a prioritised list of what to fix and why.
+          </p>
+          <div class="mt-4 pt-4 border-t border-[var(--line)]">
+            <p class="text-xs text-ink-300">Questions first? Email us at <a href="mailto:hello@geooptimised.com" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">hello@geooptimised.com</a></p>
           </div>
-          <blockquote class="mt-3 text-sm text-ink-200 leading-relaxed italic">
-            "Within two weeks of the audit we had a clear picture of exactly where we were invisible to AI search. The action plan paid for itself in the first month."
-          </blockquote>
-          <p class="mt-3 text-xs text-ink-400">Marketing Director, B2B SaaS</p>
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- Internal links -->
+  <section class="container-wide pb-16">
+    <div class="border-t border-[var(--line)] pt-10 text-center text-sm text-ink-300">
+      <p>Not ready to submit? Learn more about <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">what GEO is</a>, explore our <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services</a>, or <a href="/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">return to the homepage</a>.</p>
     </div>
   </section>
 
@@ -199,16 +228,27 @@ const timeline = [
             b.style.background = '';
             b.style.borderColor = '';
             b.style.color = '';
+            b.setAttribute('aria-pressed', 'false');
           });
           btn.style.background = 'var(--accent)';
           btn.style.borderColor = 'var(--accent)';
           btn.style.color = '#00231F';
+          btn.setAttribute('aria-pressed', 'true');
           input.value = btn.dataset.value;
         });
       });
     }
     initToggleGroup('focus-group', 'focus-input');
     initToggleGroup('budget-group', 'budget-input');
+
+    // Show success confirmation when redirected back with ?submitted=true
+    if (new URLSearchParams(window.location.search).get('submitted') === 'true') {
+      const banner = document.getElementById('success-banner');
+      if (banner) {
+        banner.classList.remove('hidden');
+        banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
   </script>
 
 </Base>

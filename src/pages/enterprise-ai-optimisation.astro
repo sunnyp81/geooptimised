@@ -1,0 +1,444 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Enterprise AI Optimisation Services | GEOoptimised';
+const description = 'Enterprise AI optimisation for large organisations: multi-brand GEO, governance frameworks, stakeholder alignment, and scaled AI visibility programmes.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Enterprise AI Optimisation",
+    "serviceType": "Enterprise Generative Engine Optimisation",
+    "provider": {
+      "@id": "https://geooptimised.com/#organization"
+    },
+    "description": "Generative engine optimisation programmes designed for large organisations: covering multi-brand AI visibility, governance frameworks, cross-team coordination, and scaled content strategies for enterprise AI optimization needs.",
+    "url": "https://geooptimised.com/enterprise-ai-optimisation/",
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Kingdom"
+    },
+    "image": "https://geooptimised.com/og-image.png",
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "inLanguage": "en-GB"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What makes enterprise AI optimisation different from standard GEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Enterprise AI optimisation differs from standard GEO in scale, governance complexity, and stakeholder count. Large organisations typically operate multiple brands or product lines, each requiring its own entity strategy and content architecture. They have approval workflows, legal review processes, and multiple teams — content, SEO, brand, technical — whose work must be coordinated. And they face higher reputational risk from inaccurate AI citations, making monitoring and accuracy management more critical."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you manage GEO across multiple brands?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Multi-brand GEO requires a clear entity architecture: each brand must be established as a distinct entity with its own knowledge-graph presence, structured data, and citation footprint, while also being linked accurately to the parent organisation. We build entity maps that define these relationships, then execute brand-by-brand optimisation in a prioritised sequence based on AI visibility gap size and commercial importance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What governance structures does an enterprise GEO programme need?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Effective enterprise GEO governance requires a defined owner for AI visibility strategy (typically within SEO, content, or digital marketing), a cross-functional steering group that includes legal, brand, and technical stakeholders, documented content standards for LLM-citability, a monitoring framework with clear escalation paths for inaccurate AI citations, and a change-management process for adapting to AI platform updates."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does an enterprise AI optimisation programme take to show results?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Enterprise programmes typically take longer to reach initial results than SME engagements, due to approval processes, content volume, and multi-brand complexity. Most large organisations see measurable AI citation improvements within four to six months of programme launch, with full competitive positioning across all priority brands taking nine to eighteen months depending on starting point and scope."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with enterprise in-house SEO teams?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Many enterprise engagements involve working alongside an existing in-house SEO team and, in some cases, an incumbent SEO agency. We provide specialist GEO direction and programme management while your existing teams handle SEO fundamentals. Clear RACI documentation prevents duplication and ensures GEO and SEO strategies reinforce each other."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does enterprise AI optimisation cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Enterprise programmes are scoped individually based on brand count, content volume, and the degree of governance and reporting required. Investment is typically higher than standard GEO retainers to reflect programme management, multi-brand audit scope, and cross-team coordination. Contact GEOoptimised to discuss your requirements and receive an indicative scope and cost."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://geooptimised.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "GEO Services",
+        "item": "https://geooptimised.com/geo-services/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Enterprise AI Optimisation",
+        "item": "https://geooptimised.com/enterprise-ai-optimisation/"
+      }
+    ]
+  }
+];
+
+const challenges = [
+  {
+    title: 'Multi-Brand Entity Architecture',
+    body: 'Large organisations operate multiple brands, divisions, or product lines, each of which must be established as a distinct entity in knowledge sources that AI models rely on. Without a coherent entity architecture, brands cannibalise each other\'s AI citations or are conflated by models that cannot distinguish between them.',
+  },
+  {
+    title: 'Content at Scale',
+    body: 'Enterprise content estates are large, often poorly audited, and maintained by teams with inconsistent knowledge of what AI-citability requires. Prioritising, restructuring, and governing content across hundreds or thousands of pages demands a programme-level approach, not page-by-page tactics.',
+  },
+  {
+    title: 'Governance and Approval Workflows',
+    body: 'Content in large organisations passes through legal review, brand approval, and compliance checks before publication. GEO strategy must be designed to work within these constraints — producing content that meets citability requirements without creating unrealistic production timelines.',
+  },
+  {
+    title: 'Stakeholder Alignment',
+    body: 'AI visibility strategy touches SEO, content, brand, PR, technical, and legal teams simultaneously. Without a clear governance structure and a shared understanding of objectives, priorities conflict and programme velocity stalls.',
+  },
+  {
+    title: 'Reputational Risk Management',
+    body: 'Enterprise brands have more to lose from AI inaccuracy than smaller businesses. If a major AI model describes your brand incorrectly, at scale and across millions of queries, the reputational impact is significant. Monitoring and accuracy management are correspondingly more critical.',
+  },
+  {
+    title: 'Platform Diversity',
+    body: 'Enterprise buyers increasingly use a range of AI tools — not just public consumer platforms. Sector-specific AI assistants, internal enterprise AI deployments, and procurement research tools all present distinct citation opportunities and challenges that consumer-focused GEO strategies may miss.',
+  },
+];
+
+const programmePhases = [
+  { label: 'Discovery & Audit', weeks: 'Weeks 1–4', desc: 'Multi-brand AI visibility assessment across all major platforms. Entity architecture mapping. Content estate prioritisation. Stakeholder interviews to establish governance requirements and internal constraints.' },
+  { label: 'Strategy & Governance Design', weeks: 'Weeks 4–8', desc: 'Programme structure, RACI, and reporting frameworks. Content standards documentation. Entity roadmap by brand. Prioritised action plan with resource requirements and timeline.' },
+  { label: 'Foundation Deployment', weeks: 'Weeks 8–16', desc: 'Structured data implementation across priority pages and brands. Entity strengthening — knowledge graph, Wikipedia, industry databases. llms.txt and AI crawler configuration. High-priority content optimisation.' },
+  { label: 'Scaled Optimisation', weeks: 'Months 4–9', desc: 'Systematic content programme across remaining priority pages. New citation-target content creation. Third-party source development. Platform-specific strategy adjustments based on monitoring data.' },
+  { label: 'Ongoing Programme Management', weeks: 'Ongoing', desc: 'Monthly cross-team reporting. Continuous content refinement. Competitive intelligence and response. Quarterly strategy reviews. Proactive adaptation to AI platform changes and brand developments.' },
+];
+
+const faqs = [
+  {
+    q: 'What makes enterprise AI optimisation different from standard GEO?',
+    a: 'Enterprise AI optimisation differs from standard GEO in scale, governance complexity, and stakeholder count. Large organisations typically operate multiple brands or product lines, each requiring its own entity strategy and content architecture. They have approval workflows, legal review processes, and multiple teams — content, SEO, brand, technical — whose work must be coordinated. And they face higher reputational risk from inaccurate AI citations, making monitoring and accuracy management more critical.',
+  },
+  {
+    q: 'How do you manage GEO across multiple brands?',
+    a: 'Multi-brand GEO requires a clear entity architecture: each brand must be established as a distinct entity with its own knowledge-graph presence, structured data, and citation footprint, while also being linked accurately to the parent organisation. We build entity maps that define these relationships, then execute brand-by-brand optimisation in a prioritised sequence based on AI visibility gap size and commercial importance.',
+  },
+  {
+    q: 'What governance structures does an enterprise GEO programme need?',
+    a: 'Effective enterprise GEO governance requires a defined owner for AI visibility strategy (typically within SEO, content, or digital marketing), a cross-functional steering group that includes legal, brand, and technical stakeholders, documented content standards for LLM-citability, a monitoring framework with clear escalation paths for inaccurate AI citations, and a change-management process for adapting to AI platform updates.',
+  },
+  {
+    q: 'How long does an enterprise AI optimisation programme take to show results?',
+    a: 'Enterprise programmes typically take longer to reach initial results than SME engagements, due to approval processes, content volume, and multi-brand complexity. Most large organisations see measurable AI citation improvements within four to six months of programme launch, with full competitive positioning across all priority brands taking nine to eighteen months depending on starting point and scope.',
+  },
+  {
+    q: 'Do you work with enterprise in-house SEO teams?',
+    a: 'Yes. Many enterprise engagements involve working alongside an existing in-house SEO team and, in some cases, an incumbent SEO agency. We provide specialist GEO direction and programme management while your existing teams handle SEO fundamentals. Clear RACI documentation prevents duplication and ensures GEO and SEO strategies reinforce each other.',
+  },
+  {
+    q: 'What does enterprise AI optimisation cost?',
+    a: 'Enterprise programmes are scoped individually based on brand count, content volume, and the degree of governance and reporting required. Investment is typically higher than standard GEO retainers to reflect programme management, multi-brand audit scope, and cross-team coordination. Contact GEOoptimised to discuss your requirements and receive an indicative scope and cost.',
+  },
+];
+
+const related = [
+  { tag: 'Services', title: 'GEO Services Overview', excerpt: 'The full range of generative engine optimisation services, from one-off audits to full programmes.', href: '/geo-services/' },
+  { tag: 'Consulting', title: 'GEO Consulting Services', excerpt: 'Advisory-led engagements for teams that need strategic direction rather than full delivery.', href: '/geo-consulting/' },
+  { tag: 'Pricing', title: 'GEO Pricing', excerpt: 'How GEO programmes are priced: models, cost drivers, and indicative ranges.', href: '/geo-pricing/' },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/enterprise-ai-optimisation/"
+  ogType="website"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex items-center gap-1.5 text-sm text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-services/" class="transition hover:text-[var(--accent)]">GEO Services</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">Enterprise AI Optimisation</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-fade relative overflow-hidden">
+    <div class="container-wide grid gap-12 pt-12 pb-20 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-7">
+        <span class="eyebrow">Enterprise Programme</span>
+        <h1 class="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <span class="grad-text">Enterprise AI Optimisation</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-300">
+          Generative engine optimisation for large organisations demands a different approach: multi-brand entity architecture, governance frameworks that work within existing approval processes, and cross-functional coordination across SEO, content, legal, and brand teams. This is enterprise AI optimization — built for the complexity that standard GEO programmes do not address.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/contact/" class="btn btn-primary">Discuss an Enterprise Programme</a>
+          <a href="/geo-agency/" class="btn btn-ghost">Standard GEO Agency</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="card p-6">
+          <span class="eyebrow">Enterprise programme scope</span>
+          <ul class="mt-4 space-y-3 text-sm text-ink-200">
+            <li class="flex items-start gap-2">
+              <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Multi-brand and multi-division AI visibility</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Governance frameworks and approval-process integration</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Cross-team stakeholder coordination</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Scaled content programmes with editorial standards</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Enhanced monitoring and reputational risk management</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- What Enterprise AI Optimisation Means -->
+  <section class="container-wide py-20">
+    <div class="prose-dark max-w-3xl">
+      <span class="eyebrow">Definition</span>
+      <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Why Enterprise AI Optimisation Is a Distinct Discipline</h2>
+      <p class="mt-6"><strong>Enterprise AI optimization is not a scaled-up version of standard GEO — it is a fundamentally different programme design.</strong> A GEO engagement for a focused brand with a single website and a small marketing team can be scoped, launched, and producing results within weeks. The same approach, applied to a large organisation with multiple brands, a content estate running to thousands of pages, and a marketing function spread across multiple teams and geographies, will fail — not because the underlying GEO principles are wrong, but because the organisational complexity has not been addressed.</p>
+      <p>The challenges that enterprise organisations face in <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> are distinct: entity architecture across multiple brands, content governance at scale, stakeholder alignment across functions with competing priorities, and reputational risk management when AI platforms describe your brands at scale. Each of these requires programme design choices that a standard GEO retainer is not built to handle.</p>
+      <p>GEOoptimised designs enterprise AI optimisation programmes specifically around these constraints — building governance frameworks, entity architectures, and content standards that can function within large-organisation realities rather than assuming away the complexity.</p>
+    </div>
+  </section>
+
+  <!-- Enterprise Challenges -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">Enterprise Challenges</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">The Six Challenges Enterprise Brands Face in GEO</h2>
+    <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed">
+      <strong>Large organisations face GEO challenges that do not exist at smaller scale.</strong> Understanding these challenges is the prerequisite for designing a programme that actually works.
+    </p>
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {challenges.map(c => (
+        <div class="card p-7 flex flex-col">
+          <h3 class="font-display text-base font-semibold text-[var(--accent)]">{c.title}</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300 flex-1">{c.body}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Programme Architecture Table -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">Programme design</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Enterprise vs Standard GEO: How Programmes Differ</h2>
+    <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed mb-10">
+      <strong>The table below maps the key differences between a standard GEO retainer and an enterprise AI optimisation programme.</strong> The underlying methodology is the same; the programme design, governance, and resourcing are substantially different.
+    </p>
+
+    <div class="card overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead>
+            <tr class="border-b border-[var(--line)]">
+              <th scope="col" class="px-6 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Dimension</th>
+              <th scope="col" class="px-6 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Standard GEO</th>
+              <th scope="col" class="px-6 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Enterprise AI Optimisation</th>
+            </tr>
+          </thead>
+          <tbody class="text-ink-300 divide-y divide-[var(--line-soft)]">
+            <tr>
+              <td class="px-6 py-4 font-medium text-ink-100">Brand scope</td>
+              <td class="px-6 py-4">Single brand, single domain</td>
+              <td class="px-6 py-4">Multiple brands, divisions, or sub-brands</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-ink-100">Entity architecture</td>
+              <td class="px-6 py-4">Single entity build and optimisation</td>
+              <td class="px-6 py-4">Multi-entity map with parent-child relationships</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-ink-100">Content governance</td>
+              <td class="px-6 py-4">Direct production or light review</td>
+              <td class="px-6 py-4">Editorial standards, approval workflows, RACI</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-ink-100">Stakeholder count</td>
+              <td class="px-6 py-4">Typically 1–3</td>
+              <td class="px-6 py-4">Cross-functional: SEO, content, brand, legal, technical</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-ink-100">Monitoring scope</td>
+              <td class="px-6 py-4">Core platforms, primary brand</td>
+              <td class="px-6 py-4">All major platforms, all brands, escalation framework</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-ink-100">Reporting</td>
+              <td class="px-6 py-4">Monthly agency report</td>
+              <td class="px-6 py-4">Multi-level reporting for programme, brand, and executive audiences</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium text-ink-100">Time to first results</td>
+              <td class="px-6 py-4">8–12 weeks</td>
+              <td class="px-6 py-4">4–6 months (reflecting governance lead-time)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programme Phases -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">Process</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Enterprise AI Optimisation Programme Structure</h2>
+    <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed mb-12">
+      <strong>Enterprise programmes follow a structured five-phase model.</strong> Each phase has defined deliverables and governance checkpoints to maintain cross-team alignment throughout.
+    </p>
+    <ol class="space-y-6 max-w-3xl">
+      {programmePhases.map((phase, i) => (
+        <li class="flex gap-5">
+          <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border hair font-display text-sm font-bold text-[var(--accent)]">
+            {i + 1}
+          </span>
+          <div>
+            <div class="flex flex-wrap items-baseline gap-3">
+              <h3 class="font-display text-lg font-semibold text-white">{phase.label}</h3>
+              <span class="font-mono text-xs text-ink-500">{phase.weeks}</span>
+            </div>
+            <p class="mt-1 text-sm leading-relaxed text-ink-300">{phase.desc}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <!-- Governance section -->
+  <section class="container-wide py-20">
+    <div class="prose-dark max-w-3xl">
+      <span class="eyebrow">Governance</span>
+      <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">GEO Governance for Enterprise Organisations</h2>
+      <p class="mt-6"><strong>Without a clear governance structure, enterprise GEO programmes stall at implementation.</strong> The most common failure mode is not a flawed strategy — it is a strategy that cannot move through the organisation fast enough to outpace competitors who are less encumbered by process.</p>
+      <p>Effective governance for enterprise AI optimisation involves four elements. First, a designated programme owner with authority to prioritise GEO work across teams — typically a Head of SEO, Digital Marketing Director, or equivalent. Second, a cross-functional steering group that can unblock decisions when content, legal, or brand teams have conflicting requirements. Third, documented content standards that define what LLM-citable content looks like in your organisation's voice and within your compliance requirements, so that writers and editors can produce to brief without iterative consultant review. Fourth, a monitoring and escalation framework that defines how AI citation inaccuracies are detected, assessed, and addressed — and who is responsible at each step.</p>
+      <p>We design these governance structures as part of the enterprise programme onboarding, working with your existing organisational hierarchy rather than around it. The goal is a GEO programme that your organisation owns and can sustain independently over time.</p>
+      <p>For organisations exploring the advisory route before committing to a full programme, our <a href="/geo-consulting/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO consulting services</a> include governance design as a standalone deliverable.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Frequently Asked Questions</h2>
+
+    <div class="mt-10 max-w-3xl divide-y divide-[var(--line)]" id="faq-accordion">
+      {faqs.map(faq => (
+        <div class="faq-item">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between py-5 text-left font-display text-base font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors"
+            aria-expanded="false"
+          >
+            <span>{faq.q}</span>
+            <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] text-xl leading-none transition-transform duration-200">+</span>
+          </button>
+          <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+            <p class="pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Related Reading -->
+  <section class="container-wide py-20">
+    <span class="eyebrow">Related</span>
+    <h2 class="mt-3 font-display text-2xl font-bold text-ink-50">Related Reading</h2>
+    <div class="mt-8 grid gap-6 sm:grid-cols-3">
+      {related.map(item => (
+        <a href={item.href} class="card card-hover block p-6 no-underline">
+          <span class="eyebrow">{item.tag}</span>
+          <h3 class="mt-2 font-display text-base font-semibold text-ink-50">{item.title}</h3>
+          <p class="mt-2 text-sm text-ink-300 leading-relaxed">{item.excerpt}</p>
+          <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="container-wide py-20">
+    <div class="relative overflow-hidden rounded-2xl dot-grid">
+      <div class="absolute inset-0 bg-gradient-to-br from-[rgba(var(--accent-glow),.12)] via-transparent to-transparent"></div>
+      <div class="relative px-8 py-16 text-center sm:px-16">
+        <span class="eyebrow">Get Started</span>
+        <h2 class="mt-4 font-display text-3xl font-bold text-ink-50 sm:text-4xl">Ready to Build an Enterprise GEO Programme?</h2>
+        <p class="mt-4 mx-auto max-w-2xl text-ink-300 leading-relaxed">
+          Enterprise AI optimisation programmes are scoped individually. Tell us about your organisation — brand structure, existing SEO maturity, team size, and priority platforms — and we will outline a programme design and indicative investment that fits your situation. <a href="/geo-pricing/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">See GEO pricing models</a> for context on how programmes are priced.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact/" class="btn btn-primary">Discuss an Enterprise Programme</a>
+          <a href="/geo-services/" class="btn btn-ghost">View All Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('#faq-accordion .faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('#faq-accordion .faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            (other.nextElementSibling as HTMLElement).style.maxHeight = '0';
+            (other.querySelector('.faq-icon') as HTMLElement).style.transform = 'rotate(0deg)';
+          }
+        });
+        btn.setAttribute('aria-expanded', String(!open));
+        body.style.maxHeight = open ? '0' : body.scrollHeight + 'px';
+        icon.style.transform = open ? 'rotate(0deg)' : 'rotate(45deg)';
+      });
+    });
+  </script>
+
+</Base>

@@ -1,8 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const title = 'Generative Engine Optimisation (GEO): The Complete Guide to AI Search';
-const description = 'Generative Engine Optimisation (GEO) is the practice of optimising your brand to be cited by AI search engines. Learn the complete GEO framework, tools, metrics, and strategy.';
+const title = 'Generative Engine Optimisation (GEO) — Complete Guide';
+const description = 'Generative Engine Optimisation (GEO) makes your brand citable by AI search engines. Learn the framework, tools, metrics, and strategy in this complete guide.';
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -10,17 +10,13 @@ const articleSchema = {
   headline: title,
   description,
   author: {
-    '@type': 'Organization',
-    name: 'GEOoptimised',
-    url: 'https://geooptimised.com/'
+    '@id': 'https://geooptimised.com/#organization'
   },
   publisher: {
-    '@type': 'Organization',
-    name: 'GEOoptimised',
-    url: 'https://geooptimised.com/'
+    '@id': 'https://geooptimised.com/#organization'
   },
   datePublished: '2026-05-24',
-  dateModified: '2026-05-24',
+  dateModified: '2026-06-06',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://geooptimised.com/generative-engine-optimisation/'
@@ -74,7 +70,16 @@ const faqSchema = {
   ]
 };
 
-const schema = [articleSchema, faqSchema];
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' }
+  ]
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
 
 const tocItems = [
   { id: 'what-is-geo', label: 'What Is Generative Engine Optimisation?' },
@@ -177,14 +182,12 @@ const keyTakeaways = [
 <Base title={title} description={description} schema={schema} ogType="article">
 
   <!-- Breadcrumb -->
-  <div class="container-wide pt-28 md:pt-32">
-    <nav aria-label="Breadcrumb" class="font-mono text-xs text-ink-400">
+  <div class="container-wide pt-8">
+    <nav aria-label="Breadcrumb" class="font-mono text-xs text-ink-300">
       <ol class="flex items-center gap-1.5">
         <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
         <li class="text-ink-600">/</li>
-        <li><a href="/learn/" class="transition hover:text-[var(--accent)]">Learn</a></li>
-        <li class="text-ink-600">/</li>
-        <li class="text-ink-200">Generative Engine Optimisation</li>
+        <li class="text-ink-200" aria-current="page">Generative Engine Optimisation</li>
       </ol>
     </nav>
   </div>
@@ -200,7 +203,7 @@ const keyTakeaways = [
       <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-300">
         AI search engines are replacing blue links with generated answers. The brands that appear inside those answers win. This guide covers everything you need to know about GEO — from first principles to full implementation.
       </p>
-      <div class="mt-6 flex items-center gap-6 font-mono text-xs text-ink-400">
+      <div class="mt-6 flex items-center gap-6 font-mono text-xs text-ink-300">
         <span>By GEOoptimised</span>
         <span class="text-ink-600">|</span>
         <span>22 min read</span>
@@ -236,7 +239,7 @@ const keyTakeaways = [
         <!-- Key Takeaways -->
         <div class="card p-6 mb-14">
           <div class="flex items-center gap-2.5 mb-5">
-            <svg class="h-5 w-5 text-[var(--accent)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <svg class="h-5 w-5 text-[var(--accent)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             <span class="eyebrow">Key takeaways</span>
           </div>
           <ol class="space-y-3">
@@ -255,6 +258,153 @@ const keyTakeaways = [
           <p class="text-xl leading-relaxed text-ink-200">
             <strong class="text-[var(--accent)]">Generative Engine Optimisation (GEO)</strong> is the practice of structuring your content, entity signals, and technical infrastructure so that large language models cite your brand when generating answers. It is the next evolution of search marketing — moving from ranking in a list of ten blue links to being directly quoted inside an AI-generated response.
           </p>
+        </div>
+
+        <!-- NODE Links — topic cluster navigation -->
+        <div class="card p-6 mb-14">
+          <p class="eyebrow mb-4">Explore the GEO topic cluster</p>
+          <div class="grid gap-3 sm:grid-cols-2">
+            <a href="/geo-strategy/" class="flex items-start gap-3 group">
+              <span class="mt-0.5 text-[var(--accent)] font-mono text-xs flex-shrink-0">→</span>
+              <span>
+                <span class="font-semibold text-ink-100 group-hover:text-[var(--accent)] transition-colors text-sm">GEO Strategy Framework</span>
+                <span class="block text-xs text-ink-300 mt-0.5">Seven-step process for building AI citation authority</span>
+              </span>
+            </a>
+            <a href="/geo-services/" class="flex items-start gap-3 group">
+              <span class="mt-0.5 text-[var(--accent)] font-mono text-xs flex-shrink-0">→</span>
+              <span>
+                <span class="font-semibold text-ink-100 group-hover:text-[var(--accent)] transition-colors text-sm">GEO Services</span>
+                <span class="block text-xs text-ink-300 mt-0.5">What a specialist GEO agency delivers end-to-end</span>
+              </span>
+            </a>
+            <a href="/geo-vs-seo/" class="flex items-start gap-3 group">
+              <span class="mt-0.5 text-[var(--accent)] font-mono text-xs flex-shrink-0">→</span>
+              <span>
+                <span class="font-semibold text-ink-100 group-hover:text-[var(--accent)] transition-colors text-sm">GEO vs SEO</span>
+                <span class="block text-xs text-ink-300 mt-0.5">How generative and traditional search optimisation differ</span>
+              </span>
+            </a>
+            <a href="/geo-tools/" class="flex items-start gap-3 group">
+              <span class="mt-0.5 text-[var(--accent)] font-mono text-xs flex-shrink-0">→</span>
+              <span>
+                <span class="font-semibold text-ink-100 group-hover:text-[var(--accent)] transition-colors text-sm">GEO Tools</span>
+                <span class="block text-xs text-ink-300 mt-0.5">Citation trackers, AI visibility checkers, and monitoring platforms</span>
+              </span>
+            </a>
+            <a href="/answer-engine-optimisation/" class="flex items-start gap-3 group">
+              <span class="mt-0.5 text-[var(--accent)] font-mono text-xs flex-shrink-0">→</span>
+              <span>
+                <span class="font-semibold text-ink-100 group-hover:text-[var(--accent)] transition-colors text-sm">Answer Engine Optimisation</span>
+                <span class="block text-xs text-ink-300 mt-0.5">AEO as a complementary discipline to GEO</span>
+              </span>
+            </a>
+            <a href="/geo-agency/" class="flex items-start gap-3 group">
+              <span class="mt-0.5 text-[var(--accent)] font-mono text-xs flex-shrink-0">→</span>
+              <span>
+                <span class="font-semibold text-ink-100 group-hover:text-[var(--accent)] transition-colors text-sm">GEO Agency</span>
+                <span class="block text-xs text-ink-300 mt-0.5">End-to-end GEO strategy and implementation partner</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- SEED Links — GEO fundamentals -->
+        <div class="card p-6 mb-14">
+          <p class="eyebrow mb-4">Learn the fundamentals</p>
+          <div class="grid gap-3 sm:grid-cols-2">
+            <a href="/what-is-geo/" class="flex items-start gap-3 group">
+              <span class="mt-0.5 text-[var(--accent)] font-mono text-xs flex-shrink-0">→</span>
+              <span>
+                <span class="font-semibold text-ink-100 group-hover:text-[var(--accent)] transition-colors text-sm">What Is GEO?</span>
+                <span class="block text-xs text-ink-300 mt-0.5">A clear definition of generative engine optimisation</span>
+              </span>
+            </a>
+            <a href="/geo-definition/" class="flex items-start gap-3 group">
+              <span class="mt-0.5 text-[var(--accent)] font-mono text-xs flex-shrink-0">→</span>
+              <span>
+                <span class="font-semibold text-ink-100 group-hover:text-[var(--accent)] transition-colors text-sm">GEO Definition</span>
+                <span class="block text-xs text-ink-300 mt-0.5">Precise terminology and how GEO relates to AEO and SEO</span>
+              </span>
+            </a>
+            <a href="/how-geo-works/" class="flex items-start gap-3 group">
+              <span class="mt-0.5 text-[var(--accent)] font-mono text-xs flex-shrink-0">→</span>
+              <span>
+                <span class="font-semibold text-ink-100 group-hover:text-[var(--accent)] transition-colors text-sm">How GEO Works</span>
+                <span class="block text-xs text-ink-300 mt-0.5">The retrieval-to-citation pipeline behind AI answers</span>
+              </span>
+            </a>
+            <a href="/geo-explained/" class="flex items-start gap-3 group">
+              <span class="mt-0.5 text-[var(--accent)] font-mono text-xs flex-shrink-0">→</span>
+              <span>
+                <span class="font-semibold text-ink-100 group-hover:text-[var(--accent)] transition-colors text-sm">GEO Explained</span>
+                <span class="block text-xs text-ink-300 mt-0.5">A plain-English guide for non-technical readers</span>
+              </span>
+            </a>
+            <a href="/generative-search-optimisation/" class="flex items-start gap-3 group">
+              <span class="mt-0.5 text-[var(--accent)] font-mono text-xs flex-shrink-0">→</span>
+              <span>
+                <span class="font-semibold text-ink-100 group-hover:text-[var(--accent)] transition-colors text-sm">Generative Search Optimisation</span>
+                <span class="block text-xs text-ink-300 mt-0.5">Ranking across AI-generated search surfaces</span>
+              </span>
+            </a>
+            <a href="/ai-optimisation-is-the-new-seo/" class="flex items-start gap-3 group">
+              <span class="mt-0.5 text-[var(--accent)] font-mono text-xs flex-shrink-0">→</span>
+              <span>
+                <span class="font-semibold text-ink-100 group-hover:text-[var(--accent)] transition-colors text-sm">AI Optimisation Is the New SEO</span>
+                <span class="block text-xs text-ink-300 mt-0.5">Why the shift from ranking to citation matters</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- SEED Links — platform playbooks -->
+        <div class="card p-6 mb-14">
+          <p class="eyebrow mb-4">Optimise for each AI platform</p>
+          <div class="grid gap-3 sm:grid-cols-2">
+            <a href="/optimise-for-chatgpt/" class="flex items-start gap-3 group">
+              <span class="mt-0.5 text-[var(--accent)] font-mono text-xs flex-shrink-0">→</span>
+              <span>
+                <span class="font-semibold text-ink-100 group-hover:text-[var(--accent)] transition-colors text-sm">Optimise for ChatGPT</span>
+                <span class="block text-xs text-ink-300 mt-0.5">Getting cited in ChatGPT and ChatGPT Search</span>
+              </span>
+            </a>
+            <a href="/optimise-for-perplexity/" class="flex items-start gap-3 group">
+              <span class="mt-0.5 text-[var(--accent)] font-mono text-xs flex-shrink-0">→</span>
+              <span>
+                <span class="font-semibold text-ink-100 group-hover:text-[var(--accent)] transition-colors text-sm">Optimise for Perplexity</span>
+                <span class="block text-xs text-ink-300 mt-0.5">A step-by-step Perplexity citation playbook</span>
+              </span>
+            </a>
+            <a href="/google-ai-overview-optimisation/" class="flex items-start gap-3 group">
+              <span class="mt-0.5 text-[var(--accent)] font-mono text-xs flex-shrink-0">→</span>
+              <span>
+                <span class="font-semibold text-ink-100 group-hover:text-[var(--accent)] transition-colors text-sm">Google AI Overview Optimisation</span>
+                <span class="block text-xs text-ink-300 mt-0.5">Earning inclusion in Google AI Overviews</span>
+              </span>
+            </a>
+            <a href="/perplexity-ai-optimisation/" class="flex items-start gap-3 group">
+              <span class="mt-0.5 text-[var(--accent)] font-mono text-xs flex-shrink-0">→</span>
+              <span>
+                <span class="font-semibold text-ink-100 group-hover:text-[var(--accent)] transition-colors text-sm">Perplexity AI Optimisation</span>
+                <span class="block text-xs text-ink-300 mt-0.5">How Perplexity retrieves, ranks and cites sources</span>
+              </span>
+            </a>
+            <a href="/chatgpt-for-business/" class="flex items-start gap-3 group">
+              <span class="mt-0.5 text-[var(--accent)] font-mono text-xs flex-shrink-0">→</span>
+              <span>
+                <span class="font-semibold text-ink-100 group-hover:text-[var(--accent)] transition-colors text-sm">ChatGPT for Business</span>
+                <span class="block text-xs text-ink-300 mt-0.5">A B2B visibility strategy for ChatGPT</span>
+              </span>
+            </a>
+            <a href="/geo-perplexity/" class="flex items-start gap-3 group">
+              <span class="mt-0.5 text-[var(--accent)] font-mono text-xs flex-shrink-0">→</span>
+              <span>
+                <span class="font-semibold text-ink-100 group-hover:text-[var(--accent)] transition-colors text-sm">GEO for Perplexity</span>
+                <span class="block text-xs text-ink-300 mt-0.5">Where Perplexity fits in a multi-platform strategy</span>
+              </span>
+            </a>
+          </div>
         </div>
 
         <!-- Section 1: What Is GEO -->
@@ -408,7 +558,7 @@ const keyTakeaways = [
             <div class="card card-hover p-5">
               <h3 class="font-display text-base font-semibold text-[var(--accent)] mb-2">{p.title}</h3>
               <p class="text-sm leading-relaxed text-ink-300">{p.desc}</p>
-              <span class="mt-3 inline-block text-xs font-medium text-ink-400">Learn more &rarr;</span>
+              <span class="mt-3 inline-block text-xs font-medium text-ink-300">Learn more &rarr;</span>
             </div>
           ))}
         </div>
@@ -445,7 +595,7 @@ const keyTakeaways = [
 
         <div class="prose-dark mb-16">
           <p>
-            For implementation guidance on building a GEO measurement dashboard, including which tools to connect and how to establish baselines, see our <a href="/geo-metrics/">GEO metrics guide</a>.
+            For implementation guidance on building a GEO measurement dashboard, including which tools to connect and how to establish baselines, see our <a href="/geo-tools/">GEO tools and platforms guide</a>.
           </p>
         </div>
 
@@ -483,7 +633,7 @@ const keyTakeaways = [
           </p>
 
           <p>
-            For industry-specific GEO strategies and case studies, see our <a href="/geo-by-industry/">GEO by industry</a> breakdown.
+            For a structured approach to applying these tactics to your own sector, see our <a href="/geo-strategy/">GEO strategy</a> guide.
           </p>
         </section>
 

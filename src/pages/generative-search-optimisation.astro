@@ -1,0 +1,570 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Generative Search Optimisation: Rank in AI Results | GEOoptimised';
+const description = 'Generative search optimization explained: what it is, the AI surfaces it targets (AI Overviews, ChatGPT Search, Perplexity), and how to rank in AI-generated results.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Generative Search Optimisation: Ranking in AI-Generated Results',
+    description: 'Generative search optimization explained: what it is, the AI surfaces it targets (AI Overviews, ChatGPT Search, Perplexity), and how to rank in AI-generated results.',
+    url: 'https://geooptimised.com/generative-search-optimisation/',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://geooptimised.com/generative-search-optimisation/'
+    },
+    author: {
+      '@id': 'https://geooptimised.com/#organization'
+    },
+    publisher: {
+      '@id': 'https://geooptimised.com/#organization'
+    },
+    datePublished: '2026-06-07',
+    dateModified: '2026-06-07',
+    image: 'https://geooptimised.com/og-image.png',
+    inLanguage: 'en-GB'
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is generative search optimisation?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Generative search optimisation is the practice of structuring content, entity signals, and technical infrastructure so that brands appear within AI-generated search results. It targets platforms that synthesise answers from multiple sources rather than displaying a ranked list of links — including Google AI Overviews, ChatGPT Search, Perplexity AI, Microsoft Copilot, and Gemini. Generative search optimisation is closely related to, and largely synonymous with, generative engine optimisation (GEO): both describe the same discipline of earning citation inside AI-generated responses.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How is generative search different from traditional search?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Traditional search returns a ranked list of links for the user to choose from. Generative search synthesises an answer from multiple sources and presents it directly, often without requiring the user to click through to any individual page. For brands, this shift changes the competition model: instead of competing for ten positions on a results page, brands compete to be cited among the two to five sources that appear in a generated answer. Generative search also introduces new quality signals — entity authority, content extractability, and schema markup — that traditional SEO does not fully address.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Which platforms does generative search optimisation target?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Generative search optimisation targets all major AI-generated answer surfaces: Google AI Overviews (appearing on Google Search for a growing proportion of queries), ChatGPT Search (OpenAI\'s search mode), Perplexity AI (a dedicated AI search engine with live web retrieval), Microsoft Copilot (Bing-powered AI answers), and Gemini (Google\'s conversational AI integrated with Search). Each platform has a distinct retrieval mechanism, which is why cross-platform optimisation is a core component of a complete generative search strategy.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the difference between generative search optimisation and GEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Generative search optimisation and generative engine optimisation (GEO) describe the same practice: optimising to earn citation in AI-generated answers. GEO is the more established term in the industry, while "generative search optimization" is the search query many practitioners use when researching the discipline. Both terms refer to the same framework of entity authority, structured content, schema markup, and cross-platform citation monitoring. On this site, GEO is the canonical term — see the complete guide at /generative-engine-optimisation/ for a full treatment of the discipline.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How do I optimise for Google AI Overviews specifically?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Google AI Overviews draws primarily from pages that already rank well in Google\'s traditional organic index. Strong E-E-A-T signals, entity clarity through Organisation schema, and well-structured content that uses descriptive headings and declarative opening paragraphs are the primary optimisation levers. Unlike Perplexity, which uses live RAG, Google AI Overviews relies heavily on the existing organic ranking layer — meaning traditional SEO remains a prerequisite for AI Overview inclusion, with GEO-specific optimisations layered on top.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Can I measure my generative search visibility?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. Generative search visibility is measured through citation frequency (how often your brand appears in AI answers for target queries), citation accuracy (whether AI correctly represents your claims), AI share of voice (your brand\'s citation proportion relative to competitors), and AI referral traffic (direct visits arriving from chatgpt.com, perplexity.ai, copilot.microsoft.com, and similar). These metrics require a dedicated monitoring programme — traditional tools like Google Search Console do not capture AI citation data.'
+        }
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+      { '@type': 'ListItem', position: 3, name: 'Generative Search Optimisation', item: 'https://geooptimised.com/generative-search-optimisation/' }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'what-is-generative-search', label: 'What Is Generative Search?' },
+  { id: 'the-key-surfaces', label: 'The Key AI Search Surfaces' },
+  { id: 'how-generative-search-selects', label: 'How AI Results Are Selected' },
+  { id: 'optimisation-tactics', label: 'Optimisation Tactics' },
+  { id: 'geo-relationship', label: 'Relationship to GEO' },
+  { id: 'measuring-visibility', label: 'Measuring AI Visibility' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' }
+];
+
+const surfaces = [
+  {
+    name: 'Google AI Overviews',
+    reach: 'Billions of monthly searches',
+    mechanism: 'Organic ranking + Knowledge Graph',
+    keySignal: 'Traditional SEO authority + entity schema',
+    priority: 'Critical'
+  },
+  {
+    name: 'ChatGPT Search',
+    reach: '200M+ weekly active users',
+    mechanism: 'Training data + live Bing retrieval',
+    keySignal: 'Entity mentions in training corpora + Bing index',
+    priority: 'High'
+  },
+  {
+    name: 'Perplexity AI',
+    reach: '15M+ monthly active users (fast-growing)',
+    mechanism: 'Live RAG — fetches web per query',
+    keySignal: 'Crawlability, fresh dates, extractable structure',
+    priority: 'High'
+  },
+  {
+    name: 'Microsoft Copilot',
+    reach: 'Integrated across Office 365 and Bing',
+    mechanism: 'Bing index + GPT-4 reasoning layer',
+    keySignal: 'Bing Webmaster Tools verification',
+    priority: 'Medium-High'
+  },
+  {
+    name: 'Gemini (Google)',
+    reach: 'Integrated with Google Search and Workspace',
+    mechanism: 'Google index + conversational AI layer',
+    keySignal: 'Same signals as Google AI Overviews',
+    priority: 'Medium-High'
+  }
+];
+
+const tactics = [
+  {
+    step: '01',
+    title: 'Establish entity clarity across the web',
+    body: 'AI systems identify you by your entity — the machine-readable representation of your brand. Build and maintain consistent entity descriptions across your website schema, Wikidata, LinkedIn, Google Business Profile, and any industry directories relevant to your sector. Inconsistent entity descriptions across these sources cause AI retrieval systems to treat your brand as low-confidence and reduce citation frequency. The sameAs property in Organisation schema is the primary technical mechanism for linking your entity to authoritative third-party identifiers.'
+  },
+  {
+    step: '02',
+    title: 'Structure content for AI extraction',
+    body: 'Generative search systems extract passages, not whole pages. Each section of your content should open with a 40–100 word declarative statement that directly answers a relevant question. Single-concept paragraphs, descriptive headings that match natural-language queries, and self-contained sections that read coherently without surrounding context are the structural characteristics that consistently improve citation rates across all major AI search surfaces.'
+  },
+  {
+    step: '03',
+    title: 'Deploy comprehensive schema markup',
+    body: 'Structured data removes ambiguity for AI retrieval systems. Every content page should carry Article schema (with author and publisher referencing the Organisation entity by @id), FAQPage schema where FAQ sections exist, and BreadcrumbList schema to signal topical hierarchy. This schema layer tells citation selection systems that your content is attributed, dated, categorised, and linked to a verified entity — all factors that increase citation probability.'
+  },
+  {
+    step: '04',
+    title: 'Build topical authority through content clusters',
+    body: 'No single page establishes topical authority for generative search. A cluster of pages — a pillar page addressing the topic comprehensively, supported by multiple detail pages exploring subtopics — signals to AI retrieval indexes that your domain owns the subject area. Cross-linking within the cluster reinforces the topical signal. A domain with shallow, isolated coverage of a subject is consistently outperformed in AI citation by a domain with deep, interconnected topical architecture.'
+  },
+  {
+    step: '05',
+    title: 'Optimise crawl access for AI user-agents',
+    body: 'All the content quality in the world is irrelevant if AI crawlers cannot access your site. Review your robots.txt and explicitly allow the user-agents that matter: GPTBot, PerplexityBot, ClaudeBot, Anthropic-AI, Google-Extended, and Bingbot. Implement an llms.txt file that declares your domain\'s expertise and priority pages. These technical steps are the foundation on which all other generative search optimisation tactics depend.'
+  },
+  {
+    step: '06',
+    title: 'Monitor citations and iterate',
+    body: 'Generative search visibility requires active measurement. Establish a monitoring programme that queries target AI platforms weekly with your priority search terms, records whether your brand is cited, and tracks citation accuracy and competitive share of voice. AI models update frequently — Perplexity\'s live RAG responds to content changes within weeks; Google AI Overviews within the typical crawl cycle. Regular monitoring reveals what is working, what competitors are doing better, and where new citation opportunities have emerged.'
+  }
+];
+
+const faqs = [
+  {
+    q: 'What is generative search optimisation?',
+    a: 'Generative search optimisation is the practice of structuring content, entity signals, and technical infrastructure so that brands appear within AI-generated search results. It targets platforms that synthesise answers from multiple sources — including Google AI Overviews, ChatGPT Search, Perplexity AI, and Microsoft Copilot. It is closely related to, and largely synonymous with, generative engine optimisation (GEO).'
+  },
+  {
+    q: 'How is generative search different from traditional search?',
+    a: 'Traditional search returns a ranked list of links. Generative search synthesises an answer from multiple sources and presents it directly, typically citing two to five contributing pages. For brands, the competition model shifts from ten positions on a results page to a small number of citations inside a single generated answer — a winner-takes-most dynamic that makes AI citation more valuable and more contested than a single blue-link ranking.'
+  },
+  {
+    q: 'Which platforms does generative search optimisation target?',
+    a: 'The primary platforms are Google AI Overviews, ChatGPT Search, Perplexity AI, Microsoft Copilot, and Gemini. Each has a distinct retrieval mechanism, which is why cross-platform optimisation is a core component of a complete generative search strategy.'
+  },
+  {
+    q: 'What is the difference between generative search optimisation and GEO?',
+    a: 'Both terms describe the same practice: optimising to earn citation in AI-generated answers. GEO is the more established industry term; "generative search optimization" is the query term many practitioners use when researching the discipline. On this site, GEO is the canonical term — see the complete guide at /generative-engine-optimisation/ for a full treatment.'
+  },
+  {
+    q: 'How do I optimise for Google AI Overviews specifically?',
+    a: 'Google AI Overviews draws from pages that rank well in Google\'s organic index. Strong E-E-A-T signals, entity clarity through Organisation schema, and well-structured content with declarative openings are the primary levers. Traditional SEO authority remains a prerequisite, with GEO-specific optimisations layered on top.'
+  },
+  {
+    q: 'Can I measure my generative search visibility?',
+    a: 'Yes, through citation frequency, citation accuracy, AI share of voice, and AI referral traffic from chatgpt.com, perplexity.ai, copilot.microsoft.com, and similar sources. These require a dedicated monitoring programme — traditional analytics tools do not capture AI citation data automatically.'
+  }
+];
+
+const related = [
+  {
+    tag: 'ROOT',
+    title: 'Generative Engine Optimisation: Complete Guide',
+    excerpt: 'The pillar guide covering every aspect of GEO from first principles to full implementation.',
+    href: '/generative-engine-optimisation/'
+  },
+  {
+    tag: 'Guide',
+    title: 'What Is GEO?',
+    excerpt: 'A concise primer on generative engine optimisation and why it matters for modern search visibility.',
+    href: '/what-is-geo/'
+  },
+  {
+    tag: 'Guide',
+    title: 'How GEO Works',
+    excerpt: 'The four-stage pipeline — crawl, retrieval, synthesis, citation — with tactics for each stage.',
+    href: '/how-geo-works/'
+  },
+  {
+    tag: 'Guide',
+    title: 'GEO vs SEO',
+    excerpt: 'How generative and traditional search optimisation differ — and where they work together.',
+    href: '/geo-vs-seo/'
+  }
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/generative-search-optimisation/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">Generative Engine Optimisation</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">Generative Search Optimisation</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Guide</span>
+        <span class="font-mono text-xs text-ink-300">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">11 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        Generative Search Optimisation: Ranking in AI-Generated Results
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">Generative search optimisation is the practice of earning citation inside AI-generated answers — the responses that Google AI Overviews, ChatGPT Search, Perplexity, and Copilot now present in place of traditional blue-link results.</strong> This guide defines the discipline, maps the AI surfaces it targets, and explains the specific tactics that determine whether your brand appears inside those answers or is invisible to the growing share of users who never scroll past the AI response.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column layout: TOC + article -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" id="toc-nav" aria-label="Table of contents">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Generative search optimisation targets AI-generated answer surfaces, not traditional blue-link rankings.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>The five primary surfaces are Google AI Overviews, ChatGPT Search, Perplexity AI, Microsoft Copilot, and Gemini — each with a distinct retrieval mechanism.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Entity authority, extractable content structure, and schema markup are the core optimisation levers.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Generative search optimisation and GEO describe the same discipline; GEO is the established industry term.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Success is measured through citation frequency, AI share of voice, and referral traffic from AI platforms.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1: What Is Generative Search -->
+      <div class="prose-dark">
+        <h2 id="what-is-generative-search" class="anchor-top">What Is Generative Search?</h2>
+        <p>
+          <strong>Generative search is a mode of information retrieval in which AI systems synthesise an answer from multiple sources and present it directly to the user, rather than returning a ranked list of links.</strong> Instead of clicking through ten blue links to find an answer, the user receives a generated response — typically a paragraph or structured summary — that draws on information from several web sources, with optional citations to the contributing pages.
+        </p>
+        <p>
+          Generative search began displacing traditional results in earnest in 2023, with Google's rollout of AI Overviews (formerly Search Generative Experience) and the launch of Perplexity AI as a standalone search product. By 2026, AI-generated answers appear for a significant and growing proportion of Google queries, and dedicated AI search engines have established tens of millions of regular users. The shift is structural, not cyclical.
+        </p>
+        <p>
+          For the brand or organisation that depends on organic search visibility, generative search changes the competitive dynamic fundamentally. Traditional search allocates ten positions on page one. A generative answer typically cites two to five sources. Brands that earn those citations receive attention, trust, and referral traffic. Brands that are absent from AI answers are invisible to a growing share of users — even users who are actively searching for exactly what those brands offer.
+        </p>
+        <p>
+          Generative search optimisation addresses this shift directly. It is the discipline of aligning content, entity signals, and technical infrastructure with the selection criteria that AI search systems use when deciding which sources to retrieve, synthesise, and cite. For a detailed technical breakdown of how this selection process works, see our guide on <a href="/how-geo-works/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how GEO works</a>.
+        </p>
+      </div>
+
+      <!-- Section 2: The Key Surfaces -->
+      <div class="prose-dark mt-16">
+        <h2 id="the-key-surfaces" class="anchor-top">The Key AI Search Surfaces</h2>
+        <p>
+          <strong>Generative search optimisation targets five primary platforms, each with a distinct architecture and retrieval model — and a complete strategy accounts for all five rather than optimising for one in isolation.</strong>
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Platform</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Retrieval Mechanism</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Key Optimisation Signal</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Priority</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[var(--line)]">
+            {surfaces.map(s => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class="px-4 py-3 font-semibold text-white">{s.name}</td>
+                <td class="px-4 py-3 text-ink-300">{s.mechanism}</td>
+                <td class="px-4 py-3 text-ink-300">{s.keySignal}</td>
+                <td class="px-4 py-3 text-ink-300">{s.priority}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <h3>Google AI Overviews</h3>
+        <p>
+          Google AI Overviews is the most consequential generative search surface for most brands because it appears on the world's highest-traffic search engine. AI Overviews synthesise answers from multiple web sources and display them at the top of Google results, above the traditional organic listings. The retrieval model draws heavily from pages that already perform well in Google's organic index, meaning traditional SEO authority is a prerequisite for AI Overview inclusion — but entity schema and content structure determine which high-ranking pages are actually cited.
+        </p>
+
+        <h3>ChatGPT Search</h3>
+        <p>
+          ChatGPT's search mode (available to ChatGPT users globally) combines OpenAI's language model with live web retrieval via Bing's index. When a query triggers a search, the system fetches current web content and synthesises a response with cited sources. Brands that appear in Bing's index and have strong entity signals in both training-data corpora and live web content are most consistently cited. The same optimisation work that targets Copilot (Bing-indexed content, Bing Webmaster Tools verification) transfers directly to ChatGPT Search.
+        </p>
+
+        <h3>Perplexity AI</h3>
+        <p>
+          Perplexity operates as a dedicated AI search engine with its own web crawler (PerplexityBot) and a pure RAG architecture: every query triggers a live web fetch, and the answer is assembled entirely from retrieved content with explicit source citations. This makes Perplexity the most transparent platform for testing generative search visibility. If your content earns citation on Perplexity, the extraction architecture is working. Allow PerplexityBot in robots.txt, keep dateModified current in schema, and structure content for clean passage extraction.
+        </p>
+
+        <h3>Microsoft Copilot</h3>
+        <p>
+          Copilot is integrated across Bing, Microsoft Edge, and Microsoft 365. It uses Bing's web index as its retrieval layer, making Bing SEO directly relevant to Copilot citation. Verify your site in Bing Webmaster Tools, submit your sitemap to Bing, and confirm Bingbot is allowed in robots.txt. Copilot's integration with workplace tools means it is increasingly relevant for B2B brands whose target audience uses Microsoft 365 for research.
+        </p>
+
+        <h3>Gemini</h3>
+        <p>
+          Google's Gemini conversational AI is integrated with Google Search and available as a standalone product. Like Google AI Overviews, Gemini's web-grounded responses draw from Google's index. The optimisation signals overlap substantially: entity clarity, E-E-A-T, structured data, and strong organic authority. As Gemini expands its integration with Google Workspace, it will become increasingly relevant for professional and enterprise search behaviour.
+        </p>
+      </div>
+
+      <!-- Section 3: How AI Results Are Selected -->
+      <div class="prose-dark mt-16">
+        <h2 id="how-generative-search-selects" class="anchor-top">How AI Search Results Are Selected</h2>
+        <p>
+          <strong>Every generative search platform selects sources through a multi-stage process — and failing at any single stage means earning no citation, regardless of content quality.</strong> The selection pipeline consists of four stages: indexation (was your content discovered and stored?), retrieval (was your page selected as a candidate for this query?), synthesis (was your content extracted into the generated answer?), and citation (was your source attributed credit for the response?).
+        </p>
+        <p>
+          Each stage applies different criteria. Indexation depends on crawler access and technical accessibility. Retrieval depends on topical relevance and entity clarity. Synthesis depends on content structure and passage extractability. Citation depends on entity authority, schema signals, and the uniqueness of your information contribution. A comprehensive generative search optimisation strategy addresses all four stages rather than treating the problem as a single-lever optimisation.
+        </p>
+        <p>
+          For a complete stage-by-stage technical breakdown of this pipeline, including specific tactics for each stage, see our dedicated guide: <a href="/how-geo-works/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how generative engine optimisation works</a>.
+        </p>
+      </div>
+
+      <!-- Section 4: Optimisation Tactics -->
+      <div class="prose-dark mt-16">
+        <h2 id="optimisation-tactics" class="anchor-top">Optimisation Tactics for Generative Search</h2>
+        <p>
+          <strong>Effective generative search optimisation combines entity authority, extractable content structure, technical accessibility, and active measurement — applied consistently across all target platforms.</strong>
+        </p>
+      </div>
+
+      <div class="mt-8 space-y-4">
+        {tactics.map(t => (
+          <div class="card p-6 flex gap-5">
+            <span class="font-mono text-sm font-bold text-[var(--accent)] flex-shrink-0 pt-0.5">{t.step}</span>
+            <div>
+              <h3 class="font-display text-base font-semibold text-white mb-2">{t.title}</h3>
+              <p class="text-sm leading-relaxed text-ink-300">{t.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Section 5: Relationship to GEO -->
+      <div class="prose-dark mt-16">
+        <h2 id="geo-relationship" class="anchor-top">Relationship to Generative Engine Optimisation (GEO)</h2>
+        <p>
+          <strong>Generative search optimisation and generative engine optimisation (GEO) describe the same practice — the distinction is terminological, not substantive.</strong> GEO has emerged as the more established industry term, used consistently by practitioners, agencies, and emerging academic research on the discipline. "Generative search optimization" (with the US spelling) and "generative search optimisation" (British spelling) are the search queries many professionals use when researching the field, which is why this page exists — but the framework, tactics, and measurement approach are identical.
+        </p>
+        <p>
+          Our <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">complete GEO guide</a> is the authoritative reference for everything covered on this page and more — including the seven-step GEO framework, cross-model optimisation, citation monitoring methodology, and sector-specific applications. If you are researching generative search optimisation as a discipline, the GEO guide is the logical next read.
+        </p>
+
+        <h3>How GEO Relates to Other Disciplines</h3>
+        <p>
+          GEO sits alongside <a href="/what-is-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">answer engine optimisation (AEO)</a> — which focuses on direct-answer formats like featured snippets and voice search — and traditional SEO, which remains foundational for the retrieval stage of generative search. The three disciplines are complementary: a strong SEO base improves retrieval probability; AEO-grade content structure improves synthesis and extraction; GEO-specific entity work and schema improve citation selection. For a detailed comparison with traditional SEO, see <a href="/geo-vs-seo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO vs SEO</a>.
+        </p>
+        <p>
+          For the definition and scope of the broader GEO discipline: <a href="/geo-definition/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO definition</a>. For a plain-language explanation of what GEO involves: <a href="/geo-explained/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO explained</a>.
+        </p>
+      </div>
+
+      <!-- Section 6: Measuring Visibility -->
+      <div class="prose-dark mt-16">
+        <h2 id="measuring-visibility" class="anchor-top">Measuring Generative Search Visibility</h2>
+        <p>
+          <strong>Generative search visibility requires a measurement framework built around citation rather than ranking — because the traditional SEO metrics of position, CTR, and organic sessions do not capture AI citation performance.</strong>
+        </p>
+
+        <h3>Citation Frequency</h3>
+        <p>
+          Citation frequency measures how often your brand or content appears in AI-generated answers for your target query set. Track this by running your priority queries against each major platform weekly and recording whether your brand appears in the response. A citation rate above 30% for core queries indicates strong generative search visibility.
+        </p>
+
+        <h3>Citation Accuracy</h3>
+        <p>
+          AI systems sometimes cite brands inaccurately — misattributing claims, confusing entities, or representing your positioning incorrectly. Citation accuracy monitoring checks not just whether you are cited, but whether the AI's representation of your brand is correct and favourable. Inaccurate citations can damage trust even when they appear frequently.
+        </p>
+
+        <h3>AI Share of Voice</h3>
+        <p>
+          AI share of voice measures your brand's citation proportion relative to competitors across your tracked query set. If your brand is cited in three of ten AI responses for a given query, your share of voice is 30%. Track this metric over time and against specific competitors to understand your competitive position in generative search.
+        </p>
+
+        <h3>AI Referral Traffic</h3>
+        <p>
+          As generative search platforms increasingly include clickable source links, direct referral traffic from AI platforms becomes a measurable outcome. In Google Analytics, segment referral traffic from chatgpt.com, perplexity.ai, copilot.microsoft.com, and bard.google.com to track visitors arriving via AI citations. This traffic tends to be high-intent — users who click through from an AI citation have already received a qualifying response about your brand.
+        </p>
+
+        <p>
+          For professional monitoring support and a structured citation tracking programme, see our <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services</a>.
+        </p>
+      </div>
+
+      <!-- FAQ -->
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read guide <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="relative border-t hair mt-12 overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Get Your Brand into AI Search Results</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        GEOoptimised delivers end-to-end generative search optimisation: from an initial AI visibility audit that shows exactly where you stand today, through to ongoing citation monitoring and competitive intelligence. We work across all five major AI search surfaces.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request a GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const faqBtns = document.querySelectorAll('#faq-accordion button');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+
+    const tocLinks = document.querySelectorAll('#toc-nav a');
+    const headings = Array.from(
+      document.querySelectorAll('h2[id], h3[id]')
+    ) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(link => {
+              link.classList.remove('text-[var(--accent)]');
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.classList.add('text-[var(--accent)]');
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+
+    headings.forEach(h => observer.observe(h));
+  </script>
+
+</Base>

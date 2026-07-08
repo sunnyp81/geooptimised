@@ -1,0 +1,598 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'How to Optimise for Perplexity: Step-by-Step Playbook';
+const description = 'Perplexity optimization playbook: eight actionable steps to get your brand cited in Perplexity answers. Covers crawler access, content structure, and source signals.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  url: 'https://geooptimised.com/optimise-for-perplexity/',
+  image: 'https://geooptimised.com/og-image.png',
+  inLanguage: 'en-GB',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/optimise-for-perplexity/',
+  },
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to Optimise for Perplexity',
+  description: 'An eight-step process to increase the likelihood that Perplexity AI cites your brand in its generated answers.',
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Unblock PerplexityBot', text: 'Audit your robots.txt to ensure PerplexityBot is not disallowed. Perplexity cannot cite pages it cannot crawl.' },
+    { '@type': 'HowToStep', position: 2, name: 'Deploy an llms.txt file', text: 'Create an llms.txt file at the root of your site to provide AI crawlers with a curated map of your most authoritative pages.' },
+    { '@type': 'HowToStep', position: 3, name: 'Write declarative opening statements', text: 'Begin every key section with a clear, definitional sentence that Perplexity can extract and quote directly.' },
+    { '@type': 'HowToStep', position: 4, name: 'Add original, verifiable data', text: 'Include specific statistics, named case studies, or proprietary findings that other pages do not contain.' },
+    { '@type': 'HowToStep', position: 5, name: 'Implement FAQPage schema', text: 'Structure explicit question-and-answer content with FAQPage JSON-LD markup so Perplexity\'s retrieval layer can identify and extract answers cleanly.' },
+    { '@type': 'HowToStep', position: 6, name: 'Earn citations from authoritative domains', text: 'Build editorial links and mentions from domains Perplexity\'s source-quality scoring considers authoritative in your category.' },
+    { '@type': 'HowToStep', position: 7, name: 'Publish at consistent cadence', text: 'Perplexity weights recency. Regular publication of high-quality pages signals an active, trustworthy source.' },
+    { '@type': 'HowToStep', position: 8, name: 'Monitor citations and iterate', text: 'Query Perplexity weekly with your target prompts, log citation frequency, and refine pages that are retrieved but not cited.' },
+  ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Does Perplexity use its own crawler?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Perplexity operates its own web crawler, PerplexityBot, which indexes live content to power its retrieval-augmented generation pipeline. Pages blocked via robots.txt or behind authentication cannot be retrieved and will not be cited. You must explicitly permit PerplexityBot in your robots.txt to be eligible for Perplexity citations.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How quickly can I improve my Perplexity citation rate?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Because Perplexity uses live web retrieval rather than a fixed training snapshot, content changes can influence citation rates relatively quickly — typically within weeks of PerplexityBot re-crawling your pages. Structural improvements such as adding declarative statements, FAQ markup, and specific data points have produced measurable citation increases within 30 to 45 days in practice. Entity authority improvements take longer, as they require third-party signals to accumulate.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What content format does Perplexity prefer?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Perplexity favours content that is clearly structured, factually specific, and easy to extract from. Concise declarative statements that define concepts, numbered step-by-step processes, comparison tables, and explicit FAQ sections consistently perform well. Dense marketing prose, vague claims, and heavy reliance on JavaScript rendering are associated with lower citation rates.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is Perplexity optimization different from optimising for ChatGPT?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The underlying content principles overlap — declarative statements, structured data, entity authority — but the mechanics differ. Perplexity uses live web retrieval for all queries and cites sources inline with every answer, making it more responsive to on-page content changes. ChatGPT\'s base model relies on training data with a fixed cutoff, though its browsing mode introduces retrieval. Perplexity\'s Focus modes (Academic, Writing, Social) also create distinct optimisation opportunities not present in ChatGPT.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need Pro Search to appear in Perplexity results?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. Both Perplexity\'s standard search and Pro Search can cite your content. Pro Search performs deeper multi-step retrieval for complex queries and may surface a wider range of sources. Optimising for standard Perplexity search — which represents the majority of queries — is the higher-priority task. Pro Search citation tends to follow naturally as your source authority increases.',
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+    { '@type': 'ListItem', position: 3, name: 'How to Optimise for Perplexity', item: 'https://geooptimised.com/optimise-for-perplexity/' },
+  ],
+};
+
+const schema = [articleSchema, howToSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'why-perplexity', label: 'Why Perplexity Matters' },
+  { id: 'how-perplexity-retrieves', label: 'How Perplexity Retrieves Sources' },
+  { id: 'eight-steps', label: 'The 8-Step Playbook' },
+  { id: 'content-checklist', label: 'Content Citability Checklist' },
+  { id: 'technical-setup', label: 'Technical Setup' },
+  { id: 'monitoring', label: 'Monitoring Citations' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const steps = [
+  {
+    num: '01',
+    title: 'Unblock PerplexityBot',
+    body: 'The most common reason brands are absent from Perplexity answers is a blocked crawler. Audit your robots.txt and confirm that PerplexityBot is permitted on all paths containing your target content. Blanket Disallow rules from AI-bot-blocking policies are a frequent culprit. Perplexity cannot cite what it cannot crawl.',
+  },
+  {
+    num: '02',
+    title: 'Deploy an llms.txt File',
+    body: 'An llms.txt file at your site root gives Perplexity\'s crawler a curated list of your most authoritative pages. It acts as a sitemap specifically for AI systems, reducing the chance that lower-quality pages are retrieved in preference to your cornerstone content. Include your brand description, primary service pages, and your highest-authority guides.',
+  },
+  {
+    num: '03',
+    title: 'Write Declarative Opening Statements',
+    body: 'Every section targeting a query Perplexity might answer should open with a single, clean declarative sentence. "Perplexity AI is a retrieval-augmented answer engine" is extractable. "In today\'s rapidly evolving AI landscape, understanding answer engines has never been more important" is not. Perplexity\'s synthesis engine extracts the clearest available statement of fact — make that statement yours.',
+  },
+  {
+    num: '04',
+    title: 'Add Original, Verifiable Data',
+    body: 'Perplexity cites sources that contribute unique information to its answer. If your page only restates what fifty other pages already say, there is no citation incentive. Add proprietary data, named case studies, benchmarks, or specific process details that only your brand can provide. Original data creates a citation obligation: the model must attribute a fact it can only source from you.',
+  },
+  {
+    num: '05',
+    title: 'Implement FAQPage Schema',
+    body: 'FAQPage JSON-LD markup signals to Perplexity\'s retrieval layer that your page contains structured question-and-answer content. This makes individual answers easier to extract and cite in response to direct questions. Each FAQ answer should be self-contained — fully meaningful without surrounding context — and should directly answer the question asked, not preamble it.',
+  },
+  {
+    num: '06',
+    title: 'Build Authority Signals Perplexity Trusts',
+    body: 'Perplexity applies source-quality scoring when selecting which retrieved pages to cite. Signals include domain authority, editorial link profile, author credentials, and organisational entity signals. Build mentions in industry publications, trade directories, and established media in your category. These external authority signals travel with your domain into Perplexity\'s source-quality weighting.',
+  },
+  {
+    num: '07',
+    title: 'Publish at Consistent Cadence',
+    body: 'Perplexity weights recency for time-sensitive queries. A site that publishes regularly signals an active, maintained source. For informational and commercial queries, recency matters less — but consistent publication keeps PerplexityBot returning, which means your page updates are reflected more quickly in Perplexity\'s retrieval index.',
+  },
+  {
+    num: '08',
+    title: 'Monitor, Measure, and Iterate',
+    body: 'Run your target queries in Perplexity weekly. Log whether your brand is cited, which URLs are cited, and what competitors are cited instead when you are not. Pages that appear in retrieved sources but are not quoted in the final answer have a content citability problem — their structure needs improvement. Pages that are not retrieved at all have a technical access or authority problem.',
+  },
+];
+
+const checklistItems = [
+  { label: 'Page opens with a declarative "X is..." or "X means..." statement', pass: true },
+  { label: 'PerplexityBot not blocked in robots.txt', pass: true },
+  { label: 'FAQPage schema present with 3+ self-contained Q&A pairs', pass: true },
+  { label: 'At least two specific, verifiable data points per key claim', pass: true },
+  { label: 'Section headings phrased as questions or clear statements', pass: true },
+  { label: 'llms.txt in site root pointing to this page (if cornerstone content)', pass: true },
+  { label: 'Page loads and renders without JavaScript being required', pass: true },
+  { label: 'Author / organisation entity schema present with sameAs references', pass: true },
+];
+
+const faqs = [
+  {
+    q: 'Does Perplexity use its own crawler?',
+    a: 'Yes. Perplexity operates its own web crawler, PerplexityBot, which indexes live content to power its retrieval-augmented generation pipeline. Pages blocked via robots.txt or behind authentication cannot be retrieved and will not be cited. You must explicitly permit PerplexityBot in your robots.txt to be eligible for Perplexity citations.',
+  },
+  {
+    q: 'How quickly can I improve my Perplexity citation rate?',
+    a: 'Because Perplexity uses live web retrieval rather than a fixed training snapshot, content changes can influence citation rates relatively quickly — typically within weeks of PerplexityBot re-crawling your pages. Structural improvements such as adding declarative statements, FAQ markup, and specific data points have produced measurable citation increases within 30 to 45 days in practice. Entity authority improvements take longer, as they require third-party signals to accumulate.',
+  },
+  {
+    q: 'What content format does Perplexity prefer?',
+    a: 'Perplexity favours content that is clearly structured, factually specific, and easy to extract from. Concise declarative statements that define concepts, numbered step-by-step processes, comparison tables, and explicit FAQ sections consistently perform well. Dense marketing prose, vague claims, and heavy reliance on JavaScript rendering are associated with lower citation rates.',
+  },
+  {
+    q: 'Is Perplexity optimization different from optimising for ChatGPT?',
+    a: "The underlying content principles overlap — declarative statements, structured data, entity authority — but the mechanics differ. Perplexity uses live web retrieval for all queries and cites sources inline with every answer, making it more responsive to on-page content changes. ChatGPT's base model relies on training data with a fixed cutoff, though its browsing mode introduces retrieval. Perplexity's Focus modes also create distinct optimisation opportunities not present in ChatGPT.",
+  },
+  {
+    q: 'Do I need Pro Search to appear in Perplexity results?',
+    a: "No. Both Perplexity's standard search and Pro Search can cite your content. Pro Search performs deeper multi-step retrieval for complex queries and may surface a wider range of sources. Optimising for standard Perplexity search — which represents the majority of queries — is the higher-priority task. Pro Search citation tends to follow naturally as your source authority increases.",
+  },
+];
+
+const related = [
+  {
+    tag: 'Mechanics',
+    title: 'Perplexity AI Optimisation: How the Answer Engine Works',
+    excerpt: 'The technical mechanics behind how Perplexity retrieves, ranks, and cites sources — and what they mean for your strategy.',
+    href: '/perplexity-ai-optimisation/',
+  },
+  {
+    tag: 'Strategy',
+    title: 'GEO for Perplexity: Where It Fits in Your Strategy',
+    excerpt: 'How Perplexity fits within a multi-platform GEO programme and how to prioritise it against ChatGPT and AI Overviews.',
+    href: '/geo-perplexity/',
+  },
+  {
+    tag: 'Guide',
+    title: 'How to Optimise for ChatGPT',
+    excerpt: 'Platform-specific playbook for increasing citation frequency in ChatGPT responses.',
+    href: '/optimise-for-chatgpt/',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/optimise-for-perplexity/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">Generative Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">Optimise for Perplexity</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Perplexity Playbook</span>
+        <span class="font-mono text-xs text-ink-300">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">14 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        How to Optimise for Perplexity
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        Perplexity AI cites sources inline with every answer it generates. The brands that appear in those citations receive direct attribution in front of an audience that actively searches for information. This is the step-by-step playbook for getting your brand into those citations — from crawler access to content structure to authority signals.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/contact/" class="btn btn-primary">Get a Perplexity Audit</a>
+        <a href="#eight-steps" class="btn btn-ghost">Jump to the Playbook</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Two-column layout -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Perplexity uses live web retrieval for every query — so on-page improvements affect citation rates within weeks, not months.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Blocking PerplexityBot is the single most common and most easily fixed reason a brand is absent from Perplexity answers.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Declarative opening statements, FAQ markup, and original data are the three content changes with the highest citation impact.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Source-quality scoring means authority signals (editorial links, entity data) amplify the effect of content improvements.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Weekly prompt monitoring is the minimum viable measurement cadence for tracking Perplexity citation performance.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1: Why Perplexity Matters -->
+      <section id="why-perplexity" class="anchor-top prose-dark mb-16">
+        <h2>Why Perplexity Matters for GEO</h2>
+
+        <p>
+          <strong>Perplexity AI is a retrieval-augmented answer engine that cites every source it uses, making it one of the most transparent and measurable platforms for generative engine optimisation.</strong>
+          Unlike ChatGPT's base model, which draws on a fixed training snapshot, Perplexity retrieves live web content for every query and attributes its answers to specific URLs. That attribution is both a citation opportunity and a measurable signal.
+        </p>
+
+        <p>
+          For brands targeting informational and commercial queries, Perplexity represents a growing source of attributed referral traffic. Users who click cited sources are engaged, pre-qualified by the answer they have already read, and arriving at a page they have been told is relevant by the AI. This is qualitatively different from a typical organic search click.
+        </p>
+
+        <p>
+          Perplexity's user base skews towards technically literate, research-oriented professionals — a profile that overlaps significantly with B2B and considered-purchase audiences. Getting cited in Perplexity answers for category queries ("best GEO agencies UK", "what is generative engine optimisation") puts your brand in front of exactly the buyers who are actively evaluating their options.
+        </p>
+
+        <p>
+          Understanding the playbook for Perplexity optimization is distinct from optimising for other AI platforms. For a mechanics-focused explanation of how Perplexity selects and ranks sources, see our companion guide: <a href="/perplexity-ai-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Perplexity AI Optimisation: How the Answer Engine Works</a>. For how Perplexity fits within a broader multi-platform GEO strategy, see <a href="/geo-perplexity/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO for Perplexity: Where It Fits in Your Strategy</a>.
+        </p>
+      </section>
+
+      <!-- Section 2: How Perplexity Retrieves -->
+      <section id="how-perplexity-retrieves" class="anchor-top prose-dark mb-16">
+        <h2>How Perplexity Retrieves Sources</h2>
+
+        <p>
+          <strong>Perplexity's citation behaviour is determined by a two-stage process: retrieval and synthesis.</strong>
+          Getting cited requires clearing both stages — being retrieved is necessary but not sufficient.
+        </p>
+
+        <p>
+          In the retrieval stage, Perplexity queries its web index using a version of the user's prompt. PerplexityBot crawls the live web independently, building an index that prioritises recently published, well-structured content from domains with established source-quality scores. The set of candidate pages selected at this stage is typically 5 to 15 sources, though this varies by query type and Perplexity's search mode.
+        </p>
+
+        <p>
+          In the synthesis stage, Perplexity's language model reads the retrieved content and generates a response grounded in those sources. Not all retrieved sources will be cited in the final answer — the model selects the passages most relevant to the specific query, and it favours content that is directly extractable: clear statements, specific facts, and structured answers over dense prose that buries its key claim in a paragraph.
+        </p>
+
+        <p>
+          This two-stage process has a direct implication for optimisation: there are two distinct failure modes. A brand may fail to be retrieved (a technical access or authority problem) or may be retrieved but not quoted (a content citability problem). The playbook below addresses both.
+        </p>
+      </section>
+
+      <!-- Section 3: 8-Step Playbook -->
+      <section id="eight-steps" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>The 8-Step Perplexity Optimisation Playbook</h2>
+          <p>
+            <strong>These eight steps address both failure modes — retrieval and synthesis — in priority order.</strong>
+            Work through them sequentially: the earlier steps are prerequisites for the later ones.
+          </p>
+        </div>
+
+        <div class="mt-8 space-y-5">
+          {steps.map(step => (
+            <div class="card p-6 flex gap-5">
+              <span class="font-mono text-sm font-bold text-[var(--accent)] flex-shrink-0 pt-0.5 w-8">{step.num}</span>
+              <div>
+                <h3 class="font-display text-base font-semibold text-ink-50 mb-2">{step.title}</h3>
+                <p class="text-sm leading-relaxed text-ink-300">{step.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Section 4: Content Citability Checklist (with table) -->
+      <section id="content-checklist" class="anchor-top mb-16">
+        <div class="prose-dark mb-6">
+          <h2>Content Citability Checklist</h2>
+          <p>
+            <strong>Before publishing any page that you want Perplexity to cite, run it against this checklist.</strong>
+            Each item corresponds to a documented signal that affects Perplexity's retrieval and synthesis decisions.
+          </p>
+        </div>
+
+        <div class="card overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-[var(--line)]">
+                  <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">Check</th>
+                  <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">What to Look For</th>
+                  <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">Stage Affected</th>
+                </tr>
+              </thead>
+              <tbody class="text-ink-200">
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">PerplexityBot access</td>
+                  <td class="px-5 py-3">robots.txt does not Disallow PerplexityBot on target paths</td>
+                  <td class="px-5 py-3 font-mono text-xs text-[var(--accent)]">Retrieval</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Declarative opening</td>
+                  <td class="px-5 py-3">First sentence of each major section defines the concept directly</td>
+                  <td class="px-5 py-3 font-mono text-xs text-[var(--accent)]">Synthesis</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">FAQPage schema</td>
+                  <td class="px-5 py-3">JSON-LD FAQPage with 3+ self-contained Q&A pairs</td>
+                  <td class="px-5 py-3 font-mono text-xs text-[var(--accent)]">Both</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Original data</td>
+                  <td class="px-5 py-3">At least one specific fact, figure, or finding not available elsewhere</td>
+                  <td class="px-5 py-3 font-mono text-xs text-[var(--accent)]">Synthesis</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">JS-free rendering</td>
+                  <td class="px-5 py-3">Key content visible in raw HTML, not dependent on client-side rendering</td>
+                  <td class="px-5 py-3 font-mono text-xs text-[var(--accent)]">Retrieval</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">llms.txt listing</td>
+                  <td class="px-5 py-3">Page referenced in site-root llms.txt if it is cornerstone content</td>
+                  <td class="px-5 py-3 font-mono text-xs text-[var(--accent)]">Retrieval</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Headings as questions</td>
+                  <td class="px-5 py-3">H2/H3 headings match the natural-language questions your audience asks</td>
+                  <td class="px-5 py-3 font-mono text-xs text-[var(--accent)]">Synthesis</td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-3 font-medium text-ink-100">Entity schema</td>
+                  <td class="px-5 py-3">Organisation schema with sameAs references to Wikidata, LinkedIn, etc.</td>
+                  <td class="px-5 py-3 font-mono text-xs text-[var(--accent)]">Both</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Technical Setup -->
+      <section id="technical-setup" class="anchor-top prose-dark mb-16">
+        <h2>Technical Setup for Perplexity Optimisation</h2>
+
+        <p>
+          <strong>Technical access is a binary prerequisite: either Perplexity can crawl your content or it cannot.</strong>
+          All content and authority work is irrelevant if PerplexityBot is blocked.
+        </p>
+
+        <h3>robots.txt Configuration</h3>
+        <p>
+          Check your robots.txt for any of the following identifiers: <code>PerplexityBot</code>, <code>*</code> (wildcard), or custom rules that might inadvertently catch Perplexity's crawler user-agent string. A permissive configuration that allows PerplexityBot to access your full site is the default you want unless you have specific reasons to restrict certain paths.
+        </p>
+        <p>
+          If you have previously implemented AI-crawler blocking as a blanket policy, revisit that decision. Blocking PerplexityBot removes you from all Perplexity citation opportunities. Blocking is only justified for content you genuinely do not want AI systems to use — paywalled content, confidential data, or content under licence restrictions.
+        </p>
+
+        <h3>llms.txt Implementation</h3>
+        <p>
+          Place an llms.txt file at <code>https://yourdomain.com/llms.txt</code>. The format is plain text. Include a one-paragraph description of your organisation and expertise, followed by a structured list of your most important pages with brief annotations explaining what each contains. For a GEO agency, this would include your pillar guide, service pages, case studies, and the content pages most relevant to your primary query targets.
+        </p>
+        <p>
+          The <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO pillar guide</a> on this site contains further detail on llms.txt format and implementation. GEOoptimised can implement this as part of a <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">technical GEO audit</a>.
+        </p>
+
+        <h3>Schema Markup Priorities for Perplexity</h3>
+        <p>
+          Perplexity's retrieval layer benefits from structured data that reduces ambiguity about content type and key claims. For content pages, the highest-priority schemas are FAQPage (for direct-answer extraction), Article with explicit author and publisher entities, and HowTo for procedural content. Organisation schema with complete sameAs references helps Perplexity correctly identify and attribute your brand across answers.
+        </p>
+      </section>
+
+      <!-- Section 6: Monitoring Citations -->
+      <section id="monitoring" class="anchor-top prose-dark mb-16">
+        <h2>Monitoring Your Perplexity Citations</h2>
+
+        <p>
+          <strong>Perplexity citation monitoring is the feedback loop that turns the playbook above into a continuously improving programme.</strong>
+          Without measurement, you cannot distinguish between pages that are working and pages that need revision.
+        </p>
+
+        <h3>Manual Monitoring Protocol</h3>
+        <p>
+          Build a query set of 20 to 50 prompts that represent your most important commercial and informational targets. Include both branded queries ("GEOoptimised services") and unbranded category queries ("best GEO agencies UK", "how to optimise for AI search"). Run each query in Perplexity weekly, logging: whether your brand is cited, which URL is cited, where in the answer it appears, and which competitors are cited instead.
+        </p>
+        <p>
+          Perplexity's responses vary between sessions — the same query can produce different cited sources on different runs. For reliable trend data, run each query three times per week and track the median citation rate, not a single snapshot.
+        </p>
+
+        <h3>Interpreting Citation Gaps</h3>
+        <p>
+          When your brand is consistently absent from Perplexity answers for a target query, diagnose the cause before changing content. Check that PerplexityBot can access the relevant page. Then check whether your page is included in the Perplexity-generated source list but not quoted in the final answer — this points to a synthesis problem (content citability). If your page is not in the source list at all, the problem is retrieval (authority, recency, or technical access).
+        </p>
+        <p>
+          For cross-platform monitoring that covers Perplexity alongside ChatGPT, Copilot, and Google AI Overviews, see our guide to <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility measurement</a>.
+        </p>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="anchor-top mb-16">
+        <h2 class="font-display text-[28px] font-semibold text-white tracking-tight mb-8">Frequently Asked Questions</h2>
+        <div class="space-y-3" id="faq-accordion">
+          {faqs.map((faq, i) => (
+            <div class="card overflow-hidden" data-faq>
+              <button
+                type="button"
+                class="flex w-full items-center justify-between p-5 text-left font-display text-base font-semibold text-ink-50 transition hover:text-[var(--accent)]"
+                aria-expanded={i === 0 ? 'true' : 'false'}
+                data-faq-trigger
+              >
+                <span>{faq.q}</span>
+                <span class="ml-4 text-lg text-[var(--accent)] transition-transform duration-200" data-faq-icon style={i === 0 ? 'transform:rotate(45deg)' : ''}>+</span>
+              </button>
+              <div
+                class="overflow-hidden transition-all duration-300"
+                data-faq-panel
+                style={i === 0 ? 'max-height:600px' : 'max-height:0'}
+              >
+                <div class="border-t border-[var(--line-soft)] px-5 pb-5 pt-4 text-sm leading-relaxed text-ink-300">
+                  {faq.a}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Related Reading -->
+      <div id="related" class="mb-16">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-4 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Audit Your Perplexity Citation Footprint</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Most brands do not know whether PerplexityBot can access their content, let alone whether they are being cited in Perplexity answers. Our Perplexity-specific audit covers crawler access, content citability scoring, and authority gap analysis — with a prioritised fix list.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request a Perplexity Audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

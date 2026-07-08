@@ -1,0 +1,613 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Best GEO Tools in 2026: What Changed This Year | GEOoptimised';
+const description = 'The GEO tool landscape in 2026: what is new, what has consolidated, which categories emerged, and which platforms practitioners are actually using now. A dated annual roundup, not a generic category map.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Best GEO Tools in 2026: What Changed This Year",
+    "description": "A dated annual roundup of the GEO tool landscape in 2026 — what is new, what has consolidated, which categories have emerged, and what practitioners are actually using now. Updated June 2026.",
+    "url": "https://geooptimised.com/best-geo-tools-2026/",
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "inLanguage": "en-GB",
+    "image": "https://geooptimised.com/og-image.png",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://geooptimised.com/best-geo-tools-2026/"
+    },
+    "author": {
+      "@id": "https://geooptimised.com/#organization"
+    },
+    "publisher": {
+      "@id": "https://geooptimised.com/#organization"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "GEO Tool Market Developments in 2026",
+    "description": "Key developments in the GEO tool landscape reviewed in this 2026 annual roundup: market consolidation, newly prominent categories, multi-platform coverage as baseline, and the rise of AI share-of-voice as an operational metric.",
+    "numberOfItems": 4,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "What Changed in the GEO Tool Market in 2025–2026",
+        "url": "https://geooptimised.com/best-geo-tools-2026/#what-changed-2026"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "The 2026 GEO Tool Landscape",
+        "url": "https://geooptimised.com/best-geo-tools-2026/#landscape-2026"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "AI Citation Monitoring: Matured Category in 2026",
+        "url": "https://geooptimised.com/best-geo-tools-2026/#monitoring-platforms"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "What the 2026 Market Shifts Mean for Your Current Stack",
+        "url": "https://geooptimised.com/best-geo-tools-2026/#stack-implications"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What makes a GEO tool worth using in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In 2026, a GEO tool earns its place in a stack if it measures something that genuinely cannot be measured by a traditional SEO platform. The minimum threshold is real AI platform coverage — not simulated queries or traffic proxies — across ChatGPT, Perplexity, Gemini, and Copilot. Beyond that, tools are worth their cost if they offer reliable historical data retention, prompt customisation, citation-level granularity (which URL was cited, not just which brand), and transparent methodology. The market has matured enough that superficial tools with AI-era branding but no substantive measurement capability are now easier to identify and avoid."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is the GEO tool landscape different in 2026 compared to 2024?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The GEO tool market has consolidated meaningfully since 2024. Early entrants that lacked rigorous data methodology have largely dropped away, and the category leaders have invested in multi-platform coverage, competitive benchmarking, and API access for enterprise clients. A notable shift in 2025 and 2026 is the addition of GEO-adjacent features by established SEO platforms — Semrush, Ahrefs, and Authoritas have each added AI visibility functionality — blurring the line between dedicated GEO tools and traditional SEO suites. However, the measurement rigour of purpose-built GEO tools still exceeds that of add-on features in most cases."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I use one GEO platform or combine multiple tools?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most mature GEO programmes use at least two distinct tools: one dedicated AI citation monitoring platform for the core measurement task, and one or more specialist tools for entity analysis and content optimisation. No single platform does everything well in 2026. The most common combination is a dedicated monitoring platform (for citation tracking and competitive benchmarking) plus an entity analysis tool (for knowledge graph auditing and enrichment). Traditional SEO tools remain useful for the foundational work — technical audits, content structure, backlink analysis — that underpins GEO performance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I reassess which GEO tools I use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Annual reassessment is a reasonable minimum, given how quickly the category moves. The most important moments to reassess are when a major AI platform changes its architecture or retrieval system (which affects what tools can measure), when a competitor makes a significant GEO tool investment, and when your own programme matures past a stage where your current tooling was designed to serve. An annual roundup like this one is a useful reference point, but always supplement it with direct vendor trials and current user community feedback — the specifics shift faster than annual publication cycles can capture."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are free GEO tools adequate for a serious programme?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Free and free-tier GEO tools are adequate for establishing a baseline and learning the discipline, but they have real limitations for ongoing programmes. Most free options offer restricted query volumes, limited historical data retention, and no competitive benchmarking. For a brand serious about GEO as an ongoing performance channel, a paid monitoring platform is eventually necessary. The practical approach is to start with free tools, use them to establish your measurement process, and upgrade to a paid platform once you have a repeatable workflow that justifies the investment."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://geooptimised.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "GEO Tools",
+        "item": "https://geooptimised.com/geo-tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Best GEO Tools 2026",
+        "item": "https://geooptimised.com/best-geo-tools-2026/"
+      }
+    ]
+  }
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/best-geo-tools-2026/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex items-center gap-2 font-mono text-xs text-ink-300">
+      <li><a href="/" class="hover:text-[var(--accent)] transition-colors">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/geo-tools/" class="hover:text-[var(--accent)] transition-colors">GEO Tools</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">Best GEO Tools 2026</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-fade relative overflow-hidden">
+    <div class="container-wide grid gap-12 pt-12 pb-20 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-7">
+        <span class="eyebrow">2026 Annual Roundup</span>
+        <h1 class="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <span class="grad-text">Best GEO Tools in 2026</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-300">
+          This is the dated annual roundup, not a generic category guide. The GEO tool market changed materially in 2025–2026: the field consolidated, weak entrants dropped away, established SEO platforms moved into the space, and multi-platform coverage became table stakes rather than a differentiator. This page records what is different now — newly prominent tool types, categories that matured, and what a working stack actually looks like in mid-2026. For the timeless workflow guide (tools by job, stack sequencing), see <a href="/best-ai-tools-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Best AI Tools for GEO</a>.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/contact/" class="btn btn-primary">Get Tools Advice</a>
+          <a href="/geo-tools/" class="btn btn-ghost">All GEO Tool Categories</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="card p-6">
+          <span class="eyebrow">What changed in 2026</span>
+          <div class="mt-4 space-y-3">
+            <div class="flex items-start gap-3">
+              <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3,8 6,11 13,4"/></svg>
+              <span class="text-sm text-ink-300">Market consolidation: weak entrants dropped away</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3,8 6,11 13,4"/></svg>
+              <span class="text-sm text-ink-300">Multi-platform coverage is now baseline, not a differentiator</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3,8 6,11 13,4"/></svg>
+              <span class="text-sm text-ink-300">Established SEO platforms launched GEO add-ons</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3,8 6,11 13,4"/></svg>
+              <span class="text-sm text-ink-300">AI share-of-voice became an operational metric</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3,8 6,11 13,4"/></svg>
+              <span class="text-sm text-ink-300">Entity tooling: still underserved, rising in priority</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- How this differs note -->
+  <div class="container-wide pt-4">
+    <div class="rounded-xl border border-[var(--line)] bg-[var(--bg-2)] px-6 py-4 text-sm text-ink-300">
+      <strong class="text-ink-100">How this guide differs from our other tool resources:</strong> This is the <em>2026 annual roundup</em> — a time-stamped account of what changed this year: which tool categories matured, where the market consolidated, and what the 2025–2026 platform shifts mean for your current stack. It does not map tools by workflow job or explain how to assemble a stack from scratch; for that, see the <a href="/best-ai-tools-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Best AI Tools for GEO workflow guide</a>. For a full category overview independent of year, see the <a href="/geo-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO Tools hub</a>. For head-to-head evaluation criteria, see the <a href="/geo-tools-comparison/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO tools comparison</a>. For zero-cost starting points, see <a href="/free-geo-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">free GEO tools</a>.
+    </div>
+  </div>
+
+  <!-- Sticky TOC -->
+  <nav aria-label="On this page" class="container-wide pb-4 lg:pb-0">
+    <div class="card px-6 py-4 lg:sticky lg:top-[calc(var(--header-h)+1rem)] lg:z-10">
+      <span class="font-mono text-xs text-ink-500 uppercase tracking-widest">On this page</span>
+      <ol class="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-300">
+        <li><a href="#what-changed-2026" class="hover:text-[var(--accent)] transition-colors">What changed in 2026</a></li>
+        <li><a href="#landscape-2026" class="hover:text-[var(--accent)] transition-colors">2026 landscape</a></li>
+        <li><a href="#monitoring-platforms" class="hover:text-[var(--accent)] transition-colors">Monitoring platforms</a></li>
+        <li><a href="#content-optimisation" class="hover:text-[var(--accent)] transition-colors">Content optimisation</a></li>
+        <li><a href="#entity-tools" class="hover:text-[var(--accent)] transition-colors">Entity tools</a></li>
+        <li><a href="#seo-adjacent" class="hover:text-[var(--accent)] transition-colors">SEO-adjacent</a></li>
+        <li><a href="#category-table" class="hover:text-[var(--accent)] transition-colors">Category table</a></li>
+        <li><a href="#stack-implications" class="hover:text-[var(--accent)] transition-colors">2026 stack implications</a></li>
+        <li><a href="#faq" class="hover:text-[var(--accent)] transition-colors">FAQ</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Main prose -->
+  <div class="container-wide py-20">
+    <div class="prose-dark space-y-20">
+
+      <!-- What changed in 2026 -->
+      <section id="what-changed-2026">
+        <div class="grid gap-8 lg:grid-cols-12">
+          <div class="lg:col-span-4">
+            <span class="eyebrow">What is new</span>
+            <h2 class="anchor-top !mt-3">What Changed in the GEO Tool Market in 2025–2026</h2>
+          </div>
+          <div class="lg:col-span-8 space-y-4">
+            <p><strong>Three developments define the GEO tool market in 2026, and they change which platforms are worth your attention compared with two years ago.</strong></p>
+            <p>First, the field consolidated faster than most predicted. The initial wave of 2023–2024 entrants included a significant number of platforms with thin data methodology — tools that claimed to measure AI visibility but relied on traffic proxies, simulated queries, or single-platform sampling. By mid-2025, those tools had either closed, pivoted, or lost ground to platforms that invested in genuine multi-platform query infrastructure. The practical result for practitioners: there are fewer tools to evaluate now, but the category leaders are meaningfully more capable.</p>
+            <p>Second, established SEO platforms entered the space. Semrush, Ahrefs, and Authoritas each launched AI visibility features between late 2024 and mid-2025. This created a new decision point that did not exist in 2024: teams that already pay for these platforms can now get a basic AI citation baseline without adding a new tool. The caveat — which matters more as programme maturity increases — is that these add-on features have shallower prompt libraries, less competitive benchmarking depth, and narrower platform coverage than dedicated GEO tools. They are a genuine starting point, not a replacement for purpose-built measurement.</p>
+            <p>Third, AI share-of-voice moved from an aspirational metric to a standard operational one. In 2024, most GEO monitoring was absolute — how often does our brand appear? In 2026, competitive framing is the expectation: the same query set, your brand and three named competitors, plotted as share of total citations. Tools that do not offer this view are now considered incomplete by practitioners running active programmes. For the timeless workflow context behind these developments — which tool types serve which jobs regardless of year — see the <a href="/best-ai-tools-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Best AI Tools for GEO workflow guide</a>.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2026 landscape -->
+      <section id="landscape-2026">
+        <span class="eyebrow">Context</span>
+        <h2 class="anchor-top !mt-3">The GEO Tool Landscape in 2026</h2>
+        <p class="mt-4 max-w-3xl text-ink-300 leading-relaxed"><strong>The GEO tool market entered 2026 in a noticeably different state than it was at the beginning of 2024: more consolidated, more capable, and considerably more contested.</strong></p>
+        <div class="mt-8 space-y-4">
+          <p>The surge of new entrants between 2023 and mid-2025 has given way to a more selective landscape. Tools with weak data methodology or thin platform coverage have lost ground to platforms that invested in rigour and breadth. At the same time, several established SEO platforms — notably Semrush, Ahrefs, and Authoritas — have added AI visibility features that provide a meaningful entry point for teams already using those tools, even if the measurement depth does not yet match dedicated GEO platforms.</p>
+          <p>Two structural shifts define the 2026 landscape. First, multi-platform coverage has become a baseline expectation rather than a differentiator. Any tool that tracks AI citation on only one platform is now considered a narrow instrument. Practitioners expect coverage of ChatGPT, Perplexity, Gemini, and Copilot as standard, with Google AI Overviews and Claude representing the meaningful differentiators between mid-tier and premium offerings.</p>
+          <p>Second, the concept of AI share-of-voice has matured from an aspirational metric into an operational one. The tools that have earned sustained practitioner trust are those that make competitive benchmarking — tracking your citation rate alongside named competitors for the same query set — a first-class feature rather than an afterthought. A brand's absolute AI citation rate matters far less than its position relative to the competitors it is actually measured against by buyers and stakeholders.</p>
+          <p>The category most underdeveloped relative to its importance remains entity tooling. <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Generative engine optimisation</a> is fundamentally an entity problem — AI models cite brands they recognise and trust, and recognition is built through consistent, well-structured presence in knowledge sources — yet the tools for auditing and improving entity presence remain relatively specialist and less accessible than citation monitoring platforms.</p>
+        </div>
+      </section>
+
+      <!-- Category 1: Monitoring platforms -->
+      <section id="monitoring-platforms">
+        <span class="eyebrow">Category 1</span>
+        <h2 class="anchor-top !mt-3">AI Visibility and Citation Monitoring Platforms</h2>
+        <p class="mt-4 max-w-3xl text-ink-300 leading-relaxed"><strong>Purpose-built AI citation monitoring platforms are the non-negotiable core of a 2026 GEO stack: they are the only tools that directly measure whether your brand is being cited in AI-generated answers.</strong></p>
+
+        <div class="mt-8 space-y-6">
+
+          <div class="card p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="font-display text-lg font-semibold text-ink-50">Dedicated GEO Monitoring Platforms</h3>
+                <p class="mt-1 font-mono text-xs text-ink-500">Core measurement category</p>
+              </div>
+              <svg aria-hidden="true" class="mt-1 h-6 w-6 shrink-0 text-[var(--accent)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+            </div>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300"><strong>Platforms such as Profound, Otterly.ai, and Peec AI represent the dedicated GEO monitoring category in 2026.</strong> These tools query AI platforms systematically with your target prompts, record whether and how your brand appears, and plot citation frequency as a trackable time series. What distinguishes the stronger platforms in 2026 is not simply that they can collect this data — most now can — but how they handle it: consistent methodology across query runs, meaningful competitive benchmarking, citation-level URL tracking, and sufficient historical retention to support trend analysis.</p>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">The market is active enough that this list will change. Verify which platforms currently offer the platform coverage and query volumes appropriate for your programme. Most offer trial access or limited free tiers — use them before committing.</p>
+          </div>
+
+          <div class="card p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h3 class="font-display text-lg font-semibold text-ink-50">SEO Platform AI Visibility Add-ons</h3>
+                <p class="mt-1 font-mono text-xs text-ink-500">Entry point for existing SEO tool users</p>
+              </div>
+              <svg aria-hidden="true" class="mt-1 h-6 w-6 shrink-0 text-[var(--accent)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            </div>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300"><strong>Semrush, Ahrefs, and Authoritas have each added AI visibility monitoring features that provide a useful entry point for teams already paying for these platforms.</strong> The advantage is consolidation: if you already have a Semrush or Ahrefs subscription, you may be able to establish an AI visibility baseline without adding a new tool spend. The limitation is measurement depth. As of 2026, the AI-specific features within traditional SEO platforms generally offer narrower platform coverage, less customisable prompt libraries, and less rigorous competitive benchmarking than dedicated GEO tools. They are a starting point, not a destination for a programme that takes AI visibility seriously. See our dedicated guides on <a href="/semrush-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Semrush for GEO</a> and <a href="/ahrefs-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Ahrefs for GEO</a>.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Category 2: Content optimisation -->
+      <section id="content-optimisation">
+        <span class="eyebrow">Category 2 — 2026 update</span>
+        <h2 class="anchor-top !mt-3">Content Optimisation Tools: What Shifted in 2025–2026</h2>
+        <p class="mt-4 max-w-3xl text-ink-300 leading-relaxed"><strong>The content optimisation category looks different in 2026 than it did at the start of 2024: two developments changed how practitioners use these tools, and one expectation that was new in 2024 has now become standard.</strong></p>
+
+        <div class="mt-8 space-y-6">
+
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">The AI Assistant Shift: From Drafting Aid to Structural Reformatter</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300"><strong>The most significant change in how GEO practitioners use content tools in 2026 is the normalisation of AI writing assistants — Claude, ChatGPT, Gemini — as restructuring instruments rather than drafting tools.</strong> In 2024, the dominant use case was generating new content. By 2026, experienced GEO practitioners use AI assistants primarily to reformat existing, expert-authored content to match citation-friendly structural patterns: bold declarative leads, explicit question-and-answer blocks, definition sections, FAQ appendices. The substance stays human; the structural transformation is AI-assisted. This has made AI assistants effectively zero-marginal-cost optimisation tooling for teams that already pay for access to one of these platforms — a shift that was not obvious from the 2024 positioning of these tools.</p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">Semantic Content Platforms: GEO Use Cases Now Documented</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300"><strong>Platforms like Clearscope, Surfer SEO, and MarketMuse were already useful for GEO in 2024, but their GEO applications were informal — practitioners improvising a use case the vendors did not explicitly support.</strong> In 2026, GEO-specific use cases are more formally documented, either by the vendors themselves or by the practitioner community. The core application remains the same: using semantic breadth and structural scoring as a proxy for citation-worthiness. What changed is that the practitioner community has developed clearer heuristics for interpreting these scores through a GEO lens — which signals to weight, which to discount — rather than applying them raw from a traditional SEO playbook.</p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">Structured Data: Now a Baseline Expectation, Not a Differentiator</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300"><strong>In 2026, correct Article, FAQPage, and BreadcrumbList schema markup is a minimum standard for content pages targeting AI citation — not an advantage for those who implement it, but a liability for those who do not.</strong> The standard free tools — Google's Rich Results Test, the Schema.org validator — remain the right instruments for verifying implementation. What changed is the practitioner consensus: in 2024, structured data was actively debated as a GEO signal; by 2026, it is treated as a non-negotiable baseline. Teams still missing schema markup on content pages are now two cycles behind, not one.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Category 3: Entity tools -->
+      <section id="entity-tools">
+        <span class="eyebrow">Category 3</span>
+        <h2 class="anchor-top !mt-3">Entity and Knowledge Graph Tools</h2>
+        <p class="mt-4 max-w-3xl text-ink-300 leading-relaxed"><strong>Entity tools address the most underserved layer of GEO: improving how AI models recognise and describe your brand by strengthening its footprint in the knowledge sources LLMs draw on.</strong></p>
+
+        <div class="mt-8 space-y-6">
+
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">Kalicube Pro</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300"><strong>Kalicube Pro is the most publicly recognised specialist tool for entity-based GEO work in 2026, focused on auditing and improving how AI and search platforms understand and describe your brand.</strong> Its core function is the Brand SERP — how your brand appears in knowledge panels, AI answers, and entity-driven results — and the process of improving the sources that feed into this representation. For brands that have existing authority but low AI citation rates, entity gap analysis through Kalicube Pro is often the highest-leverage starting point. It is a specialist tool with a learning curve; it is not a general-purpose GEO monitoring platform.</p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">Wikipedia and Wikidata Manual Audit</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300"><strong>For many organisations, the most impactful entity work in 2026 is not software-driven at all — it is the manual audit and improvement of Wikipedia and Wikidata entries that AI models treat as authoritative sources.</strong> No tool substitutes for a careful review of whether your organisation has a Wikipedia article, whether it is accurate and well-sourced, and whether your Wikidata entity record contains the structured attributes (founding date, headquarters, products, personnel) that LLMs reference when describing your brand. This work is editorial, not technical, and requires familiarity with Wikipedia's notability standards and Wikidata's data model. The barrier is real but the return is material for brands whose knowledge graph presence does not match their actual market standing.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Category 4: SEO-adjacent -->
+      <section id="seo-adjacent">
+        <span class="eyebrow">Category 4</span>
+        <h2 class="anchor-top !mt-3">Traditional SEO Tools with GEO Utility</h2>
+        <p class="mt-4 max-w-3xl text-ink-300 leading-relaxed"><strong>Several traditional SEO tools deliver meaningful value within a GEO programme without being purpose-built for AI visibility — used correctly, they address the foundational signals that AI citation ultimately depends on.</strong></p>
+
+        <div class="mt-8 space-y-6">
+
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">Technical Crawlers: Screaming Frog and Sitebulb</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300"><strong>Technical SEO crawlers surface the structural issues — orphan pages, thin content, crawl errors, internal link gaps — that undermine the topical depth signals AI models use when assessing whether a site is an authoritative source on a topic.</strong> Screaming Frog has a free tier covering up to 500 URLs, which is adequate for smaller sites and initial audits. Sitebulb offers visualisations that are particularly useful for identifying cluster architecture weaknesses. Neither tool measures AI visibility directly, but both contribute to the foundational technical quality that GEO depends on.</p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">Backlink and Brand Mention Analysis: Ahrefs and Semrush</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300"><strong>Brand mention monitoring within Ahrefs and Semrush identifies where your organisation is referenced across the web — the external citation footprint that contributes to how AI models assess your authority.</strong> While backlinks are a traditional SEO signal, their GEO relevance is specifically about the quality and nature of the external sources that reference your brand: citations in Wikipedia, industry publications, government datasets, and academic sources carry more entity weight than a large volume of low-authority links. Tools that surface this qualitative distinction in your mention profile are worth using for the entity authority layer of your GEO programme.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Category comparison table -->
+      <section id="category-table">
+        <span class="eyebrow">Quick reference</span>
+        <h2 class="anchor-top !mt-3">2026 GEO Tool Categories at a Glance</h2>
+        <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed"><strong>The table below summarises the four tool categories reviewed in this roundup, with their primary GEO function, typical entry cost, and representative options.</strong> Pricing and features change; treat this as a starting framework for your own evaluation, not a definitive buyer's guide.</p>
+
+        <div class="mt-8 overflow-x-auto rounded-xl border border-[var(--line)]">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-[var(--bg-2)] text-ink-200">
+              <tr>
+                <th scope="col" class="px-5 py-4 font-semibold">Category</th>
+                <th scope="col" class="px-5 py-4 font-semibold">Primary GEO function</th>
+                <th scope="col" class="px-5 py-4 font-semibold">Typical entry cost</th>
+                <th scope="col" class="px-5 py-4 font-semibold">Free option?</th>
+                <th scope="col" class="px-5 py-4 font-semibold">Representative options</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[var(--line)]">
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 font-medium text-[var(--accent)]">AI Citation Monitoring</td>
+                <td class="px-5 py-4 text-ink-200">Track brand citation rate across AI platforms over time</td>
+                <td class="px-5 py-4 text-ink-300">~£50–£200/month</td>
+                <td class="px-5 py-4 text-ink-300">Limited free tiers</td>
+                <td class="px-5 py-4 text-ink-300">Profound, Otterly.ai, Peec AI</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 font-medium text-[var(--accent)]">SEO Platform AI Add-ons</td>
+                <td class="px-5 py-4 text-ink-200">Entry-level AI visibility for existing SEO subscribers</td>
+                <td class="px-5 py-4 text-ink-300">Included with SEO plan</td>
+                <td class="px-5 py-4 text-ink-300">No (requires SEO plan)</td>
+                <td class="px-5 py-4 text-ink-300">Semrush AI, Ahrefs, Authoritas</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 font-medium text-accent-300">Content Optimisation</td>
+                <td class="px-5 py-4 text-ink-200">Restructure content for AI citation selection</td>
+                <td class="px-5 py-4 text-ink-300">Free (AI assistants) – £100+/month</td>
+                <td class="px-5 py-4 text-ink-300">Yes (AI assistants)</td>
+                <td class="px-5 py-4 text-ink-300">Claude, ChatGPT, Clearscope, Surfer</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 font-medium text-accent-300">Schema Validation</td>
+                <td class="px-5 py-4 text-ink-200">Verify structured data is correct and complete</td>
+                <td class="px-5 py-4 text-ink-300">Free</td>
+                <td class="px-5 py-4 text-ink-300">Yes</td>
+                <td class="px-5 py-4 text-ink-300">Google Rich Results Test, Schema.org validator</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 font-medium text-ink-100">Entity Analysis</td>
+                <td class="px-5 py-4 text-ink-200">Audit and improve knowledge graph brand representation</td>
+                <td class="px-5 py-4 text-ink-300">Specialist pricing; free for Wikipedia/Wikidata work</td>
+                <td class="px-5 py-4 text-ink-300">Partly (manual methods)</td>
+                <td class="px-5 py-4 text-ink-300">Kalicube Pro; Wikipedia/Wikidata manual</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 font-medium text-ink-100">Technical Crawlers</td>
+                <td class="px-5 py-4 text-ink-200">Surface structural issues affecting topical authority</td>
+                <td class="px-5 py-4 text-ink-300">Free tier available</td>
+                <td class="px-5 py-4 text-ink-300">Yes (up to 500 URLs)</td>
+                <td class="px-5 py-4 text-ink-300">Screaming Frog, Sitebulb</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-4 text-xs text-ink-500">Pricing is approximate and based on publicly available information as at June 2026. Always verify current pricing and feature sets directly with vendors — the GEO tool market moves quickly.</p>
+      </section>
+
+      <!-- 2026 stack implications -->
+      <section id="stack-implications">
+        <span class="eyebrow">What this means for your stack</span>
+        <h2 class="anchor-top !mt-3">What the 2026 Market Shifts Mean for Your Current Tool Stack</h2>
+        <p class="mt-4 max-w-3xl text-ink-300 leading-relaxed"><strong>The 2025–2026 developments described above have specific, practical implications for teams at different stages of GEO programme maturity.</strong> This is not a guide to building a stack from scratch — see the <a href="/best-ai-tools-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Best AI Tools for GEO workflow guide</a> for that — but a year-specific read on what those developments mean if you already have a stack.</p>
+
+        <div class="mt-8 space-y-6">
+
+          <div class="card p-6 border-l-2 border-l-[var(--accent)]">
+            <h3 class="font-display text-base font-semibold text-ink-50">If you adopted a tool in 2023 or early 2024</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">The consolidation that occurred in 2025 makes a platform reassessment overdue. Several tools that were credible early-market options have either closed or stagnated relative to category leaders. Specifically, audit whether your current monitoring platform now offers multi-platform coverage (ChatGPT, Perplexity, Gemini, and Copilot as a minimum), citation-level URL tracking, and competitive share-of-voice views. If it does not, these are now standard features at comparable pricing — not premium upgrades. See the <a href="/geo-tools-comparison/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO tools comparison</a> for evaluation criteria.</p>
+          </div>
+
+          <div class="card p-6 border-l-2 border-l-[var(--accent)]">
+            <h3 class="font-display text-base font-semibold text-ink-50">If you are currently using an SEO platform's AI add-on as your primary GEO tool</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">The SEO platform AI add-ons that launched in 2024–2025 are a legitimate starting point, and better than no measurement at all. However, the gap between these add-ons and dedicated GEO platforms in terms of prompt library depth, competitive benchmarking, and historical retention has not narrowed as fast as the SEO vendors' marketing implies. If you have been running on an add-on for six months or more and have not yet established reliable competitive share-of-voice data for your key query categories, this is the year to evaluate dedicated GEO monitoring platforms alongside your current tool.</p>
+          </div>
+
+          <div class="card p-6 border-l-2 border-l-[var(--accent)]">
+            <h3 class="font-display text-base font-semibold text-ink-50">If your monitoring stack is solid but entity work is absent</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">The entity tooling gap remains the most common blind spot in otherwise mature GEO stacks in 2026. Brands that have invested in citation monitoring and content optimisation but have not addressed their knowledge graph representation will find a ceiling on citation rate improvement that no amount of content restructuring will break through. If your monitoring data shows stable or slow-growing citation rates despite active content work, an entity audit — starting with Wikipedia and Wikidata, with or without Kalicube Pro — is the next highest-leverage investment. This is a 2026 priority observation, not a generic recommendation.</p>
+          </div>
+
+        </div>
+
+        <div class="mt-8 rounded-xl border border-[var(--line)] bg-[var(--bg-2)] px-6 py-4 text-sm text-ink-300">
+          <strong class="text-ink-100">Dated roundup caveat:</strong> This roundup reflects the GEO tool landscape as at June 2026. The category moves fast. New platforms launch, established tools add features, and the AI platforms these tools measure continue to evolve their architectures. Check current vendor documentation, community forums, and direct trials before finalising any tool decisions based on this page. If you want independent, vendor-neutral tools advice tailored to your programme, <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">get in touch</a>.
+        </div>
+      </section>
+
+      <!-- Related reading -->
+      <section>
+        <span class="eyebrow">Related reading</span>
+        <h2 class="anchor-top !mt-3">Further Resources</h2>
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <a href="/geo-tools/" class="card card-hover block p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">GEO Tools Hub</h3>
+            <p class="mt-2 text-sm text-ink-300 leading-relaxed">The parent hub: all GEO tool categories, evaluation criteria, and a framework for selecting the right platforms.</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a href="/free-geo-tools/" class="card card-hover block p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">Free GEO Tools</h3>
+            <p class="mt-2 text-sm text-ink-300 leading-relaxed">Genuinely free and free-tier options for starting GEO at no or low cost, including manual methods.</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a href="/best-ai-tools-geo/" class="card card-hover block p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">Best AI Tools for GEO</h3>
+            <p class="mt-2 text-sm text-ink-300 leading-relaxed">Tools organised by workflow stage: audit, optimise, monitor, and report.</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a href="/geo-tools-comparison/" class="card card-hover block p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">GEO Tools Comparison</h3>
+            <p class="mt-2 text-sm text-ink-300 leading-relaxed">Head-to-head comparison of leading GEO monitoring platforms across consistent evaluation criteria.</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a href="/best-llm-visibility-tools/" class="card card-hover block p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">Best LLM Visibility Tools</h3>
+            <p class="mt-2 text-sm text-ink-300 leading-relaxed">Citation-monitoring platforms across ChatGPT, Perplexity, Gemini and Claude reviewed in depth.</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a href="/generative-engine-optimisation/" class="card card-hover block p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">What Is GEO?</h3>
+            <p class="mt-2 text-sm text-ink-300 leading-relaxed">The definitive guide to generative engine optimisation: what it is, why it matters, and how it works.</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- FAQ Accordion -->
+  <section id="faq" class="container-wide py-20">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Frequently Asked Questions</h2>
+
+    <div class="mt-10 max-w-3xl divide-y divide-[var(--line)]">
+
+      <div class="faq-item">
+        <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
+          <span>What makes a GEO tool worth using in 2026?</span>
+          <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+        </button>
+        <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+          <p class="pb-5 text-ink-300 leading-relaxed">In 2026, a GEO tool earns its place in a stack if it measures something that genuinely cannot be measured by a traditional SEO platform. The minimum threshold is real AI platform coverage across ChatGPT, Perplexity, Gemini, and Copilot. Beyond that, tools are worth their cost if they offer reliable historical data retention, prompt customisation, citation-level granularity, and transparent methodology. The market has matured enough that superficial tools with AI-era branding but no substantive measurement capability are now easier to identify and avoid.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
+          <span>How is the GEO tool landscape different in 2026 compared to 2024?</span>
+          <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 011-1z"/></svg>
+        </button>
+        <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+          <p class="pb-5 text-ink-300 leading-relaxed">The GEO tool market has consolidated meaningfully since 2024. Early entrants with weak data methodology have largely dropped away, and category leaders have invested in multi-platform coverage, competitive benchmarking, and API access for enterprise clients. Established SEO platforms — notably Semrush, Ahrefs, and Authoritas — have added AI visibility features, blurring the line between dedicated GEO tools and traditional SEO suites. The measurement rigour of purpose-built GEO tools still generally exceeds that of add-on features.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
+          <span>Should I use one GEO platform or combine multiple tools?</span>
+          <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 011-1z"/></svg>
+        </button>
+        <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+          <p class="pb-5 text-ink-300 leading-relaxed">Most mature GEO programmes use at least two distinct tools: one dedicated AI citation monitoring platform for the core measurement task, and one or more specialist tools for entity analysis and content optimisation. No single platform does everything well in 2026. The most common combination is a dedicated monitoring platform plus an entity analysis tool. Traditional SEO tools remain useful for the foundational work that underpins GEO performance.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
+          <span>How often should I reassess which GEO tools I use?</span>
+          <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 011-1z"/></svg>
+        </button>
+        <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+          <p class="pb-5 text-ink-300 leading-relaxed">Annual reassessment is a reasonable minimum, given how quickly the category moves. The most important moments to reassess are when a major AI platform changes its architecture or retrieval system, when a competitor makes a significant GEO tool investment, and when your own programme matures past the stage your current tooling was designed to serve. Always supplement annual roundups like this one with direct vendor trials and current user community feedback.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
+          <span>Are free GEO tools adequate for a serious programme?</span>
+          <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 011-1z"/></svg>
+        </button>
+        <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+          <p class="pb-5 text-ink-300 leading-relaxed">Free and free-tier GEO tools are adequate for establishing a baseline and learning the discipline, but they have real limitations for ongoing programmes. Most free options offer restricted query volumes, limited historical data retention, and no competitive benchmarking. For a brand serious about GEO as an ongoing performance channel, a paid monitoring platform is eventually necessary. Start with free tools to establish your measurement process, then upgrade once you have a repeatable workflow that justifies the investment.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="container-wide py-20">
+    <div class="relative overflow-hidden rounded-2xl dot-grid">
+      <div class="absolute inset-0 bg-gradient-to-br from-[rgba(var(--accent-glow),.12)] via-transparent to-transparent"></div>
+      <div class="relative px-8 py-16 text-center sm:px-16">
+        <span class="eyebrow">Independent tools advice</span>
+        <h2 class="mt-4 font-display text-3xl font-bold text-ink-50 sm:text-4xl">Not Sure Which 2026 GEO Tools Are Right for Your Programme?</h2>
+        <p class="mt-4 mx-auto max-w-2xl text-ink-300 leading-relaxed">
+          The right stack depends on your programme maturity, team size, and commercial objectives. GEOoptimised evaluates tools regularly and can advise on the right combination for your situation — without vendor affiliations or commercial bias. Get in touch to discuss your needs.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact/" class="btn btn-primary">Get Tools Advice</a>
+          <a href="/generative-engine-optimisation/" class="btn btn-ghost">What Is GEO?</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = '0';
+            other.closest('.faq-item').querySelector('.faq-icon').style.transform = '';
+          }
+        });
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+        icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+      });
+    });
+
+    // Sticky TOC highlight via IntersectionObserver
+    const sections = document.querySelectorAll('section[id]');
+    const tocLinks = document.querySelectorAll('nav[aria-label="On this page"] a');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(link => {
+            link.classList.toggle(
+              'text-[var(--accent)]',
+              link.getAttribute('href') === '#' + entry.target.id
+            );
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</Base>

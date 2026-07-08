@@ -1,8 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const title = 'GEO vs Traditional SEO: What Changes and What Stays';
-const description = 'Generative engine optimisation and traditional SEO share a foundation but diverge sharply in signals, measurement, and competitive dynamics. A definitive comparison for 2025 and beyond.';
+const title = 'GEO vs SEO: Key Differences, Signals & When to Invest';
+const description = 'GEO vs SEO compared: how generative engine optimisation diverges from traditional search in signals, content, and measurement — and when to invest in each.';
 
 const schema = [
   {
@@ -11,17 +11,13 @@ const schema = [
     headline: 'GEO vs Traditional SEO: What Changes and What Stays',
     description: 'Generative engine optimisation and traditional SEO share a foundation but diverge sharply in signals, measurement, and competitive dynamics.',
     url: 'https://geooptimised.com/geo-vs-seo/',
-    datePublished: '2025-05-25',
-    dateModified: '2025-05-25',
-    author: {
-      '@type': 'Organization',
-      name: 'GEOoptimised',
-      url: 'https://geooptimised.com',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'GEOoptimised',
-      url: 'https://geooptimised.com',
+    datePublished: '2026-06-06',
+    dateModified: '2026-06-06',
+    author: { '@id': 'https://geooptimised.com/#organization' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://geooptimised.com/geo-vs-seo/',
     },
   },
   {
@@ -29,7 +25,8 @@ const schema = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
-      { '@type': 'ListItem', position: 2, name: 'GEO vs SEO', item: 'https://geooptimised.com/geo-vs-seo/' },
+      { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+      { '@type': 'ListItem', position: 3, name: 'GEO vs SEO', item: 'https://geooptimised.com/geo-vs-seo/' },
     ],
   },
   {
@@ -150,11 +147,13 @@ const related = [
 ];
 ---
 
-<Base title={title} description={description} schema={schema} ogType="article">
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/geo-vs-seo/" ogType="article">
 
   <nav aria-label="Breadcrumb" class="container-wide pt-8">
-    <ol class="flex items-center gap-1.5 font-mono text-xs text-ink-400">
+    <ol class="flex items-center gap-1.5 font-mono text-xs text-ink-300">
       <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">Generative Engine Optimisation</a></li>
       <li aria-hidden="true" class="text-ink-600">/</li>
       <li class="text-ink-200" aria-current="page">GEO vs SEO</li>
     </ol>
@@ -164,7 +163,7 @@ const related = [
     <div class="container-wide pt-14 pb-14">
       <div class="flex flex-wrap items-center gap-3">
         <span class="eyebrow">Comparison Guide</span>
-        <span class="font-mono text-xs text-ink-400">10 min read</span>
+        <span class="font-mono text-xs text-ink-300">10 min read</span>
       </div>
       <h1 class="mt-5 max-w-4xl font-display text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
         <span class="grad-text">GEO vs Traditional SEO:</span> What Changes and What Stays
@@ -311,16 +310,16 @@ const related = [
             <table class="w-full text-left text-sm">
               <thead>
                 <tr class="border-b border-[var(--line)]">
-                  <th class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Dimension</th>
-                  <th class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-ink-300">Traditional SEO</th>
-                  <th class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Generative Engine Optimisation</th>
+                  <th scope="col" class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Dimension</th>
+                  <th scope="col" class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-ink-300">Traditional SEO</th>
+                  <th scope="col" class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Generative Engine Optimisation</th>
                 </tr>
               </thead>
               <tbody>
                 {comparisonRows.map((row, i) => (
                   <tr class={i < comparisonRows.length - 1 ? 'border-b border-[var(--line-soft)]' : ''}>
                     <td class="px-5 py-4 font-medium text-ink-100 align-top">{row.dimension}</td>
-                    <td class="px-5 py-4 text-ink-400 align-top">{row.seo}</td>
+                    <td class="px-5 py-4 text-ink-300 align-top">{row.seo}</td>
                     <td class="px-5 py-4 text-ink-200 align-top">{row.geo}</td>
                   </tr>
                 ))}

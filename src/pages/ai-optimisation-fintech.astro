@@ -1,0 +1,654 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'AI Optimisation for Fintech & Financial Services | GEOoptimised';
+const description = 'AI optimization fintech: build entity authority and YMYL trust so AI engines cite your brand in comparison, compliance, and product research answers. Regulated-content guidance included.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'AI Optimisation for Fintech',
+  description,
+  url: 'https://geooptimised.com/ai-optimisation-fintech/',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  inLanguage: 'en-GB',
+  image: 'https://geooptimised.com/og-image.png',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/ai-optimisation-fintech/',
+  },
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Why is YMYL a concern for fintech AI optimisation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'YMYL (Your Money or Your Life) is a content classification that signals to AI retrieval systems that a query has high-stakes consequences for the user. Financial queries are quintessential YMYL: a wrong answer about an ISA allowance, a product fee, or an FCA-regulated service can cause material financial harm. AI systems apply elevated scrutiny to YMYL sources, preferring to cite content from demonstrably authoritative organisations — those with regulatory credentials, independent editorial coverage, and high entity authority scores — and avoiding thin or promotional content that lacks verifiable claims.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does regulatory status affect AI citation in fintech?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Regulatory authorisation signals are a strong positive factor for AI citation in financial services. A fintech that prominently publishes its FCA registration number, links to its FCA Register entry, and includes this data in Organisation schema markup is providing a verifiable trust signal that AI systems can cross-reference. Unregulated or ambiguously authorised entities are more likely to be omitted from AI answers to financial queries where the regulatory context is relevant — particularly for investment, insurance, and credit products.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What content types perform best for fintech AI queries?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Comparison pages structured as tables (covering product fees, interest rates, features, and eligibility), FAQ-format explainer content answering specific financial questions, and regulatory explainer pages that translate compliance requirements into plain language are the content types most consistently cited in AI-generated fintech answers. Generic product pages and promotional landing pages without structured information perform poorly. Pages with DefinedTerm or FinancialProduct schema markup perform better than unmarked equivalents.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How should fintech brands handle AI-generated financial advice risks?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Fintech brands should structure all AI-facing content to be informational and descriptive rather than prescriptive. Every factual claim should be accurate, current, and backed by a verifiable source. Regulatory disclaimers should appear in a structured, machine-readable format — not buried in footnotes. Content should be clearly attributed to the regulated entity, and the structured data should reference the FCA or equivalent regulatory identifier. Brands that publish accurate, well-structured, appropriately caveated content are safer AI citation targets than those whose content AI systems might misrepresent.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do fintech comparison queries behave differently in AI search?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Fintech comparison queries — "best business current account for startups", "cheapest international transfer service" — are among the highest-intent queries in financial services, and AI systems handle them differently from informational queries. For comparison queries, AI systems retrieve structured comparison content and synthesise a ranked or categorised answer. Brands whose comparison content uses structured tables with explicit attribute columns (fees, rates, features, eligibility) are cited more frequently and more accurately than brands relying on prose comparisons.',
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'GEO by Industry', item: 'https://geooptimised.com/geo-by-industry/' },
+    { '@type': 'ListItem', position: 3, name: 'AI Optimisation for Fintech', item: 'https://geooptimised.com/ai-optimisation-fintech/' },
+  ],
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'fintech-ai-landscape', label: 'The Fintech AI Landscape' },
+  { id: 'ymyl-trust', label: 'YMYL Trust & Compliance Signals' },
+  { id: 'entity-authority', label: 'Entity Authority for Financial Brands' },
+  { id: 'comparison-queries', label: 'Comparison & Product Research Queries' },
+  { id: 'regulated-content', label: 'Regulated Content Strategy' },
+  { id: 'content-formats', label: 'Content Formats That Get Cited' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const faqs = [
+  {
+    q: 'Why is YMYL a concern for fintech AI optimisation?',
+    a: "YMYL (Your Money or Your Life) is a content classification that signals to AI retrieval systems that a query has high-stakes consequences for the user. Financial queries are quintessential YMYL: a wrong answer about an ISA allowance, a product fee, or an FCA-regulated service can cause material financial harm. AI systems apply elevated scrutiny to YMYL sources, preferring to cite content from demonstrably authoritative organisations — those with regulatory credentials, independent editorial coverage, and high entity authority scores — and avoiding thin or promotional content that lacks verifiable claims.",
+  },
+  {
+    q: 'How does regulatory status affect AI citation in fintech?',
+    a: "Regulatory authorisation signals are a strong positive factor for AI citation in financial services. A fintech that prominently publishes its FCA registration number, links to its FCA Register entry, and includes this data in Organisation schema markup is providing a verifiable trust signal that AI systems can cross-reference. Unregulated or ambiguously authorised entities are more likely to be omitted from AI answers to financial queries where the regulatory context is relevant — particularly for investment, insurance, and credit products.",
+  },
+  {
+    q: 'What content types perform best for fintech AI queries?',
+    a: 'Comparison pages structured as tables (covering product fees, interest rates, features, and eligibility), FAQ-format explainer content answering specific financial questions, and regulatory explainer pages that translate compliance requirements into plain language are the content types most consistently cited in AI-generated fintech answers. Generic product pages and promotional landing pages without structured information perform poorly. Pages with DefinedTerm or FinancialProduct schema markup perform better than unmarked equivalents.',
+  },
+  {
+    q: 'How should fintech brands handle AI-generated financial advice risks?',
+    a: 'Fintech brands should structure all AI-facing content to be informational and descriptive rather than prescriptive. Every factual claim should be accurate, current, and backed by a verifiable source. Regulatory disclaimers should appear in a structured, machine-readable format — not buried in footnotes. Content should be clearly attributed to the regulated entity, and the structured data should reference the FCA or equivalent regulatory identifier. Brands that publish accurate, well-structured, appropriately caveated content are safer AI citation targets than those whose content AI systems might misrepresent.',
+  },
+  {
+    q: 'Do fintech comparison queries behave differently in AI search?',
+    a: 'Yes. Fintech comparison queries — "best business current account for startups", "cheapest international transfer service" — are among the highest-intent queries in financial services, and AI systems handle them differently from informational queries. For comparison queries, AI systems retrieve structured comparison content and synthesise a ranked or categorised answer. Brands whose comparison content uses structured tables with explicit attribute columns (fees, rates, features, eligibility) are cited more frequently and more accurately than brands relying on prose comparisons.',
+  },
+];
+
+const related = [
+  {
+    tag: 'Node',
+    title: 'GEO by Industry',
+    excerpt: 'How generative engine optimisation strategy adapts across sectors — from fintech and travel to healthcare and professional services.',
+    href: '/geo-by-industry/',
+  },
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'The full GEO framework — from first principles through to advanced entity strategy and measurement.',
+    href: '/generative-engine-optimisation/',
+  },
+  {
+    tag: 'Visibility',
+    title: 'AI Brand Visibility',
+    excerpt: 'How to ensure large language models cite your brand accurately across ChatGPT, Perplexity, Gemini, and Copilot.',
+    href: '/ai-brand-visibility/',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/ai-optimisation-fintech/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/geo-by-industry/" class="transition hover:text-[var(--accent)]">GEO by Industry</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">Fintech</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Industry Playbook</span>
+        <span class="font-mono text-xs text-ink-300">7 Jun 2026</span>
+        <span class="font-mono text-xs text-ink-300">12 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        AI Optimisation for Fintech
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        When users ask AI assistants which business account to open, which payment platform to use, or how to compare investment apps,
+        the fintech brands cited in those answers win the comparison before the user ever clicks a link.
+        <strong class="text-white">AI optimization for fintech</strong> is a trust-first discipline:
+        the brands that appear in AI-generated financial answers have earned it through entity authority,
+        regulatory credibility, and structured content that AI systems can cite with confidence.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column layout -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Financial queries are YMYL — AI systems apply elevated trust standards and prefer demonstrably authoritative sources.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Regulatory credentials (FCA authorisation, registration numbers) published in structured data are a material trust signal for AI citation.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Comparison queries dominate fintech AI search — structured tables with explicit attributes outperform prose comparisons every time.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Entity consistency across Companies House, FCA Register, Crunchbase, and LinkedIn is the foundation of fintech entity authority.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Regulated content must be accurate, current, and appropriately caveated — AI systems that cite inaccurate financial content create reputational and regulatory risk for the brand.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1 -->
+      <section id="fintech-ai-landscape" class="anchor-top prose-dark mb-16">
+        <h2>The Fintech AI Landscape</h2>
+
+        <p>
+          <strong>Fintech is one of the sectors where AI search has the most significant commercial impact and the highest citation risk.</strong>
+          Users researching financial products — business accounts, payment processing, lending, investment platforms, insurance — make decisions
+          with direct monetary consequences. The AI platforms they consult have become the first point of evaluation, not the last.
+          A fintech brand absent from AI-generated comparison answers is absent from the consideration set before the user has even
+          visited a comparison website or a search results page.
+        </p>
+
+        <p>
+          The distinctive challenge for fintech is the intersection of commercial importance and regulatory sensitivity. AI systems are
+          designed to be cautious about financial queries precisely because the consequences of inaccurate answers are measurable and
+          often irreversible. This caution translates into a strong preference for sources with demonstrable authority —
+          regulatory credentials, editorial coverage in established financial publications, independent verification, and
+          consistent entity data across authoritative registries.
+        </p>
+
+        <p>
+          This is not a barrier to AI visibility for legitimate fintech brands — it is a filter that rewards well-structured,
+          credible content. Fintech brands that invest in entity completeness, regulatory signal clarity, and structured comparison
+          content can achieve strong AI citation rates. Those that rely on promotional copy and thin product pages
+          will be systematically overlooked regardless of their traditional search performance.
+        </p>
+
+        <p>
+          This page is part of the <a href="/geo-by-industry/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO by Industry</a> series.
+          For the foundational GEO principles that underpin industry-specific strategy, see the
+          <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">complete GEO guide</a>.
+        </p>
+      </section>
+
+      <!-- Section 2: YMYL Trust & Compliance -->
+      <section id="ymyl-trust" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>YMYL Trust &amp; Compliance Signals</h2>
+          <p>
+            <strong>YMYL (Your Money or Your Life) is the content category that most directly determines how AI systems assess citation risk in financial services.</strong>
+            The concept originated in Google's search quality guidelines but has broader implications for generative AI:
+            systems built to avoid causing harm apply heightened scrutiny to financial content because a wrong answer — incorrect fee information,
+            a misrepresented product feature, an outdated regulatory classification — can directly harm users.
+          </p>
+        </div>
+
+        <div class="mt-8 space-y-5">
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Regulatory Identity Signals</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Publishing your FCA registration number in a visible, consistent location — the footer, the About page, and the
+              Organisation schema — provides a cross-referenceable trust signal that AI systems can verify against the FCA Register.
+              For UK fintech brands, the FCA Register is one of the few authoritative data sources that AI systems can
+              cross-reference to confirm a brand's regulatory status. Brands whose structured data includes a
+              <code>sameAs</code> link to their FCA Register entry remove ambiguity about their regulated status.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Authoritative Editorial Coverage</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              AI systems evaluate source credibility partly through the quality and origin of third-party references.
+              Coverage in established financial publications — FT, Bloomberg, Wired, Sifted, AltFi, Finextra, This is Money —
+              provides the editorial signal layer that elevates a fintech brand above the noise of generic content farms.
+              For training-data-dependent platforms like ChatGPT, this editorial presence directly influences
+              parametric representation: a brand frequently cited in authoritative financial journalism is more likely
+              to be included as a confident citation in generated answers.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Accuracy and Currentness</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Financial information ages quickly. Fee structures change, interest rates move, product features are revised.
+              AI systems retrieving live content for RAG pipelines will surface whatever your pages currently say — meaning
+              outdated fee tables or superseded product descriptions become the basis for AI-generated financial advice.
+              A programme of regular content accuracy audits, with explicit <code>dateModified</code> metadata in Article schema,
+              signals freshness and reduces the risk of AI systems citing stale data that misrepresents your product.
+            </p>
+          </div>
+        </div>
+
+        <div class="prose-dark mt-8">
+          <p>
+            The trust signals that matter for YMYL AI citation overlap substantially with those that matter for AI brand visibility
+            more broadly. For the full framework, see our
+            <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility guide</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 3: Entity Authority -->
+      <section id="entity-authority" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Entity Authority for Financial Brands</h2>
+          <p>
+            <strong>Fintech entity authority is built across a more verification-heavy set of data sources than most consumer sectors.</strong>
+            A payment platform's entity is assessed not just by its own website but by its presence in Companies House,
+            the FCA Register, Crunchbase, LinkedIn, banking directories, and financial regulatory databases.
+            AI systems use these sources to verify that a cited brand is what it claims to be.
+          </p>
+        </div>
+
+        <div class="mt-8 overflow-x-auto rounded-xl border border-geo-800">
+          <table class="w-full text-sm text-left">
+            <thead>
+              <tr class="border-b border-geo-800 bg-geo-900/60">
+                <th scope="col" class="px-5 py-3 font-semibold text-ink-100">Entity Source</th>
+                <th scope="col" class="px-5 py-3 font-semibold text-ink-100">What It Contributes</th>
+                <th scope="col" class="px-5 py-3 font-semibold text-ink-100">Priority</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-geo-800">
+              <tr class="hover:bg-geo-900/40 transition">
+                <td class="px-5 py-3 text-ink-200 font-medium">FCA Register</td>
+                <td class="px-5 py-3 text-ink-300">Regulatory verification; confirms authorisation type, permissions, and legal entity name</td>
+                <td class="px-5 py-3 text-accent-400 font-semibold">Critical</td>
+              </tr>
+              <tr class="hover:bg-geo-900/40 transition">
+                <td class="px-5 py-3 text-ink-200 font-medium">Companies House</td>
+                <td class="px-5 py-3 text-ink-300">Legal entity confirmation; incorporation date, registered address, company number — feeds multiple AI training sources</td>
+                <td class="px-5 py-3 text-accent-400 font-semibold">Critical</td>
+              </tr>
+              <tr class="hover:bg-geo-900/40 transition">
+                <td class="px-5 py-3 text-ink-200 font-medium">Wikidata</td>
+                <td class="px-5 py-3 text-ink-300">Canonical entity identifier with stable Q-number; cross-referenced by Wikipedia, Google Knowledge Graph, and multiple AI pipelines</td>
+                <td class="px-5 py-3 text-accent-400 font-semibold">Critical</td>
+              </tr>
+              <tr class="hover:bg-geo-900/40 transition">
+                <td class="px-5 py-3 text-ink-200 font-medium">Crunchbase</td>
+                <td class="px-5 py-3 text-ink-300">Funding history, investor names, founding team — feeds AI parametric knowledge about company scale and backing</td>
+                <td class="px-5 py-3 text-ink-300">High</td>
+              </tr>
+              <tr class="hover:bg-geo-900/40 transition">
+                <td class="px-5 py-3 text-ink-200 font-medium">LinkedIn Company Page</td>
+                <td class="px-5 py-3 text-ink-300">Employee count, industry classification, headquarters — widely used in AI knowledge graph construction</td>
+                <td class="px-5 py-3 text-ink-300">High</td>
+              </tr>
+              <tr class="hover:bg-geo-900/40 transition">
+                <td class="px-5 py-3 text-ink-200 font-medium">Trustpilot / G2 / Capterra</td>
+                <td class="px-5 py-3 text-ink-300">Review authority signals; aggregate rating and volume contribute to credibility assessment for B2B and consumer fintech</td>
+                <td class="px-5 py-3 text-ink-300">Medium</td>
+              </tr>
+              <tr class="hover:bg-geo-900/40 transition">
+                <td class="px-5 py-3 text-ink-200 font-medium">Own site Organisation schema</td>
+                <td class="px-5 py-3 text-ink-300">sameAs linking across all above sources; legalName, foundingDate, FCA reference number in description</td>
+                <td class="px-5 py-3 text-ink-300">High</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose-dark mt-8">
+          <p>
+            Entity consistency is the single most common failure point in fintech AI visibility audits.
+            A brand that operates under a different trading name from its legal entity name, has an outdated address
+            in Companies House, and uses a different company description on LinkedIn and Crunchbase is presenting AI systems
+            with conflicting data that reduces citation confidence. Before investing in content-layer optimisation,
+            audit and reconcile entity data across every source in the table above.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4: Comparison Queries -->
+      <section id="comparison-queries" class="anchor-top prose-dark mb-16">
+        <h2>Comparison &amp; Product Research Queries</h2>
+
+        <p>
+          <strong>Comparison queries are the highest commercial-intent query type in fintech AI search, and they require a fundamentally different content structure from standard product pages.</strong>
+          When a user asks Perplexity "what is the best business current account for a UK startup?", the system retrieves
+          comparison content and synthesises a structured response. The fintech brands cited in that response are those
+          whose comparison content is structured for extraction — not those with the most persuasive product marketing copy.
+        </p>
+
+        <h3>What AI Systems Extract from Comparison Pages</h3>
+        <p>
+          AI retrieval systems look for specific, comparable attributes when processing fintech comparison queries.
+          The attributes that appear most frequently in AI-generated fintech comparison answers are:
+        </p>
+        <p>
+          <strong>Fees and pricing.</strong> Monthly account fee, transaction charges, and any setup costs stated as specific figures.
+          "Free for the first year" is less extractable than "£0/month for the first 12 months, then £9/month".
+          Always use exact figures in a machine-readable format rather than conditional or promotional language.
+        </p>
+        <p>
+          <strong>Key features as discrete items.</strong> Multi-currency support, API access, FX rate structure, accounting integrations —
+          presented as a list or table column, not buried in descriptive paragraphs. Each feature should be stated as a simple
+          affirmative ("supports 30+ currencies", "native Xero and QuickBooks integration") rather than as marketing narrative.
+        </p>
+        <p>
+          <strong>Eligibility and restrictions.</strong> Business type requirements, turnover thresholds, and geographic restrictions.
+          AI systems retrieving comparison content for "best account for [specific user type]" queries need explicit eligibility
+          statements to generate accurate recommendations. Omitting these forces the AI to make assumptions — increasing the
+          risk of inaccurate citations.
+        </p>
+        <p>
+          <strong>Regulatory categorisation.</strong> Whether the product is FCA-regulated, FSCS-protected, or e-money-only is
+          material information for financial comparison queries. Stating this explicitly in the comparison content — and in
+          FAQPage schema — allows AI systems to include regulatory status in their generated comparisons.
+        </p>
+
+        <h3>Building a Comparison Content Programme</h3>
+        <p>
+          The most effective fintech comparison content strategy builds from two directions: own-category pages that compare your product
+          against the market ("best business accounts 2026: how the leading platforms compare"), and feature-specific pages that
+          answer detailed sub-queries ("does [your brand] support multi-currency accounts?"). Together these capture both the
+          broad comparison query and the detailed research query that sophisticated financial buyers use.
+        </p>
+        <p>
+          Each comparison page should conclude with a definitive recommendation statement that is extractable standalone —
+          the format AI systems use to generate direct answers to "what is the best X" queries.
+        </p>
+      </section>
+
+      <!-- Section 5: Regulated Content Strategy -->
+      <section id="regulated-content" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Regulated Content Strategy for AI Visibility</h2>
+          <p>
+            <strong>Publishing regulated financial content for AI visibility requires navigating the tension between citation-optimised structure and regulatory compliance.</strong>
+            The content patterns that maximise AI citation — definitive statements, specific figures, direct recommendations —
+            are also the patterns most likely to be treated as financial advice if not properly framed.
+            A sound regulated content strategy achieves both objectives simultaneously.
+          </p>
+        </div>
+
+        <div class="mt-8 space-y-5">
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Descriptive Not Prescriptive</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Structure AI-facing content to describe products and their attributes rather than prescribe actions.
+              "This account is designed for businesses with monthly turnovers above £25,000" is a descriptive, extractable statement.
+              "You should open this account" is prescriptive and creates advice risk. The descriptive framing serves both
+              AI citability and regulatory compliance — AI systems prefer descriptive statements for extraction, and
+              regulators distinguish between information and advice along the same lines.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Regulatory Context in Schema</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Include regulatory context directly in Organisation schema and in page-level Article schema.
+              The <code>description</code> field in Organisation markup should include your FCA authorisation type.
+              Where FinancialProduct schema is applicable, use the <code>feesAndCommissionsSpecification</code> and
+              <code>legalName</code> properties to make regulatory attributes machine-readable.
+              This reduces the risk of AI systems generating descriptions of your product that omit material
+              regulatory information.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Risk Warnings as Structured Content</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Standard risk warnings — "your capital is at risk", "past performance is not a guide to future returns" —
+              should appear in a consistent, structured format that AI retrieval systems can include when citing relevant content.
+              A risk warning buried in 8pt footer text is invisible to AI extraction. A risk warning presented as a structured
+              information box immediately following product claims is readable and citable. Structuring warnings
+              this way is both better compliance practice and better AI optimisation.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Content Freshness and Audit Cadence</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Regulated financial content must be audited on a schedule that keeps pace with product and regulatory changes.
+              A quarterly content accuracy audit — reviewing fee tables, rate cards, feature lists, and regulatory status pages —
+              ensures that AI systems retrieving your content cite accurate, current information.
+              Each major update should refresh the <code>dateModified</code> value in Article schema to signal recency to
+              retrieval systems. Stale content that AI systems cite as current is worse than no citation at all
+              from a brand reputation and regulatory perspective.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Content Formats -->
+      <section id="content-formats" class="anchor-top prose-dark mb-16">
+        <h2>Content Formats That Get Cited in Fintech AI Answers</h2>
+
+        <p>
+          <strong>The content formats that achieve the highest AI citation rates in fintech are those that combine structured data, specific attributes, and FAQ-style directness.</strong>
+          These formats allow AI systems to extract and present financial information with the confidence level that YMYL
+          query handling requires.
+        </p>
+
+        <p>
+          <strong>Structured comparison tables</strong> with explicit column headers (Fee, FSCS Protection, FX Rate, API Availability, Supported Currencies)
+          are retrieved and cited more frequently for fintech comparison queries than any other content format.
+          The table structure provides AI systems with a ready-made basis for generating comparison responses.
+          Each table cell should contain a specific, simple value — not a linked sentence or conditional statement.
+        </p>
+
+        <p>
+          <strong>Regulatory explainer pages</strong> that translate compliance requirements into plain English — "What does FCA e-money authorisation mean for your money?",
+          "How does FSCS protection work for business accounts?" — are among the most cited content types for
+          trust and safety queries. These pages establish topical authority in the regulatory domain and make your brand
+          the authoritative voice on compliance questions relevant to your product category.
+        </p>
+
+        <p>
+          <strong>FAQ-structured product pages</strong> that answer the specific questions financial buyers ask — pricing, eligibility,
+          integration, security, exit terms — outperform narrative product descriptions for research-stage queries.
+          Each FAQ answer should be self-contained and accurate enough to stand as a direct AI answer. Back every
+          specific claim with a verifiable figure or official source.
+        </p>
+
+        <p>
+          <strong>Founder and practitioner byline content</strong> contributes to the experience and expertise signals that AI systems
+          use when assessing source authority for YMYL queries. Content attributed to named financial practitioners —
+          with verifiable credentials published in author schema — is treated as more authoritative than anonymous
+          or organisation-bylined content for high-stakes financial queries.
+        </p>
+
+        <p>
+          For a full discussion of how these content formats connect to the broader GEO discipline, see our
+          <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility guide</a>.
+          To discuss a tailored fintech GEO strategy, visit our <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services page</a>
+          or <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">contact us directly</a>.
+        </p>
+      </section>
+
+      <!-- FAQ -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Build AI Citation Authority for Your Fintech Brand</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        GEOoptimised audits your fintech brand's current AI citation footprint — across ChatGPT, Perplexity, Gemini, Copilot,
+        and Google AI Overviews — and delivers a prioritised plan covering entity completeness, YMYL trust signals,
+        and structured comparison content.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request a fintech GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

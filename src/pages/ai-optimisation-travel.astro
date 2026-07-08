@@ -1,0 +1,629 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'AI Optimisation for Travel & Hospitality | GEOoptimised';
+const description = 'AI optimization travel: get your hotel, airline, or OTA cited in AI-generated itineraries and booking answers. Covers entity signals, review authority, and destination content strategy.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'AI Optimisation for Travel & Hospitality',
+  description,
+  url: 'https://geooptimised.com/ai-optimisation-travel/',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  inLanguage: 'en-GB',
+  image: 'https://geooptimised.com/og-image.png',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/ai-optimisation-travel/',
+  },
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Why do AI engines cite some travel brands and not others?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'AI engines prioritise travel brands that have strong entity authority — consistent name, description, and category data across Google\'s Knowledge Graph, Wikidata, TripAdvisor, and booking directories — alongside high-citability content such as destination guides, itinerary pages, and structured review aggregation. Brands with thin content, blocked AI crawlers, or inconsistent entity data are frequently omitted from generated itineraries and recommendation answers regardless of their traditional search rankings.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does AI handle travel itinerary and recommendation queries?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'When a user asks an AI assistant for a 7-day itinerary or "best hotels in [destination]", the model draws on a combination of parametric knowledge from training data and, for RAG-enabled systems, live retrieval of destination and property pages. The travel brands cited are those whose content is structured to answer these queries directly — with named properties, specific attributes (location, price tier, category), and clear recommendations rather than generic promotional copy.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do reviews and ratings affect AI citation in travel?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Review signals from TripAdvisor, Google, Booking.com, and Trustpilot contribute to the entity authority that AI systems use to assess credibility in travel. Properties and destinations with high review volume, strong aggregate ratings, and consistent Review schema markup are more reliably cited in AI-generated comparisons and recommendation queries. The quantity and recency of structured review data matters alongside raw star ratings.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What content types are most cited by AI for travel queries?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Destination guides with structured itinerary sections, comparison pages covering hotels or airlines in a specific market, FAQ-structured booking advice content, and pages that answer "best X for Y" queries with definitive, specific recommendations are the content types most frequently cited in AI-generated travel answers. Generic brand pages and promotional landing pages with no structured information are the least likely to be retrieved or cited.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How should travel brands approach AI optimisation differently from traditional SEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Traditional SEO for travel focuses on keyword rankings, meta optimisation, and link acquisition. AI optimisation for travel focuses on entity completeness across booking directories and knowledge bases, structured content that answers natural-language itinerary and comparison queries, review schema implementation, and ensuring AI crawlers (GPTBot, PerplexityBot, Google-Extended) are not blocked in robots.txt. The goal shifts from ranking on a results page to appearing inside the AI-generated answer itself.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which AI platforms matter most for travel brands?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'For travel, the highest-priority AI platforms are Google AI Overviews (because they appear on the highest-volume travel queries), Perplexity (widely used for research-stage travel planning), and ChatGPT (increasingly used for itinerary generation). Gemini is significant for brands with strong Google Business Profile and Maps presence. Each platform uses different retrieval mechanisms, so a multi-platform monitoring approach is essential for any travel brand investing in AI optimisation.',
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'GEO by Industry', item: 'https://geooptimised.com/geo-by-industry/' },
+    { '@type': 'ListItem', position: 3, name: 'AI Optimisation for Travel & Hospitality', item: 'https://geooptimised.com/ai-optimisation-travel/' },
+  ],
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'why-travel-differs', label: 'Why Travel & Hospitality Differs' },
+  { id: 'itinerary-queries', label: 'Itinerary & Recommendation Queries' },
+  { id: 'entity-signals', label: 'Entity & Review Signals' },
+  { id: 'destination-content', label: 'Destination Content Strategy' },
+  { id: 'platform-breakdown', label: 'Platform-by-Platform Breakdown' },
+  { id: 'content-formats', label: 'Content Formats That Get Cited' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const faqs = [
+  {
+    q: 'Why do AI engines cite some travel brands and not others?',
+    a: "AI engines prioritise travel brands that have strong entity authority — consistent name, description, and category data across Google's Knowledge Graph, Wikidata, TripAdvisor, and booking directories — alongside high-citability content such as destination guides, itinerary pages, and structured review aggregation. Brands with thin content, blocked AI crawlers, or inconsistent entity data are frequently omitted from generated itineraries and recommendation answers regardless of their traditional search rankings.",
+  },
+  {
+    q: 'How does AI handle travel itinerary and recommendation queries?',
+    a: 'When a user asks an AI assistant for a 7-day itinerary or "best hotels in [destination]", the model draws on a combination of parametric knowledge from training data and, for RAG-enabled systems, live retrieval of destination and property pages. The travel brands cited are those whose content is structured to answer these queries directly — with named properties, specific attributes (location, price tier, category), and clear recommendations rather than generic promotional copy.',
+  },
+  {
+    q: 'Do reviews and ratings affect AI citation in travel?',
+    a: 'Yes. Review signals from TripAdvisor, Google, Booking.com, and Trustpilot contribute to the entity authority that AI systems use to assess credibility in travel. Properties and destinations with high review volume, strong aggregate ratings, and consistent Review schema markup are more reliably cited in AI-generated comparisons and recommendation queries. The quantity and recency of structured review data matters alongside raw star ratings.',
+  },
+  {
+    q: 'What content types are most cited by AI for travel queries?',
+    a: 'Destination guides with structured itinerary sections, comparison pages covering hotels or airlines in a specific market, FAQ-structured booking advice content, and pages that answer "best X for Y" queries with definitive, specific recommendations are the content types most frequently cited in AI-generated travel answers. Generic brand pages and promotional landing pages with no structured information are the least likely to be retrieved or cited.',
+  },
+  {
+    q: 'How should travel brands approach AI optimisation differently from traditional SEO?',
+    a: 'Traditional SEO for travel focuses on keyword rankings, meta optimisation, and link acquisition. AI optimisation for travel focuses on entity completeness across booking directories and knowledge bases, structured content that answers natural-language itinerary and comparison queries, review schema implementation, and ensuring AI crawlers (GPTBot, PerplexityBot, Google-Extended) are not blocked in robots.txt. The goal shifts from ranking on a results page to appearing inside the AI-generated answer itself.',
+  },
+  {
+    q: 'Which AI platforms matter most for travel brands?',
+    a: 'For travel, the highest-priority AI platforms are Google AI Overviews (because they appear on the highest-volume travel queries), Perplexity (widely used for research-stage travel planning), and ChatGPT (increasingly used for itinerary generation). Gemini is significant for brands with strong Google Business Profile and Maps presence. Each platform uses different retrieval mechanisms, so a multi-platform monitoring approach is essential for any travel brand investing in AI optimisation.',
+  },
+];
+
+const related = [
+  {
+    tag: 'Node',
+    title: 'GEO by Industry',
+    excerpt: 'How generative engine optimisation strategy adapts across sectors — from fintech and travel to healthcare and professional services.',
+    href: '/geo-by-industry/',
+  },
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'The full GEO framework — from first principles through to advanced entity strategy and measurement.',
+    href: '/generative-engine-optimisation/',
+  },
+  {
+    tag: 'Visibility',
+    title: 'AI Brand Visibility',
+    excerpt: 'How to ensure large language models cite your brand accurately across ChatGPT, Perplexity, Gemini, and Copilot.',
+    href: '/ai-brand-visibility/',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/ai-optimisation-travel/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/geo-by-industry/" class="transition hover:text-[var(--accent)]">GEO by Industry</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">Travel &amp; Hospitality</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Industry Playbook</span>
+        <span class="font-mono text-xs text-ink-300">7 Jun 2026</span>
+        <span class="font-mono text-xs text-ink-300">11 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        AI Optimisation for Travel &amp; Hospitality
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        When travellers ask ChatGPT for a 10-day itinerary or Perplexity for the best boutique hotels in Lisbon,
+        the brands that appear in those answers capture consideration at the highest-intent moment in the booking journey.
+        <strong class="text-white">AI optimization for travel</strong> is the practice of ensuring your property,
+        destination, or platform is cited accurately and consistently across every major generative engine.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column layout -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Travel queries are among the most natural-language-heavy in AI search — itinerary, comparison, and "best for" queries dominate.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Entity authority across booking directories (TripAdvisor, Booking.com, Google Maps) is the primary citation signal for travel properties.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Review volume, recency, and structured review schema are material factors in whether AI cites a property over competitors.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Destination content — structured guides, itinerary pages, "best for" comparison tables — is the highest-citability content format in travel.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Blocking GPTBot, PerplexityBot, or Google-Extended makes your property invisible to the retrieval layer of every major AI platform.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1 -->
+      <section id="why-travel-differs" class="anchor-top prose-dark mb-16">
+        <h2>Why Travel &amp; Hospitality Differs in AI Search</h2>
+
+        <p>
+          <strong>Travel is one of the sectors where AI search has displaced traditional search behaviour most rapidly.</strong>
+          Users planning holidays, business trips, and short breaks are natural language users — they do not type "best hotels Lisbon" into a search bar;
+          they ask "what are the best boutique hotels in Lisbon for a long weekend in September?" The conversational, multi-faceted nature of travel queries
+          maps directly onto what generative AI does well.
+        </p>
+
+        <p>
+          The consequence for travel brands is that AI search is not a future concern — it is a present one. A hotel group that holds the
+          top three positions in traditional Google Search for its target keywords may be entirely absent from Google AI Overviews for the
+          same destination queries if its entity data is incomplete or its content is not structured for extraction.
+        </p>
+
+        <p>
+          Travel also has a distinctive query topology. Unlike B2B software or professional services, where queries are predominantly informational
+          or commercial, travel mixes itinerary queries ("plan a 5-day trip to…"), comparison queries ("X hotel vs Y hotel"), recommendation queries
+          ("best family-friendly resorts in…"), and booking research queries ("what is the baggage policy for…"). Each query type requires a different
+          content structure to be citation-ready.
+        </p>
+
+        <p>
+          This page is part of the <a href="/geo-by-industry/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO by Industry</a> series.
+          For the foundational GEO framework that underpins all industry-specific guidance, see
+          <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Generative Engine Optimisation: The Complete Guide</a>.
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="itinerary-queries" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Itinerary &amp; Recommendation Queries</h2>
+          <p>
+            <strong>Itinerary and recommendation queries are the dominant AI search format in travel, and they require structurally different content from any other query type.</strong>
+            When a user asks ChatGPT for a 7-day Japan itinerary, the model constructs a day-by-day plan by drawing on its parametric knowledge and,
+            in RAG-enabled platforms, live retrieval of destination content. The brands cited — the hotels named, the airlines recommended,
+            the experiences suggested — are those whose structured content most directly answers the underlying sub-questions.
+          </p>
+        </div>
+
+        <div class="mt-8 space-y-5">
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Day-by-Day Itinerary Pages</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Destination pages structured as day-by-day itineraries — with named locations, activity categories, and specific time allocations —
+              are among the most cited content formats across all AI travel queries. The structure maps onto how AI systems generate itinerary
+              responses: each day is a discrete retrieval unit. A page titled "7 Days in Kyoto: Day-by-Day Itinerary" with clearly marked
+              day headings, named venues, and specific recommendations is significantly more retrievable than a generic "Things to Do in Kyoto" page.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Best-for Recommendation Pages</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              "Best for" pages — best hotels for families, best airlines for long-haul comfort, best destinations for solo female travellers —
+              are consistently retrieved for recommendation queries. Each recommendation should lead with a bold declarative statement
+              (the format AI systems extract most reliably) followed by specific supporting attributes: star rating, price tier,
+              location relative to key landmarks, and at least one distinguishing characteristic.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Comparison and Booking Research Pages</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Booking research queries — "what is included in a premium economy seat on [airline]?", "what is the cancellation policy at [hotel]?" —
+              are answered from structured, FAQ-format content. Brands that publish policy information in an explicit Q&amp;A structure,
+              backed by FAQPage schema, appear in AI answers to policy queries. Brands that bury this information in dense terms-and-conditions
+              pages do not.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Entity & Review Signals -->
+      <section id="entity-signals" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Entity &amp; Review Signals for Travel Properties</h2>
+          <p>
+            <strong>In travel, entity authority is built across a more distributed set of data sources than in most other sectors.</strong>
+            A hotel's entity is not primarily defined by its own website — it is defined by the aggregate signal across Google Maps,
+            TripAdvisor, Booking.com, Expedia, Wikidata, and dozens of other directories and review platforms. AI systems cross-reference
+            these sources when deciding whether to cite a property and how to describe it.
+          </p>
+        </div>
+
+        <div class="mt-8 overflow-x-auto rounded-xl border border-geo-800">
+          <table class="w-full text-sm text-left">
+            <thead>
+              <tr class="border-b border-geo-800 bg-geo-900/60">
+                <th scope="col" class="px-5 py-3 font-semibold text-ink-100">Signal Source</th>
+                <th scope="col" class="px-5 py-3 font-semibold text-ink-100">What It Contributes</th>
+                <th scope="col" class="px-5 py-3 font-semibold text-ink-100">Priority</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-geo-800">
+              <tr class="hover:bg-geo-900/40 transition">
+                <td class="px-5 py-3 text-ink-200 font-medium">Google Maps / Business Profile</td>
+                <td class="px-5 py-3 text-ink-300">Category, location, hours, amenities, review aggregate — feeds Google AI Overviews and Gemini directly</td>
+                <td class="px-5 py-3 text-accent-400 font-semibold">Critical</td>
+              </tr>
+              <tr class="hover:bg-geo-900/40 transition">
+                <td class="px-5 py-3 text-ink-200 font-medium">TripAdvisor</td>
+                <td class="px-5 py-3 text-ink-300">Review volume, ranking within destination category, certificate of excellence signals</td>
+                <td class="px-5 py-3 text-accent-400 font-semibold">Critical</td>
+              </tr>
+              <tr class="hover:bg-geo-900/40 transition">
+                <td class="px-5 py-3 text-ink-200 font-medium">Booking.com / Expedia</td>
+                <td class="px-5 py-3 text-ink-300">OTA presence validates the entity as a bookable property; rating scores contribute to authority assessment</td>
+                <td class="px-5 py-3 text-ink-300">High</td>
+              </tr>
+              <tr class="hover:bg-geo-900/40 transition">
+                <td class="px-5 py-3 text-ink-200 font-medium">Wikidata</td>
+                <td class="px-5 py-3 text-ink-300">Canonical entity identifier; feeds multiple AI training pipelines and knowledge graph lookups</td>
+                <td class="px-5 py-3 text-ink-300">High</td>
+              </tr>
+              <tr class="hover:bg-geo-900/40 transition">
+                <td class="px-5 py-3 text-ink-200 font-medium">Own site Review schema</td>
+                <td class="px-5 py-3 text-ink-300">AggregateRating markup surfacing review score and count to retrieval systems</td>
+                <td class="px-5 py-3 text-ink-300">Medium</td>
+              </tr>
+              <tr class="hover:bg-geo-900/40 transition">
+                <td class="px-5 py-3 text-ink-200 font-medium">Editorial mentions (Condé Nast, Lonely Planet, Frommer's)</td>
+                <td class="px-5 py-3 text-ink-300">High-authority citation signals that anchor the entity in travel category associations within training data</td>
+                <td class="px-5 py-3 text-ink-300">Medium</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose-dark mt-8">
+          <p>
+            Review recency matters alongside volume. AI systems in RAG-enabled platforms retrieve live or recently cached content.
+            A property with 2,000 TripAdvisor reviews but none in the past six months may score lower on freshness than a property
+            with 400 reviews and consistent recent activity. Encouraging and responding to reviews is not just a reputation management
+            task — it is an AI visibility signal.
+          </p>
+          <p>
+            For a deeper treatment of entity signals and how to build them, see our guide to
+            <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4: Destination Content Strategy -->
+      <section id="destination-content" class="anchor-top prose-dark mb-16">
+        <h2>Destination Content Strategy for AI Visibility</h2>
+
+        <p>
+          <strong>Destination content is the primary vehicle through which travel brands build AI citation authority.</strong>
+          A hotel that publishes only its room types and booking pages gives AI systems almost nothing to retrieve for the itinerary and recommendation
+          queries that dominate travel AI search. A hotel that publishes structured destination guides, neighbourhood profiles, and
+          "best for" comparison content gives AI systems retrievable, citable content that associates the brand with the destination.
+        </p>
+
+        <h3>The Destination Content Stack</h3>
+        <p>
+          An effective destination content strategy for AI citation operates across three levels:
+        </p>
+        <p>
+          <strong>Level 1 — Destination authority pages.</strong> Top-level guides to the destination itself ("The Complete Guide to Lisbon's Alfama District")
+          establish topical authority and are retrieved for broad destination queries. These pages should answer the questions AI systems
+          receive most frequently about the destination: when to go, how to get there, how long to stay, and what the key areas are.
+          Each section should begin with a bold declarative statement that can be extracted standalone.
+        </p>
+        <p>
+          <strong>Level 2 — Category comparison pages.</strong> Pages comparing options within a category ("Boutique Hotels in the Bairro Alto: A Comparison")
+          are retrieved for "best X in Y" queries. These work best as structured tables with consistent attributes — price tier, location,
+          star rating, standout features — rather than as listicles with descriptive paragraphs.
+        </p>
+        <p>
+          <strong>Level 3 — Itinerary and experience pages.</strong> Specific day-by-day or experience-oriented pages ("3 Days in Porto: A Local's Itinerary")
+          are retrieved for itinerary queries. Structuring these with explicit day headers and named properties makes them highly extractable
+          for AI itinerary generation.
+        </p>
+
+        <h3>Structured Data for Travel Content</h3>
+        <p>
+          Beyond Article and FAQPage schema, travel properties should implement LodgingBusiness (for hotels), TouristAttraction, and
+          AggregateRating markup. Airlines and transport providers should implement Airline and Flight schema where applicable.
+          TouristDestination markup signals to AI retrieval systems that a page is authoritative about a specific place rather than
+          incidentally mentioning it. These schemas are not widely adopted in the travel sector, which means early implementation
+          creates a structural advantage over competitors who rely solely on text-based signals.
+        </p>
+      </section>
+
+      <!-- Section 5: Platform Breakdown -->
+      <section id="platform-breakdown" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Platform-by-Platform Breakdown for Travel</h2>
+          <p>
+            <strong>Each major AI platform has a different retrieval mechanism and different relevance to travel query types.</strong>
+            A single strategy cannot optimise for all platforms simultaneously, but understanding the distinctions helps prioritise effort.
+          </p>
+        </div>
+
+        <div class="mt-8 overflow-x-auto rounded-xl border border-geo-800">
+          <table class="w-full text-sm text-left">
+            <thead>
+              <tr class="border-b border-geo-800 bg-geo-900/60">
+                <th scope="col" class="px-5 py-3 font-semibold text-ink-100">Platform</th>
+                <th scope="col" class="px-5 py-3 font-semibold text-ink-100">Primary Mechanism</th>
+                <th scope="col" class="px-5 py-3 font-semibold text-ink-100">Travel Relevance</th>
+                <th scope="col" class="px-5 py-3 font-semibold text-ink-100">Key Optimisation Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-geo-800">
+              <tr class="hover:bg-geo-900/40 transition">
+                <td class="px-5 py-3 text-ink-200 font-medium">Google AI Overviews</td>
+                <td class="px-5 py-3 text-ink-300">RAG + Knowledge Graph</td>
+                <td class="px-5 py-3 text-accent-400 font-semibold">Very High</td>
+                <td class="px-5 py-3 text-ink-300">Complete Google Business Profile; implement LodgingBusiness schema; structured destination content</td>
+              </tr>
+              <tr class="hover:bg-geo-900/40 transition">
+                <td class="px-5 py-3 text-ink-200 font-medium">Perplexity</td>
+                <td class="px-5 py-3 text-ink-300">Live web RAG</td>
+                <td class="px-5 py-3 text-accent-400 font-semibold">Very High</td>
+                <td class="px-5 py-3 text-ink-300">Allow PerplexityBot; publish itinerary and comparison content with extractable definitive statements</td>
+              </tr>
+              <tr class="hover:bg-geo-900/40 transition">
+                <td class="px-5 py-3 text-ink-200 font-medium">ChatGPT</td>
+                <td class="px-5 py-3 text-ink-300">Parametric + optional Browse</td>
+                <td class="px-5 py-3 text-ink-300">High</td>
+                <td class="px-5 py-3 text-ink-300">Build editorial presence in training-data-heavy publications; allow GPTBot in robots.txt</td>
+              </tr>
+              <tr class="hover:bg-geo-900/40 transition">
+                <td class="px-5 py-3 text-ink-200 font-medium">Gemini</td>
+                <td class="px-5 py-3 text-ink-300">RAG + Google Maps integration</td>
+                <td class="px-5 py-3 text-ink-300">High</td>
+                <td class="px-5 py-3 text-ink-300">Google Maps optimisation; review volume and recency; Google-Extended not blocked</td>
+              </tr>
+              <tr class="hover:bg-geo-900/40 transition">
+                <td class="px-5 py-3 text-ink-200 font-medium">Bing Copilot</td>
+                <td class="px-5 py-3 text-ink-300">Bing index RAG</td>
+                <td class="px-5 py-3 text-ink-300">Medium</td>
+                <td class="px-5 py-3 text-ink-300">Bing Webmaster Tools submission; structured content for Bing crawl priority</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 6: Content Formats -->
+      <section id="content-formats" class="anchor-top prose-dark mb-16">
+        <h2>Content Formats That Get Cited in Travel AI Answers</h2>
+
+        <p>
+          <strong>Not all travel content is equally citable — the format of your content is as important as its topical relevance.</strong>
+          These are the content patterns that consistently appear in AI-generated travel responses across platforms.
+        </p>
+
+        <p>
+          <strong>Structured itinerary pages</strong> with explicit day headers (H2 or H3), named destinations, and specific time allocations
+          are retrieved far more frequently than narrative travel articles for itinerary queries. Each day should open with a declarative
+          summary sentence — "Day 3 focuses on the historical centre, within walking distance of the hotel" — rather than a discursive paragraph.
+        </p>
+
+        <p>
+          <strong>Comparison tables</strong> covering properties, routes, or experiences within a defined category are the highest-value
+          format for "best X" queries. Tables with columns for price tier, location, star rating, family-friendliness, and standout feature
+          give AI systems structured data to extract and synthesise. Prose comparisons are less reliably extracted.
+        </p>
+
+        <p>
+          <strong>FAQ-structured booking advice</strong> answers policy, logistics, and planning questions in the exact format AI systems
+          prefer for extraction. "What is the check-in time at [property]?", "Is breakfast included in the standard rate?", and
+          "How far is the property from the airport?" are all natural language queries where structured Q&amp;A content captures AI citations
+          that generic page copy does not.
+        </p>
+
+        <p>
+          <strong>Review aggregation with schema</strong> — publishing AggregateRating markup from verified platforms — gives AI retrieval
+          systems a machine-readable signal about your property's standing relative to the destination category. A property with an
+          AggregateRating of 9.2/10 from 1,400 reviews is a more confident citation than one with no structured rating data.
+        </p>
+
+        <p>
+          For an overview of how these content principles connect to the broader discipline of AI brand visibility, see our
+          <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility guide</a>.
+          To discuss a tailored strategy for your travel brand, visit our <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services page</a>.
+        </p>
+      </section>
+
+      <!-- FAQ -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Get Your Travel Brand into AI Answers</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Whether you are a hotel group, OTA, airline, or destination management organisation,
+        GEOoptimised maps your current AI citation footprint and builds a strategy to make your brand
+        the answer travellers receive across ChatGPT, Perplexity, Gemini, and Google AI Overviews.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request a travel GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

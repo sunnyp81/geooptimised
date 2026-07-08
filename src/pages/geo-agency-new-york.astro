@@ -1,0 +1,387 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO Agency for New York Businesses | GEOoptimised';
+const description = 'Remote GEO agency serving New York businesses. We help NYC brands earn citations in ChatGPT, Perplexity, Gemini and Google AI Overviews. Specialist remote delivery.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'name': 'Generative Engine Optimisation for New York Businesses',
+    'serviceType': 'Generative Engine Optimisation',
+    'provider': { '@id': 'https://geooptimised.com/#organization' },
+    'areaServed': { '@type': 'City', 'name': 'New York' },
+    'description': 'Remote generative engine optimisation services for New York and NYC businesses. We help brands earn citations in AI-generated answers across ChatGPT, Perplexity, Gemini, Microsoft Copilot and Google AI Overviews.',
+    'url': 'https://geooptimised.com/geo-agency-new-york/',
+    'datePublished': '2026-06-07',
+    'dateModified': '2026-06-07',
+    'inLanguage': 'en-GB'
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': [
+      {
+        '@type': 'Question',
+        'name': 'Do you have a New York office?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'No. GEOoptimised is a UK-based agency that delivers all services remotely. We work with New York and NYC businesses entirely online — via video calls, shared workspaces, and async collaboration. Remote delivery does not diminish the quality of the work; generative engine optimisation is a technical and strategic discipline that requires specialist expertise, not geographic proximity.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'What is generative engine optimisation (GEO)?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Generative engine optimisation is the discipline of structuring your brand so that AI models — ChatGPT, Perplexity, Gemini, Google AI Overviews — select it as a cited source in synthesised answers. Where SEO competes for a position in a list of ten links, GEO competes for inclusion in the one-to-three sources an AI quotes directly. Full explanations are available at geooptimised.com/what-is-geo/ and geooptimised.com/generative-engine-optimisation/.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'Why do New York businesses need GEO now?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'New York is one of the most competitive commercial markets in the world. B2B buyers and high-value consumers in NYC increasingly use AI tools — ChatGPT, Perplexity, Gemini — to research vendors, compare services, and shortlist providers before ever visiting a website. Brands not cited in those AI answers are structurally invisible at the top of the purchase funnel, regardless of how well they rank on traditional search.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'Which AI platforms do you optimise for?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'We optimise across ChatGPT, Perplexity, Google Gemini, Microsoft Copilot, Claude, and Google AI Overviews. Citation behaviour varies meaningfully between platforms — what causes a brand to be cited in a ChatGPT answer differs from what drives inclusion in an AI Overview. Our programme covers all major generative engines with platform-specific monitoring and adjustment built in from the start.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'How long does it take to see results?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'For New York businesses, the initial audit typically reveals clear citation gaps that the programme begins closing in the first 60 to 90 days. In high-competition NYC sectors — finance, compliance, SaaS, professional services — full competitive positioning across all five major platforms develops over 6 to 12 months as entity authority and content structure compound. Every engagement begins with that documented audit baseline.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'How does remote GEO delivery work in practice?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Every New York engagement begins with a structured discovery call and a briefing document covering brand context, competitive landscape, and AI visibility objectives. Work proceeds on a weekly delivery cadence with written updates and a monthly strategy call. Audit reports, content rewrites, schema files, and monitoring dashboards all live in a shared project workspace. The UK–Eastern Time overlap (9am–1pm ET) covers any live sessions needed.'
+        }
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://geooptimised.com/' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'GEO Agency Near You', 'item': 'https://geooptimised.com/geo-near-you/' },
+      { '@type': 'ListItem', 'position': 3, 'name': 'GEO Agency for New York Businesses', 'item': 'https://geooptimised.com/geo-agency-new-york/' }
+    ]
+  }
+];
+
+const deliverables = [
+  {
+    phase: 'Phase 1',
+    label: 'AI Visibility Audit',
+    weeks: 'Weeks 1–3',
+    desc: 'Targeted querying of ChatGPT, Perplexity, Gemini, Copilot, and Claude using the specific prompts NYC buyers use in your sector. We build a full citation map: where your brand appears, where competitors are cited in your place, and which editorial sources AI models draw on in the New York market.'
+  },
+  {
+    phase: 'Phase 2',
+    label: 'Foundation',
+    weeks: 'Weeks 3–8',
+    desc: 'Schema deployment aligned to GEO requirements, entity strengthening across Wikidata, Google Knowledge Graph, and sector-specific databases relevant to New York industries, llms.txt configuration, and content restructuring on your highest-priority pages.'
+  },
+  {
+    phase: 'Phase 3',
+    label: 'Optimisation',
+    weeks: 'Weeks 8–16',
+    desc: 'Page-level content rewrites prioritised by query volume and commercial value, platform-specific optimisation informed by early monitoring data, creation of new citation-target assets targeting NYC and New York sector queries, and third-party editorial development to reinforce entity authority.'
+  },
+  {
+    phase: 'Phase 4',
+    label: 'Iteration',
+    weeks: 'Ongoing',
+    desc: 'Monthly citation frequency reporting across all platforms, competitive positioning benchmarking within New York market segments, continuous content refinement driven by live monitoring data, and quarterly strategy reviews responding to platform behaviour changes.'
+  }
+];
+
+const faqs = [
+  {
+    q: 'Do you have a New York office?',
+    a: 'No. GEOoptimised is a UK-based agency that delivers all services remotely. We work with New York and NYC businesses entirely online — via video calls, shared workspaces, and async collaboration. Remote delivery does not diminish the quality of the work; generative engine optimisation is a technical and strategic discipline that requires specialist expertise, not geographic proximity.'
+  },
+  {
+    q: 'What is generative engine optimisation (GEO)?',
+    a: 'Generative engine optimisation is the discipline of structuring your brand so that AI models — ChatGPT, Perplexity, Gemini, Google AI Overviews — select it as a cited source in synthesised answers. Where SEO competes for a position in a list of ten links, GEO competes for inclusion in the one-to-three sources an AI quotes directly. Full explanations are available at geooptimised.com/what-is-geo/ and geooptimised.com/generative-engine-optimisation/.'
+  },
+  {
+    q: 'Why do New York businesses need GEO now?',
+    a: 'New York is one of the most competitive commercial markets in the world. B2B buyers and high-value consumers in NYC increasingly use AI tools — ChatGPT, Perplexity, Gemini — to research vendors, compare services, and shortlist providers before ever visiting a website. Brands not cited in those AI answers are structurally invisible at the top of the purchase funnel, regardless of how well they rank on traditional search.'
+  },
+  {
+    q: 'Which AI platforms do you optimise for?',
+    a: 'We optimise across ChatGPT, Perplexity, Google Gemini, Microsoft Copilot, Claude, and Google AI Overviews. Citation behaviour varies meaningfully between platforms — what causes a brand to be cited in a ChatGPT answer differs from what drives inclusion in an AI Overview. Our programme covers all major generative engines with platform-specific monitoring and adjustment built in from the start.'
+  },
+  {
+    q: 'How long does it take to see results?',
+    a: 'For New York businesses, the initial audit typically reveals clear citation gaps that the programme begins closing in the first 60 to 90 days. In high-competition NYC sectors — finance, compliance, SaaS, professional services — full competitive positioning across all five major platforms develops over 6 to 12 months as entity authority and content structure compound. Every engagement begins with that documented audit baseline.'
+  },
+  {
+    q: 'How does remote GEO delivery work in practice?',
+    a: 'Every New York engagement begins with a structured discovery call and a briefing document covering brand context, competitive landscape, and AI visibility objectives. Work proceeds on a weekly delivery cadence with written updates and a monthly strategy call. Audit reports, content rewrites, schema files, and monitoring dashboards all live in a shared project workspace. The UK–Eastern Time overlap (9am–1pm ET) covers any live sessions needed.'
+  }
+];
+
+const related = [
+  {
+    tag: 'Node',
+    title: 'GEO Agency Near You',
+    excerpt: 'The hub for all location-specific GEO agency pages — find remote GEO services for your city.',
+    href: '/geo-near-you/'
+  },
+  {
+    tag: 'Sibling',
+    title: 'GEO Agency for Los Angeles Businesses',
+    excerpt: 'Remote generative engine optimisation services for LA and Southern California brands.',
+    href: '/geo-agency-los-angeles/'
+  },
+  {
+    tag: 'Service',
+    title: 'GEO Services Overview',
+    excerpt: 'Audit, implementation, monitoring, and iteration — the full scope of what a GEO engagement delivers.',
+    href: '/geo-services/'
+  },
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'A full treatment of GEO mechanics — entity authority, citation signals, and how AI models select sources.',
+    href: '/generative-engine-optimisation/'
+  }
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/geo-agency-new-york/"
+  ogType="website"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex items-center gap-1.5 text-sm text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-near-you/" class="transition hover:text-[var(--accent)]">GEO Agency Near You</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">New York</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Local Service</span>
+        <span class="font-mono text-xs text-ink-300">Remote delivery &middot; UK-based specialist agency</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO Agency for New York Businesses
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">New York's buyers have moved faster than almost any market in the world: AI tools are now the first stop for vendor research, not the last.</strong>
+        When a hedge fund analyst asks ChatGPT to identify the leading RegTech providers in NYC, or a CMO uses Perplexity to shortlist B2B agencies in Manhattan, the brands cited in those answers are shaping the conversation before a single sales call happens. GEOoptimised delivers specialist
+        <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a>
+        to New York businesses entirely remotely — built on technical depth, not geographic proximity.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="/contact/" class="btn btn-primary">Request a free GEO audit</a>
+        <a href="/geo-agency/" class="btn btn-ghost">About our agency</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <div class="container-wide py-12">
+
+    <!-- Key Takeaways -->
+    <div class="card p-6 mb-14 max-w-3xl">
+      <span class="eyebrow">Key Takeaways</span>
+      <ul class="mt-4 space-y-2 text-sm text-ink-200">
+        <li class="flex items-start gap-2">
+          <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+          <span>GEO and SEO target different outputs entirely — AI-generated citations versus ranked blue links — and require separate strategic disciplines.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+          <span>New York's hyper-competitive landscape means AI citation gaps translate directly into lost business at the top of the funnel.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+          <span>We deliver all services remotely — structured audit, implementation, monitoring, and iteration — with no geographic constraint on quality.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+          <span>The programme is structured to produce measurable NYC citation improvements within 60–90 days; entity authority and citation footprint compound over 6–12 months.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- What GEO Is -->
+    <div class="prose-dark max-w-3xl">
+      <h2 id="what-geo-is" class="anchor-top">GEO and the New York Commercial Landscape</h2>
+      <p>
+        <strong>AI citation in New York is not a future-state concern — it is a present competitive dynamic.</strong>
+        The city's density of finance, professional services, SaaS, and media buyers means early adopters of AI research tools are concentrated here. Generative engine optimisation is the discipline that determines which brands those tools cite; a full explanation is at <a href="/what-is-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">What is GEO?</a> and the <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">complete GEO guide</a>. The programme scope — structured data, entity reinforcement, content architecture — is covered in our <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services overview</a>.
+      </p>
+
+      <h2 id="why-new-york" class="anchor-top mt-12">Why New York Businesses Cannot Afford to Ignore AI Citations</h2>
+      <p>
+        <strong>New York is one of the world's most AI-adoption-forward commercial markets, and that makes the citation gap costlier than almost anywhere else.</strong>
+        The city's concentration of finance, professional services, media, technology, and consumer brands means that buyers — both B2B and B2C —
+        are early adopters of AI research tools. When a fund manager in Midtown asks ChatGPT to shortlist compliance software vendors,
+        or a marketing director in Brooklyn uses Perplexity to compare creative agencies, the brands that appear in those answers
+        have an enormous first-mover advantage.
+      </p>
+      <p>
+        NYC's competitive density also means that the window for establishing AI citation authority before competitors close it is narrower
+        than in less saturated markets. Early movers in GEO build entity authority and citation footprints that are structurally difficult
+        for later entrants to displace. The question is not whether to invest in GEO, but how quickly you can close the gap on competitors
+        who are already building it.
+      </p>
+      <p>
+        This applies across sectors: professional services firms, SaaS companies, e-commerce brands in considered-purchase categories,
+        healthcare providers, and any business whose customers research options before committing. If your buyers use AI tools to inform
+        decisions — and in New York, they do — then your absence from AI answers is a measurable commercial problem.
+      </p>
+
+      <h2 id="remote-delivery" class="anchor-top mt-12">How We Work With New York Clients</h2>
+      <p>
+        <strong>There is no New York office — GEOoptimised is UK-based and every engagement runs fully online.</strong>
+        The work itself — AI citation auditing, schema deployment, entity graph reinforcement, content restructuring — is inherently digital. A practitioner does not need to be in the same time zone to do it accurately; they need the right expertise and tooling.
+      </p>
+      <p>
+        The UK–US Eastern Time overlap (9am–1pm ET each working day) handles any synchronous touchpoints: onboarding, monthly strategy calls, review sessions. Everything else moves through a structured async cadence — documented weekly updates, shared audit files, and tracked deliverables. New York clients consistently find the four-hour overlap window sufficient. Our <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services overview</a> details every phase.
+      </p>
+    </div>
+
+    <!-- Deliverables table -->
+    <div class="mt-14">
+      <h2 class="font-display text-2xl font-bold grad-text mb-6" id="deliverables">What We Deliver: Engagement Phases</h2>
+      <div class="card overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead>
+              <tr class="border-b border-[var(--line)]">
+                <th class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Phase</th>
+                <th class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Deliverable</th>
+                <th class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Timeline</th>
+                <th class="px-5 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">What happens</th>
+              </tr>
+            </thead>
+            <tbody class="text-ink-300">
+              {deliverables.map((row, i) => (
+                <tr class={i < deliverables.length - 1 ? 'border-b border-[var(--line-soft)]' : ''}>
+                  <td class="px-5 py-4 font-mono text-xs text-ink-500 whitespace-nowrap">{row.phase}</td>
+                  <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">{row.label}</td>
+                  <td class="px-5 py-4 text-ink-300 whitespace-nowrap">{row.weeks}</td>
+                  <td class="px-5 py-4 leading-relaxed">{row.desc}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- GEO vs SEO for NYC -->
+    <div class="prose-dark max-w-3xl mt-14">
+      <h2 id="geo-vs-seo" class="anchor-top">GEO vs SEO for New York Brands</h2>
+      <p>
+        <strong>For New York businesses, the distinction matters because the competitive stakes in both channels are unusually high.</strong>
+        Traditional SEO targets location-qualified queries — "compliance software NYC," "M&amp;A lawyer Manhattan" — and those rankings remain valuable.
+        GEO targets the AI-generated answers that intercept research before a user reaches the SERP at all: when a procurement lead asks ChatGPT for a shortlist of RegTech vendors in New York, the brands cited have already won the first stage of the evaluation.
+      </p>
+      <p>
+        The two disciplines share underlying content and technical infrastructure but require separate strategic attention. Running them in parallel is the most effective approach for most New York businesses. For a detailed comparison, see our <a href="/geo-vs-seo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO vs SEO guide</a>.
+      </p>
+    </div>
+
+    <!-- FAQ Accordion -->
+    <div class="mt-14 max-w-3xl">
+      <h2 class="font-display text-2xl font-bold grad-text mb-8" id="faq">Frequently Asked Questions</h2>
+      <div class="space-y-2" id="faq-accordion-ny">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Related Reading -->
+    <div class="mt-16">
+      <span class="eyebrow" id="related">Related reading</span>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {related.map(item => (
+          <a href={item.href} class="card card-hover block p-5 no-underline">
+            <span class="eyebrow">{item.tag}</span>
+            <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+            <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read <span aria-hidden="true">&rarr;</span></span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12">
+    <div class="container-wide py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Find Out Where Your New York Brand Stands in AI Search</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Every engagement opens with a structured AI visibility audit — a systematic review of how your New York brand currently appears across ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews. The audit establishes a documented baseline and a prioritised action plan before any optimisation work begins.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request your free GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('#faq-accordion-ny button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+  </script>
+
+</Base>

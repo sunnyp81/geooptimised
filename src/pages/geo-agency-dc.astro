@@ -1,0 +1,406 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO Agency for Washington, D.C. Businesses | GEOoptimised';
+const description = 'Remote GEO services for Washington D.C. businesses. Get cited by ChatGPT, Perplexity, and AI Overviews. Specialist generative engine optimisation agency.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Generative Engine Optimisation for Washington D.C. Businesses",
+    "serviceType": "Generative Engine Optimisation",
+    "description": "Remote generative engine optimisation services for businesses based in Washington, D.C. We help brands earn citations in AI-generated answers across ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
+    "provider": { "@id": "https://geooptimised.com/#organization" },
+    "areaServed": { "@type": "City", "name": "Washington D.C." },
+    "url": "https://geooptimised.com/geo-agency-dc/",
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "inLanguage": "en-GB"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you have an office in Washington, D.C.?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. GEOoptimised is a UK-based agency that delivers all client work remotely. There is no D.C. office, no local staff, and no fabricated local presence. All engagements run via video conference and shared digital workspaces. Generative engine optimisation does not require physical proximity to the client — it is entirely an online discipline."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does AI search visibility matter so much for D.C.-area businesses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Washington, D.C. and the surrounding metro area is home to the world's densest concentration of policy organisations, government contractors, think tanks, associations, law firms, and consultancies. In almost every one of these categories, decision-makers and researchers use AI tools to identify and shortlist organisations. A think tank not cited in AI answers on its core policy topic, or a consulting firm absent from AI-generated vendor shortlists, is missing a growing segment of its target audience."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is GEO useful for non-profit and association clients?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Think tanks, trade associations, and advocacy organisations in D.C. rely heavily on being cited as authoritative sources. GEO directly serves this objective: it is the discipline of making your organisation the source that AI models choose to cite when answering questions in your policy or advocacy area. Entity authority and structured content are the primary mechanisms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which AI platforms do you optimise for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We cover ChatGPT, Perplexity, Google Gemini, Microsoft Copilot, and Google AI Overviews across every D.C. engagement. For policy and think tank clients in particular, the platform mix matters: Perplexity is especially prominent in research workflows, while AI Overviews catch queries at a different stage of the information journey. Each platform gets a tailored approach, not a single generic strategy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long before a D.C. business sees GEO results?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GEO programmes are designed to surface measurable citation changes within 60 to 90 days of implementation starting. For D.C. organisations in high-stakes categories — policy, federal contracting, legal — citation authority compounds meaningfully over four to six months as entity recognition strengthens. Every engagement begins with a full audit establishing the documented baseline."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does GEO replace or complement our existing SEO programme?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GEO complements SEO — it does not replace it. A strong SEO foundation (technical health, content quality, backlink authority) makes GEO more effective. GEO and SEO target different outputs: ranked search results versus AI-generated answers. The most competitive organisations invest in both, coordinated to share structural content improvements."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://geooptimised.com/" },
+      { "@type": "ListItem", "position": 2, "name": "GEO Agency Near You", "item": "https://geooptimised.com/geo-near-you/" },
+      { "@type": "ListItem", "position": 3, "name": "GEO Agency for Washington D.C. Businesses", "item": "https://geooptimised.com/geo-agency-dc/" }
+    ]
+  }
+];
+
+const deliverables = [
+  {
+    phase: 'Audit',
+    weeks: 'Weeks 1–3',
+    items: [
+      'AI citation map across ChatGPT, Perplexity, Gemini, Copilot, AI Overviews',
+      'Competitor citation benchmarking for your specific policy or service area',
+      'Entity presence assessment across knowledge graphs and authoritative databases',
+      'Structured data and technical infrastructure review',
+      'Prioritised action plan with estimated impact per recommendation',
+    ],
+  },
+  {
+    phase: 'Foundation',
+    weeks: 'Weeks 3–8',
+    items: [
+      'Structured data implementation covering Service, FAQPage, HowTo, Person, Organization, and sameAs for D.C. entity types',
+      'Entity reinforcement across Wikidata, Google Knowledge Graph, and D.C. policy and federal sector databases',
+      'llms.txt configuration and AI crawler management',
+      'Initial content restructuring on your highest-value, highest-traffic pages',
+    ],
+  },
+  {
+    phase: 'Optimisation',
+    weeks: 'Weeks 8–16',
+    items: [
+      'Systematic content optimisation ordered by query volume and commercial or policy value',
+      'Platform-specific adjustments based on early monitoring data',
+      'New citation-target content for identified coverage gaps',
+      'Third-party source and editorial mention development',
+    ],
+  },
+  {
+    phase: 'Iteration',
+    weeks: 'Ongoing',
+    items: [
+      'Monthly citation and brand accuracy reporting across all five major platforms',
+      'Entity authority tracking across knowledge graphs and authoritative databases',
+      'Proactive content adjustments as platform retrieval behaviour evolves',
+      'Quarterly reviews aligned to organisational objectives and the D.C. policy calendar',
+    ],
+  },
+];
+
+const faqs = [
+  {
+    q: 'Do you have an office in Washington, D.C.?',
+    a: 'No. GEOoptimised is a UK-based agency that delivers all client work remotely. There is no D.C. office, no local staff, and no fabricated local presence. All engagements run via video conference and shared digital workspaces. Generative engine optimisation does not require physical proximity to the client — it is entirely an online discipline.',
+  },
+  {
+    q: 'Why does AI search visibility matter so much for D.C.-area businesses?',
+    a: 'Washington, D.C. and the surrounding metro area is home to the world\'s densest concentration of policy organisations, government contractors, think tanks, associations, law firms, and consultancies. In almost every one of these categories, decision-makers and researchers use AI tools to identify and shortlist organisations. A think tank not cited in AI answers on its core policy topic, or a consulting firm absent from AI-generated vendor shortlists, is missing a growing segment of its target audience.',
+  },
+  {
+    q: 'Is GEO useful for non-profit and association clients?',
+    a: 'Yes. Think tanks, trade associations, and advocacy organisations in D.C. rely heavily on being cited as authoritative sources. GEO directly serves this objective: it is the discipline of making your organisation the source that AI models choose to cite when answering questions in your policy or advocacy area. Entity authority and structured content are the primary mechanisms.',
+  },
+  {
+    q: 'Which AI platforms do you optimise for?',
+    a: 'We cover ChatGPT, Perplexity, Google Gemini, Microsoft Copilot, and Google AI Overviews across every D.C. engagement. For policy and think tank clients in particular, the platform mix matters: Perplexity is especially prominent in research workflows, while AI Overviews catch queries at a different stage of the information journey. Each platform gets a tailored approach, not a single generic strategy.',
+  },
+  {
+    q: 'How long before a D.C. business sees GEO results?',
+    a: 'GEO programmes are designed to surface measurable citation changes within 60 to 90 days of implementation starting. For D.C. organisations in high-stakes categories — policy, federal contracting, legal — citation authority compounds meaningfully over four to six months as entity recognition strengthens. Every engagement begins with a full audit establishing the documented baseline.',
+  },
+  {
+    q: 'Does GEO replace or complement our existing SEO programme?',
+    a: 'GEO complements SEO — it does not replace it. A strong SEO foundation (technical health, content quality, backlink authority) makes GEO more effective. GEO and SEO target different outputs: ranked search results versus AI-generated answers. The most competitive organisations invest in both, coordinated to share structural content improvements.',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/geo-agency-dc/"
+  ogType="website"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex items-center gap-1.5 text-sm text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-near-you/" class="transition hover:text-[var(--accent)]">GEO Agency Near You</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">Washington, D.C.</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Local Service</span>
+        <span class="font-mono text-xs text-ink-300">Remote delivery &bull; Washington, D.C.</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO Agency for Washington, D.C. Businesses
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">Washington, D.C. organisations face a uniquely competitive AI citation landscape</strong> — policy institutions, consultancies, law firms, and government contractors are all vying to be the source AI models cite on high-stakes queries. GEOoptimised delivers specialist generative engine optimisation to D.C.-area businesses remotely, building the entity authority and content architecture that determines which organisations get cited and which do not.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="/contact/" class="btn btn-primary">Request a free GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Body -->
+  <div class="container-wide py-12">
+
+    <!-- Key Takeaways -->
+    <div class="card p-6 mb-14 max-w-3xl">
+      <span class="eyebrow">Key Takeaways</span>
+      <ul class="mt-4 space-y-2 text-sm text-ink-200">
+        <li class="flex items-start gap-2">
+          <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+          <span>GEOoptimised is UK-based — all D.C. work is delivered remotely. No local office, no local staff, no fabricated presence.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+          <span>D.C.'s policy, consulting, legal, and government contracting sectors are among the highest-value GEO targets anywhere in the US.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+          <span>Think tanks and associations benefit directly: GEO is the discipline of being cited as the authoritative source on your core topics.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+          <span>Every engagement starts with an AI visibility audit mapping current citation frequency and competitor gaps before any optimisation begins.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Why D.C. organisations need GEO -->
+    <div class="prose-dark max-w-3xl">
+      <h2 id="why-geo-dc" class="anchor-top">Why Washington, D.C. Organisations Need a GEO Strategy</h2>
+      <p>
+        <strong>No city in the world has a denser concentration of organisations competing to be cited as the authoritative source on high-stakes topics.</strong> Washington, D.C. and the surrounding Virginia and Maryland corridor hosts the full apparatus of American policy influence: federal agencies and their contractors, think tanks across the ideological spectrum, trade associations representing every major industry, international organisations, lobbying firms, law firms with federal specialisations, and management consultancies serving government clients.
+      </p>
+      <p>
+        In each of these categories, AI search adoption among target audiences is accelerating rapidly. Congressional staffers research policy positions using ChatGPT. Procurement officers at federal agencies use AI tools to shortlist contractor capabilities. Senior executives at corporations with regulatory exposure ask Perplexity to identify the best specialist law firms in Washington. Journalists use AI tools to identify expert sources for comment. In every one of these use cases, an organisation either appears in the AI-generated answer or it does not.
+      </p>
+      <p>
+        <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Generative engine optimisation</a> is the systematic discipline that determines whether you appear. It involves building the entity authority, content architecture, and structured data foundations that cause AI models to treat your organisation as a credible, citable primary source. For D.C. organisations whose entire value proposition rests on being considered authoritative, this is not a peripheral marketing concern — it is central to organisational visibility.
+      </p>
+    </div>
+
+    <!-- D.C.-specific sectors -->
+    <div class="prose-dark max-w-3xl mt-16">
+      <h2 id="dc-sectors" class="anchor-top">D.C.-Area Sectors Where GEO Returns the Highest Value</h2>
+      <p>
+        <strong>The Washington, D.C. metro area's economic character creates a specific set of GEO opportunities that differ meaningfully from other US cities.</strong>
+      </p>
+      <p>
+        <strong>Policy and think tanks.</strong> Research institutions and policy organisations depend on being the cited source when AI tools answer questions about their issue areas. A think tank working on energy transition policy that is not cited by AI models when users ask about that topic is losing the influence contest to those that are. GEO for these organisations focuses heavily on entity authority — establishing the organisation as the definitional expert on specific policy questions — and on structuring research content so that AI models can extract and attribute precise claims.
+      </p>
+      <p>
+        <strong>Government contracting and professional services.</strong> The Beltway contractor ecosystem includes thousands of firms competing on overlapping capability areas. In procurement research phases, programme managers increasingly use AI tools to identify potential vendors before issuing formal solicitations. A government contractor that appears credibly in AI answers when specific technical or operational capability queries are run is ahead in the competition before the formal process begins.
+      </p>
+      <p>
+        <strong>Law firms with federal specialisations.</strong> Firms practising in regulatory law, government investigations, federal procurement, and administrative law serve clients who arrive having already done AI-assisted research. Being cited by AI models as a primary reference for a specific federal practice area converts research-stage enquiries into commercial conversations. The <a href="/geo-agency/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO agency</a> work that underlies these citations is primarily content architecture and entity reinforcement.
+      </p>
+      <p>
+        <strong>Associations and membership organisations.</strong> Trade associations and professional membership bodies face an existential challenge from AI search: if an AI tool can answer their members' questions directly, the association's value as an information intermediary is eroded. The strategic response is to become the source the AI cites — to position the association's knowledge base as so structurally authoritative that AI models default to it. GEO is how that position is built and maintained.
+      </p>
+      <p>
+        For a full breakdown of the service components involved, see our <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services overview</a>.
+      </p>
+    </div>
+
+    <!-- GEO vs local SEO context -->
+    <div class="prose-dark max-w-3xl mt-16">
+      <h2 id="geo-vs-seo-dc" class="anchor-top">GEO Is Not Local SEO — and That Distinction Matters for D.C.</h2>
+      <p>
+        <strong>For D.C.-area organisations, the distinction between local SEO and GEO is commercially significant.</strong> Local SEO optimises for geo-modified search queries — "law firms Washington DC" in Google's results page — and proximity-based signals like Google Business Profile. These remain useful for retail and consumer service businesses where location determines consideration.
+      </p>
+      <p>
+        But most of the organisations described above do not compete on proximity. A think tank is not chosen because it is close to Capitol Hill. A government contractor is not selected because its Tysons Corner office is convenient. A specialist law firm is retained because it is the best. In these categories, AI search — not local search — is where the citation battle is fought and won.
+      </p>
+      <p>
+        GEO operates at the level of topical authority, entity recognition, and content structure. It makes your organisation the source that AI models cite when answering questions in your domain, regardless of where the user is located. That is the outcome that matters for most D.C. organisations with a regional or national remit. GEO and traditional SEO are complementary — see our <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO guide</a> for a full treatment of how they relate.
+      </p>
+    </div>
+
+    <!-- Remote service -->
+    <div class="prose-dark max-w-3xl mt-16">
+      <h2 id="remote-service-dc" class="anchor-top">Remote Delivery: How We Work With D.C. Clients</h2>
+      <p>
+        <strong>GEOoptimised operates from the UK and serves D.C. clients entirely remotely — no Beltway office, no Virginia suburb co-working space, no pretence of local presence.</strong> For an agency whose work is premised on accuracy and editorial credibility, stating this plainly is the baseline.
+      </p>
+      <p>
+        Washington, D.C. runs on Eastern Time. UK business hours provide a four-hour morning overlap (9am–1pm ET), which covers any live sessions — onboarding calls, quarterly strategy reviews, ad hoc check-ins. Between sessions, work progresses through a shared digital workspace: documented weekly updates, versioned audit reports, and tracked implementation tasks. For D.C. organisations accustomed to working with remote counsel, advisers, and specialists, this model is entirely familiar. Full programme scope is in our <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services overview</a>.
+      </p>
+    </div>
+
+    <!-- Deliverables table -->
+    <div class="mt-16">
+      <h2 class="font-display text-2xl font-bold text-ink-50 mb-3">What the Engagement Delivers</h2>
+      <p class="text-ink-300 mb-8 max-w-2xl leading-relaxed">
+        <strong class="text-ink-100">Every GEO engagement runs through four defined phases</strong> with clear deliverables and measurable outcomes at each stage.
+      </p>
+      <div class="card overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead>
+              <tr class="border-b border-[var(--line)]">
+                <th class="px-6 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Phase</th>
+                <th class="px-6 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Timing</th>
+                <th class="px-6 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Key Deliverables</th>
+              </tr>
+            </thead>
+            <tbody class="text-ink-300">
+              {deliverables.map((row, i) => (
+                <tr class={i < deliverables.length - 1 ? 'border-b border-[var(--line-soft)]' : ''}>
+                  <td class="px-6 py-4 font-semibold text-ink-100 align-top">{row.phase}</td>
+                  <td class="px-6 py-4 font-mono text-xs text-ink-300 align-top whitespace-nowrap">{row.weeks}</td>
+                  <td class="px-6 py-4 align-top">
+                    <ul class="space-y-1">
+                      {row.items.map(item => (
+                        <li class="flex items-start gap-2">
+                          <span class="mt-0.5 text-[var(--accent)] shrink-0">&#10003;</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="prose-dark mt-16">
+      <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="mt-8 max-w-3xl space-y-2" id="faq-accordion">
+      {faqs.map(faq => (
+        <div class="card overflow-hidden">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+            aria-expanded="false"
+          >
+            <span>{faq.q}</span>
+            <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+          </button>
+          <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+            <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Related reading -->
+    <div class="mt-16">
+      <span class="eyebrow">Related reading</span>
+      <div class="mt-6 grid gap-6 md:grid-cols-3">
+        <a href="/geo-near-you/" class="card card-hover block p-5 no-underline">
+          <span class="eyebrow">Hub</span>
+          <h3 class="mt-2 font-display text-base font-semibold text-white">GEO Agency Near You</h3>
+          <p class="mt-2 text-sm text-ink-300">Remote GEO services for businesses across the US and beyond.</p>
+          <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">View hub <span aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a href="/geo-agency-long-island/" class="card card-hover block p-5 no-underline">
+          <span class="eyebrow">Local Service</span>
+          <h3 class="mt-2 font-display text-base font-semibold text-white">GEO Agency for Long Island Businesses</h3>
+          <p class="mt-2 text-sm text-ink-300">Remote GEO services for finance, healthcare, and professional services firms on Long Island.</p>
+          <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a href="/geo-agency-san-antonio/" class="card card-hover block p-5 no-underline">
+          <span class="eyebrow">Local Service</span>
+          <h3 class="mt-2 font-display text-base font-semibold text-white">GEO Agency for San Antonio Businesses</h3>
+          <p class="mt-2 text-sm text-ink-300">Remote GEO services for energy, defence, and healthcare firms in San Antonio.</p>
+          <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12">
+    <div class="container-wide py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Start With a GEO Audit</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        The audit maps every dimension of your D.C. organisation's AI citation presence — platform by platform, competitor by competitor — and translates that picture into a prioritised action plan. This is where every engagement begins, before any recommendations are made.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request your free GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all services</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('#faq-accordion button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling;
+        const icon = btn.querySelector('.faq-icon');
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+  </script>
+
+</Base>

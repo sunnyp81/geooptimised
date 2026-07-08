@@ -1,0 +1,655 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'How to Optimise for ChatGPT — GEOoptimised';
+const description = 'Practical guide to ChatGPT optimization: how ChatGPT sources answers, what ChatGPT Search indexes, and the exact steps to get your brand cited. Updated 2026.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: 'How to Optimise for ChatGPT',
+  description,
+  url: 'https://geooptimised.com/optimise-for-chatgpt/',
+  image: 'https://geooptimised.com/og-image.png',
+  inLanguage: 'en-GB',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/optimise-for-chatgpt/',
+  },
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to Optimise for ChatGPT',
+  description: 'Step-by-step process to improve your brand\'s citation rate in ChatGPT and ChatGPT Search.',
+  inLanguage: 'en-GB',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Audit your current ChatGPT visibility',
+      text: 'Run your top 20 target queries in ChatGPT (with web browsing enabled) and log whether your brand is cited, how accurately, and which competitors appear instead.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Allow GPTBot in robots.txt',
+      text: 'Confirm GPTBot is not blocked in your robots.txt. If it is, add an Allow rule for the pages you want ChatGPT to index.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Strengthen entity authority',
+      text: 'Ensure your brand has a consistent entity presence across Wikipedia, Wikidata, Crunchbase, LinkedIn, and industry directories. Add sameAs properties to your Organisation schema.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Restructure content for citability',
+      text: 'Lead every major section with a bold declarative statement. Add original data, structured Q&A, and comparison tables. Remove vague marketing language.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 5,
+      name: 'Implement JSON-LD schema',
+      text: 'Deploy Article, FAQPage, HowTo, and Organisation schema with sameAs references. Structured data reduces ambiguity in ChatGPT\'s retrieval pipeline.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 6,
+      name: 'Publish an llms.txt file',
+      text: 'Create /llms.txt to direct AI crawlers to your most authoritative pages and communicate your brand identity clearly.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 7,
+      name: 'Monitor and iterate',
+      text: 'Re-run your query set monthly. Track citation frequency, accuracy, and share of voice. Refine the content that gets cited and address gaps.',
+    },
+  ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Does ChatGPT use live web search?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'ChatGPT has two citation modes. The base model answers from parametric knowledge acquired during training, without web access. ChatGPT Search (the browsing mode available to Plus, Team, and Enterprise users) retrieves live web pages and cites them directly in the response. Optimising for both modes requires different approaches: entity authority and training data presence for the base model; crawlability, content structure, and Bing-index presence for ChatGPT Search.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which search index does ChatGPT Search use?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'ChatGPT Search uses Microsoft Bing\'s index as its primary retrieval source, alongside a web browsing capability powered by Bing. Pages that rank well in Bing and are crawlable by GPTBot are most likely to be retrieved and cited in ChatGPT Search responses. Traditional Bing SEO signals — domain authority, backlink quality, content relevance, and technical health — apply alongside GEO-specific optimisation.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is GPTBot and should I allow it?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'GPTBot is OpenAI\'s web crawler, used to collect training data and to power ChatGPT Search retrieval. If GPTBot is blocked in your robots.txt, your pages cannot be retrieved by ChatGPT Search. Whether to allow GPTBot is a strategic decision: blocking it removes your content from ChatGPT\'s retrieval pipeline entirely. Most brands seeking AI visibility should allow GPTBot on their key pages while retaining the option to block it on thin, commercial, or sensitive content.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I check if ChatGPT is citing my brand?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The most direct method is manual prompt testing: open ChatGPT with web browsing enabled, run your top category queries, and record whether your brand appears. For systematic tracking, run a defined query set (typically 30–100 queries) across ChatGPT monthly and log citation frequency, accuracy, and position. Automated AI visibility platforms such as Profound and Semrush AI Toolkit can handle this at scale.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does ChatGPT cite the same sources as Google AI Overviews?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Not necessarily. ChatGPT Search draws primarily from Bing\'s index; Google AI Overviews draws from Google\'s index. A page that appears in Google AI Overviews may not appear in ChatGPT Search if it has weaker Bing visibility. A cross-platform GEO strategy must account for both indexes. Foundational content quality and entity authority improve performance across both, but index-specific presence matters for retrieval-augmented citation.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How quickly can I improve my ChatGPT citation rate?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'For ChatGPT Search (the retrieval-based mode), content changes — restructuring sections with declarative statements, adding FAQ blocks, and fixing robots.txt to allow GPTBot — can produce measurable improvements within 30 to 60 days as your pages are re-crawled. Improving your brand\'s parametric representation in the base model is slower, as it depends on training data cycles. Entity authority improvements typically take 3 to 6 months to influence parametric citations.',
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+    { '@type': 'ListItem', position: 3, name: 'How to Optimise for ChatGPT', item: 'https://geooptimised.com/optimise-for-chatgpt/' },
+  ],
+};
+
+const schema = [articleSchema, howToSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'how-chatgpt-sources', label: 'How ChatGPT Sources Answers' },
+  { id: 'chatgpt-search', label: 'ChatGPT Search Explained' },
+  { id: 'gptbot-crawling', label: 'GPTBot & Crawling' },
+  { id: 'optimisation-steps', label: '7-Step Optimisation Process' },
+  { id: 'content-for-chatgpt', label: 'Content That Gets Cited' },
+  { id: 'platform-comparison', label: 'ChatGPT vs Other AI Platforms' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const faqs = [
+  {
+    q: 'Does ChatGPT use live web search?',
+    a: 'ChatGPT has two citation modes. The base model answers from parametric knowledge acquired during training, without web access. ChatGPT Search (the browsing mode available to Plus, Team, and Enterprise users) retrieves live web pages and cites them directly in the response. Optimising for both modes requires different approaches: entity authority and training data presence for the base model; crawlability, content structure, and Bing-index presence for ChatGPT Search.',
+  },
+  {
+    q: 'Which search index does ChatGPT Search use?',
+    a: "ChatGPT Search uses Microsoft Bing's index as its primary retrieval source, alongside a web browsing capability powered by Bing. Pages that rank well in Bing and are crawlable by GPTBot are most likely to be retrieved and cited in ChatGPT Search responses. Traditional Bing SEO signals — domain authority, backlink quality, content relevance, and technical health — apply alongside GEO-specific optimisation.",
+  },
+  {
+    q: 'What is GPTBot and should I allow it?',
+    a: "GPTBot is OpenAI's web crawler, used to collect training data and to power ChatGPT Search retrieval. If GPTBot is blocked in your robots.txt, your pages cannot be retrieved by ChatGPT Search. Whether to allow GPTBot is a strategic decision: blocking it removes your content from ChatGPT's retrieval pipeline entirely. Most brands seeking AI visibility should allow GPTBot on their key pages while retaining the option to block it on thin, commercial, or sensitive content.",
+  },
+  {
+    q: 'How do I check if ChatGPT is citing my brand?',
+    a: 'The most direct method is manual prompt testing: open ChatGPT with web browsing enabled, run your top category queries, and record whether your brand appears. For systematic tracking, run a defined query set (typically 30–100 queries) across ChatGPT monthly and log citation frequency, accuracy, and position. Automated AI visibility platforms such as Profound and Semrush AI Toolkit can handle this at scale.',
+  },
+  {
+    q: 'Does ChatGPT cite the same sources as Google AI Overviews?',
+    a: "Not necessarily. ChatGPT Search draws primarily from Bing's index; Google AI Overviews draws from Google's index. A page that appears in Google AI Overviews may not appear in ChatGPT Search if it has weaker Bing visibility. A cross-platform GEO strategy must account for both indexes. Foundational content quality and entity authority improve performance across both, but index-specific presence matters for retrieval-augmented citation.",
+  },
+  {
+    q: 'How quickly can I improve my ChatGPT citation rate?',
+    a: 'For ChatGPT Search (the retrieval-based mode), content changes — restructuring sections with declarative statements, adding FAQ blocks, and fixing robots.txt to allow GPTBot — can produce measurable improvements within 30 to 60 days as your pages are re-crawled. Improving your brand\'s parametric representation in the base model is slower, as it depends on training data cycles. Entity authority improvements typically take 3 to 6 months to influence parametric citations.',
+  },
+];
+
+const related = [
+  {
+    tag: 'Platform Guide',
+    title: 'ChatGPT Optimisation for Business',
+    excerpt: 'Strategic guide to ChatGPT visibility for B2B brands — commercial implications, lead generation, and competitive positioning.',
+    href: '/chatgpt-for-business/',
+  },
+  {
+    tag: 'Platform Guide',
+    title: 'Optimise for Perplexity AI',
+    excerpt: 'How Perplexity retrieves and cites sources, and the specific optimisation steps for this platform.',
+    href: '/optimise-for-perplexity/',
+  },
+  {
+    tag: 'Platform Guide',
+    title: 'Google AI Overview Optimisation',
+    excerpt: 'How to appear in Google\'s AI-generated answer summaries and the signals that drive inclusion.',
+    href: '/google-ai-overview-optimisation/',
+  },
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'The full GEO framework covering all platforms, entity strategy, content architecture, and measurement.',
+    href: '/generative-engine-optimisation/',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/optimise-for-chatgpt/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">Generative Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">Optimise for ChatGPT</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Platform Playbook</span>
+        <span class="font-mono text-xs text-ink-300">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">14 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        How to Optimise for ChatGPT
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        ChatGPT is now one of the most-used information tools on the internet. When users ask it questions in your category, the brands it cites shape buying decisions, professional recommendations, and brand perception. This guide explains exactly how ChatGPT sources answers, how ChatGPT Search works, and the practical steps to get your brand cited accurately and consistently.
+      </p>
+      <p class="mt-3 max-w-2xl text-sm leading-relaxed text-ink-300">
+        <strong class="text-ink-300">Note:</strong> ChatGPT's behaviour changes with each model and feature update. The information below reflects publicly documented behaviour as of mid-2026. Always verify current behaviour through direct testing.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" aria-label="Table of contents">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>ChatGPT operates in two modes: a base model drawing on training data, and ChatGPT Search which retrieves live web pages via Bing's index.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>GPTBot must be allowed in robots.txt for your pages to appear in ChatGPT Search results; blocking it removes you from the retrieval pipeline entirely.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Entity authority — consistent brand data across Wikidata, Wikipedia, LinkedIn, and directories — is the primary signal for base-model citation.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Content structure matters: declarative opening statements, FAQ sections, and specific data points consistently outperform generic prose in citation likelihood.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>ChatGPT optimisation is distinct from Google AI Overview optimisation — different indexes and different retrieval mechanisms require platform-specific tactics.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1: How ChatGPT Sources Answers -->
+      <section id="how-chatgpt-sources" class="anchor-top prose-dark mb-16">
+        <h2>How ChatGPT Sources Answers</h2>
+
+        <p>
+          <strong>ChatGPT generates answers through two distinct mechanisms: parametric knowledge embedded in the model's weights, and real-time web retrieval via ChatGPT Search.</strong> Understanding which mechanism applies to your target queries is the starting point for any ChatGPT optimisation strategy.
+        </p>
+
+        <h3>Parametric Knowledge (Base Model)</h3>
+        <p>
+          When ChatGPT answers without browsing the web, it draws on information absorbed during training. The model was trained on a large corpus of web content, books, code, and other text, and its weights encode patterns about which brands, concepts, and facts are associated with which topics. A brand that is mentioned frequently in authoritative sources — Wikipedia, industry publications, research papers — within the training data is more likely to be recalled correctly when a user asks about its category.
+        </p>
+        <p>
+          This matters because most ChatGPT queries are answered from parametric knowledge. Users on the free tier, users who have not enabled web browsing, and queries that the model judges can be answered without retrieval all fall into this mode. Your brand's parametric representation is a long-term asset that takes months to shift, but it is the citation mechanism that reaches the broadest ChatGPT user base.
+        </p>
+
+        <h3>The Role of Training Data Presence</h3>
+        <p>
+          <strong>The single most important factor for parametric citation is the volume and quality of authoritative sources that reference your brand.</strong> A brand mentioned accurately and consistently in Wikipedia articles, in trade press, in industry association directories, in academic papers, and in high-authority editorial content is more likely to appear in ChatGPT's parametric responses than a brand present only on its own website.
+        </p>
+        <p>
+          This is not a process you can accelerate by submitting to directories or writing guest posts on low-quality blogs. Training data quality matters as much as volume. References in sources that were themselves well-represented in pre-training corpora — Wikipedia, The Guardian, TechCrunch, industry-specific publications — carry disproportionate weight.
+        </p>
+      </section>
+
+      <!-- Section 2: ChatGPT Search Explained -->
+      <section id="chatgpt-search" class="anchor-top prose-dark mb-16">
+        <h2>ChatGPT Search Explained</h2>
+
+        <p>
+          <strong>ChatGPT Search is OpenAI's retrieval-augmented generation feature, enabling ChatGPT to retrieve live web pages and cite them as sources in its responses.</strong> It is available to ChatGPT Plus, Team, and Enterprise users, and represents the primary surface where real-time web content influences ChatGPT citations.
+        </p>
+
+        <p>
+          When a user submits a query to ChatGPT Search, the system uses Bing's web index to retrieve a set of candidate pages. Those pages are read, summarised, and synthesised into the generated response, with clickable source citations. The process is broadly analogous to how Perplexity works, though the underlying retrieval infrastructure and model behaviour differ.
+        </p>
+
+        <h3>The Bing Connection</h3>
+        <p>
+          Because ChatGPT Search relies on Bing's index, the fundamentals of Bing SEO directly affect your ChatGPT Search visibility. Pages that are well-indexed in Bing, have strong domain authority in Bing's evaluation, and are technically accessible to Bing's crawlers are the candidates for retrieval. This means:
+        </p>
+        <ul>
+          <li>Verify your site is indexed in Bing Webmaster Tools — do not assume Google indexing equals Bing indexing.</li>
+          <li>Submit your sitemap to Bing Webmaster Tools and resolve any crawl errors Bing reports.</li>
+          <li>Bing tends to weight exact-match signals more heavily than Google — ensure your target terms appear in your page title, H1, and early body text.</li>
+          <li>Bing has historically weighted social signals (LinkedIn, Twitter/X activity) more than Google; active brand presence on these platforms can support Bing authority.</li>
+        </ul>
+
+        <h3>How ChatGPT Search Selects Sources</h3>
+        <p>
+          Within the retrieved candidate set, ChatGPT Search decides which pages to cite based on relevance and content quality. Pages that provide clear, extractable answers to the user's query — with declarative statements, structured headings, and specific claims — are more likely to be cited than pages with equivalent topical relevance but poor content structure. The model is effectively asking: "Does this page contain a passage I can accurately quote or paraphrase to answer this question?"
+        </p>
+        <p>
+          This is where GEO content optimisation intersects with ChatGPT Search. Technical Bing visibility gets your pages into the retrieval candidate set; content structure determines whether those pages are actually cited.
+        </p>
+      </section>
+
+      <!-- Section 3: GPTBot & Crawling -->
+      <section id="gptbot-crawling" class="anchor-top prose-dark mb-16">
+        <h2>GPTBot and AI Crawler Configuration</h2>
+
+        <p>
+          <strong>GPTBot is OpenAI's web crawler, and allowing it is a prerequisite for appearing in ChatGPT Search.</strong> If GPTBot is blocked in your robots.txt, OpenAI cannot retrieve your pages, and they will not appear as citations in ChatGPT Search responses regardless of how well they rank in Bing.
+        </p>
+
+        <h3>Checking Your Current robots.txt</h3>
+        <p>
+          Audit your <code>robots.txt</code> file (located at <code>yourdomain.com/robots.txt</code>) for any rules that block GPTBot. Common patterns to look for:
+        </p>
+        <ul>
+          <li><code>User-agent: *</code> with <code>Disallow: /</code> — blocks all crawlers including GPTBot</li>
+          <li><code>User-agent: GPTBot</code> with <code>Disallow: /</code> — explicit GPTBot block</li>
+          <li>Disallow rules covering entire directories that contain your key content pages</li>
+        </ul>
+        <p>
+          If you find blocking rules, you will need to add an explicit Allow rule or remove the block. The decision should be deliberate: allowing GPTBot grants OpenAI access to your content for both training data and search retrieval. Most brands aiming for ChatGPT visibility should allow GPTBot on their authoritative content pages. Sensitive pages, thin commercial pages, and content you would prefer not to feed into training data can be excluded selectively.
+        </p>
+
+        <h3>llms.txt as a Complementary Signal</h3>
+        <p>
+          Publishing an <code>llms.txt</code> file at the root of your domain provides AI crawlers with a curated guide to your site's most important content. It is not a replacement for robots.txt configuration, but it gives AI systems a prioritised entry point — useful when a crawler has limited crawl budget and you want it to reach your highest-value pages first.
+        </p>
+        <p>
+          An effective llms.txt includes: your brand name and description, links to your key pillar pages, and a brief statement of your topical authority. For the current best practice specification, the proposal is documented at llmstxt.org, though implementation varies across AI platforms.
+        </p>
+      </section>
+
+      <!-- Section 4: 7-Step Optimisation Process -->
+      <section id="optimisation-steps" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>7-Step ChatGPT Optimisation Process</h2>
+          <p>
+            <strong>Getting cited in ChatGPT requires a systematic approach addressing crawl access, entity authority, content structure, and ongoing monitoring.</strong> These seven steps cover the full process.
+          </p>
+        </div>
+
+        <div class="mt-8 space-y-4">
+          <div class="card p-5 flex gap-4">
+            <span class="font-mono text-sm font-bold text-[var(--accent)] flex-shrink-0 pt-0.5">01</span>
+            <div>
+              <h3 class="font-display text-base font-semibold text-ink-50 mb-1">Audit current ChatGPT visibility</h3>
+              <p class="text-sm leading-relaxed text-ink-300">Open ChatGPT with web browsing enabled. Run your top 20 target queries — the questions your customers ask when researching your category. Record whether your brand appears, whether it is cited accurately, and which competitors are mentioned instead. This baseline tells you where the gaps are before you invest in any changes.</p>
+            </div>
+          </div>
+
+          <div class="card p-5 flex gap-4">
+            <span class="font-mono text-sm font-bold text-[var(--accent)] flex-shrink-0 pt-0.5">02</span>
+            <div>
+              <h3 class="font-display text-base font-semibold text-ink-50 mb-1">Fix robots.txt to allow GPTBot</h3>
+              <p class="text-sm leading-relaxed text-ink-300">Audit robots.txt and remove any rules that block GPTBot. Add selective Allow rules for your key content pages if needed. Verify the change with a robots.txt tester. Submit your updated sitemap to Bing Webmaster Tools to trigger re-crawling.</p>
+            </div>
+          </div>
+
+          <div class="card p-5 flex gap-4">
+            <span class="font-mono text-sm font-bold text-[var(--accent)] flex-shrink-0 pt-0.5">03</span>
+            <div>
+              <h3 class="font-display text-base font-semibold text-ink-50 mb-1">Verify and improve Bing indexation</h3>
+              <p class="text-sm leading-relaxed text-ink-300">Log in to Bing Webmaster Tools and confirm your key pages are indexed. Resolve any crawl errors. Submit your XML sitemap if you have not already. Bing indexation is a prerequisite for ChatGPT Search retrieval — it is a separate system from Google Search Console and requires its own setup.</p>
+            </div>
+          </div>
+
+          <div class="card p-5 flex gap-4">
+            <span class="font-mono text-sm font-bold text-[var(--accent)] flex-shrink-0 pt-0.5">04</span>
+            <div>
+              <h3 class="font-display text-base font-semibold text-ink-50 mb-1">Build entity authority</h3>
+              <p class="text-sm leading-relaxed text-ink-300">Establish and maintain consistent entity data across Wikipedia (where notability criteria are met), Wikidata, Crunchbase, LinkedIn, Companies House, and relevant industry directories. Add <code>sameAs</code> references in your Organisation schema pointing to each of these records. Consistency in your brand name, description, and classification across all sources reduces entity ambiguity and strengthens parametric citation.</p>
+            </div>
+          </div>
+
+          <div class="card p-5 flex gap-4">
+            <span class="font-mono text-sm font-bold text-[var(--accent)] flex-shrink-0 pt-0.5">05</span>
+            <div>
+              <h3 class="font-display text-base font-semibold text-ink-50 mb-1">Restructure content for citability</h3>
+              <p class="text-sm leading-relaxed text-ink-300">Audit your key pages against the citability criteria below. Lead every major section with a bold declarative sentence. Add structured FAQ sections with self-contained answers. Include at least one table, one numbered list, and specific data points on each key page. Remove vague language and marketing copy that adds no extractable information. This is the highest-leverage change for ChatGPT Search citation.</p>
+            </div>
+          </div>
+
+          <div class="card p-5 flex gap-4">
+            <span class="font-mono text-sm font-bold text-[var(--accent)] flex-shrink-0 pt-0.5">06</span>
+            <div>
+              <h3 class="font-display text-base font-semibold text-ink-50 mb-1">Implement and validate JSON-LD schema</h3>
+              <p class="text-sm leading-relaxed text-ink-300">Deploy Article, FAQPage, HowTo (where relevant), and Organisation schema with complete <code>sameAs</code> references. Use the Schema.org Markup Validator and Google's Rich Results Test to confirm validity. Schema reduces ambiguity in retrieval-augmented pipelines and provides a machine-readable summary of your page's claims — useful even where the model does not rely on structured data as a primary ranking signal.</p>
+            </div>
+          </div>
+
+          <div class="card p-5 flex gap-4">
+            <span class="font-mono text-sm font-bold text-[var(--accent)] flex-shrink-0 pt-0.5">07</span>
+            <div>
+              <h3 class="font-display text-base font-semibold text-ink-50 mb-1">Monitor, measure, and iterate</h3>
+              <p class="text-sm leading-relaxed text-ink-300">Re-run your query set monthly. Track citation frequency, citation accuracy, and share of voice versus competitors. When a competitor is cited and you are not, analyse their page for the structural or authority differences that explain the gap. Refine the content that does get cited to maintain its citability as you expand to new query sets. ChatGPT's model and feature updates mean regular re-testing is essential — what works today may behave differently after a model update.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Content That Gets Cited -->
+      <section id="content-for-chatgpt" class="anchor-top prose-dark mb-16">
+        <h2>Content That Gets Cited by ChatGPT</h2>
+
+        <p>
+          <strong>ChatGPT demonstrates clear preferences for specific content structures when selecting passages to include in generated responses.</strong> These patterns apply to both ChatGPT Search (retrieval-based) and, to a lesser extent, the base model's handling of queries where it draws on its training data.
+        </p>
+
+        <h3>Declarative Opening Statements</h3>
+        <p>
+          The most consistently cited content pattern is the declarative opening statement: a sentence at the start of a section that defines a concept, names a process, or states a fact directly. "Generative Engine Optimisation is the practice of..." is far more likely to be extracted and cited than "Many businesses are now considering how to approach the world of AI search, which has changed significantly in recent years." Lead with the answer; provide context second.
+        </p>
+
+        <h3>Specific, Named Data Points</h3>
+        <p>
+          ChatGPT cites content that contains specific, verifiable claims: a percentage figure, a named study, a defined methodology, a specific date or version number. Generic assertions are paraphrased or ignored. Proprietary data or original research is particularly valuable — if your source is the only place a specific fact appears, ChatGPT's retrieval system has no choice but to cite you for it.
+        </p>
+
+        <h3>Self-Contained FAQ Answers</h3>
+        <p>
+          FAQ sections with explicit question-answer pairs are among the most reliably cited content structures. Each answer should function as a standalone unit — readable and meaningful without surrounding context. Pair FAQ content with FAQPage schema for maximum structured signal. This pattern directly maps onto the "user asks a question, ChatGPT provides an answer with source" citation format.
+        </p>
+
+        <h3>Tables and Structured Comparisons</h3>
+        <p>
+          When users ask ChatGPT to compare options, the model draws heavily on comparison tables it has retrieved. A well-structured HTML table with clear column headers and definitive cell values gives ChatGPT a clean data structure to extract and reproduce. Tables also signal topical expertise to the retrieval system — a page that contains a detailed comparison table on a subject is implicitly authoritative on that subject.
+        </p>
+      </section>
+
+      <!-- Section 6: Platform Comparison Table -->
+      <section id="platform-comparison" class="anchor-top mb-16">
+        <div class="prose-dark mb-6">
+          <h2>ChatGPT vs Other AI Platforms: Optimisation Differences</h2>
+          <p>
+            <strong>Each major AI platform uses a different retrieval mechanism, a different index, and a different citation approach.</strong> What works for ChatGPT does not automatically transfer to Perplexity or Google AI Overviews. The table below summarises the key differences relevant to GEO practitioners.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto card mb-8">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-[var(--line)]">
+                <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">Platform</th>
+                <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">Retrieval source</th>
+                <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">Key crawler</th>
+                <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">Primary citation signal</th>
+              </tr>
+            </thead>
+            <tbody class="text-ink-200">
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-[var(--accent)]">ChatGPT Search</td>
+                <td class="px-5 py-3">Bing index + GPTBot</td>
+                <td class="px-5 py-3 font-mono text-xs">GPTBot</td>
+                <td class="px-5 py-3">Bing ranking + content structure</td>
+              </tr>
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-ink-100">Perplexity</td>
+                <td class="px-5 py-3">Own crawler (PerplexityBot)</td>
+                <td class="px-5 py-3 font-mono text-xs">PerplexityBot</td>
+                <td class="px-5 py-3">Recency + content structure</td>
+              </tr>
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-ink-100">Google AI Overviews</td>
+                <td class="px-5 py-3">Google index + Google-Extended</td>
+                <td class="px-5 py-3 font-mono text-xs">Google-Extended</td>
+                <td class="px-5 py-3">Google ranking + E-E-A-T signals</td>
+              </tr>
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-ink-100">Microsoft Copilot</td>
+                <td class="px-5 py-3">Bing index</td>
+                <td class="px-5 py-3 font-mono text-xs">Bingbot</td>
+                <td class="px-5 py-3">Bing ranking + entity data</td>
+              </tr>
+              <tr>
+                <td class="px-5 py-3 font-medium text-ink-100">ChatGPT (base, no search)</td>
+                <td class="px-5 py-3">Training data (no live retrieval)</td>
+                <td class="px-5 py-3 font-mono text-xs">GPTBot (training crawl)</td>
+                <td class="px-5 py-3">Entity authority + training data frequency</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose-dark">
+          <p>
+            The practical implication: brands need to optimise for Bing visibility specifically to support ChatGPT Search citations, rather than assuming Google performance transfers automatically. The shared foundation — content quality, entity authority, JSON-LD schema, and llms.txt — improves performance across all platforms, but the index-level optimisation differs.
+          </p>
+          <p>
+            For a full cross-platform playbook, the <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO complete guide</a> covers all five platforms in the context of a unified strategy. For platform-specific detail on Google AI Overviews, see our <a href="/google-ai-overview-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Google AI Overview optimisation guide</a>. For Perplexity, see <a href="/optimise-for-perplexity/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how to optimise for Perplexity</a>.
+          </p>
+          <p>
+            If your priority is business-level strategy — commercial implications, lead generation impact, and B2B positioning for ChatGPT — see our companion guide: <a href="/chatgpt-for-business/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">ChatGPT Optimisation for Business</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="anchor-top mb-16">
+        <h2 class="font-display text-[28px] font-semibold text-white tracking-tight mb-8">Frequently Asked Questions</h2>
+
+        <div class="space-y-2" id="faq-accordion">
+          {faqs.map((faq, i) => (
+            <div class="card overflow-hidden" data-faq>
+              <button
+                type="button"
+                class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+                aria-expanded={i === 0 ? 'true' : 'false'}
+                data-faq-trigger
+              >
+                <span>{faq.q}</span>
+                <span class="ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon style={i === 0 ? 'transform:rotate(45deg)' : ''}>+</span>
+              </button>
+              <div
+                class="overflow-hidden transition-all duration-300"
+                data-faq-panel
+                style={i === 0 ? 'max-height:500px' : 'max-height:0'}
+              >
+                <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Related Reading -->
+      <div class="mt-8" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 sm:grid-cols-2">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Get Your Brand Cited in ChatGPT</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Not sure whether ChatGPT is citing your brand, or why competitors are appearing instead? GEOoptimised audits your ChatGPT citation footprint across both the base model and ChatGPT Search, and delivers a prioritised action plan to close the gaps.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request a ChatGPT visibility audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

@@ -1,0 +1,317 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO Agency for Long Island Businesses | GEOoptimised';
+const description = 'Remote GEO services for Long Island businesses. Get your brand cited by ChatGPT, Perplexity, and Google AI Overviews. Specialist generative engine optimisation.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Generative Engine Optimisation for Long Island Businesses',
+    serviceType: 'Generative Engine Optimisation',
+    provider: { '@id': 'https://geooptimised.com/#organization' },
+    areaServed: { '@type': 'City', name: 'Long Island' },
+    description: 'Remote generative engine optimisation service helping Long Island businesses earn AI citations across ChatGPT, Perplexity, Gemini, and Google AI Overviews.',
+    url: 'https://geooptimised.com/geo-agency-long-island/',
+    datePublished: '2026-06-07',
+    dateModified: '2026-06-07',
+    inLanguage: 'en-GB',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Do you have a physical office on Long Island?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'No. GEOoptimised is a UK-based agency that works entirely remotely. All client engagements — audit, strategy, implementation, and reporting — are delivered online. Location is not a constraint for generative engine optimisation, and our Long Island clients receive exactly the same depth of service as any other.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Which industries on Long Island benefit most from GEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Long Island has a strong concentration of financial services, healthcare and biotech, professional services, and retail businesses. All of these involve considered purchasing decisions where potential clients research options using AI tools before committing. B2B firms in Nassau and Suffolk counties, medical practices, law firms, and wealth management advisers all stand to gain measurably from GEO investment.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What does a GEO audit cover for a Long Island business?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The audit maps your current AI citation frequency across ChatGPT, Perplexity, Gemini, Microsoft Copilot, and Google AI Overviews. It identifies which competitors in your sector are already being cited, analyses your entity presence in knowledge graphs, reviews your structured data, and produces a prioritised action plan. The audit typically takes two to three weeks.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How long before a Long Island business sees GEO results?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'For Long Island businesses, the audit phase typically surfaces citation gaps that the programme begins closing within 60 to 90 days. Full competitive positioning — across financial services, healthcare, and professional services queries — builds progressively over four to six months as entity authority deepens across platforms.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do I still need traditional SEO alongside GEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. GEO amplifies existing organic authority — it does not replace it. A solid SEO foundation (sound technical health, quality content, relevant backlinks) makes GEO more effective. If your site has fundamental SEO gaps, we address those as part of the engagement. The two disciplines are complementary.',
+        },
+      },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'GEO Agency Near You', item: 'https://geooptimised.com/geo-near-you/' },
+      { '@type': 'ListItem', position: 3, name: 'GEO Agency for Long Island Businesses', item: 'https://geooptimised.com/geo-agency-long-island/' },
+    ],
+  },
+];
+
+const deliverables = [
+  { phase: 'Audit', weeks: 'Weeks 1–3', items: ['Query-level AI citation mapping for Long Island and regional market terms', 'Competitor citation benchmarking within your Nassau or Suffolk sector', 'Entity presence review across knowledge graphs and sector-specific databases', 'Structured data and technical GEO infrastructure assessment', 'Prioritised action plan with impact estimates and recommended sequencing'] },
+  { phase: 'Foundation', weeks: 'Weeks 3–8', items: ['Structured data deployment (Service, FAQPage, Person, Organization, sameAs)', 'Entity reinforcement in Wikidata, Google Knowledge Graph, and Long Island sector databases', 'llms.txt setup and AI crawler signal configuration', 'Content restructuring on your highest-priority pages for LLM extractability'] },
+  { phase: 'Optimisation', weeks: 'Weeks 8–16', items: ['Content restructuring sequenced by Long Island sector query volume and commercial value', 'Platform-specific adjustments driven by live citation monitoring data', 'New citation-target assets for identified coverage gaps in financial services, healthcare, and professional services', 'Third-party source development to reinforce entity authority across platforms'] },
+  { phase: 'Iteration', weeks: 'Ongoing', items: ['Monthly citation frequency reporting with sector-level competitive benchmarking', 'Content refinement cycle driven by live AI monitoring data', 'Platform-level adjustments as citation behaviour and retrieval patterns shift', 'Quarterly strategy sessions aligned to Long Island market developments and business goals'] },
+];
+
+const faqs = [
+  {
+    q: 'Do you have a physical office on Long Island?',
+    a: 'No. GEOoptimised is a UK-based agency that works entirely remotely. All client engagements — audit, strategy, implementation, and reporting — are delivered online. Location is not a constraint for generative engine optimisation, and our Long Island clients receive exactly the same depth of service as any other.',
+  },
+  {
+    q: 'Which industries on Long Island benefit most from GEO?',
+    a: 'Long Island has a strong concentration of financial services, healthcare and biotech, professional services, and retail businesses. All of these involve considered purchasing decisions where potential clients research options using AI tools before committing. B2B firms in Nassau and Suffolk counties, medical practices, law firms, and wealth management advisers all stand to gain measurably from GEO investment.',
+  },
+  {
+    q: 'What does a GEO audit cover for a Long Island business?',
+    a: 'The audit maps your current AI citation frequency across ChatGPT, Perplexity, Gemini, Microsoft Copilot, and Google AI Overviews. It identifies which competitors in your sector are already being cited, analyses your entity presence in knowledge graphs, reviews your structured data, and produces a prioritised action plan. The audit typically takes two to three weeks.',
+  },
+  {
+    q: 'How long before a Long Island business sees GEO results?',
+    a: 'For Long Island businesses, the audit phase typically surfaces citation gaps that the programme begins closing within 60 to 90 days. Full competitive positioning — across financial services, healthcare, and professional services queries — builds progressively over four to six months as entity authority deepens across platforms.',
+  },
+  {
+    q: 'Do I still need traditional SEO alongside GEO?',
+    a: 'Yes. GEO amplifies existing organic authority — it does not replace it. A solid SEO foundation (sound technical health, quality content, relevant backlinks) makes GEO more effective. If your site has fundamental SEO gaps, we address those as part of the engagement. The two disciplines are complementary.',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/geo-agency-long-island/"
+  ogType="website"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex items-center gap-1.5 text-sm text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-near-you/" class="transition hover:text-[var(--accent)]">GEO Agency Near You</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">Long Island</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Local Service</span>
+        <span class="font-mono text-xs text-ink-300">Remote delivery &bull; Long Island, NY</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO Agency for Long Island Businesses
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">Long Island's financial services firms, healthcare providers, and professional practices are losing visibility before buyers ever reach their website</strong> — because those buyers are asking ChatGPT, Perplexity, and Google AI Overviews for recommendations first. When an AI tool shortlists estate planning advisers in Nassau County or specialist healthcare providers on Long Island, the firms it cites are structurally ahead. GEOoptimised delivers <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> to Long Island businesses entirely remotely — specialist work, delivered online, wherever you are.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="/contact/" class="btn btn-primary">Request a free GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Body -->
+  <div class="container-wide py-12">
+
+    <!-- Why Long Island businesses need GEO -->
+    <div class="prose-dark max-w-3xl">
+      <h2 id="why-geo-long-island" class="anchor-top">Why Long Island Businesses Need a GEO Strategy</h2>
+      <p>
+        <strong>Long Island's commercial economy is anchored in sectors where buyers research before they commit.</strong> Financial services firms in Garden City, healthcare providers in the major hospital corridors, law practices across Nassau County, and the biotech cluster in Hauppauge are all operating in categories where a prospective client's first move is to ask an AI tool — not to run a Google search. When that AI tool produces a shortlist, your firm is either on it or it is not. There is no page two.
+      </p>
+      <p>
+        GEO is a different discipline from traditional SEO — not a checklist addition to an existing retainer. Where SEO targets ranked links, GEO targets the synthesised answer that increasingly intercepts the buyer before they reach any search result. The signals involved are distinct: entity authority, structured data configured for LLM extraction, knowledge graph presence. Details are at our <a href="/what-is-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">What is GEO?</a> explainer.
+      </p>
+      <p>
+        For Long Island businesses competing regionally and nationally, the window for early-mover advantage remains open. Competitors who establish AI citation authority now will compound that lead over the next 12 to 24 months. The gap is easier to open than to close.
+      </p>
+    </div>
+
+    <!-- What GEO delivers for Long Island sectors -->
+    <div class="prose-dark max-w-3xl mt-16">
+      <h2 id="geo-for-long-island-sectors" class="anchor-top">GEO for Long Island's Core Sectors</h2>
+      <p>
+        <strong>Different sectors have different exposure to AI search, and Long Island's economic profile creates specific GEO opportunities.</strong> The following are the categories where we most commonly see Long Island businesses underrepresented in AI-generated answers — and where the commercial cost of that absence is highest.
+      </p>
+      <p>
+        <strong>Financial services and wealth management.</strong> Long Island is home to a dense concentration of independent financial advisers, broker-dealers, and accounting practices. When a prospective client asks an AI tool "which financial advisers serve Long Island families with complex estates," the model draws on entity data, editorial mentions, and structured content. Firms with strong AI visibility consistently appear; those without do not, regardless of their actual quality.
+      </p>
+      <p>
+        <strong>Healthcare and biotech.</strong> The healthcare corridor running from Nassau into Suffolk, alongside biotech operations based around Hauppauge and Stony Brook, presents significant GEO opportunity. Patients increasingly use AI tools to research providers, understand treatment options, and evaluate specialists. Medical practices and health systems that structure their content for AI citation will capture this audience at the research stage.
+      </p>
+      <p>
+        <strong>Professional and legal services.</strong> Law firms, consultancies, and B2B service providers are among the highest-value GEO targets. Buyers in these categories routinely ask AI tools for shortlists before issuing RFPs or making direct contact. Being absent from the AI answer at that stage means being absent from the consideration set entirely.
+      </p>
+      <p>
+        In each case, the work is the same: establish entity authority, restructure content for AI citation, deploy correct structured data, and monitor citation frequency across platforms. The <a href="/geo-agency/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO agency</a> overview covers the full scope of what this involves.
+      </p>
+    </div>
+
+    <!-- Deliverables table -->
+    <div class="mt-16">
+      <h2 class="font-display text-2xl font-bold text-ink-50 mb-6">What the Engagement Delivers</h2>
+      <p class="text-ink-300 mb-8 max-w-2xl">
+        <strong class="text-ink-100">Every GEO engagement follows a four-phase structure</strong> with defined deliverables and measurable outcomes at each stage. Remote delivery means these phases run on the same timeline regardless of your location.
+      </p>
+      <div class="card overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead>
+              <tr class="border-b border-[var(--line)]">
+                <th class="px-6 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Phase</th>
+                <th class="px-6 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Timing</th>
+                <th class="px-6 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Key Deliverables</th>
+              </tr>
+            </thead>
+            <tbody class="text-ink-300">
+              {deliverables.map((row, i) => (
+                <tr class={i < deliverables.length - 1 ? 'border-b border-[var(--line-soft)]' : ''}>
+                  <td class="px-6 py-4 font-semibold text-ink-100 align-top">{row.phase}</td>
+                  <td class="px-6 py-4 font-mono text-xs text-ink-300 align-top whitespace-nowrap">{row.weeks}</td>
+                  <td class="px-6 py-4 align-top">
+                    <ul class="space-y-1">
+                      {row.items.map(item => (
+                        <li class="flex items-start gap-2">
+                          <span class="mt-0.5 text-[var(--accent)] shrink-0">&#10003;</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Remote service transparency -->
+    <div class="prose-dark max-w-3xl mt-16">
+      <h2 id="remote-geo-service" class="anchor-top">Remote GEO: What This Means in Practice</h2>
+      <p>
+        <strong>GEOoptimised does not have a Long Island office, a local phone number, or staff based in New York — and this is stated explicitly because transparency is a core part of how we operate.</strong> We are a UK-based specialist agency. Every Long Island engagement is delivered entirely online, with the same rigour and depth as any other.
+      </p>
+      <p>
+        Long Island clients operate on Eastern Time, giving us a four-hour daily overlap (9am–1pm ET) for onboarding calls, strategy sessions, and reviews. The bulk of the work — auditing, restructuring, schema implementation, monitoring — progresses between sessions through a shared project workspace. For a full account of what each phase involves, see the <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services overview</a>.
+      </p>
+    </div>
+
+    <!-- FAQ -->
+    <div class="prose-dark mt-16">
+      <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="mt-8 max-w-3xl space-y-2" id="faq-accordion">
+      {faqs.map(faq => (
+        <div class="card overflow-hidden">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+            aria-expanded="false"
+          >
+            <span>{faq.q}</span>
+            <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+          </button>
+          <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+            <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Related reading -->
+    <div class="mt-16">
+      <span class="eyebrow">Related reading</span>
+      <div class="mt-6 grid gap-6 md:grid-cols-3">
+        <a href="/geo-near-you/" class="card card-hover block p-5 no-underline">
+          <span class="eyebrow">Hub</span>
+          <h3 class="mt-2 font-display text-base font-semibold text-white">GEO Agency Near You</h3>
+          <p class="mt-2 text-sm text-ink-300">Remote GEO services for businesses across the US and beyond.</p>
+          <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">View hub <span aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a href="/geo-agency-san-antonio/" class="card card-hover block p-5 no-underline">
+          <span class="eyebrow">Local Service</span>
+          <h3 class="mt-2 font-display text-base font-semibold text-white">GEO Agency for San Antonio Businesses</h3>
+          <p class="mt-2 text-sm text-ink-300">Remote GEO services for energy, healthcare, and defence-sector firms in San Antonio.</p>
+          <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a href="/geo-agency-dc/" class="card card-hover block p-5 no-underline">
+          <span class="eyebrow">Local Service</span>
+          <h3 class="mt-2 font-display text-base font-semibold text-white">GEO Agency for Washington, D.C. Businesses</h3>
+          <p class="mt-2 text-sm text-ink-300">Remote GEO services for policy, consulting, and government-adjacent firms in the D.C. area.</p>
+          <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12">
+    <div class="container-wide py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Start With a GEO Audit</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Before we recommend a strategy, we show you the data. Our GEO audit maps your current AI visibility across all major platforms, identifies the highest-value gaps, and gives you a clear picture of what a specialist <a href="/geo-agency/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation agency</a> can change.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request your free GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all services</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('#faq-accordion button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling;
+        const icon = btn.querySelector('.faq-icon');
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+  </script>
+
+</Base>

@@ -1,0 +1,520 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO Certification: What to Know in 2026 | GEOoptimised';
+const description = 'The honest state of GEO certification: why no industry-standard credential exists yet, what a credible programme would cover, and how to evaluate GEO competence today.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'GEO Certification: What to Know',
+    description: 'The honest state of GEO certification: why no industry-standard credential exists yet, what a credible programme would cover, and how to evaluate GEO competence today.',
+    url: 'https://geooptimised.com/geo-certification/',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://geooptimised.com/geo-certification/'
+    },
+    image: 'https://geooptimised.com/og-image.png',
+    datePublished: '2026-06-07',
+    dateModified: '2026-06-07',
+    inLanguage: 'en-GB',
+    author: { '@id': 'https://geooptimised.com/#organization' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' }
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Is there an official GEO certification?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'There is no official industry-standard GEO certification as of mid-2026. The discipline of generative engine optimisation is approximately two to three years old, and the professional bodies and training organisations that typically create and maintain certification standards — such as those in digital marketing and SEO — have not yet developed a formalised GEO credential. Anyone claiming to hold an "official" GEO certification from a recognised industry body should be asked to name the issuing organisation and verify its standing.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What would a credible GEO certification programme cover?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'A credible GEO certification programme would need to cover: how large language models and retrieval-augmented generation systems work; entity mapping and knowledge graph optimisation; extraction-first content writing; structured data implementation (Article, FAQPage, Organization, BreadcrumbList schema); technical GEO signals including robots.txt and llms.txt; citation monitoring across all five major AI platforms; and building and running a 90-day GEO programme. It should assess practical skills, not just theoretical knowledge.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How do I evaluate whether someone is genuinely skilled in GEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'In the absence of a standardised certification, GEO competence is best evaluated through demonstrated outcomes and practitioner-level questioning. Ask for evidence of citation improvements achieved: which platforms, which query types, what percentage increase in citation frequency over what period. Ask how they approach entity mapping, how they structure content for extraction, and how they monitor cross-platform citation performance. A practitioner who cannot answer these questions specifically has not run a GEO programme.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Will GEO certification standards exist in the future?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'GEO certification standards will almost certainly emerge as the discipline matures. The trajectory of adjacent fields is instructive: formal SEO training and certification programmes appeared roughly five to seven years after the practice became commercially significant. GEO became commercially significant in 2023 to 2024, so credible industry-standard certifications are likely to emerge between 2027 and 2030. The exact timeline depends on the pace of professional body engagement and the stabilisation of core GEO methodologies as AI platforms mature.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What should I look for when hiring a GEO practitioner today?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'When hiring a GEO practitioner in 2026, prioritise evidence over credentials. Look for: demonstrated citation gains (not just content published); familiarity with all five major AI platforms and how each retrieves sources; the ability to explain entity mapping and structured data implementation; an understanding of cross-platform citation monitoring; and a clear methodology for the 90-day programme structure. A portfolio of GEO work with measurable outcomes is worth more than any certificate a training provider issued six months ago.'
+        }
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'GEO Strategy', item: 'https://geooptimised.com/geo-strategy/' },
+      { '@type': 'ListItem', position: 3, name: 'GEO Certification', item: 'https://geooptimised.com/geo-certification/' }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'current-state', label: 'The Current State' },
+  { id: 'why-no-standard', label: 'Why No Standard Exists Yet' },
+  { id: 'what-credible-covers', label: 'What a Credible Programme Would Cover' },
+  { id: 'evaluating-competence', label: 'Evaluating GEO Competence Today' },
+  { id: 'comparison', label: 'GEO vs Adjacent Certifications' },
+  { id: 'future', label: 'When Standards Will Emerge' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' }
+];
+
+const credibleCoverage = [
+  {
+    area: 'Conceptual foundations',
+    topics: 'How LLMs are trained; how retrieval-augmented generation works; the difference between training data citation and live RAG retrieval; why traditional SEO signals are insufficient for AI citation.'
+  },
+  {
+    area: 'Entity strategy',
+    topics: 'Entity mapping methodology; knowledge graph structure; sameAs linking; entity consistency across platforms; how AI models resolve ambiguous entities.'
+  },
+  {
+    area: 'Content writing for extraction',
+    topics: 'Definitional openings; single-point paragraph structure; declarative headings; FAQ architecture; table and list formatting for AI extraction. Practical assessment of before/after content rewrites.'
+  },
+  {
+    area: 'Structured data implementation',
+    topics: 'JSON-LD syntax; Article, FAQPage, Organization, BreadcrumbList, HowTo, and Service schema; the sitewide knowledge graph pattern; schema validation and error diagnosis.'
+  },
+  {
+    area: 'Technical GEO',
+    topics: 'robots.txt configuration for AI crawlers; llms.txt structure and best practice; canonical URL strategy; Core Web Vitals and crawl budget implications for AI accessibility.'
+  },
+  {
+    area: 'Citation monitoring',
+    topics: 'Query set design; cross-platform monitoring methodology; brand accuracy auditing; competitor citation share analysis; interpreting monitoring data to drive iteration decisions.'
+  },
+  {
+    area: 'Programme management',
+    topics: '90-day programme structure; stakeholder reporting for GEO; integrating GEO with existing SEO programmes; when to hire an agency vs build in-house capability.'
+  }
+];
+
+const evaluationQuestions = [
+  {
+    q: 'How do you establish a citation baseline before starting a GEO programme?',
+    why: 'A practitioner who cannot describe a structured AI visibility audit process — fixed query sets, platform-by-platform recording, baseline metrics — has not started a GEO programme from scratch.'
+  },
+  {
+    q: 'Walk me through how you would approach entity mapping for a brand.',
+    why: 'Entity mapping requires knowledge of Knowledge Graph structure, Wikidata, and the sameAs property. Vague answers about "making sure your brand information is consistent" suggest surface-level familiarity.'
+  },
+  {
+    q: 'How does Perplexity\'s retrieval mechanism differ from ChatGPT\'s?',
+    why: 'Perplexity is primarily RAG-driven from live web sources. ChatGPT blends training data with optional browsing. A practitioner who cannot distinguish these has not worked across platforms.'
+  },
+  {
+    q: 'Can you show me an example of content you rewrote for GEO and what changed?',
+    why: 'The structural changes from SEO writing to extraction-first writing are specific and observable. Before/after examples reveal whether a practitioner understands extraction or is applying surface-level advice.'
+  }
+];
+
+const adjacentCerts = [
+  { cert: 'Google Analytics 4 (GA4)', issuer: 'Google', maturity: 'Established (2023+)', geo_relevance: 'Measures web traffic; does not measure AI citation' },
+  { cert: 'Google Search Central', issuer: 'Google', maturity: 'Established', geo_relevance: 'Technical SEO signals overlap; citation measurement absent' },
+  { cert: 'HubSpot Content Marketing', issuer: 'HubSpot', maturity: 'Established', geo_relevance: 'Content strategy foundations useful; no GEO-specific content' },
+  { cert: 'SEMrush SEO Toolkit', issuer: 'SEMrush', maturity: 'Established', geo_relevance: 'Traditional SEO focus; no structured GEO curriculum as of mid-2026' },
+  { cert: 'GEO certification', issuer: '(No industry standard)', maturity: 'Not yet formalised', geo_relevance: 'The credential that does not yet exist' }
+];
+
+const faqs = [
+  {
+    q: 'Is there an official GEO certification?',
+    a: 'There is no official industry-standard GEO certification as of mid-2026. The discipline is approximately two to three years old and professional bodies have not yet developed a formalised GEO credential. Anyone claiming to hold an "official" GEO certification from a recognised industry body should be asked to name the issuing organisation and verify its standing.'
+  },
+  {
+    q: 'What would a credible GEO certification programme cover?',
+    a: 'A credible GEO certification programme would need to cover: how LLMs and RAG systems work; entity mapping; extraction-first content writing; structured data implementation; technical GEO signals; citation monitoring across all five major AI platforms; and building and running a 90-day GEO programme. It should assess practical skills, not just theoretical knowledge.'
+  },
+  {
+    q: 'How do I evaluate whether someone is genuinely skilled in GEO?',
+    a: 'Ask for evidence of citation improvements: which platforms, which query types, what percentage increase over what period. Ask how they approach entity mapping, content structuring for extraction, and cross-platform monitoring. A practitioner who cannot answer these questions specifically has not run a GEO programme.'
+  },
+  {
+    q: 'Will GEO certification standards exist in the future?',
+    a: 'Credible industry-standard GEO certifications are likely to emerge between 2027 and 2030, following the same trajectory as SEO certification — which appeared five to seven years after SEO became commercially significant. The pace depends on professional body engagement and the stabilisation of core GEO methodologies.'
+  },
+  {
+    q: 'What should I look for when hiring a GEO practitioner today?',
+    a: 'Prioritise evidence over credentials. Look for demonstrated citation gains, familiarity with all five major AI platforms, the ability to explain entity mapping and schema implementation, and an understanding of cross-platform monitoring. A portfolio of measurable GEO outcomes is worth more than any training certificate.'
+  }
+];
+
+const related = [
+  {
+    tag: 'Learning',
+    title: 'GEO Course: Learn Generative Engine Optimisation',
+    excerpt: 'A structured curriculum overview — modules, learning path, and free resources for building GEO skills.',
+    href: '/geo-course/'
+  },
+  {
+    tag: 'NODE',
+    title: 'GEO Strategy Framework',
+    excerpt: 'The seven-step systematic process for building durable citation share across all major AI platforms.',
+    href: '/geo-strategy/'
+  },
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'First principles through advanced entity strategies — the definitive GEO reference.',
+    href: '/generative-engine-optimisation/'
+  }
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/geo-certification/"
+  ogType="article"
+>
+
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">GEO</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-strategy/" class="transition hover:text-[var(--accent)]">GEO Strategy</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">GEO Certification</li>
+    </ol>
+  </nav>
+
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Certification & Standards</span>
+        <span class="font-mono text-xs text-ink-300">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">10 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO Certification: What to Know
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">There is no official GEO certification standard as of mid-2026.</strong> The discipline is too new for professional bodies to have formalised credentials. This page explains the current state honestly: why standards do not yet exist, what a credible programme would need to cover, and how practitioners and employers can evaluate GEO competence in the absence of a recognised credential.
+      </p>
+    </div>
+  </section>
+
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" id="toc-nav">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <div>
+
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>No industry-standard GEO certification exists as of mid-2026. The discipline is too new for professional bodies to have created one.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Training provider certificates exist but carry no industry-standard authority — evaluate them by the rigour of the curriculum, not the name of the issuer.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>GEO competence today is best evidenced by demonstrated outcomes: measurable citation gains across AI platforms.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>A credible GEO certification curriculum would cover seven areas: LLM foundations, entity strategy, content writing, schema, technical signals, monitoring, and programme management.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Industry-standard GEO certifications are likely to emerge between 2027 and 2030 as the discipline matures.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prose-dark">
+        <h2 id="current-state" class="anchor-top">The Current State of GEO Certification</h2>
+        <p>
+          <strong>Generative engine optimisation has no official, industry-standard certification as of mid-2026.</strong> This is not a gap that reflects lack of interest — demand for GEO skills has grown rapidly since AI search became commercially significant in 2023. It reflects the timeline that professional bodies and training organisations typically require to develop rigorous, standardised assessments for an emerging discipline.
+        </p>
+        <p>
+          Several training providers have begun offering GEO-related courses and issuing completion certificates. These vary significantly in depth and rigour. A certificate from a training provider is not the same as an industry-standard certification: it demonstrates that the holder completed that provider's programme, not that they have met an independently assessed competency standard. Some of these programmes are genuinely useful; others cover surface-level tactics without the conceptual foundations that enable practitioners to adapt as the discipline evolves.
+        </p>
+        <p>
+          The honest summary: if you encounter someone claiming to hold a GEO certification, ask who issued it, what the curriculum covered, and what practical assessment was required. If the issuing body is a professional organisation with independently assessed standards — comparable to what exists for chartered accountants, clinical practitioners, or licensed engineers — that is a meaningful credential. If it is a completion badge from a training provider's online course, treat it as one data point among many when evaluating competence.
+        </p>
+        <p>
+          For the full learning curriculum that GEO competence requires, see the <a href="/geo-course/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO course overview</a>.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="why-no-standard" class="anchor-top">Why No Standard Certification Exists Yet</h2>
+        <p>
+          <strong>The absence of a GEO certification standard reflects structural factors in how professional credentials are created, not a failure of the GEO community.</strong> Three factors explain the gap:
+        </p>
+        <p>
+          First, the discipline is too young. Generative engine optimisation as a named practice emerged in earnest between 2023 and 2024, when AI-native search became commercially significant. Professional certification bodies typically require a discipline to have stable, codified methodologies before developing assessment frameworks. GEO's core principles are clear, but platform-specific best practices are still evolving as AI models update and retrieval behaviour changes. A certification built on today's specific platform mechanics would need significant revision within twelve months.
+        </p>
+        <p>
+          Second, the adjacent professional bodies have not yet engaged. The organisations that manage certifications in digital marketing — trade associations, professional institutes, and established training providers — are typically conservative about adding new credentials. They must be confident that a certification will retain relevance and credibility over the multi-year lifecycle of an accreditation programme. Most of these bodies are still assessing whether GEO is a distinct discipline requiring its own credential or a subset of existing SEO or digital marketing practice.
+        </p>
+        <p>
+          Third, the tools for consistent assessment do not yet exist at scale. Certifying GEO competence requires demonstrating citation outcomes across AI platforms — but the monitoring tools needed to do this objectively are still developing. An assessment framework that cannot be reproducibly scored by an examiner cannot become a standard certification.
+        </p>
+        <p>
+          None of these obstacles are permanent. They are the normal friction of a new discipline moving towards professionalisation, and every adjacent field has passed through the same transition.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="what-credible-covers" class="anchor-top">What a Credible GEO Certification Programme Would Cover</h2>
+        <p>
+          <strong>A credible GEO certification programme would need to assess both theoretical understanding and demonstrated practical skill across seven knowledge areas.</strong> The table below maps each area to the specific competencies a rigorous assessment would need to verify.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Knowledge Area</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Competencies to Be Assessed</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[var(--line)]">
+            {credibleCoverage.map(row => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class="px-4 py-3 font-semibold text-white align-top">{row.area}</td>
+                <td class="px-4 py-3 text-ink-300">{row.topics}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          The critical design requirement for a credible GEO certification is that it assesses practical output, not just multiple-choice theory. A practitioner who can describe the difference between training data citation and RAG retrieval but cannot write an extraction-first opening paragraph is not GEO-competent. The certification architecture should include scored assessments of content rewrites, structured data implementation, and citation monitoring analysis — not just knowledge recall.
+        </p>
+        <p>
+          For context on how the GEOoptimised methodology covers this curriculum in client engagements and training, see the <a href="/geo-course/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO course overview</a> and the <a href="/geo-best-practices/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO best practices</a> guide.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="evaluating-competence" class="anchor-top">Evaluating GEO Competence Without a Certification Standard</h2>
+        <p>
+          <strong>In the absence of a recognised certification, GEO competence is best evaluated through a combination of demonstrated outcomes and practitioner-level questioning.</strong> The following four interview questions reliably distinguish practitioners with genuine GEO experience from those with surface-level familiarity:
+        </p>
+      </div>
+
+      <div class="mt-8 space-y-4">
+        {evaluationQuestions.map((item, i) => (
+          <div class="card p-6">
+            <div class="flex gap-4">
+              <span class="font-mono text-xl font-bold text-[var(--accent)] shrink-0">{i + 1}.</span>
+              <div>
+                <p class="font-semibold text-white">"{item.q}"</p>
+                <p class="mt-2 text-sm leading-relaxed text-ink-300"><strong class="text-ink-200">Why this question reveals competence:</strong> {item.why}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          Beyond interview questions, the most reliable evidence of GEO competence is a portfolio of outcomes. Ask for: the citation baseline at programme start, the citation frequency at programme end, the platforms measured, the query set used, and the time period over which improvement was achieved. A practitioner with genuine GEO experience can answer all of these questions specifically. One whose knowledge comes primarily from reading articles and completing online courses typically cannot.
+        </p>
+        <p>
+          For the standards GEOoptimised applies when evaluating GEO performance, the measurement framework in our <a href="/geo-strategy/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO strategy guide</a> provides the benchmarks and KPIs to use.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="comparison" class="anchor-top">GEO vs Adjacent Certifications</h2>
+        <p>
+          <strong>The established certifications in adjacent digital marketing disciplines provide context for what GEO certification will eventually look like — and highlight the gaps in current provision.</strong> The table below compares existing certifications to the GEO credential that does not yet exist.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Certification</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Issuing Body</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Maturity</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">GEO Relevance</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[var(--line)]">
+            {adjacentCerts.map(row => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class="px-4 py-3 font-semibold text-white">{row.cert}</td>
+                <td class="px-4 py-3 text-ink-300">{row.issuer}</td>
+                <td class="px-4 py-3 font-mono text-xs text-[var(--accent)]">{row.maturity}</td>
+                <td class="px-4 py-3 text-ink-300">{row.geo_relevance}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          The most useful adjacent certification for practitioners transitioning into GEO is technical SEO training, because it provides the structured data, crawlability, and indexation foundations that GEO builds on. However, technical SEO certification does not address extraction-first content writing, entity mapping, AI platform-specific behaviour, or citation monitoring — the areas that distinguish GEO from SEO as a discipline. Holding a technical SEO certificate demonstrates useful foundational knowledge, not GEO competence.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="future" class="anchor-top">When GEO Certification Standards Will Emerge</h2>
+        <p>
+          <strong>Industry-standard GEO certifications are likely to emerge between 2027 and 2030, following the maturation trajectory of adjacent disciplines.</strong> The comparison with SEO is instructive: Google launched in 1998; the first wave of serious SEO training and certification programmes appeared around 2005 to 2008, when the practice had stabilised enough for methodology to be codified. AI search became commercially significant in 2023; applying the same rough timeline suggests credible GEO certifications in the 2027 to 2030 window.
+        </p>
+        <p>
+          Several preconditions need to be met before a credible standard is possible. Core GEO methodology needs to stabilise — not freeze, but reach a point where the foundational practices are consistent enough across practitioners to be assessed reliably. Platform retrieval behaviour needs to be understood well enough that certification content does not become outdated within months of publication. And a professional body with credibility in the digital marketing space needs to commit the resources to develop and maintain a rigorous assessment framework.
+        </p>
+        <p>
+          The most likely path to an industry-standard GEO certification runs through the professional bodies that already manage adjacent credentials. Several of the established digital marketing training organisations are already developing GEO curriculum components. The question is not whether formalised GEO certification will exist — it will — but which body will establish the standard that practitioners and employers treat as meaningful.
+        </p>
+        <p>
+          In the meantime, the most reliable path to GEO competence is structured learning combined with hands-on programme work. The <a href="/geo-course/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO course curriculum</a> and the free resources in our content library provide the learning framework. Applying that learning to a real brand — monitoring citations, iterating on content, building entity signals — is where competence is built. If you want to do that work with GEOoptimised support, <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">get in touch</a> to discuss what a knowledge-transfer engagement would look like for your team.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="relative border-t hair mt-12 overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Build Verified GEO Competence Through Outcomes</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        A certificate is a signal. Measured citation gains are evidence. We work with teams building in-house GEO capability — combining programme delivery with knowledge transfer so practitioners leave with documented results, not just a credential.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Discuss a knowledge-transfer engagement</a>
+        <a href="/geo-course/" class="btn btn-ghost">View the GEO curriculum</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const faqBtns = document.querySelectorAll('#faq-accordion button');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+
+    const tocLinks = document.querySelectorAll('#toc-nav a');
+    const headings = Array.from(
+      document.querySelectorAll('h2[id], h3[id]')
+    ) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(link => {
+              link.classList.remove('text-[var(--accent)]');
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.classList.add('text-[var(--accent)]');
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+
+    headings.forEach(h => observer.observe(h));
+  </script>
+
+</Base>

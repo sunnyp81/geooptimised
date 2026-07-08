@@ -1,0 +1,684 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Free GEO Tools: Start AI Visibility at No Cost | GEOoptimised';
+const description = 'Genuinely free and free-tier GEO tools plus manual methods to begin generative engine optimisation at no cost. Covers what free tools can and cannot do — and when to upgrade.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Free GEO Tools: Start AI Visibility at No Cost",
+    "description": "A practical guide to genuinely free and free-tier tools and manual methods for starting generative engine optimisation at no cost, including honest coverage of what free tools cannot do.",
+    "url": "https://geooptimised.com/free-geo-tools/",
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "inLanguage": "en-GB",
+    "image": "https://geooptimised.com/og-image.png",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://geooptimised.com/free-geo-tools/"
+    },
+    "author": {
+      "@id": "https://geooptimised.com/#organization"
+    },
+    "publisher": {
+      "@id": "https://geooptimised.com/#organization"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Free GEO Tool and Method Categories",
+    "description": "Categories of free tools and manual methods for starting generative engine optimisation without cost.",
+    "numberOfItems": 5,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Manual AI Spot-Checking Methods",
+        "url": "https://geooptimised.com/free-geo-tools/#manual-spot-checking"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Free Structured Data and Schema Tools",
+        "url": "https://geooptimised.com/free-geo-tools/#schema-tools"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Free Entity and Knowledge Graph Methods",
+        "url": "https://geooptimised.com/free-geo-tools/#entity-methods"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Free-Tier Monitoring Platforms",
+        "url": "https://geooptimised.com/free-geo-tools/#free-tier-platforms"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Free Technical Audit Tools",
+        "url": "https://geooptimised.com/free-geo-tools/#technical-audit"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I actually do GEO effectively with only free tools?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Free tools and manual methods are sufficient to establish a GEO baseline, identify your most significant gaps, and implement the structural improvements most likely to improve your citation rate. What they cannot do reliably is track citation frequency at scale over time, benchmark against competitors systematically, or run high-volume prompt testing across multiple AI platforms with statistical confidence. For a brand serious about GEO as an ongoing performance channel, free tools represent a starting point rather than a sustainable long-term measurement infrastructure."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a genuinely free GEO tool and a free tier?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A genuinely free tool has no paid upgrade path relevant to its core GEO function — for example, Google's Rich Results Test is free to use without restriction for schema validation. A free tier is a restricted version of a paid product: you get access to a limited feature set, capped query volumes, or a fixed number of monitored prompts, with the expectation that you will upgrade as your needs grow. Both are legitimate starting points, but the distinction matters when you are planning your budget. Free tiers are specifically designed to show you the value of the full product, so approach them with realistic expectations about the ceiling they represent."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is manual AI spot-checking a legitimate GEO method?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Manual spot-checking is a legitimate and useful method for qualitative understanding of your AI visibility — particularly for identifying how your brand is described when it is cited, which competitor names appear alongside yours, and whether obvious inaccuracies exist in how AI models characterise your organisation. It is not a substitute for systematic citation tracking because it cannot be run at scale, cannot produce statistically reliable frequency estimates, and is subject to the same query-to-query variability that affects all AI platform outputs. Use manual spot-checking for qualitative insight and directional evidence; use a monitoring tool for quantitative measurement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which free tools should I start with if I have no GEO tooling at all?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Start with three things: a manual prompt-testing session across ChatGPT, Perplexity, and Gemini using your most important target queries (recorded in a simple spreadsheet); Google's Rich Results Test to validate your existing structured data; and a manual review of your Wikipedia entry and Google Knowledge Panel. This combination costs nothing, takes a few hours, and produces a clear picture of your current AI citation status, your most urgent schema gaps, and the state of your entity presence. It is a genuine baseline, not just a teaser for paid tools."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When does the budget under £100 per month become worth spending on GEO tools?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The right moment to move from free tools to a paid plan is when you have a repeatable optimisation process but cannot scale your measurement. Specifically: when you are publishing or updating content regularly and need to know whether citation rates are moving; when you have implemented structural improvements and want reliable evidence of their impact; or when a competitor's AI visibility is a meaningful commercial concern and you need systematic competitive data. At under £100 per month, entry-level paid tiers of dedicated GEO monitoring platforms are available, and they provide measurably better data than free alternatives for ongoing tracking."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use Google Search Console to track GEO performance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Google Search Console does not directly measure AI citation frequency. However, it is a useful free signal in a GEO programme for two indirect reasons. First, traditional organic search performance data from GSC informs the content quality and topical authority work that supports GEO. Second, Google AI Overviews can drive referral traffic that may appear in GSC — monitoring traffic to pages you have optimised for AI citation can provide an indirect signal of improvement. GSC is not a GEO measurement tool, but it belongs in any practitioner's free toolkit for the foundational data it provides."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://geooptimised.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "GEO Tools",
+        "item": "https://geooptimised.com/geo-tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Free GEO Tools",
+        "item": "https://geooptimised.com/free-geo-tools/"
+      }
+    ]
+  }
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/free-geo-tools/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex items-center gap-2 font-mono text-xs text-ink-300">
+      <li><a href="/" class="hover:text-[var(--accent)] transition-colors">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/geo-tools/" class="hover:text-[var(--accent)] transition-colors">GEO Tools</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">Free GEO Tools</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-fade relative overflow-hidden">
+    <div class="container-wide grid gap-12 pt-12 pb-20 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-7">
+        <span class="eyebrow">No-Cost Starting Point</span>
+        <h1 class="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <span class="grad-text">Free GEO Tools</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-300">
+          Genuinely free tools and manual methods that let you begin generative engine optimisation at no cost. This page is honest about what the free tier of the GEO stack can and cannot do — and when a modest budget opens meaningfully better options. No affiliate links, no fabricated ratings, no tools invented for filler.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#manual-spot-checking" class="btn btn-primary">Start with free methods</a>
+          <a href="/geo-tools/" class="btn btn-ghost">Full GEO Tools Guide</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="card p-6">
+          <span class="eyebrow">What free tools cover</span>
+          <div class="mt-4 space-y-4">
+            <div class="flex items-start gap-3">
+              <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3,8 6,11 13,4"/></svg>
+              <div>
+                <p class="text-sm font-semibold text-ink-100">Manual baseline measurement</p>
+                <p class="text-xs text-ink-300">Spot-checking your citation status across platforms</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3,8 6,11 13,4"/></svg>
+              <div>
+                <p class="text-sm font-semibold text-ink-100">Schema validation</p>
+                <p class="text-xs text-ink-300">Verify your structured data is implemented correctly</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3,8 6,11 13,4"/></svg>
+              <div>
+                <p class="text-sm font-semibold text-ink-100">Entity presence review</p>
+                <p class="text-xs text-ink-300">Check Wikipedia, Wikidata, and Knowledge Panel</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3,8 6,11 13,4"/></svg>
+              <div>
+                <p class="text-sm font-semibold text-ink-100">Technical site audit</p>
+                <p class="text-xs text-ink-300">Surface structural issues with free crawl tools</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3,8 6,11 13,4"/></svg>
+              <div>
+                <p class="text-sm font-semibold text-ink-100">Content restructuring</p>
+                <p class="text-xs text-ink-300">Using AI assistants on free plans to reformat pages</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky TOC -->
+  <nav aria-label="On this page" class="container-wide pb-4 lg:pb-0">
+    <div class="card px-6 py-4 lg:sticky lg:top-[calc(var(--header-h)+1rem)] lg:z-10">
+      <span class="font-mono text-xs text-ink-500 uppercase tracking-widest">On this page</span>
+      <ol class="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-300">
+        <li><a href="#free-vs-free-tier" class="hover:text-[var(--accent)] transition-colors">Free vs free tier</a></li>
+        <li><a href="#manual-spot-checking" class="hover:text-[var(--accent)] transition-colors">Manual methods</a></li>
+        <li><a href="#schema-tools" class="hover:text-[var(--accent)] transition-colors">Schema tools</a></li>
+        <li><a href="#entity-methods" class="hover:text-[var(--accent)] transition-colors">Entity methods</a></li>
+        <li><a href="#free-tier-platforms" class="hover:text-[var(--accent)] transition-colors">Free-tier platforms</a></li>
+        <li><a href="#technical-audit" class="hover:text-[var(--accent)] transition-colors">Technical audit</a></li>
+        <li><a href="#free-tools-table" class="hover:text-[var(--accent)] transition-colors">Quick reference</a></li>
+        <li><a href="#when-to-upgrade" class="hover:text-[var(--accent)] transition-colors">When to upgrade</a></li>
+        <li><a href="#faq" class="hover:text-[var(--accent)] transition-colors">FAQ</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Main prose -->
+  <div class="container-wide py-20">
+    <div class="prose-dark space-y-20">
+
+      <!-- Free vs free tier -->
+      <section id="free-vs-free-tier">
+        <div class="grid gap-8 lg:grid-cols-12">
+          <div class="lg:col-span-4">
+            <span class="eyebrow">Terminology</span>
+            <h2 class="anchor-top !mt-3">Free vs Free Tier: An Important Distinction</h2>
+          </div>
+          <div class="lg:col-span-8 space-y-4">
+            <p><strong>"Free" in the context of GEO tools means two different things, and conflating them will lead to disappointment.</strong></p>
+            <p>A <strong>genuinely free tool</strong> is one with no meaningful functional restriction relative to its core GEO use case. Google's Rich Results Test is an example: it validates your structured data completely, without a query limit, a subscription requirement, or a feature gate. You can use it indefinitely without paying anything and receive the full value it offers. Wikipedia and Wikidata editing interfaces are free. Google Search Console is free. Manual AI spot-checking using ChatGPT's free plan is free.</p>
+            <p>A <strong>free tier</strong> is a restricted version of a paid product. Most dedicated GEO monitoring platforms offer free tiers that allow a limited number of monitored queries, a capped number of AI platforms, or a restricted history window. These are valuable for getting started — they allow you to experience the product and establish a partial baseline — but they are specifically designed to convert you to a paying customer as your needs grow. That is not a criticism; it is simply the nature of the business model. Understand the ceiling before you rely on a free tier as your primary measurement infrastructure.</p>
+            <p>This page covers both categories, clearly labelled. For the budget-conscious angle — what you can accomplish for under £100 per month — see the section on <a href="#when-to-upgrade" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">when to upgrade</a>. For a full overview of the paid tool landscape, the <a href="/geo-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO Tools hub</a> and the <a href="/best-geo-tools-2026/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">2026 best GEO tools roundup</a> cover the full range.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Manual spot-checking -->
+      <section id="manual-spot-checking">
+        <span class="eyebrow">Method 1 — Genuinely free</span>
+        <h2 class="anchor-top !mt-3">Manual AI Spot-Checking</h2>
+        <p class="mt-4 max-w-3xl text-ink-300 leading-relaxed"><strong>Manual spot-checking is the most accessible way to begin measuring AI visibility: query ChatGPT, Perplexity, and Gemini directly with your most important target prompts, and record what you find.</strong></p>
+
+        <div class="mt-8 space-y-6">
+
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">How to Run a Manual Baseline Check</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">Open each AI platform — ChatGPT (free plan), Perplexity (free), and Gemini (free) — and run the same ten to twenty prompts across all three. Use prompts that reflect how your target customers actually ask questions: category questions ("what is the best [product type] for [use case]"), comparison prompts ("compare [your brand] and [competitor]"), and recommendation prompts ("who should I use for [service]"). Record the full response for each prompt, note whether your brand appears, how it is described, which competitors appear alongside it, and which source URLs are cited. A simple spreadsheet with columns for platform, prompt, brand appeared (yes/no), description used, competitors mentioned, and sources cited is adequate.</p>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">Run each prompt two or three times and note any variation — AI responses are probabilistic, so a single run is not representative. This variability is precisely why a manual method cannot replace systematic monitoring for ongoing measurement, but it is sufficient to establish a directional baseline and identify obvious gaps.</p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">What Manual Checks Can and Cannot Tell You</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300"><strong>Manual spot-checking is effective for qualitative discovery: identifying how your brand is described, which competitors appear regularly, whether obvious factual inaccuracies exist, and which source URLs AI platforms are citing for your category.</strong> These qualitative findings are actionable: they tell you what to correct, which sources to strengthen, and how your positioning is being characterised by AI systems to potential customers.</p>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">What manual checks cannot reliably tell you is your statistical citation rate — the percentage of relevant queries on which your brand appears. AI responses vary significantly between runs. A citation observed once is not evidence of reliable inclusion; an absence on a single run is not evidence of exclusion. For that kind of measurement, a dedicated monitoring tool running multiple samples across a consistent prompt set is required. Manual checks are a starting point, not a measurement system.</p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">Using AI Assistants as Free Optimisation Tools</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300"><strong>The free plans of Claude, ChatGPT, and Gemini are themselves useful as GEO optimisation tools: they can restructure existing content according to citation-friendly patterns at no cost.</strong> The method is simple: paste a section of your existing content into the assistant and ask it to rewrite it to lead with a bold declarative statement, add a concise FAQ block, and structure the key claims as direct answers to common questions. The practitioner's job is to provide subject matter accuracy and editorial judgement; the assistant handles the restructuring. For teams without a dedicated content tool budget, this represents a meaningful free optimisation capability — used correctly, it is not a shortcut but a legitimate restructuring workflow.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Schema tools -->
+      <section id="schema-tools">
+        <span class="eyebrow">Method 2 — Genuinely free</span>
+        <h2 class="anchor-top !mt-3">Free Structured Data and Schema Tools</h2>
+        <p class="mt-4 max-w-3xl text-ink-300 leading-relaxed"><strong>Structured data validation is an area where free tools provide complete, production-quality capability — there is no meaningful gap between the free and paid options for this task.</strong></p>
+
+        <div class="mt-8 space-y-6">
+
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">Google Rich Results Test</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-500 font-mono text-xs uppercase tracking-wide">Genuinely free — no usage limit</p>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300"><strong>Google's Rich Results Test validates your JSON-LD schema against Google's own interpretation of Schema.org types — the most important validation target for GEO purposes.</strong> It accepts a URL or pasted code, identifies which schema types are present, flags syntax errors and missing required fields, and shows a preview of how Google's systems interpret your markup. For the schema types most relevant to GEO — Article, FAQPage, BreadcrumbList, Organization — it provides complete validation at no cost. Run it on every significant content page before and after any schema implementation work.</p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">Schema.org Validator</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-500 font-mono text-xs uppercase tracking-wide">Genuinely free — no usage limit</p>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300"><strong>The official Schema.org validator checks structured data markup against the Schema.org specification directly, independent of any specific search engine's interpretation.</strong> It is particularly useful for catching type hierarchy errors and property misuse that may not surface in Google's test (which focuses on rich result eligibility rather than full specification compliance). Use it alongside the Rich Results Test for thorough validation: Google's tool tells you whether your schema will produce rich results; the Schema.org validator tells you whether your schema accurately represents what it claims to represent. Both are free and require no account.</p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">Google's Structured Data Markup Helper</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-500 font-mono text-xs uppercase tracking-wide">Genuinely free — no usage limit</p>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300"><strong>For teams adding schema markup for the first time, Google's Structured Data Markup Helper is a free guided tool that generates valid JSON-LD by tagging elements on a live page.</strong> It is a generation tool, not a validator: it produces schema code that you then paste into your page's head. The output covers common schema types and is syntactically valid, though you should review and adjust it to ensure accuracy of the factual claims it makes about your content. It is a practical starting point for teams without a developer who can write schema from scratch.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Entity methods -->
+      <section id="entity-methods">
+        <span class="eyebrow">Method 3 — Genuinely free</span>
+        <h2 class="anchor-top !mt-3">Free Entity and Knowledge Graph Methods</h2>
+        <p class="mt-4 max-w-3xl text-ink-300 leading-relaxed"><strong>Entity work — improving how AI models recognise and describe your brand — is one of the highest-leverage GEO activities, and its most important elements can be started without any tool spend.</strong></p>
+
+        <div class="mt-8 space-y-6">
+
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">Wikipedia and Wikidata Review and Improvement</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-500 font-mono text-xs uppercase tracking-wide">Genuinely free — editorial effort required</p>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300"><strong>Large language models draw heavily on Wikipedia and Wikidata when constructing factual descriptions of organisations — reviewing and improving your presence on both platforms is free, impactful, and underutilised by most brands.</strong> Begin with a check of whether your organisation has a Wikipedia article, whether it meets Wikipedia's notability standards (third-party, independent sources are required), and whether the content is accurate, up to date, and well-sourced. If an article exists but is thin or poorly structured, improving it through Wikipedia's editing interface is free. Wikidata records — the structured data counterpart to Wikipedia — should include your organisation's founding date, headquarters location, legal name, industry, and key relationships. These are the structured attributes that LLMs reference when generating factual summaries. No tool is required to check or improve these; only Wikipedia's and Wikidata's own interfaces.</p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">Google Knowledge Panel Review</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-500 font-mono text-xs uppercase tracking-wide">Genuinely free — requires Google Business Profile</p>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300"><strong>Your Google Knowledge Panel is a direct window into how Google's systems — and, by extension, many AI models — characterise your brand.</strong> Search your brand name and examine the panel that appears: does it display the correct description, category, contact details, and associated URLs? Is the primary image appropriate? Are the most important facts about your organisation present and accurate? Claiming your Knowledge Panel through Google Search Console or Google Business Profile is free and allows you to suggest corrections. For <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> purposes, the Knowledge Panel is a proxy for entity clarity: if Google cannot construct a clean, accurate knowledge panel for your brand, AI systems will likely share a similar characterisation gap.</p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">Authoritative External Citation Audit</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-500 font-mono text-xs uppercase tracking-wide">Genuinely free — time investment required</p>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300"><strong>An authoritative external citation audit assesses whether your brand is mentioned, quoted, or described by the types of third-party sources that AI models treat as credible references.</strong> Industry association databases, government supplier registers, press coverage in publications with genuine editorial standards, academic citations, and professional directories are the sources that carry entity weight. A manual audit — searching for your brand name in these contexts and identifying obvious gaps — costs nothing and frequently surfaces the same gaps that a dedicated entity analysis tool would flag. The fix for these gaps is editorial work (earning coverage, submitting accurate information to relevant databases, ensuring professional directories contain current details), not additional software.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Free-tier platforms -->
+      <section id="free-tier-platforms">
+        <span class="eyebrow">Method 4 — Free tier</span>
+        <h2 class="anchor-top !mt-3">Free-Tier Monitoring Platforms</h2>
+        <p class="mt-4 max-w-3xl text-ink-300 leading-relaxed"><strong>Several dedicated GEO monitoring platforms offer free tiers that allow limited citation tracking — useful for establishing a partial baseline and experiencing the product before committing to a paid plan.</strong></p>
+
+        <div class="mt-8 space-y-6">
+
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">Entry-Level Tiers of Dedicated GEO Platforms</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300"><strong>Platforms such as Otterly.ai and similar dedicated GEO monitoring tools have offered free or entry-level tiers that provide access to a limited number of tracked prompts and AI platforms.</strong> The value of these tiers is genuine but bounded: you can monitor a small set of your most important queries and observe how your brand appears across the covered platforms. What you cannot do on free tiers is run the query volume, retain the history depth, or access the competitive benchmarking features that make a monitoring platform operationally useful for an ongoing programme.</p>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">Check current free tier terms directly with each vendor. Free tier availability, query limits, and platform coverage in free plans change regularly as platforms evolve their pricing models. What is described here reflects the general category pattern, not guaranteed current terms for any specific product.</p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">Google Search Console as an Indirect GEO Signal</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-500 font-mono text-xs uppercase tracking-wide">Genuinely free — indirect GEO utility</p>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300"><strong>Google Search Console does not measure AI citation frequency, but it provides free data that is indirectly useful for a GEO programme.</strong> Monitoring traffic to pages you have restructured for GEO can surface whether Google AI Overviews are driving referral clicks — an indirect indicator of improved AI visibility for that page. GSC's performance data on search queries also informs the content topical coverage decisions that underpin GEO. It belongs in any practitioner's free toolkit, with the explicit understanding that it measures traditional organic search and AI overview referral traffic, not AI citation rates across the broader platform landscape.</p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">Semrush and Ahrefs Free Plans</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-500 font-mono text-xs uppercase tracking-wide">Free tier — restricted functionality</p>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300"><strong>Both Semrush and Ahrefs offer restricted free access that provides limited brand mention monitoring and content analysis data useful as part of a free GEO toolkit.</strong> Semrush's free tier allows a limited number of daily searches; Ahrefs' free tools include a backlink checker and limited site audit. Neither free plan gives meaningful access to the AI visibility features these platforms have added in 2025–26. Their GEO utility at the free tier is confined to the foundational work: content gap analysis, basic technical audit, and brand mention data at limited volume. Useful as supporting tools; not a substitute for dedicated GEO measurement.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Technical audit -->
+      <section id="technical-audit">
+        <span class="eyebrow">Method 5 — Free tier</span>
+        <h2 class="anchor-top !mt-3">Free Technical Audit Tools</h2>
+        <p class="mt-4 max-w-3xl text-ink-300 leading-relaxed"><strong>Technical audit tools that surface structural issues affecting your site's topical authority are available at no cost for most site sizes, making them a practical part of a free GEO stack.</strong></p>
+
+        <div class="mt-8 space-y-6">
+
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">Screaming Frog SEO Spider (Free Tier)</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-500 font-mono text-xs uppercase tracking-wide">Free tier — up to 500 URLs</p>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300"><strong>Screaming Frog's free tier crawls up to 500 URLs and surfaces the technical issues — orphan pages, thin content, broken internal links, missing metadata — that undermine the topical authority signals AI models use when evaluating citation sources.</strong> For sites under 500 pages, the free tier is functionally complete. For larger sites, it is useful for auditing specific sections or URL patterns. Screaming Frog does not measure AI visibility directly, but it identifies the structural weaknesses in your content architecture that limit AI citation potential. It is a standard part of any GEO technical audit and available at no cost for most use cases.</p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-semibold text-ink-50">PageSpeed Insights and Core Web Vitals</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-500 font-mono text-xs uppercase tracking-wide">Genuinely free — no usage limit</p>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300"><strong>Google's PageSpeed Insights and Core Web Vitals tooling are free and relevant to GEO in that technical page quality is a prerequisite for AI citation consideration.</strong> A page that loads poorly, is inaccessible, or fails basic technical standards is less likely to be indexed and referenced by AI retrieval systems. These tools identify the technical baseline issues that should be resolved before investing in GEO-specific optimisation. They address a necessary but not sufficient condition: fixing Core Web Vitals will not drive AI citations on its own, but persistent technical failures create a ceiling on the impact of content optimisation work.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Quick reference table -->
+      <section id="free-tools-table">
+        <span class="eyebrow">Quick reference</span>
+        <h2 class="anchor-top !mt-3">Free GEO Tools and Methods at a Glance</h2>
+        <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed"><strong>The table below summarises every free tool and method covered on this page, with a clear note on whether it is genuinely free or a free tier, and what it can and cannot do for a GEO programme.</strong></p>
+
+        <div class="mt-8 overflow-x-auto rounded-xl border border-[var(--line)]">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-[var(--bg-2)] text-ink-200">
+              <tr>
+                <th scope="col" class="px-5 py-4 font-semibold">Tool / Method</th>
+                <th scope="col" class="px-5 py-4 font-semibold">Type</th>
+                <th scope="col" class="px-5 py-4 font-semibold">GEO function</th>
+                <th scope="col" class="px-5 py-4 font-semibold">Key limitation</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[var(--line)]">
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 font-medium text-ink-100">Manual AI spot-checking</td>
+                <td class="px-5 py-4"><span class="rounded-full bg-[var(--bg-2)] border border-[var(--line)] px-2 py-0.5 text-xs text-[var(--accent)]">Genuinely free</span></td>
+                <td class="px-5 py-4 text-ink-300">Establish qualitative baseline across platforms</td>
+                <td class="px-5 py-4 text-ink-300">Cannot produce statistically reliable citation rates</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 font-medium text-ink-100">AI assistants for content restructuring</td>
+                <td class="px-5 py-4"><span class="rounded-full bg-[var(--bg-2)] border border-[var(--line)] px-2 py-0.5 text-xs text-[var(--accent)]">Genuinely free</span></td>
+                <td class="px-5 py-4 text-ink-300">Reformat pages for citation-friendly structure</td>
+                <td class="px-5 py-4 text-ink-300">Requires practitioner judgement; cannot audit at scale</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 font-medium text-ink-100">Google Rich Results Test</td>
+                <td class="px-5 py-4"><span class="rounded-full bg-[var(--bg-2)] border border-[var(--line)] px-2 py-0.5 text-xs text-[var(--accent)]">Genuinely free</span></td>
+                <td class="px-5 py-4 text-ink-300">Validate JSON-LD schema implementation</td>
+                <td class="px-5 py-4 text-ink-300">Google-specific interpretation only</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 font-medium text-ink-100">Schema.org Validator</td>
+                <td class="px-5 py-4"><span class="rounded-full bg-[var(--bg-2)] border border-[var(--line)] px-2 py-0.5 text-xs text-[var(--accent)]">Genuinely free</span></td>
+                <td class="px-5 py-4 text-ink-300">Validate schema against full specification</td>
+                <td class="px-5 py-4 text-ink-300">Does not test rich result eligibility</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 font-medium text-ink-100">Wikipedia / Wikidata editing</td>
+                <td class="px-5 py-4"><span class="rounded-full bg-[var(--bg-2)] border border-[var(--line)] px-2 py-0.5 text-xs text-[var(--accent)]">Genuinely free</span></td>
+                <td class="px-5 py-4 text-ink-300">Improve knowledge graph entity representation</td>
+                <td class="px-5 py-4 text-ink-300">Requires editorial effort; Wikipedia has notability rules</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 font-medium text-ink-100">Google Knowledge Panel claim</td>
+                <td class="px-5 py-4"><span class="rounded-full bg-[var(--bg-2)] border border-[var(--line)] px-2 py-0.5 text-xs text-[var(--accent)]">Genuinely free</span></td>
+                <td class="px-5 py-4 text-ink-300">Correct how Google characterises your brand</td>
+                <td class="px-5 py-4 text-ink-300">Cannot force changes; suggestions only</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 font-medium text-ink-100">Google Search Console</td>
+                <td class="px-5 py-4"><span class="rounded-full bg-[var(--bg-2)] border border-[var(--line)] px-2 py-0.5 text-xs text-[var(--accent)]">Genuinely free</span></td>
+                <td class="px-5 py-4 text-ink-300">Indirect GEO signal via organic and AI overview traffic</td>
+                <td class="px-5 py-4 text-ink-300">Does not measure AI citation frequency</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 font-medium text-ink-100">Screaming Frog (free tier)</td>
+                <td class="px-5 py-4"><span class="rounded-full bg-[var(--bg-2)] border border-[var(--line)] px-2 py-0.5 text-xs text-ink-300">Free tier</span></td>
+                <td class="px-5 py-4 text-ink-300">Technical audit of site architecture</td>
+                <td class="px-5 py-4 text-ink-300">500 URL limit per crawl</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 font-medium text-ink-100">GEO monitoring platform free tiers</td>
+                <td class="px-5 py-4"><span class="rounded-full bg-[var(--bg-2)] border border-[var(--line)] px-2 py-0.5 text-xs text-ink-300">Free tier</span></td>
+                <td class="px-5 py-4 text-ink-300">Limited citation monitoring for a small prompt set</td>
+                <td class="px-5 py-4 text-ink-300">Restricted query volume, history, and competitive data</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 font-medium text-ink-100">PageSpeed Insights</td>
+                <td class="px-5 py-4"><span class="rounded-full bg-[var(--bg-2)] border border-[var(--line)] px-2 py-0.5 text-xs text-[var(--accent)]">Genuinely free</span></td>
+                <td class="px-5 py-4 text-ink-300">Identify technical barriers to AI indexability</td>
+                <td class="px-5 py-4 text-ink-300">Necessary but not sufficient for GEO</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- When to upgrade -->
+      <section id="when-to-upgrade">
+        <span class="eyebrow">Budget planning</span>
+        <h2 class="anchor-top !mt-3">When to Move Beyond Free: The Under-£100 Decision</h2>
+        <p class="mt-4 max-w-3xl text-ink-300 leading-relaxed"><strong>Free tools provide a genuine starting point, but there is a ceiling — and recognising it is as important as using the free tools effectively.</strong></p>
+
+        <div class="mt-8 space-y-6">
+
+          <div class="card p-6 border-l-2 border-l-[var(--accent)]">
+            <h3 class="font-display text-base font-semibold text-ink-50">What free tools cannot do well</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">Systematic citation frequency tracking — measuring your citation rate across a consistent prompt set on a weekly cadence across four or more AI platforms — is not achievable with free tools alone. Manual spot-checking produces useful qualitative evidence but not statistically reliable frequency data. This matters because GEO improvement requires measurement: if you cannot reliably track whether your citation rate is moving, you cannot evaluate whether your optimisation work is having effect. Free tools give you the starting conditions; they do not give you an ongoing measurement programme.</p>
+          </div>
+
+          <div class="card p-6 border-l-2 border-l-[var(--accent)]">
+            <h3 class="font-display text-base font-semibold text-ink-50">The under-£100 per month entry point</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">Entry-level tiers of dedicated GEO monitoring platforms are available for approximately £50–£100 per month at current pricing (verify with vendors directly, as this changes). At this price point, you gain scheduled citation tracking across the core AI platforms, basic competitive benchmarking, and historical data retention that lets you identify trends. This is a meaningful capability upgrade from the free tier and is appropriate once you have an active optimisation process — content being published and structured, schema being improved, entity work under way — that you need to measure. Investing in monitoring before you have an optimisation process gives you data you cannot act on; investing after gives you accountability for the work you are doing.</p>
+          </div>
+
+          <div class="card p-6 border-l-2 border-l-[var(--accent)]">
+            <h3 class="font-display text-base font-semibold text-ink-50">The right sequencing decision</h3>
+            <p class="mt-2 text-sm leading-relaxed text-ink-300">Use free tools to run your initial baseline check, validate your schema, review your entity presence, and fix your most obvious structural issues. If those actions surface significant gaps — which they usually will — address them before paying for ongoing monitoring. Once you have a process (regular content improvement, schema maintenance, entity monitoring) that generates data worth tracking, move to a paid monitoring tier. The <a href="/best-geo-tools-2026/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">2026 best GEO tools roundup</a> covers the paid category landscape in full. If you would like independent advice on which entry-level option is appropriate for your specific situation, the <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEOoptimised team</a> can advise without vendor affiliation.</p>
+          </div>
+
+        </div>
+
+        <div class="mt-8 rounded-xl border border-[var(--line)] bg-[var(--bg-2)] px-6 py-4 text-sm text-ink-300">
+          <strong class="text-ink-100">A note on the free tool landscape:</strong> Free tier availability across GEO monitoring platforms changes as products evolve. This page describes the general pattern of what free tools can and cannot do, not guaranteed current terms for any specific product. Always verify current free tier terms, query limits, and platform coverage directly with vendors before relying on any tool for your programme.
+        </div>
+      </section>
+
+      <!-- Related reading -->
+      <section>
+        <span class="eyebrow">Related reading</span>
+        <h2 class="anchor-top !mt-3">Further Resources</h2>
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <a href="/geo-tools/" class="card card-hover block p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">GEO Tools Hub</h3>
+            <p class="mt-2 text-sm text-ink-300 leading-relaxed">The parent hub: all GEO tool categories, evaluation criteria, and a framework for selecting the right platforms.</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a href="/best-geo-tools-2026/" class="card card-hover block p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">Best GEO Tools 2026</h3>
+            <p class="mt-2 text-sm text-ink-300 leading-relaxed">The full 2026 annual roundup: paid and free-tier options across all GEO tool categories.</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a href="/best-ai-tools-geo/" class="card card-hover block p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">Best AI Tools for GEO</h3>
+            <p class="mt-2 text-sm text-ink-300 leading-relaxed">Tools organised by workflow stage: audit, optimise, monitor, and report — covering the full programme lifecycle.</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a href="/geo-tools-comparison/" class="card card-hover block p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">GEO Tools Comparison</h3>
+            <p class="mt-2 text-sm text-ink-300 leading-relaxed">Head-to-head comparison of GEO monitoring platforms across consistent evaluation criteria.</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a href="/best-llm-visibility-tools/" class="card card-hover block p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">Best LLM Visibility Tools</h3>
+            <p class="mt-2 text-sm text-ink-300 leading-relaxed">Citation-monitoring platforms across ChatGPT, Perplexity, Gemini and Claude reviewed in depth.</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a href="/generative-engine-optimisation/" class="card card-hover block p-6">
+            <h3 class="font-display text-base font-semibold text-ink-50">What Is GEO?</h3>
+            <p class="mt-2 text-sm text-ink-300 leading-relaxed">The definitive guide to generative engine optimisation: what it is, why it matters, and how it works.</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- FAQ Accordion -->
+  <section id="faq" class="container-wide py-20">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Frequently Asked Questions</h2>
+
+    <div class="mt-10 max-w-3xl divide-y divide-[var(--line)]">
+
+      <div class="faq-item">
+        <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
+          <span>Can I actually do GEO effectively with only free tools?</span>
+          <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/></svg>
+        </button>
+        <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+          <p class="pb-5 text-ink-300 leading-relaxed">Free tools and manual methods are sufficient to establish a GEO baseline, identify your most significant gaps, and implement structural improvements most likely to improve your citation rate. What they cannot do reliably is track citation frequency at scale over time, benchmark against competitors systematically, or run high-volume prompt testing with statistical confidence. For a brand serious about GEO as an ongoing performance channel, free tools represent a starting point rather than a sustainable long-term measurement infrastructure.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
+          <span>What is the difference between a genuinely free GEO tool and a free tier?</span>
+          <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 011-1z"/></svg>
+        </button>
+        <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+          <p class="pb-5 text-ink-300 leading-relaxed">A genuinely free tool has no meaningful functional restriction relative to its core GEO use case — Google's Rich Results Test is free without restriction for schema validation. A free tier is a restricted version of a paid product: limited query volumes, capped history, or restricted platform coverage. Both are valuable starting points, but the distinction matters when you are planning your budget. Free tiers are designed to show you the value of the full product.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
+          <span>Is manual AI spot-checking a legitimate GEO method?</span>
+          <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 011-1z"/></svg>
+        </button>
+        <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+          <p class="pb-5 text-ink-300 leading-relaxed">Manual spot-checking is a legitimate method for qualitative understanding of your AI visibility — identifying how your brand is described, which competitors appear alongside yours, and whether obvious inaccuracies exist. It is not a substitute for systematic tracking because it cannot produce statistically reliable frequency estimates. Use manual checks for qualitative insight and directional evidence; use a monitoring tool for quantitative measurement.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
+          <span>Which free tools should I start with if I have no GEO tooling at all?</span>
+          <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 011-1z"/></svg>
+        </button>
+        <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+          <p class="pb-5 text-ink-300 leading-relaxed">Start with three things: a manual prompt-testing session across ChatGPT, Perplexity, and Gemini using your most important target queries (recorded in a spreadsheet); Google's Rich Results Test to validate your existing structured data; and a manual review of your Wikipedia entry and Google Knowledge Panel. This combination costs nothing, takes a few hours, and produces a clear picture of your current AI citation status, your most urgent schema gaps, and the state of your entity presence.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
+          <span>When does the budget under £100 per month become worth spending on GEO tools?</span>
+          <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 011-1z"/></svg>
+        </button>
+        <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+          <p class="pb-5 text-ink-300 leading-relaxed">The right moment to move from free tools to a paid plan is when you have a repeatable optimisation process but cannot scale your measurement — specifically when you are publishing or updating content regularly and need to know whether citation rates are moving, or when a competitor's AI visibility is a meaningful commercial concern requiring systematic competitive data. At under £100 per month, entry-level paid tiers of dedicated GEO monitoring platforms are available and provide measurably better data than free alternatives for ongoing tracking.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors" aria-expanded="false">
+          <span>Can I use Google Search Console to track GEO performance?</span>
+          <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 011-1z"/></svg>
+        </button>
+        <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+          <p class="pb-5 text-ink-300 leading-relaxed">Google Search Console does not directly measure AI citation frequency. However, it provides useful indirect signals: traditional organic data informs content quality work that supports GEO, and Google AI Overviews can drive referral traffic visible in GSC. Monitoring traffic to GEO-optimised pages can provide an indirect signal of improvement. GSC is not a GEO measurement tool, but it belongs in any practitioner's free toolkit for the foundational data it provides.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="container-wide py-20">
+    <div class="relative overflow-hidden rounded-2xl dot-grid">
+      <div class="absolute inset-0 bg-gradient-to-br from-[rgba(var(--accent-glow),.12)] via-transparent to-transparent"></div>
+      <div class="relative px-8 py-16 text-center sm:px-16">
+        <span class="eyebrow">Ready to go further</span>
+        <h2 class="mt-4 font-display text-3xl font-bold text-ink-50 sm:text-4xl">Ready to Move Beyond Free Tools?</h2>
+        <p class="mt-4 mx-auto max-w-2xl text-ink-300 leading-relaxed">
+          When you have established your baseline and need systematic measurement, GEOoptimised can advise on the right tool combination for your programme — without vendor affiliations or commercial bias. We also offer hands-on GEO programmes if you need more than tooling.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact/" class="btn btn-primary">Discuss Your GEO Programme</a>
+          <a href="/best-geo-tools-2026/" class="btn btn-ghost">2026 GEO Tools Roundup</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = '0';
+            other.closest('.faq-item').querySelector('.faq-icon').style.transform = '';
+          }
+        });
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+        icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+      });
+    });
+
+    // Sticky TOC highlight via IntersectionObserver
+    const sections = document.querySelectorAll('section[id]');
+    const tocLinks = document.querySelectorAll('nav[aria-label="On this page"] a');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(link => {
+            link.classList.toggle(
+              'text-[var(--accent)]',
+              link.getAttribute('href') === '#' + entry.target.id
+            );
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</Base>

@@ -9,31 +9,114 @@ interface Props {
   canonical?: string;
   schema?: object | object[];
   ogType?: string;
+  image?: string;
+  noindex?: boolean;
 }
 
-const { title, description, canonical, schema, ogType = 'website' } = Astro.props;
+const { title, description, canonical, schema, ogType = 'website', image = '/og-image.png', noindex = false } = Astro.props;
 const canonicalUrl = canonical || Astro.url.href;
 const siteName = 'GEOoptimised';
+const site = Astro.site ?? new URL('https://geooptimised.com');
+const imageUrl = new URL(image, site).href;
+const origin = site.origin;
+
+// Sitewide knowledge-graph entity: defined once with stable @ids so every page
+// references one canonical Organization/WebSite rather than re-declaring them.
+// Per-page schema (passed via the `schema` prop) can reference these by @id,
+// e.g. publisher / provider / author / isPartOf: { "@id": `${origin}/#organization` }.
+const entityGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${origin}/#organization`,
+      name: 'GEOoptimised',
+      url: `${origin}/`,
+      email: 'hello@geooptimised.com',
+      description: 'Generative Engine Optimisation agency helping brands get cited by AI search engines including ChatGPT, Perplexity, Google AI Overviews, Gemini and Claude.',
+      foundingDate: '2026',
+      logo: {
+        '@type': 'ImageObject',
+        '@id': `${origin}/#logo`,
+        url: `${origin}/icon-512.png`,
+        width: 512,
+        height: 512,
+        caption: 'GEOoptimised',
+      },
+      image: { '@id': `${origin}/#logo` },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        email: 'hello@geooptimised.com',
+        contactType: 'sales',
+        availableLanguage: 'English',
+      },
+      areaServed: { '@type': 'Country', name: 'United Kingdom' },
+      knowsAbout: [
+        'Generative Engine Optimisation',
+        'Answer Engine Optimisation',
+        'AI search optimisation',
+        'Large language model optimisation',
+        'AI citation strategy',
+        'Knowledge graph optimisation',
+        'Entity optimisation',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${origin}/#website`,
+      name: 'GEOoptimised',
+      url: `${origin}/`,
+      publisher: { '@id': `${origin}/#organization` },
+      inLanguage: 'en-GB',
+    },
+  ],
+};
 ---
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Explicit color-scheme meta so browser chrome (scrollbars, form controls) renders dark -->
+  <meta name="color-scheme" content="dark" />
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonicalUrl} />
+  <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large'} />
+  <meta name="generator" content={Astro.generator} />
+  <meta name="theme-color" content="#06090F" />
+  <meta name="author" content="GEOoptimised" />
+
+  <!-- Favicons & PWA -->
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content={ogType} />
   <meta property="og:url" content={canonicalUrl} />
   <meta property="og:site_name" content={siteName} />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:image" content={imageUrl} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content={title} />
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={imageUrl} />
+
+  <!-- Fonts: preconnect then load with display=swap to prevent invisible text (FOIT) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json" set:html={JSON.stringify(entityGraph)} />
   {schema && (
     Array.isArray(schema)
       ? schema.map(s => <script type="application/ld+json" set:html={JSON.stringify(s)} />)
@@ -41,9 +124,13 @@ const siteName = 'GEOoptimised';
   )}
 </head>
 <body>
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-[var(--accent)] focus:text-ink-950 focus:px-4 focus:py-2 focus:rounded focus:z-50">Skip to content</a>
+  <!-- Skip link: always rendered, only visible on focus — uses focus-visible global styles -->
+  <a
+    href="#main"
+    class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:rounded-md focus:px-4 focus:py-2"
+  >Skip to content</a>
   <Header />
-  <main id="main">
+  <main id="main" tabindex="-1">
     <slot />
   </main>
   <Footer />

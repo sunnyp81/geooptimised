@@ -1,0 +1,595 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO Definition: Generative Engine Optimisation Explained | GEOoptimised';
+const description = 'GEO definition: generative engine optimisation explained in plain terms. Glossary of GEO, AEO, SEO, LLM, RAG, entity, and citation — the core vocabulary every practitioner needs.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'GEO Definition: Generative Engine Optimisation Explained',
+  description: 'A clear definition of generative engine optimisation (GEO) alongside a glossary of the related terms every practitioner needs to know: AEO, SEO, LLM, RAG, entity, and citation.',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  inLanguage: 'en-GB',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/geo-definition/',
+  },
+  image: 'https://geooptimised.com/og-image.png',
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is the definition of GEO (generative engine optimisation)?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Generative engine optimisation (GEO) is the practice of structuring content, entity signals, and technical infrastructure so that large language models (LLMs) cite your brand when generating answers. It is distinct from traditional SEO, which targets blue-link rankings, and from AEO, which targets featured-snippet selection. GEO targets citation within AI-generated responses across all major generative search platforms.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between GEO, AEO, and SEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SEO (search engine optimisation) targets ranking position in a list of blue links. AEO (answer engine optimisation) targets selection as the direct answer in featured snippets, People Also Ask boxes, and voice assistants. GEO (generative engine optimisation) targets citation within fully synthesised, AI-generated responses — the most recent and fastest-growing form of search. AEO is a subset of GEO; SEO is a complementary discipline that shares GEO foundations.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What does RAG mean in the context of GEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'RAG stands for retrieval-augmented generation. It is the technical architecture used by most AI search platforms — including Google AI Overviews, Perplexity, and Microsoft Copilot — to generate answers. The system retrieves relevant documents from the web, extracts passages from those documents, and uses a large language model to synthesise them into a coherent response. GEO optimises for every stage of the RAG pipeline: retrieval, passage extraction, and synthesis.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is an entity in GEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'In GEO, an entity is any distinctly identifiable concept — a brand, person, product, technology, or organisation — that AI systems recognise as a real-world object with defined properties and relationships. Brands with strong entity presence across Wikipedia, Wikidata, and the Google Knowledge Graph are treated as authoritative sources by LLMs. Establishing and strengthening your brand entity is a foundational step in any GEO programme.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is an AI citation and why does it matter for GEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'An AI citation is an attribution within an AI-generated response that credits a specific source — your brand or webpage — for a claim, statistic, or piece of information. Citations matter for GEO because they represent direct brand exposure within the AI answer: the user sees your brand name and often a link to your page before interacting with any traditional search results. Citation frequency and citation accuracy are the two primary KPIs in a GEO measurement framework.',
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+    { '@type': 'ListItem', position: 3, name: 'GEO Definition', item: 'https://geooptimised.com/geo-definition/' },
+  ],
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'definition', label: 'The GEO Definition' },
+  { id: 'glossary', label: 'GEO Glossary' },
+  { id: 'geo-vs-aeo-vs-seo', label: 'GEO vs AEO vs SEO' },
+  { id: 'why-definition-matters', label: 'Why the Definition Matters' },
+  { id: 'rag-explained', label: 'RAG Explained' },
+  { id: 'entity-explained', label: 'What Is an Entity?' },
+  { id: 'citation-explained', label: 'What Is a Citation?' },
+  { id: 'faq', label: 'FAQ' },
+];
+
+const glossaryTerms = [
+  {
+    term: 'GEO',
+    full: 'Generative Engine Optimisation',
+    definition: 'The practice of structuring content, entity signals, and technical infrastructure so that large language models cite your brand when generating answers. GEO is the umbrella discipline for AI search visibility.',
+  },
+  {
+    term: 'AEO',
+    full: 'Answer Engine Optimisation',
+    definition: 'A subset of GEO focused specifically on direct-answer interfaces: Google featured snippets, AI Overviews, People Also Ask boxes, and voice assistants. AEO targets selection as the displayed answer for a query.',
+  },
+  {
+    term: 'SEO',
+    full: 'Search Engine Optimisation',
+    definition: 'The discipline of improving a website\'s visibility in search engine results pages (SERPs). Traditional SEO targets blue-link rankings through backlinks, keyword relevance, and technical site quality. Foundational to both AEO and GEO.',
+  },
+  {
+    term: 'LLM',
+    full: 'Large Language Model',
+    definition: 'A type of AI model trained on large volumes of text data to understand and generate human language. ChatGPT (GPT-4), Gemini, Claude, and Llama are LLMs. In AI search, LLMs synthesise retrieved documents into generated answers.',
+  },
+  {
+    term: 'RAG',
+    full: 'Retrieval-Augmented Generation',
+    definition: 'The technical architecture used by AI search platforms. The system retrieves relevant documents from the web, extracts key passages, and uses an LLM to synthesise them into a coherent answer. GEO optimises for every stage of the RAG pipeline.',
+  },
+  {
+    term: 'Citation',
+    full: 'AI Citation / Source Attribution',
+    definition: 'An attribution within an AI-generated response crediting a specific webpage or brand as the source for a claim. AI citations are the primary outcome GEO strategies target — the equivalent of a first-page ranking in traditional SEO.',
+  },
+  {
+    term: 'Entity',
+    full: 'Knowledge Graph Entity',
+    definition: 'Any distinctly identifiable real-world concept — a brand, person, product, or organisation — that AI systems recognise and can link to authoritative knowledge sources. Strong entity presence across Wikipedia and Wikidata is a primary LLM authority signal.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'What is the definition of GEO (generative engine optimisation)?',
+    a: 'Generative engine optimisation (GEO) is the practice of structuring content, entity signals, and technical infrastructure so that large language models (LLMs) cite your brand when generating answers. It is distinct from traditional SEO, which targets blue-link rankings, and from AEO, which targets featured-snippet selection. GEO targets citation within AI-generated responses across all major generative search platforms.',
+  },
+  {
+    q: 'What is the difference between GEO, AEO, and SEO?',
+    a: 'SEO (search engine optimisation) targets ranking position in a list of blue links. AEO (answer engine optimisation) targets selection as the direct answer in featured snippets, People Also Ask boxes, and voice assistants. GEO (generative engine optimisation) targets citation within fully synthesised, AI-generated responses — the most recent and fastest-growing form of search. AEO is a subset of GEO; SEO is a complementary discipline that shares GEO foundations.',
+  },
+  {
+    q: 'What does RAG mean in the context of GEO?',
+    a: 'RAG stands for retrieval-augmented generation. It is the technical architecture used by most AI search platforms — including Google AI Overviews, Perplexity, and Microsoft Copilot — to generate answers. The system retrieves relevant documents from the web, extracts passages from those documents, and uses a large language model to synthesise them into a coherent response. GEO optimises for every stage of the RAG pipeline: retrieval, passage extraction, and synthesis.',
+  },
+  {
+    q: 'What is an entity in GEO?',
+    a: 'In GEO, an entity is any distinctly identifiable concept — a brand, person, product, technology, or organisation — that AI systems recognise as a real-world object with defined properties and relationships. Brands with strong entity presence across Wikipedia, Wikidata, and the Google Knowledge Graph are treated as authoritative sources by LLMs. Establishing and strengthening your brand entity is a foundational step in any GEO programme.',
+  },
+  {
+    q: 'What is an AI citation and why does it matter for GEO?',
+    a: 'An AI citation is an attribution within an AI-generated response that credits a specific source — your brand or webpage — for a claim, statistic, or piece of information. Citations matter for GEO because they represent direct brand exposure within the AI answer: the user sees your brand name and often a link to your page before interacting with any traditional search results. Citation frequency and citation accuracy are the two primary KPIs in a GEO measurement framework.',
+  },
+];
+
+const related = [
+  {
+    tag: 'Root',
+    title: 'Generative Engine Optimisation: Complete Guide',
+    excerpt: 'The pillar guide to GEO — framework, tools, metrics, and full implementation strategy.',
+    href: '/generative-engine-optimisation/',
+  },
+  {
+    tag: 'Seed',
+    title: 'What Is GEO?',
+    excerpt: 'A clear explainer on what generative engine optimization is, how it works, and who needs it.',
+    href: '/what-is-geo/',
+  },
+  {
+    tag: 'Seed',
+    title: 'GEO Explained',
+    excerpt: 'A deeper walkthrough of GEO concepts, signals, and practical tactics for AI search visibility.',
+    href: '/geo-explained/',
+  },
+  {
+    tag: 'Seed',
+    title: 'GEO vs SEO',
+    excerpt: 'A detailed side-by-side comparison of generative engine optimisation and traditional SEO.',
+    href: '/geo-vs-seo/',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/geo-definition/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">Generative Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">GEO Definition</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Definition &amp; Glossary</span>
+        <span class="font-mono text-xs text-ink-300">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">10 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO Definition: Generative Engine Optimisation Explained
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">Generative engine optimisation (GEO)</strong> is the discipline of engineering a brand's content, entities, and technical signals to be selected and quoted by large language models inside their generated answers — the AI-era counterpart to earning a place in traditional search results.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" aria-label="Table of contents">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>GEO is the discipline of getting your brand cited inside AI-generated answers — not ranked in a list of links.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>AEO is a subset of GEO; SEO is a complementary foundation that both disciplines build on.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>RAG (retrieval-augmented generation) is the pipeline that AI search platforms use to select and cite sources.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span>Entity authority — consistent presence across Wikipedia, Wikidata, and knowledge graphs — is the primary LLM trust signal.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1: Definition -->
+      <section id="definition" class="anchor-top prose-dark mb-16">
+        <h2>The GEO Definition</h2>
+
+        <p>
+          <strong>In one line: GEO is the discipline of making a brand the source that generative AI models quote when they answer a question — earned through content structure, entity authority, and technical readiness rather than blue-link rankings.</strong>
+          The term applies equally to the British spelling used throughout this guide and the American spelling — generative engine optimization — which dominates search volume due to the US market.
+        </p>
+
+        <p>
+          The word "generative" refers to the AI's behaviour: rather than retrieving and ranking existing pages, a generative engine creates a new, synthesised response by combining information from multiple sources. The word "optimisation" reflects the practitioner's task: shaping your content, entity presence, and technical setup to be selected and cited within that generated response.
+        </p>
+
+        <p>
+          GEO is part of the broader AI search landscape that includes <a href="/answer-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">answer engine optimisation (AEO)</a> and traditional SEO. Understanding how these three disciplines relate to each other — and where GEO's definition begins and ends — is the first step in building an effective strategy. For a full practitioner's guide, see <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Generative Engine Optimisation: Complete Guide</a>.
+        </p>
+
+        <p>
+          The concept was first described in academic research in 2023, as practitioners and researchers began observing that the emergence of AI-powered search surfaces required a distinct optimisation framework — one that could not simply be mapped onto existing SEO or AEO practices. The term "GEO" has since become the dominant label for this discipline within the industry.
+        </p>
+      </section>
+
+      <!-- Section 2: Glossary Table -->
+      <section id="glossary" class="anchor-top mb-16">
+        <div class="prose-dark mb-8">
+          <h2>GEO Glossary: Core Terms Defined</h2>
+          <p>
+            <strong>The vocabulary of generative engine optimisation draws from AI research, traditional SEO, and information retrieval — seven terms form the essential working vocabulary every GEO practitioner needs.</strong>
+            The table below defines each term precisely and in relation to the others.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead>
+              <tr class="border-b border-[var(--line)]">
+                <th scope="col" class="px-5 py-3 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Term</th>
+                <th scope="col" class="px-5 py-3 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Full Name</th>
+                <th scope="col" class="px-5 py-3 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Definition</th>
+              </tr>
+            </thead>
+            <tbody class="text-ink-300">
+              {glossaryTerms.map((item, i) => (
+                <tr class={i < glossaryTerms.length - 1 ? 'border-b border-[var(--line-soft)]' : ''}>
+                  <td class="px-5 py-4 font-mono font-semibold text-[var(--accent)] align-top whitespace-nowrap">{item.term}</td>
+                  <td class="px-5 py-4 font-medium text-ink-100 align-top whitespace-nowrap">{item.full}</td>
+                  <td class="px-5 py-4 leading-relaxed align-top">{item.definition}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose-dark mt-8">
+          <p>
+            These seven terms form a connected system. LLMs power the generative engines that GEO targets. RAG is the pipeline those engines use to retrieve and synthesise answers. Entities are what LLMs use as trust anchors when evaluating sources. Citations are the output that GEO strategies are designed to produce. AEO and SEO are the adjacent disciplines that share foundational techniques with GEO but target different output formats.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 3: GEO vs AEO vs SEO -->
+      <section id="geo-vs-aeo-vs-seo" class="anchor-top mb-16">
+        <div class="prose-dark mb-8">
+          <h2>GEO vs AEO vs SEO: A Three-Way Comparison</h2>
+          <p>
+            <strong>GEO, AEO, and SEO are three distinct but overlapping disciplines — each optimises for a different type of search output, requires different primary signals, and measures success differently.</strong>
+            The confusion between them is understandable because all three share technical and content foundations, but conflating them leads to misallocated effort.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead>
+              <tr class="border-b border-[var(--line)]">
+                <th scope="col" class="px-5 py-3 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Dimension</th>
+                <th scope="col" class="px-5 py-3 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">SEO</th>
+                <th scope="col" class="px-5 py-3 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">AEO</th>
+                <th scope="col" class="px-5 py-3 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">GEO</th>
+              </tr>
+            </thead>
+            <tbody class="text-ink-300">
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-ink-100">Target output</td>
+                <td class="px-5 py-3">Blue-link ranking</td>
+                <td class="px-5 py-3">Featured snippet / voice answer</td>
+                <td class="px-5 py-3">Citation in AI-generated response</td>
+              </tr>
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-ink-100">Primary signal</td>
+                <td class="px-5 py-3">Backlinks, PageRank</td>
+                <td class="px-5 py-3">Structured content, FAQPage schema</td>
+                <td class="px-5 py-3">Entity authority, content citability</td>
+              </tr>
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-ink-100">Key metric</td>
+                <td class="px-5 py-3">Ranking position, organic CTR</td>
+                <td class="px-5 py-3">Snippet ownership rate</td>
+                <td class="px-5 py-3">Citation frequency, AI share of voice</td>
+              </tr>
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-ink-100">Content format</td>
+                <td class="px-5 py-3">Keyword-optimised, comprehensive</td>
+                <td class="px-5 py-3">Concise, question-answer pairs</td>
+                <td class="px-5 py-3">Declarative, entity-rich, quotable</td>
+              </tr>
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-ink-100">Schema focus</td>
+                <td class="px-5 py-3">Basic rich results markup</td>
+                <td class="px-5 py-3">FAQPage, HowTo, Speakable</td>
+                <td class="px-5 py-3">Article, FAQPage, entity sameAs, llms.txt</td>
+              </tr>
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-ink-100">Competition</td>
+                <td class="px-5 py-3">10 results per SERP</td>
+                <td class="px-5 py-3">One snippet per query</td>
+                <td class="px-5 py-3">1–3 citations per AI answer</td>
+              </tr>
+              <tr>
+                <td class="px-5 py-3 font-medium text-ink-100">Relationship</td>
+                <td class="px-5 py-3">Foundation for both AEO and GEO</td>
+                <td class="px-5 py-3">Subset of GEO</td>
+                <td class="px-5 py-3">Umbrella discipline for AI search</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose-dark mt-8">
+          <p>
+            The hierarchical relationship matters: SEO is the technical and authority foundation that both AEO and GEO build on. AEO is a focused subset of GEO, targeting the specific direct-answer mechanisms of featured snippets and voice assistants. GEO is the umbrella discipline that covers all AI search surfaces, including the generative, synthesised responses that represent the most significant shift in how people access information online.
+          </p>
+          <p>
+            For a direct comparison of GEO and traditional SEO specifically, see our <a href="/geo-vs-seo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO vs SEO guide</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4: Why Definition Matters -->
+      <section id="why-definition-matters" class="anchor-top prose-dark mb-16">
+        <h2>Why Getting the Definition Right Matters</h2>
+
+        <p>
+          <strong>Misdefining GEO leads to strategies that optimise for the wrong signals — and in a discipline this new, definitional clarity is a competitive advantage.</strong>
+        </p>
+
+        <p>
+          The most common definitional error is treating GEO as a synonym for "AI-optimised SEO" — applying traditional keyword and backlink strategies to content, then declaring it "GEO-ready." This approach misses the specific mechanisms that AI citation depends on: entity authority in knowledge bases, content structured for passage extraction, and cross-model visibility testing. Brands that conflate the two disciplines will see their SEO metrics improve while their AI citation rates remain low.
+        </p>
+
+        <p>
+          A second common error is treating GEO and AEO as identical. AEO is a subset of GEO that focuses on direct-answer extraction — featured snippets, voice answers. GEO encompasses that, but extends to the generative synthesis layer: the fully composed AI responses that ChatGPT, Perplexity, and Google AI Overviews produce. These systems use different retrieval mechanisms, different authority signals, and different extraction patterns than the featured-snippet system. Optimising only for AEO leaves the generative layer unaddressed.
+        </p>
+
+        <p>
+          Getting the definition right also matters for measurement. If you measure GEO success using traditional SEO metrics — ranking position, organic CTR — you will reach incorrect conclusions about your programme's effectiveness. GEO requires its own KPI framework: citation frequency, citation accuracy, AI share of voice, and referral traffic from AI platforms. See our guide to <a href="/generative-search-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative search optimisation</a> for measurement detail.
+        </p>
+      </section>
+
+      <!-- Section 5: RAG Explained -->
+      <section id="rag-explained" class="anchor-top prose-dark mb-16">
+        <h2>RAG Explained: Why It Is Central to GEO</h2>
+
+        <p>
+          <strong>Retrieval-augmented generation (RAG) is the technical pipeline at the heart of all major AI search platforms, and understanding it is essential to understanding why GEO works the way it does.</strong>
+        </p>
+
+        <p>
+          A pure large language model — without retrieval — generates answers based solely on its training data. This creates problems: the training data has a cutoff date, the model may hallucinate facts it is uncertain about, and it cannot attribute claims to specific sources. RAG solves these problems by connecting the LLM to a live retrieval system.
+        </p>
+
+        <p>
+          When a RAG-powered system receives a query, it first retrieves relevant documents from a web index or curated corpus. It extracts the most relevant passages from those documents. Then it passes those passages to the LLM as context, and the LLM synthesises them into a coherent answer — citing the sources it drew from. This is the pipeline that powers Google AI Overviews, Perplexity, Microsoft Copilot, and most other AI search platforms.
+        </p>
+
+        <p>
+          GEO targets every stage of this pipeline. At the retrieval stage, entity authority and technical SEO determine whether your page is retrieved at all. At the extraction stage, content structure and declarative sentence patterns determine whether your specific passage is selected. At the synthesis stage, the uniqueness and specificity of your content determines whether you are cited as a distinct source or your information is absorbed into a generic synthesis without attribution.
+        </p>
+
+        <p>
+          Brands that understand the RAG pipeline optimise differently from brands that treat GEO as a content format exercise. The former build entity authority first, then structure content for passage extraction, then test cross-model citation. The latter write "AI-friendly" content without addressing the upstream signals that determine whether that content ever enters the retrieval pool. For a detailed walkthrough, see <a href="/how-geo-works/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how GEO works</a>.
+        </p>
+      </section>
+
+      <!-- Section 6: Entity Explained -->
+      <section id="entity-explained" class="anchor-top prose-dark mb-16">
+        <h2>What Is an Entity in GEO?</h2>
+
+        <p>
+          <strong>In GEO, an entity is any distinctly identifiable real-world concept — a brand, person, product, technology, or organisation — that AI systems can recognise, define, and link to authoritative knowledge sources.</strong>
+        </p>
+
+        <p>
+          AI systems, including the LLMs at the core of generative search, do not evaluate sources the way a human editor would — reading content and assessing its quality. Instead, they rely on structural signals: is this concept (brand, claim, product) connected to recognised entities in my knowledge graph? Does this entity have consistent definitions across Wikipedia, Wikidata, and other authoritative references? If yes, the entity — and content attributed to it — is treated as credible. If not, the content may be retrieved but the brand is unlikely to be explicitly cited.
+        </p>
+
+        <p>
+          Building entity authority means establishing your brand as a well-defined entity across the knowledge sources that LLMs reference. A Wikipedia article about your brand, a Wikidata record with accurate properties, a verified Google Knowledge Panel, and consistent mentions in reputable industry publications all contribute to entity authority. Schema markup using <code>sameAs</code> properties that link your website entity to these external records reinforces the connection.
+        </p>
+
+        <p>
+          Entity optimisation is foundational — it must precede content restructuring work. A brand that invests heavily in citable content architecture but lacks entity authority will find that AI models recognise the content but do not attribute it. The attribution step requires trust, and trust is built through entity presence, not content quality alone.
+        </p>
+      </section>
+
+      <!-- Section 7: Citation Explained -->
+      <section id="citation-explained" class="anchor-top prose-dark mb-16">
+        <h2>What Is a Citation in GEO?</h2>
+
+        <p>
+          <strong>An AI citation is an explicit attribution within a generated response that credits a specific source — your brand, your page, or your stated claim — for information included in the AI's answer.</strong>
+          AI citations are the primary outcome of a GEO strategy and the core unit of GEO measurement.
+        </p>
+
+        <p>
+          Citations take different forms across AI platforms. On Perplexity and Microsoft Copilot, citations appear as numbered superscripts within the answer text, each linking to the source page. On Google AI Overviews, sources are displayed in a collapsible citations panel beside or below the generated answer. On ChatGPT with browsing, cited pages appear as footnotes or inline links. The visual presentation varies, but the underlying mechanism — a specific page being credited as a source for a claim — is the same.
+        </p>
+
+        <h3>Citation Frequency vs Citation Accuracy</h3>
+        <p>
+          GEO measurement tracks two citation dimensions. Citation frequency measures how often your brand or page appears in AI answers for your target query set — expressed as a percentage of queries where your brand is cited. Citation accuracy measures whether the AI correctly represents your claims, brand positioning, and data when it does cite you. A high frequency rate with low accuracy — where AI models cite you but misrepresent your offering — can damage brand positioning rather than strengthen it.
+        </p>
+
+        <h3>Share of Voice in AI Answers</h3>
+        <p>
+          Because AI answers typically cite a small number of sources (one to five, depending on the platform and query type), citation share of voice — your brand's citation share relative to competitors across a defined query set — is a more meaningful competitive metric than raw citation count. A brand cited in 60% of relevant queries while competitors collectively account for the remaining 40% has achieved dominant AI share of voice. For services and measurement tools, see <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services</a>.
+        </p>
+      </section>
+
+      <!-- FAQ Accordion -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300" set:html={faq.a}></p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-2">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t border-[var(--line)] mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <span class="eyebrow">Get Started</span>
+      <h2 class="mt-4 font-display text-3xl font-bold grad-text md:text-4xl">Put the GEO Definition to Work</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Understanding GEO is step one. GEOoptimised handles the implementation — from entity authority building and schema deployment to content restructuring and ongoing citation monitoring. Our <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services</a> cover the full programme end-to-end.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Talk to a GEO specialist</a>
+        <a href="/geo-services/" class="btn btn-ghost">View GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

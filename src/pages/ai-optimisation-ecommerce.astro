@@ -1,0 +1,655 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'AI Optimisation for Ecommerce | GEOoptimised';
+const description = 'Ecommerce AI optimization: get your products and brand cited in AI shopping and research answers across ChatGPT, Perplexity, and Google AI Overviews.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: 'AI Optimisation for Ecommerce',
+  description,
+  url: 'https://geooptimised.com/ai-optimisation-ecommerce/',
+  image: 'https://geooptimised.com/og-image.png',
+  inLanguage: 'en-GB',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/ai-optimisation-ecommerce/',
+  },
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is AI optimisation for ecommerce?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'AI optimisation for ecommerce is the practice of structuring product pages, category content, and brand signals so that generative AI engines — including ChatGPT, Perplexity, and Google AI Overviews — cite your products and brand when answering shopping and research queries. It goes beyond traditional SEO by targeting the retrieval and entity layers of AI systems, not just search ranking algorithms.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do AI engines discover ecommerce products?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'AI engines discover ecommerce products through three main channels: crawling product pages with structured data (Product schema, offers, reviews), retrieving pages via RAG pipelines when users ask shopping-intent queries, and drawing on training data that includes product reviews, comparison articles, and editorial coverage. Products with complete structured data, clear specifications, and editorial presence across the web are significantly more likely to be cited.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does Product schema markup help AI citation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Product schema provides machine-readable signals about name, brand, price, availability, and reviews that reduce ambiguity for AI retrieval systems. While schema alone does not guarantee citation, it improves the accuracy and confidence with which AI systems extract and represent your product data. Incomplete or missing Product schema is one of the most common reasons ecommerce products are omitted from AI-generated shopping answers.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How is ecommerce AI optimisation different from standard GEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Standard GEO focuses on brand and content citation across informational and commercial queries. Ecommerce AI optimisation extends this to product-level citation: ensuring individual SKUs, product lines, and category pages appear in AI answers to specific shopping queries such as "best running shoes under £100" or "which laptop is best for video editing". It requires Product schema, review integration, and price/availability signals in addition to standard entity and content optimisation.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which AI platforms matter most for ecommerce brands?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Google AI Overviews is the highest-priority platform for ecommerce brands because it appears directly in Google Search results at the top of the page, capturing shopping-intent queries before users scroll to organic results. Perplexity is the second priority due to its strong web retrieval and growing use for product research. ChatGPT Shopping (where available) and Bing Copilot complete the priority set. Each platform uses different retrieval mechanisms, requiring platform-specific optimisation.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should ecommerce brands optimise category pages or product pages for AI?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Both, but with different objectives. Category pages should target broader AI answers to "best X" and "top Y under £Z" queries — these require editorial content, comparison tables, and ItemList schema. Product pages should target specific product queries and provide complete structured data, detailed specifications, and review aggregations. A layered approach that treats category pages as AI-facing editorial content and product pages as structured data sources produces the best results.',
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'GEO by Industry', item: 'https://geooptimised.com/geo-by-industry/' },
+    { '@type': 'ListItem', position: 3, name: 'AI Optimisation for Ecommerce', item: 'https://geooptimised.com/ai-optimisation-ecommerce/' },
+  ],
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'what-it-means', label: 'What Ecommerce AI Optimisation Means' },
+  { id: 'how-ai-discovers-products', label: 'How AI Discovers Products' },
+  { id: 'platform-breakdown', label: 'Platform Breakdown' },
+  { id: 'structured-data', label: 'Structured Data for Product Pages' },
+  { id: 'category-content', label: 'Category Pages as AI Editorial' },
+  { id: 'review-signals', label: 'Review Signals and Social Proof' },
+  { id: 'priority-actions', label: 'Priority Actions by Maturity' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const faqs = [
+  {
+    q: 'What is AI optimisation for ecommerce?',
+    a: 'AI optimisation for ecommerce is the practice of structuring product pages, category content, and brand signals so that generative AI engines — including ChatGPT, Perplexity, and Google AI Overviews — cite your products and brand when answering shopping and research queries. It goes beyond traditional SEO by targeting the retrieval and entity layers of AI systems, not just search ranking algorithms.',
+  },
+  {
+    q: 'How do AI engines discover ecommerce products?',
+    a: 'AI engines discover ecommerce products through three main channels: crawling product pages with structured data (Product schema, offers, reviews), retrieving pages via RAG pipelines when users ask shopping-intent queries, and drawing on training data that includes product reviews, comparison articles, and editorial coverage. Products with complete structured data, clear specifications, and editorial presence across the web are significantly more likely to be cited.',
+  },
+  {
+    q: 'Does Product schema markup help AI citation?',
+    a: 'Yes. Product schema provides machine-readable signals about name, brand, price, availability, and reviews that reduce ambiguity for AI retrieval systems. While schema alone does not guarantee citation, it improves the accuracy and confidence with which AI systems extract and represent your product data. Incomplete or missing Product schema is one of the most common reasons ecommerce products are omitted from AI-generated shopping answers.',
+  },
+  {
+    q: 'How is ecommerce AI optimisation different from standard GEO?',
+    a: 'Standard GEO focuses on brand and content citation across informational and commercial queries. Ecommerce AI optimisation extends this to product-level citation: ensuring individual SKUs, product lines, and category pages appear in AI answers to specific shopping queries such as "best running shoes under £100" or "which laptop is best for video editing". It requires Product schema, review integration, and price/availability signals in addition to standard entity and content optimisation.',
+  },
+  {
+    q: 'Which AI platforms matter most for ecommerce brands?',
+    a: 'Google AI Overviews is the highest-priority platform for ecommerce brands because it appears directly in Google Search results at the top of the page, capturing shopping-intent queries before users scroll to organic results. Perplexity is the second priority due to its strong web retrieval and growing use for product research. ChatGPT Shopping (where available) and Bing Copilot complete the priority set. Each platform uses different retrieval mechanisms, requiring platform-specific optimisation.',
+  },
+  {
+    q: 'Should ecommerce brands optimise category pages or product pages for AI?',
+    a: 'Both, but with different objectives. Category pages should target broader AI answers to "best X" and "top Y under £Z" queries — these require editorial content, comparison tables, and ItemList schema. Product pages should target specific product queries and provide complete structured data, detailed specifications, and review aggregations. A layered approach that treats category pages as AI-facing editorial content and product pages as structured data sources produces the best results.',
+  },
+];
+
+const related = [
+  {
+    tag: 'Node',
+    title: 'GEO by Industry',
+    excerpt: 'The full index of generative engine optimisation strategies broken down by industry and vertical.',
+    href: '/geo-by-industry/',
+  },
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'The full GEO framework — from first principles through to advanced entity strategy and measurement.',
+    href: '/generative-engine-optimisation/',
+  },
+  {
+    tag: 'Technical',
+    title: 'Schema Markup for AI: Implementation Guide',
+    excerpt: 'How to implement JSON-LD structured data that AI retrieval systems can parse and cite accurately.',
+    href: '/schema-markup-ai/',
+  },
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/ai-optimisation-ecommerce/" ogType="article">
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/geo-by-industry/" class="transition hover:text-[var(--accent)]">GEO by Industry</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">AI Optimisation for Ecommerce</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Ecommerce GEO</span>
+        <span class="font-mono text-xs text-ink-300">7 Jun 2026</span>
+        <span class="font-mono text-xs text-ink-300">12 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        AI Optimisation for Ecommerce
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        When shoppers ask ChatGPT "what is the best wireless charger for iPhone" or query Google AI Overviews for "top running shoes under £150",
+        the brands and products cited in those answers win the first-touch consideration. <strong class="text-white">Ecommerce AI optimization</strong>
+        is the practice of structuring your product pages, category content, and brand signals so AI engines cite your products — not your competitors' — in shopping and research answers.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>AI engines are now answering shopping queries before users reach a results page — ecommerce brands not cited in those answers lose first-touch consideration.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Product schema with complete attributes (name, brand, price, availability, reviewCount) is the single highest-leverage technical change for product-level AI citation.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Category pages need editorial content — comparison tables, buying guides, and definitive recommendations — not just product grids, to be cited for "best X" queries.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Google AI Overviews is the highest-priority AI platform for ecommerce; it intercepts shopping queries at the top of Google Search before organic results appear.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Review aggregation across Google, Trustpilot, and product-specific review platforms directly strengthens AI citation confidence for commercial queries.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1 -->
+      <section id="what-it-means" class="anchor-top prose-dark mb-16">
+        <h2>What Ecommerce AI Optimisation Means</h2>
+
+        <p>
+          <strong>Ecommerce AI optimisation is the discipline of structuring online store content and data so generative AI engines cite specific products and brands in response to shopping and research queries.</strong>
+          It is a distinct practice from traditional ecommerce SEO, which targets ranking positions in Google's blue-link results. AI engines do not rank results —
+          they generate synthesised answers, and the products that appear in those answers are selected through mechanisms that standard on-page SEO does not address.
+        </p>
+
+        <p>
+          The commercial significance is growing rapidly. Shoppers increasingly use AI assistants at the research and shortlisting stage of a purchase journey.
+          A buyer considering a new espresso machine who asks Perplexity for "the best semi-automatic espresso machines for home use" receives a curated answer citing
+          three to five products by name, with brief justifications. The brands cited gain immediate consideration. The brands not cited may never enter the
+          consideration set at all — even if their products rank on page one of traditional search.
+        </p>
+
+        <p>
+          Ecommerce AI optimisation operates at three levels: the product page (structured data, specifications, review integration), the category page
+          (editorial content, comparison tables, buying guides), and the brand level (entity authority, citation footprint, cross-platform presence).
+          Effective programmes address all three in parallel, as weakness at any level creates gaps in AI citation coverage.
+        </p>
+
+        <p>
+          This page focuses specifically on online stores — brands whose primary channel is direct-to-consumer or marketplace ecommerce.
+          If your brand operates physical retail alongside an online presence, see our guide to <a href="/geo-for-retail/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO for retail</a>,
+          which covers the additional considerations for omnichannel and brick-and-mortar discovery in AI answers.
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="how-ai-discovers-products" class="anchor-top prose-dark mb-16">
+        <h2>How AI Engines Discover Ecommerce Products</h2>
+
+        <p>
+          <strong>AI engines discover ecommerce products through three primary mechanisms: structured data extraction, retrieval-augmented generation, and training data patterns.</strong>
+          Each mechanism requires a different optimisation approach, and the dominant mechanism varies by platform.
+        </p>
+
+        <h3>Structured Data Extraction</h3>
+        <p>
+          When an AI crawler visits a product page, it processes the HTML and JSON-LD markup to extract structured attributes: product name, brand, price,
+          availability, aggregate rating, and review count. Pages with complete, valid Product schema allow AI systems to extract this data with high
+          confidence. Pages without schema — or with partial, malformed schema — are parsed heuristically, which produces less accurate and less consistent
+          data in the AI system's index. For ecommerce, structured data is not a nice-to-have; it is the primary signal layer through which products
+          enter AI knowledge bases.
+        </p>
+
+        <h3>Retrieval-Augmented Generation</h3>
+        <p>
+          RAG-based platforms — Perplexity, Bing Copilot, Google AI Overviews — retrieve live web content when processing shopping queries. The retrieval
+          query generated from a user's question determines which pages are fetched. Pages that are retrieved are then passed to the language model as
+          context, and the model cites the products and brands described in those pages. For RAG retrieval, the page needs to be indexable by the platform's
+          crawler, relevant to the query by content, and structured clearly enough for the model to extract specific product claims without ambiguity.
+        </p>
+
+        <h3>Training Data Patterns</h3>
+        <p>
+          Products and brands frequently referenced in product reviews, comparison articles, buyer's guides, and editorial content across the web are more
+          likely to have strong parametric representation in model weights. A brand cited in twenty independent product review publications is more likely
+          to appear in training-data-derived responses than a brand of equal quality that has not attracted editorial coverage. Building editorial
+          citation footprint — through PR, affiliate partnerships, and review outreach — strengthens the training data layer independent of technical optimisation.
+        </p>
+      </section>
+
+      <!-- Section 3: Platform Breakdown -->
+      <section id="platform-breakdown" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>AI Platform Breakdown for Ecommerce</h2>
+          <p>
+            <strong>Each major AI platform presents different opportunities and optimisation requirements for ecommerce brands.</strong>
+            Understanding the mechanism and audience of each platform is essential for prioritising effort.
+          </p>
+        </div>
+
+        <div class="mt-8 overflow-x-auto">
+          <table class="w-full border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-white/10">
+                <th scope="col" class="py-3 pr-4 text-left font-semibold text-ink-50">Platform</th>
+                <th scope="col" class="py-3 pr-4 text-left font-semibold text-ink-50">Primary Mechanism</th>
+                <th scope="col" class="py-3 pr-4 text-left font-semibold text-ink-50">Ecommerce Relevance</th>
+                <th scope="col" class="py-3 text-left font-semibold text-ink-50">Key Requirement</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+              <tr>
+                <td class="py-3 pr-4 font-medium text-accent-400">Google AI Overviews</td>
+                <td class="py-3 pr-4 text-ink-300">RAG + Knowledge Graph</td>
+                <td class="py-3 pr-4 text-ink-300">Highest — intercepts shopping queries</td>
+                <td class="py-3 text-ink-300">Product schema, page authority</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-medium text-accent-400">Perplexity</td>
+                <td class="py-3 pr-4 text-ink-300">Real-time RAG</td>
+                <td class="py-3 pr-4 text-ink-300">High — research-stage queries</td>
+                <td class="py-3 text-ink-300">Crawlable pages, editorial content</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-medium text-accent-400">ChatGPT (Browse/Shopping)</td>
+                <td class="py-3 pr-4 text-ink-300">RAG + parametric</td>
+                <td class="py-3 pr-4 text-ink-300">Growing — shopping plugin expanding</td>
+                <td class="py-3 text-ink-300">GPTBot access, structured specs</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-medium text-accent-400">Bing Copilot</td>
+                <td class="py-3 pr-4 text-ink-300">Bing index + RAG</td>
+                <td class="py-3 pr-4 text-ink-300">Medium — strong in B2B research</td>
+                <td class="py-3 text-ink-300">Bing indexation, product pages</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 font-medium text-accent-400">Gemini</td>
+                <td class="py-3 pr-4 text-ink-300">Google Search + parametric</td>
+                <td class="py-3 pr-4 text-ink-300">Medium and growing</td>
+                <td class="py-3 text-ink-300">Google indexation, Merchant Centre</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose-dark mt-8">
+          <p>
+            Google AI Overviews should be the primary focus for most ecommerce brands. It operates within the Google Search interface
+            and appears above organic results for a significant proportion of shopping and product-research queries. Optimising for Google AI Overviews
+            means ensuring your product and category pages meet Google's retrieval and quality criteria, with complete structured data and
+            editorially credible content.
+          </p>
+          <p>
+            For a broader introduction to GEO strategy across all platforms, see our guide to
+            <a href="/generative-engine-optimisation/">generative engine optimisation</a> and explore our
+            <a href="/geo-services/">GEO services</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4: Structured Data -->
+      <section id="structured-data" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Structured Data for Ecommerce Product Pages</h2>
+          <p>
+            <strong>Complete Product schema is the single highest-leverage technical intervention for ecommerce AI citation.</strong>
+            Without it, AI systems must parse product attributes heuristically — a process that produces inconsistent, incomplete, and sometimes
+            inaccurate data representations. With it, AI engines can extract product details with high confidence and cite them accurately
+            in generated shopping answers.
+          </p>
+        </div>
+
+        <div class="mt-8 space-y-6">
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Core Product Schema Attributes</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Every product page should implement <code>@type: "Product"</code> with at minimum: <code>name</code>, <code>brand</code>,
+              <code>description</code>, <code>sku</code>, <code>image</code>, <code>offers</code> (with <code>price</code>,
+              <code>priceCurrency</code>, <code>availability</code>), and <code>aggregateRating</code> (with <code>ratingValue</code>
+              and <code>reviewCount</code>). Missing any of these leaves data gaps that reduce citation confidence.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Product Specifications</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              AI engines frequently cite specific product specifications when answering comparative queries. Supplement the base schema with
+              <code>additionalProperty</code> items for technical specifications: dimensions, weight, materials, compatibility, certifications.
+              Present the same specifications in a visible HTML table on the page — AI systems weight specifications more highly when they
+              appear in both structured data and visible content.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">ItemList Schema for Category Pages</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Category pages that list multiple products benefit from <code>@type: "ItemList"</code> schema that enumerates the products
+              in the list with <code>ListItem</code> elements. This allows AI systems to understand the relationships between
+              the category page and individual products, and is particularly valuable for "best X" category pages that AI engines
+              retrieve when answering recommendation queries.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">BreadcrumbList and Site Structure</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              <code>BreadcrumbList</code> schema on every product and category page provides AI systems with context about the site's
+              taxonomy — where a product sits within the category hierarchy. This improves the accuracy of categorical references
+              in AI answers and signals the organisational structure of the store to knowledge graph systems.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="prose-dark mt-8">
+          <p>
+            For detailed implementation guidance on all schema types relevant to AI citation, including worked examples
+            for ecommerce use cases, see our technical guide to <a href="/schema-markup-ai/">schema markup for AI</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 5: Category Pages -->
+      <section id="category-content" class="anchor-top prose-dark mb-16">
+        <h2>Category Pages as AI Editorial Content</h2>
+
+        <p>
+          <strong>Ecommerce category pages must function as editorial content, not just product grids, to be cited by AI engines for "best X" and recommendation queries.</strong>
+          The typical category page — a grid of products with filter controls and minimal text — provides nothing for an AI retrieval system to extract
+          as a citable answer. A category page rebuilt with editorial intent provides the structured, quotable content that AI engines need.
+        </p>
+
+        <h3>Buying Guides and Definitive Recommendations</h3>
+        <p>
+          Lead each category page with a buying guide section that answers the most common questions in the category explicitly.
+          "What should I look for when buying a running shoe?" with a clear, structured answer. "Who is this category best suited to?"
+          with specific use-case breakdowns. These sections match the query patterns AI engines retrieve for research-stage shopping queries,
+          and the explicit question-answer structure makes them highly citable.
+        </p>
+
+        <h3>Comparison Tables</h3>
+        <p>
+          Structured comparison tables comparing the top products in a category by key attributes — price, key specification, use case, rating —
+          are among the most frequently cited elements in AI shopping answers. A well-structured HTML table with <code>scope="col"</code> headers
+          and consistent attribute columns provides the comparative data that AI systems extract when answering "best X for Y" queries.
+          Each row should reference a specific, real product with accurate attributes.
+        </p>
+
+        <h3>Use-Case Segmentation</h3>
+        <p>
+          AI engines regularly answer segmented queries: "best laptop for students", "best espresso machine for beginners", "best running shoe
+          for flat feet". Category pages that explicitly address these use-case segments — with a dedicated subheading and recommended products
+          for each — are far more likely to be cited for segmented queries than pages that present an undifferentiated product grid.
+        </p>
+      </section>
+
+      <!-- Section 6: Reviews -->
+      <section id="review-signals" class="anchor-top prose-dark mb-16">
+        <h2>Review Signals and Social Proof for AI Citation</h2>
+
+        <p>
+          <strong>Review signals are a critical and frequently overlooked component of ecommerce AI citation.</strong>
+          AI engines use review data as a quality proxy when determining which products to cite in response to "best X" queries.
+          A product with a high aggregate rating, a substantial review count, and reviews visible in structured data is treated as
+          more credible and more citable than an equivalent product with sparse review data.
+        </p>
+
+        <h3>On-Site Review Schema</h3>
+        <p>
+          Implement <code>Review</code> items within your Product schema, and ensure <code>aggregateRating</code> is always populated
+          with accurate <code>ratingValue</code>, <code>bestRating</code>, <code>worstRating</code>, and <code>reviewCount</code>.
+          AI retrieval systems extract these values and use them when generating comparative product answers. Outdated or missing
+          review counts create data gaps that suppress citation frequency.
+        </p>
+
+        <h3>Third-Party Review Platforms</h3>
+        <p>
+          AI training data and RAG retrieval both benefit from review presence on authoritative third-party platforms. Google Customer Reviews,
+          Trustpilot, and category-specific review platforms (Feefo, Reviews.io) contribute to the editorial citation footprint that
+          improves parametric representation in model training data. Brands with consistent, high-volume review presence across multiple
+          platforms are more likely to be cited as credible options than brands whose reviews exist only on their own site.
+        </p>
+
+        <h3>Editorial Review Coverage</h3>
+        <p>
+          Independent editorial reviews — in technology publications, niche interest media, affiliate comparison sites, and YouTube review
+          channels — are among the highest-value citation sources for ecommerce AI visibility. An editorial review that names and evaluates
+          your product specifically, and is published on a domain with reasonable authority, contributes both to RAG retrieval (the review page
+          can be fetched and cited) and to training data representation (the review adds to the corpus of documents mentioning your product
+          in a positive, authoritative context).
+        </p>
+      </section>
+
+      <!-- Section 7: Priority Actions -->
+      <section id="priority-actions" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Priority Actions by Store Maturity</h2>
+          <p>
+            <strong>Ecommerce AI optimisation should be sequenced by maturity: technical foundations first, content layer second, editorial presence third.</strong>
+            Attempting content-layer optimisation before the technical layer is in place produces diminishing returns.
+          </p>
+        </div>
+
+        <div class="mt-8 grid gap-5 md:grid-cols-3">
+          <div class="card p-6">
+            <h3 class="font-display text-sm font-semibold text-ink-50 mb-3">Foundation Stage</h3>
+            <ul class="space-y-2 text-sm text-ink-300">
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">01</span><span>Audit robots.txt — ensure GPTBot, PerplexityBot, Googlebot are not blocked</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">02</span><span>Implement complete Product schema on all product pages</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">03</span><span>Add aggregateRating and reviewCount to all Product schema</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">04</span><span>Add BreadcrumbList schema across all page types</span></li>
+            </ul>
+          </div>
+          <div class="card p-6">
+            <h3 class="font-display text-sm font-semibold text-ink-50 mb-3">Content Stage</h3>
+            <ul class="space-y-2 text-sm text-ink-300">
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">05</span><span>Rebuild top-10 category pages with buying guides and comparison tables</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">06</span><span>Add use-case segmentation to each category page</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">07</span><span>Add specifications table to all product pages</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">08</span><span>Implement ItemList schema on category pages</span></li>
+            </ul>
+          </div>
+          <div class="card p-6">
+            <h3 class="font-display text-sm font-semibold text-ink-50 mb-3">Authority Stage</h3>
+            <ul class="space-y-2 text-sm text-ink-300">
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">09</span><span>Pursue editorial review coverage in relevant niche publications</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">10</span><span>Build Trustpilot and Google Customer Reviews presence</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">11</span><span>Establish brand entity in Google's Knowledge Graph</span></li>
+              <li class="flex items-start gap-2"><span class="text-accent-400 mt-0.5 shrink-0">12</span><span>Monitor citation frequency across platforms monthly</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="prose-dark mt-8">
+          <p>
+            For Shopify stores specifically, our guide to <a href="/geo-for-shopify/">GEO for Shopify</a> covers platform-specific
+            implementation — including how to add Product schema within Shopify's theme liquid files and which Shopify apps
+            support structured data correctly.
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Get Your Products Cited by AI Engines</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Find out which of your products and categories are appearing in AI-generated shopping answers — and which are invisible.
+        Our ecommerce GEO audit covers structured data, category content, review signals, and cross-platform citation frequency.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request your ecommerce GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

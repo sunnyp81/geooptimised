@@ -1,28 +1,24 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const title = 'GEO Strategy & Best Practices Framework | GEOoptimised';
-const description = 'A definitive 7-step generative engine optimisation strategy framework. Covers best practices, common mistakes, 90-day planning, and when to hire a GEO agency.';
+const title = 'GEO Strategy: Prioritisation, Business Case & Agency vs DIY | GEOoptimised';
+const description = 'The strategic layer of GEO: when to invest, how to prioritise, whether to hire an agency or go DIY, and how to build the business case for a generative engine optimisation programme.';
 
 const schema = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'GEO Strategy & Best Practices Framework',
-    description: 'A definitive 7-step generative engine optimisation strategy framework covering best practices, citation architecture, and 90-day planning.',
+    headline: 'GEO Strategy: Prioritisation, Business Case & Agency vs DIY',
+    description: 'The strategic layer of GEO: when to invest, how to prioritise, whether to hire an agency or go DIY, and how to build the business case for a generative engine optimisation programme.',
     url: 'https://geooptimised.com/geo-strategy/',
-    author: {
-      '@type': 'Organisation',
-      name: 'GEOoptimised',
-      url: 'https://geooptimised.com/',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://geooptimised.com/geo-strategy/',
     },
-    publisher: {
-      '@type': 'Organisation',
-      name: 'GEOoptimised',
-      url: 'https://geooptimised.com/',
-    },
-    datePublished: '2025-05-25',
-    dateModified: '2025-05-25',
+    author: { '@id': 'https://geooptimised.com/#organization' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' },
+    datePublished: '2026-05-25',
+    dateModified: '2026-06-06',
     inLanguage: 'en-GB',
   },
   {
@@ -30,7 +26,8 @@ const schema = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
-      { '@type': 'ListItem', position: 2, name: 'GEO Strategy', item: 'https://geooptimised.com/geo-strategy/' },
+      { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+      { '@type': 'ListItem', position: 3, name: 'GEO Strategy', item: 'https://geooptimised.com/geo-strategy/' },
     ],
   },
   {
@@ -55,10 +52,10 @@ const schema = [
       },
       {
         '@type': 'Question',
-        name: 'What is a GEO framework?',
+        name: 'How do I build a business case for GEO investment?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'A GEO framework is a systematic, repeatable process for improving brand visibility in AI-generated answers. The GEOoptimised framework follows seven steps: AI Visibility Audit, Entity Mapping, Content Gap Analysis, Citation Architecture, Technical Implementation, Source Building, and Monitoring & Iteration.',
+          text: 'The business case for GEO rests on three arguments: AI search is already routing buyer intent in most B2B and high-consideration categories; citation share, once established, compounds and becomes harder for competitors to displace; and the cost of inaction rises as competitors build entity authority ahead of you. Quantify the opportunity by auditing how many queries in your category already return AI-generated answers, and what citation share your competitors hold versus yours. That gap is the business case.',
         },
       },
       {
@@ -83,45 +80,17 @@ const schema = [
 
 const tocItems = [
   { id: 'why-geo-needs-strategy', label: 'Why GEO Needs a Strategy' },
-  { id: 'geo-strategy-framework', label: 'The GEO Strategy Framework' },
+  { id: 'geo-strategy-framework', label: 'The Seven-Stage Overview' },
   { id: 'best-practices', label: 'Best Practices That Actually Work' },
   { id: 'common-mistakes', label: 'Common Strategy Mistakes' },
-  { id: '90-day-plan', label: 'Building Your 90-Day GEO Plan' },
+  { id: 'prioritisation', label: 'Prioritisation & Business Case' },
   { id: 'agency-vs-diy', label: 'Agency vs DIY' },
+  { id: 'related-guides', label: 'How These Guides Differ' },
   { id: 'faq', label: 'FAQ' },
   { id: 'related', label: 'Related Reading' },
 ];
 
-const frameworkSteps = [
-  {
-    label: 'AI Visibility Audit',
-    desc: 'Before you change anything, you need a baseline. Run structured queries across ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews to record exactly where your brand is cited, where competitors appear instead, and which queries return no brand mentions at all. This audit becomes the single source of truth for every subsequent decision. Without it, you are optimising blind.',
-  },
-  {
-    label: 'Entity Mapping',
-    desc: 'Generative engines do not retrieve web pages — they retrieve entities. An entity is a distinct, consistently described concept with clear attributes and relationships. Map every entity associated with your brand: your company, your products, your founders, your category, and the topics you want to own. Cross-reference this map against Google\'s Knowledge Graph, Wikidata, and Freebase-derived training data. Identify gaps where your entity is under-described or ambiguous, and gaps where competitor entities are better defined.',
-  },
-  {
-    label: 'Content Gap Analysis',
-    desc: 'Compare your current content inventory against the queries your target audience submits to AI engines. The gap between what you have published and what AI engines are being asked is your content opportunity map. Prioritise gaps where competitors are already being cited, because displacement is easier to measure and faster to achieve than building citation share from zero. Flag queries where no brand is cited — these are open opportunities that require first-mover content.',
-  },
-  {
-    label: 'Citation Architecture',
-    desc: 'Citation architecture defines how your content is structured to maximise extractability by large language models. This means leading every page with a definitional statement, organising supporting content into short, self-contained paragraphs that answer a single question, using structured data to label entities and relationships, and ensuring internal linking reinforces your topical authority map. Content that is easy to extract is content that gets cited.',
-  },
-  {
-    label: 'Technical Implementation',
-    desc: 'Technical GEO covers the signals that affect how AI crawlers and retrieval-augmented generation systems access your content. This includes schema markup deployment (Article, FAQPage, HowTo, Organisation), Core Web Vitals that affect crawl budget, robots.txt and llms.txt configuration for AI crawler access, and canonical URL structure that consolidates entity signals rather than fragmenting them. Technical implementation without content strategy achieves nothing. Content strategy without technical implementation leaves citations on the table.',
-  },
-  {
-    label: 'Source Building',
-    desc: 'AI models weight sources by perceived authority. Authority is built through citation footprint: editorial mentions in high-trust publications, industry body listings, academic references, and consistent brand mentions across authoritative third-party domains. Source building for GEO is similar to link building for SEO in principle, but the mechanism is different — you are feeding training data and RAG retrieval pipelines, not passing PageRank. The goal is to appear in the sources that AI models consider trustworthy when formulating answers in your category.',
-  },
-  {
-    label: 'Monitoring & Iteration',
-    desc: 'GEO is not a project — it is a programme. Generative engines update their models, change their retrieval logic, and respond to new content continuously. Set up weekly citation tracking across all five major platforms using a consistent query set. Log citation frequency, brand accuracy, competitor mentions, and answer format changes. Review monthly, adjust quarterly. The brands that compound GEO gains fastest are the ones that treat monitoring as a core deliverable, not an afterthought.',
-  },
-];
+// frameworkSteps removed — the seven-stage methodology is documented in full at /geo-framework/
 
 const mistakes = [
   {
@@ -152,8 +121,8 @@ const faqs = [
     a: 'A well-executed GEO strategy typically shows measurable citation improvements within 60-90 days. Entity authority compounds over 6-12 months. Expect Month 1 to be audit and foundation work, Month 2 to focus on content and entity reinforcement, and Month 3 to begin monitoring and iteration cycles.',
   },
   {
-    q: 'What is a GEO framework?',
-    a: 'A GEO framework is a systematic, repeatable process for improving brand visibility in AI-generated answers. The GEOoptimised framework follows seven steps: AI Visibility Audit, Entity Mapping, Content Gap Analysis, Citation Architecture, Technical Implementation, Source Building, and Monitoring & Iteration.',
+    q: 'How do I build a business case for GEO investment?',
+    a: 'The business case for GEO rests on three arguments: AI search is already routing buyer intent in most B2B and high-consideration categories; citation share, once established, compounds and becomes harder for competitors to displace; and the cost of inaction rises as competitors build entity authority ahead of you. Quantify the opportunity by auditing how many queries in your category already return AI-generated answers, and what citation share your competitors hold versus yours. That gap is the business case.',
   },
   {
     q: 'What KPIs should I track for GEO?',
@@ -184,14 +153,22 @@ const related = [
     excerpt: 'How generative engine optimisation differs from traditional search optimisation.',
     href: '/geo-vs-seo/',
   },
+  {
+    tag: 'Tips',
+    title: 'GEO Tips',
+    excerpt: 'Practical GEO tips to improve citation frequency and build entity authority faster.',
+    href: '/geo-tips/',
+  },
 ];
 ---
 
 <Base title={title} description={description} schema={schema} ogType="article">
 
   <nav aria-label="Breadcrumb" class="container-wide pt-8">
-    <ol class="flex items-center gap-1.5 text-sm text-ink-400">
+    <ol class="flex items-center gap-1.5 text-sm text-ink-300">
       <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">GEO</a></li>
       <li aria-hidden="true">/</li>
       <li class="text-ink-200" aria-current="page">GEO Strategy</li>
     </ol>
@@ -201,14 +178,14 @@ const related = [
     <div class="container-wide pt-16 pb-14">
       <div class="flex flex-wrap items-center gap-3">
         <span class="eyebrow">Strategy Framework</span>
-        <span class="font-mono text-xs text-ink-400">25 May 2025</span>
-        <span class="font-mono text-xs text-ink-400">14 min read</span>
+        <span class="font-mono text-xs text-ink-300">25 May 2026</span>
+        <span class="font-mono text-xs text-ink-300">14 min read</span>
       </div>
       <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
         GEO Strategy &amp; Best Practices Framework
       </h1>
       <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
-        <strong class="text-white">Generative engine optimisation strategies</strong> that produce measurable results share one characteristic: they are systematic. Ad hoc content changes, one-off schema deployments, and isolated citation experiments do not compound. This framework gives you the seven-step process, the best practices that drive citations, and the 90-day planning structure to execute GEO at scale.
+        <strong class="text-white">GEO strategy answers three questions no other GEO resource answers: whether to invest, what to prioritise, and who should do the work.</strong> This page is the decision layer — it covers when GEO makes commercial sense, how to sequence priorities when resources are constrained, the best practices that consistently drive citations, and the honest criteria for choosing between an agency and an in-house programme. For the named seven-stage methodology, see <a href="/geo-framework/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">the GEO framework</a>. For the phased timeline, see the <a href="/geo-roadmap/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO roadmap</a>.
       </p>
     </div>
   </section>
@@ -249,7 +226,7 @@ const related = [
           </li>
           <li class="flex items-start gap-2">
             <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
-            <span>A 90-day GEO plan splits into audit &amp; foundation (Month 1), content &amp; entity (Month 2), and monitoring &amp; iteration (Month 3).</span>
+            <span>The decision to invest, delay, or pilot is a strategic one — audit your category's AI citation landscape before committing programme budget.</span>
           </li>
         </ul>
       </div>
@@ -274,29 +251,15 @@ const related = [
       </div>
 
       <div class="prose-dark mt-16">
-        <h2 id="geo-strategy-framework" class="anchor-top">The GEO Strategy Framework</h2>
+        <h2 id="geo-strategy-framework" class="anchor-top">The Seven-Stage Overview</h2>
         <p>
-          The GEOoptimised framework is a seven-step process designed to take any brand from unknown in AI-generated answers to consistently cited across all major generative platforms. Each step builds on the previous one. Skipping steps does not accelerate results — it creates the gaps that require expensive remediation later.
+          <strong>Every effective GEO programme follows the same seven-stage sequence: Baseline Audit, Entity Architecture, Content Gap Mapping, Citation-Ready Content, Technical Configuration, Authority Building, and Continuous Monitoring.</strong> Each stage generates inputs the next depends on; skipping ahead creates gaps that require expensive remediation later.
         </p>
-      </div>
-
-      <ol class="mt-8 space-y-6">
-        {frameworkSteps.map((step, i) => (
-          <li class="flex gap-5">
-            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border hair font-display text-sm font-bold text-[var(--accent)]">
-              {i + 1}
-            </span>
-            <div>
-              <h3 class="font-display text-lg font-semibold text-white">{step.label}</h3>
-              <p class="mt-1 text-sm leading-relaxed text-ink-300">{step.desc}</p>
-            </div>
-          </li>
-        ))}
-      </ol>
-
-      <div class="prose-dark mt-16">
         <p>
-          For a detailed walkthrough of how to execute each step, see our <a href="/geo-framework/">GEO Framework guide</a> and <a href="/geo-checklist/">GEO Checklist</a>. If you want to understand the underlying principles before committing to the full process, the <a href="/how-to-do-geo/">how to do GEO</a> guide covers the core mechanics in depth.
+          The strategic question is not what the stages are — it is which stages your organisation can execute well in-house and where specialist help closes the gap fastest. The two highest-stakes stages are Stage 1 (Baseline Audit) and Stage 2 (Entity Architecture): get these wrong, and every subsequent stage optimises against a broken foundation.
+        </p>
+        <p>
+          This page does not re-explain each stage in detail — that duplication would not serve you. Instead, use the right resource for each layer of the decision: the <a href="/geo-framework/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO framework</a> defines each stage with its inputs, outputs, and success criteria (the conceptual model); <a href="/how-to-do-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how to do GEO</a> gives you hands-on task-level execution guidance; and the <a href="/geo-roadmap/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO roadmap</a> sequences all deliverables across a phased 0–30/30–90/90–180 day timeline. This page focuses on the decisions that sit above all three: whether, what to prioritise, and who should execute.
         </p>
       </div>
 
@@ -311,7 +274,7 @@ const related = [
           The single most impactful change you can make to your content is to prioritise extractability. Every page should open with a definitional statement that answers the primary query directly, in one to two sentences, without preamble. Large language models surface this kind of content disproportionately because it matches the pattern of a reliable answer: brief, authoritative, unambiguous.
         </p>
         <p>
-          This means eliminating introductory paragraphs that build context before making a claim. It means avoiding rhetorical questions as section headers. It means stating conclusions before evidence, not after. Content that makes AI models work to find the answer is content that gets skipped in favour of content that presents the answer immediately. For more tactical detail, see our <a href="/geo-best-practices/">GEO best practices guide</a>.
+          This means eliminating introductory paragraphs that build context before making a claim. It means avoiding rhetorical questions as section headers. It means stating conclusions before evidence, not after. Content that makes AI models work to find the answer is content that gets skipped in favour of content that presents the answer immediately. For more tactical detail, see our <a href="/geo-best-practices/">GEO best practices</a> guide and <a href="/geo-tips/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO tips</a>.
         </p>
 
         <h3>Lead with Claims, Not Questions</h3>
@@ -364,42 +327,30 @@ const related = [
       </div>
 
       <div class="prose-dark mt-16">
-        <h2 id="90-day-plan" class="anchor-top">Building Your 90-Day GEO Plan</h2>
+        <h2 id="prioritisation" class="anchor-top">Prioritisation &amp; Building the Business Case</h2>
         <p>
-          A 90-day GEO plan is the minimum viable commitment for producing measurable results. Below that threshold, you will complete the audit and foundation work but not generate enough citation data to distinguish signal from noise. The plan below assumes a brand with existing domain authority and a content team capable of producing at least four to six substantial pieces per month.
+          <strong>The most consequential GEO decision is not how to execute the programme — it is whether to invest now, wait, or run a smaller scoped pilot.</strong> That decision depends on three factors: the degree to which AI search is already routing buyer intent in your category, your competitors' current citation share, and your organisation's capacity to sustain the programme long enough for compounding to occur.
         </p>
 
-        <h3>Month 1: Audit &amp; Foundation</h3>
+        <h3>When to Invest Immediately</h3>
         <p>
-          Month 1 is entirely diagnostic and structural. The deliverables are: a completed AI visibility audit across all five major platforms, a documented entity map with identified gaps, a technical implementation checklist covering schema, robots.txt, and llms.txt, and a prioritised content gap list ranked by query volume and competitor citation share.
+          If you operate in a category where AI-generated answers already appear for high-intent queries — financial services, professional services, B2B technology, health and wellness, legal, or any category where buyers research before purchasing — delay is costly. Every week that passes without a structured programme is a week competitors build entity authority that becomes progressively harder to displace. The first brand to establish consistent citation share in a query cluster tends to hold it, because AI models interpret established citations as authority signals that reinforce future citations.
         </p>
         <p>
-          Do not publish new content in Month 1. The audit will reveal that some existing content is already close to citation-ready and needs only structural edits, while other content requires more substantial work. Publishing new content before the audit is complete means you are guessing at priorities rather than working from data. The foundation work done in Month 1 determines the ROI of everything that follows.
-        </p>
-        <p>
-          By the end of Month 1, you should have: a baseline citation score for your brand, a documented entity profile, a technical implementation sprint completed, and a content calendar for Months 2 and 3 built from the gap analysis.
+          Run a quick diagnostic before committing budget: submit the ten most valuable queries in your category to ChatGPT and Perplexity and record which brands are cited. If competitors appear and you do not, the opportunity cost of inaction is already real and measurable.
         </p>
 
-        <h3>Month 2: Content &amp; Entity Reinforcement</h3>
+        <h3>How to Prioritise When Resources Are Constrained</h3>
         <p>
-          Month 2 shifts to production and entity building. Execute the content calendar from Month 1. Each piece should be built to the citation architecture standards: definitional openings, structured paragraphs, FAQ sections, and appropriate schema markup. Prioritise pages targeting queries where competitors are already being cited — displacement is faster than first-mover citation building.
+          If budget or team capacity limits what you can do, sequence investment in this order. First, unblock AI crawlers and deploy Organisation schema — these are one-time technical tasks that remove the floor on every subsequent effort. Second, run the baseline audit — without it, every other decision is a guess. Third, address entity consistency — inaccurate citations caused by entity ambiguity are harder to correct than no citations at all. Fourth, restructure your highest-traffic existing pages for extraction before producing new content — retrofitting pages that already have domain authority produces faster citation improvements than building citation share in new pages from zero.
         </p>
         <p>
-          Simultaneously, begin the entity reinforcement programme. This means: submitting or updating your Wikidata entry, ensuring your Google Business Profile attributes match your entity map exactly, contacting industry directories and association listings to correct or add your entity description, and beginning outreach to the publications that feed AI retrieval pipelines in your category.
-        </p>
-        <p>
-          Month 2 is also when you should deploy the source-building component — the editorial mentions, industry publication features, and high-authority third-party references that build the citation footprint AI models use to assess authority. This work takes time to land; starting it in Month 2 means the signals begin feeding into retrieval systems before Month 3 monitoring begins.
+          New content, source-building, and cross-platform monitoring are high-leverage activities, but they build on the foundation above. Investing in them before the foundation is stable produces diminishing returns. For the full delivery schedule with phased milestones, see the <a href="/geo-roadmap/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO roadmap</a>.
         </p>
 
-        <h3>Month 3: Monitoring &amp; Iteration</h3>
+        <h3>The Business Case in One Paragraph</h3>
         <p>
-          Month 3 establishes the cadence that turns a 90-day sprint into a durable programme. Set up weekly citation tracking using a fixed query set that mirrors your target audience's AI search behaviour. Log every platform's response to each query, noting which brands are cited, how your brand is described when it does appear, and which competitors have gained or lost citation share.
-        </p>
-        <p>
-          Use this data to drive the iteration decisions: which pages need structural revisions, which entity gaps remain unresolved, which source-building targets have produced retrievable mentions. At the end of Month 3, you will have a citation baseline to measure against, a functioning monitoring workflow, and enough data to set meaningful 6-month targets.
-        </p>
-        <p>
-          For a step-by-step execution checklist that maps directly to this 90-day structure, see our <a href="/geo-checklist/">GEO checklist</a>. If you want a structured learning programme to build in-house capability alongside the sprint, see our <a href="/geo-course/">GEO course</a>.
+          GEO investment is justified when the expected value of AI citation share exceeds the programme cost within a reasonable horizon. The components of that calculation: how much of your addressable market uses AI search for category-relevant queries (growing quarterly), what citation share your competitors hold versus yours (quantifiable via audit), and how much revenue attribution a meaningful citation share shift would represent. For most B2B brands in competitive categories, even a conservative estimate of AI search disruption produces a business case for GEO investment at a fraction of traditional search marketing budgets.
         </p>
       </div>
 
@@ -433,6 +384,19 @@ const related = [
         <p>
           If you are ready to assess where your brand stands, our <a href="/answer-engine-optimisation/">answer engine optimisation</a> and <a href="/ai-brand-visibility/">AI brand visibility</a> guides provide the diagnostic frameworks you need to make that assessment before committing to either path.
         </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="related-guides" class="anchor-top">Related GEO Guides — and How They Differ</h2>
+        <p>
+          <strong>These four guides cover different layers of the same programme — reading the right one for your current question saves time.</strong> Each owns a distinct role:
+        </p>
+        <ul class="mt-4 space-y-3 text-sm text-ink-200">
+          <li><strong><a href="/geo-framework/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO Framework</a></strong> — the named, seven-stage conceptual model with defined inputs, outputs, and success criteria for each stage. Read this to understand what the methodology is and how the stages relate to each other.</li>
+          <li><strong><a href="/how-to-do-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">How to Do GEO</a></strong> — the tactical, hands-on execution guide. Eight numbered steps with practical actions, tools, and common mistakes for each. Read this when you are ready to do the work.</li>
+          <li><strong><a href="/geo-roadmap/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO Roadmap</a></strong> — the time-phased delivery plan with milestones at 0–30, 30–90, and 90–180 days. Read this to build a programme calendar and track progress against deliverables.</li>
+          <li><strong>GEO Strategy (this page)</strong> — the decision layer: whether to invest, how to prioritise when resources are constrained, agency vs DIY, and the business case. Read this before you start the other three.</li>
+        </ul>
       </div>
 
       <div class="prose-dark mt-16">

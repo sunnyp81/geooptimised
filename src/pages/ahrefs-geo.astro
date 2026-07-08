@@ -1,0 +1,469 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Ahrefs for GEO: Brand Radar & AI Features | GEOoptimised';
+const description = 'How Ahrefs\' brand radar and AI-related features support a GEO programme. What the platform covers, where it stops, and how to use it alongside dedicated GEO tools.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Ahrefs for GEO: Brand Radar & AI Features",
+    "description": "How Ahrefs' brand radar and AI-related features support a generative engine optimisation workflow — covering capabilities, limitations, and practical integration advice.",
+    "url": "https://geooptimised.com/ahrefs-geo/",
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "inLanguage": "en-GB",
+    "image": "https://geooptimised.com/og-image.png",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://geooptimised.com/ahrefs-geo/"
+    },
+    "author": {
+      "@id": "https://geooptimised.com/#organization"
+    },
+    "publisher": {
+      "@id": "https://geooptimised.com/#organization"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does Ahrefs track AI citations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ahrefs was built for traditional organic search measurement and does not natively track citation frequency in ChatGPT, Perplexity, Gemini, or other standalone AI platforms. Ahrefs has been adding features related to AI search visibility, including some coverage of AI-generated search results, but the core product remains an organic search tool. For systematic AI citation tracking across multiple generative platforms, a dedicated GEO tool is required alongside Ahrefs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is Ahrefs Brand Radar and how does it relate to GEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ahrefs Brand Radar is a feature that tracks brand mentions and brand-related search activity across the web. In a GEO context, this is relevant because AI models construct their understanding of a brand partly from the breadth, sentiment, and consistency of brand mentions across trusted sources. Brand Radar can surface where your brand is being discussed, how it is characterised, and where coverage gaps exist — all of which are inputs to the GEO strategy work of building the kind of brand presence that AI models recognise and cite accurately."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Ahrefs' content gap analysis help with GEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ahrefs' content gap tool identifies topics and queries where competitors rank but your site does not. In a GEO context, this intelligence is valuable because the queries where you lack content coverage are also the queries where AI models cannot cite you — there is no source to draw on. Closing content gaps identified by Ahrefs creates the foundational coverage that makes AI citation possible. The content gap analysis informs what to write; GEO-specific frameworks inform how to structure it for maximum AI citability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I use Ahrefs or a dedicated GEO tool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both, for different purposes. Ahrefs is a mature, well-regarded SEO platform that excels at backlink analysis, keyword research, and organic search competitive intelligence. A dedicated GEO tool is required for measuring AI citation frequency, tracking brand presence across generative platforms, and benchmarking your AI visibility against competitors. The two categories are complementary. Most serious GEO programmes use an SEO platform like Ahrefs or Semrush for organic search work and a separate GEO tool for AI visibility measurement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Ahrefs cover AI search results tracking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ahrefs has been developing features related to AI-generated search results, including some coverage of AI Overviews and similar features in Google Search. Ahrefs also introduced an AI search analytics feature to help users understand traffic from AI-assisted searches. Feature scope and naming change frequently as both Google and Ahrefs evolve. Always verify current AI search coverage directly on the Ahrefs website, as this is an actively developing area of the product."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://geooptimised.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "GEO Tools",
+        "item": "https://geooptimised.com/geo-tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Ahrefs for GEO",
+        "item": "https://geooptimised.com/ahrefs-geo/"
+      }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'what-ahrefs-covers', label: 'What Ahrefs Covers' },
+  { id: 'brand-radar-geo', label: 'Brand Radar & GEO' },
+  { id: 'content-and-backlinks', label: 'Content & Backlink Features' },
+  { id: 'ai-search-features', label: 'AI Search Features' },
+  { id: 'ahrefs-geo-limitations', label: 'Where Ahrefs Falls Short' },
+  { id: 'workflow-integration', label: 'Workflow Integration' },
+  { id: 'comparison-table', label: 'Feature Comparison' },
+  { id: 'faq', label: 'FAQ' },
+];
+
+const faqs = [
+  {
+    q: 'Does Ahrefs track AI citations?',
+    a: "Ahrefs was built for traditional organic search measurement and does not natively track citation frequency in ChatGPT, Perplexity, Gemini, or other standalone AI platforms. Ahrefs has been adding features related to AI search visibility, including some coverage of AI-generated search results, but the core product remains an organic search tool. For systematic AI citation tracking across multiple generative platforms, a dedicated GEO tool is required alongside Ahrefs.",
+  },
+  {
+    q: 'What is Ahrefs Brand Radar and how does it relate to GEO?',
+    a: "Ahrefs Brand Radar is a feature that tracks brand mentions and brand-related search activity across the web. In a GEO context, this is relevant because AI models construct their understanding of a brand partly from the breadth, sentiment, and consistency of brand mentions across trusted sources. Brand Radar can surface where your brand is being discussed, how it is characterised, and where coverage gaps exist — all of which are inputs to the GEO strategy work of building the kind of brand presence that AI models recognise and cite accurately.",
+  },
+  {
+    q: "How does Ahrefs' content gap analysis help with GEO?",
+    a: "Ahrefs' content gap tool identifies topics and queries where competitors rank but your site does not. In a GEO context, this intelligence is valuable because the queries where you lack content coverage are also the queries where AI models cannot cite you — there is no source to draw on. Closing content gaps identified by Ahrefs creates the foundational coverage that makes AI citation possible. The content gap analysis informs what to write; GEO-specific frameworks inform how to structure it for maximum AI citability.",
+  },
+  {
+    q: 'Should I use Ahrefs or a dedicated GEO tool?',
+    a: "Both, for different purposes. Ahrefs is a mature, well-regarded SEO platform that excels at backlink analysis, keyword research, and organic search competitive intelligence. A dedicated GEO tool is required for measuring AI citation frequency, tracking brand presence across generative platforms, and benchmarking your AI visibility against competitors. The two categories are complementary. Most serious GEO programmes use an SEO platform like Ahrefs or Semrush for organic search work and a separate GEO tool for AI visibility measurement.",
+  },
+  {
+    q: 'Does Ahrefs cover AI search results tracking?',
+    a: "Ahrefs has been developing features related to AI-generated search results, including some coverage of AI Overviews and similar features in Google Search. Ahrefs also introduced an AI search analytics feature to help users understand traffic from AI-assisted searches. Feature scope and naming change frequently as both Google and Ahrefs evolve. Always verify current AI search coverage directly on the Ahrefs website, as this is an actively developing area of the product.",
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/ahrefs-geo/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex items-center gap-2 font-mono text-xs text-ink-300">
+      <li><a href="/" class="hover:text-[var(--accent)] transition-colors">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/geo-tools/" class="hover:text-[var(--accent)] transition-colors">GEO Tools</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">Ahrefs for GEO</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-fade relative overflow-hidden">
+    <div class="container-wide grid gap-12 pt-12 pb-20 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-7">
+        <span class="eyebrow">GEO Tools — Ahrefs</span>
+        <h1 class="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <span class="grad-text">Ahrefs for GEO: Brand Radar &amp; AI Features</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-300">
+          Ahrefs is among the most trusted SEO platforms available. This page examines which of its features — particularly Brand Radar and its evolving AI search capabilities — are relevant to a <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> programme, where the platform's limits lie, and how to integrate it alongside dedicated GEO tooling for complete visibility coverage.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/contact/" class="btn btn-primary">Discuss Your Toolstack</a>
+          <a href="/geo-tools/" class="btn btn-ghost">All GEO Tools</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="card p-6">
+          <span class="eyebrow">Quick verdict</span>
+          <div class="mt-4 space-y-4">
+            <div class="flex items-start gap-3">
+              <svg aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <p class="text-sm text-ink-300">Industry-leading backlink database and authority analysis for GEO's foundational work</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <p class="text-sm text-ink-300">Brand Radar surfaces brand mention intelligence relevant to entity-building strategy</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0 text-ink-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/></svg>
+              <p class="text-sm text-ink-300">Developing AI search coverage — verify current scope on vendor documentation</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0 text-ink-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/></svg>
+              <p class="text-sm text-ink-300">No native tracking of ChatGPT, Perplexity, or Gemini citation frequency</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky TOC + Prose -->
+  <div class="container-wide py-16 lg:grid lg:grid-cols-12 lg:gap-12">
+
+    <!-- TOC -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-[calc(var(--header-h)+2rem)]">
+        <p class="font-mono text-xs uppercase tracking-widest text-ink-500 mb-4">On this page</p>
+        <nav aria-label="Page sections">
+          <ul class="space-y-2" id="toc-list">
+            {tocItems.map(item => (
+              <li>
+                <a
+                  href={`#${item.id}`}
+                  class="toc-link block rounded px-3 py-1.5 text-sm text-ink-300 hover:text-[var(--accent)] transition-colors"
+                  data-section={item.id}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <article class="lg:col-span-9 prose-dark space-y-16">
+
+      <div>
+        <h2 id="what-ahrefs-covers" class="anchor-top">What Ahrefs Covers</h2>
+        <p><strong>Ahrefs is a professional SEO platform renowned for its backlink index, keyword research tools, and competitive intelligence capabilities — not for AI citation tracking.</strong> That framing is essential. Ahrefs has built its reputation over many years as the go-to platform for understanding link profiles, organic traffic, and search engine competitive positioning. It is a mature, well-tested product with a large practitioner community and a strong track record in traditional organic search.</p>
+        <p>In recent years, Ahrefs has been extending its product to address shifts in the search landscape, including the growing role of AI-generated responses in Google Search and the emergence of standalone AI platforms. Some of these additions are genuinely GEO-relevant. Others are incremental improvements to traditional SEO workflows. The challenge for a GEO practitioner is identifying which parts of the platform serve the AI visibility agenda and which require complementary tooling.</p>
+        <p>As with any evolving software product, specific features, their naming, and their scope change regularly. The general capabilities described here are based on publicly available information. For current pricing, feature depth, and plan availability, always verify directly on the <a href="https://ahrefs.com/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300" rel="noopener noreferrer" target="_blank">Ahrefs website</a>. GEOoptimised is platform-agnostic and receives no commission or benefit from referrals to any tool vendor.</p>
+      </div>
+
+      <div>
+        <h2 id="brand-radar-geo" class="anchor-top">Brand Radar and Its Relevance to GEO</h2>
+        <p><strong>Ahrefs Brand Radar is the feature with the most direct strategic relevance to GEO, because it tracks the brand mention signals that AI models rely on when building their understanding of an organisation.</strong> Brand Radar monitors where your brand name appears across the web — news articles, blog posts, industry publications, and forums — and provides data on the volume, sentiment, and source authority of those mentions over time.</p>
+        <p>In a traditional SEO context, brand mentions matter primarily as unlinked citation opportunities or as reputation signals. In a GEO context, they matter for a different reason: AI language models are trained on web content, and retrieval-augmented platforms like Perplexity pull from live web sources when constructing responses. A brand with a high volume of accurate, authoritative, and consistent mentions across trusted sources is more likely to be recognised as a credible entity by AI models than a brand with sparse or inconsistent coverage. Brand Radar makes this intelligence accessible.</p>
+        <p>The GEO-specific use of Brand Radar involves more than monitoring volume. The quality and nature of brand mentions matters as much as quantity. Mentions in high-authority publications that describe your brand accurately, in the context of the topics you want to be cited for, are more valuable than high-volume mentions in low-authority sources. Brand Radar data can inform a targeted PR and content strategy focused on securing the kind of coverage that builds genuine AI-recognisable brand authority — which is a core component of any <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility</a> programme.</p>
+        <p>Brand Radar also surfaces where competitors are gaining brand mentions that you are not. Competitive gaps in brand coverage often correlate with competitive gaps in AI citations. If a competitor is consistently discussed in authoritative publications covering your category and you are not, that imbalance is likely to be reflected in AI responses to queries in your space. Identifying and systematically closing those gaps is foundational GEO work.</p>
+      </div>
+
+      <div>
+        <h2 id="content-and-backlinks" class="anchor-top">Content Explorer and Backlink Analysis</h2>
+        <p><strong>Ahrefs' Content Explorer and backlink analysis suite provide intelligence that, while built for SEO, directly informs the authority-building work that underlies strong GEO performance.</strong> The two are linked: pages that earn high-quality backlinks from topically relevant sources are also the pages most likely to be selected as citation sources by retrieval-augmented AI platforms that assess page authority when choosing what to cite.</p>
+
+        <h3 class="mt-8 font-display text-xl font-semibold text-ink-100">Content Explorer</h3>
+        <p>Content Explorer allows you to search for content about any topic and see which pages have earned the most backlinks, social shares, and organic traffic. In a GEO context, this is useful for identifying the types of content — formats, angles, depth levels, and structural approaches — that earn authority in your category. The content earning the most links and engagement in a topic area is instructive: it tells you what the publishing ecosystem considers credible and reference-worthy, which is a proxy for what AI models may consider citation-worthy.</p>
+        <p>Content Explorer can also identify authoritative third-party sources that are already discussing your category. These are potential publication targets for thought leadership, data studies, or commentary — the kind of contributions that build the distributed brand presence AI models draw on. It can also surface content gap opportunities: topics with significant backlink interest where you currently have no presence, and where a well-executed piece could earn both traditional search traffic and AI citation.</p>
+
+        <h3 class="mt-8 font-display text-xl font-semibold text-ink-100">Backlink Analytics</h3>
+        <p>Ahrefs has one of the largest and most frequently updated backlink indexes available. For GEO work, backlink analytics matter because AI platforms that include real-time web retrieval — Perplexity being the most prominent example — use page authority signals including backlink quality when deciding which sources to cite. A page on your site that lacks external backlinks from relevant, trusted sources is at a disadvantage in AI citation competition, even if its content is excellent.</p>
+        <p>Ahrefs' backlink gap analysis is particularly useful for identifying where competitors have earned links that you have not. These gaps represent both traditional SEO opportunities and GEO citation opportunities: closing a backlink gap from a high-authority industry publication likely improves both your organic rankings and your probability of being cited by AI platforms that retrieve from the live web.</p>
+      </div>
+
+      <div>
+        <h2 id="ai-search-features" class="anchor-top">Ahrefs' AI Search Features</h2>
+        <p><strong>Ahrefs has been actively developing features to address the shift towards AI-assisted search, though this part of the product is evolving rapidly and its current scope should be verified with the vendor.</strong> The general direction includes tracking visibility in Google AI Overviews and providing analytics to help users understand traffic patterns associated with AI-assisted searches.</p>
+        <p>Google AI Overviews represent the AI search surface with the largest direct traffic implication for most brands, given Google's continued dominance of search volume. Ahrefs' coverage in this area — tracking which queries trigger AI Overviews, and whether your pages appear within them — is a meaningful addition for GEO practitioners focused on Google. An AI Overview appearance is a form of AI citation with direct user visibility; tracking your presence and absence from AI Overviews, and understanding which content formats are being selected, is relevant GEO measurement work.</p>
+        <p>Beyond AI Overviews, Ahrefs has indicated development focus on helping users understand how their content performs in AI search contexts more broadly. The exact feature set, the platforms covered, and the granularity of measurement available are subject to ongoing product development. This is an area where checking the current Ahrefs product documentation is important, because the gap between what is announced and what is fully delivered can be significant in a rapidly evolving product area.</p>
+        <p>What Ahrefs does not yet provide — and what distinguishes it from purpose-built GEO tools — is systematic measurement of citation frequency across standalone AI platforms. Tracking how often your brand is mentioned in ChatGPT responses, Perplexity answers, or Gemini outputs at scale, with custom prompt libraries and competitive benchmarking, requires a different kind of tooling. See the <a href="/geo-tools-comparison/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO tools comparison</a> for a view of what dedicated platforms offer.</p>
+      </div>
+
+      <div>
+        <h2 id="ahrefs-geo-limitations" class="anchor-top">Where Ahrefs Falls Short for GEO</h2>
+        <p><strong>The primary limitation of Ahrefs for GEO is the same one that applies to all traditional SEO platforms: the core measurement model is built around search engine index data, not AI response sampling.</strong> Ahrefs' data collection infrastructure queries search engines, crawls the web for backlink data, and analyses organic search results. It does not systematically query AI language models with representative prompt sets and analyse the resulting responses at scale.</p>
+        <p>This means that Ahrefs cannot tell you what percentage of ChatGPT responses to queries in your category mention your brand, how your Perplexity citation rate compares to a specific competitor, or whether your citation rate in Gemini has improved following a content restructuring effort. These are the measurements that a GEO programme requires to demonstrate progress and prioritise effort. Without them, GEO work is operating without feedback.</p>
+        <p>Entity analysis is a further gap. AI language models build their understanding of organisations, people, and concepts partly from structured knowledge sources: Wikipedia, Wikidata, and other structured databases that inform the factual layer of model training. Ahrefs does not provide tools for auditing your entity presence in these sources, identifying how your brand is described in structured knowledge graphs, or flagging inaccuracies that may be shaping how AI models characterise your organisation. This kind of entity audit requires either specialist tools or manual investigation against knowledge base sources.</p>
+        <p>Neither of these limitations diminishes Ahrefs' considerable value for the organic search foundation that GEO builds on. They simply define where complementary tooling is required. A GEO programme that relies on Ahrefs alone will have strong organic intelligence and significant gaps in AI-specific measurement. Addressing those gaps is what separates a complete GEO toolstack from an SEO stack relabelled as GEO.</p>
+      </div>
+
+      <div>
+        <h2 id="workflow-integration" class="anchor-top">Integrating Ahrefs into a GEO Workflow</h2>
+        <p><strong>The most effective role for Ahrefs in a GEO programme is as the organic search and brand authority intelligence layer, feeding insight into the content and link-building work that creates the conditions for AI citation.</strong> In this framing, Ahrefs and a dedicated GEO tool are complementary instruments in the same programme, not competing alternatives.</p>
+        <p>A practical integration might proceed as follows. Use Ahrefs' content gap analysis to identify topic areas where you have no coverage and competitors do — these are the queries where AI models have no source to cite you from. Prioritise those gaps for content creation, applying GEO content frameworks — clear definitions, structured data markup, direct answers at the top of sections, authoritative sourcing — as you build the content. Once published, monitor organic performance via Ahrefs' rank tracker and measure AI citation impact via a dedicated GEO tool. The two data streams together tell you whether the content is working across both surfaces.</p>
+        <p>Brand Radar data can be reviewed on a regular cadence — monthly, or more frequently in competitive categories — to identify new coverage opportunities and inaccurate brand mentions that could be distorting AI model understanding. If Brand Radar surfaces a high-authority industry publication that consistently covers your competitors but not you, that is a PR target. If it surfaces mentions where your brand is described in a way that does not reflect your actual positioning, that is an accuracy issue worth addressing — both for traditional reputation reasons and because inaccurate brand descriptions in AI outputs can directly harm commercial outcomes.</p>
+        <p>For backlink strategy, align Ahrefs' link gap analysis with your GEO topical priorities. The pages most important for AI citation are the ones that need the strongest link profiles — typically your core category pages and the key topic cluster hubs that cover the queries you most want to be cited for. Concentrating link-building effort on these pages, informed by Ahrefs' competitive link gap data, creates the authority foundation that retrieval-augmented AI platforms reward. This is where the <a href="/geo-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">full GEO toolstack</a> works together to compound programme results.</p>
+      </div>
+
+      <!-- Comparison Table -->
+      <div>
+        <h2 id="comparison-table" class="anchor-top">Ahrefs GEO Feature Overview</h2>
+        <p><strong>The table below maps Ahrefs capabilities against specific GEO programme needs, distinguishing between direct support, partial contribution, and areas requiring dedicated GEO tooling.</strong> Verify all feature details on the Ahrefs website before making tool investment decisions, as the product is actively evolving.</p>
+        <div class="mt-6 overflow-x-auto rounded-xl border border-[var(--line)]">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-[var(--line)] bg-[var(--bg-2)]">
+                <th scope="col" class="px-5 py-4 text-left font-display font-semibold text-ink-100">GEO Programme Need</th>
+                <th scope="col" class="px-5 py-4 text-left font-display font-semibold text-ink-100">Ahrefs Can Help?</th>
+                <th scope="col" class="px-5 py-4 text-left font-display font-semibold text-ink-100">How</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[var(--line)]">
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 text-ink-200">Keyword &amp; topic research</td>
+                <td class="px-5 py-4 text-accent-400 font-medium">Yes</td>
+                <td class="px-5 py-4 text-ink-300">Keywords Explorer, Content Explorer</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 text-ink-200">Content gap analysis</td>
+                <td class="px-5 py-4 text-accent-400 font-medium">Yes</td>
+                <td class="px-5 py-4 text-ink-300">Content Gap tool in Site Explorer</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 text-ink-200">Backlink authority analysis</td>
+                <td class="px-5 py-4 text-accent-400 font-medium">Yes</td>
+                <td class="px-5 py-4 text-ink-300">Site Explorer, Backlink Gap analysis</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 text-ink-200">Brand mention monitoring</td>
+                <td class="px-5 py-4 text-accent-400 font-medium">Yes</td>
+                <td class="px-5 py-4 text-ink-300">Brand Radar feature</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 text-ink-200">Organic content performance tracking</td>
+                <td class="px-5 py-4 text-accent-400 font-medium">Yes</td>
+                <td class="px-5 py-4 text-ink-300">Rank Tracker, organic traffic analytics</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 text-ink-200">Google AI Overviews presence</td>
+                <td class="px-5 py-4 text-ink-300 font-medium">Developing</td>
+                <td class="px-5 py-4 text-ink-300">Check current Ahrefs product documentation for scope</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 text-ink-200">AI search traffic analytics</td>
+                <td class="px-5 py-4 text-ink-300 font-medium">Developing</td>
+                <td class="px-5 py-4 text-ink-300">Ahrefs has introduced AI search analytics; verify current scope</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 text-ink-200">ChatGPT / Perplexity citation tracking</td>
+                <td class="px-5 py-4 text-ink-500 font-medium">No</td>
+                <td class="px-5 py-4 text-ink-300">Requires a dedicated GEO citation tracking tool</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 text-ink-200">Gemini / Copilot citation tracking</td>
+                <td class="px-5 py-4 text-ink-500 font-medium">No</td>
+                <td class="px-5 py-4 text-ink-300">Requires a dedicated GEO citation tracking tool</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 text-ink-200">Entity / knowledge graph analysis</td>
+                <td class="px-5 py-4 text-ink-500 font-medium">No</td>
+                <td class="px-5 py-4 text-ink-300">Requires specialist entity audit tooling or manual review</td>
+              </tr>
+              <tr class="hover:bg-[var(--bg-2)] transition-colors">
+                <td class="px-5 py-4 text-ink-200">AI citation trend &amp; competitor benchmarking</td>
+                <td class="px-5 py-4 text-ink-500 font-medium">No</td>
+                <td class="px-5 py-4 text-ink-300">Requires a dedicated GEO platform</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-4 text-xs text-ink-500">Feature availability is subject to change. Verify on the <a href="https://ahrefs.com/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300" rel="noopener noreferrer" target="_blank">Ahrefs website</a> before making purchasing decisions.</p>
+      </div>
+
+      <!-- FAQ -->
+      <div id="faq">
+        <span class="eyebrow">FAQ</span>
+        <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Frequently Asked Questions</h2>
+        <div class="mt-10 max-w-3xl divide-y divide-[var(--line)]">
+          {faqs.map(faq => (
+            <div class="faq-item">
+              <button
+                type="button"
+                class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors"
+                aria-expanded="false"
+              >
+                <span>{faq.q}</span>
+                <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+                </svg>
+              </button>
+              <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+                <p class="pb-5 text-ink-300 leading-relaxed">{faq.a}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </article>
+  </div>
+
+  <!-- Related Reading -->
+  <section class="container-wide py-16">
+    <span class="eyebrow">Related Reading</span>
+    <h2 class="mt-3 font-display text-2xl font-bold text-ink-50">Continue Exploring</h2>
+    <div class="mt-8 grid gap-6 sm:grid-cols-3">
+      <a href="/geo-tools/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">GEO Tools Hub</h3>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">The full landscape of AI visibility trackers, citation monitors, and brand authority analysers.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/semrush-geo/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">Semrush for GEO</h3>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">How Semrush's AI and brand monitoring features contribute to a generative engine optimisation programme.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/geo-tools-comparison/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">GEO Tools Comparison</h3>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">Side-by-side comparison of GEO-specific platforms across the key evaluation criteria.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="container-wide py-20">
+    <div class="relative overflow-hidden rounded-2xl dot-grid">
+      <div class="absolute inset-0 bg-gradient-to-br from-[rgba(var(--accent-glow),.12)] via-transparent to-transparent"></div>
+      <div class="relative px-8 py-16 text-center sm:px-16">
+        <span class="eyebrow">Get Expert Guidance</span>
+        <h2 class="mt-4 font-display text-3xl font-bold text-ink-50 sm:text-4xl">Not Sure How Ahrefs Fits Your GEO Programme?</h2>
+        <p class="mt-4 mx-auto max-w-2xl text-ink-300 leading-relaxed">
+          GEOoptimised is platform-agnostic. We advise on toolstacks based on programme maturity, objectives, and budget — with no vendor relationships influencing our recommendations. If you use Ahrefs and want to understand how to build a complete GEO measurement layer on top of it, we can help.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact/" class="btn btn-primary">Talk to Us</a>
+          <a href="/generative-engine-optimisation/" class="btn btn-ghost">What is GEO?</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = '0';
+            other.closest('.faq-item').querySelector('.faq-icon').style.transform = '';
+          }
+        });
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+        icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+      });
+    });
+
+    // TOC IntersectionObserver
+    const tocLinks = document.querySelectorAll('.toc-link');
+    const sections = document.querySelectorAll('[id]');
+    if (tocLinks.length && sections.length) {
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              tocLinks.forEach(link => {
+                link.classList.toggle(
+                  'text-[var(--accent)]',
+                  link.dataset.section === entry.target.id
+                );
+                link.classList.toggle(
+                  'text-ink-300',
+                  link.dataset.section !== entry.target.id
+                );
+              });
+            }
+          });
+        },
+        { rootMargin: '-20% 0px -70% 0px' }
+      );
+      sections.forEach(s => observer.observe(s));
+    }
+  </script>
+
+</Base>

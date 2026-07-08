@@ -1,0 +1,740 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Entity Optimisation: Make AI Models Understand Your Brand';
+const description = 'Entity optimization teaches AI models who your brand is, what it does, and why it matters. Learn the strategies that build entity authority and drive LLM citations.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: title,
+  description,
+  url: 'https://geooptimised.com/entity-optimisation/',
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+  datePublished: '2026-06-06',
+  dateModified: '2026-06-06',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/entity-optimisation/',
+  },
+  image: 'https://geooptimised.com/og-image.png',
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+    { '@type': 'ListItem', position: 3, name: 'Entity Optimisation', item: 'https://geooptimised.com/entity-optimisation/' },
+  ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is entity optimization in SEO and GEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Entity optimization is the process of ensuring your brand, product, or organisation is recognised by AI systems and search engines as a distinct, well-defined real-world entity with verified attributes. In traditional SEO, entity optimisation helps Google\'s Knowledge Graph associate your site with the correct topics. In generative engine optimisation (GEO), entity optimisation ensures large language models can identify, classify, and accurately cite your brand in AI-generated responses.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is an entity in the context of AI and search?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'In AI and search, an entity is a distinct real-world object — an organisation, person, place, product, or concept — that can be uniquely identified and described with a consistent set of attributes. Entities are the nodes in knowledge graphs. When an AI system processes a query, it resolves ambiguous terms to specific entities, then retrieves information about those entities. A brand that exists as a well-defined entity in AI knowledge structures is cited more accurately and consistently than one that does not.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I build entity authority for my brand?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Entity authority is built through four parallel workstreams: structured data markup on your own site (Organisation schema with complete attributes and a comprehensive sameAs array); third-party knowledge base presence (Wikidata entry, Wikipedia article if eligible, Google Business Profile); consistent entity data across all external sources (same name, description, founding date, and category classification across every directory and social profile); and editorial mentions in authoritative publications that reinforce your brand\'s association with its category.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between entity optimisation and keyword optimisation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Keyword optimisation targets the specific words and phrases in search queries, aiming to match content to query terms. Entity optimisation targets the real-world objects that queries are about, aiming to ensure AI systems correctly identify and describe your brand regardless of how a query is phrased. In AI search, entities are the primary unit of understanding — a model that knows your brand is a GEO agency in the UK will cite it for relevant queries even if those queries don\'t contain your brand name or exact keyword matches.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can entity optimisation fix AI hallucinations about my brand?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Entity optimisation is the most direct approach to reducing AI hallucinations and inaccuracies about your brand. When an AI model has low-confidence, ambiguous, or contradictory data about an entity, it is more likely to generate inaccurate descriptions. Strengthening your entity record — through consistent structured data, verified knowledge base entries, and corroborating editorial references — increases the model\'s confidence and accuracy when describing your brand. It does not guarantee accuracy across all systems, but it systematically reduces the conditions that lead to hallucination.',
+      },
+    },
+  ],
+};
+
+const schema = [articleSchema, breadcrumbSchema, faqSchema];
+
+const tocItems = [
+  { id: 'what-is-entity-optimisation', label: 'What Entity Optimisation Is' },
+  { id: 'how-ai-understands-entities', label: 'How AI Understands Entities' },
+  { id: 'entity-authority-pillars', label: 'The Four Pillars of Entity Authority' },
+  { id: 'entity-vs-keyword', label: 'Entity vs Keyword Optimisation' },
+  { id: 'entity-audit', label: 'Running an Entity Audit' },
+  { id: 'entity-signals-table', label: 'Entity Signal Comparison' },
+  { id: 'hallucinations', label: 'Fixing AI Hallucinations' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const faqs = [
+  {
+    q: 'What is entity optimization in SEO and GEO?',
+    a: "Entity optimization is the process of ensuring your brand, product, or organisation is recognised by AI systems and search engines as a distinct, well-defined real-world entity with verified attributes. In traditional SEO, entity optimisation helps Google's Knowledge Graph associate your site with the correct topics. In generative engine optimisation (GEO), entity optimisation ensures large language models can identify, classify, and accurately cite your brand in AI-generated responses.",
+  },
+  {
+    q: 'What is an entity in the context of AI and search?',
+    a: "In AI and search, an entity is a distinct real-world object — an organisation, person, place, product, or concept — that can be uniquely identified and described with a consistent set of attributes. Entities are the nodes in knowledge graphs. When an AI system processes a query, it resolves ambiguous terms to specific entities, then retrieves information about those entities. A brand that exists as a well-defined entity in AI knowledge structures is cited more accurately and consistently than one that does not.",
+  },
+  {
+    q: 'How do I build entity authority for my brand?',
+    a: "Entity authority is built through four parallel workstreams: structured data markup on your own site (Organisation schema with complete attributes and a comprehensive sameAs array); third-party knowledge base presence (Wikidata entry, Wikipedia article if eligible, Google Business Profile); consistent entity data across all external sources (same name, description, founding date, and category classification across every directory and social profile); and editorial mentions in authoritative publications that reinforce your brand's association with its category.",
+  },
+  {
+    q: 'What is the difference between entity optimisation and keyword optimisation?',
+    a: "Keyword optimisation targets the specific words and phrases in search queries, aiming to match content to query terms. Entity optimisation targets the real-world objects that queries are about, aiming to ensure AI systems correctly identify and describe your brand regardless of how a query is phrased. In AI search, entities are the primary unit of understanding — a model that knows your brand is a GEO agency in the UK will cite it for relevant queries even if those queries don't contain your brand name or exact keyword matches.",
+  },
+  {
+    q: 'Can entity optimisation fix AI hallucinations about my brand?',
+    a: "Entity optimisation is the most direct approach to reducing AI hallucinations and inaccuracies about your brand. When an AI model has low-confidence, ambiguous, or contradictory data about an entity, it is more likely to generate inaccurate descriptions. Strengthening your entity record — through consistent structured data, verified knowledge base entries, and corroborating editorial references — increases the model's confidence and accuracy when describing your brand. It does not guarantee accuracy across all systems, but it systematically reduces the conditions that lead to hallucination.",
+  },
+];
+
+const related = [
+  {
+    tag: 'Parent Node',
+    title: 'AI Brand Visibility: How to Get Cited by LLMs',
+    excerpt: 'The five pillars of AI brand visibility — entity authority, content citability, structured data, source credibility, and cross-platform presence.',
+    href: '/ai-brand-visibility/',
+  },
+  {
+    tag: 'Deep Dive',
+    title: 'Knowledge Graph Optimisation: Get Recognised by AI as an Entity',
+    excerpt: 'How to build and reinforce your entity record in Google\'s Knowledge Graph, Wikidata, and Wikipedia to earn consistent AI citations.',
+    href: '/knowledge-graph-optimisation/',
+  },
+  {
+    tag: 'Technical',
+    title: 'Schema Markup for AI Search',
+    excerpt: 'Structured data patterns — Organisation, Article, FAQPage, HowTo — that improve entity clarity and AI retrieval performance.',
+    href: '/schema-markup-ai/',
+  },
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/entity-optimisation/" ogType="article">
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">Generative Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/ai-brand-visibility/" class="transition hover:text-[var(--accent)]">AI Brand Visibility</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">Entity Optimisation</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Entity Strategy</span>
+        <span class="font-mono text-xs text-ink-300">6 Jun 2026</span>
+        <span class="font-mono text-xs text-ink-300">13 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        Entity Optimisation: Make AI Models Understand Your Brand
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">Entity optimisation</strong> is the process of ensuring AI systems and search engines recognise your brand as a
+        distinct, well-understood real-world entity — with verified attributes, correct category classification, and consistent representation
+        across every source they consult. Without it, even strong content and technical performance produce inconsistent
+        <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Entities — not keywords — are the primary unit of understanding for AI search systems. A brand that exists as a verified entity gets cited; one that doesn't gets overlooked.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Entity authority requires four parallel workstreams: on-site structured data, third-party knowledge base presence, cross-platform consistency, and editorial corroboration.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Entity optimisation is the root cause fix for AI hallucinations — inconsistent or absent entity data is why models describe brands inaccurately.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>A full entity audit — mapping every external source against your canonical entity record — is the required first step before any other GEO investment.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Entity optimisation compounds: each reinforcing signal makes the overall entity record more confident, reducing misrepresentation risk across all platforms simultaneously.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1 -->
+      <section id="what-is-entity-optimisation" class="anchor-top prose-dark mb-16">
+        <h2>What Entity Optimisation Is</h2>
+
+        <p>
+          <strong>Entity optimisation is the discipline of ensuring your brand exists as a clearly defined, consistently described, and verifiably real object within the knowledge structures that AI systems use to understand the world.</strong>
+          It is not a content strategy. It is not a link-building exercise. It is the foundational work that determines whether AI systems
+          can identify your brand at all — and whether what they say about it is accurate.
+        </p>
+
+        <p>
+          In the context of <a href="/generative-engine-optimisation/">generative engine optimisation</a>, an entity is a distinct real-world object:
+          an organisation, product, person, place, or concept that can be uniquely identified with a stable set of attributes. AI systems do not
+          process queries as strings of words. They process them as questions about entities. When a user asks "what are the best accounting tools for
+          UK freelancers?", the AI resolves "accounting tools" to a set of known product entities, filters them by "UK" and "freelancers" attributes,
+          and generates a response naming those entities.
+        </p>
+
+        <p>
+          The brands that appear in that response are not there because they have the most backlinks, the highest domain authority, or the best-optimised
+          landing pages. They are there because they exist as well-defined, correctly classified entities in the knowledge structures the AI consulted.
+          Entity optimisation is the work that puts — and keeps — your brand in those structures.
+        </p>
+
+        <h3>Why Entity Optimisation Is Different from Traditional SEO</h3>
+
+        <p>
+          Traditional SEO operates on the keyword layer: optimise your content to match the words users type into search boxes.
+          Entity optimisation operates on the semantic layer: ensure AI systems understand what your organisation is, what it does,
+          who it serves, and how it relates to other entities in your category.
+        </p>
+
+        <p>
+          A brand can hold the number-one organic position for every relevant keyword in its category and still generate poor AI citations —
+          because AI visibility is determined by entity graph signals, not keyword relevance scores. Conversely, a brand with modest organic
+          rankings but strong entity authority may be consistently cited by ChatGPT, Perplexity, and Google AI Overviews, because its entity
+          record is clear and its attributes are well-corroborated.
+        </p>
+
+        <p>
+          This does not make traditional SEO irrelevant — strong domain authority and high-quality content remain inputs into RAG retrieval.
+          But entity optimisation is the layer that ensures those inputs translate into accurate, consistent AI citations rather than
+          omissions or misrepresentations.
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="how-ai-understands-entities" class="anchor-top prose-dark mb-16">
+        <h2>How AI Systems Understand Entities</h2>
+
+        <p>
+          <strong>AI systems build their understanding of entities from three distinct sources: parametric knowledge encoded during training, structured knowledge graphs queried at inference time, and retrieved documents processed in real time.</strong>
+          Each source contributes differently to AI entity understanding, and each requires a different optimisation approach.
+        </p>
+
+        <h3>Parametric Entity Knowledge</h3>
+
+        <p>
+          When a large language model is trained, it processes billions of documents and encodes statistical patterns about entities into its weights.
+          An organisation mentioned thousands of times in authoritative documents — Wikipedia articles, news coverage, research papers,
+          industry publications — will have a rich parametric representation. The model will be able to describe it accurately, classify it correctly,
+          and associate it with the right topics and attributes, drawing purely on learned patterns.
+        </p>
+
+        <p>
+          An organisation mentioned infrequently, inconsistently, or only in low-authority sources will have sparse or noisy parametric representation.
+          The model may confuse it with similarly named entities, describe it inaccurately, or simply not know enough about it to cite it confidently.
+          Improving parametric representation requires a long-term strategy: building editorial presence in high-authority publications that feed
+          training corpora, establishing knowledge base entries, and ensuring consistent entity descriptions across every source.
+        </p>
+
+        <h3>Knowledge Graph Entity Resolution</h3>
+
+        <p>
+          Many AI systems — particularly Google AI Overviews and Copilot — query structured knowledge graphs during inference to resolve entity
+          attributes. When a query involves a brand name, the system looks up that entity in Google's Knowledge Graph, Wikidata, or similar
+          structured databases to retrieve canonical attributes: official name, category, website, description, and related entities.
+        </p>
+
+        <p>
+          Brands with a Knowledge Graph entry and a Wikidata Q-number are resolved cleanly and described using verified, up-to-date attributes.
+          Brands without these entries are described from training data alone — which may be outdated, sparse, or inaccurate. For in-depth
+          guidance on building this infrastructure, see our
+          <a href="/knowledge-graph-optimisation/">knowledge graph optimisation</a> guide.
+        </p>
+
+        <h3>Retrieval-Augmented Entity Understanding</h3>
+
+        <p>
+          RAG-based systems like Perplexity retrieve live web content when processing queries. The structured data on your own pages —
+          Organisation schema, Article schema, FAQPage schema — provides machine-readable entity signals that help the retrieval system
+          classify your content correctly. A page with well-implemented <a href="/schema-markup-ai/">schema markup</a> is easier for a
+          RAG system to parse and attribute to the correct entity.
+        </p>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="entity-authority-pillars" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>The Four Pillars of Entity Authority</h2>
+          <p>
+            <strong>Entity authority is the aggregate confidence with which AI systems recognise and describe your brand correctly.</strong>
+            It is built through four parallel workstreams, each of which reinforces the others. Strong performance across all four
+            produces robust, compound entity authority that is difficult for competitors to displace.
+          </p>
+        </div>
+
+        <div class="mt-8 space-y-6">
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Pillar 1: On-Site Structured Data</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Your website is the primary authoritative source for your brand's entity record. A complete Organisation schema
+              in JSON-LD format — with legal name, trading name, description, founding date, industry classification, logo,
+              contact details, and a comprehensive <code>sameAs</code> array — gives AI systems a structured, machine-readable
+              declaration of your entity attributes. This is the baseline. Without it, every other entity signal is working
+              without a clear reference point. See our <a href="/schema-markup-ai/" class="text-[var(--accent)] border-b border-[var(--accent)]/35 hover:border-[var(--accent)] transition">schema markup guide</a>
+              for complete implementation patterns.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Pillar 2: Third-Party Knowledge Base Presence</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              AI systems cross-reference your entity record against external knowledge bases to verify and enrich their understanding.
+              The priority targets are: Wikidata (provides a unique Q-number identifier), Wikipedia (heavily represented in training
+              corpora), Google Business Profile (direct input to Google AI systems), Crunchbase (feeds technology and startup AI pipelines),
+              and Companies House (UK entity verification). For each, ensure the entity attributes precisely match your canonical record.
+              Detailed implementation guidance is in our
+              <a href="/knowledge-graph-optimisation/" class="text-[var(--accent)] border-b border-[var(--accent)]/35 hover:border-[var(--accent)] transition">knowledge graph optimisation</a> guide.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Pillar 3: Cross-Platform Entity Consistency</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              AI systems aggregate entity signals from multiple sources. When those sources are consistent — same name,
+              same description, same founding date, same category classification — the AI can confidently reconcile them
+              to a single entity record. When they are inconsistent, the AI faces disambiguation uncertainty and resolves
+              conservatively: either omitting the brand from its response or generating an averaged, hedged description
+              that may not accurately represent your brand. Consistency is a maintenance discipline, not a one-time task.
+              Entity data changes — names, addresses, product lines — must be propagated to all sources systematically.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Pillar 4: Editorial Corroboration</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              External editorial references — mentions in industry publications, coverage in news outlets, citations in research
+              papers — serve as third-party corroboration that your entity is real, active, and correctly described.
+              AI training pipelines weight authoritative editorial sources highly. A brand mentioned and described consistently
+              in ten high-authority publications builds parametric entity authority that is absorbed into model weights and
+              persists across training cycles. Digital PR, thought leadership contributions, and analyst relations are all
+              entity optimisation activities as much as they are brand awareness activities.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="prose-dark mt-8">
+          <p>
+            These four pillars align with the entity authority component of the broader
+            <a href="/ai-brand-visibility/">AI brand visibility</a> framework. Entity authority is the foundational pillar —
+            it enables and amplifies the other four (content citability, structured data, source credibility, and cross-platform presence).
+            Investing in entity optimisation first is the highest-ROI sequencing decision for most brands starting a GEO programme.
+          </p>
+          <p>
+            For brands wanting to immediately signal their entity data to AI crawlers without waiting for knowledge base propagation,
+            deploying an <a href="/llms-txt/">llms.txt file</a> provides a curated machine-readable summary that AI systems
+            can access directly.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="entity-vs-keyword" class="anchor-top mb-16">
+        <div class="prose-dark mb-6">
+          <h2>Entity Optimisation vs Keyword Optimisation: A Practical Comparison</h2>
+          <p>
+            <strong>Entity optimisation and keyword optimisation are complementary disciplines that operate at different layers of the search and AI stack.</strong>
+            Neither replaces the other. Understanding how they differ helps prioritise effort across traditional SEO and GEO programmes.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-white/10">
+                <th scope="col" class="py-3 pr-4 text-left font-semibold text-ink-50">Dimension</th>
+                <th scope="col" class="py-3 pr-4 text-left font-semibold text-ink-50">Keyword Optimisation</th>
+                <th scope="col" class="py-3 text-left font-semibold text-ink-50">Entity Optimisation</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">Primary target</td>
+                <td class="py-3 pr-4 text-ink-300">Search ranking algorithms</td>
+                <td class="py-3 text-ink-300">AI entity resolution systems</td>
+              </tr>
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">Unit of measurement</td>
+                <td class="py-3 pr-4 text-ink-300">Keyword ranking position</td>
+                <td class="py-3 text-ink-300">Citation frequency and accuracy</td>
+              </tr>
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">Core signal type</td>
+                <td class="py-3 pr-4 text-ink-300">Relevance and authority signals</td>
+                <td class="py-3 text-ink-300">Entity attributes and consistency</td>
+              </tr>
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">Key infrastructure</td>
+                <td class="py-3 pr-4 text-ink-300">Links, content, technical SEO</td>
+                <td class="py-3 text-ink-300">Knowledge bases, schema, consistency</td>
+              </tr>
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">Query dependency</td>
+                <td class="py-3 pr-4 text-ink-300">High — rankings vary by exact query</td>
+                <td class="py-3 text-ink-300">Low — entity citations persist across query variants</td>
+              </tr>
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">Benefit timeline</td>
+                <td class="py-3 pr-4 text-ink-300">Weeks to months for ranking shifts</td>
+                <td class="py-3 text-ink-300">Months for knowledge base propagation; faster for RAG</td>
+              </tr>
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">Risk of obsolescence</td>
+                <td class="py-3 pr-4 text-ink-300">High — algorithm updates can wipe rankings</td>
+                <td class="py-3 text-ink-300">Low — entity records persist across algorithm changes</td>
+              </tr>
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">Hallucination risk</td>
+                <td class="py-3 pr-4 text-ink-300">Not applicable</td>
+                <td class="py-3 text-ink-300">Directly addressed by entity accuracy work</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="entity-audit" class="anchor-top prose-dark mb-16">
+        <h2>Running an Entity Audit</h2>
+
+        <p>
+          <strong>An entity audit is the mandatory first step of any entity optimisation programme — it maps every inconsistency between your canonical entity record and how your brand is described across external sources.</strong>
+          Without an audit, optimisation effort is often misdirected at symptoms rather than root causes.
+        </p>
+
+        <h3>Step 1: Define Your Canonical Entity Record</h3>
+
+        <p>
+          Before auditing external sources, establish the correct authoritative record for your organisation. This canonical record should include:
+          legal name (exact Companies House / Companies Register spelling), trading name (if different), founding date,
+          registered address, primary industry classification, official description (one clear sentence), official website URL,
+          and a list of all products or services with their correct names. Every external source will be audited against this canonical record.
+        </p>
+
+        <h3>Step 2: Inventory All External Entity Records</h3>
+
+        <p>
+          Compile a complete list of every external source that describes your organisation: Google Business Profile, Wikidata,
+          Wikipedia, LinkedIn company page, Crunchbase, Companies House, industry directories, social media profiles,
+          review platforms (Trustpilot, G2, Capterra), press mentions with entity descriptions, and any data aggregators
+          (Dun &amp; Bradstreet, Bureau van Dijk for enterprise brands). The goal is comprehensive coverage — every source that
+          AI training pipelines and knowledge graph systems might consult.
+        </p>
+
+        <h3>Step 3: Identify Inconsistencies</h3>
+
+        <p>
+          Compare each external record against your canonical entity record. Common inconsistencies include: trading name
+          vs legal name confusion, outdated descriptions from an earlier business phase, wrong industry classifications,
+          inconsistent founding dates (especially if the company has rebranded or restructured), and URL variations
+          pointing to old domains or HTTP rather than HTTPS. Document every inconsistency, the source, and the specific
+          attribute affected.
+        </p>
+
+        <h3>Step 4: Prioritise Remediation</h3>
+
+        <p>
+          Prioritise remediation by the source's authority and AI feed status. Google Business Profile, Wikidata, Wikipedia,
+          and LinkedIn should be corrected first — they are directly consumed by AI systems. Industry directories and
+          secondary sources follow. For sources you cannot directly edit, outreach to the publisher is the remediation path.
+          Track every correction and verify it has propagated before marking it resolved.
+        </p>
+
+        <p>
+          Our <a href="/geo-services/#entity-optimisation">entity optimisation service</a> covers the full audit and remediation process
+          across more than twenty data sources, with ongoing monitoring to catch new inconsistencies as they emerge.
+        </p>
+      </section>
+
+      <!-- Section 6: Entity Signals Table -->
+      <section id="entity-signals-table" class="anchor-top mb-16">
+        <div class="prose-dark mb-6">
+          <h2>Entity Signal Comparison</h2>
+          <p>
+            <strong>Not all entity signals carry equal weight with AI systems.</strong> This table maps the primary entity signals
+            by their influence on different AI platforms and their relative implementation cost.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-white/10">
+                <th scope="col" class="py-3 pr-4 text-left font-semibold text-ink-50">Entity Signal</th>
+                <th scope="col" class="py-3 pr-4 text-left font-semibold text-ink-50">Primary AI Platforms</th>
+                <th scope="col" class="py-3 pr-4 text-left font-semibold text-ink-50">Impact</th>
+                <th scope="col" class="py-3 text-left font-semibold text-ink-50">Effort</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">Organisation schema + sameAs</td>
+                <td class="py-3 pr-4 text-ink-300">All RAG systems</td>
+                <td class="py-3 pr-4 text-green-400 font-semibold">Critical</td>
+                <td class="py-3 text-ink-300">Low</td>
+              </tr>
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">Wikidata Q-number entry</td>
+                <td class="py-3 pr-4 text-ink-300">All LLMs; Google AI Overviews</td>
+                <td class="py-3 pr-4 text-green-400 font-semibold">Critical</td>
+                <td class="py-3 text-ink-300">Medium</td>
+              </tr>
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">Google Business Profile</td>
+                <td class="py-3 pr-4 text-ink-300">Google AI Overviews; Gemini</td>
+                <td class="py-3 pr-4 text-green-400 font-semibold">High</td>
+                <td class="py-3 text-ink-300">Low</td>
+              </tr>
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">Wikipedia article</td>
+                <td class="py-3 pr-4 text-ink-300">All LLMs (training data)</td>
+                <td class="py-3 pr-4 text-yellow-400 font-semibold">Very high (if eligible)</td>
+                <td class="py-3 text-ink-300">High</td>
+              </tr>
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">LinkedIn company page</td>
+                <td class="py-3 pr-4 text-ink-300">Copilot; ChatGPT (via Bing)</td>
+                <td class="py-3 pr-4 text-yellow-400 font-semibold">Medium</td>
+                <td class="py-3 text-ink-300">Low</td>
+              </tr>
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">Crunchbase profile</td>
+                <td class="py-3 pr-4 text-ink-300">ChatGPT; Perplexity</td>
+                <td class="py-3 pr-4 text-yellow-400 font-semibold">Medium</td>
+                <td class="py-3 text-ink-300">Low</td>
+              </tr>
+              <tr class="hover:bg-white/[.02] transition">
+                <td class="py-3 pr-4 text-ink-200 font-medium">Industry press mentions</td>
+                <td class="py-3 pr-4 text-ink-300">All LLMs (training data)</td>
+                <td class="py-3 pr-4 text-blue-400 font-semibold">High (long-term)</td>
+                <td class="py-3 text-ink-300">High</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 7 -->
+      <section id="hallucinations" class="anchor-top prose-dark mb-16">
+        <h2>Using Entity Optimisation to Reduce AI Hallucinations</h2>
+
+        <p>
+          <strong>AI hallucinations about brands — wrong product names, incorrect founding dates, misattributed services, fabricated executives — are almost always symptoms of weak entity authority.</strong>
+          They occur when a model has insufficient, contradictory, or low-confidence data about an entity and generates a plausible-sounding
+          but inaccurate response rather than acknowledging uncertainty.
+        </p>
+
+        <h3>Why Hallucinations Occur</h3>
+
+        <p>
+          When a large language model encounters a query about an entity with sparse representation in its training data,
+          it faces a choice: abstain from answering (which it will typically do only if it has very low confidence),
+          or generate a response by pattern-matching from similar entities. The result is a description that may blend attributes
+          from multiple similar organisations, apply industry averages, or confidently state details that are simply wrong.
+        </p>
+
+        <p>
+          Inconsistent entity data compounds this problem. A model trained on sources where your brand is described differently —
+          as a "GEO agency", a "digital marketing consultancy", and a "content marketing service" — may generate a different
+          description every time it is asked about you, pulling from different parts of its training data depending on
+          the phrasing of the query.
+        </p>
+
+        <h3>The Entity Optimisation Fix</h3>
+
+        <p>
+          The remedy is systematic entity authority building. Each high-quality, consistent entity signal added to your record
+          increases the model's confidence in your canonical description and reduces the probability of pattern-matched hallucination.
+          The sequence that produces the fastest improvement in AI accuracy is:
+        </p>
+
+        <ol>
+          <li><strong>Audit and standardise</strong> all existing entity data for consistency.</li>
+          <li><strong>Deploy complete Organisation schema</strong> with a comprehensive <code>sameAs</code> array on your homepage.</li>
+          <li><strong>Create or correct your Wikidata entry</strong> with accurate, sourced claims.</li>
+          <li><strong>Update Google Business Profile</strong> to match your canonical record exactly.</li>
+          <li><strong>Correct inconsistencies</strong> in Crunchbase, LinkedIn, and industry directories.</li>
+          <li><strong>Build editorial corroboration</strong> through press, partnerships, and analyst relations over time.</li>
+        </ol>
+
+        <p>
+          Monitor the results by systematically prompting AI systems with questions about your brand and recording how they describe you.
+          As your entity record strengthens, you should observe a reduction in hallucinations and an increase in citation frequency
+          and accuracy across ChatGPT, Perplexity, Gemini, and Copilot. For the full strategic context,
+          see our <a href="/ai-brand-visibility/">AI brand visibility guide</a> and the
+          <a href="/geo-services/#entity-optimisation">entity optimisation service</a> page.
+        </p>
+      </section>
+
+      <!-- FAQ -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Fix Your Brand's Entity Record</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Most brands have significant inconsistencies in their entity data that are actively suppressing AI citations and generating
+        hallucinations. Our entity audit maps every gap, inconsistency, and missing signal across more than twenty data sources —
+        and delivers a prioritised remediation plan you can act on immediately.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request your entity audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

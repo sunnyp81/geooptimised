@@ -1,4 +1,5 @@
 ---
+import Logo from './Logo.astro';
 const year = new Date().getFullYear();
 const groups = [
   {
@@ -6,26 +7,41 @@ const groups = [
     links: [
       { label: 'GEO Services', href: '/geo-services/' },
       { label: 'GEO Agency', href: '/geo-agency/' },
+      { label: 'GEO Companies', href: '/geo-companies/' },
+      { label: 'AI Optimisation Agency', href: '/ai-optimisation-agency/' },
+      { label: 'GEO Tools', href: '/geo-tools/' },
+    ],
+  },
+  {
+    title: 'Answer Engine',
+    links: [
+      { label: 'Answer Engine Optimisation', href: '/answer-engine-optimisation/' },
       { label: 'AEO Agency', href: '/aeo-agency/' },
       { label: 'AEO Services', href: '/aeo-services/' },
-      { label: 'GEO Tools', href: '/geo-tools/' },
+      { label: 'AEO Companies', href: '/aeo-companies/' },
     ],
   },
   {
     title: 'Learn',
     links: [
       { label: 'Generative Engine Optimisation', href: '/generative-engine-optimisation/' },
-      { label: 'Answer Engine Optimisation', href: '/answer-engine-optimisation/' },
       { label: 'GEO vs SEO', href: '/geo-vs-seo/' },
       { label: 'GEO Strategy', href: '/geo-strategy/' },
+      { label: 'AI Brand Visibility', href: '/ai-brand-visibility/' },
       { label: 'About', href: '/about/' },
+      { label: 'Contact', href: '/contact/' },
     ],
   },
   {
-    title: 'Company',
+    title: 'Explore',
     links: [
-      { label: 'Contact', href: '/contact/' },
-      { label: 'AI Brand Visibility', href: '/ai-brand-visibility/' },
+      { label: 'Optimise for AI Platforms', href: '/optimise-for-ai-platforms/' },
+      { label: 'GEO by Industry', href: '/geo-by-industry/' },
+      { label: 'GEO Metrics', href: '/geo-metrics/' },
+      { label: 'GEO Monitoring', href: '/geo-monitoring/' },
+      { label: 'GEO Near You', href: '/geo-near-you/' },
+      { label: 'Tool Reviews', href: '/reviews/' },
+      { label: 'Insights', href: '/blog/' },
     ],
   },
 ];
@@ -33,42 +49,39 @@ const groups = [
 <footer class="border-t hair mt-24 bg-ink-950">
   <div class="container-wide pt-16 pb-10">
     <div class="grid md:grid-cols-12 gap-10">
-      <div class="md:col-span-5">
-        <a href="/" class="flex items-center gap-2.5">
-          <span class="relative inline-flex items-center justify-center w-8 h-8 rounded-lg" style="background: linear-gradient(135deg,#00E5CC 0%,#0BB29F 100%)">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#001a16" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="3" />
-              <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/>
-            </svg>
-          </span>
-          <span class="font-display font-semibold text-[17px] tracking-[-0.018em] text-white">
-            GEO<span class="text-ink-300 font-medium">optimised</span>
-          </span>
-        </a>
-        <p class="mt-4 text-ink-300 text-[14px] leading-relaxed max-w-sm">
+
+      <!-- Brand column -->
+      <div class="md:col-span-4">
+        <Logo />
+        <p class="mt-4 text-ink-300 text-[14px] leading-relaxed max-w-[280px]">
           The agency that makes brands visible in AI-generated answers. We optimise for the engines people are actually asking — ChatGPT, Perplexity, Gemini, Claude, and Google AI Overview.
         </p>
       </div>
-      <div class="md:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-8">
+
+      <!-- Link columns -->
+      <div class="md:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
         {groups.map(g => (
           <div>
-            <div class="eyebrow mb-3 !text-ink-300">{g.title}</div>
-            <ul class="flex flex-col gap-2">
+            <p class="eyebrow mb-4 !text-ink-400">{g.title}</p>
+            <ul class="flex flex-col gap-2.5" role="list">
               {g.links.map(l => (
                 <li>
-                  <a href={l.href} class="text-[14px] text-ink-200 hover:text-white transition-colors">{l.label}</a>
+                  <a href={l.href} class="footer-link text-[14px] text-ink-300 hover:text-white transition-colors leading-snug">{l.label}</a>
                 </li>
               ))}
             </ul>
           </div>
         ))}
       </div>
+
     </div>
-    <div class="mt-14 pt-6 border-t hair-soft flex flex-col md:flex-row justify-between items-start md:items-center gap-3 text-[13px] text-ink-400">
+
+    <!-- Bottom bar -->
+    <div class="mt-14 pt-6 border-t hair-soft flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-[13px] text-ink-400">
       <div>&copy; {year} GEOoptimised. All rights reserved.</div>
-      <div class="flex gap-5">
+      <div class="flex items-center gap-5">
         <a href="/contact/" class="hover:text-white transition-colors">Contact</a>
-        <span class="font-mono text-ink-500">v.2026.05</span>
+        <span class="font-mono text-ink-500" aria-label="Site version">v.2026.05</span>
       </div>
     </div>
   </div>

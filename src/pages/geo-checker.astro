@@ -1,0 +1,482 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO Checker: How to Check Your AI Visibility | GEOoptimised';
+const description = 'Learn how a GEO checker works, how to check your AI visibility manually and with tools, and what to look for when assessing your brand\'s presence in AI-generated answers.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "GEO Checker: How to Check Your AI Visibility",
+    "description": "A practical guide to GEO checkers — what they measure, how to check AI visibility manually and with dedicated tools, and what signals to look for in your results.",
+    "url": "https://geooptimised.com/geo-checker/",
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "inLanguage": "en-GB",
+    "image": "https://geooptimised.com/og-image.png",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://geooptimised.com/geo-checker/"
+    },
+    "author": {
+      "@id": "https://geooptimised.com/#organization"
+    },
+    "publisher": {
+      "@id": "https://geooptimised.com/#organization"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a GEO checker?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A GEO checker is a tool or process that assesses how often and how accurately your brand appears in AI-generated answers across generative platforms such as ChatGPT, Perplexity, Gemini, and Microsoft Copilot. It produces a baseline picture of your current AI visibility: which platforms mention you, for which types of queries, and how your presence compares to key competitors."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I check my GEO visibility for free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you can perform a basic GEO visibility check manually at no cost. Open each of the major AI platforms — ChatGPT, Perplexity, Google Gemini, and Microsoft Copilot — and run a set of ten to twenty queries that reflect the problems your target audience is trying to solve. Record whether your brand name appears, which URLs are cited, and how competitors are described relative to you. This manual approach is limited in scale and repeatability but provides a valid first picture of your AI visibility position."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a GEO checker and a GEO tracker?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A GEO checker is used for a one-time or periodic point-in-time assessment — it tells you where you stand today. A GEO tracker monitors your AI visibility continuously over time, recording changes in citation frequency, alerting you to shifts, and providing trend data to measure the impact of your optimisation work. Checkers are the starting point; trackers are the ongoing infrastructure."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which AI platforms should I check my visibility on?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Start with ChatGPT, Perplexity, Google Gemini, and Microsoft Copilot — these four platforms handle the large majority of AI-driven information queries. Google AI Overviews is also important if your audience reaches you via Google Search. For B2B or specialist audiences, check whether industry-specific AI assistants or copilot tools are relevant to your sector. Prioritise the platforms your target customers are most likely to use."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I look for when checking my GEO visibility?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Look for five things: whether your brand name appears at all; which specific URLs are cited or referenced; how your brand is described (accurately, inaccurately, or not at all); which competitors appear in your place; and whether your brand appears early in the response or is buried in a longer list. These signals together tell you the scale of your AI visibility gap and the likely causes — whether it is a content issue, an entity recognition gap, or a structural problem with how your pages are presented to retrieval systems."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I run a GEO check?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For brands beginning their GEO programme, run a manual check every four to six weeks to track broad directional change. Once you have implemented optimisation changes, check one to two weeks later to look for early signals of impact. For systematic ongoing measurement, a dedicated GEO tracking tool that runs checks automatically on a defined schedule is more reliable and scalable than manual spot-checking."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://geooptimised.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "GEO Tracking & Monitoring",
+        "item": "https://geooptimised.com/geo-monitoring/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "GEO Checker",
+        "item": "https://geooptimised.com/geo-checker/"
+      }
+    ]
+  }
+];
+
+const checkSignals = [
+  {
+    signal: 'Brand name presence',
+    whatToLook: 'Does your brand name appear anywhere in the generated response?',
+    whyItMatters: 'The most basic visibility signal — absence here means AI models are not drawing on your content or recognising your entity.',
+  },
+  {
+    signal: 'Cited URL',
+    whatToLook: 'Which specific page URL is the AI citing or referencing?',
+    whyItMatters: 'Identifies which of your pages function as citation sources — and which do not, despite strong traditional rankings.',
+  },
+  {
+    signal: 'Description accuracy',
+    whatToLook: 'Is your brand described correctly — category, differentiators, positioning?',
+    whyItMatters: 'Inaccurate AI descriptions can damage credibility and indicate entity data gaps that need correcting.',
+  },
+  {
+    signal: 'Competitor presence',
+    whatToLook: 'Which competitors appear in responses where you do not?',
+    whyItMatters: 'Reveals the competitive gap and points to specific rivals whose content or entity presence you need to study.',
+  },
+  {
+    signal: 'Response position',
+    whatToLook: 'Is your brand mentioned first, in the middle, or at the end of a list?',
+    whyItMatters: 'Position within an AI response correlates with perceived authority — first-mentioned brands receive more attention and recall.',
+  },
+  {
+    signal: 'Platform variation',
+    whatToLook: 'Do results differ significantly between ChatGPT, Perplexity, and Gemini?',
+    whyItMatters: 'Cross-platform variation reveals which retrieval systems favour your content and where targeted intervention is most needed.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'What is a GEO checker?',
+    a: 'A GEO checker is a tool or process that assesses how often and how accurately your brand appears in AI-generated answers across generative platforms such as ChatGPT, Perplexity, Gemini, and Microsoft Copilot. It produces a baseline picture of your current AI visibility: which platforms mention you, for which types of queries, and how your presence compares to key competitors.',
+  },
+  {
+    q: 'Can I check my GEO visibility for free?',
+    a: 'Yes, you can perform a basic GEO visibility check manually at no cost. Open each of the major AI platforms — ChatGPT, Perplexity, Google Gemini, and Microsoft Copilot — and run a set of ten to twenty queries that reflect the problems your target audience is trying to solve. Record whether your brand name appears, which URLs are cited, and how competitors are described relative to you. This manual approach is limited in scale and repeatability but provides a valid first picture of your AI visibility position.',
+  },
+  {
+    q: 'What is the difference between a GEO checker and a GEO tracker?',
+    a: 'A GEO checker is used for a one-time or periodic point-in-time assessment — it tells you where you stand today. A GEO tracker monitors your AI visibility continuously over time, recording changes in citation frequency, alerting you to shifts, and providing trend data to measure the impact of your optimisation work. Checkers are the starting point; trackers are the ongoing infrastructure.',
+  },
+  {
+    q: 'Which AI platforms should I check my visibility on?',
+    a: 'Start with ChatGPT, Perplexity, Google Gemini, and Microsoft Copilot — these four platforms handle the large majority of AI-driven information queries. Google AI Overviews is also important if your audience reaches you via Google Search. For B2B or specialist audiences, check whether industry-specific AI assistants are relevant to your sector.',
+  },
+  {
+    q: 'What should I look for when checking my GEO visibility?',
+    a: 'Look for five things: whether your brand name appears at all; which specific URLs are cited or referenced; how your brand is described; which competitors appear in your place; and whether your brand appears early or late in the response. These signals together tell you the scale of your AI visibility gap and the likely causes.',
+  },
+  {
+    q: 'How often should I run a GEO check?',
+    a: 'For brands beginning their GEO programme, run a manual check every four to six weeks to track broad directional change. Once you have implemented optimisation changes, check one to two weeks later to look for early signals of impact. For systematic ongoing measurement, a dedicated GEO tracking tool is more reliable and scalable than manual spot-checking.',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/geo-checker/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-2 font-mono text-xs text-ink-300">
+      <li><a href="/" class="hover:text-[var(--accent)] transition-colors">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/geo-monitoring/" class="hover:text-[var(--accent)] transition-colors">GEO Tracking &amp; Monitoring</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">GEO Checker</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-fade relative overflow-hidden">
+    <div class="container-wide grid gap-12 pt-12 pb-20 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-7">
+        <span class="eyebrow">AI Visibility Check</span>
+        <h1 class="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <span class="grad-text">GEO Checker: How to Check Your AI Visibility</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-300">
+          A GEO checker gives you a snapshot of where your brand stands in AI-generated answers right now. This guide explains what a GEO checker measures, how to run one manually, which tools support the process, and what signals to look for in your results.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#how-to-check-manually" class="btn btn-primary">How to Check Manually</a>
+          <a href="/geo-monitoring/" class="btn btn-ghost">GEO Monitoring Hub</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="card p-6">
+          <span class="eyebrow">At a Glance</span>
+          <div class="mt-4 grid grid-cols-2 gap-6">
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">4+</p>
+              <p class="mt-1 text-sm text-ink-300">Platforms to check</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">6</p>
+              <p class="mt-1 text-sm text-ink-300">Signals to record</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">Free</p>
+              <p class="mt-1 text-sm text-ink-300">Manual method</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">~1 hr</p>
+              <p class="mt-1 text-sm text-ink-300">Initial manual audit</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky TOC -->
+  <nav aria-label="Table of contents" class="container-wide mb-2">
+    <div class="card p-5 lg:hidden">
+      <p class="font-mono text-xs text-ink-500 mb-3 uppercase tracking-widest">On this page</p>
+      <ol class="space-y-2 text-sm text-ink-300">
+        <li><a href="#what-a-geo-checker-does" class="hover:text-[var(--accent)] transition-colors">What a GEO checker does</a></li>
+        <li><a href="#how-to-check-manually" class="hover:text-[var(--accent)] transition-colors">How to check manually</a></li>
+        <li><a href="#what-to-look-for" class="hover:text-[var(--accent)] transition-colors">What to look for</a></li>
+        <li><a href="#checker-tools" class="hover:text-[var(--accent)] transition-colors">GEO checker tools</a></li>
+        <li><a href="#after-the-check" class="hover:text-[var(--accent)] transition-colors">What to do after your check</a></li>
+        <li><a href="#faq" class="hover:text-[var(--accent)] transition-colors">FAQ</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Main prose -->
+  <div class="container-wide lg:grid lg:grid-cols-12 lg:gap-12 py-12">
+
+    <!-- Sticky TOC — desktop -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 card p-5">
+        <p class="font-mono text-xs text-ink-500 mb-3 uppercase tracking-widest">On this page</p>
+        <ol class="space-y-2 text-sm text-ink-300" id="toc-list">
+          <li><a href="#what-a-geo-checker-does" class="toc-link hover:text-[var(--accent)] transition-colors">What a GEO checker does</a></li>
+          <li><a href="#how-to-check-manually" class="toc-link hover:text-[var(--accent)] transition-colors">How to check manually</a></li>
+          <li><a href="#what-to-look-for" class="toc-link hover:text-[var(--accent)] transition-colors">What to look for</a></li>
+          <li><a href="#checker-tools" class="toc-link hover:text-[var(--accent)] transition-colors">GEO checker tools</a></li>
+          <li><a href="#after-the-check" class="toc-link hover:text-[var(--accent)] transition-colors">After your check</a></li>
+          <li><a href="#faq" class="toc-link hover:text-[var(--accent)] transition-colors">FAQ</a></li>
+        </ol>
+      </div>
+    </aside>
+
+    <!-- Article body -->
+    <article class="lg:col-span-9 prose-dark space-y-16">
+
+      <section id="what-a-geo-checker-does">
+        <h2 class="anchor-top">What a GEO Checker Does</h2>
+        <p><strong>A GEO checker produces a point-in-time assessment of your brand's presence in AI-generated answers — the starting line for any generative engine optimisation programme.</strong> It answers a fundamental question that traditional SEO tools cannot: when people ask AI platforms about topics in your category, does your brand appear in the response?</p>
+        <p>The distinction between a <em>checker</em> and a <em>tracker</em> is important. A GEO checker is used for an initial audit or periodic snapshot — it measures where you stand today. A <a href="/geo-tracking-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO tracking tool</a> runs continuously, recording changes over time and alerting you to shifts in citation frequency. Both are part of a complete <a href="/geo-monitoring/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO monitoring</a> setup, but the checker comes first.</p>
+        <p>At its core, a GEO checker works by querying AI platforms with prompts that reflect the questions your target customers are likely to ask — and then recording whether, how, and where your brand appears in the generated responses. This can be done manually using the platforms' own interfaces, or with dedicated software that automates the query process and aggregates results across platforms.</p>
+        <p>The output of a GEO check is not a single score or rank. It is a structured picture: your citation frequency for a defined query set, broken down by platform, with notes on which URLs were cited, how your brand was described, and where competitors appeared instead. This baseline is what makes <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> work measurable — you cannot demonstrate progress without knowing your starting point.</p>
+      </section>
+
+      <section id="how-to-check-manually">
+        <h2 class="anchor-top">How to Check Your AI Visibility Manually</h2>
+        <p><strong>A manual GEO check is free, requires no specialist tools, and can be completed in under two hours — making it the right starting point for any brand assessing its AI visibility for the first time.</strong></p>
+        <p>Follow these steps to run a structured manual check:</p>
+
+        <ol class="mt-6 space-y-5 text-ink-300 leading-relaxed list-decimal list-outside pl-5">
+          <li>
+            <strong class="text-ink-100">Build your query list.</strong> Write twenty to thirty prompts that reflect how your target audience searches for solutions in your category. Include informational queries ("what is the best [category] for [use case]"), comparison queries ("compare [your brand] vs [competitor]"), and recommendation queries ("which [product/service] should I use for [problem]"). Vary phrasing — "what", "how", "recommend", "which" — because AI responses are sensitive to query framing.
+          </li>
+          <li>
+            <strong class="text-ink-100">Select your platforms.</strong> At minimum, test ChatGPT (GPT-4o), Perplexity, Google Gemini, and Microsoft Copilot. Add Google AI Overviews if organic search is an important channel for your audience. Log in to each platform so your results reflect the default experience, not a guest or restricted mode.
+          </li>
+          <li>
+            <strong class="text-ink-100">Run each query and record results.</strong> Use a simple spreadsheet with columns for: platform, query, brand present (yes/no), cited URL, description of brand (if present), competitors mentioned, and any notes. Run each query fresh — do not copy from a previous session that might carry conversational context.
+          </li>
+          <li>
+            <strong class="text-ink-100">Calculate your citation frequency.</strong> For each platform, divide the number of queries where your brand appeared by the total number of queries run. A 20% citation frequency on Perplexity means your brand appeared in 4 of 20 sampled queries. Compare this across platforms to identify where your biggest gaps are.
+          </li>
+          <li>
+            <strong class="text-ink-100">Note competitor patterns.</strong> Record which competitors appear in queries where you do not. Consistent competitor presence for specific query types is a signal that their content structure, entity data, or backlink profile is better aligned to what those platforms retrieve.
+          </li>
+          <li>
+            <strong class="text-ink-100">Document your baseline.</strong> Save your spreadsheet with a date stamp. This is your GEO baseline — the reference point against which all future checks and improvements will be measured.
+          </li>
+        </ol>
+
+        <div class="mt-8 rounded-xl border border-[var(--line)] bg-[rgba(var(--accent-glow),.04)] p-6">
+          <p class="font-semibold text-ink-100 mb-2">Manual check limitations</p>
+          <p class="text-sm text-ink-300 leading-relaxed">AI responses are probabilistic — the same query can produce different results on successive runs. A manual check based on a single run per query will contain sampling error. For greater accuracy, run each query three times and record whether your brand appeared in at least two of the three responses. For ongoing monitoring at scale, manual checking is impractical; this is where <a href="/geo-tracking-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">dedicated tracking tools</a> become necessary.</p>
+        </div>
+      </section>
+
+      <section id="what-to-look-for">
+        <h2 class="anchor-top">What to Look for When Checking Your GEO Visibility</h2>
+        <p><strong>Six signals determine the diagnostic value of a GEO check — recording all six turns a raw pass/fail presence check into an actionable audit.</strong> Use these as the columns in your manual checking spreadsheet, or as the criteria against which to evaluate what a GEO checker tool reports.</p>
+
+        <div class="overflow-x-auto mt-8 rounded-xl border border-[var(--line)]">
+          <table class="w-full text-sm">
+            <thead class="bg-[rgba(var(--accent-glow),.06)]">
+              <tr>
+                <th scope="col" class="px-5 py-4 text-left font-semibold text-ink-100">Signal</th>
+                <th scope="col" class="px-5 py-4 text-left font-semibold text-ink-100">What to record</th>
+                <th scope="col" class="px-5 py-4 text-left font-semibold text-ink-100">Why it matters</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[var(--line)]">
+              {checkSignals.map((row, i) => (
+                <tr class={i % 2 === 0 ? '' : 'bg-[rgba(255,255,255,.01)]'}>
+                  <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">{row.signal}</td>
+                  <td class="px-5 py-4 text-ink-300 leading-relaxed">{row.whatToLook}</td>
+                  <td class="px-5 py-4 text-ink-300 leading-relaxed">{row.whyItMatters}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p class="mt-6 text-ink-300 leading-relaxed">Of these six signals, <strong>cited URL</strong> and <strong>description accuracy</strong> are the most actionable. If you know which of your pages are being cited, you know where to invest in structural improvements. If you know your brand is described inaccurately or inconsistently, you have a clear entity data task — updating Wikipedia, Wikidata, structured data markup, and authoritative third-party sources to establish a consistent, accurate knowledge graph presence.</p>
+        <p class="mt-4 text-ink-300 leading-relaxed">Platform variation is the signal most often overlooked. Significant differences in your citation rate between Perplexity and ChatGPT, for example, can indicate that one platform's retrieval system is more aligned to your content's current structure. Understanding <a href="/how-to-measure-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how to measure GEO</a> performance across platforms is a prerequisite for deciding where to prioritise optimisation effort.</p>
+      </section>
+
+      <section id="checker-tools">
+        <h2 class="anchor-top">GEO Checker Tools: What to Look For</h2>
+        <p><strong>Dedicated GEO checker tools automate the manual process, run queries across multiple platforms simultaneously, and produce structured reports that a spreadsheet cannot match at scale.</strong> The category is evolving rapidly, so rather than publishing a fixed ranked list, this section describes the characteristics that distinguish a genuinely useful tool from a superficial one.</p>
+
+        <p class="mt-4 text-ink-300 leading-relaxed">The best GEO checker tools share five characteristics. First, they allow you to input your own query list rather than relying on vendor-defined templates. Generic prompts will not reflect your specific business context. Second, they cover all four major platforms as a minimum (ChatGPT, Perplexity, Gemini, Copilot) and run queries against each simultaneously. Third, they return the full response text or a summary — not just a binary present/absent flag — so you can assess description accuracy and response position. Fourth, they identify which specific URL was cited, not just whether a domain appeared. Fifth, they allow you to benchmark against named competitors by running the same query set for them.</p>
+
+        <p class="mt-4 text-ink-300 leading-relaxed">Publicly known platforms that have offered AI visibility checking functionality include <strong>Profound</strong>, <strong>Otterly.ai</strong>, <strong>Peec AI</strong>, and <strong>Semrush's AI Toolkit</strong>. Some of these operate primarily as ongoing trackers with a checker capability built in; others offer standalone audit modes. The landscape changes frequently — always verify current features and pricing directly with vendors before committing. See the broader <a href="/geo-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO tools guide</a> for a framework for evaluating the full tool ecosystem.</p>
+
+        <div class="mt-8 rounded-xl border border-[var(--line)] bg-[rgba(var(--accent-glow),.04)] p-6">
+          <p class="font-semibold text-ink-100 mb-2">Note on tool accuracy</p>
+          <p class="text-sm text-ink-300 leading-relaxed">No GEO checker tool produces perfectly accurate results because AI platform responses are probabilistic. Any tool's citation frequency figures are statistical estimates, not exact counts. When evaluating a tool, ask the vendor how many response samples they collect per query and how they handle variation between runs. A credible tool is transparent about this; one that presents a single "visibility score" without explaining its derivation warrants caution.</p>
+        </div>
+      </section>
+
+      <section id="after-the-check">
+        <h2 class="anchor-top">What to Do After Your GEO Check</h2>
+        <p><strong>A GEO check that does not lead to action is an exercise in measurement for its own sake — the value is in using the results to prioritise optimisation work.</strong></p>
+        <p>Start with the queries where competitors appear and you do not. Analyse the cited competitor pages: how are they structured? Do they use clear definitions, direct answers, structured lists, or FAQ sections? Are they referenced from authoritative third-party sources? These are the structural patterns that retrieval systems favour, and they point directly to the improvements your own content needs.</p>
+        <p>If your brand appears in responses but is described inaccurately, prioritise entity work: review and update your Wikipedia article, Wikidata entry, and the authoritative third-party sources that AI models draw on when building factual claims. Structured data markup (Schema.org Organisation and WebSite) on your own site also contributes to entity recognition.</p>
+        <p>If you are present on some platforms but absent on others, study the difference. Perplexity, for example, relies heavily on live web retrieval and tends to favour pages that are well-structured, recently updated, and cited by authoritative sources. ChatGPT without browsing draws more heavily on training data, making entity presence in knowledge bases and long-standing authoritative content more influential.</p>
+        <p>Once you have completed your initial check and identified priority actions, the next step is to move from periodic checking to continuous monitoring. A <a href="/geo-tracking-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO tracking tool</a> will measure the impact of your optimisation work over time and alert you to unexpected changes — giving you the data needed to demonstrate ROI and guide the next iteration of your programme. See our <a href="/geo-monitoring/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO monitoring hub</a> for the full picture of how checking and tracking work together.</p>
+      </section>
+
+    </article>
+  </div>
+
+  <!-- FAQ Accordion -->
+  <section class="container-wide py-20" id="faq">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Frequently Asked Questions</h2>
+
+    <div class="mt-10 max-w-3xl divide-y divide-[var(--line)]">
+      {faqs.map(faq => (
+        <div class="faq-item">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors"
+            aria-expanded="false"
+          >
+            <span>{faq.q}</span>
+            <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+            </svg>
+          </button>
+          <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+            <p class="pb-5 text-ink-300 leading-relaxed">{faq.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Related Reading -->
+  <section class="container-wide py-12">
+    <span class="eyebrow">Related Reading</span>
+    <h2 class="mt-3 font-display text-2xl font-bold text-ink-50">Explore More</h2>
+    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <a href="/geo-monitoring/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">GEO Monitoring Hub</h3>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">The complete guide to monitoring your AI visibility — from initial checks to continuous tracking and alerting.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/geo-tracking-tools/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">GEO Tracking Tools</h3>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">Continuous monitoring tools for AI visibility — how they work and how to build a tracking workflow that scales with your programme.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/how-to-measure-geo/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">How to Measure GEO</h3>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">A framework for measuring GEO performance — the metrics that matter and how to report them to stakeholders.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/geo-tools/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">GEO Tools Hub</h3>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">All categories of GEO tooling — AI visibility trackers, citation monitors, content optimisers, and entity analysers.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/generative-engine-optimisation/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">Generative Engine Optimisation</h3>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">The ROOT guide to GEO — what it is, why it matters, and how checking and tracking feed into a complete optimisation programme.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/contact/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">Talk to a GEO Specialist</h3>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">Not sure what your GEO check results mean or where to start with optimisation? Get expert guidance without the jargon.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Get in touch <span aria-hidden="true">&rarr;</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="container-wide py-20">
+    <div class="relative overflow-hidden rounded-2xl dot-grid">
+      <div class="absolute inset-0 bg-gradient-to-br from-[rgba(var(--accent-glow),.12)] via-transparent to-transparent"></div>
+      <div class="relative px-8 py-16 text-center sm:px-16">
+        <span class="eyebrow">GEO Audit</span>
+        <h2 class="mt-4 font-display text-3xl font-bold text-ink-50 sm:text-4xl">Want a Professional GEO Visibility Check?</h2>
+        <p class="mt-4 mx-auto max-w-2xl text-ink-300 leading-relaxed">
+          Manual checks give you a starting point. A professional GEO audit gives you a complete picture: structured citation analysis across all major platforms, competitive benchmarking, entity gap assessment, and a prioritised action plan. Talk to our team to find out what your current AI visibility looks like.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact/" class="btn btn-primary">Request a GEO Audit</a>
+          <a href="/geo-monitoring/" class="btn btn-ghost">Explore GEO Monitoring</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = '0';
+            other.closest('.faq-item').querySelector('.faq-icon').style.transform = '';
+          }
+        });
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+        icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+      });
+    });
+
+    // TOC IntersectionObserver
+    const sections = document.querySelectorAll('article section[id]');
+    const tocLinks = document.querySelectorAll('.toc-link');
+    if (sections.length && tocLinks.length) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(l => l.classList.remove('text-[var(--accent)]'));
+            const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+            if (active) active.classList.add('text-[var(--accent)]');
+          }
+        });
+      }, { rootMargin: '-20% 0px -70% 0px' });
+      sections.forEach(s => observer.observe(s));
+    }
+  </script>
+
+</Base>

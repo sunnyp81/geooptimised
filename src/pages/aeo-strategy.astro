@@ -1,0 +1,539 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'AEO Strategy: Planning for Answer Engines | GEOoptimised';
+const description = 'A practical AEO strategy guide: how to plan, structure, and execute answer engine optimisation to earn citations in ChatGPT, Perplexity, Gemini, and AI Overviews.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'AEO Strategy: Planning for Answer Engines',
+    description: 'A practical AEO strategy guide: how to plan, structure, and execute answer engine optimisation to earn citations in ChatGPT, Perplexity, Gemini, and AI Overviews.',
+    url: 'https://geooptimised.com/aeo-strategy/',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://geooptimised.com/aeo-strategy/'
+    },
+    image: 'https://geooptimised.com/og-image.png',
+    datePublished: '2026-06-07',
+    dateModified: '2026-06-07',
+    inLanguage: 'en-GB',
+    author: { '@id': 'https://geooptimised.com/#organization' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' }
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is AEO strategy?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'AEO strategy (answer engine optimisation strategy) is a systematic plan for making brand content the preferred source for AI-generated answers. It covers query mapping, content architecture, entity reinforcement, and cross-platform monitoring — all designed to increase the frequency and accuracy of brand citations in ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How is AEO strategy different from SEO strategy?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'AEO strategy targets citation in AI-generated answers rather than ranking in a results list. SEO strategy optimises for crawl, index, and rank signals. AEO strategy optimises for extraction, entity authority, and retrieval-augmented generation (RAG) pipelines. The two approaches share a technical foundation but differ fundamentally in content structure, measurement, and the success metrics used to assess performance.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What are the most important components of an AEO strategy?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The five core components of an effective AEO strategy are: an AI visibility audit to establish citation baselines; query architecture mapping the questions your audience submits to AI engines; extraction-first content structured for RAG retrieval; entity consistency across all platforms AI models reference; and cross-platform monitoring to track citation frequency and brand accuracy over time.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How long does an AEO strategy take to produce results?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'An AEO strategy typically shows measurable citation improvements within 60 to 90 days of implementation. The audit and foundation phase takes approximately four weeks. Content and entity work in weeks five through eight begins producing retrievable signals. By week twelve, monitoring data provides a reliable baseline for measuring ongoing performance and guiding iteration decisions.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Which AI platforms should an AEO strategy target?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'A complete AEO strategy targets all five major generative platforms: ChatGPT, Perplexity, Google Gemini, Microsoft Copilot, and Google AI Overviews. Each platform retrieves sources differently. Perplexity is primarily RAG-driven from live web sources. ChatGPT blends training data with optional browsing. Google AI Overviews correlate strongly with organic search authority. Targeting a single platform produces fragmented results compared to a cross-platform approach.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Can AEO strategy run alongside an existing SEO programme?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'AEO strategy and SEO strategy are complementary and should run in parallel. Strong organic authority accelerates AI Overviews citation. Entity signals built for AEO reinforce Knowledge Graph entries that improve organic visibility. The main adjustment required is structural: existing SEO content often needs rewriting to open with definitional statements and short extractable paragraphs rather than context-building introductions.'
+        }
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Answer Engine Optimisation', item: 'https://geooptimised.com/answer-engine-optimisation/' },
+      { '@type': 'ListItem', position: 3, name: 'AEO Strategy', item: 'https://geooptimised.com/aeo-strategy/' }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'what-is-aeo-strategy', label: 'What Is AEO Strategy?' },
+  { id: 'aeo-vs-seo-strategy', label: 'AEO vs SEO Strategy' },
+  { id: 'five-components', label: 'Five Core Components' },
+  { id: 'query-architecture', label: 'Query Architecture' },
+  { id: 'platform-priorities', label: 'Platform Priorities' },
+  { id: 'measuring-aeo', label: 'Measuring AEO Performance' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' }
+];
+
+const components = [
+  {
+    label: 'AI Visibility Audit',
+    desc: 'An AEO strategy begins with a structured audit of your current citation state. Run a representative set of queries across ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews. Record which brands are cited, how your brand is described when it appears, and which queries return no brand mentions at all. This baseline determines every subsequent priority. Skipping the audit means guessing at gaps that the data would reveal immediately.'
+  },
+  {
+    label: 'Query Architecture Mapping',
+    desc: 'Query architecture is the process of mapping the questions your target audience submits to AI engines — not keyword clusters, but full natural-language queries. AI engines receive questions like "What is the best approach to X?" and "Which companies offer Y?" Map these queries by intent category: definitional, comparative, procedural, and evaluative. Each category requires a different content structure and a different schema type to maximise extraction probability.'
+  },
+  {
+    label: 'Extraction-First Content',
+    desc: 'Content written for AEO leads every page and every section with a bold, standalone declarative statement. Short paragraphs of two to four sentences cover a single point each. FAQ sections match the exact phrasing of common queries. Tables present comparative data in extractable format. This structure is not a stylistic preference — it directly determines whether a retrieval-augmented generation system can cleanly isolate and cite your answer versus having to reconstruct meaning from a longer passage.'
+  },
+  {
+    label: 'Entity Consistency Programme',
+    desc: 'Answer engines cite entities, not pages. An entity consistency programme ensures your brand name, category description, attributes, and relationships are described identically across your website, structured data, Google Business Profile, Wikidata, LinkedIn, and every third-party source AI models access. Entity ambiguity — even minor variations in how your company is described — causes AI models to deprioritise your brand in favour of competitors whose entities are more cleanly defined.'
+  },
+  {
+    label: 'Cross-Platform Monitoring',
+    desc: 'AEO performance is invisible without systematic monitoring. Set up a fixed query set that mirrors your audience\'s AI search behaviour and run it weekly across all five major platforms. Log citation frequency, brand accuracy, competitor mentions, and changes in how your brand is described. This monitoring cadence is what separates a one-off AEO sprint from a durable programme. Without it, citation share erodes silently as competitors adapt and model updates shift retrieval behaviour.'
+  }
+];
+
+const aeoVsSeo = [
+  { dimension: 'Primary goal', aeo: 'Earn citations in AI-generated answers', seo: 'Rank in traditional search results lists' },
+  { dimension: 'Content opening', aeo: 'Definitional statement answers query immediately', seo: 'Context-building intro engages the reader' },
+  { dimension: 'Success metric', aeo: 'Citation frequency, brand accuracy', seo: 'Organic sessions, keyword positions' },
+  { dimension: 'Link signals', aeo: 'Citation footprint in AI-retrieved sources', seo: 'PageRank via inbound backlinks' },
+  { dimension: 'Entity focus', aeo: 'Core requirement — entities drive citation weighting', seo: 'Secondary — entities support Knowledge Graph' },
+  { dimension: 'Result horizon', aeo: '60–90 days for measurable citation gains', seo: '3–6 months typical for new pages' }
+];
+
+const platformRows = [
+  { platform: 'Perplexity', mechanism: 'Live RAG from current web sources', aeo_priority: 'Short extractable paragraphs, fresh content dates, clear attribution' },
+  { platform: 'ChatGPT', mechanism: 'Training data + optional web browsing', aeo_priority: 'Training-data entity authority plus crawlable live content' },
+  { platform: 'Google AI Overviews', mechanism: 'Organic ranking + Knowledge Graph signals', aeo_priority: 'Organic authority, Article schema, E-E-A-T signals' },
+  { platform: 'Microsoft Copilot', mechanism: 'Bing index + GPT-4 reasoning', aeo_priority: 'Bing Webmaster Tools verification, schema markup' },
+  { platform: 'Google Gemini', mechanism: 'Training data + Google Search integration', aeo_priority: 'Google Business Profile accuracy, authoritative backlinks' }
+];
+
+const faqs = [
+  {
+    q: 'What is AEO strategy?',
+    a: 'AEO strategy (answer engine optimisation strategy) is a systematic plan for making brand content the preferred source for AI-generated answers. It covers query mapping, content architecture, entity reinforcement, and cross-platform monitoring — all designed to increase the frequency and accuracy of brand citations in ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews.'
+  },
+  {
+    q: 'How is AEO strategy different from SEO strategy?',
+    a: 'AEO strategy targets citation in AI-generated answers rather than ranking in a results list. The two approaches share a technical foundation but differ fundamentally in content structure, measurement, and success metrics. AEO optimises for extraction and entity authority; SEO optimises for crawl, index, and rank signals.'
+  },
+  {
+    q: 'What are the most important components of an AEO strategy?',
+    a: 'The five core components of an effective AEO strategy are: an AI visibility audit; query architecture mapping; extraction-first content; entity consistency across all platforms; and cross-platform citation monitoring.'
+  },
+  {
+    q: 'How long does an AEO strategy take to produce results?',
+    a: 'An AEO strategy typically shows measurable citation improvements within 60 to 90 days. The audit and foundation phase takes approximately four weeks. Content and entity work in weeks five through eight begins producing retrievable signals, and week twelve monitoring data provides a reliable performance baseline.'
+  },
+  {
+    q: 'Which AI platforms should an AEO strategy target?',
+    a: 'A complete AEO strategy targets all five major platforms: ChatGPT, Perplexity, Google Gemini, Microsoft Copilot, and Google AI Overviews. Each retrieves sources differently, so targeting a single platform produces fragmented results compared to a cross-platform approach.'
+  },
+  {
+    q: 'Can AEO strategy run alongside an existing SEO programme?',
+    a: 'Yes — AEO and SEO strategy are complementary and should run in parallel. Strong organic authority accelerates AI Overviews citation. The main structural adjustment is rewriting existing content to open with definitional statements rather than context-building introductions.'
+  }
+];
+
+const related = [
+  {
+    tag: 'NODE',
+    title: 'Answer Engine Optimisation: The Complete Guide',
+    excerpt: 'The definitive reference for AEO — principles, platforms, and practical implementation across all major AI engines.',
+    href: '/answer-engine-optimisation/'
+  },
+  {
+    tag: 'Strategy',
+    title: 'GEO Strategy Framework',
+    excerpt: 'The seven-step systematic process for building durable citation share across all major generative platforms.',
+    href: '/geo-strategy/'
+  },
+  {
+    tag: 'Practices',
+    title: 'GEO Best Practices: What Earns AI Citations',
+    excerpt: 'Citation architecture, entity consistency, and the structural writing patterns that consistently drive citation gains.',
+    href: '/geo-best-practices/'
+  }
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/aeo-strategy/"
+  ogType="article"
+>
+
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/answer-engine-optimisation/" class="transition hover:text-[var(--accent)]">AEO</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">AEO Strategy</li>
+    </ol>
+  </nav>
+
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">AEO Strategy</span>
+        <span class="font-mono text-xs text-ink-300">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">11 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        AEO Strategy: Planning for Answer Engines
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">An AEO strategy is a systematic plan for earning citations in AI-generated answers.</strong> As audiences shift towards asking ChatGPT, Perplexity, Gemini, and Google AI Overviews rather than clicking through results pages, the brands that plan specifically for answer engines build citation share that compounds. This guide covers the five components of an effective AEO strategy, how it differs from SEO planning, and how to measure performance across platforms.
+      </p>
+    </div>
+  </section>
+
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" id="toc-nav">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <div>
+
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>AEO strategy is defined by five components: AI visibility audit, query architecture, extraction-first content, entity consistency, and cross-platform monitoring.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>AEO and SEO strategy are complementary, not competing — strong organic authority accelerates AI Overviews citation.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Query architecture maps natural-language AI queries by intent type: definitional, comparative, procedural, and evaluative.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Measurable citation improvements typically appear within 60 to 90 days of a structured AEO programme.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Each of the five major AI platforms retrieves sources differently — cross-platform monitoring is non-negotiable.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prose-dark">
+        <h2 id="what-is-aeo-strategy" class="anchor-top">What Is AEO Strategy?</h2>
+        <p>
+          <strong>AEO strategy is the discipline of planning brand content and entity signals specifically to earn citations in AI-generated answers.</strong> It is distinct from simply having good content or from running an SEO programme: it requires mapping the queries that audiences submit to answer engines, structuring content for extraction by large language models, and monitoring citation frequency rather than traffic or rankings.
+        </p>
+        <p>
+          The shift from "how do I rank in search?" to "how do I get cited in AI answers?" is not merely tactical — it reflects a structural change in how audiences find information. A significant and growing share of commercial queries are now answered directly by AI engines without a click. For brands that are cited in those answers, the effect is compounding authority. For brands that are absent, the result is progressive invisibility in an expanding share of their category's information landscape.
+        </p>
+        <p>
+          <a href="/answer-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Answer engine optimisation</a> as a discipline addresses this shift. AEO strategy is the planning layer that ensures optimisation efforts are systematic, sequenced correctly, and measured against the outcomes that matter — citation frequency, brand accuracy, and cross-platform reach. Without a strategy, teams default to ad hoc content changes that produce inconsistent and unstable results.
+        </p>
+        <p>
+          The relationship between AEO strategy and the broader discipline of <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> is straightforward: GEO is the umbrella practice; AEO is the specific focus on answer-engine citation. An AEO strategy is a subset of a full GEO programme, and the principles that drive citation in answer engines are the same principles that drive citation across all generative platforms.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="aeo-vs-seo-strategy" class="anchor-top">AEO Strategy vs SEO Strategy</h2>
+        <p>
+          <strong>AEO strategy and SEO strategy share technical foundations but diverge on content structure, measurement, and the mechanism by which authority is built.</strong> Understanding the differences prevents teams from applying SEO thinking to AEO problems — a common mistake that produces content that ranks well but earns few AI citations.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Dimension</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">AEO Strategy</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">SEO Strategy</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[var(--line)]">
+            {aeoVsSeo.map(row => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class="px-4 py-3 font-semibold text-white">{row.dimension}</td>
+                <td class="px-4 py-3 text-ink-300">{row.aeo}</td>
+                <td class="px-4 py-3 text-ink-300">{row.seo}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          The most consequential divergence is in content structure. A decade of SEO content writing produced introductory paragraphs designed to contextualise before claiming. AI extraction requires the opposite: state the claim first, support it second. Brands that understand this structural inversion can retrofit existing SEO content for AEO performance without rebuilding their entire content library — a targeted series of structural edits often delivers faster citation gains than publishing new pages. For a full breakdown, see <a href="/geo-vs-seo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO vs SEO</a>.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="five-components" class="anchor-top">Five Core Components of an Effective AEO Strategy</h2>
+        <p>
+          <strong>A robust AEO strategy is built from five components that must work in combination.</strong> Implementing any single component in isolation produces unstable results. The audit establishes priorities. Query architecture determines content focus. Extraction-first content produces the citations. Entity consistency makes them reliable. Monitoring compounds the gains.
+        </p>
+      </div>
+
+      <ol class="mt-8 space-y-6">
+        {components.map((step, i) => (
+          <li class="flex gap-5">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border hair font-display text-sm font-bold text-[var(--accent)]">
+              {i + 1}
+            </span>
+            <div>
+              <h3 class="font-display text-lg font-semibold text-white">{step.label}</h3>
+              <p class="mt-1 text-sm leading-relaxed text-ink-300">{step.desc}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      <div class="prose-dark mt-12">
+        <p>
+          For a tactical walkthrough of how to implement each component, see our <a href="/how-to-do-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how to do GEO</a> guide. The <a href="/geo-strategy/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO strategy framework</a> maps these components into a sequenced seven-step programme with 90-day planning milestones.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="query-architecture" class="anchor-top">Query Architecture: The Foundation of AEO Planning</h2>
+        <p>
+          <strong>Query architecture is the most commonly underinvested component of an AEO strategy, and the one with the highest leverage on content planning decisions.</strong> Traditional keyword research maps search volume to head and long-tail terms. Query architecture maps the full natural-language questions that audiences submit to AI engines, then categorises them by intent type to determine the correct content structure for each.
+        </p>
+        <p>
+          The four intent categories relevant to AEO are:
+        </p>
+        <ul class="mt-4 space-y-3 text-sm text-ink-300">
+          <li class="flex gap-3">
+            <span class="mt-0.5 font-semibold text-white shrink-0">Definitional:</span>
+            <span>"What is X?" — requires a concise, authoritative definition as the opening statement, followed by elaboration. FAQPage schema and a two-sentence definitional paragraph are the correct format.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-0.5 font-semibold text-white shrink-0">Comparative:</span>
+            <span>"X vs Y" or "Which is better for Z?" — requires a structured comparison, ideally in table format, with clear attribute rows and a summary recommendation.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-0.5 font-semibold text-white shrink-0">Procedural:</span>
+            <span>"How do I do X?" — requires a numbered step-by-step structure with HowTo schema. Each step should be a complete, standalone instruction that functions without surrounding context.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-0.5 font-semibold text-white shrink-0">Evaluative:</span>
+            <span>"Is X worth it?" or "Should I use Y?" — requires a direct recommendation supported by criteria. Avoid hedging language that forces AI models to interpret intent; state the evaluation clearly.</span>
+          </li>
+        </ul>
+        <p class="mt-4">
+          Mapping your target queries to these four categories before writing any content ensures that every page is structured for the retrieval pattern it will most commonly encounter. A definitional page written in procedural format, or a comparative page written as continuous prose, will extract poorly even when its content is authoritative and accurate.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="platform-priorities" class="anchor-top">Platform Priorities in an AEO Strategy</h2>
+        <p>
+          <strong>No two major AI platforms retrieve and weight sources identically, which means an AEO strategy must account for platform-specific behaviour rather than optimising generically.</strong> The table below summarises the retrieval mechanism and primary optimisation priority for each of the five platforms a complete AEO strategy addresses.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Platform</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Retrieval Mechanism</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">AEO Priority</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[var(--line)]">
+            {platformRows.map(row => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class="px-4 py-3 font-semibold text-white">{row.platform}</td>
+                <td class="px-4 py-3 text-ink-300">{row.mechanism}</td>
+                <td class="px-4 py-3 text-ink-300">{row.aeo_priority}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          For most brands, Perplexity is the right starting proxy for overall AEO content quality because it is the most transparent about its sources and the most purely retrieval-driven. Content that performs well in Perplexity — short extractable paragraphs, clear headings, frequently updated publication dates — tends to transfer well to other platforms. Use Perplexity citation frequency as your primary early performance indicator before building out full cross-platform monitoring.
+        </p>
+        <p>
+          Google AI Overviews requires particular strategic attention because it sits at the intersection of traditional SEO authority and entity resolution. Brands with strong organic foundations often find that targeted AEO structural edits to existing pages produce AI Overviews citations faster than publishing entirely new content. If your domain already ranks well for target queries, restructure those pages for extraction first before investing in new content production.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="measuring-aeo" class="anchor-top">Measuring AEO Strategy Performance</h2>
+        <p>
+          <strong>AEO performance is invisible without the correct measurement framework — and the correct framework is fundamentally different from the one most digital marketing teams already use.</strong> Organic sessions, keyword rankings, and conversion rates are all lagging indicators that do not capture citation activity in AI engines. A brand can be extensively cited in Perplexity and Gemini while showing flat or declining organic traffic as audiences shift to AI-native search.
+        </p>
+        <p>
+          The four metrics that directly measure AEO strategy performance are:
+        </p>
+        <ul class="mt-4 space-y-3 text-sm text-ink-300">
+          <li class="flex gap-3">
+            <span class="mt-0.5 font-semibold text-white shrink-0">Citation frequency:</span>
+            <span>How often your brand is mentioned across a fixed set of target queries, measured weekly across all five major platforms. This is the primary AEO KPI.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-0.5 font-semibold text-white shrink-0">Brand accuracy:</span>
+            <span>Whether AI-generated descriptions of your brand, products, and services are factually correct. Inaccurate citations are worse than no citations — they create misinformation about your brand at scale.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-0.5 font-semibold text-white shrink-0">Cross-platform reach:</span>
+            <span>The number of platforms on which your brand is cited for target queries. A brand cited on one platform but absent from four others has a fragile citation position.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-0.5 font-semibold text-white shrink-0">Competitor citation share:</span>
+            <span>Which competitors appear in answers where your brand does not. Competitor citation share identifies displacement opportunities and sets realistic performance benchmarks.</span>
+          </li>
+        </ul>
+        <p class="mt-4">
+          Establish your baseline across all four metrics before making any content or entity changes. Without a baseline, you cannot attribute citation improvements to specific strategic decisions — and attribution is what transforms a tactical sprint into a repeatable programme. For the tools that make this measurement tractable, the <a href="/geo-strategy/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO strategy guide</a> covers the monitoring infrastructure in detail.
+        </p>
+        <p>
+          If you would like GEOoptimised to build and execute this measurement framework for your brand, <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">request an AI visibility audit</a> — it produces the baseline data your AEO strategy needs to operate from evidence rather than assumption.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="relative border-t hair mt-12 overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Build an AEO Strategy That Earns Citations</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        We audit your current AI citation baseline, map your query architecture gaps, and deliver a prioritised AEO strategy with clear 90-day milestones. The audit is a standalone deliverable — no retainer required to start.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request your AI visibility audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const faqBtns = document.querySelectorAll('#faq-accordion button');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+
+    const tocLinks = document.querySelectorAll('#toc-nav a');
+    const headings = Array.from(
+      document.querySelectorAll('h2[id], h3[id]')
+    ) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(link => {
+              link.classList.remove('text-[var(--accent)]');
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.classList.add('text-[var(--accent)]');
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+
+    headings.forEach(h => observer.observe(h));
+  </script>
+
+</Base>

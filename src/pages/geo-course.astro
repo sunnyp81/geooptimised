@@ -1,0 +1,545 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO Course: Learn Generative Engine Optimisation | GEOoptimised';
+const description = 'A structured GEO course overview: the modules, topics, and learning path for mastering generative engine optimisation — from foundations to advanced citation strategy.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'GEO Course: Learn Generative Engine Optimisation',
+    description: 'A structured GEO course overview: the modules, topics, and learning path for mastering generative engine optimisation — from foundations to advanced citation strategy.',
+    url: 'https://geooptimised.com/geo-course/',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://geooptimised.com/geo-course/'
+    },
+    image: 'https://geooptimised.com/og-image.png',
+    datePublished: '2026-06-07',
+    dateModified: '2026-06-07',
+    inLanguage: 'en-GB',
+    author: { '@id': 'https://geooptimised.com/#organization' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' }
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What does a GEO course cover?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'A comprehensive GEO course covers: how large language models retrieve and cite sources; entity mapping and structured data implementation; extraction-first content writing; technical GEO signals including robots.txt and llms.txt; citation monitoring across ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews; and how to build a 90-day GEO programme. Advanced modules address platform-specific behaviour, knowledge graph optimisation, and competitive citation displacement.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Is there a GEO certification course?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'There is no widely recognised industry-standard GEO certification as of mid-2026. The discipline is less than three years old and the professional bodies that issue certifications in adjacent fields have not yet formalised GEO standards. GEOoptimised is developing a structured training programme based on our practitioner methodology; we will announce it when it is ready. In the meantime, the strongest signal of GEO competence is demonstrated outcomes: measurable citation gains across AI platforms.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How long does it take to learn GEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The foundational principles of GEO — how LLMs retrieve sources, extraction-first writing, entity consistency, and basic schema implementation — can be grasped in 10 to 15 hours of structured learning. Applying those principles to produce measurable citation improvements typically takes 60 to 90 days of hands-on programme work. Advanced competencies, including platform-specific optimisation and knowledge graph strategy, develop over six to twelve months of active practice.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Who should learn GEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'GEO skills are most immediately valuable for: SEO professionals adapting to AI search; content strategists and writers who produce brand content; digital marketing managers whose categories are experiencing AI search disruption; and agency practitioners building new GEO service offerings. The learning curve is accessible for anyone with a working knowledge of SEO fundamentals, though GEO requires unlearning some SEO conventions around content structure.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What prior knowledge is needed to learn GEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'A working knowledge of SEO fundamentals is useful but not strictly required. Understanding what structured data is, how crawlers access content, and how content is indexed will accelerate learning. No coding skills are required for content and entity work, though the ability to add JSON-LD schema to a website (or to brief a developer to do so) is a practical prerequisite for technical GEO implementation.'
+        }
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'GEO Strategy', item: 'https://geooptimised.com/geo-strategy/' },
+      { '@type': 'ListItem', position: 3, name: 'GEO Course', item: 'https://geooptimised.com/geo-course/' }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'what-to-learn', label: 'What You Need to Learn' },
+  { id: 'learning-path', label: 'Recommended Learning Path' },
+  { id: 'module-overview', label: 'Module Overview' },
+  { id: 'resources', label: 'Free Learning Resources' },
+  { id: 'who-should-learn', label: 'Who Should Learn GEO' },
+  { id: 'geo-training', label: 'Our Training Approach' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' }
+];
+
+const modules = [
+  {
+    num: '01',
+    title: 'How Generative Engines Work',
+    topics: [
+      'Large language models: training data, retrieval-augmented generation, and inference',
+      'How AI engines select and cite sources',
+      'The five major platforms: ChatGPT, Perplexity, Gemini, Copilot, AI Overviews',
+      'Why traditional SEO signals are insufficient for AI citation'
+    ]
+  },
+  {
+    num: '02',
+    title: 'Entity Foundations',
+    topics: [
+      'What entities are and why AI models cite them rather than pages',
+      'Mapping brand, product, and category entities',
+      'Knowledge Graph, Wikidata, and how AI models resolve entity identity',
+      'Entity consistency across platforms and the sameAs property'
+    ]
+  },
+  {
+    num: '03',
+    title: 'Extraction-First Content Writing',
+    topics: [
+      'The definitional opening: how to write the first sentence of any GEO page',
+      'Single-point paragraph structure for RAG retrieval',
+      'Section headings as metadata: declarative labels versus keyword questions',
+      'FAQ structure, table formatting, and list architecture for AI extraction'
+    ]
+  },
+  {
+    num: '04',
+    title: 'Structured Data for GEO',
+    topics: [
+      'JSON-LD implementation: Article, FAQPage, Organization, BreadcrumbList',
+      'When to use HowTo, Course, Service, and ProfessionalService schema',
+      'The sitewide knowledge graph: avoiding entity fragmentation across pages',
+      'Validating schema and auditing structured data with Google Rich Results Test'
+    ]
+  },
+  {
+    num: '05',
+    title: 'Technical GEO Signals',
+    topics: [
+      'robots.txt configuration for AI crawlers: GPTBot, PerplexityBot, ClaudeBot',
+      'llms.txt: structure, scope, and best practice for AI crawler declarations',
+      'Canonical URL strategy and entity signal consolidation',
+      'Core Web Vitals and their effect on AI crawler access'
+    ]
+  },
+  {
+    num: '06',
+    title: 'Citation Monitoring',
+    topics: [
+      'Designing a fixed query set for weekly citation tracking',
+      'Platform-by-platform monitoring: what to log and how to interpret results',
+      'Brand accuracy auditing: identifying and correcting AI misinformation',
+      'Competitor citation share analysis and displacement prioritisation'
+    ]
+  },
+  {
+    num: '07',
+    title: 'Building a 90-Day GEO Programme',
+    topics: [
+      'The audit phase: establishing citation baselines across all five platforms',
+      'Month 1: entity mapping, technical implementation, content gap analysis',
+      'Month 2: content production, entity reinforcement, source building',
+      'Month 3: monitoring setup, iteration cadence, and performance review'
+    ]
+  }
+];
+
+const learningPath = [
+  { stage: 'Foundations', hours: '3–5 hrs', focus: 'How LLMs work, entity basics, GEO vs SEO' },
+  { stage: 'Content skills', hours: '4–6 hrs', focus: 'Extraction-first writing, FAQ structure, table formatting' },
+  { stage: 'Technical implementation', hours: '3–4 hrs', focus: 'Schema markup, robots.txt, llms.txt, canonicals' },
+  { stage: 'Strategy & planning', hours: '2–3 hrs', focus: '90-day programme structure, query architecture, monitoring setup' },
+  { stage: 'Advanced practice', hours: 'Ongoing', focus: 'Platform-specific behaviour, knowledge graph strategy, citation displacement' }
+];
+
+const faqs = [
+  {
+    q: 'What does a GEO course cover?',
+    a: 'A comprehensive GEO course covers: how LLMs retrieve and cite sources; entity mapping and structured data; extraction-first content writing; technical GEO signals; citation monitoring across all five major AI platforms; and building a 90-day GEO programme. Advanced modules address platform-specific behaviour, knowledge graph optimisation, and competitive citation displacement.'
+  },
+  {
+    q: 'Is there a GEO certification course?',
+    a: 'There is no widely recognised industry-standard GEO certification as of mid-2026. The discipline is less than three years old and professional bodies have not yet formalised GEO standards. GEOoptimised is developing a structured training programme; the strongest current signal of GEO competence is demonstrated outcomes — measurable citation gains across AI platforms.'
+  },
+  {
+    q: 'How long does it take to learn GEO?',
+    a: 'GEO foundations can be grasped in 10 to 15 hours of structured learning. Applying those principles to produce measurable citation improvements typically takes 60 to 90 days of hands-on programme work. Advanced competencies develop over six to twelve months of active practice.'
+  },
+  {
+    q: 'Who should learn GEO?',
+    a: 'GEO skills are most immediately valuable for SEO professionals adapting to AI search, content strategists, digital marketing managers in AI-disrupted categories, and agency practitioners building new GEO service offerings. The learning curve is accessible for anyone with a working knowledge of SEO fundamentals.'
+  },
+  {
+    q: 'What prior knowledge is needed to learn GEO?',
+    a: 'A working knowledge of SEO fundamentals is useful but not strictly required. No coding skills are required for content and entity work, though the ability to add JSON-LD schema to a website — or brief a developer to do so — is a practical prerequisite for technical GEO implementation.'
+  }
+];
+
+const related = [
+  {
+    tag: 'NODE',
+    title: 'GEO Strategy Framework',
+    excerpt: 'The seven-step systematic process for building durable citation share across all major AI platforms.',
+    href: '/geo-strategy/'
+  },
+  {
+    tag: 'Guide',
+    title: 'How to Do GEO: Step-by-Step',
+    excerpt: 'A tactical walkthrough of the full GEO implementation process from audit to ongoing monitoring.',
+    href: '/how-to-do-geo/'
+  },
+  {
+    tag: 'Reference',
+    title: 'GEO Certification: What to Know',
+    excerpt: 'The honest state of GEO certification in 2026 and what a credible programme would need to cover.',
+    href: '/geo-certification/'
+  }
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/geo-course/"
+  ogType="article"
+>
+
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">GEO</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-strategy/" class="transition hover:text-[var(--accent)]">GEO Strategy</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">GEO Course</li>
+    </ol>
+  </nav>
+
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Learning Path</span>
+        <span class="font-mono text-xs text-ink-300">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">10 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO Course: Learn Generative Engine Optimisation
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">Generative engine optimisation is a learnable discipline with a clear, structured curriculum.</strong> This page maps the topics, modules, and learning path that take a practitioner from GEO foundations through to running a measurable citation programme. It also explains honestly what formal GEO training currently looks like — and what to expect as the field matures.
+      </p>
+    </div>
+  </section>
+
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" id="toc-nav">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <div>
+
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>GEO foundations — how LLMs retrieve sources, extraction-first writing, entity basics — take 10 to 15 hours to grasp.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>A structured GEO curriculum spans seven modules: LLM mechanics, entity foundations, content writing, schema, technical signals, monitoring, and 90-day programme planning.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>There is no industry-standard GEO certification as of mid-2026 — the discipline is too new for professional bodies to have formalised standards.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>The strongest current signal of GEO competence is demonstrated outcomes: measurable citation gains across AI platforms.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>GEOoptimised is developing a structured practitioner training programme; details will be announced when the curriculum is complete.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prose-dark">
+        <h2 id="what-to-learn" class="anchor-top">What You Need to Learn to Do GEO Well</h2>
+        <p>
+          <strong>GEO is a multi-disciplinary skill that combines an understanding of how AI retrieval systems work, content writing craft, structured data implementation, and a measurement mindset.</strong> None of these disciplines is impenetrably technical — the barrier to entry is lower than it was for SEO in 2010 — but mastering GEO requires learning each component and understanding how they interact.
+        </p>
+        <p>
+          The most common learning mistake is to treat GEO as an extension of SEO. Some foundations transfer: technical accessibility, domain authority, and high-quality content all matter in both disciplines. But the content structure, the measurement framework, and the entity layer are fundamentally different. Practitioners who approach GEO as "SEO with a few schema additions" consistently produce content that ranks well but earns few AI citations.
+        </p>
+        <p>
+          The practical curriculum for GEO competence covers three layers. The first is conceptual: understanding how large language models and retrieval-augmented generation systems select sources. Without this foundation, the tactical practices that follow will feel arbitrary. The second is craft: writing for extraction, structuring data correctly, building entity consistency. The third is analytical: monitoring citation frequency, diagnosing gaps, and iterating on the basis of evidence. Together, these three layers produce a practitioner who can build and run a <a href="/geo-strategy/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO strategy</a> that compounds over time.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="learning-path" class="anchor-top">Recommended Learning Path</h2>
+        <p>
+          <strong>The most effective GEO learning path moves from conceptual foundations through craft skills to strategic application.</strong> Jumping directly to tactical implementation — "how do I add schema?" — without the conceptual layer produces practitioners who can execute tasks they do not fully understand. The table below maps the learning stages, estimated time investment, and focus for each.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Stage</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Time Investment</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Focus Areas</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[var(--line)]">
+            {learningPath.map(row => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class="px-4 py-3 font-semibold text-white">{row.stage}</td>
+                <td class="px-4 py-3 font-mono text-xs text-[var(--accent)]">{row.hours}</td>
+                <td class="px-4 py-3 text-ink-300">{row.focus}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          The advanced practice stage is intentionally labelled "ongoing" because GEO is not a discipline you learn once. Generative models update continuously, platform retrieval behaviour shifts, and new tools emerge. A practitioner who completed a GEO course in 2024 will find that some specifics have changed by 2026. The conceptual foundations — how entities work, why extraction matters, what monitoring measures — remain stable. The platform-specific details require continuous updating. For the full tactical reference, the <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation guide</a> is updated as the discipline evolves.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="module-overview" class="anchor-top">GEO Course Module Overview</h2>
+        <p>
+          <strong>A complete GEO curriculum comprises seven modules that build sequentially from conceptual foundations to programme execution.</strong> The module structure below reflects our practitioner methodology at GEOoptimised — the same framework we apply when onboarding new team members and when teaching clients to manage GEO programmes in-house.
+        </p>
+      </div>
+
+      <div class="mt-8 space-y-4">
+        {modules.map(mod => (
+          <div class="card p-6">
+            <div class="flex items-start gap-4">
+              <span class="font-mono text-2xl font-bold text-[var(--accent)] shrink-0">{mod.num}</span>
+              <div>
+                <h3 class="font-display text-lg font-semibold text-white">{mod.title}</h3>
+                <ul class="mt-3 space-y-1.5">
+                  {mod.topics.map(topic => (
+                    <li class="flex items-start gap-2 text-sm text-ink-300">
+                      <span class="mt-0.5 text-[var(--accent)] shrink-0">&#8212;</span>
+                      <span>{topic}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="prose-dark mt-12">
+        <p>
+          Module 07 — the 90-day programme — is where all previous learning integrates into a structured execution plan. The <a href="/geo-strategy/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO strategy guide</a> covers this in full detail, and the <a href="/how-to-do-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how to do GEO</a> guide provides the step-by-step implementation reference that underpins Module 07.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="resources" class="anchor-top">Free GEO Learning Resources</h2>
+        <p>
+          <strong>The GEOoptimised content library is the most comprehensive free learning resource for GEO available in mid-2026.</strong> The following pages cover the core curriculum and can be read in the order listed as a self-directed learning path:
+        </p>
+        <ol class="mt-4 space-y-2 text-sm text-ink-300">
+          <li class="flex gap-3">
+            <span class="font-semibold text-white shrink-0">1.</span>
+            <span><a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Generative Engine Optimisation: The Complete Guide</a> — foundational principles and the full GEO landscape.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="font-semibold text-white shrink-0">2.</span>
+            <span><a href="/geo-strategy/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO Strategy Framework</a> — the seven-step systematic process for building citation share.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="font-semibold text-white shrink-0">3.</span>
+            <span><a href="/geo-best-practices/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO Best Practices</a> — content, entity, and technical practices that consistently drive citation gains.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="font-semibold text-white shrink-0">4.</span>
+            <span><a href="/how-to-do-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">How to Do GEO</a> — step-by-step tactical implementation from audit to monitoring.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="font-semibold text-white shrink-0">5.</span>
+            <span><a href="/answer-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Answer Engine Optimisation</a> — platform-specific strategy for AI answer citation.</span>
+          </li>
+        </ol>
+        <p class="mt-4">
+          Reading these five guides in sequence covers Modules 01 through 06 of the curriculum above and provides sufficient grounding to begin implementing GEO on a live website. Module 07 — building the 90-day programme — requires applying the concepts to an actual brand, which is where structured mentorship or agency partnership typically accelerates results.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="who-should-learn" class="anchor-top">Who Should Learn GEO</h2>
+        <p>
+          <strong>GEO skills are most immediately valuable for practitioners whose work is directly affected by the shift from traditional search to AI-generated answers.</strong> Four professional groups have the most pressing need for GEO training:
+        </p>
+        <ul class="mt-4 space-y-3 text-sm text-ink-300">
+          <li class="flex gap-3">
+            <span class="mt-0.5 font-semibold text-white shrink-0">SEO professionals:</span>
+            <span>The audience most immediately affected by AI search disruption. GEO builds on existing SEO foundations but requires unlearning content conventions that actively harm citation performance. SEOs who learn GEO early are positioned to lead the discipline as it becomes standard in digital marketing.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-0.5 font-semibold text-white shrink-0">Content strategists and writers:</span>
+            <span>Extraction-first writing requires a fundamental shift in how content is structured. Writers who understand why definitional openings, single-point paragraphs, and declarative headings drive citations — rather than just following a style guide — produce better GEO content and make better structural decisions when briefs are ambiguous.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-0.5 font-semibold text-white shrink-0">Digital marketing managers:</span>
+            <span>Managers who understand GEO can make better briefing decisions, set realistic performance expectations, and avoid the common mistake of measuring AI citation success with traditional SEO metrics.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-0.5 font-semibold text-white shrink-0">Agency practitioners:</span>
+            <span>Agencies adding GEO to their service offering need practitioners who understand the full methodology, not just the tactical components. A GEO practitioner who cannot explain entity mapping or interpret citation monitoring data cannot run a client programme independently.</span>
+          </li>
+        </ul>
+        <p class="mt-4">
+          GEO is also increasingly relevant for founders and in-house marketing leads in categories experiencing significant AI search disruption: professional services, B2B technology, financial services, and health information. For these decision-makers, the goal is not practitioner depth but strategic literacy — enough understanding of GEO to commission the right work, evaluate agency proposals critically, and interpret performance data meaningfully.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="geo-training" class="anchor-top">Our Approach to GEO Training</h2>
+        <p>
+          <strong>GEOoptimised is building a structured practitioner training programme based on the methodology we apply in client engagements.</strong> We are being deliberate about timing: the GEO discipline is evolving rapidly, and a training programme built on today's specific platform behaviours would need significant revision within twelve months. We are designing the curriculum around the principles and frameworks that remain stable — how entities work, why extraction matters, what effective monitoring measures — rather than the platform-specific details that shift with every model update.
+        </p>
+        <p>
+          When the programme is ready, it will be announced here and via our newsletter. In the meantime, the most direct way to access GEOoptimised's practitioner knowledge is through a client engagement: our <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services</a> include detailed programme documentation and knowledge transfer as standard deliverables, which means clients leave an engagement understanding not just what was done but why each decision was made.
+        </p>
+        <p>
+          If you are building an in-house GEO capability and want to discuss what a tailored training programme might look like for your team, <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">get in touch</a>. We are happy to scope a knowledge transfer engagement alongside a GEO programme.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="relative border-t hair mt-12 overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Apply What You Learn in a Live GEO Programme</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Reading the curriculum is one thing. Running a citation programme against a real brand is where GEO competence is built. We offer knowledge-transfer engagements alongside GEO delivery for teams building in-house capability.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Discuss a training engagement</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const faqBtns = document.querySelectorAll('#faq-accordion button');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+
+    const tocLinks = document.querySelectorAll('#toc-nav a');
+    const headings = Array.from(
+      document.querySelectorAll('h2[id], h3[id]')
+    ) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(link => {
+              link.classList.remove('text-[var(--accent)]');
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.classList.add('text-[var(--accent)]');
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+
+    headings.forEach(h => observer.observe(h));
+  </script>
+
+</Base>

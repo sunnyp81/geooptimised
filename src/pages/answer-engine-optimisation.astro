@@ -1,25 +1,21 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const title = 'Answer Engine Optimisation (AEO): The Complete Guide | GEOoptimised';
-const description = 'Answer Engine Optimisation (AEO) is the practice of structuring content so answer engines surface it as a direct response. Learn AEO strategy, best practices, and how it fits within GEO.';
+const title = 'Answer Engine Optimisation (AEO): Complete Guide 2026';
+const description = 'Answer Engine Optimisation: make your content the source AI Overviews, featured snippets, and voice search cite. Best practices, AEO vs SEO, getting started.';
 
 const articleSchema = {
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": "TechArticle",
   "headline": "Answer Engine Optimisation (AEO): The Complete Guide",
-  "description": description,
+  "description": "Answer engine optimisation (AEO) explained: what it is, how it works, how it differs from SEO and GEO, and the ten best practices that win featured snippets and AI-generated answers.",
   "datePublished": "2026-05-24",
-  "dateModified": "2026-05-24",
+  "dateModified": "2026-06-06",
   "author": {
-    "@type": "Organization",
-    "name": "GEOoptimised",
-    "url": "https://geooptimised.com/"
+    "@id": "https://geooptimised.com/#organization"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "GEOoptimised",
-    "url": "https://geooptimised.com/"
+    "@id": "https://geooptimised.com/#organization"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
@@ -74,7 +70,17 @@ const faqSchema = {
   ]
 };
 
-const schema = [articleSchema, faqSchema];
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://geooptimised.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Generative Engine Optimisation", "item": "https://geooptimised.com/generative-engine-optimisation/" },
+    { "@type": "ListItem", "position": 3, "name": "Answer Engine Optimisation", "item": "https://geooptimised.com/answer-engine-optimisation/" }
+  ]
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
 
 const tocItems = [
   { id: 'what-is-aeo', label: 'What Is Answer Engine Optimisation?' },
@@ -99,7 +105,7 @@ const faqs = [
   },
   {
     q: 'Is AEO part of GEO?',
-    a: 'Yes. AEO is a subset of <a href="/generative-engine-optimisation/" class="text-[var(--accent)] hover:underline underline-offset-4">Generative Engine Optimisation (GEO)</a>. AEO focuses specifically on answer-box and direct-answer interfaces, while GEO encompasses the broader discipline of optimising for all AI-driven search surfaces, including LLM citations, conversational AI, and generative search experiences.',
+    a: 'Yes. AEO is a subset of <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Generative Engine Optimisation (GEO)</a>. AEO focuses specifically on answer-box and direct-answer interfaces, while GEO encompasses the broader discipline of optimising for all AI-driven search surfaces, including LLM citations, conversational AI, and generative search experiences.',
   },
   {
     q: 'What types of content perform best for AEO?',
@@ -115,13 +121,13 @@ const faqs = [
 <Base title={title} description={description} schema={schema} ogType="article">
 
   <!-- Breadcrumb -->
-  <nav aria-label="Breadcrumb" class="container-wide pt-28">
-    <ol class="flex items-center gap-2 font-mono text-xs text-ink-400">
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex items-center gap-2 font-mono text-xs text-ink-300">
       <li><a href="/" class="hover:text-[var(--accent)] transition-colors">Home</a></li>
       <li aria-hidden="true" class="text-ink-600">/</li>
-      <li><a href="/geo-services/" class="hover:text-[var(--accent)] transition-colors">GEO Services</a></li>
+      <li><a href="/generative-engine-optimisation/" class="hover:text-[var(--accent)] transition-colors">Generative Engine Optimisation</a></li>
       <li aria-hidden="true" class="text-ink-600">/</li>
-      <li class="text-ink-200">Answer Engine Optimisation</li>
+      <li class="text-ink-200" aria-current="page">Answer Engine Optimisation</li>
     </ol>
   </nav>
 
@@ -166,19 +172,19 @@ const faqs = [
         <span class="eyebrow">Key Takeaways</span>
         <ul class="mt-4 space-y-3 text-sm text-ink-200 leading-relaxed">
           <li class="flex gap-3">
-            <svg class="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <svg aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
             <span>AEO optimises for answer selection, not ranking position. The goal is to become the source answer engines choose.</span>
           </li>
           <li class="flex gap-3">
-            <svg class="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <svg aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
             <span>AEO is a subset of GEO. It focuses on direct-answer interfaces (snippets, voice, AI Overviews).</span>
           </li>
           <li class="flex gap-3">
-            <svg class="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <svg aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
             <span>FAQ schema, concise 40-60 word definitions, and question-based headings are the core structural patterns.</span>
           </li>
           <li class="flex gap-3">
-            <svg class="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <svg aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
             <span>AEO builds on top of strong SEO foundations — it is an additional layer, not a replacement.</span>
           </li>
         </ul>
@@ -211,15 +217,15 @@ const faqs = [
 
       <!-- 3. AEO vs GEO -->
       <h2 id="aeo-vs-geo" class="anchor-top">AEO vs GEO: How They Relate</h2>
-      <p><strong>AEO is a subset of <a href="/generative-engine-optimisation/">Generative Engine Optimisation (GEO)</a>.</strong> The two disciplines are related but differ in scope and application.</p>
+      <p><strong>AEO is a subset of <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Generative Engine Optimisation (GEO)</a>.</strong> The two disciplines are related but differ in scope and application.</p>
       <p>AEO focuses specifically on answer-box and direct-answer interfaces: featured snippets, knowledge panels, voice responses, and People Also Ask expansions. The optimisation target is a discrete answer to a discrete question.</p>
       <p>GEO encompasses the broader challenge of making your brand visible across all AI-driven search surfaces. This includes LLM citation in conversational AI, generative search experiences like Google's AI Overviews, and the emerging landscape of AI agents that autonomously research topics and recommend solutions.</p>
       <p>Think of it as a hierarchy. GEO is the umbrella discipline. AEO is the branch that addresses the specific challenge of being selected as a direct answer. Every AEO tactic is a GEO tactic, but GEO includes strategies — like entity authority building, LLM training data optimisation, and multi-source citation strategies — that go beyond the scope of answer-box optimisation.</p>
-      <p>If your primary concern is featured snippets and voice search answers, AEO is your focus. If you want comprehensive visibility across ChatGPT, Perplexity, Copilot, and AI Overviews, you need the full <a href="/generative-engine-optimisation/">GEO framework</a>.</p>
+      <p>If your primary concern is featured snippets and voice search answers, AEO is your focus. If you want comprehensive visibility across ChatGPT, Perplexity, Copilot, and AI Overviews, you need the full <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO framework</a>.</p>
 
       <!-- 4. AEO vs Traditional SEO -->
       <h2 id="aeo-vs-seo" class="anchor-top">AEO vs Traditional SEO</h2>
-      <p><strong>AEO changes the success metric from ranking position to answer selection, but it does not replace traditional SEO.</strong> The two disciplines are complementary, and AEO performs best when built on top of strong SEO foundations.</p>
+      <p><strong>AEO changes the success metric from ranking position to answer selection, but it does not replace traditional SEO.</strong> The two disciplines are complementary, and AEO performs best when built on top of strong SEO foundations. For a fuller comparison of how AI search differs from traditional search, see our <a href="/geo-vs-seo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO vs SEO guide</a>.</p>
 
       <!-- Comparison table in card -->
       <div class="card overflow-hidden my-8 not-prose">
@@ -258,7 +264,7 @@ const faqs = [
                 <td class="px-6 py-3">Helpful but optional</td>
                 <td class="px-6 py-3">
                   <span class="inline-flex items-center gap-1.5">
-                    <svg class="h-4 w-4 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    <svg aria-hidden="true" class="h-4 w-4 text-[var(--accent)]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                     Critical for selection signals
                   </span>
                 </td>
@@ -339,23 +345,23 @@ const faqs = [
       <div class="not-prose mt-6 space-y-3">
         <div class="card p-5">
           <h3 class="font-display font-semibold text-ink-50">SERP Feature Trackers</h3>
-          <p class="mt-2 text-sm text-ink-400 leading-relaxed">Tools like Semrush, Ahrefs, and SE Ranking track featured snippet ownership, People Also Ask appearances, and knowledge panel presence. These show you where you currently hold answer positions and where competitors own them.</p>
+          <p class="mt-2 text-sm text-ink-300 leading-relaxed">Tools like Semrush, Ahrefs, and SE Ranking track featured snippet ownership, People Also Ask appearances, and knowledge panel presence. These show you where you currently hold answer positions and where competitors own them.</p>
         </div>
         <div class="card p-5">
           <h3 class="font-display font-semibold text-ink-50">Schema Validators</h3>
-          <p class="mt-2 text-sm text-ink-400 leading-relaxed">Google's Rich Results Test and Schema.org Validator confirm your structured data is correctly implemented. Invalid schema is worse than no schema — it signals unreliable content to answer engines.</p>
+          <p class="mt-2 text-sm text-ink-300 leading-relaxed">Google's Rich Results Test and Schema.org Validator confirm your structured data is correctly implemented. Invalid schema is worse than no schema — it signals unreliable content to answer engines.</p>
         </div>
         <div class="card p-5">
           <h3 class="font-display font-semibold text-ink-50">AI Search Monitors</h3>
-          <p class="mt-2 text-sm text-ink-400 leading-relaxed">Platforms like Otterly.AI, Peec AI, and Profound monitor how your brand appears in AI-generated answers across ChatGPT, Perplexity, and Google AI Overviews. These are the emerging standard for AEO measurement.</p>
+          <p class="mt-2 text-sm text-ink-300 leading-relaxed">Platforms like Otterly.AI, Peec AI, and Profound monitor how your brand appears in AI-generated answers across ChatGPT, Perplexity, and Google AI Overviews. These are the emerging standard for AEO measurement.</p>
         </div>
         <div class="card p-5">
           <h3 class="font-display font-semibold text-ink-50">Google Search Console</h3>
-          <p class="mt-2 text-sm text-ink-400 leading-relaxed">GSC's search appearance filters show impressions and clicks specifically from featured snippets and other SERP features. This is your primary free tool for tracking AEO performance on Google.</p>
+          <p class="mt-2 text-sm text-ink-300 leading-relaxed">GSC's search appearance filters show impressions and clicks specifically from featured snippets and other SERP features. This is your primary free tool for tracking AEO performance on Google.</p>
         </div>
         <div class="card p-5">
           <h3 class="font-display font-semibold text-ink-50">Content Optimisation Platforms</h3>
-          <p class="mt-2 text-sm text-ink-400 leading-relaxed">Clearscope, SurferSEO, and Frase analyse the semantic patterns in content that currently holds answer positions. They help you structure content to match the patterns answer engines prefer for specific query types.</p>
+          <p class="mt-2 text-sm text-ink-300 leading-relaxed">Clearscope, SurferSEO, and Frase analyse the semantic patterns in content that currently holds answer positions. They help you structure content to match the patterns answer engines prefer for specific query types.</p>
         </div>
       </div>
 
@@ -366,33 +372,33 @@ const faqs = [
       <div class="not-prose mt-8 grid gap-4 sm:grid-cols-2">
         <div class="card card-hover p-6">
           <h3 class="font-display font-semibold text-[var(--accent)]">Local Services</h3>
-          <p class="mt-2 text-sm text-ink-400 leading-relaxed">Local businesses should optimise for "near me" and "best [service] in [location]" answer queries. Google Business Profile optimisation, local FAQ schema, and review structured data are critical. Voice search disproportionately favours local queries — 46% of all voice searches have local intent.</p>
+          <p class="mt-2 text-sm text-ink-300 leading-relaxed">Local businesses should optimise for "near me" and "best [service] in [location]" answer queries. Google Business Profile optimisation, local FAQ schema, and review structured data are critical. Voice search disproportionately favours local queries — a significant share of voice searches carry local intent.</p>
         </div>
         <div class="card card-hover p-6">
           <h3 class="font-display font-semibold text-[var(--accent)]">E-commerce</h3>
-          <p class="mt-2 text-sm text-ink-400 leading-relaxed">Product-related queries trigger shopping-specific answer formats. Optimise Product schema, include pricing and availability data, and target comparison queries with structured tables. "Best [product] for [use case]" queries are high-value AEO targets for e-commerce brands.</p>
+          <p class="mt-2 text-sm text-ink-300 leading-relaxed">Product-related queries trigger shopping-specific answer formats. Optimise Product schema, include pricing and availability data, and target comparison queries with structured tables. "Best [product] for [use case]" queries are high-value AEO targets for e-commerce brands.</p>
         </div>
         <div class="card card-hover p-6">
           <h3 class="font-display font-semibold text-[var(--accent)]">SaaS and Technology</h3>
-          <p class="mt-2 text-sm text-ink-400 leading-relaxed">Technology companies should focus on definitional queries ("what is [feature/concept]"), how-to content, and comparison queries ("X vs Y"). Technical documentation with clear code examples and step-by-step instructions performs exceptionally well in both featured snippets and AI citations.</p>
+          <p class="mt-2 text-sm text-ink-300 leading-relaxed">Technology companies should focus on definitional queries ("what is [feature/concept]"), how-to content, and comparison queries ("X vs Y"). Technical documentation with clear code examples and step-by-step instructions performs exceptionally well in both featured snippets and AI citations.</p>
         </div>
         <div class="card card-hover p-6">
           <h3 class="font-display font-semibold text-[var(--accent)]">Professional Services</h3>
-          <p class="mt-2 text-sm text-ink-400 leading-relaxed">Law firms, accountancies, and consultancies should target informational queries that precede commercial intent. "How much does [service] cost," "do I need [service]," and "what is the process for [action]" are high-value AEO targets that position the firm as the authority before the prospect begins comparing providers.</p>
+          <p class="mt-2 text-sm text-ink-300 leading-relaxed">Law firms, accountancies, and consultancies should target informational queries that precede commercial intent. "How much does [service] cost," "do I need [service]," and "what is the process for [action]" are high-value AEO targets that position the firm as the authority before the prospect begins comparing providers.</p>
         </div>
         <div class="card card-hover p-6">
           <h3 class="font-display font-semibold text-[var(--accent)]">Healthcare and YMYL</h3>
-          <p class="mt-2 text-sm text-ink-400 leading-relaxed">Your Money, Your Life content faces elevated scrutiny from answer engines. Medical, financial, and legal content must demonstrate E-E-A-T (Experience, Expertise, Authoritativeness, Trust) through author credentials, peer-reviewed citations, and clear disclaimers. Answer engines are increasingly cautious about which sources they select for health-related answers.</p>
+          <p class="mt-2 text-sm text-ink-300 leading-relaxed">Your Money, Your Life content faces elevated scrutiny from answer engines. Medical, financial, and legal content must demonstrate E-E-A-T (Experience, Expertise, Authoritativeness, Trust) through author credentials, peer-reviewed citations, and clear disclaimers. Answer engines are increasingly cautious about which sources they select for health-related answers.</p>
         </div>
         <div class="card card-hover p-6">
           <h3 class="font-display font-semibold text-[var(--accent)]">Publishers and Media</h3>
-          <p class="mt-2 text-sm text-ink-400 leading-relaxed">News and media organisations should optimise for recency-sensitive queries. Timely, fact-checked reporting with clear datelines and NewsArticle schema receives preferential treatment in answer formats. Evergreen explainer content with regular updates targets the long-tail of informational queries.</p>
+          <p class="mt-2 text-sm text-ink-300 leading-relaxed">News and media organisations should optimise for recency-sensitive queries. Timely, fact-checked reporting with clear datelines and NewsArticle schema receives preferential treatment in answer formats. Evergreen explainer content with regular updates targets the long-tail of informational queries.</p>
         </div>
       </div>
 
       <!-- 8. Getting Started -->
       <h2 id="getting-started" class="anchor-top">Getting Started with AEO</h2>
-      <p><strong>Starting AEO does not require rebuilding your content strategy from scratch.</strong> It requires auditing your existing content through an answer-engine lens and making structural adjustments that improve machine extractability.</p>
+      <p><strong>Starting AEO does not require rebuilding your content strategy from scratch.</strong> It requires auditing your existing content through an answer-engine lens and making structural adjustments that improve machine extractability. Our <a href="/aeo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO services</a> cover each phase described below.</p>
 
       <ol>
         <li><strong>Audit your current featured snippet presence.</strong> Use GSC and a SERP tracker to identify which queries you already appear in answer boxes for, and which competitor holds the snippets you should own.</li>
@@ -419,7 +425,7 @@ const faqs = [
             aria-expanded="false"
           >
             <span>{faq.q}</span>
-            <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+            <svg aria-hidden="true" focusable="false" class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
               <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
             </svg>
           </button>
@@ -439,13 +445,58 @@ const faqs = [
         <span class="eyebrow">Take Action</span>
         <h2 class="mt-4 font-display text-3xl font-bold text-ink-50 sm:text-4xl">Need Expert AEO Implementation?</h2>
         <p class="mt-4 mx-auto max-w-lg text-ink-300 leading-relaxed">
-          GEOoptimised helps brands become the answer, not just a result. Our <a href="/aeo-agency/" class="text-[var(--accent)] hover:underline underline-offset-4">AEO agency services</a> cover audit, strategy, and ongoing optimisation across all answer engine surfaces.
+          GEOoptimised helps brands become the answer, not just a result. Our <a href="/aeo-agency/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO agency services</a> cover audit, strategy, and ongoing optimisation across all answer engine surfaces.
         </p>
         <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
           <a href="/aeo-agency/" class="btn btn-primary">Explore AEO Services</a>
           <a href="/contact/" class="btn btn-ghost">Get in Touch</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- AEO topic cluster: NODE → SEED links -->
+  <section class="container-wide py-20 border-t hair">
+    <span class="eyebrow">Learn AEO</span>
+    <h2 class="mt-3 font-display text-2xl font-bold text-ink-50">Answer Engine Optimisation Guides</h2>
+    <p class="mt-3 max-w-2xl text-ink-300">Deep-dive guides covering every part of answer engine optimisation, from first principles to practical implementation.</p>
+    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <a href="/what-is-aeo/" class="card card-hover block p-6">
+        <h3 class="font-display font-semibold text-ink-50">What Is AEO?</h3>
+        <p class="mt-2 text-sm text-ink-300">The definition, scope, and purpose of answer engine optimisation.</p>
+      </a>
+      <a href="/aeo-definition/" class="card card-hover block p-6">
+        <h3 class="font-display font-semibold text-ink-50">AEO Definition</h3>
+        <p class="mt-2 text-sm text-ink-300">Precise terminology and how AEO relates to GEO and SEO.</p>
+      </a>
+      <a href="/how-aeo-works/" class="card card-hover block p-6">
+        <h3 class="font-display font-semibold text-ink-50">How AEO Works</h3>
+        <p class="mt-2 text-sm text-ink-300">The retrieval-to-citation pipeline behind answer engines.</p>
+      </a>
+      <a href="/aeo-best-practices/" class="card card-hover block p-6">
+        <h3 class="font-display font-semibold text-ink-50">AEO Best Practices</h3>
+        <p class="mt-2 text-sm text-ink-300">The auditable tactics that win answer engine citations.</p>
+      </a>
+      <a href="/aeo-vs-seo/" class="card card-hover block p-6">
+        <h3 class="font-display font-semibold text-ink-50">AEO vs Traditional SEO</h3>
+        <p class="mt-2 text-sm text-ink-300">How answer engine optimisation differs from classic SEO.</p>
+      </a>
+      <a href="/aeo-examples/" class="card card-hover block p-6">
+        <h3 class="font-display font-semibold text-ink-50">AEO Examples</h3>
+        <p class="mt-2 text-sm text-ink-300">Illustrative structural patterns that earn extraction.</p>
+      </a>
+      <a href="/aeo-for-smes/" class="card card-hover block p-6">
+        <h3 class="font-display font-semibold text-ink-50">AEO for SMEs</h3>
+        <p class="mt-2 text-sm text-ink-300">A practical, budget-aware guide for small businesses.</p>
+      </a>
+      <a href="/aeo-case-studies/" class="card card-hover block p-6">
+        <h3 class="font-display font-semibold text-ink-50">AEO Case Studies</h3>
+        <p class="mt-2 text-sm text-ink-300">How to measure AEO, with illustrative scenarios.</p>
+      </a>
+      <a href="/aeo-strategy/" class="card card-hover block p-6">
+        <h3 class="font-display font-semibold text-ink-50">AEO Strategy</h3>
+        <p class="mt-2 text-sm text-ink-300">Planning an answer-engine optimisation programme.</p>
+      </a>
     </div>
   </section>
 
@@ -456,19 +507,19 @@ const faqs = [
     <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
       <a href="/generative-engine-optimisation/" class="card card-hover block p-6">
         <h3 class="font-display font-semibold text-ink-50">Generative Engine Optimisation</h3>
-        <p class="mt-2 text-sm text-ink-400">The root discipline that AEO sits within.</p>
+        <p class="mt-2 text-sm text-ink-300">The root discipline that AEO sits within.</p>
       </a>
       <a href="/geo-services/" class="card card-hover block p-6">
         <h3 class="font-display font-semibold text-ink-50">GEO Services</h3>
-        <p class="mt-2 text-sm text-ink-400">Full-service generative engine optimisation for brands and agencies.</p>
+        <p class="mt-2 text-sm text-ink-300">Full-service generative engine optimisation for brands and agencies.</p>
       </a>
       <a href="/aeo-agency/" class="card card-hover block p-6">
         <h3 class="font-display font-semibold text-ink-50">AEO Agency</h3>
-        <p class="mt-2 text-sm text-ink-400">Specialist answer engine optimisation services.</p>
+        <p class="mt-2 text-sm text-ink-300">Specialist answer engine optimisation services.</p>
       </a>
       <a href="/geo-agency/" class="card card-hover block p-6">
         <h3 class="font-display font-semibold text-ink-50">GEO Agency</h3>
-        <p class="mt-2 text-sm text-ink-400">End-to-end GEO strategy, audit, and implementation.</p>
+        <p class="mt-2 text-sm text-ink-300">End-to-end GEO strategy, audit, and implementation.</p>
       </a>
     </div>
   </section>

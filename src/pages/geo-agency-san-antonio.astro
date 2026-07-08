@@ -1,0 +1,392 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO Agency for San Antonio Businesses | GEOoptimised';
+const description = 'Remote GEO services for San Antonio businesses. Get cited by ChatGPT, Perplexity, and Google AI Overviews. Specialist generative engine optimisation agency.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Generative Engine Optimisation for San Antonio Businesses",
+    "serviceType": "Generative Engine Optimisation",
+    "description": "Remote generative engine optimisation services for businesses based in San Antonio, Texas. We help brands earn citations in AI-generated answers across ChatGPT, Perplexity, Gemini, and Google AI Overviews.",
+    "provider": { "@id": "https://geooptimised.com/#organization" },
+    "areaServed": { "@type": "City", "name": "San Antonio" },
+    "url": "https://geooptimised.com/geo-agency-san-antonio/",
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "inLanguage": "en-GB"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you have an office in San Antonio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. GEOoptimised is a UK-based agency that works with San Antonio clients entirely remotely. All discovery calls, strategy sessions, reporting, and delivery happen online. Remote engagement has no impact on the depth or quality of our GEO work — generative engine optimisation is a digital discipline that does not require physical proximity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is GEO relevant for San Antonio businesses specifically?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "San Antonio has a large and growing economy anchored in energy, defence contracting, healthcare systems, financial services, and tourism-adjacent hospitality. In B2B-heavy sectors such as defence, energy, and professional services, buyers increasingly use AI tools to shortlist providers. GEO ensures your brand appears in those AI-generated shortlists rather than competitors who have already invested in AI visibility."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does GEO differ from standard SEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SEO is optimised for traditional search engine results pages — ranked lists of ten links. GEO is optimised for AI-generated answers, which replace those results with synthesised responses citing one to three sources. The signals, content strategy, and measurement framework are fundamentally different. GEO and SEO are complementary but require separate specialist expertise."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which AI platforms do you cover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our San Antonio engagements cover ChatGPT, Perplexity, Google Gemini, Microsoft Copilot, and Google AI Overviews. Citation behaviour differs between platforms — a prompt that surfaces your brand in ChatGPT may not produce the same result in Gemini. We build platform-specific monitoring and adjustment into every programme from the start."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How soon will a San Antonio business see GEO results?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GEO programmes are designed to surface measurable changes in AI citation frequency within 60 to 90 days of work beginning. For San Antonio B2B businesses — particularly those in defence, energy, or healthcare — the audit phase typically reveals clear competitor citation gaps that close progressively as entity authority and content structure improve. Full platform positioning usually takes four to six months."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does a GEO audit include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The audit maps your current citation frequency across all major AI platforms, identifies competitor citation patterns in your sector, assesses your entity presence in knowledge graphs, reviews your structured data, and produces a prioritised action plan. It typically takes two to three weeks to complete."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://geooptimised.com/" },
+      { "@type": "ListItem", "position": 2, "name": "GEO Agency Near You", "item": "https://geooptimised.com/geo-near-you/" },
+      { "@type": "ListItem", "position": 3, "name": "GEO Agency for San Antonio Businesses", "item": "https://geooptimised.com/geo-agency-san-antonio/" }
+    ]
+  }
+];
+
+const deliverables = [
+  {
+    phase: 'Audit',
+    weeks: 'Weeks 1–3',
+    items: [
+      'AI citation mapping for San Antonio-relevant queries across all five major platforms',
+      'Sector-specific competitor citation analysis (defence, energy, healthcare, professional services)',
+      'Entity presence review in knowledge graphs and industry databases',
+      'Structured data and technical GEO infrastructure assessment',
+      'Prioritised action plan with estimated impact and sequencing',
+    ],
+  },
+  {
+    phase: 'Foundation',
+    weeks: 'Weeks 3–8',
+    items: [
+      'Structured data deployment for GEO requirements (Service, FAQPage, HowTo, Person, sameAs)',
+      'Entity graph reinforcement across Wikidata, Google Knowledge Graph, and San Antonio sector databases',
+      'llms.txt setup and AI crawler signal optimisation',
+      'Content restructuring on your highest-value pages for LLM citation readiness',
+    ],
+  },
+  {
+    phase: 'Optimisation',
+    weeks: 'Weeks 8–16',
+    items: [
+      'Systematic content optimisation ordered by commercial query value',
+      'Platform-specific adjustments based on early monitoring data',
+      'New citation-target content for identified coverage gaps',
+      'Third-party source development to reinforce entity authority',
+    ],
+  },
+  {
+    phase: 'Iteration',
+    weeks: 'Ongoing',
+    items: [
+      'Monthly citation frequency reporting across ChatGPT, Perplexity, Gemini, Copilot, AI Overviews',
+      'Competitive benchmarking within San Antonio sector segments',
+      'Continuous content refinement driven by live monitoring data',
+      'Quarterly strategy reviews responding to platform changes and commercial objectives',
+    ],
+  },
+];
+
+const faqs = [
+  {
+    q: 'Do you have an office in San Antonio?',
+    a: 'No. GEOoptimised is a UK-based agency that works with San Antonio clients entirely remotely. All discovery calls, strategy sessions, reporting, and delivery happen online. Remote engagement has no impact on the depth or quality of our GEO work — generative engine optimisation is a digital discipline that does not require physical proximity.',
+  },
+  {
+    q: 'Why is GEO relevant for San Antonio businesses specifically?',
+    a: 'San Antonio has a large and growing economy anchored in energy, defence contracting, healthcare systems, financial services, and tourism-adjacent hospitality. In B2B-heavy sectors such as defence, energy, and professional services, buyers increasingly use AI tools to shortlist providers. GEO ensures your brand appears in those AI-generated shortlists rather than competitors who have already invested in AI visibility.',
+  },
+  {
+    q: 'How does GEO differ from standard SEO?',
+    a: 'SEO is optimised for traditional search engine results pages — ranked lists of ten links. GEO is optimised for AI-generated answers, which replace those results with synthesised responses citing one to three sources. The signals, content strategy, and measurement framework are fundamentally different. GEO and SEO are complementary but require separate specialist expertise.',
+  },
+  {
+    q: 'Which AI platforms do you cover?',
+    a: 'Our San Antonio engagements cover ChatGPT, Perplexity, Google Gemini, Microsoft Copilot, and Google AI Overviews. Citation behaviour differs between platforms — a prompt that surfaces your brand in ChatGPT may not produce the same result in Gemini. We build platform-specific monitoring and adjustment into every programme from the start.',
+  },
+  {
+    q: 'How soon will a San Antonio business see GEO results?',
+    a: 'GEO programmes are designed to surface measurable changes in AI citation frequency within 60 to 90 days of work beginning. For San Antonio B2B businesses — particularly those in defence, energy, or healthcare — the audit phase typically reveals clear competitor citation gaps that close progressively as entity authority and content structure improve. Full platform positioning usually takes four to six months.',
+  },
+  {
+    q: 'What does a GEO audit include?',
+    a: 'The audit maps your current citation frequency across all major AI platforms, identifies competitor citation patterns in your sector, assesses your entity presence in knowledge graphs, reviews your structured data, and produces a prioritised action plan. It typically takes two to three weeks to complete.',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/geo-agency-san-antonio/"
+  ogType="website"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex items-center gap-1.5 text-sm text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-near-you/" class="transition hover:text-[var(--accent)]">GEO Agency Near You</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">San Antonio</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Local Service</span>
+        <span class="font-mono text-xs text-ink-300">Remote delivery &bull; San Antonio, TX</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO Agency for San Antonio Businesses
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">San Antonio businesses operating in energy, defence, healthcare, and professional services face growing AI search competition</strong> — buyers are consulting ChatGPT, Perplexity, and Google AI Overviews before they ever contact a supplier. GEOoptimised delivers specialist generative engine optimisation remotely, helping San Antonio brands earn the AI citations that translate into qualified enquiries.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="/contact/" class="btn btn-primary">Request a free GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Body -->
+  <div class="container-wide py-12">
+
+    <!-- Key Takeaways -->
+    <div class="card p-6 mb-14 max-w-3xl">
+      <span class="eyebrow">Key Takeaways</span>
+      <ul class="mt-4 space-y-2 text-sm text-ink-200">
+        <li class="flex items-start gap-2">
+          <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+          <span>GEOoptimised is a UK-based agency — all San Antonio work is delivered remotely, with no fabricated local office or staff.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+          <span>San Antonio's energy, defence, and healthcare sectors are high-value GEO targets where AI search adoption is accelerating.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+          <span>Every engagement starts with a structured AI visibility audit before any optimisation work begins.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+          <span>Measurable citation improvements are built to emerge within 60 to 90 days of the programme starting. Competitive positioning across platforms deepens over four to six months.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Why San Antonio businesses need GEO -->
+    <div class="prose-dark max-w-3xl">
+      <h2 id="why-geo-san-antonio" class="anchor-top">Why San Antonio Businesses Need a GEO Strategy</h2>
+      <p>
+        <strong>San Antonio's commercial economy is broad and increasingly exposed to AI search at every stage of the buyer journey.</strong> The city's economic base spans military and defence contracting — anchored by the large installations on the city's outskirts — through to a growing healthcare ecosystem, a significant energy sector, financial services, and a hospitality and tourism industry of considerable scale. In the B2B-heavy segments of this economy, buyers are no longer simply running Google searches to shortlist vendors. They are asking AI tools: "Which cybersecurity firms specialise in defence contracting in Texas?" or "What are the best energy management consultancies in the San Antonio area?"
+      </p>
+      <p>
+        When an AI tool answers those questions, it cites the sources it treats as authoritative — the brands with strong entity presence, citation-ready content, and structured data that LLMs can parse and quote confidently. Businesses that have invested in <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> appear in those answers. Those that have not are structurally absent.
+      </p>
+      <p>
+        This gap is not a long-term trend to monitor — it is a current competitive dynamic. San Antonio businesses competing in high-consideration B2B categories face citation disadvantages against rivals who moved earlier. GEO is how you close that gap and then extend the lead. As a specialist <a href="/geo-agency/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO agency</a>, we build the full infrastructure required to earn and sustain AI citations.
+      </p>
+    </div>
+
+    <!-- GEO for San Antonio sectors -->
+    <div class="prose-dark max-w-3xl mt-16">
+      <h2 id="san-antonio-sectors" class="anchor-top">Sectors in San Antonio Where AI Citation Visibility Matters Most</h2>
+      <p>
+        <strong>The sectors with the highest commercial return from GEO investment share a common characteristic: buyers research extensively before committing.</strong> San Antonio's economy has several such sectors at scale.
+      </p>
+      <p>
+        <strong>Defence and government contracting.</strong> Companies providing services to military installations or federal agencies operate in a procurement environment where programme managers and contracting officers increasingly use AI tools in preliminary research phases. A contractor that appears credibly in AI answers when specific capability queries are run is already ahead in the consideration process.
+      </p>
+      <p>
+        <strong>Energy and utilities.</strong> San Antonio's energy sector includes both traditional oil and gas operations and a growing renewables and smart-grid segment. Engineering firms, consultancies, and specialist technology providers in this space face buyers who use AI tools to evaluate solutions and shortlist vendors. Entity authority — being recognised as a credible source on specific technical topics — is the determining factor in citation frequency.
+      </p>
+      <p>
+        <strong>Healthcare and life sciences.</strong> The South Texas Medical Center represents a significant concentration of healthcare providers, research institutions, and adjacent services. Patients research providers using AI tools; administrators evaluate enterprise vendors the same way. Medical practices, health IT firms, and pharmaceutical-adjacent businesses in this cluster all have measurable GEO opportunity.
+      </p>
+      <p>
+        <strong>Professional and financial services.</strong> Law firms, accounting practices, management consultancies, and financial advisers serving San Antonio's corporate and individual clients operate in a category where AI tool use in buyer research is growing fastest. Being cited by name in an AI answer when a prospective client asks for a recommendation is the modern equivalent of a referral.
+      </p>
+      <p>
+        For a detailed breakdown of what the underlying optimisation work involves, see our <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services overview</a>.
+      </p>
+    </div>
+
+    <!-- How remote delivery works -->
+    <div class="prose-dark max-w-3xl mt-16">
+      <h2 id="remote-delivery" class="anchor-top">Remote GEO Delivery: What San Antonio Clients Should Expect</h2>
+      <p>
+        <strong>GEOoptimised is based in the UK and delivers all work remotely — no San Antonio office, no local account team, no fabricated Texas presence.</strong> We state this plainly because a service built on accuracy and entity authority should itself be accurate about how it operates.
+      </p>
+      <p>
+        San Antonio runs on Central Time. UK business hours overlap from roughly 9am to 2pm CT each working day — broader than for East Coast or West Coast clients — giving ample room for synchronous calls at times that work for both parties. Onboarding, strategy sessions, and monthly reviews happen via video; all other delivery is asynchronous, with written weekly progress updates and shared audit documents. Communication cadence is set to each client's preference. For what the full engagement scope covers, see our <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services overview</a>.
+      </p>
+    </div>
+
+    <!-- Deliverables table -->
+    <div class="mt-16">
+      <h2 class="font-display text-2xl font-bold text-ink-50 mb-3">What the Engagement Delivers</h2>
+      <p class="text-ink-300 mb-8 max-w-2xl leading-relaxed">
+        <strong class="text-ink-100">Every GEO engagement follows a structured four-phase programme</strong> with defined deliverables, measurable milestones, and clear dependencies at each stage.
+      </p>
+      <div class="card overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead>
+              <tr class="border-b border-[var(--line)]">
+                <th class="px-6 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Phase</th>
+                <th class="px-6 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Timing</th>
+                <th class="px-6 py-4 font-mono text-xs uppercase tracking-wider text-[var(--accent)]">Key Deliverables</th>
+              </tr>
+            </thead>
+            <tbody class="text-ink-300">
+              {deliverables.map((row, i) => (
+                <tr class={i < deliverables.length - 1 ? 'border-b border-[var(--line-soft)]' : ''}>
+                  <td class="px-6 py-4 font-semibold text-ink-100 align-top">{row.phase}</td>
+                  <td class="px-6 py-4 font-mono text-xs text-ink-300 align-top whitespace-nowrap">{row.weeks}</td>
+                  <td class="px-6 py-4 align-top">
+                    <ul class="space-y-1">
+                      {row.items.map(item => (
+                        <li class="flex items-start gap-2">
+                          <span class="mt-0.5 text-[var(--accent)] shrink-0">&#10003;</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="prose-dark mt-16">
+      <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="mt-8 max-w-3xl space-y-2" id="faq-accordion">
+      {faqs.map(faq => (
+        <div class="card overflow-hidden">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+            aria-expanded="false"
+          >
+            <span>{faq.q}</span>
+            <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+          </button>
+          <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+            <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Related reading -->
+    <div class="mt-16">
+      <span class="eyebrow">Related reading</span>
+      <div class="mt-6 grid gap-6 md:grid-cols-3">
+        <a href="/geo-near-you/" class="card card-hover block p-5 no-underline">
+          <span class="eyebrow">Hub</span>
+          <h3 class="mt-2 font-display text-base font-semibold text-white">GEO Agency Near You</h3>
+          <p class="mt-2 text-sm text-ink-300">Remote GEO services for businesses across the US and beyond.</p>
+          <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">View hub <span aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a href="/geo-agency-long-island/" class="card card-hover block p-5 no-underline">
+          <span class="eyebrow">Local Service</span>
+          <h3 class="mt-2 font-display text-base font-semibold text-white">GEO Agency for Long Island Businesses</h3>
+          <p class="mt-2 text-sm text-ink-300">Remote GEO services for finance, healthcare, and professional services firms on Long Island.</p>
+          <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a href="/geo-agency-dc/" class="card card-hover block p-5 no-underline">
+          <span class="eyebrow">Local Service</span>
+          <h3 class="mt-2 font-display text-base font-semibold text-white">GEO Agency for Washington, D.C. Businesses</h3>
+          <p class="mt-2 text-sm text-ink-300">Remote GEO services for policy, consulting, and government-adjacent firms in the D.C. area.</p>
+          <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12">
+    <div class="container-wide py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Start With a GEO Audit</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Every San Antonio engagement opens with a structured AI visibility audit: querying all five major platforms with the prompts your target sectors use, mapping competitor citations, and producing a clear prioritised action plan. Remote delivery, specialist expertise, measurable outcomes.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request your free GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all services</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('#faq-accordion button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling;
+        const icon = btn.querySelector('.faq-icon');
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+  </script>
+
+</Base>

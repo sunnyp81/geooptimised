@@ -1,0 +1,735 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'AEO Best Practices: Win Answer Engine Citations | GEOoptimised';
+const description = 'AEO best practices for earning featured snippets and AI citations: structured writing, FAQ schema, entity signals, and platform-specific tactics, all in one guide.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'AEO Best Practices: How to Win Answer Engine Citations',
+    description: 'AEO best practices for earning featured snippets and AI citations: structured writing, FAQ schema, entity signals, and platform-specific tactics.',
+    url: 'https://geooptimised.com/aeo-best-practices/',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://geooptimised.com/aeo-best-practices/'
+    },
+    author: {
+      '@id': 'https://geooptimised.com/#organization'
+    },
+    publisher: {
+      '@id': 'https://geooptimised.com/#organization'
+    },
+    datePublished: '2026-06-07',
+    dateModified: '2026-06-07',
+    image: 'https://geooptimised.com/og-image.png',
+    inLanguage: 'en-GB'
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What are the most important AEO best practices?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The most important AEO best practices are: opening every section with a direct 40–100 word answer to the target query; using question-based H2 headings that mirror natural-language search; implementing FAQPage schema on every page with a FAQ section; writing in single-point paragraphs of two to four sentences; and deploying Article schema to establish the content as an authored, credible source. These five practices address the content structure, metadata, and authority signals that answer engines evaluate when selecting citations.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Does FAQ schema help with answer engine optimisation?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. FAQPage schema is one of the strongest AEO signals available. It explicitly maps question-answer pairs in machine-readable JSON-LD format, which answer engines — including Google AI Overviews, featured snippets, and conversational AI platforms — use to identify and extract direct answers. Combine FAQPage schema with on-page FAQ sections that mirror the questions in the schema, using complete 40–100 word standalone answers for each entry.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How does content structure affect AEO performance?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Content structure is the primary determinant of AEO performance. Answer engines extract discrete passages from your page — they do not read it as a continuous narrative. Content structured as self-contained, labelled sections with direct answers at the top of each section is far more extractable than content written as flowing prose. Format choice also matters: paragraph blocks for definitional queries, ordered lists for procedural queries, and tables for comparative queries match the answer format each query type expects.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the ideal answer length for AEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The ideal answer length for AEO paragraph responses is 40–100 words. This range is long enough to be a complete, self-contained answer and short enough to be extracted cleanly without truncation. Voice assistant answers should target 30–50 words, as assistants will not read extended passages. For list-format answers, four to eight items is the optimal range. For table answers, five to ten rows with clear column headers is typical for featured snippet selection.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How should I optimise for voice search as part of AEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Voice search AEO requires answers of 30–50 words that sound natural when read aloud. Voice queries are conversational and frequently start with "how," "what," "why," "when," or "who." Write answers that begin with the subject of the question — "Answer engine optimisation is…" not "In answer to your question…" — and avoid jargon, abbreviations, or punctuation-heavy structures that do not translate to spoken audio. Speakable schema can be used to explicitly mark passages intended for voice extraction.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Should AEO and SEO best practices be applied together?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. AEO best practices build on, rather than replace, strong SEO foundations. Answer engines select content from pages they can crawl, index, and assess as authoritative — all of which require solid technical SEO. For Google AI Overviews specifically, organic ranking in the top five is often a prerequisite for citation inclusion. Apply AEO structural practices on top of a technically sound site with genuine topical authority, and both disciplines will reinforce each other.'
+        }
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Answer Engine Optimisation', item: 'https://geooptimised.com/answer-engine-optimisation/' },
+      { '@type': 'ListItem', position: 3, name: 'AEO Best Practices', item: 'https://geooptimised.com/aeo-best-practices/' }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'why-practices-matter', label: 'Why These Practices Matter' },
+  { id: 'content-practices', label: 'Content Structure Practices' },
+  { id: 'schema-practices', label: 'Schema & Structured Data' },
+  { id: 'entity-practices', label: 'Entity & Authority Practices' },
+  { id: 'technical-practices', label: 'Technical AEO Practices' },
+  { id: 'voice-practices', label: 'Voice Search Practices' },
+  { id: 'practices-summary', label: 'Practices Summary Table' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' }
+];
+
+const contentPractices = [
+  {
+    number: '01',
+    title: 'Open every section with a direct answer',
+    detail: 'The first sentence after any heading that targets a query should directly answer that query in 40–100 words. No preamble, no rhetorical questions, no "in this section we will explain." Answer engines extract the passage immediately following the relevant heading — if that passage is not a direct answer, they move to the next candidate. This practice alone is responsible for the largest share of featured snippet gains in AEO programmes.'
+  },
+  {
+    number: '02',
+    title: 'Use question-based headings',
+    detail: 'H2 and H3 headings should mirror the natural-language queries your target audience submits. "What is answer engine optimisation?" outperforms "Overview" because answer engines match query text to heading text before evaluating body content. Research the specific question phrasing users employ — not a paraphrase of it — using Google\'s People Also Ask boxes and autocomplete as your primary source of actual query language.'
+  },
+  {
+    number: '03',
+    title: 'Write single-point paragraphs',
+    detail: 'Every paragraph should cover exactly one idea in two to four sentences. Multi-concept paragraphs cannot be cleanly extracted as standalone citation units. If a paragraph requires reading adjacent paragraphs to make sense, answer engines may skip it entirely. The discipline of single-point paragraphs also improves readability for human users — it is not a trade-off between machine and human optimisation but an improvement for both.'
+  },
+  {
+    number: '04',
+    title: 'Match content format to query type',
+    detail: 'Definitional queries ("what is X") expect paragraph answers. Procedural queries ("how to X") expect numbered lists. Comparative queries ("X vs Y") expect tables. Check existing SERPs for your target query before writing — the format Google currently uses for featured snippets on that query is the format that will extract best. Mismatching format to query type is one of the most common reasons structurally sound content fails to earn answer engine selection.'
+  },
+  {
+    number: '05',
+    title: 'Lead sections with bold declarative statements',
+    detail: 'Bold the first sentence of each section. This serves two functions: it signals to humans that this is the key claim, and it signals to AI extraction systems that this is the primary assertion of the section. Large language models show a consistent preference for content that makes confident, quotable declarative statements over content that hedges, qualifies, or frames before asserting. Be definitive. AI engines cite confidence.'
+  }
+];
+
+const schemaPractices = [
+  {
+    type: 'FAQPage',
+    use: 'Any page with a FAQ section',
+    impact: 'Critical',
+    notes: 'Explicitly maps Q&A pairs for machine extraction. Use complete 40–100 word answers in each acceptedAnswer field.'
+  },
+  {
+    type: 'Article / TechArticle',
+    use: 'All content pages',
+    impact: 'High',
+    notes: 'Labels content as authored, dated publication from a named entity. Include author and publisher as @id references.'
+  },
+  {
+    type: 'BreadcrumbList',
+    use: 'All non-homepage pages',
+    impact: 'Medium',
+    notes: 'Signals topical hierarchy to knowledge graph crawlers. Reinforces the NODE/SEED architecture in structured data.'
+  },
+  {
+    type: 'HowTo',
+    use: 'Step-by-step procedural content',
+    impact: 'High',
+    notes: 'Triggers rich results for procedural queries. Include tool, supply, step, and duration fields for maximum signal.'
+  },
+  {
+    type: 'Organization',
+    use: 'Homepage and sitewide entity graph',
+    impact: 'High',
+    notes: 'Anchor entity identity with name, url, logo, sameAs links. GEOoptimised deploys this sitewide via the Base layout.'
+  },
+  {
+    type: 'Product / Service',
+    use: 'Commercial offering pages',
+    impact: 'Medium',
+    notes: 'Required for commercial queries with shopping-intent. Include offer, price, and review data where applicable.'
+  }
+];
+
+const entityPractices = [
+  {
+    title: 'Maintain identical entity descriptions everywhere',
+    detail: 'Your brand name, founding date, service category, and description should be word-for-word identical across your website, Google Business Profile, Wikidata, LinkedIn, and any structured data. Variation — even minor phrasing differences — creates entity ambiguity that AI models resolve by deprioritising your brand in favour of more consistently-described competitors.'
+  },
+  {
+    title: 'Add sameAs links to Organisation schema',
+    detail: 'The sameAs property connects your schema entity to authoritative third-party identifiers: Wikidata Q-numbers, LinkedIn company URLs, Companies House entries, and any domain where your entity is authoritatively described. These links consolidate entity signals so that knowledge graph crawlers treat all representations as a single, resolved entity rather than multiple unconnected records.'
+  },
+  {
+    title: 'Build topical authority through content clustering',
+    detail: 'Answer engines preferentially cite sources that demonstrate comprehensive expertise in a subject area. A single well-structured page on AEO will earn fewer citations than a domain with comprehensive, interlinked coverage of AEO, GEO, featured snippets, and AI search. Build topical clusters — a parent NODE with multiple SEED pages — and link them together systematically.'
+  },
+  {
+    title: 'Maintain an up-to-date llms.txt file',
+    detail: 'The llms.txt convention — a plain-text file at your domain root — declares your site\'s purpose and expertise areas to AI crawlers. While not universally adopted, it is the closest equivalent to robots.txt for the generative AI layer and helps AI systems categorise your domain correctly. Update it whenever you add significant new content areas.'
+  }
+];
+
+const technicalPractices = [
+  {
+    signal: 'AI crawler access',
+    practice: 'Allow GPTBot, PerplexityBot, ClaudeBot in robots.txt',
+    priority: 'Critical'
+  },
+  {
+    signal: 'Schema validation',
+    practice: 'Test every schema block with Google Rich Results Test before deploy',
+    priority: 'High'
+  },
+  {
+    signal: 'Canonical URLs',
+    practice: 'One canonical per page; no trailing slash inconsistency',
+    priority: 'High'
+  },
+  {
+    signal: 'Internal linking',
+    practice: 'Every SEED links to its NODE and ROOT; cross-topic bridges where relevant',
+    priority: 'Medium'
+  },
+  {
+    signal: 'Page speed',
+    practice: 'LCP under 2.5 s, CLS under 0.1 — slow pages receive lower crawl priority',
+    priority: 'Medium'
+  },
+  {
+    signal: 'Semantic HTML',
+    practice: 'Use <article>, <section>, <nav>, <ol>, <table> — not generic <div> wrappers',
+    priority: 'Medium'
+  },
+  {
+    signal: 'Content freshness',
+    practice: 'Update dateModified in schema on every content revision',
+    priority: 'Medium'
+  }
+];
+
+const faqs = [
+  {
+    q: 'What are the most important AEO best practices?',
+    a: 'The most important AEO best practices are: opening every section with a direct 40–100 word answer to the target query; using question-based H2 headings that mirror natural-language search; implementing FAQPage schema on every page with a FAQ section; writing in single-point paragraphs of two to four sentences; and deploying Article schema to establish the content as an authored, credible source.'
+  },
+  {
+    q: 'Does FAQ schema help with answer engine optimisation?',
+    a: 'Yes. FAQPage schema is one of the strongest AEO signals available. It explicitly maps question-answer pairs in machine-readable JSON-LD format, which answer engines use to identify and extract direct answers. Combine FAQPage schema with on-page FAQ sections that mirror the questions in the schema, using complete 40–100 word standalone answers for each entry.'
+  },
+  {
+    q: 'How does content structure affect AEO performance?',
+    a: 'Content structure is the primary determinant of AEO performance. Answer engines extract discrete passages from your page — they do not read it as a continuous narrative. Content structured as self-contained, labelled sections with direct answers at the top of each section is far more extractable than content written as flowing prose.'
+  },
+  {
+    q: 'What is the ideal answer length for AEO?',
+    a: 'The ideal answer length for AEO paragraph responses is 40–100 words. This range is long enough to be a complete, self-contained answer and short enough to be extracted cleanly without truncation. Voice assistant answers should target 30–50 words. For list-format answers, four to eight items is the optimal range.'
+  },
+  {
+    q: 'How should I optimise for voice search as part of AEO?',
+    a: 'Voice search AEO requires answers of 30–50 words that sound natural when read aloud. Voice queries are conversational and frequently start with "how," "what," "why," "when," or "who." Write answers that begin with the subject of the question and avoid jargon or punctuation-heavy structures that do not translate to spoken audio.'
+  },
+  {
+    q: 'Should AEO and SEO best practices be applied together?',
+    a: 'Yes. AEO best practices build on, rather than replace, strong SEO foundations. Answer engines select content from pages they can crawl, index, and assess as authoritative — all of which require solid technical SEO. For Google AI Overviews specifically, organic ranking in the top five is often a prerequisite for citation inclusion.'
+  }
+];
+
+const related = [
+  {
+    tag: 'NODE',
+    title: 'Answer Engine Optimisation: Complete Guide',
+    excerpt: 'The parent guide to AEO — definition, how it works, AEO vs SEO, and getting started.',
+    href: '/answer-engine-optimisation/'
+  },
+  {
+    tag: 'Guide',
+    title: 'How AEO Works',
+    excerpt: 'A detailed breakdown of the four-stage query → retrieval → synthesis → citation pipeline.',
+    href: '/how-aeo-works/'
+  },
+  {
+    tag: 'Guide',
+    title: 'AEO Definition',
+    excerpt: 'A concise, citable definition of answer engine optimisation and its core concepts.',
+    href: '/aeo-definition/'
+  },
+  {
+    tag: 'Guide',
+    title: 'AEO Examples',
+    excerpt: 'Real-world examples of answer engine optimisation in action across industries.',
+    href: '/aeo-examples/'
+  }
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/aeo-best-practices/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/answer-engine-optimisation/" class="transition hover:text-[var(--accent)]">Answer Engine Optimisation</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">AEO Best Practices</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Best Practices</span>
+        <span class="font-mono text-xs text-ink-300">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">13 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        AEO Best Practices: How to Win Answer Engine Citations
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">AEO best practices are defined by one standard: they make content extractable, attributable, and structurally matched to what answer engines select.</strong> This guide groups the practices into five categories — content structure, schema, entity authority, technical signals, and voice search — so you can audit and implement each layer systematically. Every practice is drawn from the observable patterns of content that earns citations across Google AI Overviews, featured snippets, Perplexity, and conversational AI.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column layout -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" id="toc-nav" aria-label="Table of contents">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Five content structure practices — direct openings, question headings, single-point paragraphs, format matching, and bold declaratives — account for the majority of AEO citation gains.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>FAQPage, Article, and BreadcrumbList schema are the minimum structured data stack for AEO; HowTo schema adds significant signal for procedural content.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Entity consistency — identical descriptions across every platform — is the most durable and least-implemented AEO practice.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Technical signals (AI crawler access, canonical URLs, semantic HTML) act as multipliers; blocking AI crawlers negates all content and schema work.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>AEO builds on top of strong SEO foundations — it is an additional optimisation layer, not a replacement for organic search fundamentals.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Why These Practices Matter -->
+      <div class="prose-dark">
+        <h2 id="why-practices-matter" class="anchor-top">Why AEO Best Practices Are Different from SEO Best Practices</h2>
+        <p>
+          <strong>AEO best practices optimise for machine extraction, not human engagement — and that distinction changes almost every content decision.</strong> Traditional SEO content is designed to attract clicks from a results page, engage a reader, and reduce bounce rate. AEO content is designed to be pulled apart, have its most relevant passage extracted, and be attributed as the source of an AI-generated answer. The user may never visit your page.
+        </p>
+        <p>
+          This difference has direct implications. SEO tolerates — even rewards — long introductory paragraphs that build context and hook the reader. AEO penalises them: answer engines extract the passage immediately following the most relevant heading. If that passage is an introduction rather than an answer, the engine moves on. SEO benefits from flowing, interconnected prose that demonstrates depth. AEO requires discrete, self-contained sections that function as standalone citation units.
+        </p>
+        <p>
+          The practices below are not theoretical — they reflect the structural patterns consistently observed in content that earns featured snippet selection, Google AI Overviews citations, and Perplexity source attribution. For the underlying mechanics that explain why each practice works, see the <a href="/how-aeo-works/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how AEO works guide</a>. For the broader <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO framework</a> these practices sit within, see the root guide.
+        </p>
+      </div>
+
+      <!-- Content Structure Practices -->
+      <div class="prose-dark mt-16">
+        <h2 id="content-practices" class="anchor-top">Content Structure Practices</h2>
+        <p>
+          <strong>Content structure is the single highest-leverage category of AEO best practices — it determines whether answer engines can extract your content at all.</strong> The five practices below are sequenced by impact. Implement them in this order for the fastest citation gains on existing content.
+        </p>
+      </div>
+
+      <ol class="mt-8 space-y-6">
+        {contentPractices.map(p => (
+          <li class="flex gap-5">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border hair font-display text-sm font-bold text-[var(--accent)]">
+              {p.number}
+            </span>
+            <div>
+              <h3 class="font-display text-lg font-semibold text-white">{p.title}</h3>
+              <p class="mt-1 text-sm leading-relaxed text-ink-300">{p.detail}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      <div class="prose-dark mt-10">
+        <p>
+          These five practices apply across all page types. For an in-depth treatment of how they map to the answer engine pipeline, see <a href="/how-aeo-works/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how AEO works</a>. For examples of each practice applied to real content, see <a href="/aeo-examples/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO examples</a>. For a comparison with SEO writing conventions, see <a href="/aeo-vs-seo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO vs SEO</a>.
+        </p>
+      </div>
+
+      <!-- Schema Practices -->
+      <div class="prose-dark mt-16">
+        <h2 id="schema-practices" class="anchor-top">Schema &amp; Structured Data Practices</h2>
+        <p>
+          <strong>Schema markup is the layer of AEO that converts content quality into machine-readable authority signals — and it is consistently under-implemented.</strong> Schema does not directly cause answer engine selection, but it removes the ambiguity that causes engines to deprioritise sources. A page with correct Article schema is labelled as a publication by a named, dated author. A page without it is an anonymous document of unknown provenance.
+        </p>
+        <p>
+          Implement all schema as JSON-LD in the document head. Avoid Microdata and RDFa — JSON-LD is the format preferred by Google's structured data processing and is easier to maintain as a separate block rather than inline with HTML. Validate every implementation with Google's Rich Results Test before publishing. Invalid schema is actively harmful — it signals unreliable metadata to answer engines.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Schema Type</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">When to Deploy</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">AEO Impact</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Key Notes</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[var(--line)]">
+            {schemaPractices.map(row => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class="px-4 py-3 font-mono text-xs text-[var(--accent)]">{row.type}</td>
+                <td class="px-4 py-3 text-ink-300">{row.use}</td>
+                <td class="px-4 py-3">
+                  <span class={`inline-block rounded px-2 py-0.5 text-xs font-semibold ${row.impact === 'Critical' ? 'bg-accent-600/20 text-accent-300' : row.impact === 'High' ? 'bg-geo-700/30 text-ink-100' : 'bg-geo-800/30 text-ink-300'}`}>
+                    {row.impact}
+                  </span>
+                </td>
+                <td class="px-4 py-3 text-ink-300 text-xs leading-relaxed">{row.notes}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          For the GEOoptimised site, Organization schema is deployed sitewide through the Base layout as a persistent knowledge-graph entity graph. Per-page schema references this entity by <code class="bg-geo-900 text-accent-300 px-1.5 py-0.5 rounded text-xs border border-geo-700">@id</code> rather than re-declaring it — this is best practice for maintaining entity consistency and avoiding conflicting declarations across pages.
+        </p>
+      </div>
+
+      <!-- Entity Practices -->
+      <div class="prose-dark mt-16">
+        <h2 id="entity-practices" class="anchor-top">Entity &amp; Authority Practices</h2>
+        <p>
+          <strong>Entity authority is the most durable AEO signal — and the most commonly neglected by brands that focus exclusively on content structure.</strong> An entity, in the AI context, is how a machine-readable system resolves your brand: what it is, what it does, where it operates, and how it relates to other entities. Brands with clearly resolved entities earn more citations, more reliably, over time than brands with structurally excellent content but ambiguous entity signals.
+        </p>
+      </div>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        {entityPractices.map(p => (
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">{p.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">{p.detail}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Technical Practices -->
+      <div class="prose-dark mt-16">
+        <h2 id="technical-practices" class="anchor-top">Technical AEO Practices</h2>
+        <p>
+          <strong>Technical AEO signals are the prerequisites that determine how much of your content's citation potential is actually realised.</strong> Excellent content blocked by robots.txt earns zero citations. Perfect schema markup on a slow, poorly-crawled site provides minimal benefit. The technical layer does not substitute for content quality — but it multiplies it.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Technical Signal</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Best Practice</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Priority</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[var(--line)]">
+            {technicalPractices.map(row => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class="px-4 py-3 font-mono text-xs text-[var(--accent)]">{row.signal}</td>
+                <td class="px-4 py-3 text-ink-300">{row.practice}</td>
+                <td class="px-4 py-3">
+                  <span class={`inline-block rounded px-2 py-0.5 text-xs font-semibold ${row.priority === 'Critical' ? 'bg-accent-600/20 text-accent-300' : row.priority === 'High' ? 'bg-geo-700/30 text-ink-100' : 'bg-geo-800/30 text-ink-300'}`}>
+                    {row.priority}
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          The most frequently missed technical practice is AI crawler access. Many sites that blocked GPTBot and similar user-agents in 2023–2024 as a training-data defence measure are still blocking citation retrieval today. The same bots that scrape training data also drive retrieval-augmented generation — they cannot be separated. If earning AI citations is your objective, you must allow these crawlers. Review your robots.txt and add explicit allow directives for GPTBot, PerplexityBot, ClaudeBot, and Bingbot.
+        </p>
+      </div>
+
+      <!-- Voice Search Practices -->
+      <div class="prose-dark mt-16">
+        <h2 id="voice-practices" class="anchor-top">Voice Search AEO Practices</h2>
+        <p>
+          <strong>Voice search operates on a single-answer model that makes AEO selection binary: you are either the answer or you are invisible.</strong> When a user asks Siri, Alexa, or Google Assistant a question, the assistant selects one source and reads one answer. There is no "position two." This makes voice search the highest-stakes AEO surface and the one where structural practices have the most direct impact on visibility.
+        </p>
+
+        <h3>Answer Length for Voice</h3>
+        <p>
+          Voice assistants do not read extended passages. The optimal answer length for voice extraction is 30–50 words — enough to be a complete, standalone response, short enough to be read in ten to fifteen seconds without the listener losing context. Write voice-target answers as complete sentences that begin with the subject of the query: "Featured snippets are excerpts…" rather than "In answer to your question about featured snippets…"
+        </p>
+
+        <h3>Conversational Query Matching</h3>
+        <p>
+          Voice queries are an average of 6–8 words longer than typed queries and almost always phrased as natural-language questions. Target these longer-form questions explicitly. "What is the best way to optimise for voice search?" is a more realistic voice query than "voice search optimisation." Use Google autocomplete and People Also Ask results for voice-intent queries to identify the exact phrasing your audience uses.
+        </p>
+
+        <h3>Local Voice Search</h3>
+        <p>
+          A significant proportion of voice queries carry local intent: "best AEO agency near me," "who does answer engine optimisation in London." For brands serving a geographic area, local AEO requires a complete and accurate Google Business Profile, LocalBusiness schema, and content that explicitly mentions the service area. Local voice queries have high purchase intent — being the voice answer for these queries has direct commercial value.
+        </p>
+
+        <h3>Speakable Schema</h3>
+        <p>
+          The Speakable schema type allows you to explicitly mark passages designed for voice extraction. While Google Assistant support for Speakable is currently limited to news publishers, the schema is forward-compatible — implementing it now positions your content for expanded platform support as voice AEO matures. Mark paragraphs that contain your most concise, conversationally-phrased answers.
+        </p>
+      </div>
+
+      <!-- Practices Summary Table -->
+      <div class="prose-dark mt-16">
+        <h2 id="practices-summary" class="anchor-top">AEO Best Practices: Summary Reference</h2>
+        <p>
+          <strong>The table below summarises the full AEO best practices stack by category, implementation effort, and citation impact — use it as an audit checklist for any page or site.</strong>
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Category</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Practice</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Effort</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Citation Impact</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[var(--line)]">
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 text-[var(--accent)] font-semibold text-xs">Content</td>
+              <td class="px-4 py-3 text-ink-300">Direct 40–100 word answer at section opening</td>
+              <td class="px-4 py-3 text-ink-300">Low</td>
+              <td class="px-4 py-3 text-ink-300">Very High</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 text-[var(--accent)] font-semibold text-xs">Content</td>
+              <td class="px-4 py-3 text-ink-300">Question-based H2/H3 headings</td>
+              <td class="px-4 py-3 text-ink-300">Low</td>
+              <td class="px-4 py-3 text-ink-300">High</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 text-[var(--accent)] font-semibold text-xs">Content</td>
+              <td class="px-4 py-3 text-ink-300">Single-point paragraphs (2–4 sentences)</td>
+              <td class="px-4 py-3 text-ink-300">Low</td>
+              <td class="px-4 py-3 text-ink-300">High</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 text-[var(--accent)] font-semibold text-xs">Content</td>
+              <td class="px-4 py-3 text-ink-300">Format matched to query type (prose/list/table)</td>
+              <td class="px-4 py-3 text-ink-300">Medium</td>
+              <td class="px-4 py-3 text-ink-300">High</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 text-[var(--accent)] font-semibold text-xs">Schema</td>
+              <td class="px-4 py-3 text-ink-300">FAQPage schema on all FAQ sections</td>
+              <td class="px-4 py-3 text-ink-300">Medium</td>
+              <td class="px-4 py-3 text-ink-300">Very High</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 text-[var(--accent)] font-semibold text-xs">Schema</td>
+              <td class="px-4 py-3 text-ink-300">Article/TechArticle schema on all content pages</td>
+              <td class="px-4 py-3 text-ink-300">Medium</td>
+              <td class="px-4 py-3 text-ink-300">High</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 text-[var(--accent)] font-semibold text-xs">Schema</td>
+              <td class="px-4 py-3 text-ink-300">HowTo schema for procedural content</td>
+              <td class="px-4 py-3 text-ink-300">Medium</td>
+              <td class="px-4 py-3 text-ink-300">High (for procedural queries)</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 text-[var(--accent)] font-semibold text-xs">Entity</td>
+              <td class="px-4 py-3 text-ink-300">Identical entity descriptions across all platforms</td>
+              <td class="px-4 py-3 text-ink-300">Medium</td>
+              <td class="px-4 py-3 text-ink-300">High</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 text-[var(--accent)] font-semibold text-xs">Entity</td>
+              <td class="px-4 py-3 text-ink-300">sameAs links in Organisation schema</td>
+              <td class="px-4 py-3 text-ink-300">Low</td>
+              <td class="px-4 py-3 text-ink-300">Medium–High</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 text-[var(--accent)] font-semibold text-xs">Technical</td>
+              <td class="px-4 py-3 text-ink-300">Allow all AI crawlers in robots.txt</td>
+              <td class="px-4 py-3 text-ink-300">Very Low</td>
+              <td class="px-4 py-3 text-ink-300">Critical (gate-keeping)</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 text-[var(--accent)] font-semibold text-xs">Technical</td>
+              <td class="px-4 py-3 text-ink-300">Semantic HTML structure throughout</td>
+              <td class="px-4 py-3 text-ink-300">Low</td>
+              <td class="px-4 py-3 text-ink-300">Medium</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 text-[var(--accent)] font-semibold text-xs">Voice</td>
+              <td class="px-4 py-3 text-ink-300">Sub-50 word conversational answer paragraphs</td>
+              <td class="px-4 py-3 text-ink-300">Low</td>
+              <td class="px-4 py-3 text-ink-300">High (voice specifically)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          For the full treatment of how these practices map to the underlying answer engine pipeline, see <a href="/how-aeo-works/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how AEO works</a>. For the broader GEO best practices stack — covering entity authority, platform-specific behaviour, and cross-AI citation strategy — see our <a href="/geo-best-practices/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO best practices guide</a>. Our <a href="/aeo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO services</a> cover a full audit against this practices stack with prioritised implementation recommendations.
+        </p>
+      </div>
+
+      <!-- FAQ -->
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read guide <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="relative border-t hair mt-12 overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Put These AEO Practices to Work</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        GEOoptimised audits your content against the full AEO best practices stack, identifies where you are losing citations to competitors, and delivers a prioritised implementation plan. Our <a href="/aeo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO services</a> cover the complete pipeline — content, schema, entity, and technical signals.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request an AEO audit</a>
+        <a href="/aeo-services/" class="btn btn-ghost">View AEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const faqBtns = document.querySelectorAll('#faq-accordion button');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+
+    const tocLinks = document.querySelectorAll('#toc-nav a');
+    const headings = Array.from(
+      document.querySelectorAll('h2[id], h3[id]')
+    ) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(link => {
+              link.classList.remove('text-[var(--accent)]');
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.classList.add('text-[var(--accent)]');
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+
+    headings.forEach(h => observer.observe(h));
+  </script>
+
+</Base>

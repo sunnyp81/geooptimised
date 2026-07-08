@@ -1,0 +1,562 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO Roadmap 2026: A Phased Plan | GEOoptimised';
+const description = 'A phased GEO roadmap for 2026: 0–30, 30–90, and 90–180 day plans for building AI citation share across ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'GEO Roadmap 2026: A Phased Plan',
+    description: 'A phased GEO roadmap for 2026: 0–30, 30–90, and 90–180 day plans for building AI citation share across ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews.',
+    url: 'https://geooptimised.com/geo-roadmap/',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://geooptimised.com/geo-roadmap/'
+    },
+    image: 'https://geooptimised.com/og-image.png',
+    datePublished: '2026-06-07',
+    dateModified: '2026-06-07',
+    inLanguage: 'en-GB',
+    author: { '@id': 'https://geooptimised.com/#organization' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' }
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What should a GEO roadmap include?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'A GEO roadmap should cover three phases: foundation (0–30 days) — AI crawler access, entity definition, Organisation schema, baseline audit; build (30–90 days) — content restructuring, FAQ sections, Article and FAQPage schema, content gap filling; and compound (90–180 days) — authority source building, cross-platform monitoring, citation trend analysis, and iterative content optimisation. Each phase produces measurable outputs that feed the next.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How long does a GEO programme take to show results?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Initial citation improvements are typically measurable within 60–90 days for brands starting from a technically accessible baseline. The first 30 days are foundation work that does not produce direct citation gains but removes the blockers that prevent them. Days 30–90 produce the first measurable citation frequency increases. Days 90–180 are where compounding begins: authority signals from source-building start reinforcing content signals, producing citation gains that are faster and more durable than the initial improvements.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What are the milestones in a 6-month GEO roadmap?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Key milestones in a 6-month GEO roadmap are: Day 30 — AI crawlers unblocked, entity definition agreed, baseline audit complete, Organisation schema live; Day 60 — top 10 priority pages restructured for extraction, FAQ sections added, Article schema deployed; Day 90 — first citation frequency measurement showing improvement vs baseline; Day 120 — source-building producing first retrievable third-party mentions; Day 180 — compounding citation gains visible across at least three platforms, entity descriptions increasingly accurate in AI outputs.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Should GEO and SEO roadmaps run in parallel?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'GEO and SEO roadmaps should be coordinated rather than run as entirely separate programmes. Many technical foundations overlap — canonical URLs, page speed, structured data — and content written for GEO extraction (short paragraphs, definitional openings, FAQ sections) also improves engagement signals for SEO. The key divergence is in success metrics and content strategy: GEO optimises for citation frequency and entity accuracy, while SEO optimises for keyword rankings and organic sessions. Treat them as parallel workstreams with shared technical infrastructure and differentiated content and measurement strategies.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the biggest risk to a GEO roadmap?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The biggest risk to a GEO roadmap is skipping the entity consistency layer and going straight to content production. Brands that publish well-structured GEO content while their entity is inconsistently described across platforms generate AI citations that misrepresent the brand — wrong descriptions, wrong service categories, or conflation with similarly-named entities. These inaccurate citations are harder to correct than no citations at all. Entity consistency must be established before content production at scale.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How do you measure GEO roadmap progress?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'GEO roadmap progress is measured by four metrics tracked weekly across all five major AI platforms: citation frequency (how often your brand is mentioned in responses to target queries), brand accuracy (whether descriptions match your entity definition), citation share (your mentions as a proportion of total brand mentions in your category), and platform reach (how many of the five platforms are citing you). Baseline these metrics at the start of the programme and report monthly against the baseline to show compound progress.'
+        }
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'GEO Strategy', item: 'https://geooptimised.com/geo-strategy/' },
+      { '@type': 'ListItem', position: 3, name: 'GEO Roadmap 2026', item: 'https://geooptimised.com/geo-roadmap/' }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'roadmap-overview', label: 'Roadmap Overview' },
+  { id: 'phase-one', label: 'Phase 1: Foundation (0–30 Days)' },
+  { id: 'phase-two', label: 'Phase 2: Build (30–90 Days)' },
+  { id: 'phase-three', label: 'Phase 3: Compound (90–180 Days)' },
+  { id: 'roadmap-table', label: 'Full Roadmap Timeline' },
+  { id: 'related-guides', label: 'How These Guides Differ' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' }
+];
+
+const phaseOne = [
+  {
+    week: 'Week 1',
+    task: 'AI Visibility Baseline Audit',
+    detail: 'Submit a fixed set of 30–40 queries across ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews. Record which brands are cited, how your brand is described (if present), and which competitor entities dominate responses in your category. This baseline is the reference point against which all subsequent progress is measured. Without it, citation improvements cannot be attributed to specific actions.'
+  },
+  {
+    week: 'Week 1',
+    task: 'robots.txt AI Crawler Audit',
+    detail: 'Test your robots.txt against GPTBot, PerplexityBot, ClaudeBot, Google-Extended, and Applebot-Extended. Remove or adjust any wildcard Disallow rules that block these agents. This is the highest-return action in the entire programme — a technically blocked site earns no citations regardless of content quality. Confirm access using each crawler\'s user-agent string in a robots.txt testing tool.'
+  },
+  {
+    week: 'Week 2',
+    task: 'Brand Entity Definition',
+    detail: 'Produce a canonical entity document covering: official brand name and capitalisation, one-sentence brand description, category label, founding date, location, key services, differentiating claims, and key personnel. This document is the master reference for all content production, schema markup, and third-party profile updates. All team members working on the GEO programme must use it consistently.'
+  },
+  {
+    week: 'Week 2',
+    task: 'llms.txt Creation',
+    detail: 'Publish a plain-text llms.txt at your domain root. Include a site description paragraph, a bulleted list of expertise areas, and the URLs of your five to ten most important pages. This is a direct declaration to AI crawlers about how your domain should be categorised and what content is most important. It takes under two hours to produce and publish.'
+  },
+  {
+    week: 'Weeks 3–4',
+    task: 'Organisation Schema Deployment',
+    detail: 'Implement Organisation schema sitewide via your Base layout or CMS. Include name, url, logo (with width and height), foundingDate, description, and sameAs fields linking to LinkedIn, Google Business Profile, Wikidata (if applicable), and Companies House. Validate with schema.org validator before publishing. Organisation schema is the primary entity anchor for AI knowledge graph resolution.'
+  },
+  {
+    week: 'Weeks 3–4',
+    task: 'Canonical URL Audit and Consolidation',
+    detail: 'Check that every page has exactly one canonical URL and that HTTP/HTTPS, www/non-www, and trailing-slash variants all redirect to a single canonical. Fragment entity signals consolidated on one URL are significantly stronger than the same signals spread across duplicates. Use a crawl tool to identify canonical issues at scale.'
+  }
+];
+
+const phaseTwo = [
+  {
+    sprint: 'Days 30–45',
+    task: 'Content Gap Analysis',
+    detail: 'Cross-reference your baseline audit query set against your current content inventory. Identify the ten highest-priority gaps: queries where competitors are cited and you are absent (displacement), queries where no brand holds citation share (first-mover), and queries where your brand is mentioned but inaccurately described (accuracy). Prioritise displacement opportunities first — citation behaviour already exists for these queries, you are redirecting it rather than establishing it from scratch.'
+  },
+  {
+    sprint: 'Days 30–60',
+    task: 'Priority Page Restructuring',
+    detail: 'Rewrite the ten highest-traffic and highest-citation-potential pages for extraction. Each page must pass three tests: the extraction test (primary answer in the first two sentences), the paragraph test (each paragraph covers one point, two to four sentences), and the FAQ test (on-page FAQ questions match real query phrasing). Prioritise pages that already receive traffic and have some entity authority — they are closest to citation-ready.'
+  },
+  {
+    sprint: 'Days 45–75',
+    task: 'Article and FAQPage Schema Rollout',
+    detail: 'Deploy Article or TechArticle schema on every restructured content page with correct datePublished, dateModified, author, and publisher fields. Add FAQPage schema that mirrors the on-page FAQ section exactly. Use BreadcrumbList on all non-homepage pages. Validate each page with the Google Rich Results Test before publishing. Invalid schema is not neutral — it creates conflicting signals that reduce entity resolution accuracy.'
+  },
+  {
+    sprint: 'Days 60–90',
+    task: 'New Content Production',
+    detail: 'Produce new pages targeting the top-priority content gaps identified in Days 30–45. Each new page should be built to extraction architecture from the outset: definitional opening, short paragraphs, FAQ section, appropriate schema, and internal links to parent NODE and ROOT pages. Target 800–1,200 words per page, structured around the specific query pattern the page is targeting rather than broad topic coverage.'
+  },
+  {
+    sprint: 'Days 75–90',
+    task: 'First Citation Measurement',
+    detail: 'Re-run the full baseline query set across all five platforms. Compare citation frequency, brand accuracy, and competitor citation share against the baseline measurements taken in Week 1. Expect modest but measurable improvements — particularly on pages that were restructured earliest and on platforms with fast crawl cycles like Perplexity. Document what changed and what did not to guide Phase 3 prioritisation.'
+  }
+];
+
+const phaseThree = [
+  {
+    sprint: 'Days 90–120',
+    task: 'Authority Source Building',
+    detail: 'Begin systematic external citation building. Targets should include: industry publications that cover your category, expert roundup articles where a contribution can be secured, relevant association directories that feed AI retrieval pipelines, Wikidata entries for your brand and key people, and podcast appearances or video content that generates written transcripts. Quality and topical relevance matter more than volume — five citations from high-authority sources in your category outperform fifty from irrelevant directories.'
+  },
+  {
+    sprint: 'Days 90–120',
+    task: 'Third-Party Entity Consistency Audit',
+    detail: 'Audit every platform where your brand is described against the canonical entity document produced in Phase 1. Correct inconsistencies on Google Business Profile, LinkedIn, Wikidata, Crunchbase, and every trade directory where you are listed. Pay particular attention to category descriptors and founding dates — these attributes are used by AI knowledge graphs to classify and verify your entity. Even minor variations create ambiguity that AI models resolve in favour of more consistent competitors.'
+  },
+  {
+    sprint: 'Days 120–150',
+    task: 'Content Iteration Based on Citation Data',
+    detail: 'Use the citation measurement data from Days 75–90 to identify which pages are driving citation improvements and which are underperforming. Iterate on underperforming pages: test different definitional opening phrasing, restructure FAQ questions to better match query phrasing, or add tables for data that is currently presented in paragraph form. GEO improvement compounds when you iterate based on data rather than assumption.'
+  },
+  {
+    sprint: 'Days 150–180',
+    task: 'Cross-Platform Monitoring Cadence',
+    detail: 'Establish a sustainable weekly monitoring process: a fixed query set of 40–60 queries, run on all five platforms, with results logged in a structured spreadsheet. Monthly reviews should produce a citation trend report, an entity accuracy report, and a content iteration list. Quarterly reviews should reset the strategy — updating the query set, adding new citation targets, and reviewing the competitive landscape. GEO compounds when monitoring is treated as a core deliverable, not an optional extra.'
+  },
+  {
+    sprint: 'Days 150–180',
+    task: 'Programme Review and Roadmap Extension',
+    detail: 'At Day 180, compare current citation metrics against baseline across all five platforms. Calculate citation frequency improvement, brand accuracy improvement, and platform reach. Use this data to build the next 180-day roadmap: which new content areas to target, which entity gaps remain, which platforms need platform-specific optimisation, and which source-building targets have produced measurable improvements in AI retrieval. GEO is a programme with no defined endpoint — the competitive advantage comes from compounding effort over time.'
+  }
+];
+
+const roadmapRows = [
+  { days: '0–7', phase: 'Foundation', deliverable: 'Baseline audit across 5 AI platforms', metric: 'Baseline citation frequency recorded' },
+  { days: '0–7', phase: 'Foundation', deliverable: 'robots.txt AI crawler audit and fix', metric: 'All major AI crawlers unblocked' },
+  { days: '8–14', phase: 'Foundation', deliverable: 'Brand entity definition document', metric: 'Canonical entity attributes agreed' },
+  { days: '8–14', phase: 'Foundation', deliverable: 'llms.txt published', metric: 'AI crawler categorisation signal live' },
+  { days: '15–30', phase: 'Foundation', deliverable: 'Organisation schema + sameAs deployed sitewide', metric: 'Schema validates in Rich Results Test' },
+  { days: '15–30', phase: 'Foundation', deliverable: 'Canonical URL audit complete', metric: 'Zero duplicate canonical issues' },
+  { days: '30–45', phase: 'Build', deliverable: 'Content gap analysis: top 10 priorities identified', metric: 'Priority query list ranked by impact' },
+  { days: '30–60', phase: 'Build', deliverable: 'Top 10 pages restructured for extraction', metric: 'All 10 pages pass extraction/FAQ tests' },
+  { days: '45–75', phase: 'Build', deliverable: 'Article + FAQPage schema on all content pages', metric: 'Schema valid on all published pages' },
+  { days: '60–90', phase: 'Build', deliverable: 'New content pages for top content gaps', metric: '5–10 new pages published' },
+  { days: '75–90', phase: 'Build', deliverable: 'First citation measurement vs baseline', metric: 'Measurable frequency improvement' },
+  { days: '90–120', phase: 'Compound', deliverable: 'Source-building outreach (5+ high-trust mentions)', metric: 'Retrievable external citations added' },
+  { days: '90–120', phase: 'Compound', deliverable: 'Third-party entity consistency audit', metric: 'All major profiles match entity document' },
+  { days: '120–150', phase: 'Compound', deliverable: 'Content iteration based on citation data', metric: 'Underperforming pages improved' },
+  { days: '150–180', phase: 'Compound', deliverable: 'Weekly monitoring cadence established', metric: 'Ongoing citation tracking operational' },
+  { days: '150–180', phase: 'Compound', deliverable: '6-month programme review and roadmap extension', metric: 'Citation gains documented; next roadmap drafted' }
+];
+
+const faqs = [
+  {
+    q: 'What should a GEO roadmap include?',
+    a: 'A GEO roadmap should cover three phases: foundation (0–30 days) — AI crawler access, entity definition, Organisation schema, baseline audit; build (30–90 days) — content restructuring, FAQ sections, Article and FAQPage schema, content gap filling; and compound (90–180 days) — authority source building, cross-platform monitoring, citation trend analysis, and iterative content optimisation. Each phase produces measurable outputs that feed the next.'
+  },
+  {
+    q: 'How long does a GEO programme take to show results?',
+    a: 'Initial citation improvements are typically measurable within 60–90 days for brands starting from a technically accessible baseline. The first 30 days are foundation work that removes blockers. Days 30–90 produce the first measurable citation frequency increases. Days 90–180 are where compounding begins: authority signals from source-building reinforce content signals, producing gains that are faster and more durable than initial improvements.'
+  },
+  {
+    q: 'What are the milestones in a 6-month GEO roadmap?',
+    a: 'Key milestones: Day 30 — AI crawlers unblocked, entity definition agreed, baseline audit complete, Organisation schema live; Day 60 — top 10 priority pages restructured, FAQ sections added, Article schema deployed; Day 90 — first citation frequency measurement showing improvement vs baseline; Day 120 — source-building producing first retrievable third-party mentions; Day 180 — compounding citation gains visible across at least three platforms.'
+  },
+  {
+    q: 'Should GEO and SEO roadmaps run in parallel?',
+    a: 'GEO and SEO roadmaps should be coordinated rather than run as entirely separate programmes. Technical foundations overlap — canonical URLs, page speed, structured data — and GEO content structure also improves engagement signals for SEO. The key divergence is in success metrics: GEO tracks citation frequency and entity accuracy, while SEO tracks keyword rankings and organic sessions. Treat them as parallel workstreams with shared technical infrastructure.'
+  },
+  {
+    q: 'What is the biggest risk to a GEO roadmap?',
+    a: 'The biggest risk is skipping the entity consistency layer and going straight to content production. Brands that publish well-structured GEO content while their entity is inconsistently described generate AI citations that misrepresent the brand. These inaccurate citations are harder to correct than no citations at all. Entity consistency must be established before content production at scale.'
+  },
+  {
+    q: 'How do you measure GEO roadmap progress?',
+    a: 'GEO roadmap progress is measured by four metrics tracked weekly across all five major AI platforms: citation frequency, brand accuracy, citation share (your mentions as a proportion of total brand mentions in your category), and platform reach (how many of the five platforms are citing you). Baseline these at programme start and report monthly against the baseline to show compound progress.'
+  }
+];
+
+const related = [
+  {
+    tag: 'Strategy',
+    title: 'GEO Strategy: When to Invest & How to Prioritise',
+    excerpt: 'The decision layer — whether to invest, how to prioritise when resources are constrained, and agency vs DIY.',
+    href: '/geo-strategy/'
+  },
+  {
+    tag: 'Framework',
+    title: 'The GEO Framework: A Repeatable System',
+    excerpt: 'The named seven-stage conceptual model with stage definitions, inputs, outputs, and success criteria.',
+    href: '/geo-framework/'
+  },
+  {
+    tag: 'How-To',
+    title: 'How to Do GEO: A Step-by-Step Guide',
+    excerpt: 'The tactical execution guide: hands-on steps with practical actions and tools for each stage.',
+    href: '/how-to-do-geo/'
+  }
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/geo-roadmap/"
+  ogType="article"
+>
+
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-strategy/" class="transition hover:text-[var(--accent)]">GEO Strategy</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">GEO Roadmap 2026</li>
+    </ol>
+  </nav>
+
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Roadmap</span>
+        <span class="font-mono text-xs text-ink-300">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">13 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO Roadmap 2026: A Phased Plan
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">A GEO roadmap answers one question the framework and the how-to guide do not: when does each deliverable happen?</strong> The three-phase structure below — Foundation (0–30 days), Build (30–90 days), and Compound (90–180 days) — sequences every major GEO deliverable in the order that maximises measurable progress, with explicit milestones at each phase boundary. Each phase builds on the outputs of the previous one, which is why out-of-sequence execution consistently underperforms. For the conceptual model behind the phases, see <a href="/geo-framework/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">the GEO framework</a>. For hands-on task guidance within each phase, see <a href="/how-to-do-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how to do GEO</a>.
+      </p>
+    </div>
+  </section>
+
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" id="toc-nav">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <div>
+
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Foundation work (Days 0–30) removes technical and entity blockers — without it, build-phase content investment produces inconsistent returns.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>The first measurable citation frequency improvements appear at Days 60–90, once restructured content is indexed and validated against baseline.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Compounding begins at Day 90+ when authority source-building reinforces content signals across all five platforms simultaneously.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Entity consistency must be established before content production at scale — inaccurate AI citations caused by entity ambiguity are harder to correct than no citations.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>A weekly monitoring cadence established by Day 150 is what converts six months of programme work into a compounding long-term competitive advantage.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prose-dark">
+        <h2 id="roadmap-overview" class="anchor-top">Roadmap Overview</h2>
+        <p>
+          <strong>A 180-day GEO roadmap is structured in three phases that address technical readiness, content architecture, and authority compounding in sequence.</strong> Attempting any phase out of order produces diminishing returns: content optimised for extraction on a technically blocked site earns no citations; authority source-building for a brand with an inconsistently defined entity generates inaccurate citations that damage brand perception rather than build it.
+        </p>
+        <p>
+          The three phases map to the three layers of <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a>. Phase 1 (Foundation) addresses technical readiness and entity definition — the preconditions for citation earning. Phase 2 (Build) addresses content architecture and schema deployment — the primary citation-earning layer. Phase 3 (Compound) addresses authority source-building and monitoring — the layer that makes citation gains durable and self-reinforcing.
+        </p>
+        <p>
+          This roadmap is calibrated for a brand starting from a minimal GEO baseline — existing web presence, some organic authority, but no deliberate GEO programme in place. Brands with stronger starting positions (existing Entity schema, fast pages, consistent entity definitions) will move through Phase 1 faster and can frontload Phase 2 deliverables. For brands with legacy technical debt or significant entity consistency problems, Phase 1 may extend to 45 days before Phase 2 begins.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="phase-one" class="anchor-top">Phase 1: Foundation (0–30 Days)</h2>
+        <p>
+          <strong>Phase 1 establishes the conditions in which GEO can work — it does not produce direct citation gains but removes every blocker that prevents them.</strong> The six deliverables in this phase address technical access, entity definition, and the baseline measurement that all subsequent progress is measured against. Every subsequent phase decision — what content to build, which platforms to prioritise, which entity gaps to fix — is grounded in the data produced here.
+        </p>
+      </div>
+
+      <ol class="mt-8 space-y-6">
+        {phaseOne.map((item, i) => (
+          <li class="flex gap-5">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border hair font-display text-sm font-bold text-[var(--accent)]">
+              {i + 1}
+            </span>
+            <div>
+              <div class="flex flex-wrap items-center gap-3 mb-1">
+                <h3 class="font-display text-base font-semibold text-white">{item.task}</h3>
+                <span class="font-mono text-xs text-ink-300">{item.week}</span>
+              </div>
+              <p class="text-sm leading-relaxed text-ink-300">{item.detail}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      <div class="prose-dark mt-16">
+        <h2 id="phase-two" class="anchor-top">Phase 2: Build (30–90 Days)</h2>
+        <p>
+          <strong>Phase 2 is the primary citation-earning phase — it produces the content architecture, schema deployment, and new content that drive measurable citation frequency improvements.</strong> The five deliverables in this phase address the content layer directly. By Day 90, brands that have executed Phase 2 fully will have their first data-validated evidence of citation improvement, which guides Phase 3 priorities.
+        </p>
+      </div>
+
+      <ol class="mt-8 space-y-6">
+        {phaseTwo.map((item, i) => (
+          <li class="flex gap-5">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border hair font-display text-sm font-bold text-[var(--accent)]">
+              {i + 1}
+            </span>
+            <div>
+              <div class="flex flex-wrap items-center gap-3 mb-1">
+                <h3 class="font-display text-base font-semibold text-white">{item.task}</h3>
+                <span class="font-mono text-xs text-ink-300">{item.sprint}</span>
+              </div>
+              <p class="text-sm leading-relaxed text-ink-300">{item.detail}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      <div class="prose-dark mt-12">
+        <p>
+          The content restructuring work in Phase 2 feeds directly into the <a href="/geo-checklist/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO checklist</a> — using the checklist as a quality gate on each restructured page ensures no extraction signals are missed before publication.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="phase-three" class="anchor-top">Phase 3: Compound (90–180 Days)</h2>
+        <p>
+          <strong>Phase 3 is where GEO transitions from a project into a programme — the authority and monitoring work done here creates the self-reinforcing loop that makes citation gains compound over time.</strong> The five deliverables in this phase address source authority, entity consistency at scale, and the measurement infrastructure that powers ongoing optimisation. Brands that complete Phase 3 are no longer catching up to competitors; they are building a lead that is increasingly difficult to displace.
+        </p>
+      </div>
+
+      <ol class="mt-8 space-y-6">
+        {phaseThree.map((item, i) => (
+          <li class="flex gap-5">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border hair font-display text-sm font-bold text-[var(--accent)]">
+              {i + 1}
+            </span>
+            <div>
+              <div class="flex flex-wrap items-center gap-3 mb-1">
+                <h3 class="font-display text-base font-semibold text-white">{item.task}</h3>
+                <span class="font-mono text-xs text-ink-300">{item.sprint}</span>
+              </div>
+              <p class="text-sm leading-relaxed text-ink-300">{item.detail}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      <div class="prose-dark mt-16">
+        <h2 id="roadmap-table" class="anchor-top">Full Roadmap Timeline</h2>
+        <p>
+          <strong>The table below maps every roadmap deliverable to its phase, target day range, and success metric.</strong> Use this as a programme management reference — each row represents a trackable deliverable with a clear completion criterion. If any deliverable slips significantly, assess whether it blocks subsequent phase work before continuing. For detailed execution guidance on each item, see the <a href="/how-to-do-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how to do GEO</a> step-by-step guide and <a href="/geo-best-practices/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO best practices</a>.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Days</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Phase</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Deliverable</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Success Metric</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[var(--line)]">
+            {roadmapRows.map(row => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class="px-4 py-3 font-mono text-xs text-[var(--accent)] whitespace-nowrap">{row.days}</td>
+                <td class="px-4 py-3 text-ink-300 whitespace-nowrap">{row.phase}</td>
+                <td class="px-4 py-3 text-white">{row.deliverable}</td>
+                <td class="px-4 py-3 text-ink-300">{row.metric}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="related-guides" class="anchor-top">Related GEO Guides — and How They Differ</h2>
+        <p>
+          <strong>The GEO roadmap is the "when" — the other three guides cover the what, how, and why of the same programme.</strong>
+        </p>
+        <ul class="mt-4 space-y-3 text-sm text-ink-200">
+          <li><strong>GEO Roadmap (this page)</strong> — the time-phased delivery plan with milestones at 0–30, 30–90, and 90–180 days. Use this as a programme calendar and progress tracker.</li>
+          <li><strong><a href="/geo-framework/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO Framework</a></strong> — the named, seven-stage conceptual model with defined inputs, outputs, and success criteria for each stage. Read this to understand the methodology behind the roadmap phases.</li>
+          <li><strong><a href="/how-to-do-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">How to Do GEO</a></strong> — the tactical execution guide: eight hands-on steps with practical actions and tools. Use this alongside the roadmap for task-level guidance within each phase.</li>
+          <li><strong><a href="/geo-strategy/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO Strategy</a></strong> — the decision layer covering when to invest, how to prioritise, and agency vs DIY. Read this before committing to the roadmap if you are still evaluating whether to proceed.</li>
+        </ul>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="relative border-t hair mt-12 overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Get a Custom GEO Roadmap for Your Brand</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        We build roadmaps tailored to your starting position, competitive landscape, and citation targets — sequenced for fastest measurable impact across all five major AI platforms.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request your GEO roadmap</a>
+        <a href="/geo-best-practices/" class="btn btn-ghost">View GEO best practices</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const faqBtns = document.querySelectorAll('#faq-accordion button');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+
+    const tocLinks = document.querySelectorAll('#toc-nav a');
+    const headings = Array.from(
+      document.querySelectorAll('h2[id], h3[id]')
+    ) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(link => {
+              link.classList.remove('text-[var(--accent)]');
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.classList.add('text-[var(--accent)]');
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+
+    headings.forEach(h => observer.observe(h));
+  </script>
+
+</Base>

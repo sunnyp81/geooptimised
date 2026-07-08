@@ -1,26 +1,23 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const title = 'AI Brand Visibility: How to Get Cited by LLMs';
-const description = 'AI brand visibility is the practice of ensuring large language models cite your brand when generating answers. Learn the five pillars, measurement framework, and content patterns that drive LLM citations.';
+const title = 'AI Brand Visibility: The Strategic Guide for Brand Leaders';
+const description = 'AI brand visibility for marketing directors, brand leads, and CMOs: the business case, the five strategic pillars, measurement KPIs, and what separates brands that dominate AI-generated answers from those that are absent.';
 
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: title,
+  headline: 'AI Brand Visibility: The Strategic Guide for Brand Leaders',
   description,
+  url: 'https://geooptimised.com/ai-brand-visibility/',
   author: {
-    '@type': 'Organization',
-    name: 'GEOoptimised',
-    url: 'https://geooptimised.com/',
+    '@id': 'https://geooptimised.com/#organization',
   },
   publisher: {
-    '@type': 'Organization',
-    name: 'GEOoptimised',
-    url: 'https://geooptimised.com/',
+    '@id': 'https://geooptimised.com/#organization',
   },
-  datePublished: '2026-05-25',
-  dateModified: '2026-05-25',
+  datePublished: '2026-06-06',
+  dateModified: '2026-06-06',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://geooptimised.com/ai-brand-visibility/',
@@ -32,7 +29,8 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
-    { '@type': 'ListItem', position: 2, name: 'AI Brand Visibility', item: 'https://geooptimised.com/ai-brand-visibility/' },
+    { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+    { '@type': 'ListItem', position: 3, name: 'AI Brand Visibility', item: 'https://geooptimised.com/ai-brand-visibility/' },
   ],
 };
 
@@ -87,12 +85,13 @@ const schema = [articleSchema, breadcrumbSchema, faqSchema];
 
 const tocItems = [
   { id: 'what-is-ai-brand-visibility', label: 'What AI Brand Visibility Means' },
-  { id: 'five-pillars', label: 'The Five Pillars' },
+  { id: 'five-pillars', label: 'The Five Strategic Pillars' },
   { id: 'how-llms-select-sources', label: 'How LLMs Select Sources' },
   { id: 'measuring-ai-visibility', label: 'Measuring AI Visibility' },
-  { id: 'entity-optimisation', label: 'Entity Optimisation for AI' },
-  { id: 'content-patterns', label: 'Content Patterns That Get Cited' },
+  { id: 'entity-optimisation', label: 'Entity Optimisation' },
+  { id: 'content-patterns', label: 'Content That Gets Cited' },
   { id: 'common-mistakes', label: 'Common Mistakes' },
+  { id: 'how-this-differs', label: 'For Practitioners: Implementation Guide' },
   { id: 'faq', label: 'FAQ' },
   { id: 'related', label: 'Related Reading' },
 ];
@@ -122,33 +121,35 @@ const faqs = [
 
 const related = [
   {
+    tag: 'Practitioner Tactics',
+    title: 'LLM Visibility Optimisation: The Practitioner Tactics Guide',
+    excerpt: 'The hands-on implementation guide: entity signal tasks, citation-ready content formats, schema deployment, crawler access configuration, and prompt-set testing methodology.',
+    href: '/llm-visibility-optimisation/',
+  },
+  {
+    tag: 'Platform Playbooks',
+    title: 'Optimise for Specific AI Platforms',
+    excerpt: 'Platform-by-platform tactics for ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews — how each platform retrieves and cites sources differently.',
+    href: '/optimise-for-ai-platforms/',
+  },
+  {
     tag: 'Guide',
     title: 'Generative Engine Optimisation: The Complete Guide',
     excerpt: 'The full GEO framework — from first principles through to advanced entity strategy and measurement.',
     href: '/generative-engine-optimisation/',
   },
-  {
-    tag: 'Services',
-    title: 'GEO Services Overview',
-    excerpt: 'The full range of generative engine optimisation services we deliver for brands and agencies.',
-    href: '/geo-services/',
-  },
-  {
-    tag: 'Tools',
-    title: 'GEO Tools Directory',
-    excerpt: 'Curated breakdown of the best AI visibility, citation monitoring, and entity optimisation tools.',
-    href: '/geo-tools/',
-  },
 ];
 ---
 
-<Base title={title} description={description} schema={schema} ogType="article">
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/ai-brand-visibility/" ogType="article">
 
   <!-- Breadcrumb -->
   <nav aria-label="Breadcrumb" class="container-wide pt-8">
-    <ol class="flex items-center gap-1.5 text-sm text-ink-400">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-300">
       <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
-      <li aria-hidden="true">/</li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">Generative Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
       <li class="text-ink-200" aria-current="page">AI Brand Visibility</li>
     </ol>
   </nav>
@@ -157,18 +158,15 @@ const related = [
   <section class="hero-fade">
     <div class="container-wide pt-16 pb-14">
       <div class="flex flex-wrap items-center gap-3">
-        <span class="eyebrow">Visibility Guide</span>
-        <span class="font-mono text-xs text-ink-400">25 May 2026</span>
-        <span class="font-mono text-xs text-ink-400">12 min read</span>
+        <span class="eyebrow">Executive &amp; Brand Leader Strategy Guide</span>
+        <span class="font-mono text-xs text-ink-300">25 May 2026</span>
+        <span class="font-mono text-xs text-ink-300">12 min read</span>
       </div>
       <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
-        AI Brand Visibility: How to Get Cited by LLMs
+        AI Brand Visibility: The Strategic Guide for Brand Leaders
       </h1>
       <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
-        When users ask ChatGPT, Perplexity, or Google AI Overviews for recommendations, the brands that appear in those answers capture demand.
-        The brands that do not appear are invisible — regardless of how well they rank in traditional search.
-        <strong class="text-white">AI brand visibility</strong> is the practice of ensuring large language models cite your brand accurately and consistently
-        across every major generative platform.
+        Written for marketing directors, brand leads, and CMOs: this guide covers why AI brand visibility is now a boardroom issue, how to frame the business case, the five strategic pillars every brand must build, and the KPI framework for measuring progress. It does not cover granular implementation — for schema deployment steps, entity signal work, and prompt-set testing methodology, see our companion guide to <a href="/llm-visibility-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">LLM visibility optimisation for practitioners</a>.
       </p>
     </div>
   </section>
@@ -193,27 +191,27 @@ const related = [
 
       <!-- Key Takeaways -->
       <div class="card p-6 mb-12">
-        <span class="eyebrow">Key Takeaways</span>
+        <span class="eyebrow">Key Takeaways for Brand Leaders</span>
         <ul class="mt-4 space-y-2 text-sm text-ink-200">
           <li class="flex items-start gap-2">
             <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
-            <span>AI brand visibility is measured by citation frequency, brand accuracy, and cross-platform share of voice — not traditional search rankings.</span>
+            <span>AI brand visibility is now a boardroom issue: AI-generated answers are capturing first-touch demand before users ever reach a search results page.</span>
           </li>
           <li class="flex items-start gap-2">
             <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
-            <span>LLMs select sources through entity graphs, RAG retrieval, and training data — requiring a fundamentally different optimisation strategy from SEO.</span>
+            <span>The performance metric is citation frequency across ChatGPT, Perplexity, Gemini, and Copilot — not traditional search rankings, which measure a different phenomenon entirely.</span>
           </li>
           <li class="flex items-start gap-2">
             <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
-            <span>The five pillars of AI visibility are entity authority, content citability, structured data, source credibility, and cross-platform presence.</span>
+            <span>The five strategic pillars are entity authority, content citability, structured data, source credibility, and cross-platform presence — weakness in any one creates a gap competitors exploit.</span>
           </li>
           <li class="flex items-start gap-2">
             <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
-            <span>Definitive statements, data points, structured Q&amp;A, and comparison tables are the content patterns most likely to be cited by generative engines.</span>
+            <span>Blocking AI crawlers, thin promotional content, and inconsistent entity data are the three most common self-inflicted reasons brands are absent from AI-generated answers.</span>
           </li>
           <li class="flex items-start gap-2">
             <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
-            <span>Blocking AI crawlers, thin content, and inconsistent entity data are the three most common reasons brands are absent from AI-generated answers.</span>
+            <span>AI visibility and traditional SEO require separate measurement frameworks, separate investment cases, and separate programme ownership.</span>
           </li>
         </ul>
       </div>
@@ -248,31 +246,6 @@ const related = [
           generative platforms.
         </p>
 
-        <h3>How LLMs Decide What to Cite</h3>
-
-        <p>
-          Large language models do not rank sources the way search engines do. There is no direct equivalent of PageRank, no crawl priority score,
-          and no bid auction. Instead, LLMs draw on three primary mechanisms to determine which brands and sources to include in a generated response:
-        </p>
-
-        <p>
-          <strong>Training data frequency and quality.</strong> Models trained on large corpora of web content absorb patterns about which brands are
-          mentioned most often in authoritative contexts. A brand referenced hundreds of times in industry publications, research papers, and high-authority
-          editorial content is more likely to be treated as a credible source than a brand with a thin citation footprint, regardless of its search rankings.
-        </p>
-
-        <p>
-          <strong>Entity graph signals.</strong> Modern LLMs increasingly use structured knowledge representations — entity graphs — to reason about
-          relationships between organisations, products, people, and concepts. A brand with a well-populated entity in Google's Knowledge Graph,
-          Wikidata, and industry-specific databases is easier for a model to identify, classify, and cite correctly.
-        </p>
-
-        <p>
-          <strong>Retrieval-augmented generation.</strong> Systems like Perplexity, Bing Copilot, and Google AI Overviews supplement their base
-          model knowledge with live web retrieval. When a query is processed, the system retrieves a set of candidate documents, then generates a
-          response grounded in that retrieved content. The brands whose pages are retrieved — and whose content is structured so the model can extract
-          clean, quotable information — are the brands that get cited.
-        </p>
       </section>
 
       <!-- Section 2: The Five Pillars of AI Visibility -->
@@ -316,7 +289,7 @@ const related = [
               FAQPage, HowTo, Article, Product, and Organization schemas all contribute to the structured signal layer that AI retrieval systems
               use to parse and classify pages. Structured data is not a ranking signal in the traditional SEO sense — it is a clarity signal
               that reduces ambiguity when a model is deciding whether your content is a reliable source for a given query.
-              See our implementation guide on <a href="/schema-markup-ai/" class="text-[var(--accent)] border-b border-[var(--accent)]/35 hover:border-[var(--accent)] transition">schema markup for AI</a>.
+              See our implementation guide to <a href="/schema-markup-ai/" class="text-[var(--accent)] border-b border-[var(--accent)]/35 hover:border-[var(--accent)] transition">schema markup for AI</a>.
             </p>
           </div>
 
@@ -347,51 +320,24 @@ const related = [
 
       <!-- Section 3: How LLMs Select Sources -->
       <section id="how-llms-select-sources" class="anchor-top prose-dark mb-16">
-        <h2>How LLMs Select Sources</h2>
+        <h2>How LLMs Select Sources: The Strategic View</h2>
 
         <p>
-          <strong>Large language models do not browse the web in real time when generating most responses.</strong> Understanding the distinction between
-          parametric knowledge and retrieval-augmented generation is essential for any AI brand visibility strategy, because the optimisation
-          approaches differ depending on which mechanism a given platform uses.
+          <strong>Large language models do not rank sources the way search engines do — there is no bid auction, no crawl priority score, and no direct equivalent of PageRank.</strong>
+          For brand leaders, the key strategic insight is that LLM citation is earned through two fundamentally different mechanisms, each requiring a different investment horizon:
         </p>
 
-        <h3>Parametric Knowledge</h3>
+        <ul>
+          <li><strong>Training data presence (long horizon).</strong> Information encoded into a model during training creates "parametric knowledge" — what the model knows without needing to look anything up. Brands that are mentioned frequently and authoritatively in the sources that feed training pipelines (Wikipedia, Wikidata, industry publications, analyst reports) develop strong parametric representation. This is a 6–18 month investment that pays compound dividends across every model version that follows.</li>
+          <li><strong>Retrieval-augmented generation (near-term).</strong> Platforms including Perplexity, Bing Copilot, and Google AI Overviews fetch live web content before generating responses. Brands whose pages are indexed, crawlable, and structured for extraction appear in these real-time results. Improvements here can produce measurable citation gains within weeks — making RAG optimisation the most immediate lever available to most programmes.</li>
+        </ul>
+
         <p>
-          Parametric knowledge is information encoded into the model's weights during training. When a model answers a question from parametric
-          knowledge, it is drawing on patterns absorbed from billions of documents processed before its training cutoff. Improving your brand's
-          parametric representation requires a long-term strategy: building editorial presence in the publications and data sources that feed
-          training pipelines, establishing consistent entity data across knowledge bases, and ensuring your brand is referenced accurately
-          and frequently enough to be represented reliably in the model's learned weights.
-        </p>
-        <p>
-          This is why Wikipedia presence, Wikidata entries, and citations in industry-defining publications matter disproportionately for AI visibility.
-          These sources are heavily represented in training corpora. A brand mentioned and described consistently in these sources is more likely
-          to have accurate parametric representation across all models that train on web data.
+          Most AI search platforms use a hybrid of both mechanisms. A comprehensive AI brand visibility strategy must address both layers: the long-term authority investment that builds parametric presence, and the near-term technical and content work that improves RAG retrieval. The strategic priority between the two depends on your category's competitive dynamics and your brand's current visibility baseline.
         </p>
 
-        <h3>Retrieval-Augmented Generation</h3>
         <p>
-          Retrieval-augmented generation, commonly abbreviated as RAG, is the mechanism by which AI systems supplement their parametric knowledge
-          with live document retrieval. Systems including Perplexity, Bing Copilot, and Google AI Overviews use RAG extensively.
-        </p>
-        <p>
-          In a RAG pipeline, an incoming query is processed to generate a retrieval query, which is used to fetch a set of candidate documents
-          from a web index or curated source database. Those documents are then passed to the language model as context, and the model generates
-          a response grounded in the retrieved content — citing the sources it used.
-        </p>
-        <p>
-          For RAG-based systems, AI brand visibility depends on two factors: whether your pages are retrieved for relevant queries, and whether
-          the retrieved content is structured clearly enough for the model to extract and cite accurately. A page that ranks well but uses dense,
-          ambiguous prose will be retrieved but poorly cited. A page with clear definitional statements, structured data, and explicit answers
-          will be retrieved and cited precisely.
-        </p>
-
-        <h3>Hybrid Systems</h3>
-        <p>
-          Most production AI search systems use a hybrid approach: parametric knowledge provides the foundation, RAG provides current and
-          specific information, and entity graphs provide structured relationships. Google AI Overviews, for example, uses Google's Knowledge
-          Graph alongside live web retrieval and its base language model. A comprehensive AI brand visibility strategy must address all three
-          layers: training data presence, retrieval optimisation, and entity graph reinforcement.
+          For the full technical breakdown of how each mechanism works and which tactics target which layer, see the practitioner guide to <a href="/llm-visibility-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">LLM visibility optimisation</a>.
         </p>
       </section>
 
@@ -466,13 +412,14 @@ const related = [
           <p>
             For a full comparison of the available tools, including pricing and feature sets, see our
             <a href="/geo-tools/">GEO tools directory</a>.
+            For the methodology of setting up and running prompt-set tests — query selection, platform protocols, scoring rubrics, and iteration cycles — see the practitioner guide to <a href="/llm-visibility-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">LLM visibility optimisation</a>.
           </p>
         </div>
       </section>
 
       <!-- Section 5: Entity Optimisation for AI -->
       <section id="entity-optimisation" class="anchor-top prose-dark mb-16">
-        <h2>Entity Optimisation for AI</h2>
+        <h2>Entity Optimisation: Why It Matters Strategically</h2>
 
         <p>
           <strong>Entity optimisation is the process of ensuring your brand is recognised as a distinct, well-defined entity within the knowledge graphs that AI systems rely on.</strong>
@@ -480,130 +427,39 @@ const related = [
           produce inconsistent citation results.
         </p>
 
-        <h3>Knowledge Graphs and AI</h3>
         <p>
-          A knowledge graph is a structured database of entities and the relationships between them. Google's Knowledge Graph contains billions of
-          entities — organisations, people, places, products, concepts — each with defined attributes and relationships to other entities.
-          When an LLM or AI search system processes a query involving a brand name, it uses knowledge graph lookups to resolve the entity:
-          to confirm it knows what "GEOoptimised" refers to, what category it belongs to, and what attributes define it.
-        </p>
-        <p>
-          Brands with a populated Knowledge Panel in Google Search, a Wikidata entry with accurate attributes, and consistent entity data
-          across authoritative directories are easier for AI systems to resolve correctly. Brands without these signals are prone to
-          being confused with similarly named entities, misclassified, or omitted entirely.
+          For brand leaders, the strategic implication is straightforward: AI systems cross-reference entity data across multiple external sources — Wikidata, Wikipedia, Google's Knowledge Graph, Companies House, industry directories — before deciding how to describe a brand in a generated response. Brands that have invested in consistent, accurate entity records across these sources are cited confidently and described correctly. Brands with inconsistent or thin entity data are paraphrased inaccurately, confused with similar-sounding entities, or omitted entirely.
         </p>
 
-        <h3>Wikidata as an AI Visibility Signal</h3>
         <p>
-          Wikidata is an openly licensed knowledge base that feeds data into Wikipedia, Google's Knowledge Graph, and numerous AI training
-          pipelines. A Wikidata entry for your organisation provides a persistent, machine-readable identifier (a Q-number) that AI systems
-          can use to resolve your entity unambiguously. The entry should include: official name, founding date, country of operation,
-          official website, industry classification, and notable personnel — with all claims backed by references to reliable sources.
-        </p>
-        <p>
-          This is covered in depth in our guide to <a href="/knowledge-graph-optimisation/">knowledge graph optimisation</a>.
+          The highest-priority entity investments for most brands are: a Wikidata entry with accurate, sourced attributes; Wikipedia presence (either a standalone article or contributions to relevant category pages); a consistent trading name and description across LinkedIn, Crunchbase, Companies House, and industry directories; and <code>sameAs</code> links in your site's Organisation schema that connect your web entity to its external equivalents.
         </p>
 
-        <h3>Wikipedia and AI Training Data</h3>
         <p>
-          Wikipedia is one of the most heavily represented sources in LLM training data. A Wikipedia article about your organisation provides
-          authoritative, structured information that is highly likely to be incorporated into model weights during training. Not every
-          brand meets Wikipedia's notability guidelines, but for those that do, a well-maintained article significantly strengthens
-          parametric representation across all major models.
-        </p>
-        <p>
-          For brands that do not qualify for a standalone Wikipedia article, contributing to relevant category pages, industry articles,
-          and "List of" pages provides partial coverage — associating your brand with the right topics and categories within Wikipedia's
-          entity structure.
-        </p>
-
-        <h3>sameAs Linking</h3>
-        <p>
-          The <code>sameAs</code> property in Schema.org Organisation markup is a direct signal to AI systems that connects your website's
-          entity representation to its equivalents in external knowledge bases. A complete <code>sameAs</code> array should reference your
-          Wikidata Q-number, Wikipedia article URL, Companies House entry, LinkedIn profile, Crunchbase profile, and any industry-specific
-          directories relevant to your category.
-        </p>
-        <p>
-          This cross-referencing reduces entity ambiguity and strengthens the confidence with which AI systems associate your brand name
-          with the correct entity record.
+          This is a durable, compounding investment — entity records persist across training cycles and accumulate authority over time. For the step-by-step implementation guide covering Wikidata, schema deployment, and NAP consistency checking, see the practitioner resource on <a href="/llm-visibility-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">LLM visibility optimisation</a> and the deep-dive guide to <a href="/knowledge-graph-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">knowledge graph optimisation</a>.
         </p>
       </section>
 
-      <!-- Section 6: Content Patterns That Get Cited -->
-      <section id="content-patterns" class="anchor-top mb-16">
-        <div class="prose-dark">
-          <h2>Content Patterns That Get Cited</h2>
-          <p>
-            <strong>Not all content has equal citability.</strong> LLMs demonstrate consistent preferences for specific content structures
-            when selecting what to quote, paraphrase, or reference in generated answers. Understanding these patterns is one of the
-            highest-leverage interventions available to brands building AI visibility.
-          </p>
-        </div>
+      <!-- Section 6: What Citable Content Looks Like -->
+      <section id="content-patterns" class="anchor-top prose-dark mb-16">
+        <h2>What "Good" Looks Like: Content That Gets Cited</h2>
 
-        <div class="mt-8 space-y-5">
+        <p>
+          <strong>Not all content has equal citability — and the gap between high-citability and low-citability content is visible in citation rate data within weeks of deployment.</strong>
+          For brand leaders commissioning or approving content, there is a simple test: if you cannot extract a clean, standalone sentence from the first paragraph that an AI could quote verbatim, the page will underperform on citation.
+        </p>
 
-          <div class="card p-6">
-            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Definitive Opening Statements</h3>
-            <p class="mt-3 text-sm leading-relaxed text-ink-300">
-              Pages that open with a clear, definitional statement — "X is the practice of Y" or "X is defined as Y" — are
-              significantly more likely to be cited than pages that begin with background context, historical framing, or marketing copy.
-              The LLM is looking for a clean definition it can extract and reproduce. Give it one in the first sentence.
-              Apply this pattern to every page targeting a query that an AI system might answer with a definition.
-            </p>
-          </div>
+        <p>
+          The patterns that produce the most reliably cited content are consistent across platforms: definitive opening statements that define the core concept without preamble; specific, verifiable data points (statistics, dates, named studies) rather than vague assertions; structured Q&amp;A sections where each answer is self-contained; comparison tables for "best X" and "X vs Y" queries; and numbered processes for "how to" queries. Each of these formats maps onto a response pattern that LLMs use frequently — they are looking for clean extracts, not narrative.
+        </p>
 
-          <div class="card p-6">
-            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Specific, Verifiable Data Points</h3>
-            <p class="mt-3 text-sm leading-relaxed text-ink-300">
-              AI systems favour content that contains specific, verifiable data: statistics, percentages, dates, named studies,
-              and quantified claims. Vague assertions ("AI search is growing rapidly") are less likely to be cited than specific
-              ones ("AI search queries grew by 47% year-on-year according to Gartner Q1 2026"). Original research and proprietary
-              data are particularly high-value because they give an AI system a fact it cannot find elsewhere — making your source
-              uniquely necessary.
-            </p>
-          </div>
+        <p>
+          The strategic implication for content planning: every piece of content produced for AI visibility should be evaluated against a citability checklist before publication. Does it open with a definition? Does it contain at least two specific data points? Does it have a structured Q&amp;A section? Is the headline phrased to match the query a user would type into an AI assistant? These questions are editorial, not technical — they belong in the brief, not the post-publication audit.
+        </p>
 
-          <div class="card p-6">
-            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Structured Question and Answer</h3>
-            <p class="mt-3 text-sm leading-relaxed text-ink-300">
-              FAQ sections with explicit question-answer pairs are among the most reliably cited content structures across all
-              AI platforms. The question provides the query match; the answer provides the extractable content. FAQPage schema
-              reinforces this structure at the markup level. For maximum citability, each answer should be self-contained —
-              readable in isolation without requiring context from surrounding paragraphs.
-            </p>
-          </div>
-
-          <div class="card p-6">
-            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Comparison Tables</h3>
-            <p class="mt-3 text-sm leading-relaxed text-ink-300">
-              Structured comparisons — tool A versus tool B, approach X versus approach Y — are heavily cited in AI responses
-              to "best X" and "X vs Y" queries. A well-structured HTML table with clear headers, consistent attributes, and
-              definitive conclusions gives an AI system the structured data it needs to generate a confident comparison response.
-              Comparison tables also attract the "commercial investigation" query intent that represents high-value traffic
-              in most B2B and considered-purchase categories.
-            </p>
-          </div>
-
-          <div class="card p-6">
-            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Numbered Lists and Step-by-Step Processes</h3>
-            <p class="mt-3 text-sm leading-relaxed text-ink-300">
-              Enumerated content — "the five pillars of X", "how to do Y in six steps" — maps cleanly onto the list-generation
-              pattern that LLMs use frequently in their responses. Each numbered item should be self-contained and specific.
-              Avoid filler items that exist only to reach a round number.
-            </p>
-          </div>
-
-        </div>
-
-        <div class="prose-dark mt-8">
-          <p>
-            These content patterns work in conjunction with <a href="/answer-engine-optimisation/">answer engine optimisation</a>
-            principles. AEO focuses on featured snippets and voice search; the structural requirements overlap substantially
-            with those that improve LLM citability. Brands that invest in AEO typically see AI citation improvements as a
-            secondary benefit.
-          </p>
-        </div>
+        <p>
+          For the complete set of content techniques, including how to structure content to survive the chunking and retrieval process, see the practitioner guide to <a href="/llm-visibility-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">LLM visibility optimisation</a>. These patterns also overlap with <a href="/answer-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">answer engine optimisation</a> — brands already investing in AEO typically see AI citation improvements as a secondary benefit.
+        </p>
       </section>
 
       <!-- Section 7: Common Mistakes -->
@@ -673,6 +529,23 @@ const related = [
             <a href="/geo-agency/">GEO agency</a> audit covers all three areas: crawler access, content citability scoring,
             and entity consistency checking across more than twenty data sources.
           </p>
+        </div>
+      </section>
+
+      <!-- Cross-link: How This Differs from the Tactics Guide -->
+      <section id="how-this-differs" class="anchor-top mb-16">
+        <div class="card p-6 border-l-4" style="border-left-color: var(--accent);">
+          <h2 class="font-display text-lg font-semibold text-white">For Practitioners: The Implementation Guide</h2>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300">
+            This guide covers the strategic why — the business case, the five pillars as investment categories, the KPI framework, and the executive view of what separates brands that dominate AI-generated answers from those that are absent. It does not cover granular implementation.
+          </p>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300">
+            If you are responsible for executing the programme — writing the content, deploying schema, building the entity records, running prompt-set tests — the companion practitioner guide covers all of that in detail:
+          </p>
+          <ul class="mt-3 space-y-1.5 text-sm text-ink-300">
+            <li><a href="/llm-visibility-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">LLM Visibility Optimisation: The Practitioner Tactics Guide</a> — entity signal work, citation-ready content formats, schema deployment, crawler access, prompt-set testing, and the full tactics reference table.</li>
+            <li><a href="/optimise-for-ai-platforms/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">Optimising for Specific AI Platforms</a> — platform-by-platform playbooks for ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews.</li>
+          </ul>
         </div>
       </section>
 

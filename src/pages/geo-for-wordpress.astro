@@ -1,0 +1,627 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO for WordPress: Complete Setup Guide | GEOoptimised';
+const description = 'GEO for WordPress: schema plugins, content structure, llms.txt setup, and technical configuration so AI engines cite your WordPress site.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: 'GEO for WordPress',
+  description,
+  url: 'https://geooptimised.com/geo-for-wordpress/',
+  image: 'https://geooptimised.com/og-image.png',
+  inLanguage: 'en-GB',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/geo-for-wordpress/',
+  },
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Which WordPress plugin is best for GEO and AI optimisation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yoast SEO Premium and Rank Math Pro are the two most capable WordPress plugins for GEO-adjacent structured data. Rank Math Pro has a slight edge for GEO purposes due to its granular schema builder, which allows custom Article, FAQPage, HowTo, and Organization blocks without custom code. For sites that need maximum schema flexibility — multiple schema types per page, custom @graph blocks — a dedicated plugin such as WP Schema Pro or Schema Pro by Brainstorm Force provides more control than either Yoast or Rank Math.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I add llms.txt to a WordPress site?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The simplest method is to upload an llms.txt file directly to your WordPress root directory via FTP, SFTP, or your hosting control panel\'s file manager. The file should be placed at the same level as wp-config.php, making it accessible at yourdomain.com/llms.txt. Alternatively, create a custom WordPress rewrite rule in your .htaccess file to serve a dynamically generated llms.txt from a WordPress endpoint. The static file method is simpler and more reliable for most sites.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does WordPress Gutenberg help or hinder AI optimisation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Gutenberg (the WordPress block editor) neither helps nor hinders AI optimisation directly — the semantic structure of your published HTML is what matters, and Gutenberg produces clean heading hierarchies and paragraph structure by default. Where Gutenberg helps is in enabling block patterns that encourage consistent content structure: FAQ blocks, callout blocks, and table blocks all produce AI-friendly HTML when implemented correctly. The most important GEO-related Gutenberg extension is a FAQ block that auto-generates FAQPage schema from the block content.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should I block AI crawlers on WordPress?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No, unless you have a specific legal or commercial reason to do so. Blocking AI crawlers — GPTBot, ClaudeBot, PerplexityBot, Google-Extended — prevents your content from being included in retrieval-augmented generation pipelines, which means your site will not be cited in AI-generated answers. Many WordPress sites inadvertently block these bots through overly broad robots.txt rules added during plugin installations. Audit your robots.txt at yourdomain.com/robots.txt and remove any Disallow rules targeting AI crawlers you want to permit.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does WordPress multisite affect GEO?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'WordPress multisite introduces entity ambiguity for AI engines: if subdomains or subdirectory sites share a root domain but serve different brands or topics, structured data must clearly differentiate each site\'s Organization entity using distinct @id values, separate sameAs arrays, and per-site canonical URLs. Schema plugins configured at the network level often produce incorrect publisher @id values on sub-sites. Audit each site\'s Organization schema individually and ensure the @id for each site resolves to a unique URL within the multisite installation.',
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'GEO by Industry', item: 'https://geooptimised.com/geo-by-industry/' },
+    { '@type': 'ListItem', position: 3, name: 'GEO for WordPress', item: 'https://geooptimised.com/geo-for-wordpress/' },
+  ],
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'wordpress-geo-overview', label: 'WordPress and AI Optimisation' },
+  { id: 'schema-plugins', label: 'Schema Plugins' },
+  { id: 'content-structure', label: 'Content Structure for AI' },
+  { id: 'technical-setup', label: 'Technical Setup' },
+  { id: 'llms-txt-wordpress', label: 'llms.txt on WordPress' },
+  { id: 'robots-txt-crawlers', label: 'Robots.txt and AI Crawlers' },
+  { id: 'plugin-comparison', label: 'Plugin Comparison' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const faqs = [
+  {
+    q: 'Which WordPress plugin is best for GEO and AI optimisation?',
+    a: 'Yoast SEO Premium and Rank Math Pro are the two most capable WordPress plugins for GEO-adjacent structured data. Rank Math Pro has a slight edge for GEO purposes due to its granular schema builder, which allows custom Article, FAQPage, HowTo, and Organization blocks without custom code. For sites that need maximum schema flexibility — multiple schema types per page, custom @graph blocks — a dedicated plugin such as WP Schema Pro or Schema Pro by Brainstorm Force provides more control than either Yoast or Rank Math.',
+  },
+  {
+    q: 'How do I add llms.txt to a WordPress site?',
+    a: "The simplest method is to upload an llms.txt file directly to your WordPress root directory via FTP, SFTP, or your hosting control panel's file manager. The file should be placed at the same level as wp-config.php, making it accessible at yourdomain.com/llms.txt. Alternatively, create a custom WordPress rewrite rule in your .htaccess file to serve a dynamically generated llms.txt from a WordPress endpoint. The static file method is simpler and more reliable for most sites.",
+  },
+  {
+    q: 'Does WordPress Gutenberg help or hinder AI optimisation?',
+    a: 'Gutenberg (the WordPress block editor) neither helps nor hinders AI optimisation directly — the semantic structure of your published HTML is what matters, and Gutenberg produces clean heading hierarchies and paragraph structure by default. Where Gutenberg helps is in enabling block patterns that encourage consistent content structure: FAQ blocks, callout blocks, and table blocks all produce AI-friendly HTML when implemented correctly. The most important GEO-related Gutenberg extension is a FAQ block that auto-generates FAQPage schema from the block content.',
+  },
+  {
+    q: 'Should I block AI crawlers on WordPress?',
+    a: 'No, unless you have a specific legal or commercial reason to do so. Blocking AI crawlers — GPTBot, ClaudeBot, PerplexityBot, Google-Extended — prevents your content from being included in retrieval-augmented generation pipelines, which means your site will not be cited in AI-generated answers. Many WordPress sites inadvertently block these bots through overly broad robots.txt rules added during plugin installations. Audit your robots.txt at yourdomain.com/robots.txt and remove any Disallow rules targeting AI crawlers you want to permit.',
+  },
+  {
+    q: 'How does WordPress multisite affect GEO?',
+    a: "WordPress multisite introduces entity ambiguity for AI engines: if subdomains or subdirectory sites share a root domain but serve different brands or topics, structured data must clearly differentiate each site's Organization entity using distinct @id values, separate sameAs arrays, and per-site canonical URLs. Schema plugins configured at the network level often produce incorrect publisher @id values on sub-sites. Audit each site's Organization schema individually and ensure the @id for each site resolves to a unique URL within the multisite installation.",
+  },
+];
+
+const related = [
+  {
+    tag: 'Hub',
+    title: 'GEO by Industry',
+    excerpt: 'Platform-specific GEO playbooks for Shopify, WordPress, SaaS, and other categories.',
+    href: '/geo-by-industry/',
+  },
+  {
+    tag: 'Guide',
+    title: 'Schema Markup for AI',
+    excerpt: 'Complete implementation guide for JSON-LD structured data that AI engines parse and cite.',
+    href: '/schema-markup-ai/',
+  },
+  {
+    tag: 'Guide',
+    title: 'llms.txt: The Complete Guide',
+    excerpt: 'File structure, content strategy, and deployment methods for llms.txt across any platform.',
+    href: '/llms-txt/',
+  },
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/geo-for-wordpress/" ogType="article">
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/geo-by-industry/" class="transition hover:text-[var(--accent)]">GEO by Industry</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">GEO for WordPress</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Platform Playbook</span>
+        <span class="font-mono text-xs text-ink-300">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">11 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO for WordPress
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        WordPress powers over 40% of the web — which means the majority of the content that AI engines retrieve and cite
+        lives on WordPress installations. <strong class="text-white">GEO for WordPress</strong> is the discipline of configuring
+        your schema plugins, content structure, technical setup, and AI crawler access so that your WordPress site is cited
+        accurately and consistently in AI-generated answers.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>WordPress schema plugins (Rank Math, Yoast, WP Schema Pro) produce very different structured data outputs — choose based on the schema types your content requires, not popularity.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Every WordPress post and page should follow a content structure that leads with a bold definitional statement — the single change most likely to improve AI citation rates.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>llms.txt can be deployed on WordPress as a static file in the root directory — no plugin required, maintainable via FTP or your hosting file manager.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Many WordPress sites accidentally block AI crawlers through security or SEO plugin robots.txt configurations — audit yours before any other GEO work.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Organisation schema at the site level — with sameAs links to Wikidata, LinkedIn, and Companies House — is the highest-leverage single schema addition for most WordPress sites.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1 -->
+      <section id="wordpress-geo-overview" class="anchor-top prose-dark mb-16">
+        <h2>WordPress and AI Optimisation: The Opportunity</h2>
+
+        <p>
+          <strong>WordPress is the dominant content management system for precisely the type of authoritative, long-form content that AI engines prefer to cite.</strong>
+          Publishers, agencies, professional service firms, and B2B brands running WordPress have a structural advantage in AI visibility:
+          their content is typically well-organised, editorially rigorous, and hosted on domains with established authority. The problem
+          is that most WordPress installations are configured for traditional search, not for AI retrieval.
+        </p>
+
+        <p>
+          The gap between traditional SEO configuration and GEO-ready configuration on WordPress is bridgeable with a focused
+          technical audit and a structured content update programme. Unlike Shopify, WordPress gives you direct access to every
+          layer of the stack — file system, server configuration, database, and theme code — which means you can implement the
+          full GEO technical setup without workarounds or platform restrictions.
+        </p>
+
+        <p>
+          GEO for WordPress is part of the broader
+          <a href="/geo-by-industry/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO by industry</a>
+          framework. The principles of
+          <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a>
+          apply across all platforms; this guide covers the WordPress-specific implementation details. The four areas that deliver
+          the greatest AI visibility improvement on WordPress are: schema plugin configuration, content structure, technical setup
+          (robots.txt and crawler access), and llms.txt deployment.
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="schema-plugins" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Schema Plugins for WordPress GEO</h2>
+          <p>
+            <strong>Schema plugin choice on WordPress is a GEO decision as much as an SEO decision.</strong> The three leading
+            options — Yoast SEO Premium, Rank Math Pro, and dedicated schema plugins — produce meaningfully different structured
+            data outputs, and the differences matter significantly for AI engine parsing.
+          </p>
+        </div>
+
+        <!-- Plugin comparison table -->
+        <div class="mt-8 overflow-x-auto rounded-xl border border-geo-800">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-geo-800 bg-geo-900">
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-100">Plugin</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-100">Organization Schema</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-100">FAQPage / HowTo</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-100">Custom Schema Builder</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-100">sameAs Control</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-geo-800">
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-semibold">Yoast SEO Premium</td>
+                <td class="px-4 py-3 text-green-400">Yes (via settings)</td>
+                <td class="px-4 py-3 text-yellow-400">FAQ block only</td>
+                <td class="px-4 py-3 text-red-400">No</td>
+                <td class="px-4 py-3 text-yellow-400">Limited</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-semibold">Rank Math Pro</td>
+                <td class="px-4 py-3 text-green-400">Yes (granular)</td>
+                <td class="px-4 py-3 text-green-400">Both, per-post</td>
+                <td class="px-4 py-3 text-green-400">Yes</td>
+                <td class="px-4 py-3 text-green-400">Full control</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-semibold">WP Schema Pro</td>
+                <td class="px-4 py-3 text-green-400">Yes</td>
+                <td class="px-4 py-3 text-green-400">Yes</td>
+                <td class="px-4 py-3 text-green-400">Yes (rule-based)</td>
+                <td class="px-4 py-3 text-green-400">Full control</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-semibold">Schema Pro (Brainstorm)</td>
+                <td class="px-4 py-3 text-green-400">Yes</td>
+                <td class="px-4 py-3 text-green-400">Yes</td>
+                <td class="px-4 py-3 text-yellow-400">Partial</td>
+                <td class="px-4 py-3 text-green-400">Yes</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-semibold">All in One SEO</td>
+                <td class="px-4 py-3 text-green-400">Yes</td>
+                <td class="px-4 py-3 text-yellow-400">FAQ only</td>
+                <td class="px-4 py-3 text-yellow-400">Limited</td>
+                <td class="px-4 py-3 text-yellow-400">Limited</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose-dark mt-8">
+          <h3>Configuring Organisation Schema on WordPress</h3>
+          <p>
+            Organisation schema at the site root is the single most important schema addition for most WordPress GEO projects.
+            AI engines use it to resolve your brand as a distinct entity — assigning it a category, attributes, and relationships.
+            Without it, your site is a collection of pages with no clear brand context.
+          </p>
+          <p>
+            A complete Organisation schema for WordPress should include: <code>name</code>, <code>url</code>, <code>logo</code>
+            (ImageObject with width, height, and caption), <code>description</code> (one clear sentence describing what the
+            organisation does), <code>foundingDate</code>, <code>email</code>, <code>areaServed</code>, and a <code>sameAs</code>
+            array containing links to Wikidata, Wikipedia (if applicable), LinkedIn, Companies House, and any industry-specific
+            directories. Set this in Rank Math Pro under Titles &amp; Meta → Local SEO, or in Yoast's Knowledge Graph settings.
+          </p>
+
+          <h3>FAQPage Schema: Per-Post Implementation</h3>
+          <p>
+            FAQPage schema should be added to every WordPress post or page that contains a question-and-answer section. With
+            Rank Math Pro, this is configured per-post in the Schema tab of the post editor. With Yoast, use the FAQ Gutenberg block,
+            which auto-generates FAQPage schema from the block content. With WP Schema Pro, create a rule that automatically applies
+            FAQPage schema to all posts in specified categories.
+          </p>
+          <p>
+            The most common FAQPage error on WordPress is schema that references questions not present in the visible page content.
+            AI engines cross-reference schema content against page text. Discrepancies reduce citation confidence.
+            Every question in your FAQPage schema must be visible and readable on the published page.
+          </p>
+          <p>
+            For full schema implementation guidance, see
+            <a href="/schema-markup-ai/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">schema markup for AI</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="content-structure" class="anchor-top prose-dark mb-16">
+        <h2>Content Structure for AI Citation on WordPress</h2>
+
+        <p>
+          <strong>The most impactful GEO change you can make to a WordPress site is restructuring how posts and pages open.</strong>
+          AI retrieval systems are biased towards content that begins with a clear, definitional statement — a sentence that directly
+          and confidently answers the most likely query for that page. Most WordPress content buries this statement in the second or
+          third paragraph, after an introductory hook. That structure works for human readers; it fails for AI extraction.
+        </p>
+
+        <h3>The GEO Content Template for WordPress Posts</h3>
+        <p>
+          Apply this structure to every pillar post and commercial landing page:
+        </p>
+        <ol>
+          <li><strong>Opening definition</strong> — one sentence that states what the topic is, using the target keyword naturally.</li>
+          <li><strong>Why it matters now</strong> — one to two sentences with a specific, verifiable claim about context or scale.</li>
+          <li><strong>What the page covers</strong> — a brief scoped statement so AI engines know which sub-questions this page answers.</li>
+          <li><strong>Body sections</strong> — each section opens with a bold declarative sentence. Use H2 and H3 headings that mirror question phrasings AI users are likely to ask.</li>
+          <li><strong>Data or examples</strong> — at least one specific, sourced data point per major section.</li>
+          <li><strong>FAQ section</strong> — five to eight Q&amp;A pairs, each self-contained, with FAQPage schema applied.</li>
+        </ol>
+        <p>
+          This structure serves dual purposes: it improves AI citation rates by making the content easy to extract, and it
+          improves traditional search performance through better semantic organisation and featured snippet eligibility.
+        </p>
+
+        <h3>Heading Hierarchy and AI Navigation</h3>
+        <p>
+          AI retrieval systems use heading structure to navigate long-form content and to identify which section answers a
+          given query. A correct heading hierarchy on WordPress means: one H1 per page (the post title, set by your theme),
+          H2 for major sections, H3 for subsections, and no skipped levels (H1 to H3 without an H2 in between).
+          Many WordPress themes add a second H1 for the site name — audit your theme's template files and correct any
+          duplicate H1 occurrences.
+        </p>
+
+        <h3>Tables as AI-Citable Content</h3>
+        <p>
+          Structured comparison tables are among the most frequently cited content formats in AI-generated responses to
+          "best of" and "compare" queries. WordPress's Gutenberg editor produces clean HTML table markup that AI parsers
+          handle correctly. Every comparison post — tool comparisons, approach comparisons, option breakdowns — should
+          include at least one HTML table with descriptive column headers using <code>&lt;th scope="col"&gt;</code> attributes.
+          Avoid creating tables as images or using table plugins that output complex nested div structures, as these
+          reduce AI parsability.
+        </p>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="technical-setup" class="anchor-top prose-dark mb-16">
+        <h2>Technical Setup for WordPress GEO</h2>
+
+        <p>
+          <strong>The technical foundation of WordPress GEO is ensuring AI crawlers can access, parse, and trust your content without obstruction.</strong>
+          Three areas require explicit attention: crawler access configuration, page speed (which affects RAG retrieval reliability),
+          and canonical URL consistency.
+        </p>
+
+        <h3>Core Web Vitals and AI Retrieval</h3>
+        <p>
+          Perplexity and similar RAG-based AI systems retrieve pages in real time when generating answers. Pages that load slowly,
+          time out under crawler conditions, or produce JavaScript-rendered content that headless crawlers cannot execute will be
+          less reliably retrieved. WordPress sites using page builders (Elementor, Divi, WPBakery) frequently suffer from
+          large JavaScript payloads that degrade crawler performance. Ensure your critical content pages produce a meaningful
+          HTML payload in the initial server response — do not rely entirely on client-side rendering for body content.
+        </p>
+
+        <h3>Canonical URL Consistency</h3>
+        <p>
+          WordPress frequently creates multiple URLs for the same content: paginated archives, tag pages, category pages, and
+          author pages can all produce duplicate or near-duplicate content accessible at different URLs. Configure your schema
+          plugin to output <code>mainEntityOfPage</code> canonical URLs on all Article schema, and ensure your canonical link
+          elements match those URLs exactly. AI engines encountering multiple URLs for the same content may split citation
+          credit between them or avoid citing either.
+        </p>
+
+        <h3>Site Speed Recommendations for GEO</h3>
+        <p>
+          For WordPress sites prioritising AI visibility, the most impactful performance improvements are: switching to a
+          lightweight theme (Kadence, GeneratePress, or Blocksy) if on a builder-heavy theme, enabling full-page caching
+          (WP Rocket, LiteSpeed Cache, or W3 Total Cache), serving images in WebP format, and hosting on a server with
+          response times below 200ms. These changes reduce the probability of RAG crawlers timing out on your pages.
+        </p>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="llms-txt-wordpress" class="anchor-top prose-dark mb-16">
+        <h2>Deploying llms.txt on WordPress</h2>
+
+        <p>
+          <strong>WordPress is the most straightforward major CMS for llms.txt deployment because you have direct access to the document root.</strong>
+          Unlike Shopify (which requires workarounds) or some managed hosting environments, a standard WordPress installation
+          on shared or VPS hosting allows you to place a static file at the root level that is immediately accessible at
+          <code>yourdomain.com/llms.txt</code>.
+        </p>
+
+        <h3>Method 1: Static File Upload (Recommended)</h3>
+        <p>
+          Upload your <code>llms.txt</code> file to the WordPress root directory — the same directory that contains
+          <code>wp-config.php</code> and <code>wp-login.php</code> — using FTP, SFTP, or your hosting control panel's
+          file manager (cPanel File Manager, Plesk, etc.). No .htaccess rules, no plugin configuration, and no WordPress
+          code changes are needed. The file will be served as plain text by your web server automatically.
+        </p>
+        <p>
+          After uploading, verify the file is accessible at <code>yourdomain.com/llms.txt</code> in a browser and confirm
+          it returns <code>Content-Type: text/plain</code> in the response headers. Update the file manually whenever you
+          add new high-authority content areas to the site.
+        </p>
+
+        <h3>Method 2: WordPress Rewrite Endpoint</h3>
+        <p>
+          For sites where direct file system access is restricted, or where the llms.txt content should be dynamically
+          generated from WordPress post data, add a custom rewrite endpoint in your theme's <code>functions.php</code>
+          or a site-specific plugin:
+        </p>
+        <pre class="mt-4 rounded-lg bg-geo-900 border border-geo-800 p-4 text-xs font-mono text-ink-200 overflow-x-auto"><code>add_action('init', function() &#123;
+  add_rewrite_rule('^llms\.txt$', 'index.php?llms_txt=1', 'top');
+&#125;);
+add_filter('query_vars', fn($v) => array_merge($v, ['llms_txt']));
+add_action('template_redirect', function() &#123;
+  if (!get_query_var('llms_txt')) return;
+  header('Content-Type: text/plain; charset=utf-8');
+  // Output your llms.txt content here
+  exit;
+&#125;);</code></pre>
+        <p class="mt-4">
+          Flush rewrite rules after adding this code by visiting Settings → Permalinks and saving.
+        </p>
+
+        <p>
+          For full llms.txt content strategy and structure guidance, see the
+          <a href="/llms-txt/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">complete llms.txt guide</a>.
+        </p>
+      </section>
+
+      <!-- Section 6 -->
+      <section id="robots-txt-crawlers" class="anchor-top prose-dark mb-16">
+        <h2>Robots.txt and AI Crawlers on WordPress</h2>
+
+        <p>
+          <strong>WordPress's robots.txt is one of the most common sources of accidental AI visibility suppression.</strong>
+          The file can be generated dynamically by WordPress core (accessible at <code>/robots.txt</code> without a physical file),
+          overridden by a static file in the document root, or modified by SEO plugins — creating multiple potential sources of
+          conflicting rules.
+        </p>
+
+        <h3>Auditing Your WordPress Robots.txt</h3>
+        <p>
+          Visit <code>yourdomain.com/robots.txt</code> in a browser and examine every Disallow rule. Check for any of the
+          following AI crawler user agent strings in Disallow directives:
+        </p>
+        <ul>
+          <li><code>GPTBot</code> — OpenAI's crawler for ChatGPT training and retrieval</li>
+          <li><code>ClaudeBot</code> — Anthropic's crawler</li>
+          <li><code>PerplexityBot</code> — Perplexity's retrieval crawler</li>
+          <li><code>Google-Extended</code> — Google's AI training crawler (separate from Googlebot)</li>
+          <li><code>CCBot</code> — Common Crawl, a primary source for LLM training data</li>
+          <li><code>anthropic-ai</code> — alternative Anthropic crawler identifier</li>
+        </ul>
+        <p>
+          If any of these appear with Disallow rules covering paths you want AI-crawled, remove those rules. If you are using
+          Yoast SEO or Rank Math, check their respective robots.txt configuration sections — both plugins allow you to add
+          custom directives that may have been set to block AI bots during earlier plugin updates.
+        </p>
+
+        <h3>WordPress Robots.txt Priority Order</h3>
+        <p>
+          WordPress resolves robots.txt in this priority order: (1) a physical <code>robots.txt</code> file in the document
+          root overrides everything; (2) if no physical file exists, WordPress generates one dynamically, which SEO plugins
+          can then filter via the <code>robots_txt</code> hook. To ensure full control, use a physical static file and
+          configure it to explicitly allow the AI crawlers you want to permit.
+        </p>
+      </section>
+
+      <!-- FAQ -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Optimise Your WordPress Site for AI Search</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        A GEOoptimised WordPress audit covers schema plugin configuration, content structure scoring, AI crawler access,
+        llms.txt deployment, and entity consistency — delivered as a prioritised action plan your team can implement
+        immediately.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request a WordPress GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

@@ -1,0 +1,672 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO Checklist: Pre-Launch and Ongoing Tasks | GEOoptimised';
+const description = 'A complete GEO checklist covering pre-launch foundations, content structure, entity setup, technical signals, and ongoing monitoring tasks for AI citation growth.';
+
+const checklistItems = [
+  'Allow AI crawlers in robots.txt (GPTBot, PerplexityBot, ClaudeBot)',
+  'Deploy llms.txt declaring site purpose and topic scope',
+  'Confirm canonical URLs are correctly set on all pages',
+  'Run Core Web Vitals audit (LCP < 2.5 s, CLS < 0.1)',
+  'Add Article or TechArticle schema to all content pages',
+  'Add Organization schema with logo and sameAs to homepage',
+  'Add FAQPage schema to every page with a FAQ section',
+  'Add BreadcrumbList schema to all non-homepage pages',
+  'Verify Google Business Profile attributes match entity map',
+  'Submit or update Wikidata entry with correct entity attributes',
+  'Align entity description on LinkedIn company page',
+  'Run baseline AI visibility audit across 5 platforms',
+  'Document entity map (name, category, attributes, relationships)',
+  'Produce content gap analysis from audit findings',
+  'Each page opens with a definitional statement answering the primary query',
+  'Paragraphs are 2–4 sentences, each covering one point',
+  'H2 and H3 headings are declarative labels, not questions',
+  'FAQ section present on every content page (4–6 Q&As)',
+  'At least one table or structured list on comparative content',
+  'Every SEED page links to parent NODE and ROOT',
+  'Internal links use correct anchor text reflecting target entity',
+  'Set up weekly citation tracking query set across 5 platforms',
+  'Log citation frequency, brand accuracy, and competitor mentions',
+  'Review monitoring data monthly; update content quarterly',
+  'Track competitor citation share for displacement opportunities',
+];
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'GEO Checklist: Pre-Launch and Ongoing',
+    description: 'A complete GEO checklist covering pre-launch foundations, content structure, entity setup, technical signals, and ongoing monitoring tasks for AI citation growth.',
+    url: 'https://geooptimised.com/geo-checklist/',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://geooptimised.com/geo-checklist/'
+    },
+    author: { '@id': 'https://geooptimised.com/#organization' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' },
+    datePublished: '2026-06-06',
+    dateModified: '2026-06-06',
+    image: 'https://geooptimised.com/og-image.png',
+    inLanguage: 'en-GB'
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'GEO Checklist: Pre-Launch and Ongoing',
+    description: 'A complete checklist of GEO tasks covering technical foundations, entity setup, content structure, and ongoing monitoring.',
+    numberOfItems: checklistItems.length,
+    itemListElement: checklistItems.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item
+    }))
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What should be on a GEO checklist?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'A complete GEO checklist covers four areas: technical foundations (robots.txt, llms.txt, schema markup, Core Web Vitals), entity setup (Organization schema, Google Business Profile, Wikidata, sameAs links), content structure (definitional openings, extraction-friendly paragraphs, FAQ sections, internal links), and ongoing monitoring (weekly citation tracking across ChatGPT, Perplexity, Gemini, Copilot, and AI Overviews). Pre-launch tasks establish the foundations; ongoing tasks compound citation gains over time.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How long does it take to complete a GEO pre-launch checklist?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'A thorough GEO pre-launch checklist takes three to six weeks to complete fully, depending on the size of your existing content inventory and the state of your entity records. Technical tasks (robots.txt, schema, canonicals) can be completed in one to two days. Entity setup (Wikidata, Google Business Profile, sameAs alignment) typically takes one to two weeks if corrections are needed. Retrofitting existing content to GEO content standards is the most time-intensive component and depends on content volume.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Which GEO checklist items have the highest impact?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The highest-impact GEO checklist items are: (1) allowing AI crawlers in robots.txt — a single line change that opens your entire domain to citation-earning; (2) deploying FAQPage schema — FAQ sections are the highest-density citation targets on any page; (3) rewriting content openings to definitional statements — this directly affects extraction frequency across all platforms; and (4) running a baseline AI visibility audit — without a baseline, you cannot measure whether any other checklist item is working.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How often should the GEO ongoing checklist be run?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The ongoing GEO checklist should be run on a weekly cadence for citation monitoring tasks (tracking query responses across five platforms) and a monthly cadence for content review and entity accuracy checks. Schema and technical audits should be run quarterly or whenever significant site changes are deployed. The brands that compound citation gains fastest are those that treat monitoring as a standing deliverable rather than an occasional project.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Does a GEO checklist differ for each AI platform?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The core GEO checklist applies across all platforms — extraction-first content, entity schema, and AI crawler access are universal requirements. Platform-specific additions include: verifying Bing Webmaster Tools for Copilot, checking Google Business Profile accuracy for Gemini and AI Overviews, and prioritising recent publication dates for Perplexity RAG retrieval. Monitor each platform separately in your ongoing checklist because citation patterns diverge significantly between them.'
+        }
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+      { '@type': 'ListItem', position: 3, name: 'GEO Strategy', item: 'https://geooptimised.com/geo-strategy/' },
+      { '@type': 'ListItem', position: 4, name: 'GEO Checklist', item: 'https://geooptimised.com/geo-checklist/' }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'how-to-use', label: 'How to Use This Checklist' },
+  { id: 'technical-foundations', label: 'Technical Foundations' },
+  { id: 'entity-setup', label: 'Entity & Schema Setup' },
+  { id: 'content-structure', label: 'Content Structure' },
+  { id: 'internal-linking', label: 'Internal Linking' },
+  { id: 'ongoing-monitoring', label: 'Ongoing Monitoring' },
+  { id: 'checklist-summary', label: 'Summary Table' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const technicalItems = [
+  {
+    task: 'Allow AI crawlers in robots.txt',
+    detail: 'Explicitly allow GPTBot, PerplexityBot, ClaudeBot, Amazonbot, and Googlebot-Extended. Many sites added blanket AI blocks in 2023–2024. A single disallow directive can prevent every citation-earning crawl on your domain. Check your robots.txt now — if it has a Disallow: / for any AI user-agent, that is your first fix.',
+    priority: 'Critical',
+  },
+  {
+    task: 'Deploy llms.txt at domain root',
+    detail: 'Create /llms.txt declaring your site\'s purpose, primary topic scope, entity name, and preferred citation URL. Follow the emerging llms.txt convention: plain text, concise, structured with clear headings for Purpose, Topics, and Entity. Update it whenever you add a major new content area or service.',
+    priority: 'High',
+  },
+  {
+    task: 'Audit and set canonical URLs',
+    detail: 'Every page must have exactly one canonical URL set via <link rel="canonical">. Parameter variants, trailing-slash inconsistencies, and www vs non-www duplicates fragment entity signals across multiple URLs. Consolidate to one canonical per logical page and verify with a crawl tool.',
+    priority: 'High',
+  },
+  {
+    task: 'Pass Core Web Vitals thresholds',
+    detail: 'Target LCP under 2.5 seconds and CLS below 0.1 on all page types. AI crawlers share crawl infrastructure with search engine bots; slow pages receive lower crawl priority and may be fetched less frequently, reducing the recency of your content in RAG retrieval pipelines. Use Google Search Console\'s Core Web Vitals report as your baseline.',
+    priority: 'Medium',
+  },
+  {
+    task: 'Verify sitemap and crawl coverage',
+    detail: 'Submit your sitemap to Google Search Console and Bing Webmaster Tools. Confirm that all target pages are indexed and receiving regular crawls. Pages that are not indexed cannot be retrieved by RAG systems that pull from live web sources. Check the Coverage report for any indexation errors on content pages.',
+    priority: 'Medium',
+  },
+];
+
+const entityItems = [
+  {
+    task: 'Deploy Organization schema on homepage',
+    detail: 'Add Organization schema with name, url, logo (ImageObject), description, and sameAs array linking to all authoritative third-party profiles: LinkedIn, Companies House, Wikidata Q-number, industry body listings. This is the primary entity anchor for AI knowledge graphs — without it, there is no structured signal linking your domain to your entity.',
+    priority: 'Critical',
+  },
+  {
+    task: 'Add Article/TechArticle schema to content pages',
+    detail: 'Every substantive content page should carry Article or TechArticle schema with headline, author (Organization), publisher (Organization), datePublished, dateModified, image, and mainEntityOfPage. This marks the page as a published, attributable source rather than an anonymous document — a distinction that affects citation weighting in AI retrieval systems.',
+    priority: 'Critical',
+  },
+  {
+    task: 'Deploy FAQPage schema on every FAQ section',
+    detail: 'If a page has a FAQ section (and every content page should), deploy FAQPage schema with Question and acceptedAnswer pairs matching the on-page content exactly. FAQPage schema maps directly to conversational query patterns and is one of the most reliable structured data types for earning citations in dialogue-format AI responses.',
+    priority: 'High',
+  },
+  {
+    task: 'Add BreadcrumbList schema to all non-homepage pages',
+    detail: 'BreadcrumbList schema signals topical hierarchy to AI systems, helping them understand that a SEED page is related to a specific NODE and ROOT. This reinforces topical authority clustering — a signal that benefits citation frequency for the entire cluster, not just the individual page. Format: Home → ROOT → NODE → SEED.',
+    priority: 'High',
+  },
+  {
+    task: 'Verify Google Business Profile accuracy',
+    detail: 'Your Google Business Profile is a primary entity signal for both Gemini and Google AI Overviews. Ensure that your business name, category, description, website, and service attributes are word-for-word identical to the entity map you have documented. Flag any inconsistencies and update them — Google Business Profile edits typically propagate within a few days.',
+    priority: 'High',
+  },
+  {
+    task: 'Submit or update Wikidata entry',
+    detail: 'Wikidata is a core training data and knowledge graph source for multiple AI platforms including Gemini and ChatGPT. If your brand does not have a Wikidata entry, create one with name, instance of (organisation type), official website, founding date, and industry. If an entry exists, verify all attributes match your entity map and correct any inaccuracies.',
+    priority: 'Medium',
+  },
+];
+
+const contentItems = [
+  {
+    task: 'Rewrite content openings to definitional statements',
+    detail: 'Audit every existing content page and replace introductory paragraphs with a direct definitional statement in sentence one. "GEO is the systematic practice of improving brand visibility in AI-generated answers." not "In today\'s rapidly evolving digital landscape, brands are discovering...". This is the highest-ROI content change you can make to existing pages.',
+    priority: 'Critical',
+  },
+  {
+    task: 'Break long paragraphs into single-point units',
+    detail: 'Review all content for multi-concept paragraphs and split them. Each paragraph should cover exactly one point in two to four sentences. Readers rarely notice the difference; AI extraction systems treat multi-concept paragraphs as high-ambiguity blocks and surface them less reliably. This applies to both existing and new content.',
+    priority: 'High',
+  },
+  {
+    task: 'Convert question headings to declarative labels',
+    detail: 'Change "What is citation architecture?" to "Citation Architecture Defines Extractable Content Structure". Declarative headings state the section\'s claim and allow AI systems to match queries to section labels without needing to read the body. This is especially impactful for FAQ-format content and how-to guides.',
+    priority: 'High',
+  },
+  {
+    task: 'Add or improve FAQ sections (4–6 Q&As per page)',
+    detail: 'Every content page should have a FAQ section of four to six questions matching common query patterns for that topic. Write each answer as a complete, standalone response of 40 to 100 words. Pair with FAQPage schema. FAQ sections consistently produce the highest citation rates of any content element on a page.',
+    priority: 'High',
+  },
+  {
+    task: 'Add tables to comparative and attribute-heavy content',
+    detail: 'Wherever you compare options, list attributes, or present data across multiple dimensions, convert prose to a table. Tables are natively extractable by AI systems and preserve relational structure that prose descriptions lose. Use <th scope="col"> for all column headers. Keep tables concise — six to eight rows is more extractable than twenty.',
+    priority: 'Medium',
+  },
+];
+
+const linkingItems = [
+  {
+    task: 'Every SEED links to its parent NODE',
+    detail: 'Each SEED page must contain at least one contextual link to its parent NODE using anchor text that reflects the NODE\'s topic. This reinforces the topical cluster signal that AI systems use to assess category authority.',
+    priority: 'High',
+  },
+  {
+    task: 'Every SEED links to ROOT',
+    detail: 'Each SEED page must also link to the ROOT pillar page (/generative-engine-optimisation/) using descriptive anchor text. This consolidates authority signals towards the primary entity hub.',
+    priority: 'High',
+  },
+  {
+    task: 'Cross-NODE bridges for topically adjacent content',
+    detail: 'Where a SEED page is topically adjacent to a page in another cluster, add a contextual link. These cross-NODE bridges improve entity relationship signals and create discovery paths for AI crawlers navigating your domain.',
+    priority: 'Medium',
+  },
+  {
+    task: 'Use descriptive anchor text throughout',
+    detail: 'Link anchor text should describe the destination entity or topic specifically. "Generative engine optimisation guide" is better than "click here" or "learn more". Descriptive anchors function as entity relationship labels for AI systems reading your page.',
+    priority: 'Medium',
+  },
+];
+
+const monitoringItems = [
+  {
+    task: 'Run weekly citation queries across 5 platforms',
+    detail: 'Submit a fixed set of 10–20 target queries weekly to ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews. Log: is your brand cited? Is the description accurate? Which competitors are cited? Maintain a consistent query set to enable week-on-week comparison. Do not vary the queries — query stability is essential for trend detection.',
+    priority: 'Critical',
+  },
+  {
+    task: 'Track brand accuracy in AI responses',
+    detail: 'When your brand is cited, verify that the AI-generated description is accurate. Hallucinated or outdated brand descriptions are a signal of weak entity anchoring. Log every inaccuracy and trace it to the source — usually an outdated third-party description, a conflicting entity attribute, or a training data artefact that requires entity correction work to resolve.',
+    priority: 'High',
+  },
+  {
+    task: 'Monitor competitor citation share',
+    detail: 'For every query in your monitoring set, log which competitors are cited when you are not. This data identifies displacement opportunities — queries where a competitor\'s citation share can be targeted with higher-quality, better-structured content. Competitor citation analysis should drive your content calendar prioritisation monthly.',
+    priority: 'High',
+  },
+  {
+    task: 'Review schema validity quarterly',
+    detail: 'Validate all structured data using Google\'s Rich Results Test and Schema.org validator quarterly. Schema errors introduced during site updates can silently disable structured data signals. A quarterly validation sweep catches and corrects errors before they compound into sustained citation declines.',
+    priority: 'Medium',
+  },
+  {
+    task: 'Update robots.txt after major site changes',
+    detail: 'Any deployment that modifies robots.txt, changes URL structures, or adds new subdirectories should include a check that AI crawlers remain unblocked. Automated deployments and CMS updates have been known to overwrite robots.txt with default templates that block all bots. Set this as a post-deploy verification step.',
+    priority: 'Medium',
+  },
+];
+
+const summaryRows = [
+  { phase: 'Pre-launch', category: 'Technical', count: '5 tasks', timing: 'Before first page is indexed' },
+  { phase: 'Pre-launch', category: 'Entity & Schema', count: '6 tasks', timing: 'Before publishing content' },
+  { phase: 'Pre-launch', category: 'Content Structure', count: '5 tasks', timing: 'Per page, before publish' },
+  { phase: 'Pre-launch', category: 'Internal Linking', count: '4 tasks', timing: 'Per page, before publish' },
+  { phase: 'Ongoing', category: 'Citation Monitoring', count: 'Weekly query runs', timing: 'Every 7 days' },
+  { phase: 'Ongoing', category: 'Content Review', count: 'Audit & update', timing: 'Monthly review, quarterly update' },
+  { phase: 'Ongoing', category: 'Schema Validation', count: 'Full sweep', timing: 'Quarterly or post-deploy' },
+  { phase: 'Ongoing', category: 'Competitor Analysis', count: 'Citation share log', timing: 'Monthly, drives content calendar' },
+];
+
+const faqs = [
+  {
+    q: 'What should be on a GEO checklist?',
+    a: 'A complete GEO checklist covers four areas: technical foundations (robots.txt, llms.txt, schema markup, Core Web Vitals), entity setup (Organization schema, Google Business Profile, Wikidata, sameAs links), content structure (definitional openings, extraction-friendly paragraphs, FAQ sections, internal links), and ongoing monitoring (weekly citation tracking across ChatGPT, Perplexity, Gemini, Copilot, and AI Overviews).',
+  },
+  {
+    q: 'How long does it take to complete a GEO pre-launch checklist?',
+    a: 'A thorough GEO pre-launch checklist takes three to six weeks to complete fully. Technical tasks can be done in one to two days. Entity setup typically takes one to two weeks. Retrofitting existing content to GEO content standards is the most time-intensive component and depends on content volume.',
+  },
+  {
+    q: 'Which GEO checklist items have the highest impact?',
+    a: 'The highest-impact GEO checklist items are: (1) allowing AI crawlers in robots.txt — a single line change that opens your domain to citation-earning; (2) deploying FAQPage schema — FAQ sections are the highest-density citation targets on any page; (3) rewriting content openings to definitional statements; and (4) running a baseline AI visibility audit — without a baseline you cannot measure whether any checklist item is working.',
+  },
+  {
+    q: 'How often should the GEO ongoing checklist be run?',
+    a: 'Citation monitoring tasks should run weekly. Content review and entity accuracy checks should run monthly. Schema and technical audits should run quarterly or after significant site changes. The brands that compound citation gains fastest treat monitoring as a standing deliverable rather than an occasional project.',
+  },
+  {
+    q: 'Does a GEO checklist differ for each AI platform?',
+    a: 'The core GEO checklist applies across all platforms — extraction-first content, entity schema, and AI crawler access are universal. Platform-specific additions include: Bing Webmaster Tools for Copilot, Google Business Profile for Gemini and AI Overviews, and recent publication dates for Perplexity. Monitor each platform separately because citation patterns diverge significantly between them.',
+  },
+];
+
+const related = [
+  {
+    tag: 'NODE',
+    title: 'GEO Strategy Framework',
+    excerpt: 'The seven-step strategic framework that sequences checklist actions into a durable programme.',
+    href: '/geo-strategy/',
+  },
+  {
+    tag: 'Best Practices',
+    title: 'GEO Best Practices: What Actually Earns AI Citations',
+    excerpt: 'The reasoning behind each best practice — why extraction-first content and entity consistency drive citations.',
+    href: '/geo-best-practices/',
+  },
+  {
+    tag: 'Guide',
+    title: 'How to Do GEO: Step-by-Step',
+    excerpt: 'A tactical walkthrough of implementing GEO from audit through ongoing monitoring.',
+    href: '/how-to-do-geo/',
+  },
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/geo-checklist/" ogType="article">
+
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">GEO</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-strategy/" class="transition hover:text-[var(--accent)]">GEO Strategy</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">GEO Checklist</li>
+    </ol>
+  </nav>
+
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Implementation Checklist</span>
+        <span class="font-mono text-xs text-ink-300">6 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">13 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO Checklist: Pre-Launch and Ongoing
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">A GEO checklist converts strategy into action: it sequences every technical, entity, content, and monitoring task into a prioritised order that prevents gaps from compounding into citation failures.</strong> This checklist is structured into pre-launch foundations and ongoing maintenance tasks. Work through the pre-launch sections before publishing new content; run the ongoing sections on the cadences specified. Use it alongside the <a href="/geo-strategy/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO strategy framework</a> and <a href="/geo-best-practices/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO best practices</a> for full context on why each task matters.
+      </p>
+    </div>
+  </section>
+
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" id="toc-nav">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <div>
+
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>The single highest-impact item on the pre-launch checklist is verifying AI crawlers are allowed in robots.txt — a single line that can unlock your entire domain to citation-earning.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Entity and schema tasks are prerequisites: content improvements earn fewer citations when the underlying entity is ambiguous or poorly defined.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>The content checklist applies per-page: every page published should pass all content structure checks before going live.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Ongoing monitoring must run weekly — citation patterns shift with model updates and competitor actions faster than monthly review cadences can detect.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Total pre-launch checklist: 20 tasks across four categories. Ongoing: five recurring task types across weekly, monthly, and quarterly cadences.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prose-dark">
+        <h2 id="how-to-use" class="anchor-top">How to Use This Checklist</h2>
+        <p>
+          <strong>This GEO checklist is divided into pre-launch foundations and ongoing maintenance — both are required for sustained citation growth.</strong> Pre-launch tasks are ordered by dependency: technical access must be in place before entity signals are meaningful; entity signals must be in place before content structure drives citations. Skip the order and you create the gaps that produce inconsistent citation patterns.
+        </p>
+        <p>
+          Each checklist section is grouped by category with a priority rating (Critical, High, Medium) and implementation notes. Critical items should never be deferred — they are foundational and their absence blocks all downstream gains. High items should be in place before any content is published. Medium items improve citation potential but are unlikely to block citations on their own.
+        </p>
+        <p>
+          The ongoing section uses a fixed cadence structure: weekly for monitoring, monthly for content review, quarterly for technical audits. These are minimum cadences — teams in competitive categories or high-disruption markets should monitor more frequently. For the strategic context behind this checklist, see the full <a href="/geo-strategy/">GEO strategy framework</a>. For the reasoning behind each practice, see the <a href="/geo-best-practices/">GEO best practices guide</a>.
+        </p>
+        <p>
+          The checklist below covers <strong>{checklistItems.length} individual tasks</strong> across pre-launch and ongoing categories. Each section is expandable — use the priority ratings to triage if you are resource-constrained.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="technical-foundations" class="anchor-top">Section 1: Technical Foundations (Pre-Launch)</h2>
+        <p>
+          <strong>Technical foundations determine whether AI crawlers can access your content at all — without them, every other checklist item has zero effect on citations.</strong> Complete these tasks before any content optimisation work begins. They take one to three days to implement and unlock the full citation potential of everything that follows.
+        </p>
+      </div>
+
+      <ul class="mt-8 space-y-4">
+        {technicalItems.map(item => (
+          <li class="card p-5 flex items-start gap-4">
+            <span class={`mt-0.5 shrink-0 rounded px-2 py-0.5 text-xs font-semibold ${item.priority === 'Critical' ? 'bg-red-900/40 text-red-300' : item.priority === 'High' ? 'bg-amber-900/40 text-amber-300' : 'bg-geo-800/60 text-ink-300'}`}>
+              {item.priority}
+            </span>
+            <div>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="geo-check h-4 w-4 shrink-0 rounded border border-ink-600 bg-transparent accent-[var(--accent)]" />
+                <span class="font-semibold text-white text-sm">{item.task}</span>
+              </label>
+              <p class="mt-2 text-sm leading-relaxed text-ink-300 pl-7">{item.detail}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+
+      <div class="prose-dark mt-16">
+        <h2 id="entity-setup" class="anchor-top">Section 2: Entity &amp; Schema Setup (Pre-Launch)</h2>
+        <p>
+          <strong>Entity setup is the layer most brands skip — and the layer most responsible for inconsistent or absent citations despite strong content.</strong> AI models cite entities, not pages. If your entity is ambiguously defined or inconsistently described across the sources that feed AI training data and knowledge graphs, your content will earn fewer citations than its quality warrants. Complete entity setup before publishing optimised content.
+        </p>
+      </div>
+
+      <ul class="mt-8 space-y-4">
+        {entityItems.map(item => (
+          <li class="card p-5 flex items-start gap-4">
+            <span class={`mt-0.5 shrink-0 rounded px-2 py-0.5 text-xs font-semibold ${item.priority === 'Critical' ? 'bg-red-900/40 text-red-300' : item.priority === 'High' ? 'bg-amber-900/40 text-amber-300' : 'bg-geo-800/60 text-ink-300'}`}>
+              {item.priority}
+            </span>
+            <div>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="geo-check h-4 w-4 shrink-0 rounded border border-ink-600 bg-transparent accent-[var(--accent)]" />
+                <span class="font-semibold text-white text-sm">{item.task}</span>
+              </label>
+              <p class="mt-2 text-sm leading-relaxed text-ink-300 pl-7">{item.detail}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+
+      <div class="prose-dark mt-16">
+        <h2 id="content-structure" class="anchor-top">Section 3: Content Structure (Per Page, Pre-Publish)</h2>
+        <p>
+          <strong>The content structure checklist applies to every page before it is published — it is not a one-time audit but a per-page standard.</strong> Run these five checks on each piece of new content and on existing content you are retrofitting for GEO. A page that passes all five checks is structurally optimised for AI extraction. A page that fails any one of them is leaving citation frequency on the table.
+        </p>
+      </div>
+
+      <ul class="mt-8 space-y-4">
+        {contentItems.map(item => (
+          <li class="card p-5 flex items-start gap-4">
+            <span class={`mt-0.5 shrink-0 rounded px-2 py-0.5 text-xs font-semibold ${item.priority === 'Critical' ? 'bg-red-900/40 text-red-300' : item.priority === 'High' ? 'bg-amber-900/40 text-amber-300' : 'bg-geo-800/60 text-ink-300'}`}>
+              {item.priority}
+            </span>
+            <div>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="geo-check h-4 w-4 shrink-0 rounded border border-ink-600 bg-transparent accent-[var(--accent)]" />
+                <span class="font-semibold text-white text-sm">{item.task}</span>
+              </label>
+              <p class="mt-2 text-sm leading-relaxed text-ink-300 pl-7">{item.detail}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+
+      <div class="prose-dark mt-16">
+        <h2 id="internal-linking" class="anchor-top">Section 4: Internal Linking (Per Page, Pre-Publish)</h2>
+        <p>
+          <strong>Internal linking in GEO serves a different purpose than in traditional SEO: it reinforces topical authority clusters that AI systems use to assess category expertise.</strong> Every SEED page must link to its parent NODE and to the ROOT pillar, using descriptive anchor text that reflects the destination entity. These links signal to AI crawlers navigating your domain that your content forms a coherent, authoritative body of knowledge rather than a collection of isolated pages.
+        </p>
+      </div>
+
+      <ul class="mt-8 space-y-4">
+        {linkingItems.map(item => (
+          <li class="card p-5 flex items-start gap-4">
+            <span class={`mt-0.5 shrink-0 rounded px-2 py-0.5 text-xs font-semibold ${item.priority === 'High' ? 'bg-amber-900/40 text-amber-300' : 'bg-geo-800/60 text-ink-300'}`}>
+              {item.priority}
+            </span>
+            <div>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="geo-check h-4 w-4 shrink-0 rounded border border-ink-600 bg-transparent accent-[var(--accent)]" />
+                <span class="font-semibold text-white text-sm">{item.task}</span>
+              </label>
+              <p class="mt-2 text-sm leading-relaxed text-ink-300 pl-7">{item.detail}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+
+      <div class="prose-dark mt-16">
+        <h2 id="ongoing-monitoring" class="anchor-top">Section 5: Ongoing Monitoring</h2>
+        <p>
+          <strong>Ongoing monitoring converts a GEO sprint into a GEO programme — without it, citation gains erode as models update, competitors adapt, and content ages.</strong> The five monitoring tasks below cover citation tracking, brand accuracy, competitor analysis, schema validity, and robots.txt integrity. Each has a recommended cadence. Treat these as standing deliverables in your marketing operations, not occasional projects.
+        </p>
+      </div>
+
+      <ul class="mt-8 space-y-4">
+        {monitoringItems.map(item => (
+          <li class="card p-5 flex items-start gap-4">
+            <span class={`mt-0.5 shrink-0 rounded px-2 py-0.5 text-xs font-semibold ${item.priority === 'Critical' ? 'bg-red-900/40 text-red-300' : item.priority === 'High' ? 'bg-amber-900/40 text-amber-300' : 'bg-geo-800/60 text-ink-300'}`}>
+              {item.priority}
+            </span>
+            <div>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="geo-check h-4 w-4 shrink-0 rounded border border-ink-600 bg-transparent accent-[var(--accent)]" />
+                <span class="font-semibold text-white text-sm">{item.task}</span>
+              </label>
+              <p class="mt-2 text-sm leading-relaxed text-ink-300 pl-7">{item.detail}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+
+      <div class="prose-dark mt-16">
+        <h2 id="checklist-summary" class="anchor-top">Checklist Summary: Phases &amp; Cadences</h2>
+        <p>
+          <strong>The table below summarises every checklist phase, category, task count, and recommended timing — use it as your planning reference when scheduling GEO implementation work.</strong> The pre-launch phases are ordered by dependency; the ongoing phases are ordered by cadence frequency.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Phase</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Category</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Scope</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Timing</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[var(--line)]">
+            {summaryRows.map(row => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class={`px-4 py-3 font-semibold text-sm ${row.phase === 'Pre-launch' ? 'text-[var(--accent)]' : 'text-amber-300'}`}>{row.phase}</td>
+                <td class="px-4 py-3 text-white">{row.category}</td>
+                <td class="px-4 py-3 text-ink-300">{row.count}</td>
+                <td class="px-4 py-3 text-ink-300">{row.timing}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          For teams working through this checklist for the first time, the realistic timeline is four to six weeks for pre-launch completion on an existing site with a medium content inventory (50–200 pages). New sites can complete pre-launch tasks in one to two weeks because there is no legacy content to retrofit. Use the <a href="/how-to-do-geo/">how to do GEO guide</a> for step-by-step instructions on the most complex tasks, and the <a href="/geo-framework/">GEO framework</a> reference for the underlying strategic logic.
+        </p>
+        <p>
+          If you need support executing or auditing any section of this checklist, the <a href="/geo-services/">GEO services</a> overview describes exactly how we deliver against each category — from technical implementation through to ongoing citation monitoring at scale.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="relative border-t hair mt-12 overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Need Help Working Through the Checklist?</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        We run the complete GEO checklist as part of every AI visibility audit — technical foundations, entity audit, content structure review, and monitoring setup, delivered as a prioritised remediation plan with 90-day milestones.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Book an AI visibility audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const faqBtns = document.querySelectorAll('#faq-accordion button');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+
+    const tocLinks = document.querySelectorAll('#toc-nav a');
+    const headings = Array.from(
+      document.querySelectorAll('h2[id], h3[id]')
+    ) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(link => {
+              link.classList.remove('text-[var(--accent)]');
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.classList.add('text-[var(--accent)]');
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+
+    headings.forEach(h => observer.observe(h));
+  </script>
+
+</Base>

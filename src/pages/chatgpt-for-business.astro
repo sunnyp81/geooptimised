@@ -1,0 +1,578 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'ChatGPT Optimisation for Business — GEOoptimised';
+const description = 'ChatGPT optimization for business: how AI citations drive B2B visibility, lead generation, and competitive positioning. Strategy guide for commercial teams.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'ChatGPT Optimisation for Business',
+  description,
+  url: 'https://geooptimised.com/chatgpt-for-business/',
+  image: 'https://geooptimised.com/og-image.png',
+  inLanguage: 'en-GB',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/chatgpt-for-business/',
+  },
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Does ChatGPT affect B2B lead generation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. B2B buyers increasingly use ChatGPT at the start of their research process to create shortlists, understand market options, and identify vendors. When ChatGPT is asked "what are the best [category] tools for [use case]", the brands it cites appear at a zero-awareness stage of the buying journey — before the buyer has visited any vendor website. Brands absent from these AI-generated shortlists are invisible at a critical discovery moment, regardless of how well they perform in traditional search or paid advertising.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I measure ChatGPT\'s impact on my business?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The most direct measurement is AI referral traffic: segment visits from chatgpt.com in your analytics platform to track direct clicks from ChatGPT responses. Additionally, monitor citation frequency — the percentage of relevant B2B queries for which ChatGPT cites your brand — and citation accuracy (whether descriptions of your product or service are correct). Survey incoming leads and sales prospects about whether they used AI tools in their research; this captures AI-influenced pipeline that does not appear as direct referral traffic.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which business types benefit most from ChatGPT optimisation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'B2B software, professional services, and considered-purchase categories see the greatest commercial impact from ChatGPT optimisation. These are the segments where buyers conduct independent research using AI tools before engaging a vendor. E-commerce categories with AI-assisted product discovery and agency or consultancy sectors where ChatGPT is asked for provider recommendations also benefit significantly. Categories where purchase decisions are impulsive or highly price-driven see less impact from AI citation, though brand presence still matters for longer-term consideration.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should we have a dedicated budget for ChatGPT optimisation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'ChatGPT optimisation (and GEO more broadly) should be treated as a distinct channel within your digital marketing programme, not as an add-on to SEO. For businesses in B2B software, professional services, or any category where AI-assisted research is common, a dedicated allocation is justified. Initial investment typically concentrates in an AI visibility audit, content restructuring, entity authority building, and monitoring tooling. Ongoing costs are lower once the foundational work is complete, similar to the ongoing investment in maintaining SEO performance.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does ChatGPT compare to Perplexity for B2B buyer research?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'ChatGPT has a larger user base and broader consumer and business adoption. Perplexity tends to attract a more research-oriented, technically sophisticated user base and provides source citations in a more prominent format, which can drive higher click-through rates when cited. For B2B brands, both platforms matter — buyers may use different tools at different stages of their research. A cross-platform GEO strategy optimises for both rather than treating them as mutually exclusive.',
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+    { '@type': 'ListItem', position: 3, name: 'ChatGPT Optimisation for Business', item: 'https://geooptimised.com/chatgpt-for-business/' },
+  ],
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'chatgpt-in-b2b', label: 'ChatGPT in the B2B Buying Journey' },
+  { id: 'commercial-visibility', label: 'Commercial Visibility in AI Answers' },
+  { id: 'competitive-landscape', label: 'Competitive Landscape & Share of Voice' },
+  { id: 'business-strategy', label: 'Business Strategy Framework' },
+  { id: 'measuring-roi', label: 'Measuring ROI from ChatGPT' },
+  { id: 'industry-applications', label: 'Industry Applications' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const faqs = [
+  {
+    q: 'Does ChatGPT affect B2B lead generation?',
+    a: 'Yes. B2B buyers increasingly use ChatGPT at the start of their research process to create shortlists, understand market options, and identify vendors. When ChatGPT is asked "what are the best [category] tools for [use case]", the brands it cites appear at a zero-awareness stage of the buying journey — before the buyer has visited any vendor website. Brands absent from these AI-generated shortlists are invisible at a critical discovery moment, regardless of how well they perform in traditional search or paid advertising.',
+  },
+  {
+    q: "How do I measure ChatGPT's impact on my business?",
+    a: 'The most direct measurement is AI referral traffic: segment visits from chatgpt.com in your analytics platform to track direct clicks from ChatGPT responses. Additionally, monitor citation frequency — the percentage of relevant B2B queries for which ChatGPT cites your brand — and citation accuracy (whether descriptions of your product or service are correct). Survey incoming leads and sales prospects about whether they used AI tools in their research; this captures AI-influenced pipeline that does not appear as direct referral traffic.',
+  },
+  {
+    q: 'Which business types benefit most from ChatGPT optimisation?',
+    a: 'B2B software, professional services, and considered-purchase categories see the greatest commercial impact from ChatGPT optimisation. These are the segments where buyers conduct independent research using AI tools before engaging a vendor. E-commerce categories with AI-assisted product discovery and agency or consultancy sectors where ChatGPT is asked for provider recommendations also benefit significantly. Categories where purchase decisions are impulsive or highly price-driven see less impact from AI citation, though brand presence still matters for longer-term consideration.',
+  },
+  {
+    q: 'Should we have a dedicated budget for ChatGPT optimisation?',
+    a: 'ChatGPT optimisation (and GEO more broadly) should be treated as a distinct channel within your digital marketing programme, not as an add-on to SEO. For businesses in B2B software, professional services, or any category where AI-assisted research is common, a dedicated allocation is justified. Initial investment typically concentrates in an AI visibility audit, content restructuring, entity authority building, and monitoring tooling. Ongoing costs are lower once the foundational work is complete, similar to the ongoing investment in maintaining SEO performance.',
+  },
+  {
+    q: 'How does ChatGPT compare to Perplexity for B2B buyer research?',
+    a: 'ChatGPT has a larger user base and broader consumer and business adoption. Perplexity tends to attract a more research-oriented, technically sophisticated user base and provides source citations in a more prominent format, which can drive higher click-through rates when cited. For B2B brands, both platforms matter — buyers may use different tools at different stages of their research. A cross-platform GEO strategy optimises for both rather than treating them as mutually exclusive.',
+  },
+];
+
+const related = [
+  {
+    tag: 'Platform Guide',
+    title: 'How to Optimise for ChatGPT',
+    excerpt: 'The technical and content playbook for ChatGPT optimisation — GPTBot, Bing indexing, content structure, and step-by-step process.',
+    href: '/optimise-for-chatgpt/',
+  },
+  {
+    tag: 'Visibility Guide',
+    title: 'AI Brand Visibility',
+    excerpt: 'How to ensure LLMs cite your brand accurately across all major generative platforms — entity authority, citability, and measurement.',
+    href: '/ai-brand-visibility/',
+  },
+  {
+    tag: 'Services',
+    title: 'GEO Services Overview',
+    excerpt: 'End-to-end generative engine optimisation services for businesses that need AI citation authority across all platforms.',
+    href: '/geo-services/',
+  },
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'The full GEO framework from first principles through to measurement, covering all major AI platforms.',
+    href: '/generative-engine-optimisation/',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/chatgpt-for-business/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">Generative Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">ChatGPT for Business</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Business Strategy</span>
+        <span class="font-mono text-xs text-ink-300">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">13 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        ChatGPT Optimisation for Business
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        ChatGPT has become a primary research tool for B2B buyers, procurement teams, and decision-makers. When your category appears in a ChatGPT response, the brands cited gain an early-funnel advantage that no amount of retargeting can easily replicate. This guide covers the commercial strategy for ChatGPT optimisation: why it matters for revenue, how to approach it as a business discipline, and how to measure the outcome.
+      </p>
+      <p class="mt-3 max-w-2xl text-sm leading-relaxed text-ink-300">
+        This guide focuses on business strategy and commercial implications. For the technical implementation steps — GPTBot configuration, schema, content structure — see our companion guide: <a href="/optimise-for-chatgpt/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">How to Optimise for ChatGPT</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" aria-label="Table of contents">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>ChatGPT is now used by B2B buyers to generate vendor shortlists and compare category options — brands absent from these responses are invisible at the discovery stage.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>AI citation in ChatGPT operates at the top of the funnel, before intent signals are visible in search or paid channels — making it a category-defining advantage for early movers.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Share of voice in ChatGPT responses — not ranking position — is the competitive metric that matters; the platform typically cites 3–5 brands per response.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>ROI measurement requires combining AI referral traffic (from chatgpt.com), pipeline surveys, and citation frequency tracking — traditional analytics undercount the full commercial impact.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>The window for establishing AI citation authority before competitors is narrowing; brands that invest now build compounding advantages as ChatGPT's user base continues to grow.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1: ChatGPT in the B2B Buying Journey -->
+      <section id="chatgpt-in-b2b" class="anchor-top prose-dark mb-16">
+        <h2>ChatGPT in the B2B Buying Journey</h2>
+
+        <p>
+          <strong>ChatGPT has become a starting point for B2B research — not a supplementary tool, but often the first query a buyer makes when entering an unfamiliar category.</strong> The pattern is consistent: a procurement manager, a startup founder, or a department head wants to understand what options exist before they commit to a vendor evaluation process. They ask ChatGPT.
+        </p>
+
+        <p>
+          The query might be "what are the best project management tools for a remote team of 20?" or "which marketing agencies specialise in B2B SaaS?" or "what should I look for in an enterprise HR platform?" In each case, ChatGPT generates a response that names specific vendors, describes their positioning, and may highlight differentiators. This is the zero-moment of truth for AI-assisted buying — and it is happening before the buyer has visited a single vendor website.
+        </p>
+
+        <p>
+          The commercial significance is direct: brands cited in these early-funnel responses gain consideration that brands absent from the response must work harder to earn. A brand that appears in ChatGPT's answer to a category query has effectively been recommended by the most-used AI assistant in the world, without any advertising cost and without any direct interaction with the buyer. That recommendation carries implicit authority.
+        </p>
+
+        <h3>The Discovery Gap</h3>
+        <p>
+          Traditional demand generation assumes that buyers with relevant intent will eventually appear in search or respond to paid media. AI-assisted research disrupts this assumption. When a buyer uses ChatGPT to identify a shortlist of vendors, they may never run a Google search for your category keyword. They go directly from the AI-generated shortlist to the vendor websites it suggested. Brands not on the AI-generated shortlist are excluded from consideration before the buyer even reaches the search engine.
+        </p>
+        <p>
+          This is the discovery gap: a growing share of commercial intent is processed through AI assistants and never surfaces as search volume, ad impressions, or organic click signals. Marketing and demand generation strategies built entirely on search and social channels will increasingly miss this segment.
+        </p>
+
+        <h3>How B2B Buyers Use ChatGPT</h3>
+        <p>
+          Observed patterns in B2B ChatGPT use include: category exploration ("what are the main types of X software?"), vendor shortlisting ("which companies offer Y for Z sector?"), feature comparison ("how does A compare to B for this use case?"), and reference checking ("is X a reputable provider?"). Each of these query types presents a different citation opportunity. Category exploration rewards definitional authority; vendor shortlisting rewards brand recognition and entity authority; feature comparison rewards specific, structured claims; reference checking rewards third-party citations and review presence.
+        </p>
+        <p>
+          For the technical foundation that supports all these citation types, see the companion guide: <a href="/optimise-for-chatgpt/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">How to Optimise for ChatGPT</a>.
+        </p>
+      </section>
+
+      <!-- Section 2: Commercial Visibility in AI Answers -->
+      <section id="commercial-visibility" class="anchor-top prose-dark mb-16">
+        <h2>Commercial Visibility in AI Answers</h2>
+
+        <p>
+          <strong>Commercial visibility in ChatGPT is not a single metric — it is a combination of citation frequency, citation accuracy, and citation positioning that together determine the commercial value of your AI presence.</strong>
+        </p>
+
+        <h3>Citation as Commercial Endorsement</h3>
+        <p>
+          When ChatGPT cites a brand in response to a commercial query, it functions as a form of editorial endorsement at scale. The response carries no visible advertiser label, no disclaimer that the brand paid for placement, and no indication of how the sources were selected. From the buyer's perspective, the brands ChatGPT recommends are the brands worth considering. This creates an asymmetric opportunity: early investment in citation authority converts into ongoing commercial benefit with no per-impression cost.
+        </p>
+        <p>
+          The flip side of this is that incorrect or outdated citations can damage commercial outcomes. If ChatGPT describes your product as serving a market segment you have since pivoted away from, or cites an outdated pricing model, the inaccurate citation reaches buyers who form incorrect expectations before they contact your sales team. Citation accuracy monitoring is as commercially important as citation frequency monitoring.
+        </p>
+
+        <h3>The Category Leader Advantage</h3>
+        <p>
+          ChatGPT responses to category queries typically follow a format: a brief explanation of what to consider, followed by 3–5 named examples. The brands named first, or described with the most detail, capture a disproportionate share of subsequent buyer attention. This mirrors the established pattern in traditional search where results above the fold capture the majority of clicks — but in ChatGPT responses, the "fold" is the order of citation within a single generated answer.
+        </p>
+        <p>
+          For established category leaders, maintaining prominent citation in ChatGPT responses is a defensive priority: competitors actively investing in GEO may displace them from AI-generated shortlists even while they retain traditional search dominance. For challengers, consistent citation in ChatGPT responses is an offensive opportunity — appearing alongside, or even before, larger competitors in AI-generated answers provides an equalising effect that would require significant advertising spend to achieve in paid channels.
+        </p>
+
+        <h3>Brand Positioning in AI Responses</h3>
+        <p>
+          How ChatGPT describes your brand — not just whether it mentions you — is a commercial variable worth managing. The model may describe your product as "an enterprise solution" when you primarily serve SMEs, or emphasise a feature set from two product generations ago. These description-level inaccuracies shape buyer expectations before any direct engagement.
+        </p>
+        <p>
+          Improving citation accuracy requires ensuring your brand's current positioning is clearly stated in your own content, reflected accurately in third-party references, and consistent across your entity data. The combination of clear on-site positioning, up-to-date Crunchbase and LinkedIn descriptions, and accurate Wikipedia/Wikidata entries gives ChatGPT's retrieval and synthesis systems the most current information to work from.
+        </p>
+      </section>
+
+      <!-- Section 3: Competitive Landscape & Share of Voice -->
+      <section id="competitive-landscape" class="anchor-top mb-16">
+        <div class="prose-dark mb-6">
+          <h2>Competitive Landscape and AI Share of Voice</h2>
+          <p>
+            <strong>AI share of voice in ChatGPT — the percentage of relevant category queries for which your brand is cited — is the competitive metric that most directly correlates with commercial opportunity in the AI search channel.</strong> Understanding where you stand relative to competitors is the starting point for any business investment in ChatGPT optimisation.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto card mb-8">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-[var(--line)]">
+                <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">Metric</th>
+                <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">What it measures</th>
+                <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">Business implication</th>
+              </tr>
+            </thead>
+            <tbody class="text-ink-200">
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-ink-100">Citation frequency</td>
+                <td class="px-5 py-3">% of tracked queries where brand is cited</td>
+                <td class="px-5 py-3">Direct proxy for discovery opportunity</td>
+              </tr>
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-ink-100">AI share of voice</td>
+                <td class="px-5 py-3">Your citation % vs competitors'</td>
+                <td class="px-5 py-3">Competitive position in AI discovery</td>
+              </tr>
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-ink-100">Citation accuracy</td>
+                <td class="px-5 py-3">Whether brand description is correct</td>
+                <td class="px-5 py-3">Conversion quality from AI-influenced leads</td>
+              </tr>
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-ink-100">Citation positioning</td>
+                <td class="px-5 py-3">Rank within multi-brand AI responses</td>
+                <td class="px-5 py-3">Attention and click-through from cited responses</td>
+              </tr>
+              <tr class="border-b border-[var(--line-soft)]">
+                <td class="px-5 py-3 font-medium text-ink-100">Query category coverage</td>
+                <td class="px-5 py-3">Breadth of query types where brand appears</td>
+                <td class="px-5 py-3">Total addressable AI audience</td>
+              </tr>
+              <tr>
+                <td class="px-5 py-3 font-medium text-ink-100">AI referral traffic</td>
+                <td class="px-5 py-3">Visitors arriving from chatgpt.com</td>
+                <td class="px-5 py-3">Directly attributable channel revenue</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose-dark">
+          <h3>Conducting a Competitive AI Audit</h3>
+          <p>
+            Before investing in ChatGPT optimisation, map the competitive landscape. Build a query set representing the 30–50 most commercially relevant queries in your category. Run these queries in ChatGPT with web browsing enabled and record: which brands are cited for each query, how frequently each brand appears across the full query set, how each brand is described, and whether any brands consistently occupy the first citation position.
+          </p>
+          <p>
+            This audit reveals which competitors have already invested in AI visibility (they will appear consistently across the query set), which queries are uncontested (where establishing citation would face minimal competition), and where your brand is being described inaccurately (a quick win through content correction).
+          </p>
+          <p>
+            The brands that dominate these AI-generated answers are often not the same brands that dominate traditional search rankings. AI citation authority is a distinct competitive variable that has not yet been captured by traditional competitive intelligence tools. First-mover advantages in AI citation are available in many categories — but the window is narrowing as more brands invest in <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4: Business Strategy Framework -->
+      <section id="business-strategy" class="anchor-top prose-dark mb-16">
+        <h2>Business Strategy Framework for ChatGPT Optimisation</h2>
+
+        <p>
+          <strong>Effective ChatGPT optimisation for business requires treating AI citation authority as a strategic asset — not as a tactical add-on to existing SEO or content marketing programmes.</strong> The following framework maps the strategic decisions for commercial teams.
+        </p>
+
+        <h3>Prioritise by Commercial Query Value</h3>
+        <p>
+          Not all queries generate equal commercial value. A citation in response to "what are the best enterprise CRM platforms?" is worth far more than a citation in response to "what does CRM stand for?". Map your target queries by commercial intent — high-intent queries are those directly preceding a purchase decision, a vendor shortlisting exercise, or a budget approval process. Concentrate initial optimisation effort on high-intent, high-commercial-value queries where a citation directly precedes a commercial action.
+        </p>
+
+        <h3>Align Internal Teams Around AI Visibility</h3>
+        <p>
+          ChatGPT optimisation spans functions that rarely coordinate on SEO: marketing (content and brand), product (feature claims and positioning), PR (third-party citations and editorial coverage), and technical (schema, robots.txt, site structure). Commercial AI visibility requires a cross-functional brief that assigns responsibility for each layer. Without alignment, content teams may produce citable material while PR teams simultaneously build low-quality directory links that undermine entity authority.
+        </p>
+
+        <h3>Content Investment: Quality Over Volume</h3>
+        <p>
+          ChatGPT's retrieval mechanisms favour depth, specificity, and authority over volume. Publishing twenty thin posts targeting AI queries produces less citation authority than publishing five comprehensive guides with original data, structured comparisons, and clear definitional content. For B2B brands, pillar content that covers a category in full — what it is, how it works, how to evaluate options, what questions to ask — is the citation-generating asset. This is why the <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">topical map approach used in GEO</a> produces sustained results: it creates the breadth and depth of content that AI systems recognise as category authority.
+        </p>
+
+        <h3>Owned vs Earned Citation Sources</h3>
+        <p>
+          ChatGPT citations come from two types of sources: owned content (your website, your llms.txt, your schema) and earned references (Wikipedia, trade press, analyst reports, industry directories). For the base model's parametric knowledge, earned references in authoritative sources carry disproportionate weight — these are the sources that are most heavily represented in training data. A single Wikipedia article, a mention in a recognised industry publication, or inclusion in a widely-cited analyst report can do more for parametric citation authority than multiple pages of owned content.
+        </p>
+        <p>
+          A mature ChatGPT optimisation strategy balances both: owned content for ChatGPT Search retrieval (where your pages are directly fetched), and earned references for parametric authority. The <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility framework</a> covers both in detail.
+        </p>
+
+        <h3>Timing: Why Early Movers Win</h3>
+        <p>
+          AI models develop citation patterns over time. A brand consistently cited across thousands of ChatGPT conversations — through its retrieval and through user feedback signals — builds a reinforcing pattern that makes future citation more likely. Conversely, a brand that does not appear in AI responses now is accumulating a citation deficit that competitors are exploiting. The commercial cost of delayed investment in ChatGPT optimisation compounds as the AI-assisted discovery channel grows.
+        </p>
+      </section>
+
+      <!-- Section 5: Measuring ROI -->
+      <section id="measuring-roi" class="anchor-top prose-dark mb-16">
+        <h2>Measuring ROI from ChatGPT Optimisation</h2>
+
+        <p>
+          <strong>Measuring the commercial return from ChatGPT optimisation requires a multi-layer attribution model that combines direct traffic data, pipeline surveys, and citation monitoring.</strong> Relying on a single measurement method will systematically undercount the channel's impact.
+        </p>
+
+        <h3>Direct Attribution: AI Referral Traffic</h3>
+        <p>
+          When ChatGPT includes a link to your website in a response, users who click it arrive as referral traffic from <code>chatgpt.com</code>. This is the most directly attributable signal. In Google Analytics 4, create a segment filtering sessions by referral source containing <code>chatgpt.com</code>. Track: session volume, landing pages, engagement rate, and goal completions (demo requests, contact form submissions, trial sign-ups). This gives you a conversion funnel view of directly attributed AI traffic.
+        </p>
+        <p>
+          Note that this captures only clicked-through citations. A significant portion of ChatGPT's commercial influence is indirect: a buyer sees your brand cited in a ChatGPT response, remembers the name, and later searches for you directly or types your URL. This indirect attribution is real but invisible to standard analytics.
+        </p>
+
+        <h3>Pipeline Attribution: Sales Team Surveys</h3>
+        <p>
+          Add a qualifying question to your inbound lead process: "How did you first hear about us?" with options including "AI assistant / ChatGPT" alongside the traditional options (search, referral, social, etc.). This captures the AI-influenced pipeline that never generates a referral traffic signal. Over time, this data reveals what percentage of your pipeline had an AI touchpoint — a figure that typically surprises B2B marketing teams when they measure it for the first time.
+        </p>
+
+        <h3>Brand Awareness: Citation Monitoring as Leading Indicator</h3>
+        <p>
+          Citation frequency across your target query set is a leading indicator of commercial opportunity. An increase in citation frequency — without a corresponding immediate increase in direct traffic — is not a failure of attribution; it is brand awareness building at scale in a channel that generates delayed, often unattributable commercial impact. Track citation frequency monthly alongside direct ChatGPT referral traffic; the two metrics together tell a more complete story than either alone.
+        </p>
+
+        <h3>Competitive Intelligence as Proxy Value</h3>
+        <p>
+          If a direct competitor gains significant AI citation frequency while yours remains low, that represents a concrete commercial risk even before it appears as lost pipeline. Using AI share of voice as a competitive metric — tracking your citation rate relative to named competitors — provides a forward-looking measure of competitive risk that traditional analytics cannot capture.
+        </p>
+        <p>
+          For the technical tooling that supports this measurement programme, see our <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO tools and measurement guide</a>. For service options across all measurement layers, see <a href="/geo-services/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEOoptimised services</a>.
+        </p>
+      </section>
+
+      <!-- Section 6: Industry Applications -->
+      <section id="industry-applications" class="anchor-top prose-dark mb-16">
+        <h2>Industry Applications</h2>
+
+        <p>
+          <strong>The commercial impact of ChatGPT citation varies by industry, but the underlying mechanism — AI-assisted discovery before vendor engagement — applies broadly to any category where buyers conduct research before committing.</strong>
+        </p>
+
+        <h3>B2B Software and SaaS</h3>
+        <p>
+          Software buying decisions are among the most research-intensive in business. Buyers compare tools across multiple dimensions — features, pricing tiers, integrations, support quality, customer profiles — before engaging any vendor. ChatGPT is now used extensively in this research phase to produce initial shortlists and explain the differences between competing platforms. SaaS brands that appear consistently in ChatGPT's responses to category and comparison queries gain pipeline at zero marginal cost. Those absent from these responses rely entirely on the buyer's subsequent willingness to search further — a reliance that is weakening as ChatGPT's answers become more comprehensive.
+        </p>
+
+        <h3>Professional Services</h3>
+        <p>
+          Agencies, consultancies, law firms, and accountancies face a direct commercial threat from AI-generated provider lists. When a prospect asks ChatGPT for "the best B2B content agencies in London" or "who are the leading employment law firms for tech companies?", the responses function as immediate shortlists. Professional services brands that appear in these responses receive consideration they have not paid for; those that do not appear must intercept buyers through advertising, referral networks, or directory listings — all of which generate lower consideration quality than an AI-generated recommendation.
+        </p>
+
+        <h3>Financial Services and Fintech</h3>
+        <p>
+          Financial services brands operate in a category where AI systems apply stricter sourcing standards due to regulatory sensitivity. ChatGPT is more cautious about citing specific financial product providers for transactional queries, but it is active in providing context on categories, providers, and how-to guidance. For fintech brands, establishing topical authority in the informational layer — how your product category works, what to look for when choosing, common questions — creates citation authority that supports discovery without triggering the heightened caution applied to direct financial product recommendations.
+        </p>
+
+        <h3>Recruitment and HR Technology</h3>
+        <p>
+          HR leaders and talent acquisition teams are heavy users of AI assistants for vendor research. ATS platforms, payroll software, L&D tools, and HR analytics platforms are all subject to AI-assisted shortlisting. A brand that consistently appears when ChatGPT is asked about tools for a specific HR function — onboarding, performance management, DEI analytics — has a significant advantage in a buying cycle that typically involves multiple stakeholders and extended evaluation periods.
+        </p>
+
+        <p>
+          For a detailed discussion of how entity authority and content architecture apply across these sectors, see <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility</a>. For cross-platform strategy including Perplexity and Google AI Overviews, see the <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO complete guide</a>.
+        </p>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="anchor-top mb-16">
+        <h2 class="font-display text-[28px] font-semibold text-white tracking-tight mb-8">Frequently Asked Questions</h2>
+
+        <div class="space-y-2" id="faq-accordion">
+          {faqs.map((faq, i) => (
+            <div class="card overflow-hidden" data-faq>
+              <button
+                type="button"
+                class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+                aria-expanded={i === 0 ? 'true' : 'false'}
+                data-faq-trigger
+              >
+                <span>{faq.q}</span>
+                <span class="ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon style={i === 0 ? 'transform:rotate(45deg)' : ''}>+</span>
+              </button>
+              <div
+                class="overflow-hidden transition-all duration-300"
+                data-faq-panel
+                style={i === 0 ? 'max-height:500px' : 'max-height:0'}
+              >
+                <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Related Reading -->
+      <div class="mt-8" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 sm:grid-cols-2">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Build Your ChatGPT Citation Authority</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        B2B buyers are using ChatGPT to shortlist vendors right now. GEOoptimised audits your current ChatGPT citation position, maps the competitive landscape, and delivers a prioritised strategy to increase your share of AI-generated recommendations.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Talk to us about ChatGPT strategy</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

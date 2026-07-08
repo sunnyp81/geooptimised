@@ -1,0 +1,36 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Page not found (404) | GEOoptimised';
+const description = 'The page you were looking for could not be found. Explore GEOoptimised’s Generative Engine Optimisation guides and services instead.';
+
+const links = [
+  { href: '/generative-engine-optimisation/', label: 'What is GEO?' },
+  { href: '/geo-services/', label: 'GEO Services' },
+  { href: '/answer-engine-optimisation/', label: 'Answer Engine Optimisation' },
+  { href: '/geo-vs-seo/', label: 'GEO vs SEO' },
+  { href: '/contact/', label: 'Contact' },
+];
+---
+<Base title={title} description={description} noindex={true}>
+  <section class="relative overflow-hidden">
+    <div class="hero-fade absolute inset-0"></div>
+    <div class="bg-grid absolute inset-0"></div>
+    <div class="container-wide relative z-10 py-24 sm:py-32 text-center">
+      <span class="eyebrow">Error 404</span>
+      <h1 class="font-display text-5xl sm:text-7xl font-bold mt-4 grad-text">Page not found</h1>
+      <p class="mx-auto mt-6 max-w-lg text-lg text-ink-200">
+        This page has moved, been retired, or never existed. The answer you want is probably one click away.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/" class="btn btn-primary">Back to home</a>
+        <a href="/contact/" class="btn btn-ghost">Get an AI visibility audit</a>
+      </div>
+      <nav aria-label="Popular pages" class="mt-12 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+        {links.map(l => (
+          <a href={l.href} class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">{l.label}</a>
+        ))}
+      </nav>
+    </div>
+  </section>
+</Base>

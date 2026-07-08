@@ -1,0 +1,506 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Best LLM Visibility Tools for Citation Monitoring | GEOoptimised';
+const description = 'Practitioner guide to LLM citation monitoring: how to track whether and how AI platforms cite your content, run prompt-set tests, audit citation sources per platform, and validate data quality before committing to a tool.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Best LLM Visibility Tools: Citation Monitoring, Prompt-Set Testing, and Source Auditing for Practitioners",
+    "description": "A practitioner guide to LLM citation monitoring tools: how to track whether AI platforms cite your content, design prompt-set tests, audit citation sources at the URL level, and validate tool data quality — with a seven-criterion evaluation framework.",
+    "url": "https://geooptimised.com/best-llm-visibility-tools/",
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "inLanguage": "en-GB",
+    "image": "https://geooptimised.com/og-image.png",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://geooptimised.com/best-llm-visibility-tools/"
+    },
+    "author": {
+      "@id": "https://geooptimised.com/#organization"
+    },
+    "publisher": {
+      "@id": "https://geooptimised.com/#organization"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between a brand mention and a citation in LLM monitoring?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A brand mention is when your organisation's name appears in the body of an AI-generated response. A citation is when the AI platform identifies a specific URL or source as the basis for a claim — typically shown as a numbered reference or hyperlink in platforms like Perplexity or Bing Copilot. Practitioners need to track both, but citations carry stronger signal: they indicate that your specific content was retrieved and used in the answer construction. Tools that conflate the two overstate actionable citation presence."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I design a prompt set for LLM citation testing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A robust prompt set covers three query types: awareness queries (what is [category/concept]), comparison queries (best options for [use case]), and recommendation queries ([specific question your buyer asks]). For each type, write five to ten variants with different phrasing — LLM citation frequency varies significantly by how a question is framed. Run all variants and aggregate results before drawing conclusions. Organise prompts by intent and topic cluster so you can identify which content areas have citation gaps versus which are performing well."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use a traditional SEO rank tracker to monitor LLM citations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Traditional rank trackers are built to record fixed positions on a search results page. LLM platforms do not produce stable ranked lists — they generate probabilistic, synthesised responses that vary by query phrasing, model version, and retrieval context. Measuring LLM citation frequency requires statistical sampling across many query variations, not position tracking at a fixed point in time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is citation frequency and why does it matter for practitioners?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Citation frequency is the proportion of sampled AI queries in a given topic area for which your brand or a specific URL appears in the generated response. For practitioners, the critical metric is citation frequency at the URL level — knowing which specific pages account for citations versus which are being ignored. That page-level data is what drives content prioritisation decisions and allows you to measure the impact of specific optimisation interventions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I validate that a tool's citation data matches what LLMs actually return?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Run your own prompt library manually across the same platforms the tool claims to cover, on the same day. Compare the tool's reported citation frequency against your manual observations. Expect some statistical variation due to sampling — a five to ten percentage point difference is not alarming. A systematic discrepancy, where the tool consistently reports higher citation rates than you observe manually, suggests a sample quality problem. This validation test is the most important quality check before committing to a paid subscription."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is a free LLM citation monitoring tool sufficient for a serious GEO programme?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Free tools are appropriate for orientation: establishing a rough baseline and identifying obvious citation gaps. Their limitations for practitioners are specific: restricted prompt volume prevents proper statistical sampling; no per-URL citation data means you cannot connect citations to specific content; and no historical retention means you cannot measure the impact of optimisation work over time. A paid tool with full citation granularity and historical per-prompt data is necessary for any programme where you need to demonstrate that specific interventions are working."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://geooptimised.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "GEO Tools",
+        "item": "https://geooptimised.com/geo-tools/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Best LLM Visibility Tools",
+        "item": "https://geooptimised.com/best-llm-visibility-tools/"
+      }
+    ]
+  }
+];
+
+const criteria = [
+  {
+    id: 'platform-coverage',
+    label: 'Platform Coverage',
+    description: 'Does it query each LLM platform separately, using platform-appropriate prompts? Minimum: ChatGPT, Perplexity, Gemini, Copilot. Verify that coverage is live query-based, not inferred from crawl data.',
+    weight: 'High',
+  },
+  {
+    id: 'citation-granularity',
+    label: 'Citation &amp; Source Granularity',
+    description: 'Does it capture the cited URL (not just brand name), the position of the citation within the response, and whether it is a hyperlinked source or an inline mention? URL-level data is what drives content decisions.',
+    weight: 'High',
+  },
+  {
+    id: 'sampling-methodology',
+    label: 'Sampling Methodology',
+    description: 'How many times does it sample each prompt per platform? Does it document confidence intervals? LLM responses are probabilistic — a single sample per prompt is statistically meaningless; look for vendors who are explicit about sample size.',
+    weight: 'High',
+  },
+  {
+    id: 'prompt-customisation',
+    label: 'Prompt-Set Design',
+    description: 'Can you write, organise, and version-control your own prompt library? Can you test prompt variants against each other to understand how phrasing affects citation outcomes? Practitioner-grade tools give you full control here.',
+    weight: 'Medium',
+  },
+  {
+    id: 'historical-retention',
+    label: 'Historical Data Retention',
+    description: 'How far back does the tool retain per-prompt, per-platform citation results? Ninety days minimum to detect trends; twelve months to isolate the impact of specific content interventions.',
+    weight: 'Medium',
+  },
+  {
+    id: 'competitive-benchmarking',
+    label: 'Competitive Citation Benchmarking',
+    description: 'Can you track named competitors\' citation frequency on the same prompt set, per platform? The gap between your citation rate and a competitor\'s — broken down by platform — is the primary prioritisation signal.',
+    weight: 'Medium',
+  },
+  {
+    id: 'alert-reporting',
+    label: 'Change Detection &amp; Alerts',
+    description: 'Does it alert you when citation frequency for a specific prompt or platform drops significantly — so you can investigate whether a content change, model update, or competitor action caused it?',
+    weight: 'Lower',
+  },
+];
+
+const faqs = [
+  {
+    q: 'What is the difference between a brand mention and a citation in LLM monitoring?',
+    a: 'A brand mention is when your organisation\'s name appears in the body of an AI-generated response. A citation is when the AI platform identifies a specific URL or source as the basis for a claim — typically shown as a numbered reference or hyperlink in platforms like Perplexity or Bing Copilot. Practitioners need to track both, but citations carry stronger signal: they indicate that your specific content was retrieved and used in the answer construction, which is what content strategy decisions should be based on. Tools that conflate the two overstate actionable citation presence.',
+  },
+  {
+    q: 'How do I design a prompt set for LLM citation testing?',
+    a: 'A robust prompt set covers three query types: awareness queries (what is [category/concept]), comparison queries (best options for [use case]), and recommendation queries ([specific question your buyer asks]). For each type, write five to ten variants with different phrasing — LLM citation frequency varies significantly by how a question is framed. Run all variants and aggregate results before drawing conclusions; a single prompt phrasing is an unreliable signal. Organise prompts by intent and topic cluster so you can identify which content areas have citation gaps versus which are performing well.',
+  },
+  {
+    q: 'Can I use a traditional SEO rank tracker to monitor LLM citations?',
+    a: 'No. Traditional rank trackers are built to record fixed positions on a search results page. LLM platforms do not produce stable ranked lists — they generate probabilistic, synthesised responses that vary by query phrasing, model version, and retrieval context. Measuring LLM citation frequency requires statistical sampling across many query variations, not position tracking at a fixed point in time. A tool reporting a single citation "rank" without sampling methodology is not trustworthy.',
+  },
+  {
+    q: 'What is citation frequency and why does it matter for practitioners?',
+    a: 'Citation frequency is the proportion of sampled AI queries in a given topic area for which your brand or a specific URL appears in the generated response. For practitioners, it matters as the primary performance signal — but at the URL level, not just the brand level. Knowing that your brand is cited in 40% of relevant queries is useful; knowing that three specific pages account for 90% of those citations while fifteen other pages contribute nothing is what drives content prioritisation decisions.',
+  },
+  {
+    q: 'How do I validate that a tool\'s citation data matches what LLMs actually return?',
+    a: 'Run your own prompt library manually across the same platforms the tool claims to cover, on the same day. Compare the tool\'s reported citation frequency for each prompt against your manual observations. Expect some statistical variation due to sampling — a five to ten percentage point difference is not alarming. A systematic discrepancy, where the tool consistently reports higher citation rates than you observe manually, suggests either a sample quality problem or that the tool is querying a different version of the platform. This validation test is the most important quality check before committing to a paid subscription.',
+  },
+  {
+    q: 'Is a free LLM citation monitoring tool sufficient for a serious GEO programme?',
+    a: 'Free tools are appropriate for orientation: establishing a rough baseline and identifying obvious citation gaps. Their limitations for practitioners are specific: restricted prompt volume prevents proper statistical sampling; limited platform coverage misses platform-specific citation patterns; no per-URL citation data means you cannot connect citations to specific content; and no historical retention means you cannot measure the impact of optimisation work over time. A paid tool with full citation granularity and historical per-prompt data is necessary for any programme where you need to demonstrate that specific interventions are working.',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/best-llm-visibility-tools/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-2 font-mono text-xs text-ink-300">
+      <li><a href="/" class="hover:text-[var(--accent)] transition-colors">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/geo-tools/" class="hover:text-[var(--accent)] transition-colors">GEO Tools</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">Best LLM Visibility Tools</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-fade relative overflow-hidden">
+    <div class="container-wide grid gap-12 pt-12 pb-20 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-7">
+        <span class="eyebrow">LLM Citation Monitoring — Practitioner Guide</span>
+        <h1 class="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <span class="grad-text">Best LLM Visibility Tools</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-300">
+          This is the hands-on practitioner guide to LLM citation monitoring: tracking whether AI platforms cite your specific content, designing prompt-set tests, auditing citation sources at the URL level, and validating tool data quality before committing to a subscription. If you need the broader marketing-leader view — share-of-voice dashboards, sentiment tracking, and competitive benchmarking platforms — see the <a href="/best-ai-tools-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI visibility monitoring category guide</a>.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#evaluation-criteria" class="btn btn-primary">See Evaluation Criteria</a>
+          <a href="/geo-tools/" class="btn btn-ghost">All GEO Tools</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="card p-6">
+          <span class="eyebrow">Quick Reference</span>
+          <div class="mt-4 grid grid-cols-2 gap-6">
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">4+</p>
+              <p class="mt-1 text-sm text-ink-300">Platforms to monitor</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">7</p>
+              <p class="mt-1 text-sm text-ink-300">Evaluation criteria</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">90 days</p>
+              <p class="mt-1 text-sm text-ink-300">Minimum data retention</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">Free &amp; Paid</p>
+              <p class="mt-1 text-sm text-ink-300">Tiers available</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky TOC -->
+  <nav aria-label="Table of contents" class="container-wide mb-2">
+    <div class="card p-5 lg:hidden">
+      <p class="font-mono text-xs text-ink-500 mb-3 uppercase tracking-widest">On this page</p>
+      <ol class="space-y-2 text-sm text-ink-300">
+        <li><a href="#what-citation-monitoring-is" class="hover:text-[var(--accent)] transition-colors">What citation monitoring is</a></li>
+        <li><a href="#why-llm-visibility-differs" class="hover:text-[var(--accent)] transition-colors">Why LLM visibility differs from SEO</a></li>
+        <li><a href="#evaluation-criteria" class="hover:text-[var(--accent)] transition-colors">Evaluation criteria</a></li>
+        <li><a href="#tool-categories" class="hover:text-[var(--accent)] transition-colors">Tool categories in the market</a></li>
+        <li><a href="#known-tools" class="hover:text-[var(--accent)] transition-colors">Known tools and platforms</a></li>
+        <li><a href="#honesty-note" class="hover:text-[var(--accent)] transition-colors">A note on market accuracy</a></li>
+        <li><a href="#faq" class="hover:text-[var(--accent)] transition-colors">FAQ</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Main prose -->
+  <div class="container-wide lg:grid lg:grid-cols-12 lg:gap-12 py-12">
+
+    <!-- Sticky TOC — desktop -->
+    <aside class="hidden lg:block lg:col-span-3">
+      <div class="sticky top-24 card p-5">
+        <p class="font-mono text-xs text-ink-500 mb-3 uppercase tracking-widest">On this page</p>
+        <ol class="space-y-2 text-sm text-ink-300" id="toc-list">
+          <li><a href="#what-citation-monitoring-is" class="toc-link hover:text-[var(--accent)] transition-colors">What citation monitoring is</a></li>
+          <li><a href="#why-llm-visibility-differs" class="toc-link hover:text-[var(--accent)] transition-colors">Why LLM visibility differs</a></li>
+          <li><a href="#evaluation-criteria" class="toc-link hover:text-[var(--accent)] transition-colors">Evaluation criteria</a></li>
+          <li><a href="#tool-categories" class="toc-link hover:text-[var(--accent)] transition-colors">Tool categories</a></li>
+          <li><a href="#known-tools" class="toc-link hover:text-[var(--accent)] transition-colors">Known tools</a></li>
+          <li><a href="#honesty-note" class="toc-link hover:text-[var(--accent)] transition-colors">Market accuracy note</a></li>
+          <li><a href="#faq" class="toc-link hover:text-[var(--accent)] transition-colors">FAQ</a></li>
+        </ol>
+      </div>
+    </aside>
+
+    <!-- Article body -->
+    <article class="lg:col-span-9 prose-dark space-y-16">
+
+      <section id="what-citation-monitoring-is">
+        <h2 class="anchor-top">What LLM Citation Monitoring Actually Measures</h2>
+        <p><strong>LLM citation monitoring is the discipline of systematically tracking how often, and in what context, AI language models mention or reference your brand across a defined set of queries.</strong> It is distinct from traditional mention monitoring, which scans social media and news sources for brand name appearances. Citation monitoring is concerned specifically with the synthesised outputs of generative AI platforms — the answers that ChatGPT, Perplexity, Gemini, Claude, and Microsoft Copilot construct in response to user questions.</p>
+        <p>The core metric is <strong>citation frequency</strong>: the proportion of sampled queries in a given topic category for which your brand appears in the generated response. A brand with a 40% citation frequency for queries in its core category is mentioned in approximately four out of every ten AI answers sampled. A brand with a 5% citation frequency has a substantial AI visibility gap relative to competitors who may be appearing far more often.</p>
+        <p>Beyond raw frequency, credible citation monitoring covers three additional dimensions. <strong>Source attribution</strong> identifies which of your URLs the AI platform is drawing on — a critical signal for content strategy, because it reveals which pages are functioning as citation sources and which are being overlooked. <strong>Sentiment and description accuracy</strong> records how your brand is characterised in AI responses, flagging misattributions or outdated descriptions that could damage trust. <strong>Competitive benchmarking</strong> situates your citation rate in context by running the same query set against named competitors.</p>
+        <p>This is the foundation of any serious <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> programme. You cannot improve what you cannot measure, and citation frequency — tracked over time, broken down by platform and topic cluster — is the primary performance signal for GEO work.</p>
+
+        <div class="rounded-xl border border-[var(--line)] bg-[var(--bg-2)] px-5 py-4 text-sm text-ink-300">
+          <strong class="text-ink-100">How this guide differs:</strong> This page is the <strong>practitioner's citation monitoring guide</strong> — focused on prompt-set testing, URL-level citation auditing, per-platform answer tracking, and data quality validation. For the broader marketing-leader view covering share-of-voice dashboards, brand sentiment, and competitive benchmarking platforms, see the <a href="/best-ai-tools-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI visibility monitoring category guide</a>. For the continuous monitoring workflow that operationalises both approaches, see <a href="/geo-tracking-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO tracking tools</a>. The parent category overview is at the <a href="/geo-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO Tools hub</a>.
+        </div>
+      </section>
+
+      <section id="why-llm-visibility-differs">
+        <h2 class="anchor-top">Why LLM Visibility Differs from Traditional SEO Measurement</h2>
+        <p><strong>The fundamental difference between LLM visibility measurement and traditional search ranking is that LLM responses are probabilistic, not deterministic.</strong> A search engine returns a fixed ranked list for a given query at a given moment. An LLM generates a unique synthesised response each time it is queried, meaning the same brand may appear in one response and be absent from the next, even with identical query text.</p>
+        <p>This probabilistic nature has significant implications for tooling. A rank tracker records your position with precision because the position is fixed. An LLM visibility tool must instead sample many responses to estimate a citation frequency — a fundamentally statistical exercise. Tools that present citation data without disclosing their sampling methodology, sample sizes, or confidence intervals are obscuring important uncertainty in their numbers.</p>
+        <p>The other structural difference is <strong>retrieval mechanism</strong>. Many modern LLM platforms, including Perplexity and ChatGPT with web browsing enabled, use retrieval-augmented generation (RAG) — they query live web content before generating a response. This means your traditional SEO authority (domain authority, backlinks, page rankings) influences your LLM citation rate indirectly, through the probability that your pages appear in the retrieved context. But the relationship is not direct or linear. A page can rank highly in traditional search and be ignored by LLM retrievers because it is structured in a way that resists extraction. Understanding this disconnect is part of what good <a href="/geo-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO tooling</a> should surface.</p>
+        <p>Tools built on SEO infrastructure — existing rank trackers with an AI monitoring tab bolted on — often fail to address this distinction adequately. Purpose-built LLM citation monitors are designed from the ground up to handle probabilistic sampling, platform-specific retrieval behaviour, and the structural characteristics of AI-generated text.</p>
+      </section>
+
+      <section id="evaluation-criteria">
+        <h2 class="anchor-top">Evaluation Criteria for LLM Visibility Tools</h2>
+        <p><strong>Seven criteria separate genuinely useful LLM citation monitoring tools from superficial platforms that collect citation data without producing actionable insight.</strong> Use this framework when assessing any tool, whether free or paid.</p>
+
+        <div class="overflow-x-auto mt-8 rounded-xl border border-[var(--line)]">
+          <table class="w-full text-sm">
+            <thead class="bg-[rgba(var(--accent-glow),.06)]">
+              <tr>
+                <th scope="col" class="px-5 py-4 text-left font-semibold text-ink-100">Criterion</th>
+                <th scope="col" class="px-5 py-4 text-left font-semibold text-ink-100">Practitioner test question</th>
+                <th scope="col" class="px-5 py-4 text-left font-semibold text-ink-100 whitespace-nowrap">Priority</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[var(--line)]">
+              {criteria.map((c, i) => (
+                <tr class={i % 2 === 0 ? '' : 'bg-[rgba(255,255,255,.01)]'}>
+                  <td class="px-5 py-4 font-medium text-ink-100 whitespace-nowrap">{c.label}</td>
+                  <td class="px-5 py-4 text-ink-300 leading-relaxed" set:html={c.description}></td>
+                  <td class="px-5 py-4 text-ink-300 whitespace-nowrap">{c.weight}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p class="mt-6 text-ink-300 leading-relaxed">Platform coverage and citation granularity carry the most weight because they determine whether the tool produces data you can act on. Sampling methodology is equally critical but harder to assess without vendor transparency — treat evasive answers here as a red flag. Prompt customisation, historical retention, and competitive benchmarking become more important as your programme matures and you need to measure the impact of specific interventions over time.</p>
+      </section>
+
+      <section id="tool-categories">
+        <h2 class="anchor-top">Tool Categories From a Practitioner's Perspective</h2>
+        <p><strong>From a practitioner standpoint, the relevant question is not which platform category looks best in a marketing overview — it is which type of tool gives you citation data you can act on.</strong> The three functional approaches differ most in how much control you have over prompt design and how deep the citation data goes. (For a marketing-leader view of how these categories fit into a broader monitoring stack, see the <a href="/best-ai-tools-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI visibility monitoring category guide</a>.)</p>
+
+        <div class="mt-8 grid gap-6 sm:grid-cols-3">
+          <div class="card p-6 border-t-2 border-t-[var(--accent)]">
+            <h3 class="font-display text-lg font-semibold text-ink-50">Purpose-built GEO platforms</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">Dedicated citation monitoring tools built from the ground up for AI visibility. These typically provide the deepest source-level citation data, the most flexible prompt libraries for testing prompt variants, and the strongest historical per-prompt retention. For practitioners who need to trace a citation back to a specific URL and understand why one prompt variant outperforms another, this category is the starting point.</p>
+          </div>
+          <div class="card p-6 border-t-2 border-t-[var(--accent)]">
+            <h3 class="font-display text-lg font-semibold text-ink-50">SEO platforms with AI modules</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">Established SEO tools that have added LLM citation tracking features. Useful if you already operate within that ecosystem, but practitioners should test the citation granularity carefully — many AI modules report brand mention rate only, without URL-level source attribution or prompt-variant testing capability. Treat the current feature set as the evaluation object, not the roadmap.</p>
+          </div>
+          <div class="card p-6 border-t-2 border-t-[var(--accent)]">
+            <h3 class="font-display text-lg font-semibold text-ink-50">DIY query frameworks</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">Scripted or open-source approaches that query LLM APIs directly and process the responses in your own pipeline. Maximum control over prompt design, sampling rate, and output format — but require engineering resource and produce no dashboarding out of the box. The right choice for technically capable teams with non-standard citation tracking needs or who require full transparency into the sampling methodology.</p>
+          </div>
+        </div>
+
+        <p class="mt-6 text-ink-300 leading-relaxed">When evaluating any tool in trial, run your own prompt library — not the vendor's defaults — and compare citation frequency results against manual spot-checks across the same platforms. A systematic discrepancy between what the tool reports and what you observe manually is the most reliable indicator of data quality problems. Verify current capabilities directly with each vendor; this category moves quickly.</p>
+      </section>
+
+      <section id="known-tools">
+        <h2 class="anchor-top">Known Tools: What Practitioners Should Test in Each</h2>
+        <p><strong>The practitioner evaluation question is not "which tools exist" but "what specific capability should I test in each tool's trial."</strong> The following notes cover what to probe during evaluation. This is not a ranked list or endorsement; all feature details should be verified directly with vendors, as this category changes quickly.</p>
+
+        <p class="mt-4 text-ink-300 leading-relaxed"><strong>Purpose-built citation monitors</strong> (publicly active examples have included <strong>Profound</strong>, <strong>Peec AI</strong>, and <strong>Otterly.ai</strong> — verify current status): test whether the tool returns cited URLs, not just brand mentions, and whether you can run your own prompt variants in a single test run. Check sample sizes per prompt and whether historical per-prompt data is accessible at URL level, not just as rolled-up brand scores.</p>
+
+        <p class="mt-4 text-ink-300 leading-relaxed"><strong>SEO platforms with AI modules</strong> (<strong>Semrush AI Toolkit</strong>, <strong>Ahrefs</strong> AI features, <strong>BrightEdge</strong>, and others): test specifically whether the AI module returns URL-level citation data or only brand mention rate. Many modules in this category surface only the latter. Also check which platforms are actually queried live versus inferred from crawl data — the difference matters significantly for citation accuracy.</p>
+
+        <p class="mt-4 text-ink-300 leading-relaxed"><strong>Brandwatch AI listening</strong> and similar media monitoring tools: these typically excel at detecting brand mentions across AI-generated content and social amplification, but are less strong on structured citation-source tracking and prompt-set design. Worth evaluating if reputation monitoring and brand description accuracy are your primary concern, but weaker for practitioners who need to map citations back to specific pages.</p>
+
+        <p class="mt-4 text-ink-300 leading-relaxed"><strong>DIY approaches using OpenAI, Perplexity, and Anthropic APIs directly</strong>: the open-source community has produced query-runner scripts for manual citation audits. These provide maximum transparency over sampling methodology but require engineering resource and produce no dashboarding. Appropriate when you need to validate a commercial tool's results or when your use case is too specific for commercial platforms.</p>
+
+        <div class="mt-6 rounded-xl border border-[var(--line)] bg-[rgba(var(--accent-glow),.04)] p-6">
+          <p class="font-semibold text-ink-100 mb-2">Practitioner trial protocol</p>
+          <p class="text-sm text-ink-300 leading-relaxed">Before committing to any paid plan: (1) load your own prompt library — not the vendor's presets; (2) run the same prompts manually against the same platforms on the same day; (3) compare citation frequency and cited URLs between the tool's output and your manual results; (4) check whether historical per-prompt data from the trial period is accessible after you upgrade. Tools that gate historical data behind higher pricing tiers or that only export aggregate brand scores rather than per-prompt citation lists are harder to use for serious practitioner work. See our <a href="/geo-tools-comparison/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO tools comparison</a> for further evaluation detail. Verify current pricing and features directly with each vendor.</p>
+        </div>
+      </section>
+
+      <section id="honesty-note">
+        <h2 class="anchor-top">A Note on Market Accuracy</h2>
+        <p><strong>The LLM visibility tool market is one of the fastest-moving categories in marketing technology, and any published comparison has a limited shelf life.</strong> Tools that were in closed beta in early 2025 are now mature products; tools that appeared promising have pivoted or wound down. This guide focuses on evaluation criteria rather than point-in-time scores precisely because the criteria remain stable even as the tools evolve.</p>
+
+        <p class="mt-4 text-ink-300 leading-relaxed">We do not publish specific pricing figures, feature scores, or platform-coverage claims for individual tools on this page because those details are liable to become inaccurate within months. What we do provide — and what will remain useful — is the framework for evaluating any tool you encounter: the seven criteria above, the three product category questions, and the trial methodology for validating data quality against your own use case.</p>
+
+        <p class="mt-4 text-ink-300 leading-relaxed">For guidance on which specific tools are currently worth evaluating for your situation, <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">contact our team</a>. We evaluate GEO tooling regularly as part of our <a href="/geo-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO tools</a> advisory work and can provide up-to-date, unbiased recommendations based on your specific requirements and budget. See also our guidance on <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility</a> for the broader strategic context in which citation monitoring sits.</p>
+      </section>
+
+    </article>
+  </div>
+
+  <!-- FAQ Accordion -->
+  <section class="container-wide py-20" id="faq">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Frequently Asked Questions</h2>
+
+    <div class="mt-10 max-w-3xl divide-y divide-[var(--line)]">
+      {faqs.map(faq => (
+        <div class="faq-item">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors"
+            aria-expanded="false"
+          >
+            <span>{faq.q}</span>
+            <svg class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+            </svg>
+          </button>
+          <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+            <p class="pb-5 text-ink-300 leading-relaxed">{faq.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Related Reading -->
+  <section class="container-wide py-12">
+    <span class="eyebrow">Related Reading</span>
+    <h2 class="mt-3 font-display text-2xl font-bold text-ink-50">Explore More</h2>
+    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <a href="/geo-tools/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">GEO Tools Hub</h3>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">All four categories of GEO tooling — AI visibility trackers, citation monitors, content optimisers, and brand authority analysers.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/best-ai-tools-visibility/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">Best AI Visibility Tools</h3>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">The marketing-leader companion to this guide: the full AI visibility monitoring category landscape, share-of-voice dashboards, sentiment platforms, and how to choose a monitoring platform for board-level reporting.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/best-aeo-platforms-2026/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">Best AEO Platforms 2026</h3>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">Answer engine optimisation platforms reviewed for 2026 — what to look for and which categories are worth evaluating.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/geo-tools-comparison/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">GEO Tools Comparison</h3>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">Side-by-side evaluation of the leading GEO monitoring platforms across the seven criteria that matter most.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/best-ai-brand-visibility-tool/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">Choosing the Best AI Brand Visibility Tool</h3>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">A decision guide for selecting the single right tool for your organisation — by size, budget, and platform priority.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/geo-tracking-tools/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">GEO Tracking Tools</h3>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">The continuous monitoring workflow: how to structure an ongoing citation tracking programme that turns practitioner-level data into a repeatable measurement cadence.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+      <a href="/generative-engine-optimisation/" class="card card-hover block p-6">
+        <h3 class="font-display text-lg font-semibold text-ink-50">Generative Engine Optimisation</h3>
+        <p class="mt-2 text-sm text-ink-300 leading-relaxed">The complete guide to GEO — what it is, how it works, and why AI citations are the new frontier of brand visibility.</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">Read more <span aria-hidden="true">&rarr;</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="container-wide py-20">
+    <div class="relative overflow-hidden rounded-2xl dot-grid">
+      <div class="absolute inset-0 bg-gradient-to-br from-[rgba(var(--accent-glow),.12)] via-transparent to-transparent"></div>
+      <div class="relative px-8 py-16 text-center sm:px-16">
+        <span class="eyebrow">Tools Advice</span>
+        <h2 class="mt-4 font-display text-3xl font-bold text-ink-50 sm:text-4xl">Need Guidance on Which LLM Visibility Tool Is Right for You?</h2>
+        <p class="mt-4 mx-auto max-w-2xl text-ink-300 leading-relaxed">
+          Tool selection depends on your programme maturity, team size, and the AI platforms most relevant to your audience. Our team evaluates GEO tooling continuously and can advise without vendor bias. Get in touch to discuss your requirements.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact/" class="btn btn-primary">Get Unbiased Advice</a>
+          <a href="/geo-tools/" class="btn btn-ghost">Browse All GEO Tools</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = '0';
+            other.closest('.faq-item').querySelector('.faq-icon').style.transform = '';
+          }
+        });
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+        icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+      });
+    });
+
+    // TOC IntersectionObserver
+    const sections = document.querySelectorAll('article section[id]');
+    const tocLinks = document.querySelectorAll('.toc-link');
+    if (sections.length && tocLinks.length) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(l => l.classList.remove('text-[var(--accent)]'));
+            const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+            if (active) active.classList.add('text-[var(--accent)]');
+          }
+        });
+      }, { rootMargin: '-20% 0px -70% 0px' });
+      sections.forEach(s => observer.observe(s));
+    }
+  </script>
+
+</Base>

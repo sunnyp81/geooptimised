@@ -1,0 +1,701 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'llms.txt: The Complete Guide for AI Crawlers | GEOoptimised';
+const description = 'llms.txt file for AI optimization: what it is, how to write one, the spec format, and how it improves your visibility across ChatGPT, Perplexity, and Gemini.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: 'llms.txt: The Complete Guide for AI Crawlers',
+  description: 'llms.txt file for AI optimization: what it is, how to write one, the spec format, and how it improves your visibility across ChatGPT, Perplexity, and Gemini.',
+  url: 'https://geooptimised.com/llms-txt/',
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+  datePublished: '2026-06-06',
+  dateModified: '2026-06-06',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/llms-txt/',
+  },
+  image: 'https://geooptimised.com/og-image.png',
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+    { '@type': 'ListItem', position: 3, name: 'AI Brand Visibility', item: 'https://geooptimised.com/ai-brand-visibility/' },
+    { '@type': 'ListItem', position: 4, name: 'llms.txt', item: 'https://geooptimised.com/llms-txt/' },
+  ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is an llms.txt file?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'An llms.txt file is a plain-text Markdown file placed at the root of a website (accessible at /llms.txt) that provides AI crawlers and large language models with a structured, curated summary of the site\'s purpose, expertise, and most important pages. It was proposed by Jeremy Howard in 2024 as a machine-readable index designed specifically for LLM consumption — analogous in concept to robots.txt and sitemap.xml, but optimised for AI systems that process natural language rather than crawl queues.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is llms.txt an official standard?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'llms.txt is a community-proposed specification, not a W3C or IETF standard. It was originated by Jeremy Howard and has been adopted by a growing number of sites and AI tool vendors. As of mid-2026, several major AI platforms and crawlers have indicated support for the format, but it is not universally implemented. Deploying an llms.txt file represents low implementation cost for meaningful upside — it is complementary to, not a replacement for, structured data, entity optimisation, and high-citability content.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Where does the llms.txt file go?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The llms.txt file must be placed at the root of your domain and served at https://yourdomain.com/llms.txt. It should be served as plain text (Content-Type: text/plain or text/markdown). For static site generators like Astro or Next.js, place it in the public/ directory. For dynamic frameworks, configure a route that serves the file at the /llms.txt path. The file should not be blocked by robots.txt — AI crawlers that support llms.txt will specifically request this path.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What should I include in llms.txt?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'An llms.txt file should include: an H1 with your brand name; a blockquote with a concise one-to-two sentence description of what your organisation does; H2 sections covering what you do, your core expertise or services, and your key pages with annotated URLs. Each URL should be followed by a dash and a plain-English description of what that page covers. Keep descriptions factual and specific — AI systems use this content to decide which pages to retrieve and cite for relevant queries.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does llms.txt replace robots.txt?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. llms.txt and robots.txt serve different functions. robots.txt controls crawler access permissions — which paths bots are allowed to fetch. llms.txt provides content guidance — what the site is about and which pages are most important. Both files should coexist. If your robots.txt blocks AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended), deploying an llms.txt file will have no effect because those crawlers cannot access any of your pages. Fix crawler access in robots.txt first, then deploy llms.txt.',
+      },
+    },
+  ],
+};
+
+const schema = [articleSchema, breadcrumbSchema, faqSchema];
+
+const tocItems = [
+  { id: 'what-is-llms-txt', label: 'What llms.txt Is' },
+  { id: 'why-it-matters', label: 'Why It Matters for GEO' },
+  { id: 'spec-format', label: 'The Spec and Format' },
+  { id: 'example', label: 'Full Example File' },
+  { id: 'what-to-include', label: 'What to Include' },
+  { id: 'platform-support', label: 'Platform Support Table' },
+  { id: 'robots-txt', label: 'llms.txt and robots.txt' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const faqs = [
+  {
+    q: 'What is an llms.txt file?',
+    a: "An llms.txt file is a plain-text Markdown file placed at the root of a website (accessible at /llms.txt) that provides AI crawlers and large language models with a structured, curated summary of the site's purpose, expertise, and most important pages. It was proposed by Jeremy Howard in 2024 as a machine-readable index designed specifically for LLM consumption — analogous in concept to robots.txt and sitemap.xml, but optimised for AI systems that process natural language rather than crawl queues.",
+  },
+  {
+    q: 'Is llms.txt an official standard?',
+    a: 'llms.txt is a community-proposed specification, not a W3C or IETF standard. It was originated by Jeremy Howard and has been adopted by a growing number of sites and AI tool vendors. As of mid-2026, several major AI platforms and crawlers have indicated support for the format, but it is not universally implemented. Deploying an llms.txt file represents low implementation cost for meaningful upside — it is complementary to, not a replacement for, structured data, entity optimisation, and high-citability content.',
+  },
+  {
+    q: 'Where does the llms.txt file go?',
+    a: 'The llms.txt file must be placed at the root of your domain and served at https://yourdomain.com/llms.txt. It should be served as plain text (Content-Type: text/plain or text/markdown). For static site generators like Astro or Next.js, place it in the public/ directory. For dynamic frameworks, configure a route that serves the file at the /llms.txt path. The file should not be blocked by robots.txt — AI crawlers that support llms.txt will specifically request this path.',
+  },
+  {
+    q: 'What should I include in llms.txt?',
+    a: 'An llms.txt file should include: an H1 with your brand name; a blockquote with a concise one-to-two sentence description of what your organisation does; H2 sections covering what you do, your core expertise or services, and your key pages with annotated URLs. Each URL should be followed by a dash and a plain-English description of what that page covers. Keep descriptions factual and specific — AI systems use this content to decide which pages to retrieve and cite for relevant queries.',
+  },
+  {
+    q: 'Does llms.txt replace robots.txt?',
+    a: 'No. llms.txt and robots.txt serve different functions. robots.txt controls crawler access permissions — which paths bots are allowed to fetch. llms.txt provides content guidance — what the site is about and which pages are most important. Both files should coexist. If your robots.txt blocks AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended), deploying an llms.txt file will have no effect because those crawlers cannot access any of your pages. Fix crawler access in robots.txt first, then deploy llms.txt.',
+  },
+];
+
+const related = [
+  {
+    tag: 'Parent NODE',
+    title: 'AI Brand Visibility: How to Get Cited by LLMs',
+    excerpt: 'The five pillars of AI brand visibility, measurement framework, and content patterns that drive LLM citations.',
+    href: '/ai-brand-visibility/',
+  },
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'The full GEO framework — from first principles through to advanced entity strategy and measurement.',
+    href: '/generative-engine-optimisation/',
+  },
+  {
+    tag: 'Services',
+    title: 'GEO Services: llms.txt Implementation',
+    excerpt: 'How we implement and maintain llms.txt alongside the full technical GEO stack for clients.',
+    href: '/geo-services/#llms-txt',
+  },
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/llms-txt/" ogType="article">
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">Generative Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/ai-brand-visibility/" class="transition hover:text-[var(--accent)]">AI Brand Visibility</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">llms.txt</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Technical Guide</span>
+        <span class="font-mono text-xs text-ink-300">6 Jun 2026</span>
+        <span class="font-mono text-xs text-ink-300">13 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        llms.txt: The Complete Guide for AI Crawlers
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">An llms.txt file</strong> is a plain-text Markdown document served at the root of your domain that tells AI crawlers
+        and large language models what your site is about, who you are, and which pages represent your most authoritative content.
+        It is one of the lowest-effort, highest-signal steps any site owner can take to improve their
+        <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility</a>
+        — and one of the most widely misunderstood.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>An llms.txt file is a Markdown document served at /llms.txt that gives AI crawlers a curated, machine-readable summary of your site's purpose and most important content.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>It was proposed by Jeremy Howard in 2024 and is gaining adoption across AI platforms — but it is not a W3C standard and must be paired with solid underlying GEO work.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>The file follows a defined Markdown structure: H1 brand name, blockquote summary, H2 sections for services/expertise, annotated URL lists for key pages.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>llms.txt is ineffective if AI crawlers are blocked in robots.txt — fix crawler access before deploying the file.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Keep the file accurate and up to date: stale or inaccurate llms.txt content can mislead AI systems about your current offering and reduce citation accuracy.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1: What llms.txt Is -->
+      <section id="what-is-llms-txt" class="anchor-top prose-dark mb-16">
+        <h2>What llms.txt Is</h2>
+
+        <p>
+          <strong>An llms.txt file is a plain-text document, formatted in Markdown, that a website owner places at the root of their domain to give large language models and AI crawlers a structured, curated summary of the site's identity, purpose, and most important content.</strong>
+          It was proposed by Jeremy Howard in September 2024 and is published as a community specification at llmstxt.org.
+        </p>
+
+        <p>
+          The motivation for llms.txt comes from a practical problem: modern websites are complex. They contain hundreds or thousands of pages, many of which are navigational, administrative, or otherwise low-value for an AI system trying to understand what an organisation does and what it is authoritative about. A sitemap.xml tells crawlers where all the pages are. An llms.txt file tells AI systems which pages actually matter — and why.
+        </p>
+
+        <p>
+          Think of llms.txt as the brief that you would hand to a journalist before an interview. It is the curated, accurate, self-authored description of who you are and what you are best placed to speak to. Without it, an AI system attempting to understand your brand has to infer your identity from whatever pages it happens to crawl — which may include outdated content, thin pages, or navigational templates that say nothing meaningful about your expertise.
+        </p>
+
+        <p>
+          The file is served as plain text at <code>https://yourdomain.com/llms.txt</code>. For static site generators including Astro, it lives in the <code>public/</code> directory. It should be openly accessible — not blocked by robots.txt, not behind authentication, and not redirecting to another URL. AI crawlers that support the specification will request this file directly before or alongside crawling the rest of your site.
+        </p>
+
+        <p>
+          This page is one of a set of technical GEO guides within our <a href="/ai-brand-visibility/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI brand visibility</a> NODE. For the broader strategic context — why AI crawlers matter and how they interact with citation — see the full <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation guide</a>.
+        </p>
+      </section>
+
+      <!-- Section 2: Why It Matters for GEO -->
+      <section id="why-it-matters" class="anchor-top prose-dark mb-16">
+        <h2>Why llms.txt Matters for GEO</h2>
+
+        <p>
+          <strong>llms.txt is not a magic ranking signal — it is a clarity signal that reduces the probability of AI systems misrepresenting or ignoring your content.</strong>
+          Its value is proportional to the quality of your underlying content and entity authority; deployed on a thin site with poor entity signals, it contributes little. Deployed on a well-structured site with strong schema markup and entity authority, it is a meaningful additional layer of AI-readability.
+        </p>
+
+        <p>
+          The file serves three specific functions within a GEO programme:
+        </p>
+
+        <div class="not-prose mt-6 grid gap-5 sm:grid-cols-3">
+          <div class="card p-5">
+            <h3 class="font-display text-sm font-semibold text-[var(--accent)] mb-2">Content Curation Signal</h3>
+            <p class="text-sm leading-relaxed text-ink-300">
+              It tells AI crawlers which pages represent your most authoritative content — reducing the chance that a crawler indexes your cookie policy and ignores your pillar content.
+            </p>
+          </div>
+          <div class="card p-5">
+            <h3 class="font-display text-sm font-semibold text-[var(--accent)] mb-2">Entity Clarification</h3>
+            <p class="text-sm leading-relaxed text-ink-300">
+              The blockquote summary and service descriptions give AI systems a canonical, self-authored description of your organisation — supplementing schema markup and knowledge graph data.
+            </p>
+          </div>
+          <div class="card p-5">
+            <h3 class="font-display text-sm font-semibold text-[var(--accent)] mb-2">Retrieval Efficiency</h3>
+            <p class="text-sm leading-relaxed text-ink-300">
+              For RAG-based systems like Perplexity, an llms.txt file can reduce retrieval costs and latency by providing an index of high-value pages rather than requiring the system to crawl and rank all pages independently.
+            </p>
+          </div>
+        </div>
+
+        <p class="mt-8">
+          The deployment of llms.txt on this site is part of the broader GEO technical stack that also includes <a href="/schema-markup-ai/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">schema markup for AI</a>, structured content patterns, and entity authority building. For the service-level implementation, see our <a href="/geo-services/#llms-txt" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO services page</a>.
+        </p>
+      </section>
+
+      <!-- Section 3: The Spec and Format -->
+      <section id="spec-format" class="anchor-top prose-dark mb-16">
+        <h2>The llms.txt Specification and Format</h2>
+
+        <p>
+          <strong>The llms.txt specification defines a Markdown-based file format with five required or recommended structural elements, each serving a distinct function for AI parsing.</strong>
+          The format is intentionally simple — it uses standard Markdown with no custom syntax or proprietary extensions, which means it can be written in any text editor and read by any system capable of processing plain text.
+        </p>
+
+        <p>The five structural elements are:</p>
+
+        <div class="not-prose mt-6 space-y-3">
+          <div class="card p-5">
+            <div class="flex items-start gap-4">
+              <span class="shrink-0 font-mono text-sm text-[var(--accent)] font-bold">H1</span>
+              <div>
+                <h3 class="text-sm font-semibold text-ink-50">Brand / Organisation Name</h3>
+                <p class="mt-1 text-sm text-ink-300">A single H1 containing your brand name. This is the top-level entity identifier — it should match the name in your Organisation schema and all external knowledge base entries. Do not add a tagline or description here.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card p-5">
+            <div class="flex items-start gap-4">
+              <span class="shrink-0 font-mono text-sm text-[var(--accent)] font-bold">&gt;</span>
+              <div>
+                <h3 class="text-sm font-semibold text-ink-50">Blockquote Summary</h3>
+                <p class="mt-1 text-sm text-ink-300">A Markdown blockquote (prefixed with <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">&gt;</code>) containing one to two sentences that describe your organisation and its primary function. This is the most-cited element of the file — AI systems use it to classify your brand when generating responses to category queries. Write it as a clear, factual definition, not a marketing strapline.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card p-5">
+            <div class="flex items-start gap-4">
+              <span class="shrink-0 font-mono text-sm text-[var(--accent)] font-bold">H2+</span>
+              <div>
+                <h3 class="text-sm font-semibold text-ink-50">Service and Expertise Sections</h3>
+                <p class="mt-1 text-sm text-ink-300">H2-headed sections covering what you do, your areas of expertise, and your core services. Use bullet lists within each section. These sections help AI systems understand your topical authority and match your brand to relevant query categories.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card p-5">
+            <div class="flex items-start gap-4">
+              <span class="shrink-0 font-mono text-sm text-[var(--accent)] font-bold">URLs</span>
+              <div>
+                <h3 class="text-sm font-semibold text-ink-50">Key Pages with Annotations</h3>
+                <p class="mt-1 text-sm text-ink-300">Bullet lists of your most important pages, each formatted as a Markdown link followed by an em dash and a plain-English description. Include only your most authoritative pages — 10 to 30 URLs is typical. Do not include every page on the site. Annotations should describe what each page covers, not market it.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card p-5">
+            <div class="flex items-start gap-4">
+              <span class="shrink-0 font-mono text-sm text-[var(--accent)] font-bold">...</span>
+              <div>
+                <h3 class="text-sm font-semibold text-ink-50">Optional: llms-full.txt Reference</h3>
+                <p class="mt-1 text-sm text-ink-300">The spec allows an optional reference to an <code class="text-xs bg-geo-800 px-1 py-0.5 rounded">llms-full.txt</code> file containing a more comprehensive index of all pages. This is useful for large sites where the primary llms.txt focuses on pillar content. For most sites under 200 pages, a single well-structured llms.txt is sufficient.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Full Example File -->
+      <section id="example" class="anchor-top prose-dark mb-16">
+        <h2>Full Example llms.txt File</h2>
+
+        <p>
+          <strong>The example below is a realistic, well-structured llms.txt for a specialist GEO and AEO agency.</strong>
+          It follows the spec format exactly: brand name H1, blockquote summary, descriptive H2 sections, and annotated URL lists. This is the actual structure of the llms.txt file deployed on this site.
+        </p>
+
+        <div class="not-prose mt-6">
+          <pre class="overflow-x-auto rounded-lg bg-geo-900 border border-geo-700 p-5 text-sm leading-relaxed"><code class="font-mono text-ink-200">{`# GEOoptimised
+
+> GEOoptimised is a UK-based Generative Engine Optimisation (GEO) and
+> Answer Engine Optimisation (AEO) agency. We help brands get cited,
+> referenced, and recommended by AI search engines including ChatGPT,
+> Perplexity, Google AI Overviews, Gemini, Claude, and Microsoft Copilot.
+
+## What We Do
+
+GEOoptimised provides Generative Engine Optimisation (GEO) and Answer
+Engine Optimisation (AEO) services. GEO is the practice of structuring
+digital content so that large language models (LLMs) and AI-powered
+search engines cite, reference, and recommend a brand in their generated
+responses.
+
+We are distinct from traditional SEO agencies. While SEO optimises for
+ranked blue-link results, GEO optimises for inclusion and citation within
+a single synthesised AI answer, across multiple platforms simultaneously.
+
+## Core Services
+
+- GEO (Generative Engine Optimisation): Full-service AI visibility and citation optimisation
+- AEO (Answer Engine Optimisation): Optimisation for answer-based interfaces
+- AI Brand Visibility Audits: Assessment of current LLM citation presence and share of voice
+- Entity & Knowledge Graph Optimisation: Structured data and entity authority building
+- Platform-Specific Optimisation: Tailored playbooks for ChatGPT, Perplexity, Gemini, Claude, Copilot, and Google AI Overviews
+- LLM Monitoring & Tracking: Ongoing measurement of AI citation performance
+
+## Expertise
+
+- Generative Engine Optimisation methodology and implementation
+- Answer Engine Optimisation strategy and execution
+- Schema markup and structured data for AI consumption
+- llms.txt implementation and AI crawler management
+- Cross-model optimisation across ChatGPT, Perplexity, Gemini, Claude, and Copilot
+- Entity authority building and Knowledge Graph optimisation
+
+## Key Pages
+
+- https://geooptimised.com/generative-engine-optimisation/ — Complete GEO guide (pillar content)
+- https://geooptimised.com/answer-engine-optimisation/ — AEO methodology guide
+- https://geooptimised.com/geo-vs-seo/ — How GEO differs from traditional SEO
+- https://geooptimised.com/ai-brand-visibility/ — AI brand visibility framework and measurement
+- https://geooptimised.com/schema-markup-ai/ — Schema markup for AI optimization guide
+- https://geooptimised.com/entity-optimisation/ — Entity optimisation methodology
+- https://geooptimised.com/knowledge-graph-optimisation/ — Knowledge graph optimisation guide
+- https://geooptimised.com/geo-tools/ — Tools for measuring AI visibility
+
+## Services
+
+- https://geooptimised.com/geo-services/ — GEO service offerings and deliverables
+- https://geooptimised.com/geo-agency/ — GEO agency overview and approach
+- https://geooptimised.com/contact/ — Get in touch for a free AI visibility audit
+
+## Company
+
+- https://geooptimised.com/about/ — Company background and expertise
+
+## Contact
+
+- Website: https://geooptimised.com
+- Email: hello@geooptimised.com`}</code></pre>
+        </div>
+
+        <p class="mt-6">
+          Several things to note about this example. The blockquote summary is factual and specific — it names the platforms, identifies the geography, and uses the correct full-form terminology on first use. The service list uses consistent parallel structure. The URL list is selective, not exhaustive — it covers pillar content, key guides, and commercial pages, not every URL on the site. The contact section is included because AI systems use it when generating responses that reference how to reach an organisation.
+        </p>
+      </section>
+
+      <!-- Section 5: What to Include -->
+      <section id="what-to-include" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>What to Include — and What to Leave Out</h2>
+          <p>
+            <strong>The most common mistake in llms.txt implementation is including too many URLs and too little context.</strong>
+            A file listing 200 pages with no descriptions is less useful to an AI system than a file listing 20 pages with clear, factual annotations. Quality and selectivity are more important than comprehensiveness.
+          </p>
+        </div>
+
+        <div class="mt-8 overflow-x-auto rounded-lg border border-geo-700">
+          <table class="min-w-full text-sm">
+            <thead>
+              <tr class="border-b border-geo-700 bg-geo-900">
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Include</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Leave Out</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Reason</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-geo-800">
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 text-ink-200">Pillar / ROOT pages</td>
+                <td class="px-4 py-3 text-ink-300">Pagination pages</td>
+                <td class="px-4 py-3 text-ink-300">Pillar pages represent your deepest authority; paginated pages have no standalone value for AI systems.</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-ink-200">Key guide and NODE pages</td>
+                <td class="px-4 py-3 text-ink-300">Tag and category archives</td>
+                <td class="px-4 py-3 text-ink-300">Guides are citable; archives are navigational structure with no substantive content for citation.</td>
+              </tr>
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 text-ink-200">Commercial service pages</td>
+                <td class="px-4 py-3 text-ink-300">Privacy policy, T&amp;Cs, cookie pages</td>
+                <td class="px-4 py-3 text-ink-300">Service pages define your offering; legal pages contain no citation-relevant expertise.</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-ink-200">About and contact pages</td>
+                <td class="px-4 py-3 text-ink-300">Checkout and login pages</td>
+                <td class="px-4 py-3 text-ink-300">About/contact provide entity context; transactional pages are useless for AI citation purposes.</td>
+              </tr>
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 text-ink-200">Pages with unique data or research</td>
+                <td class="px-4 py-3 text-ink-300">Thin SEED pages with low word count</td>
+                <td class="px-4 py-3 text-ink-300">Unique data is highly citable; thin pages will be retrieved and found wanting, reducing overall trust.</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-ink-200">Pages with strong schema markup</td>
+                <td class="px-4 py-3 text-ink-300">Pages without schema or structured data</td>
+                <td class="px-4 py-3 text-ink-300">Schema-rich pages parse cleanly and cite accurately; unstructured pages are harder for AI systems to use reliably.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose-dark mt-8">
+          <p>
+            The annotation format matters as much as the page selection. Each annotation should answer the question: "What would someone learn from this page?" Not "What is this page about?" (that is what the URL says), but what specific knowledge, methodology, or data does it contain that is worth citing. "Complete GEO guide" is a stronger annotation than "about generative engine optimisation" because it signals depth and completeness — attributes that AI systems weight when selecting sources for complex queries.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 6: Platform Support Table -->
+      <section id="platform-support" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Platform Support and Adoption</h2>
+          <p>
+            <strong>llms.txt adoption across AI platforms is growing but uneven — as of mid-2026, no single major platform has published official documentation confirming full spec compliance.</strong>
+            The table below reflects current public signals from each platform; it should be treated as directional rather than definitive, and checked against platform-specific documentation as the landscape evolves.
+          </p>
+        </div>
+
+        <div class="mt-8 overflow-x-auto rounded-lg border border-geo-700">
+          <table class="min-w-full text-sm">
+            <thead>
+              <tr class="border-b border-geo-700 bg-geo-900">
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Platform</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">llms.txt Support</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Primary Retrieval Mechanism</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-50">Priority for GEO</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-geo-800">
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">Perplexity</td>
+                <td class="px-4 py-3 text-ink-300">Indicated via crawler behaviour</td>
+                <td class="px-4 py-3 text-ink-300">Live web RAG (PerplexityBot)</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">Very high</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-ink-100">Google AI Overviews</td>
+                <td class="px-4 py-3 text-ink-300">Not formally confirmed</td>
+                <td class="px-4 py-3 text-ink-300">Live web RAG + Knowledge Graph (Google-Extended)</td>
+                <td class="px-4 py-3 text-[var(--accent)] font-semibold">Very high</td>
+              </tr>
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">Anthropic Claude</td>
+                <td class="px-4 py-3 text-ink-300">Supported (ClaudeBot respects /llms.txt)</td>
+                <td class="px-4 py-3 text-ink-300">Parametric + web tools (claude.ai Pro)</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">High</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-ink-100">Microsoft Copilot</td>
+                <td class="px-4 py-3 text-ink-300">Not formally confirmed</td>
+                <td class="px-4 py-3 text-ink-300">Live web RAG via Bing index</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">High</td>
+              </tr>
+              <tr class="bg-geo-950/60">
+                <td class="px-4 py-3 font-medium text-ink-100">ChatGPT</td>
+                <td class="px-4 py-3 text-ink-300">GPTBot crawls; llms.txt processing not confirmed</td>
+                <td class="px-4 py-3 text-ink-300">Parametric knowledge + Bing-powered browsing</td>
+                <td class="px-4 py-3 text-yellow-400 font-semibold">High</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-medium text-ink-100">Gemini</td>
+                <td class="px-4 py-3 text-ink-300">Not confirmed; Google-Extended crawler active</td>
+                <td class="px-4 py-3 text-ink-300">Parametric + Google Search integration</td>
+                <td class="px-4 py-3 text-ink-300 font-semibold">Medium</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose-dark mt-8">
+          <p>
+            The practical conclusion from this table is that llms.txt deployment is most reliably beneficial for Perplexity-based retrieval today, with growing applicability as other platforms formalise their support. Because the file costs nothing to deploy and maintain, there is no rational argument against having one — the downside of deploying it where support is not yet confirmed is zero.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 7: llms.txt and robots.txt -->
+      <section id="robots-txt" class="anchor-top prose-dark mb-16">
+        <h2>llms.txt and robots.txt: The Dependency You Cannot Ignore</h2>
+
+        <p>
+          <strong>An llms.txt file is completely ineffective if your robots.txt blocks the AI crawlers it is designed to help.</strong>
+          This is the most critical dependency in AI crawler optimisation: crawler access permissions come before content signals, always. A crawler that is blocked by robots.txt will never read your llms.txt file — and will never retrieve or cite any of your pages, regardless of how excellent your structured data and content quality are.
+        </p>
+
+        <p>
+          Common AI bot identifiers that are frequently blocked in robots.txt include:
+        </p>
+
+        <div class="not-prose">
+          <pre class="overflow-x-auto rounded-lg bg-geo-900 border border-geo-700 p-5 text-sm leading-relaxed"><code class="font-mono text-ink-200">{`# Crawlers that are commonly blocked — review and unblock as appropriate
+
+User-agent: GPTBot          # OpenAI / ChatGPT
+User-agent: ClaudeBot       # Anthropic / Claude
+User-agent: PerplexityBot   # Perplexity
+User-agent: Google-Extended # Google AI training and AI Overviews
+User-agent: CCBot           # Common Crawl (feeds many model training sets)
+User-agent: anthropic-ai    # Anthropic secondary crawler
+User-agent: Applebot-Extended # Apple AI features`}</code></pre>
+        </div>
+
+        <p class="mt-6">
+          If any of these appear in your robots.txt with a <code>Disallow: /</code> rule, that crawler cannot access your site. Before deploying or updating an llms.txt file, audit your robots.txt and confirm that the crawlers you want to permit have either an explicit <code>Allow: /</code> rule or are simply absent from the file (which defaults to full access).
+        </p>
+
+        <p>
+          The correct configuration for a site that wants maximum AI visibility is a robots.txt that either does not mention AI bot user-agents at all (allowing all bots by default) or explicitly allows each named AI crawler. The llms.txt file then provides those permitted crawlers with a curated guide to your most important content.
+        </p>
+
+        <p>
+          For guidance on entity optimisation that complements both your schema markup and llms.txt deployment, see our pages on <a href="/entity-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">entity optimisation</a> and <a href="/knowledge-graph-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">knowledge graph optimisation</a>. For the full technical implementation service, see the <a href="/geo-services/#llms-txt" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">llms.txt section of our GEO services</a>.
+        </p>
+      </section>
+
+      <!-- FAQ -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Get Your llms.txt Implemented Correctly</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        An llms.txt file is most effective when it is part of a complete GEO technical stack: correct crawler access in robots.txt,
+        valid schema markup, entity authority, and high-citability content working together.
+        We audit, implement, and maintain the full stack for brands serious about AI visibility.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request your free GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

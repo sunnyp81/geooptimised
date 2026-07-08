@@ -1,0 +1,368 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Optimising for Specific AI Platforms | GEOoptimised';
+const description = 'AI platform optimization guide: how to optimise for ChatGPT, Perplexity, Google AI Overviews, and cross-model GEO strategies that work across all major generative platforms.';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "headline": "Optimising for Specific AI Platforms",
+    "description": "Platform-by-platform GEO guides covering ChatGPT, Perplexity, Google AI Overviews, SGE, and cross-model optimisation strategies for generative engine visibility.",
+    "url": "https://geooptimised.com/optimise-for-ai-platforms/",
+    "datePublished": "2026-06-07",
+    "dateModified": "2026-06-07",
+    "inLanguage": "en-GB",
+    "author": { "@id": "https://geooptimised.com/#organization" },
+    "publisher": { "@id": "https://geooptimised.com/#organization" },
+    "image": "https://geooptimised.com/og-image.png",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://geooptimised.com/optimise-for-ai-platforms/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://geooptimised.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Generative Engine Optimisation", "item": "https://geooptimised.com/generative-engine-optimisation/" },
+      { "@type": "ListItem", "position": 3, "name": "Optimising for Specific AI Platforms", "item": "https://geooptimised.com/optimise-for-ai-platforms/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why does GEO differ between AI platforms?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Each major AI platform uses a distinct combination of training data, retrieval mechanisms, and ranking signals to generate answers. ChatGPT relies primarily on parametric knowledge from its training corpus, supplemented by live browsing in paid tiers. Perplexity uses real-time retrieval-augmented generation, making fresh web content more influential. Google AI Overviews integrates the Knowledge Graph and Google's organic index. Because the underlying architecture differs, the optimisation levers that move citation frequency also differ — a strategy built for one platform does not automatically transfer to another."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which AI platform should I prioritise for GEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Prioritise the platform your target audience uses most heavily. For B2B technology buyers, ChatGPT and Perplexity are typically highest volume. For consumers researching purchases, Google AI Overviews influences the largest number of journeys because it appears within Google Search. For research-heavy queries, Perplexity's citation model means a source citation there generates direct referral traffic. Audit your current citation footprint across all five major platforms before deciding where to invest optimisation effort first."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between SGE and Google AI Overviews?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Search Generative Experience (SGE) was Google's experimental AI search feature tested in 2023 and 2024. Google AI Overviews is the production successor to SGE, rolled out globally from May 2024. AI Overviews appears at the top of Google Search results pages for queries where Google's systems determine a generated summary adds value. From an optimisation perspective, the principles are largely continuous — structured content, strong entity signals, and high-authority backlinks improve AI Overviews visibility in the same way they improved SGE visibility during the experimental period."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get my content cited in Perplexity?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Perplexity uses real-time web retrieval, so the factors that govern citation are closer to traditional SEO than for training-data-dependent platforms like base ChatGPT. Your pages need to be crawlable by PerplexityBot, rank well enough in major search engines to be retrieved by Perplexity's index, and contain clearly structured, extractable content with explicit answers to likely queries. Pages that open with definitional statements, use structured Q&A, and carry strong E-E-A-T signals are cited most frequently. Blocking PerplexityBot in robots.txt is the fastest way to eliminate Perplexity as a citation source."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does optimising for one AI platform help with others?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — there is significant overlap in the foundational signals that improve citation across all major platforms. Strong entity authority, high-quality structured data, clear and extractable content, and broad authoritative backlinks all contribute to citation performance across ChatGPT, Perplexity, Google AI Overviews, Gemini, and Copilot. Platform-specific optimisation addresses the marginal gains available once the foundation is solid. Cross-model optimisation — the strategy of maximising the signals common to all platforms — is the highest-leverage approach for brands early in their GEO journey."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I optimise for ChatGPT specifically?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ChatGPT's base model relies on training data ingested before its knowledge cutoff. Improving your parametric representation in ChatGPT requires building a strong citation footprint in the sources that feed OpenAI's training pipeline: Wikipedia, major editorial publications, Wikidata, and high-authority industry sites. For ChatGPT's browsing and retrieval features, the same content structure principles apply as for Perplexity — clean, structured, extractable content on crawlable pages. GPTBot must not be blocked in your robots.txt. Businesses using ChatGPT for Business or enterprise deployments may encounter custom retrieval configurations, which are addressed separately in the platform-specific guide."
+        }
+      }
+    ]
+  }
+];
+
+const seeds = [
+  {
+    title: 'Optimise for ChatGPT',
+    excerpt: 'How to build parametric representation and retrieval visibility so ChatGPT cites your brand in relevant generated answers.',
+    href: '/optimise-for-chatgpt/',
+    tag: 'ChatGPT'
+  },
+  {
+    title: 'ChatGPT for Business',
+    excerpt: 'GEO considerations for enterprise ChatGPT deployments: custom GPTs, retrieval configurations, and organisational citation strategy.',
+    href: '/chatgpt-for-business/',
+    tag: 'ChatGPT'
+  },
+  {
+    title: 'Optimise for Perplexity',
+    excerpt: 'Perplexity-specific GEO: how RAG retrieval works, which signals drive citation, and how to get PerplexityBot to surface your pages.',
+    href: '/optimise-for-perplexity/',
+    tag: 'Perplexity'
+  },
+  {
+    title: 'Perplexity AI Optimisation',
+    excerpt: 'In-depth guide to the content, entity, and technical signals that increase citation frequency in Perplexity AI answers.',
+    href: '/perplexity-ai-optimisation/',
+    tag: 'Perplexity'
+  },
+  {
+    title: 'GEO for Perplexity',
+    excerpt: 'A practical generative engine optimisation playbook for Perplexity: from robots.txt hygiene to structured content patterns.',
+    href: '/geo-perplexity/',
+    tag: 'Perplexity'
+  },
+  {
+    title: 'Google AI Overview Optimisation',
+    excerpt: 'How Google AI Overviews selects sources and what content, structured data, and authority signals improve your inclusion rate.',
+    href: '/google-ai-overview-optimisation/',
+    tag: 'Google AI'
+  },
+  {
+    title: 'SGE Optimisation',
+    excerpt: 'Search Generative Experience to AI Overviews: the continuous optimisation principles that carry across both iterations.',
+    href: '/sge-optimisation/',
+    tag: 'Google AI'
+  },
+  {
+    title: 'Cross-Model Optimisation',
+    excerpt: 'The universal signals — entity authority, extractable content, structured data — that raise citation rates across all AI platforms simultaneously.',
+    href: '/cross-model-optimisation/',
+    tag: 'Cross-Platform'
+  }
+];
+
+const faqs = [
+  {
+    q: 'Why does GEO differ between AI platforms?',
+    a: 'Each major AI platform uses a distinct combination of training data, retrieval mechanisms, and ranking signals to generate answers. ChatGPT relies primarily on parametric knowledge from its training corpus, supplemented by live browsing in paid tiers. Perplexity uses real-time retrieval-augmented generation, making fresh web content more influential. Google AI Overviews integrates the Knowledge Graph and Google\'s organic index. Because the underlying architecture differs, the optimisation levers that move citation frequency also differ — a strategy built for one platform does not automatically transfer to another.'
+  },
+  {
+    q: 'Which AI platform should I prioritise for GEO?',
+    a: 'Prioritise the platform your target audience uses most heavily. For B2B technology buyers, ChatGPT and Perplexity are typically highest volume. For consumers researching purchases, Google AI Overviews influences the largest number of journeys because it appears within Google Search. For research-heavy queries, Perplexity\'s citation model means a source citation there generates direct referral traffic. Audit your current citation footprint across all five major platforms before deciding where to invest optimisation effort first.'
+  },
+  {
+    q: 'What is the difference between SGE and Google AI Overviews?',
+    a: 'Search Generative Experience (SGE) was Google\'s experimental AI search feature tested in 2023 and 2024. Google AI Overviews is the production successor to SGE, rolled out globally from May 2024. AI Overviews appears at the top of Google Search results pages for queries where Google\'s systems determine a generated summary adds value. From an optimisation perspective, the principles are largely continuous — structured content, strong entity signals, and high-authority backlinks improve AI Overviews visibility in the same way they improved SGE visibility during the experimental period.'
+  },
+  {
+    q: 'How do I get my content cited in Perplexity?',
+    a: 'Perplexity uses real-time web retrieval, so the factors that govern citation are closer to traditional SEO than for training-data-dependent platforms like base ChatGPT. Your pages need to be crawlable by PerplexityBot, rank well enough in major search engines to be retrieved by Perplexity\'s index, and contain clearly structured, extractable content with explicit answers to likely queries. Pages that open with definitional statements, use structured Q&A, and carry strong E-E-A-T signals are cited most frequently. Blocking PerplexityBot in robots.txt is the fastest way to eliminate Perplexity as a citation source.'
+  },
+  {
+    q: 'Does optimising for one AI platform help with others?',
+    a: 'Yes — there is significant overlap in the foundational signals that improve citation across all major platforms. Strong entity authority, high-quality structured data, clear and extractable content, and broad authoritative backlinks all contribute to citation performance across ChatGPT, Perplexity, Google AI Overviews, Gemini, and Copilot. Platform-specific optimisation addresses the marginal gains available once the foundation is solid. Cross-model optimisation — the strategy of maximising the signals common to all platforms — is the highest-leverage approach for brands early in their GEO journey.'
+  },
+  {
+    q: 'How do I optimise for ChatGPT specifically?',
+    a: 'ChatGPT\'s base model relies on training data ingested before its knowledge cutoff. Improving your parametric representation in ChatGPT requires building a strong citation footprint in the sources that feed OpenAI\'s training pipeline: Wikipedia, major editorial publications, Wikidata, and high-authority industry sites. For ChatGPT\'s browsing and retrieval features, the same content structure principles apply as for Perplexity — clean, structured, extractable content on crawlable pages. GPTBot must not be blocked in your robots.txt.'
+  }
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/optimise-for-ai-platforms/"
+  ogType="website"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">Generative Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">Optimising for Specific AI Platforms</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-fade relative overflow-hidden">
+    <div class="container-wide grid gap-12 pt-12 pb-20 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-7">
+        <span class="eyebrow">Platform Optimisation — N8</span>
+        <h1 class="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+          <span class="grad-text">Optimising for Specific AI Platforms</span>
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-300">
+          <strong class="text-white">AI platform optimization</strong> requires platform-specific knowledge because ChatGPT, Perplexity, Google AI Overviews, and Gemini each use distinct retrieval mechanisms, training data sources, and citation logic. This hub collects our platform-by-platform GEO playbooks — and the cross-model strategy that underpins all of them.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/contact/" class="btn btn-primary">Get Platform GEO Advice</a>
+          <a href="/generative-engine-optimisation/" class="btn btn-ghost">GEO Overview</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="card p-6">
+          <span class="eyebrow">At a glance</span>
+          <div class="mt-4 grid grid-cols-2 gap-6">
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">8</p>
+              <p class="mt-1 text-sm text-ink-300">Platform guides</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">5</p>
+              <p class="mt-1 text-sm text-ink-300">Major AI platforms</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">RAG &amp; LLM</p>
+              <p class="mt-1 text-sm text-ink-300">Both architectures</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl font-bold text-[var(--accent)]">Cross-model</p>
+              <p class="mt-1 text-sm text-ink-300">Universal strategy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Intro -->
+  <section class="container-wide py-16">
+    <div class="prose-dark max-w-3xl">
+      <p>
+        <strong>Each major AI platform is a distinct citation environment — treating them as interchangeable is one of the most common GEO mistakes.</strong>
+        ChatGPT draws on parametric knowledge encoded during training, which means improving your citation frequency there requires a long-term presence-building strategy across the publications and knowledge bases that feed training pipelines. Perplexity, by contrast, retrieves live web content for every query, so the signals that govern citation are closer to traditional SEO — page quality, crawlability, content structure, and backlink authority. Google AI Overviews integrates its Knowledge Graph with live retrieval and applies Google's own quality signals, creating a third distinct optimisation environment. Copilot and Gemini add further variation.
+      </p>
+      <p>
+        Understanding these architectural differences is what separates effective platform-specific GEO from generic advice. Our platform guides explain how each system works, what signals it weights, and what practical changes produce measurable citation improvements. Start with the guide for the platform most relevant to your audience, then use the <a href="/cross-model-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">cross-model optimisation</a> guide to build the universal foundation that lifts performance across all platforms simultaneously.
+      </p>
+      <p>
+        All platform guides are part of the broader <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> framework. They are not standalone tactics — they are the platform-specific layer applied on top of a solid entity, content, and technical GEO foundation.
+      </p>
+    </div>
+  </section>
+
+  <!-- Seed Card Grid -->
+  <section class="container-wide py-4 pb-20">
+    <span class="eyebrow">Platform Guides</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">AI Platform Optimisation Guides</h2>
+    <p class="mt-4 max-w-2xl text-ink-300 leading-relaxed">
+      Select a platform to read the dedicated optimisation guide. Each covers the platform's citation architecture, the signals it responds to, and a practical implementation checklist.
+    </p>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {seeds.map(seed => (
+        <a href={seed.href} class="card card-hover block p-6 no-underline">
+          <span class="eyebrow">{seed.tag}</span>
+          <h3 class="mt-2 font-display text-lg font-semibold text-ink-50">{seed.title}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink-300">{seed.excerpt}</p>
+          <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[var(--accent)]">
+            Read guide <span aria-hidden="true">&rarr;</span>
+          </span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Why Platform Differences Matter -->
+  <section class="container-wide py-20 border-t hair">
+    <div class="grid gap-12 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <span class="eyebrow">Architecture Matters</span>
+        <h2 class="mt-3 font-display text-3xl font-bold text-ink-50">
+          How AI Platform Architecture Shapes GEO Strategy
+        </h2>
+        <p class="mt-4 text-ink-300 leading-relaxed">
+          The technical architecture of each AI platform determines which optimisation levers are available — and which are irrelevant.
+        </p>
+      </div>
+      <div class="lg:col-span-8 space-y-6">
+        <div class="card p-6">
+          <h3 class="font-display text-base font-semibold text-[var(--accent)]">Parametric vs Retrieval-Augmented Systems</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300">
+            <strong>The fundamental architecture divide in AI search is between parametric systems and retrieval-augmented generation (RAG) systems.</strong> Parametric systems like base ChatGPT encode knowledge into model weights during training. Improving citation there means building a strong presence in the sources that feed training pipelines — Wikipedia, Wikidata, authoritative editorial media — and waiting for that presence to be ingested during the next training cycle. RAG systems like Perplexity retrieve live content at query time. Citation there responds to the same signals as traditional search ranking, plus structural content quality. Understanding which architecture a platform uses is the first step in any platform-specific GEO plan.
+          </p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-display text-base font-semibold text-[var(--accent)]">Knowledge Graph Integration</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300">
+            <strong>Platforms with deep knowledge graph integration — Google AI Overviews, Gemini — weight entity signals more heavily than pure retrieval systems.</strong> Google AI Overviews draws on the Google Knowledge Graph to resolve entity queries and attribute facts to specific organisations. A brand with a well-populated Knowledge Panel and accurate structured data will appear more consistently in AI Overviews than an equally authoritative brand with weak entity signals. Knowledge graph optimisation is the platform-specific lever that matters most for Google AI properties.
+          </p>
+        </div>
+        <div class="card p-6">
+          <h3 class="font-display text-base font-semibold text-[var(--accent)]">The Case for Cross-Model Strategy</h3>
+          <p class="mt-3 text-sm leading-relaxed text-ink-300">
+            <strong>Platform-specific optimisation has a floor below which it cannot take you without a strong cross-model foundation.</strong> The universal signals — entity authority, high-quality structured data, clean and extractable content, strong backlink profile — contribute to citation performance across every major platform. Brands that invest in cross-model fundamentals before pursuing platform-specific tactics see compounding gains: each platform-specific improvement layers on top of a base that is already working. Brands that attempt platform-specific tactics without this foundation find diminishing returns at every step.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container-wide py-20 border-t hair">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="mt-3 font-display text-3xl font-bold grad-text sm:text-4xl">Frequently Asked Questions</h2>
+
+    <div class="mt-10 max-w-3xl divide-y divide-[var(--line)]">
+      {faqs.map(faq => (
+        <div class="faq-item">
+          <button
+            type="button"
+            class="flex w-full items-center justify-between py-5 text-left font-display text-lg font-semibold text-ink-100 hover:text-[var(--accent)] transition-colors"
+            aria-expanded="false"
+          >
+            <span>{faq.q}</span>
+            <svg aria-hidden="true" class="faq-icon ml-4 h-5 w-5 shrink-0 text-ink-500 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"/>
+            </svg>
+          </button>
+          <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height:0">
+            <p class="pb-5 text-ink-300 leading-relaxed">{faq.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="container-wide py-20">
+    <div class="relative overflow-hidden rounded-2xl dot-grid">
+      <div class="absolute inset-0 bg-gradient-to-br from-[rgba(var(--accent-glow),.12)] via-transparent to-transparent"></div>
+      <div class="relative px-8 py-16 text-center sm:px-16">
+        <span class="eyebrow">Platform GEO</span>
+        <h2 class="mt-4 font-display text-3xl font-bold text-ink-50 sm:text-4xl">Build Your Platform-Specific GEO Strategy</h2>
+        <p class="mt-4 mx-auto max-w-2xl text-ink-300 leading-relaxed">
+          Not every brand needs to optimise for every AI platform from day one. Our team audits your citation footprint across ChatGPT, Perplexity, Google AI Overviews, Gemini, and Copilot, then builds a prioritised platform-specific GEO plan matched to where your audience actually is.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact/" class="btn btn-primary">Request a Platform GEO Audit</a>
+          <a href="/generative-engine-optimisation/" class="btn btn-ghost">Read the GEO Guide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.faq-item button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-item button[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.closest('.faq-item').querySelector('.faq-answer').style.maxHeight = '0';
+            other.closest('.faq-item').querySelector('.faq-icon').style.transform = '';
+          }
+        });
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        answer.style.maxHeight = isOpen ? '0' : answer.scrollHeight + 'px';
+        icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+      });
+    });
+  </script>
+
+</Base>

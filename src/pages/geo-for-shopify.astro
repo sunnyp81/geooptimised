@@ -1,0 +1,685 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'GEO for Shopify Stores | GEOoptimised';
+const description = 'AEO for Shopify stores: optimise your product pages, theme schema, and app stack so AI engines cite your store in shopping and buying queries.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'GEO for Shopify Stores',
+  description,
+  url: 'https://geooptimised.com/geo-for-shopify/',
+  image: 'https://geooptimised.com/og-image.png',
+  inLanguage: 'en-GB',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/geo-for-shopify/',
+  },
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is AEO for Shopify stores?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'AEO (Answer Engine Optimisation) for Shopify stores is the process of structuring your product pages, collections, and brand content so that AI engines such as ChatGPT Shopping, Perplexity, and Google AI Overviews cite your store and products when users ask buying-intent queries. It covers structured data implementation, product description quality, schema app configuration, and AI crawler access via robots.txt and llms.txt.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does Shopify add schema markup automatically?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most premium Shopify themes inject basic Product and BreadcrumbList schema automatically, but the output is often incomplete or incorrect. Common gaps include missing brand, sku, and aggregateRating fields on Product schema, absent Organization markup at the store level, and no FAQPage schema on content pages. Dedicated schema apps such as Structured Data by Schema App or JsonLD for SEO give merchants full control over schema output without theme code changes.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which Shopify apps help with AI visibility?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The most impactful apps for AI visibility are: Schema App or JsonLD for SEO (structured data control), Judge.me or Okendo (review schema with aggregateRating), Yotpo (reviews and loyalty data), Searchie or SearchPie (on-site search and FAQ pages), and Metafields Guru (managing custom metafields that feed into schema). Avoid apps that inject duplicate or conflicting JSON-LD blocks, as these confuse AI parsers.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I add llms.txt to a Shopify store?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Shopify does not allow arbitrary files in the root directory through the theme editor. The most reliable method is to use the Shopify Custom Robots.txt feature or a redirect rule to serve an llms.txt page from a Liquid template at the /llms.txt path. Alternatively, a lightweight Cloudflare Worker can intercept requests for /llms.txt and return the correct content without modifying the Shopify theme.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Should Shopify product descriptions be written differently for AI?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. AI engines extract product information differently from keyword-focused search crawlers. Product descriptions optimised for AI visibility should open with a clear, factual statement of what the product is and what it does, include specific technical attributes (dimensions, materials, compatibility), answer the most common buyer questions within the description body, and avoid marketing puffery that carries no factual content. Structured metafields that expose key attributes to schema markup are equally important.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does Shopify theme choice affect AI visibility?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, significantly. Theme choice determines the baseline quality of auto-generated schema, the semantic HTML structure of product and collection pages, and how easily schema apps can inject clean JSON-LD without conflicts. Dawn and other official Shopify themes produce cleaner schema output than many third-party themes. Before investing in GEO work, audit your theme\'s existing structured data output using Google\'s Rich Results Test and Schema Markup Validator.',
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'GEO by Industry', item: 'https://geooptimised.com/geo-by-industry/' },
+    { '@type': 'ListItem', position: 3, name: 'GEO for Shopify Stores', item: 'https://geooptimised.com/geo-for-shopify/' },
+  ],
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'why-shopify-needs-geo', label: 'Why Shopify Needs GEO' },
+  { id: 'theme-schema-control', label: 'Theme & Schema Control' },
+  { id: 'product-data-for-ai', label: 'Product Data for AI' },
+  { id: 'app-ecosystem', label: 'App Ecosystem for AI Visibility' },
+  { id: 'llms-txt-shopify', label: 'llms.txt on Shopify' },
+  { id: 'shopify-vs-rivals', label: 'Shopify vs Other Platforms' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const faqs = [
+  {
+    q: 'What is AEO for Shopify stores?',
+    a: 'AEO (Answer Engine Optimisation) for Shopify stores is the process of structuring your product pages, collections, and brand content so that AI engines such as ChatGPT Shopping, Perplexity, and Google AI Overviews cite your store and products when users ask buying-intent queries. It covers structured data implementation, product description quality, schema app configuration, and AI crawler access via robots.txt and llms.txt.',
+  },
+  {
+    q: 'Does Shopify add schema markup automatically?',
+    a: 'Most premium Shopify themes inject basic Product and BreadcrumbList schema automatically, but the output is often incomplete or incorrect. Common gaps include missing brand, sku, and aggregateRating fields on Product schema, absent Organization markup at the store level, and no FAQPage schema on content pages. Dedicated schema apps such as Structured Data by Schema App or JsonLD for SEO give merchants full control over schema output without theme code changes.',
+  },
+  {
+    q: 'Which Shopify apps help with AI visibility?',
+    a: 'The most impactful apps for AI visibility are: Schema App or JsonLD for SEO (structured data control), Judge.me or Okendo (review schema with aggregateRating), Yotpo (reviews and loyalty data), Searchie or SearchPie (on-site search and FAQ pages), and Metafields Guru (managing custom metafields that feed into schema). Avoid apps that inject duplicate or conflicting JSON-LD blocks, as these confuse AI parsers.',
+  },
+  {
+    q: 'How do I add llms.txt to a Shopify store?',
+    a: 'Shopify does not allow arbitrary files in the root directory through the theme editor. The most reliable method is to use the Shopify Custom Robots.txt feature or a redirect rule to serve an llms.txt page from a Liquid template at the /llms.txt path. Alternatively, a lightweight Cloudflare Worker can intercept requests for /llms.txt and return the correct content without modifying the Shopify theme.',
+  },
+  {
+    q: 'Should Shopify product descriptions be written differently for AI?',
+    a: 'Yes. AI engines extract product information differently from keyword-focused search crawlers. Product descriptions optimised for AI visibility should open with a clear, factual statement of what the product is and what it does, include specific technical attributes (dimensions, materials, compatibility), answer the most common buyer questions within the description body, and avoid marketing puffery that carries no factual content. Structured metafields that expose key attributes to schema markup are equally important.',
+  },
+  {
+    q: 'Does Shopify theme choice affect AI visibility?',
+    a: "Yes, significantly. Theme choice determines the baseline quality of auto-generated schema, the semantic HTML structure of product and collection pages, and how easily schema apps can inject clean JSON-LD without conflicts. Dawn and other official Shopify themes produce cleaner schema output than many third-party themes. Before investing in GEO work, audit your theme's existing structured data output using Google's Rich Results Test and Schema Markup Validator.",
+  },
+];
+
+const related = [
+  {
+    tag: 'Hub',
+    title: 'GEO by Industry',
+    excerpt: 'Platform-specific and sector-specific GEO playbooks — covering Shopify, WordPress, SaaS, and more.',
+    href: '/geo-by-industry/',
+  },
+  {
+    tag: 'Guide',
+    title: 'Schema Markup for AI',
+    excerpt: 'How to implement JSON-LD structured data that AI engines can parse, trust, and cite.',
+    href: '/schema-markup-ai/',
+  },
+  {
+    tag: 'Guide',
+    title: 'llms.txt: The Complete Guide',
+    excerpt: 'Everything you need to know about deploying and maintaining an llms.txt file for AI crawler guidance.',
+    href: '/llms-txt/',
+  },
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/geo-for-shopify/" ogType="article">
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/geo-by-industry/" class="transition hover:text-[var(--accent)]">GEO by Industry</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">GEO for Shopify Stores</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Platform Playbook</span>
+        <span class="font-mono text-xs text-ink-300">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">10 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        GEO for Shopify Stores
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        When a shopper asks ChatGPT or Perplexity "what's the best running shoe for flat feet under £120?", the stores that
+        appear in the answer do not pay for that placement. They have earned it through structured product data, clean schema,
+        and AI-readable content. <strong class="text-white">AEO for Shopify stores</strong> is the discipline of configuring
+        your theme, product data, and app stack so that generative engines cite your products in buying-intent queries.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Shopify themes auto-generate schema but routinely omit fields that AI engines rely on — brand, aggregateRating, and sku are the most commonly missing.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Product descriptions must open with a factual statement and include specific attributes — not marketing copy — to be cited accurately by AI engines.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Schema apps such as JsonLD for SEO give Shopify merchants full structured data control without touching Liquid templates.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Adding llms.txt to Shopify requires a Liquid template workaround or a Cloudflare Worker — the standard file system approach is not available.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Review schema with aggregateRating is one of the highest-leverage GEO interventions available to Shopify merchants.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1 -->
+      <section id="why-shopify-needs-geo" class="anchor-top prose-dark mb-16">
+        <h2>Why Shopify Stores Need GEO Now</h2>
+
+        <p>
+          <strong>Generative engines are becoming the first touchpoint in consumer purchasing journeys, and Shopify stores are structurally under-prepared for this shift.</strong>
+          Traditional Shopify SEO focuses on ranking product and collection pages for specific keywords. GEO requires a different foundation:
+          machine-readable product data, brand entity clarity, and content that AI systems can extract cleanly and cite with confidence.
+        </p>
+
+        <p>
+          ChatGPT's Shopping integration, Perplexity's product carousels, and Google AI Overviews for commercial queries all pull product
+          information from structured sources. Stores that surface in these placements gain zero-click consideration — the shopper receives
+          a recommendation before they have visited a single product page. Stores absent from AI answers must compete only at the point
+          where users click through to a search results page, a pool that is shrinking as AI-generated answers satisfy more intent without
+          requiring further navigation.
+        </p>
+
+        <p>
+          The good news for Shopify merchants is that the platform provides more GEO leverage than most. Shopify's theme architecture
+          allows structured data injection, its metafields system enables rich product attributes, and its app ecosystem includes several
+          tools specifically designed to improve schema quality. The challenge is knowing which levers to pull — and in what order.
+        </p>
+
+        <p>
+          This guide covers Shopify GEO from the theme layer through to app configuration and content strategy.
+          For the broader GEO framework that applies across all platforms, see the
+          <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation guide</a>.
+          For the full industry hub covering other platforms, see
+          <a href="/geo-by-industry/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO by industry</a>.
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="theme-schema-control" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Theme and Schema Control on Shopify</h2>
+          <p>
+            <strong>Shopify theme choice directly determines the baseline quality of your store's structured data output.</strong>
+            Every Shopify theme that renders product pages injects some form of JSON-LD markup, but the completeness and accuracy of
+            that markup varies enormously between themes and even between versions of the same theme.
+          </p>
+
+          <h3>What Shopify Themes Generate by Default</h3>
+          <p>
+            Most modern Shopify themes (Dawn, Sense, Crave, and their commercial equivalents) produce a <code>Product</code> schema block on
+            product pages and a <code>BreadcrumbList</code> on collection and product pages. Typically missing are:
+          </p>
+          <ul>
+            <li><strong>brand</strong> — the manufacturer or brand entity, critical for AI engines resolving product-to-brand relationships</li>
+            <li><strong>aggregateRating</strong> — review score and count, which AI engines use to qualify recommendations</li>
+            <li><strong>sku</strong> and <strong>gtin</strong> — identifiers that allow AI systems to match your product to external databases</li>
+            <li><strong>Organization</strong> schema at the store root — required for brand entity authority</li>
+            <li><strong>FAQPage</strong> schema on blog or landing pages — where most buying-intent queries are answered</li>
+          </ul>
+
+          <h3>Auditing Your Theme's Schema Output</h3>
+          <p>
+            Before configuring any schema app, audit what your theme already produces. Use Google's Rich Results Test on a product page,
+            a collection page, and your homepage. Note every field that is present, every field that is missing, and any validation errors.
+            This baseline audit prevents duplicate or conflicting schema blocks when you add an app layer on top.
+          </p>
+
+          <p>
+            If your theme is injecting schema in both <code>&lt;script type="application/ld+json"&gt;</code> blocks and via
+            microdata attributes, consolidate to JSON-LD only. Mixed schema implementations are a common source of AI parsing errors
+            in Shopify stores.
+          </p>
+        </div>
+
+        <!-- Schema completeness table -->
+        <div class="mt-8 overflow-x-auto rounded-xl border border-geo-800">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-geo-800 bg-geo-900">
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-100">Schema Field</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-100">Dawn (default)</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-100">With Schema App</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-100">AI Importance</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-geo-800">
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-mono">Product.name</td>
+                <td class="px-4 py-3 text-green-400">Yes</td>
+                <td class="px-4 py-3 text-green-400">Yes</td>
+                <td class="px-4 py-3 text-ink-300">Essential</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-mono">Product.brand</td>
+                <td class="px-4 py-3 text-red-400">Often missing</td>
+                <td class="px-4 py-3 text-green-400">Yes</td>
+                <td class="px-4 py-3 text-ink-300">High — entity linking</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-mono">Product.aggregateRating</td>
+                <td class="px-4 py-3 text-red-400">No</td>
+                <td class="px-4 py-3 text-green-400">Yes (+ review app)</td>
+                <td class="px-4 py-3 text-ink-300">High — recommendation trust</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-mono">Product.sku / gtin</td>
+                <td class="px-4 py-3 text-yellow-400">Partial</td>
+                <td class="px-4 py-3 text-green-400">Yes</td>
+                <td class="px-4 py-3 text-ink-300">Medium — deduplication</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-mono">Organization (store level)</td>
+                <td class="px-4 py-3 text-red-400">No</td>
+                <td class="px-4 py-3 text-green-400">Yes</td>
+                <td class="px-4 py-3 text-ink-300">High — brand entity authority</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-mono">FAQPage (blog/landing)</td>
+                <td class="px-4 py-3 text-red-400">No</td>
+                <td class="px-4 py-3 text-green-400">Yes</td>
+                <td class="px-4 py-3 text-ink-300">High — FAQ citation</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-mono">BreadcrumbList</td>
+                <td class="px-4 py-3 text-green-400">Yes</td>
+                <td class="px-4 py-3 text-green-400">Yes</td>
+                <td class="px-4 py-3 text-ink-300">Medium — navigation context</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose-dark mt-6">
+          <p>
+            For full schema implementation guidance applicable to any platform, see our
+            <a href="/schema-markup-ai/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">schema markup for AI guide</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="product-data-for-ai" class="anchor-top prose-dark mb-16">
+        <h2>Product Data Optimisation for AI Engines</h2>
+
+        <p>
+          <strong>AI engines do not read product descriptions the way human shoppers do — they parse them for extractable facts, attributes, and definitional claims.</strong>
+          A product description written purely for conversion will perform poorly in AI-generated shopping recommendations. Optimising
+          product data for AI requires a structural shift in how descriptions are written and how attributes are stored.
+        </p>
+
+        <h3>The AI-Readable Product Description Formula</h3>
+        <p>
+          Open every product description with a single factual statement that defines the product category, primary function, and key
+          differentiator. For example: "The Apex Trail Runner is a waterproof fell-running shoe with a 4mm drop, Vibram Megagrip sole,
+          and a reinforced toe cap, designed for technical off-road terrain." This opening sentence is immediately extractable by an AI
+          engine responding to a query about waterproof trail shoes.
+        </p>
+        <p>
+          The body of the description should then cover: materials and construction, key technical specifications (dimensions, weight,
+          compatibility), use-case suitability, and a brief answer to the most common buyer question for that product category.
+          Avoid superlatives ("best in class", "market-leading") — these carry no factual content and are filtered out by AI extraction
+          logic.
+        </p>
+
+        <h3>Metafields as Structured Product Attributes</h3>
+        <p>
+          Shopify metafields allow merchants to store structured product attributes — material, fit, country of manufacture, certifications —
+          that can be exposed to schema markup and surfaced in theme templates. For GEO purposes, metafields are valuable because they
+          enable clean, consistent attribute data that schema apps can pull directly into <code>additionalProperty</code> fields on
+          Product schema. AI engines that process structured attribute data are more likely to recommend products correctly when
+          filtering by specific characteristics.
+        </p>
+        <p>
+          Populate metafields for every product attribute that appears in typical buyer queries for your category. For a clothing store,
+          this means material composition, care instructions, sizing standard (UK/EU/US), and certifications. For electronics,
+          this means compatibility, connectivity standards, power ratings, and warranty terms.
+        </p>
+
+        <h3>Collection Pages and Category Queries</h3>
+        <p>
+          Collection pages are underutilised in most Shopify GEO strategies. They are the natural answer to category queries —
+          "best vegan leather handbags", "waterproof hiking boots for women" — and should be treated as content pages, not
+          merely filter interfaces. Each collection page should include a 200–400 word introductory section that defines the category,
+          describes what distinguishes this collection, and answers the top two or three questions buyers have at the category level.
+          This section feeds directly into AI-generated category recommendations.
+        </p>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="app-ecosystem" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>The Shopify App Ecosystem for AI Visibility</h2>
+          <p>
+            <strong>The right combination of Shopify apps eliminates the structured data gaps that prevent AI engines from citing your store.</strong>
+            Each app category addresses a distinct layer of the GEO stack — schema control, review data, content structure, and
+            AI crawler guidance.
+          </p>
+        </div>
+
+        <div class="mt-8 space-y-5">
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Schema Control Apps</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              <strong>JsonLD for SEO</strong> and <strong>Schema App</strong> are the two most capable structured data apps in the
+              Shopify ecosystem. Both allow merchants to configure Product, Organization, FAQPage, Article, and BreadcrumbList schema
+              without editing Liquid templates. JsonLD for SEO is generally better suited to merchants who want a code-free setup;
+              Schema App offers more granular control for stores with complex product catalogues. Before installing either, disable
+              or remove any existing schema injection in your theme to prevent duplicate blocks.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Review and Rating Apps</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              <strong>Judge.me</strong>, <strong>Okendo</strong>, and <strong>Yotpo</strong> all produce <code>aggregateRating</code>
+              schema on product pages when configured correctly. This is one of the highest-impact GEO interventions available to
+              Shopify merchants, because AI recommendation engines weight products with review data significantly higher than
+              unrated products. Configure your review app to output schema on every product page — not just pages with ten or more
+              reviews — and verify the output with Google's Rich Results Test after deployment.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">FAQ and Content Structure Apps</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              FAQ sections on product pages directly improve AI citation rates. Apps such as <strong>HelpCenter</strong> and
+              <strong>Helpy: Product FAQs</strong> allow merchants to add structured Q&amp;A sections to individual product pages
+              or collections. Pair these with FAQPage schema output (either from the app itself or from your schema control app)
+              to give AI engines a clean, extractable Q&amp;A layer on every key page.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Metafield Management Apps</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              <strong>Metafields Guru</strong> and Shopify's native metafield editor allow bulk population of product attributes
+              that feed into schema markup. For stores with large catalogues, a CSV-based bulk import workflow is essential —
+              manually editing metafields product by product is not scalable. Ensure your schema control app is configured to
+              read from the correct metafield namespaces when generating Product schema output.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="llms-txt-shopify" class="anchor-top prose-dark mb-16">
+        <h2>Deploying llms.txt on Shopify</h2>
+
+        <p>
+          <strong>An llms.txt file tells AI crawlers which pages on your store contain the most authoritative, citation-worthy content.</strong>
+          For a Shopify store, this typically means your homepage, key collection pages, brand story page, and any editorial or FAQ
+          content that answers category-level queries. The challenge is that Shopify's file system does not expose a standard root
+          directory, so the usual static-file deployment approach does not apply.
+        </p>
+
+        <h3>Method 1: Liquid Template Route</h3>
+        <p>
+          Create a new Liquid template in your theme (e.g., <code>page.llms-txt.liquid</code>) that outputs plain text rather than
+          HTML. Set the page's <code>Content-Type</code> to <code>text/plain</code> using Shopify's template rendering. Create a page
+          in the Shopify admin with the handle <code>llms-txt</code> and assign it the new template. Then configure a URL redirect
+          from <code>/llms.txt</code> to <code>/pages/llms-txt</code>. This approach requires no external infrastructure and
+          is maintainable through the Shopify admin.
+        </p>
+
+        <h3>Method 2: Cloudflare Worker Intercept</h3>
+        <p>
+          If your store is proxied through Cloudflare, a Worker script can intercept requests for <code>/llms.txt</code> and return
+          the file content directly, bypassing Shopify entirely. This approach is cleaner — the URL serves exactly as
+          <code>/llms.txt</code> with no redirect — and the Worker content is trivially updatable. It requires Cloudflare in the
+          DNS chain, which is already the case for most stores using Cloudflare's performance or security features.
+        </p>
+
+        <p>
+          For full llms.txt implementation guidance including file structure and content strategy, see our
+          <a href="/llms-txt/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">llms.txt guide</a>.
+        </p>
+      </section>
+
+      <!-- Section 6 -->
+      <section id="shopify-vs-rivals" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Shopify GEO Versus Other E-commerce Platforms</h2>
+          <p>
+            <strong>Shopify offers more GEO flexibility than most hosted e-commerce platforms, but less than headless or custom-built solutions.</strong>
+            Understanding the relative advantages and constraints of the Shopify platform helps merchants prioritise the right interventions.
+          </p>
+        </div>
+
+        <div class="mt-8 overflow-x-auto rounded-xl border border-geo-800">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-geo-800 bg-geo-900">
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-100">GEO Capability</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-100">Shopify</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-100">WooCommerce</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-100">Custom/Headless</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-geo-800">
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200">Schema customisation</td>
+                <td class="px-4 py-3 text-ink-300">App-dependent</td>
+                <td class="px-4 py-3 text-ink-300">Plugin-dependent</td>
+                <td class="px-4 py-3 text-green-400">Full control</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200">llms.txt deployment</td>
+                <td class="px-4 py-3 text-yellow-400">Workaround required</td>
+                <td class="px-4 py-3 text-green-400">Standard file upload</td>
+                <td class="px-4 py-3 text-green-400">Standard file placement</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200">Robots.txt control</td>
+                <td class="px-4 py-3 text-yellow-400">Custom Robots.txt (Shopify Plus)</td>
+                <td class="px-4 py-3 text-green-400">Full access</td>
+                <td class="px-4 py-3 text-green-400">Full access</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200">Product attribute depth</td>
+                <td class="px-4 py-3 text-green-400">Strong (metafields)</td>
+                <td class="px-4 py-3 text-green-400">Strong (ACF/attributes)</td>
+                <td class="px-4 py-3 text-green-400">Unlimited</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200">Review schema integration</td>
+                <td class="px-4 py-3 text-green-400">Mature app ecosystem</td>
+                <td class="px-4 py-3 text-green-400">Multiple plugins</td>
+                <td class="px-4 py-3 text-ink-300">Custom implementation</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200">AI crawler access</td>
+                <td class="px-4 py-3 text-yellow-400">Plus plan for full control</td>
+                <td class="px-4 py-3 text-green-400">Full access</td>
+                <td class="px-4 py-3 text-green-400">Full access</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose-dark mt-6">
+          <p>
+            For merchants on Shopify's standard plans, the robots.txt limitation is a meaningful constraint: you cannot add or remove
+            specific AI bot rules without upgrading to Shopify Plus or using a Cloudflare Workers proxy. Verify that your current
+            robots.txt does not inadvertently block <code>GPTBot</code>, <code>PerplexityBot</code>, or <code>Google-Extended</code> —
+            these are the three crawlers most directly tied to AI citation.
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Audit Your Shopify Store's AI Visibility</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Most Shopify stores are invisible in AI-generated shopping recommendations due to incomplete schema, blocked crawlers,
+        and product descriptions that AI engines cannot parse. Our platform audit identifies every gap and delivers a
+        prioritised fix list.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request a Shopify GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

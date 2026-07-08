@@ -1,0 +1,595 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'The GEO Framework: A Repeatable System for AI Citations | GEOoptimised';
+const description = 'The GEOoptimised framework: seven stages for improving brand visibility in AI-generated answers, with success criteria, timelines, and common failure modes for each stage.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'The GEO Framework: A Repeatable System for AI Citations',
+    description: 'The GEOoptimised framework: seven stages for improving brand visibility in AI-generated answers, with success criteria, timelines, and common failure modes for each stage.',
+    url: 'https://geooptimised.com/geo-framework/',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://geooptimised.com/geo-framework/'
+    },
+    image: 'https://geooptimised.com/og-image.png',
+    author: { '@id': 'https://geooptimised.com/#organization' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' },
+    datePublished: '2026-06-06',
+    dateModified: '2026-06-06',
+    inLanguage: 'en-GB'
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+      { '@type': 'ListItem', position: 3, name: 'GEO Strategy', item: 'https://geooptimised.com/geo-strategy/' },
+      { '@type': 'ListItem', position: 4, name: 'GEO Framework', item: 'https://geooptimised.com/geo-framework/' }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is a GEO framework?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'A GEO framework is a structured, repeatable system for improving a brand\'s visibility in AI-generated answers. The GEOoptimised framework consists of seven stages: Baseline Audit, Entity Architecture, Content Gap Mapping, Citation-Ready Content, Technical Configuration, Authority Building, and Continuous Monitoring. Each stage has defined inputs, outputs, and success criteria that make the programme measurable and iterative.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How is the GEO framework different from an SEO framework?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'An SEO framework is built around algorithmic ranking signals: keyword targeting, backlink acquisition, technical crawlability, and click-through rate optimisation. A GEO framework is built around entity authority and content extractability: how consistently your brand entity is described across all platforms AI models access, how well your content is structured for retrieval-augmented generation, and how authoritative your citation footprint appears to large language models selecting sources for their answers. Some foundations overlap — quality content, fast pages, clear structure — but the optimisation targets and measurement methods are fundamentally different.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Which stage of the GEO framework has the biggest impact?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Stage 1 (Baseline Audit) and Stage 2 (Entity Architecture) have the most downstream impact because every subsequent decision depends on their outputs. Teams that skip the audit and entity mapping phases often produce content that increases volume without increasing citations, because the underlying entity ambiguity prevents AI models from reliably resolving the brand. Stage 4 (Citation-Ready Content) produces the most visible results once the foundation stages are complete.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How long does it take to complete all seven stages?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Stages 1–3 (audit, entity architecture, content gap mapping) typically take three to four weeks. Stages 4–6 (content production, technical configuration, authority building) run concurrently over weeks four through twelve. Stage 7 (continuous monitoring) begins at week four and runs indefinitely. Measurable citation improvements are typically observable within sixty to ninety days of Stage 4 content publication. For the phased milestone schedule mapped to specific day ranges, see the GEO roadmap at geooptimised.com/geo-roadmap/.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Can I apply the GEO framework to an existing website?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. The GEO framework is designed to be applied to existing websites, not only new builds. The audit stage will identify existing content that is close to citation-ready and can be retrofitted with citation architecture changes, as well as existing technical implementations that may be blocking AI crawler access. Retrofitting existing content for GEO often produces faster early results than building new content from scratch, because the pages already have domain authority and crawl history.'
+        }
+      }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'what-is-the-framework', label: 'What the Framework Is' },
+  { id: 'seven-stages', label: 'The Seven Stages' },
+  { id: 'stage-details', label: 'Stage-by-Stage Reference' },
+  { id: 'framework-comparison', label: 'Framework vs Ad Hoc GEO' },
+  { id: 'failure-modes', label: 'Common Failure Modes' },
+  { id: 'related-guides', label: 'How These Guides Differ' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' }
+];
+
+const stages = [
+  {
+    name: 'Baseline Audit',
+    tagline: 'Measure before you move.',
+    duration: 'Weeks 1–2',
+    inputs: 'Target audience query list, competitor brand list, access to all 5 AI platforms',
+    outputs: 'Citation baseline scorecard, competitor citation map, entity description inventory',
+    successCriteria: 'Every target query documented across all platforms; brand citation frequency and accuracy scored; competitor citation share quantified',
+    description: 'The Baseline Audit establishes the evidence base for all subsequent decisions. Without it, you are optimising against assumptions. The audit involves submitting a structured set of 20–60 queries — drawn from real audience behaviour, not keyword tools — to each of the five major AI platforms and recording the results in a standardised scorecard. You are logging: which brands are cited in each answer, how your brand is described when it does appear, where competitor brands hold citation share you should own, and which queries produce no brand citations at all (indicating an open first-mover opportunity). This data is the single most important deliverable in the entire programme.'
+  },
+  {
+    name: 'Entity Architecture',
+    tagline: 'Define before you describe.',
+    duration: 'Weeks 2–3',
+    inputs: 'Baseline audit entity descriptions, competitor entity profiles, brand positioning documentation',
+    outputs: 'Canonical entity definition, entity attribute map, consistency gap report',
+    successCriteria: 'Canonical brand description agreed and documented; all entity attributes mapped and cross-referenced; inconsistencies between platforms identified and queued for remediation',
+    description: 'Entity Architecture defines the canonical version of your brand entity and identifies everywhere it is described inconsistently. An entity is your brand as understood by AI models: its name format, category membership, differentiating attributes, key relationships, and the claims associated with it. Map every attribute your entity should carry, then audit how consistently those attributes appear across your website, structured data, Google Business Profile, LinkedIn, Wikidata, industry directories, and major third-party mentions. Inconsistencies — where your brand is described as doing one thing in one place and something different elsewhere — create ambiguity that makes AI models default to competitors whose entities are described with greater consistency. Resolving entity ambiguity before producing new content prevents the most common GEO failure: content that increases volume without increasing citation clarity.'
+  },
+  {
+    name: 'Content Gap Mapping',
+    tagline: 'Prioritise by opportunity, not intuition.',
+    duration: 'Weeks 3–4',
+    inputs: 'Baseline audit query list, existing content inventory, competitor citation data',
+    outputs: 'Prioritised content gap list, content calendar, displacement vs first-mover classification',
+    successCriteria: 'All audit queries mapped against existing content; gaps tiered by opportunity type; content calendar built for Stages 4–6',
+    description: 'Content Gap Mapping produces a prioritised list of pages to create or restructure based on where citation opportunities exist — not on what content your team finds interesting to write. The gap analysis cross-references the audit query list against your current content inventory and classifies each gap into three opportunity types: displacement opportunities (queries where competitors are cited and you are absent — fastest to show results), first-mover opportunities (queries where no brand holds citation share — slower but durable), and accuracy remediation (queries where your brand is mentioned but described incorrectly — immediate priority regardless of citation frequency). The output is a content calendar sequenced to address displacement first, then first-mover, with accuracy remediation scheduled in parallel.'
+  },
+  {
+    name: 'Citation-Ready Content',
+    tagline: 'Structure every page to be extractable.',
+    duration: 'Weeks 4–10 (ongoing)',
+    inputs: 'Content gap priority list, entity attribute map, citation architecture standards',
+    outputs: 'Published pages with citation architecture, retrofitted existing high-priority pages, schema-enriched content',
+    successCriteria: 'Every new page passes extraction test, paragraph test, and FAQ test; all priority pages retrofitted; schema validated and deployed',
+    description: 'Citation-Ready Content is the production stage that most directly affects citation frequency. Every page produced in this stage is built to the citation architecture standard: a definitional opening that answers the primary query in one to two sentences without preamble; short paragraphs of two to four sentences, each covering exactly one point stated at the start; an FAQ section that uses the exact phrasing of queries submitted to AI engines; and tables or lists that function as standalone data units without surrounding context. High-priority existing pages should be retrofitted to this standard before new pages are produced — retrofitting existing domain-authoritative pages produces faster citation improvements than building citation share in new pages from zero. Every page receives appropriate schema markup — Article, FAQPage, HowTo, or Service — validated before deployment.'
+  },
+  {
+    name: 'Technical Configuration',
+    tagline: 'Remove every barrier to AI access.',
+    duration: 'Weeks 4–6',
+    inputs: 'robots.txt audit, schema deployment checklist, Core Web Vitals report, canonical URL audit',
+    outputs: 'Updated robots.txt, llms.txt deployment, validated schema, consolidated canonical structure',
+    successCriteria: 'No AI crawlers blocked in robots.txt; llms.txt live and accurate; all schema validated; canonical URLs consolidated; Core Web Vitals pass',
+    description: 'Technical Configuration covers the signals that determine whether AI crawlers can access your content and how retrieval systems interpret your site architecture. The four components are: robots.txt review (ensure no AI crawlers — GPTBot, ClaudeBot, PerplexityBot, and others — are inadvertently blocked by legacy rules); llms.txt deployment (a plain-text file at your domain root that declares your site\'s expertise areas, key pages, and purpose — a direct signal to AI systems about how to interpret your content); schema markup deployment and validation (Article, FAQPage, HowTo, Organization, BreadcrumbList — validated with the Google Rich Results Test and schema.org validator before publishing); and canonical URL consolidation (preventing entity signal fragmentation across duplicate pages). Technical configuration without content strategy produces minimal results; content strategy without technical configuration leaves citations on the table.'
+  },
+  {
+    name: 'Authority Building',
+    tagline: 'Feed the sources that feed the models.',
+    duration: 'Weeks 4–12 (ongoing)',
+    inputs: 'Entity attribute map, target publication list, Wikidata/directory gap list',
+    outputs: 'Editorial mentions in target publications, updated directory listings, Wikidata entry, third-party citation footprint',
+    successCriteria: 'Brand appears in at least 3 high-authority third-party sources per quarter; Wikidata entry created or updated; all major directory listings accurate and consistent with entity map',
+    description: 'Authority Building constructs the citation footprint that AI models use to assess whether your brand is a credible source in your category. AI models weight sources by perceived authority — the volume and quality of authoritative third-party sources that describe your brand correctly. This means earning editorial mentions in high-trust publications covering your category, contributing expert quotes to analyst and journalist work, creating or updating your Wikidata entry with accurate attribute data, ensuring your brand appears in relevant industry association directories with descriptions that match your entity map, and building relationships with the publications that feed AI training data and RAG retrieval pipelines in your vertical. Authority building is the GEO equivalent of link building in SEO — the mechanism is different (you are building training data signals and retrieval source authority, not PageRank) but the strategic logic is the same: quality and topical relevance matter more than quantity.'
+  },
+  {
+    name: 'Continuous Monitoring',
+    tagline: 'Measure, iterate, compound.',
+    duration: 'Week 4 onwards (permanent)',
+    inputs: 'Fixed query set, citation scorecard template, competitor tracking list',
+    outputs: 'Weekly citation reports, monthly trend analysis, quarterly strategy adjustments',
+    successCriteria: 'Weekly query set run consistently across all 5 platforms; citation frequency trending upward on baseline queries; brand accuracy improving month-on-month; competitor displacement visible in data',
+    description: 'Continuous Monitoring turns a 90-day sprint into a durable programme. Set up a weekly monitoring cadence using a fixed query set — typically 30–60 queries that represent your core citation targets — and run it consistently across all five major AI platforms. Log citation frequency, brand accuracy, competitor mentions, and answer format changes. Review monthly to identify which pages are driving improvements, which entity gaps remain unresolved, and which authority-building activities have produced retrievable mentions. Review quarterly to set new content priorities and adjust source-building targets. The brands that compound GEO gains fastest are the ones that treat monitoring as a core programme deliverable — not an afterthought added when results need to be justified. Without this stage, a well-executed Stages 1–6 programme will plateau and then erode as competitors adapt, platforms update, and query patterns shift.'
+  }
+];
+
+const comparisonRows = [
+  { dimension: 'Starting point', framework: 'Baseline audit produces evidence-based priorities', adHoc: 'Content produced based on assumptions or editorial instinct' },
+  { dimension: 'Entity consistency', framework: 'Entity map agreed before any content is produced', adHoc: 'Different team members describe the brand differently across pages' },
+  { dimension: 'Content sequencing', framework: 'Displacement opportunities prioritised before first-mover', adHoc: 'Topics chosen by interest or SEO keyword volume' },
+  { dimension: 'Technical signals', framework: 'robots.txt, llms.txt, schema deployed as a coordinated package', adHoc: 'Schema added to some pages, robots.txt never reviewed' },
+  { dimension: 'Measurement', framework: 'Citation frequency tracked weekly across all 5 platforms', adHoc: 'Progress assessed by organic traffic or subjective impression' },
+  { dimension: 'Iteration', framework: 'Monthly review drives content and entity adjustment decisions', adHoc: 'Changes made reactively when results stall' }
+];
+
+const failureModes = [
+  {
+    stage: 'Stage 1',
+    mode: 'Skipping the audit',
+    consequence: 'Content and entity work targets the wrong queries. Competitors hold citation share on your highest-value topics for another 3–6 months while you optimise blind.'
+  },
+  {
+    stage: 'Stage 2',
+    mode: 'Producing content before entity mapping',
+    consequence: 'New content reinforces existing entity inconsistencies. AI models continue to resolve ambiguity by defaulting to competitors with clearer entity descriptions.'
+  },
+  {
+    stage: 'Stage 3',
+    mode: 'Treating all content gaps as equal priority',
+    consequence: 'Effort is spread across first-mover opportunities (slow to show results) when displacement opportunities (fast to show results) remain unaddressed.'
+  },
+  {
+    stage: 'Stage 4',
+    mode: 'Writing for engagement rather than extraction',
+    consequence: 'Content is narrative and context-dependent rather than extractable. Perplexity and ChatGPT retrieval systems select competitor pages that present answers immediately.'
+  },
+  {
+    stage: 'Stage 5',
+    mode: 'Leaving AI crawlers blocked in robots.txt',
+    consequence: 'Content is never retrieved by RAG systems regardless of quality. Citations remain driven entirely by training data, which does not reflect recent content.'
+  },
+  {
+    stage: 'Stage 6',
+    mode: 'Treating authority building as optional',
+    consequence: 'Without a third-party citation footprint, AI models have no corroborating evidence for entity authority claims. Brand remains absent from high-intent queries even with excellent on-site content.'
+  },
+  {
+    stage: 'Stage 7',
+    mode: 'Stopping monitoring after the initial sprint',
+    consequence: 'Citation share erodes as platforms update, competitors adapt, and query patterns shift. Programme appears to plateau when it is actually declining.'
+  }
+];
+
+const faqs = [
+  {
+    q: 'What is a GEO framework?',
+    a: 'A GEO framework is a structured, repeatable system for improving a brand\'s visibility in AI-generated answers. The GEOoptimised framework consists of seven stages: Baseline Audit, Entity Architecture, Content Gap Mapping, Citation-Ready Content, Technical Configuration, Authority Building, and Continuous Monitoring. Each stage has defined inputs, outputs, and success criteria that make the programme measurable and iterative.'
+  },
+  {
+    q: 'How is the GEO framework different from an SEO framework?',
+    a: 'An SEO framework is built around algorithmic ranking signals: keyword targeting, backlink acquisition, technical crawlability, and click-through rate optimisation. A GEO framework is built around entity authority and content extractability: how consistently your brand entity is described across all platforms AI models access, how well your content is structured for retrieval-augmented generation, and how authoritative your citation footprint appears to large language models selecting sources for their answers. Some foundations overlap — quality content, fast pages, clear structure — but the optimisation targets and measurement methods are fundamentally different.'
+  },
+  {
+    q: 'Which stage of the GEO framework has the biggest impact?',
+    a: 'Stage 1 (Baseline Audit) and Stage 2 (Entity Architecture) have the most downstream impact because every subsequent decision depends on their outputs. Teams that skip the audit and entity mapping phases often produce content that increases volume without increasing citations, because the underlying entity ambiguity prevents AI models from reliably resolving the brand. Stage 4 (Citation-Ready Content) produces the most visible results once the foundation stages are complete.'
+  },
+  {
+    q: 'How long does it take to complete all seven stages?',
+    a: 'Stages 1–3 (audit, entity architecture, content gap mapping) typically take three to four weeks. Stages 4–6 (content production, technical configuration, authority building) run concurrently over weeks four through twelve. Stage 7 (continuous monitoring) begins at week four and runs indefinitely. Measurable citation improvements are typically observable within sixty to ninety days of Stage 4 content publication. For the full phased delivery schedule mapped to specific day ranges, see the GEO roadmap.'
+  },
+  {
+    q: 'Can I apply the GEO framework to an existing website?',
+    a: 'Yes. The GEO framework is designed to be applied to existing websites, not only new builds. The audit stage will identify existing content that is close to citation-ready and can be retrofitted with citation architecture changes, as well as existing technical implementations that may be blocking AI crawler access. Retrofitting existing content for GEO often produces faster early results than building new content from scratch, because the pages already have domain authority and crawl history.'
+  }
+];
+
+const related = [
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation: The Complete Guide',
+    excerpt: 'First principles through advanced entity strategies — the definitive GEO reference covering every concept in the framework.',
+    href: '/generative-engine-optimisation/'
+  },
+  {
+    tag: 'How-To',
+    title: 'How to Do GEO: A Step-by-Step Guide',
+    excerpt: 'The tactical execution guide: eight hands-on steps with actions, tools, and common mistakes for each.',
+    href: '/how-to-do-geo/'
+  },
+  {
+    tag: 'Roadmap',
+    title: 'GEO Roadmap 2026',
+    excerpt: 'The time-phased delivery plan: milestones and deliverables across 0–30, 30–90, and 90–180 day phases.',
+    href: '/geo-roadmap/'
+  }
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/geo-framework/"
+  ogType="article"
+>
+
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">GEO</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-strategy/" class="transition hover:text-[var(--accent)]">GEO Strategy</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">GEO Framework</li>
+    </ol>
+  </nav>
+
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Framework Reference</span>
+        <span class="font-mono text-xs text-ink-300">6 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">13 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        The GEO Framework: A Repeatable System for AI Citations
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">The GEOoptimised framework is the named, seven-stage conceptual model that defines what the work is, how the stages relate to each other, and what each stage must produce before the next can begin.</strong> It is the methodology itself — not a step-by-step execution guide, and not a calendar. For hands-on task guidance, see <a href="/how-to-do-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how to do GEO</a>. For the phased delivery timeline, see the <a href="/geo-roadmap/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO roadmap</a>.
+      </p>
+    </div>
+  </section>
+
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" id="toc-nav">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <div>
+
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>The seven stages are sequenced for a reason — each generates inputs the next stage depends on. Skipping ahead creates gaps that compound into problems.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Stages 1–3 (audit, entity, gap mapping) are diagnostic. They take three to four weeks and determine the ROI of everything that follows.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Stages 4–6 run concurrently from week four. Citation-Ready Content produces the most visible results once the foundation is in place.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Stage 7 (monitoring) is permanent. The brands that compound GEO gains fastest treat it as a core deliverable, not an afterthought.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>The framework applies to existing websites as well as new builds — retrofitting existing content often produces faster early results than building from scratch.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prose-dark">
+        <h2 id="what-is-the-framework" class="anchor-top">What the GEO Framework Is</h2>
+        <p>
+          <strong>The GEO framework is the named, repeatable conceptual model that defines how every layer of a GEO programme fits together — what each stage is, what it requires as inputs, what it must produce as outputs, and why it must precede the next stage.</strong> It is a methodology reference, not an execution guide and not a project timeline. Understanding the model is the precondition for executing it well or evaluating someone else's execution.
+        </p>
+        <p>
+          The GEOoptimised framework is built around seven stages because seven is the minimum number of distinct workstreams required to address all three layers of GEO simultaneously: the entity layer (how your brand is defined and resolved by AI models), the content layer (how your pages are structured for extraction by retrieval systems), and the authority layer (how your citation footprint signals credibility to AI models selecting sources). Frameworks that collapse these into fewer stages — combining entity work with content work, or skipping the audit — consistently produce slower results because they introduce sequencing errors that force expensive remediation later.
+        </p>
+        <p>
+          The framework is the reference architecture behind the <a href="/generative-engine-optimisation/#geo-framework" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO framework section</a> in the complete guide to <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a>. This page expands each stage with full definitions, success criteria, and common failure modes. For the practical task-by-task implementation of each stage, see <a href="/how-to-do-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how to do GEO</a>. For the time-phased delivery schedule, see the <a href="/geo-roadmap/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO roadmap</a>.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="seven-stages" class="anchor-top">The Seven Stages at a Glance</h2>
+        <p>
+          <strong>The seven stages of the GEO framework form a complete implementation sequence from zero visibility to compounding citation share.</strong> The table below summarises each stage, its typical duration, and its primary output. For the full delivery calendar with milestones, see the <a href="/geo-roadmap/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO roadmap</a>.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">#</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Stage</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Duration</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Primary Output</th>
+            </tr>
+          </thead>
+          <tbody>
+            {stages.map((stage, i) => (
+              <tr class={i % 2 === 0 ? 'border-b hair' : 'border-b hair bg-white/[.02]'}>
+                <td class="px-4 py-3 font-mono text-xs text-[var(--accent)]">{i + 1}</td>
+                <td class="px-4 py-3 font-medium text-white">{stage.name}</td>
+                <td class="px-4 py-3 text-ink-300">{stage.duration}</td>
+                <td class="px-4 py-3 text-ink-300">{stage.outputs.split(';')[0].replace(/,$/, '')}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="stage-details" class="anchor-top">Stage-by-Stage Reference</h2>
+        <p>
+          Each stage below includes the full definition, required inputs, expected outputs, and the success criteria that determine when the stage is complete and the next can begin. These are not aspirational targets — they are the minimum conditions required for the subsequent stage to produce reliable results.
+        </p>
+      </div>
+
+      <div class="mt-8 space-y-8">
+        {stages.map((stage, i) => (
+          <div class="card overflow-hidden">
+            <div class="flex items-start gap-5 border-b hair p-6">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border hair font-display text-sm font-bold text-[var(--accent)]">
+                {i + 1}
+              </span>
+              <div>
+                <h3 class="font-display text-xl font-semibold text-white">{stage.name}</h3>
+                <p class="mt-1 text-sm text-[var(--accent)]">{stage.tagline}</p>
+              </div>
+              <span class="ml-auto shrink-0 font-mono text-xs text-ink-300">{stage.duration}</span>
+            </div>
+            <div class="p-6">
+              <p class="text-sm leading-relaxed text-ink-200">{stage.description}</p>
+              <div class="mt-6 grid gap-4 sm:grid-cols-3">
+                <div>
+                  <span class="eyebrow">Inputs</span>
+                  <p class="mt-2 text-xs leading-relaxed text-ink-300">{stage.inputs}</p>
+                </div>
+                <div>
+                  <span class="eyebrow">Outputs</span>
+                  <p class="mt-2 text-xs leading-relaxed text-ink-300">{stage.outputs}</p>
+                </div>
+                <div>
+                  <span class="eyebrow">Success Criteria</span>
+                  <p class="mt-2 text-xs leading-relaxed text-ink-300">{stage.successCriteria}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="prose-dark mt-16">
+        <p>
+          For the practical implementation of each stage, see the <a href="/how-to-do-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">how to do GEO step-by-step guide</a>, which maps each framework stage to specific, executable actions.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="framework-comparison" class="anchor-top">Framework vs Ad Hoc GEO</h2>
+        <p>
+          <strong>The difference between a framework-driven GEO programme and an ad hoc approach is the difference between compounding results and one-off improvements that erode.</strong> The table below illustrates how each dimension of execution differs when a structured framework is followed versus when teams make ad hoc optimisation decisions.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Dimension</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Framework-Driven GEO</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Ad Hoc GEO</th>
+            </tr>
+          </thead>
+          <tbody>
+            {comparisonRows.map((row, i) => (
+              <tr class={i % 2 === 0 ? 'border-b hair' : 'border-b hair bg-white/[.02]'}>
+                <td class="px-4 py-3 font-medium text-white">{row.dimension}</td>
+                <td class="px-4 py-3 text-ink-300">{row.framework}</td>
+                <td class="px-4 py-3 text-ink-300">{row.adHoc}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          The pattern that distinguishes successful GEO programmes from failed ones is almost always visible in the measurement dimension. Brands that track citation frequency weekly across all five platforms catch signal drift early, attribute improvements to specific actions, and adjust priorities based on data. Brands that measure GEO success using organic sessions or keyword rankings are measuring a different layer of the search ecosystem entirely — one that does not reflect what is happening to their AI visibility. For a complete breakdown of GEO measurement, see the <a href="/geo-best-practices/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO best practices</a> guide and the <a href="/geo-checklist/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO checklist</a>.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="failure-modes" class="anchor-top">Common Failure Modes by Stage</h2>
+        <p>
+          <strong>Every stage in the GEO framework has a characteristic failure mode — a specific mistake that is common enough to warrant explicit documentation.</strong> The table below maps each stage to its most common failure and the consequence that follows. Most GEO programmes that stall or plateau have failed at Stage 1 or Stage 2 — the diagnostic and foundational stages that determine everything downstream.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Stage</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Common Failure Mode</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Consequence</th>
+            </tr>
+          </thead>
+          <tbody>
+            {failureModes.map((row, i) => (
+              <tr class={i % 2 === 0 ? 'border-b hair' : 'border-b hair bg-white/[.02]'}>
+                <td class="px-4 py-3 font-mono text-xs text-[var(--accent)] whitespace-nowrap">{row.stage}</td>
+                <td class="px-4 py-3 font-medium text-white">{row.mode}</td>
+                <td class="px-4 py-3 text-ink-300">{row.consequence}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          If your current GEO programme has stalled, the most effective diagnostic is to review each stage against its success criteria and identify the first stage where the criteria were not met. In the majority of cases, the root cause is in Stages 1–3 — specifically, content production that was prioritised before the audit and entity mapping were complete. Remediation requires going back to complete those stages properly before advancing, even if it means pausing content production temporarily. The cost of the pause is almost always lower than the cost of continuing to optimise on a broken foundation. If you would rather have a specialist conduct this diagnostic, an <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AI visibility audit</a> from GEOoptimised will identify which stage failed and what remediation is required.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="related-guides" class="anchor-top">Related GEO Guides — and How They Differ</h2>
+        <p>
+          <strong>The GEO framework is the conceptual model — the other three guides operate at different layers of the same programme.</strong> Use the right one for your current question:
+        </p>
+        <ul class="mt-4 space-y-3 text-sm text-ink-200">
+          <li><strong>GEO Framework (this page)</strong> — the named, repeatable methodology with stage definitions, inputs, outputs, and success criteria. The "what the model is."</li>
+          <li><strong><a href="/how-to-do-geo/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">How to Do GEO</a></strong> — the tactical execution guide: eight hands-on steps with practical actions and tools. The "how to actually do the work."</li>
+          <li><strong><a href="/geo-roadmap/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO Roadmap</a></strong> — the time-phased delivery plan with milestones across 0–30, 30–90, and 90–180 days. The "when."</li>
+          <li><strong><a href="/geo-strategy/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO Strategy</a></strong> — the decision layer covering when to invest, how to prioritise, and agency vs DIY. The "whether and why."</li>
+        </ul>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="relative border-t hair mt-12 overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Have the Framework Executed for Your Brand</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        We deliver every stage of the GEO framework — from AI visibility audit through to ongoing citation monitoring — as a structured programme with measurable milestones.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Book an AI visibility audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">Explore GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const faqBtns = document.querySelectorAll('#faq-accordion button');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+
+    const tocLinks = document.querySelectorAll('#toc-nav a');
+    const headings = Array.from(
+      document.querySelectorAll('h2[id], h3[id]')
+    ) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(link => {
+              link.classList.remove('text-[var(--accent)]');
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.classList.add('text-[var(--accent)]');
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+
+    headings.forEach(h => observer.observe(h));
+  </script>
+
+</Base>

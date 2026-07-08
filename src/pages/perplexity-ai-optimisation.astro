@@ -1,0 +1,666 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Perplexity AI Optimisation: How the Answer Engine Works';
+const description = 'Perplexity AI optimization explained: the technical mechanics of Pro Search, focus modes, source selection, and what they mean for your GEO strategy.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: title,
+  description,
+  url: 'https://geooptimised.com/perplexity-ai-optimisation/',
+  image: 'https://geooptimised.com/og-image.png',
+  inLanguage: 'en-GB',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/perplexity-ai-optimisation/',
+  },
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What retrieval mechanism does Perplexity AI use?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Perplexity uses retrieval-augmented generation (RAG) for all queries. When a user submits a prompt, Perplexity first retrieves a set of candidate web pages using its own index (built by PerplexityBot), then passes that retrieved content to a large language model as context to generate the final answer. Every cited source in a Perplexity response is a page that was retrieved and used as grounding context — not a result of a fixed training snapshot.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is Perplexity Pro Search and how does it differ from standard search?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Perplexity Pro Search is an enhanced retrieval mode available to Pro subscribers that performs multi-step reasoning: it decomposes complex queries into sub-queries, retrieves sources for each sub-query separately, and synthesises across multiple retrieval rounds. Standard Perplexity search performs a single retrieval pass. Pro Search surfaces a broader set of sources for complex questions and is more likely to consult specialist publications, academic sources, and in-depth content. Optimising for Pro Search requires the same foundations as standard search but with greater emphasis on depth and specificity.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does Perplexity decide which sources to cite?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Perplexity's source selection involves two stages. In the retrieval stage, it selects candidate pages based on query relevance, domain authority signals, and recency. In the synthesis stage, the language model reads the retrieved content and selects passages to cite based on their direct relevance to the query, extractability of the key claim, and uniqueness of the information. Pages with clear declarative statements, specific data, and low ambiguity are more likely to survive from retrieval through to final citation.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do Perplexity focus modes change which sources are cited?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Yes. Perplexity's focus modes — Web, Academic, Writing, Video, Social, and Wolfram Alpha — constrain the retrieval index and source types used. Academic focus prioritises peer-reviewed publications and scholarly sources. Social focus sources from platforms like Reddit and Twitter/X. Web (the default) draws from Perplexity's general web index. Brands seeking citations in general-purpose answers should optimise for the Web focus, which represents the majority of queries. Brands in research-adjacent categories may also benefit from academic publishing or citation in well-sourced articles that Academic mode retrieves.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does Perplexity use the same index as Google or Bing?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "No. Perplexity maintains its own web index, built by its proprietary crawler PerplexityBot. This is distinct from Google's index and Bing's index. A page that ranks number one in Google is not automatically included in Perplexity's retrieval results — it must be independently crawled by PerplexityBot. Conversely, a page with relatively modest Google rankings can still achieve strong Perplexity citation if it is well-structured, recently updated, and accessible to PerplexityBot.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How often does Perplexity update its index?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Perplexity's index is updated continuously, with PerplexityBot crawling the web on an ongoing basis. The crawl frequency for a given domain appears to correlate with publishing cadence and domain authority — higher-activity, more authoritative sites are recrawled more frequently. For time-sensitive content, Perplexity also surfaces results from its real-time web access capability, which retrieves live pages at query time for queries where recency is particularly important.",
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Generative Engine Optimisation', item: 'https://geooptimised.com/generative-engine-optimisation/' },
+    { '@type': 'ListItem', position: 3, name: 'Perplexity AI Optimisation', item: 'https://geooptimised.com/perplexity-ai-optimisation/' },
+  ],
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'what-is-perplexity', label: 'What Perplexity Is' },
+  { id: 'rag-pipeline', label: 'The RAG Pipeline Explained' },
+  { id: 'source-selection', label: 'How Sources Are Selected' },
+  { id: 'focus-modes', label: 'Focus Modes and Their Impact' },
+  { id: 'pro-search', label: 'Pro Search Mechanics' },
+  { id: 'perplexitybot', label: 'PerplexityBot: The Crawler' },
+  { id: 'implications', label: 'Implications for Optimisation' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const focusModes = [
+  {
+    mode: 'Web',
+    index: "Perplexity's general web index",
+    best_for: 'Most commercial and informational queries',
+    notes: 'Default mode; highest query volume; broadest source diversity',
+  },
+  {
+    mode: 'Academic',
+    index: 'Academic databases, arXiv, PubMed, Semantic Scholar',
+    best_for: 'Research, scientific, and technical queries',
+    notes: 'Prioritises peer-reviewed and citable scholarly content',
+  },
+  {
+    mode: 'Writing',
+    index: "Web index with synthesis emphasis",
+    best_for: 'Content creation and drafting assistance',
+    notes: 'Sources informational content; fewer inline citations typical',
+  },
+  {
+    mode: 'Social',
+    index: 'Reddit, Twitter/X, social platforms',
+    best_for: 'Opinion, community discussion, sentiment queries',
+    notes: 'Social authority signals matter; brand mentions in communities relevant',
+  },
+  {
+    mode: 'Video',
+    index: 'YouTube, video platforms',
+    best_for: 'Tutorial, how-to, product demonstration queries',
+    notes: 'Video metadata, titles, and transcripts are the primary source signals',
+  },
+  {
+    mode: 'Wolfram Alpha',
+    index: 'Wolfram Alpha computational engine',
+    best_for: 'Mathematical, scientific, factual computation queries',
+    notes: 'Structured data and factual precision are paramount',
+  },
+];
+
+const faqs = [
+  {
+    q: 'What retrieval mechanism does Perplexity AI use?',
+    a: 'Perplexity uses retrieval-augmented generation (RAG) for all queries. When a user submits a prompt, Perplexity first retrieves a set of candidate web pages using its own index (built by PerplexityBot), then passes that retrieved content to a large language model as context to generate the final answer. Every cited source in a Perplexity response is a page that was retrieved and used as grounding context — not a result of a fixed training snapshot.',
+  },
+  {
+    q: 'What is Perplexity Pro Search and how does it differ from standard search?',
+    a: "Perplexity Pro Search is an enhanced retrieval mode available to Pro subscribers that performs multi-step reasoning: it decomposes complex queries into sub-queries, retrieves sources for each sub-query separately, and synthesises across multiple retrieval rounds. Standard Perplexity search performs a single retrieval pass. Pro Search surfaces a broader set of sources for complex questions and is more likely to consult specialist publications, academic sources, and in-depth content.",
+  },
+  {
+    q: 'How does Perplexity decide which sources to cite?',
+    a: "Perplexity's source selection involves two stages. In the retrieval stage, it selects candidate pages based on query relevance, domain authority signals, and recency. In the synthesis stage, the language model reads the retrieved content and selects passages to cite based on their direct relevance to the query, extractability of the key claim, and uniqueness of the information. Pages with clear declarative statements, specific data, and low ambiguity are more likely to survive from retrieval through to final citation.",
+  },
+  {
+    q: 'Do Perplexity focus modes change which sources are cited?',
+    a: "Yes. Perplexity's focus modes — Web, Academic, Writing, Video, Social, and Wolfram Alpha — constrain the retrieval index and source types used. Academic focus prioritises peer-reviewed publications and scholarly sources. Social focus sources from platforms like Reddit and Twitter/X. Web (the default) draws from Perplexity's general web index. Brands seeking citations in general-purpose answers should optimise for the Web focus, which represents the majority of queries.",
+  },
+  {
+    q: 'Does Perplexity use the same index as Google or Bing?',
+    a: "No. Perplexity maintains its own web index, built by its proprietary crawler PerplexityBot. This is distinct from Google's index and Bing's index. A page that ranks number one in Google is not automatically included in Perplexity's retrieval results — it must be independently crawled by PerplexityBot. Conversely, a page with relatively modest Google rankings can still achieve strong Perplexity citation if it is well-structured, recently updated, and accessible to PerplexityBot.",
+  },
+  {
+    q: 'How often does Perplexity update its index?',
+    a: "Perplexity's index is updated continuously, with PerplexityBot crawling the web on an ongoing basis. The crawl frequency for a given domain appears to correlate with publishing cadence and domain authority — higher-activity, more authoritative sites are recrawled more frequently. For time-sensitive content, Perplexity also surfaces results from its real-time web access capability, which retrieves live pages at query time.",
+  },
+];
+
+const related = [
+  {
+    tag: 'Playbook',
+    title: 'How to Optimise for Perplexity: Step-by-Step',
+    excerpt: 'The practical eight-step playbook for getting your brand cited in Perplexity answers — from crawler access to content structure.',
+    href: '/optimise-for-perplexity/',
+  },
+  {
+    tag: 'Strategy',
+    title: 'GEO for Perplexity: Where It Fits in Your Strategy',
+    excerpt: 'How to prioritise Perplexity within a multi-platform GEO programme alongside ChatGPT and Google AI Overviews.',
+    href: '/geo-perplexity/',
+  },
+  {
+    tag: 'Guide',
+    title: 'AI Brand Visibility: How to Get Cited by LLMs',
+    excerpt: 'The five pillars of AI brand visibility and the measurement framework for tracking citation across all major platforms.',
+    href: '/ai-brand-visibility/',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/perplexity-ai-optimisation/"
+  ogType="article"
+>
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/generative-engine-optimisation/" class="transition hover:text-[var(--accent)]">Generative Engine Optimisation</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">Perplexity AI Optimisation</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Technical Deep-Dive</span>
+        <span class="font-mono text-xs text-ink-300">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">16 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        Perplexity AI Optimisation: How the Answer Engine Works
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        To optimise for Perplexity effectively, you need to understand its mechanics — not just its outputs. This guide explains the technical architecture behind Perplexity's retrieval pipeline, how Pro Search differs from standard search, what the focus modes change about source selection, and what all of this implies for a brand that wants to be cited consistently.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/contact/" class="btn btn-primary">Get a GEO Audit</a>
+        <a href="#rag-pipeline" class="btn btn-ghost">Read the Technical Guide</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Two-column layout -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Perplexity is a pure RAG system — every answer is grounded in live retrieved content, not a fixed training snapshot.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Perplexity maintains its own independent web index via PerplexityBot — Google and Bing rankings do not automatically translate to Perplexity retrieval.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Source selection operates in two stages: retrieval (which pages are fetched) and synthesis (which passages are quoted). Failure at either stage means no citation.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Focus modes — Web, Academic, Social, Video — constrain the retrieval index and require different optimisation approaches.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Pro Search's multi-step reasoning surfaces content that standard search misses — depth and specificity matter more for complex queries.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1: What Perplexity Is -->
+      <section id="what-is-perplexity" class="anchor-top prose-dark mb-16">
+        <h2>What Perplexity AI Is</h2>
+
+        <p>
+          <strong>Perplexity AI is an answer engine that generates responses grounded entirely in live-retrieved web content, citing its sources inline with every answer.</strong>
+          It is not a traditional search engine — it does not return a list of blue links. It is not a conventional chatbot — it does not rely on a fixed training snapshot to answer questions. It occupies a distinct category: a retrieval-augmented generation system designed to produce factual, sourced answers.
+        </p>
+
+        <p>
+          Perplexity was founded in 2022 and has grown rapidly as users seek more direct answers than traditional search provides. Its distinguishing features — inline citations, source cards, and the ability to follow up with clarifying questions — make it particularly popular for research-oriented queries in technology, business, science, and professional services.
+        </p>
+
+        <p>
+          For brands, Perplexity represents a categorically different optimisation target from ChatGPT or Google AI Overviews. Unlike ChatGPT's base model, which reflects training data with a fixed cutoff, Perplexity retrieves the live web for every query. Unlike Google AI Overviews, which draws heavily from pages that rank in Google's traditional index, Perplexity uses its own independently maintained index. These mechanical differences have direct and specific implications for how you optimise for it.
+        </p>
+
+        <p>
+          This page covers the mechanics. For the step-by-step optimisation playbook, see <a href="/optimise-for-perplexity/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">How to Optimise for Perplexity</a>. For how Perplexity fits within your broader GEO strategy, see <a href="/geo-perplexity/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO for Perplexity: Where It Fits in Your Strategy</a>.
+        </p>
+      </section>
+
+      <!-- Section 2: The RAG Pipeline -->
+      <section id="rag-pipeline" class="anchor-top prose-dark mb-16">
+        <h2>The RAG Pipeline Explained</h2>
+
+        <p>
+          <strong>Perplexity's entire answer-generation process is built on retrieval-augmented generation, which means no answer is produced without first consulting live web content.</strong>
+          Understanding the stages of this pipeline is the foundation of any effective Perplexity AI optimisation strategy.
+        </p>
+
+        <h3>Stage 1: Query Analysis</h3>
+        <p>
+          When a user submits a prompt to Perplexity, the system first analyses the query to determine intent, identify key entities, and assess what type of information is needed. For straightforward factual queries, this is a single-pass analysis. For complex or multi-part queries, especially in Pro Search mode, the system may decompose the query into multiple sub-questions that are each processed through their own retrieval cycle.
+        </p>
+        <p>
+          Query analysis also determines which focus mode applies and, where the user has selected a specific focus, constrains the retrieval index accordingly. The model used for generation may also vary — Perplexity has offered users a choice of underlying language models, and the retrieval mechanism is consistent regardless of which model is selected for synthesis.
+        </p>
+
+        <h3>Stage 2: Document Retrieval</h3>
+        <p>
+          Perplexity queries its own web index to retrieve a set of candidate documents. This index is built and maintained by PerplexityBot, Perplexity's proprietary web crawler. The number of candidate documents retrieved varies by query complexity — typically between 5 and 20 sources for a standard query, with Pro Search potentially consulting more across multiple retrieval rounds.
+        </p>
+        <p>
+          The retrieval scoring function weighs query relevance, domain authority signals, and recency. Importantly, this index is fully independent of Google's or Bing's indexes. Ranking well in Google does not guarantee retrieval by Perplexity; equally, a page with modest traditional SEO performance can still be retrieved by Perplexity if it is well-structured, recently published, and accessible to PerplexityBot.
+        </p>
+
+        <h3>Stage 3: Context Assembly</h3>
+        <p>
+          Retrieved pages are not passed to the language model in full. Perplexity extracts the most relevant passages from each retrieved document and assembles a context window of grounding content. This passage extraction step is where content structure matters most: pages with clearly segmented sections, declarative headings, and extractable statements provide higher-quality context than dense, ambiguously structured prose.
+        </p>
+
+        <h3>Stage 4: Answer Synthesis and Citation</h3>
+        <p>
+          The language model generates a response grounded in the assembled context, and cites the specific sources it drew upon. Citations appear as numbered footnotes inline with the answer text, with source cards displayed at the top or side of the response. Not all retrieved sources are cited in the final answer — the model selects those whose passages were most directly used in synthesis. A retrieved source that provides only tangential or redundant information may not receive a citation even if it contributed to context assembly.
+        </p>
+        <p>
+          This is the key distinction between being retrieved and being cited. Retrieval is a prerequisite; citation is the goal. Pages must clear both thresholds to appear as attributed sources in a Perplexity answer.
+        </p>
+      </section>
+
+      <!-- Section 3: Source Selection -->
+      <section id="source-selection" class="anchor-top mb-16">
+        <div class="prose-dark mb-6">
+          <h2>How Sources Are Selected</h2>
+          <p>
+            <strong>Perplexity's source selection process rewards content that is specific, recently crawled, and directly extractable.</strong>
+            Based on publicly observable behaviour, the following factors appear to influence which sources are retrieved and cited.
+          </p>
+          <p class="text-sm text-ink-300 mt-2">
+            Note: Perplexity does not publish the specifics of its retrieval scoring algorithm. The factors below are inferred from systematic observation of citation patterns and from Perplexity's publicly stated design principles. They should be treated as working hypotheses subject to revision as Perplexity's product evolves.
+          </p>
+        </div>
+
+        <div class="card overflow-hidden mb-8">
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-[var(--line)]">
+                  <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">Factor</th>
+                  <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">Stage</th>
+                  <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">What It Means in Practice</th>
+                </tr>
+              </thead>
+              <tbody class="text-ink-200">
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Query relevance</td>
+                  <td class="px-5 py-3 font-mono text-xs text-[var(--accent)]">Retrieval</td>
+                  <td class="px-5 py-3">Page content and headings match the query's intent and key terms</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Crawler access</td>
+                  <td class="px-5 py-3 font-mono text-xs text-[var(--accent)]">Retrieval</td>
+                  <td class="px-5 py-3">PerplexityBot is not blocked; page renders in static HTML</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Domain authority</td>
+                  <td class="px-5 py-3 font-mono text-xs text-[var(--accent)]">Retrieval</td>
+                  <td class="px-5 py-3">Source-quality scoring based on editorial link signals and entity authority</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Recency</td>
+                  <td class="px-5 py-3 font-mono text-xs text-[var(--accent)]">Retrieval</td>
+                  <td class="px-5 py-3">Recently crawled or recently updated pages weighted higher for time-sensitive queries</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Declarative structure</td>
+                  <td class="px-5 py-3 font-mono text-xs text-[var(--accent)]">Synthesis</td>
+                  <td class="px-5 py-3">Sections opening with "X is..." or "X means..." are easiest to extract</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Information uniqueness</td>
+                  <td class="px-5 py-3 font-mono text-xs text-[var(--accent)]">Synthesis</td>
+                  <td class="px-5 py-3">Original data or specific claims not available elsewhere create citation necessity</td>
+                </tr>
+                <tr class="border-b border-[var(--line-soft)]">
+                  <td class="px-5 py-3 font-medium text-ink-100">Structured data</td>
+                  <td class="px-5 py-3 font-mono text-xs text-[var(--accent)]">Both</td>
+                  <td class="px-5 py-3">FAQPage, Article, HowTo schema reduce ambiguity about content type and key claims</td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-3 font-medium text-ink-100">Passage extractability</td>
+                  <td class="px-5 py-3 font-mono text-xs text-[var(--accent)]">Synthesis</td>
+                  <td class="px-5 py-3">Content segmented by clear H2/H3 headings yields cleaner passage extraction</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="prose-dark">
+          <p>
+            A critical observation about source selection: Perplexity does not always cite the highest-authority source available. If a lower-authority page provides a more specific, more directly extractable answer to a query, it may be cited in preference to a more authoritative page with dense, less extractable content. This is why content structure is not secondary to authority — both are necessary, and neither alone is sufficient.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4: Focus Modes -->
+      <section id="focus-modes" class="anchor-top mb-16">
+        <div class="prose-dark mb-6">
+          <h2>Focus Modes and Their Impact on Source Selection</h2>
+          <p>
+            <strong>Perplexity's focus modes are the primary mechanism by which users control which retrieval index is searched, fundamentally changing which sources can be cited.</strong>
+            Each focus mode constrains retrieval to a specific source category, making the optimisation requirements distinct.
+          </p>
+        </div>
+
+        <div class="card overflow-hidden mb-8">
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-[var(--line)]">
+                  <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">Focus Mode</th>
+                  <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">Source Index</th>
+                  <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">Best For</th>
+                  <th scope="col" class="px-5 py-3.5 text-left font-mono text-xs uppercase tracking-wider text-ink-300">Key Notes</th>
+                </tr>
+              </thead>
+              <tbody class="text-ink-200">
+                {focusModes.map((row, i) => (
+                  <tr class={i < focusModes.length - 1 ? 'border-b border-[var(--line-soft)]' : ''}>
+                    <td class="px-5 py-3 font-medium text-ink-100">{row.mode}</td>
+                    <td class="px-5 py-3">{row.index}</td>
+                    <td class="px-5 py-3">{row.best_for}</td>
+                    <td class="px-5 py-3 text-ink-300 text-xs">{row.notes}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="prose-dark">
+          <p>
+            For the majority of commercial and informational queries, the Web focus mode is what matters. This is what Perplexity uses by default and where most brand-relevant citation opportunities exist. However, for brands in research-intensive sectors — academic institutions, healthcare, finance, legal — appearances in sources that Academic mode retrieves (peer-reviewed publications, government databases, established research repositories) provide coverage across a different, often high-value query type.
+          </p>
+          <p>
+            Social focus mode represents a distinct opportunity: brands with strong community presence on Reddit, active LinkedIn engagement, and positive discussion on platforms Perplexity indexes for Social mode can gain citation visibility for opinion and recommendation queries that Web mode might answer differently.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 5: Pro Search -->
+      <section id="pro-search" class="anchor-top prose-dark mb-16">
+        <h2>Pro Search Mechanics</h2>
+
+        <p>
+          <strong>Perplexity Pro Search performs multi-step reasoning, decomposing complex queries into sub-questions and retrieving sources for each independently before synthesising a final answer.</strong>
+          This makes it qualitatively different from standard Perplexity search and creates distinct optimisation considerations.
+        </p>
+
+        <h3>How Multi-Step Retrieval Works</h3>
+        <p>
+          When a Pro Search query is submitted, Perplexity does not simply retrieve sources for the literal prompt. It first identifies the component questions embedded in the prompt, then retrieves a source set for each component. A question like "what are the best GEO agencies in the UK and what should I look for when choosing one?" might generate separate retrieval passes for "best GEO agencies UK", "how to evaluate a GEO agency", and "what GEO services should include".
+        </p>
+        <p>
+          This multi-step process surfaces content that would not appear in a single-pass retrieval. Deep, specific guides score well in Pro Search because their depth and specificity make them relevant to one or more of the sub-query retrieval passes. Thin overview pages that merely skim a topic score poorly because they are outcompeted by more specific sources on each sub-question.
+        </p>
+
+        <h3>Implications for Content Depth</h3>
+        <p>
+          Pro Search's multi-step retrieval rewards what might be called "passage density" — the quantity of distinct, retrievable factual claims per page. A guide with eight specific, well-sourced points on a topic has eight citation opportunities across Pro Search's sub-query passes. A page that covers the same topic in two vague paragraphs has essentially none.
+        </p>
+        <p>
+          This does not mean longer pages are always better. Pages that dilute their factual density with padding, context-heavy introductions, or redundant restatements of the same point score poorly. What matters is the ratio of specific, extractable claims to total word count — not absolute length.
+        </p>
+
+        <h3>What Pro Search Changes About Authority Requirements</h3>
+        <p>
+          Pro Search appears to have higher authority thresholds than standard search for general-audience queries, drawing more heavily on publications with established editorial credibility. Specialist knowledge — detailed practitioner guides, methodology documentation, case studies with verifiable outcomes — performs proportionally better in Pro Search relative to its performance in standard search. Brands with genuine domain expertise documented in detailed, authoritative content are disproportionately rewarded.
+        </p>
+      </section>
+
+      <!-- Section 6: PerplexityBot -->
+      <section id="perplexitybot" class="anchor-top prose-dark mb-16">
+        <h2>PerplexityBot: The Crawler Behind the Index</h2>
+
+        <p>
+          <strong>PerplexityBot is Perplexity's proprietary web crawler, responsible for building and maintaining the index that powers all Perplexity search results.</strong>
+          It is independent from Googlebot, Bingbot, and all other search engine crawlers — you must specifically permit it in your robots.txt configuration.
+        </p>
+
+        <p>
+          PerplexityBot identifies itself in request headers with a user-agent string that includes "PerplexityBot". A standard robots.txt permission entry takes the form:
+        </p>
+
+        <div class="card p-5 mb-6 font-mono text-sm text-ink-200">
+          <p class="text-ink-300 mb-1"># Allow PerplexityBot to crawl all content</p>
+          <p>User-agent: PerplexityBot</p>
+          <p>Allow: /</p>
+        </div>
+
+        <p>
+          If your site uses a blanket Disallow rule (e.g., <code>User-agent: * / Disallow: /</code> with selected exceptions) or if AI bots were previously blocked as part of a content-protection policy, you must explicitly add a PerplexityBot Allow rule. The blanket block takes precedence over less specific Allow rules in most robots.txt parsers unless the PerplexityBot rule appears with higher specificity.
+        </p>
+
+        <p>
+          Perplexity also operates a secondary mechanism for real-time retrieval — fetching pages live at query time when recency is critical. This does not replace the index-based retrieval but supplements it for time-sensitive queries. Even for real-time retrieval, JavaScript-heavy pages that require client-side rendering to display their main content are less reliably processed. Static HTML delivery of key content is the safer approach for ensuring both crawler and real-time retrieval access.
+        </p>
+
+        <p>
+          Crawl frequency correlates with domain publishing cadence and authority signals. High-activity domains with strong link profiles are recrawled more frequently, meaning content updates are reflected in Perplexity's index more quickly. This has a compounding effect: brands that publish consistently and build authority see their pages refresh faster in the index, giving content improvements a shorter lag before they influence citation outcomes.
+        </p>
+      </section>
+
+      <!-- Section 7: Implications -->
+      <section id="implications" class="anchor-top prose-dark mb-16">
+        <h2>Implications for Perplexity AI Optimisation</h2>
+
+        <p>
+          <strong>The mechanical design of Perplexity's retrieval pipeline has specific and actionable implications that distinguish Perplexity optimisation from optimisation for other AI platforms.</strong>
+        </p>
+
+        <h3>Implication 1: Speed of Impact Is Higher Than for Parametric Models</h3>
+        <p>
+          Because Perplexity draws on live retrieval rather than a fixed training snapshot, on-page content improvements can affect citation rates within weeks rather than months. This makes Perplexity the most responsive major AI platform for rapid citation experiments. Fix a structural problem on a page, wait for PerplexityBot to recrawl, and you may see citation rate changes within 30 to 45 days. The same change would take significantly longer to affect ChatGPT's parametric representation.
+        </p>
+
+        <h3>Implication 2: Google Rankings Are Neither Sufficient Nor Necessary</h3>
+        <p>
+          Perplexity's independent index means your Google SEO performance is neither a ceiling nor a floor for your Perplexity citation rate. Brands that rank poorly in Google but have well-structured, recently crawled, highly specific content can achieve strong Perplexity citation rates. Brands that dominate Google SERPs but have thin, poorly structured content — or blocked PerplexityBot — can be entirely absent from Perplexity answers. The two channels must be managed independently.
+        </p>
+
+        <h3>Implication 3: Focus Mode Diversification Is an Opportunity</h3>
+        <p>
+          Most brands default to optimising for the Web focus mode, which is correct — it represents the majority of queries. But brands in sectors where Academic or Social focus mode is commonly used have an untapped opportunity. Academic focus mode citations carry implicit credibility signals (the user chose to filter for academic sources); Social focus mode citations appear in answer to recommendation and opinion queries that represent warm commercial intent.
+        </p>
+
+        <h3>Implication 4: Perplexity Behaviour Will Continue to Change</h3>
+        <p>
+          Perplexity is a young, rapidly evolving product. Its retrieval mechanisms, focus modes, underlying language models, and source-quality scoring have all changed materially since its launch. Any documentation of Perplexity's behaviour — including this page — reflects observed patterns at a point in time and should be treated as a working model subject to revision. The principles (declarative structure, specific data, crawler access, entity authority) are more durable than the specifics of any single implementation detail.
+        </p>
+        <p>
+          For the practical optimisation steps that follow from these mechanics, see <a href="/optimise-for-perplexity/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">How to Optimise for Perplexity: Step-by-Step Playbook</a>.
+          For context on how Perplexity fits within a broader <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> strategy across multiple AI platforms, see <a href="/geo-perplexity/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO for Perplexity: Where It Fits in Your Strategy</a>.
+        </p>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="anchor-top mb-16">
+        <h2 class="font-display text-[28px] font-semibold text-white tracking-tight mb-8">Frequently Asked Questions</h2>
+        <div class="space-y-3" id="faq-accordion">
+          {faqs.map((faq, i) => (
+            <div class="card overflow-hidden" data-faq>
+              <button
+                type="button"
+                class="flex w-full items-center justify-between p-5 text-left font-display text-base font-semibold text-ink-50 transition hover:text-[var(--accent)]"
+                aria-expanded={i === 0 ? 'true' : 'false'}
+                data-faq-trigger
+              >
+                <span>{faq.q}</span>
+                <span class="ml-4 text-lg text-[var(--accent)] transition-transform duration-200" data-faq-icon style={i === 0 ? 'transform:rotate(45deg)' : ''}>+</span>
+              </button>
+              <div
+                class="overflow-hidden transition-all duration-300"
+                data-faq-panel
+                style={i === 0 ? 'max-height:600px' : 'max-height:0'}
+              >
+                <div class="border-t border-[var(--line-soft)] px-5 pb-5 pt-4 text-sm leading-relaxed text-ink-300">
+                  {faq.a}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Related Reading -->
+      <div id="related" class="mb-16">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-4 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Get Your Perplexity Citation Audit</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Understanding how Perplexity works is the first step. Applying that understanding to your specific pages — identifying retrieval gaps, content structure issues, and authority shortfalls — requires hands-on audit work. GEOoptimised delivers Perplexity-specific audits as part of our full GEO programme.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request a GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

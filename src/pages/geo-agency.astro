@@ -1,8 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const title = 'GEO Agency: Generative Engine Optimisation Experts';
-const description = 'GEOoptimised is a specialist generative engine optimisation agency. We help brands appear in AI-generated answers across ChatGPT, Perplexity, Gemini and Copilot.';
+const title = 'GEO Agency | Generative Engine Optimisation Specialists';
+const description = 'GEOoptimised is a specialist GEO agency. We help brands earn citations in AI-generated answers across ChatGPT, Perplexity, Gemini and Google AI Overviews.';
 
 const schema = [
   {
@@ -12,10 +12,18 @@ const schema = [
     url: 'https://geooptimised.com/geo-agency/',
     serviceType: 'Generative Engine Optimisation',
     email: 'hello@geooptimised.com',
-    description: 'Specialist generative engine optimisation agency helping brands gain visibility in AI-generated search results.',
-    areaServed: {
-      '@type': 'Country',
-      name: 'United Kingdom',
+    description: 'Specialist generative engine optimisation agency helping brands gain citations in AI-generated search results across ChatGPT, Perplexity, Gemini and Google AI Overviews.',
+    areaServed: { '@type': 'Country', name: 'United Kingdom' },
+    provider: { '@id': 'https://geooptimised.com/#organization' },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'GEO Services',
+      itemListElement: [
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI Citation Auditing' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Entity Authority Building' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Content Architecture for LLMs' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Cross-Platform Monitoring' } },
+      ],
     },
   },
   {
@@ -25,6 +33,37 @@ const schema = [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
       { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://geooptimised.com/geo-services/' },
       { '@type': 'ListItem', position: 3, name: 'GEO Agency', item: 'https://geooptimised.com/geo-agency/' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How is GEO different from SEO?',
+        acceptedAnswer: { '@type': 'Answer', text: 'SEO targets search engine results pages. GEO targets the AI-generated answers that are replacing those results. The ranking signals, content structures, and measurement frameworks are fundamentally different.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'How long before we see results?',
+        acceptedAnswer: { '@type': 'Answer', text: 'GEO programmes are typically designed to surface measurable changes in citation frequency within 60 to 90 days of implementation. Entity authority and cross-platform visibility compound over 6–12 months as a programme matures.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Which AI platforms do you cover?',
+        acceptedAnswer: { '@type': 'Answer', text: 'ChatGPT, Perplexity, Gemini, Microsoft Copilot, and Google AI Overviews. We monitor all five and adjust strategy per platform.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do we still need traditional SEO?',
+        acceptedAnswer: { '@type': 'Answer', text: 'Yes. GEO builds on strong organic fundamentals. If your site has poor technical health or thin content, we address that first. GEO and SEO are complementary, not competing.' },
+      },
+      {
+        '@type': 'Question',
+        name: 'What does a GEO audit include?',
+        acceptedAnswer: { '@type': 'Answer', text: 'A full citation map across all major generative engines, entity graph analysis, competitor citation benchmarking, and a prioritised action plan with estimated impact.' },
+      },
     ],
   },
 ];
@@ -97,7 +136,7 @@ const faqs = [
   },
   {
     q: 'How long before we see results?',
-    a: 'Most clients see measurable changes in citation frequency within 60-90 days. Entity authority and cross-platform visibility compound over 6-12 months.',
+    a: 'GEO programmes are typically designed to surface measurable changes in citation frequency within 60 to 90 days of implementation. Entity authority and cross-platform visibility compound over 6–12 months as a programme matures.',
   },
   {
     q: 'Which AI platforms do you cover?',
@@ -135,11 +174,11 @@ const related = [
 ];
 ---
 
-<Base title={title} description={description} schema={schema} ogType="website">
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/geo-agency/" ogType="website">
 
   <!-- Breadcrumb -->
   <nav aria-label="Breadcrumb" class="container-wide pt-8">
-    <ol class="flex items-center gap-1.5 text-sm text-ink-400">
+    <ol class="flex items-center gap-1.5 text-sm text-ink-300">
       <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
       <li aria-hidden="true">/</li>
       <li><a href="/geo-services/" class="transition hover:text-[var(--accent)]">Services</a></li>
@@ -153,8 +192,7 @@ const related = [
     <div class="container-wide pt-16 pb-14">
       <div class="flex flex-wrap items-center gap-3">
         <span class="eyebrow">Service</span>
-        <span class="font-mono text-xs text-ink-400">25 May 2025</span>
-        <span class="font-mono text-xs text-ink-400">8 min read</span>
+        <span class="font-mono text-xs text-ink-300">8 min read</span>
       </div>
       <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
         GEO Agency: Generative Engine Optimisation Experts
@@ -199,7 +237,7 @@ const related = [
           </li>
           <li class="flex items-start gap-2">
             <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
-            <span>Most clients see measurable citation changes within 60-90 days.</span>
+            <span>GEO programmes are typically designed to surface measurable changes in citation frequency within 60 to 90 days of implementation.</span>
           </li>
           <li class="flex items-start gap-2">
             <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
@@ -212,6 +250,7 @@ const related = [
       <div class="prose-dark">
         <h2 id="what-geo-agency-does" class="anchor-top">What a GEO Agency Does</h2>
         <p>
+          <strong>A GEO agency makes your brand visible inside AI-generated answers — not just on search results pages.</strong>
           A dedicated <a href="/generative-engine-optimisation/">generative engine optimisation</a>
           agency operates across six core capabilities. Each one addresses a specific mechanism that determines whether AI models cite your brand or a competitor's.
         </p>
@@ -334,7 +373,7 @@ const related = [
           <ul class="mt-4 space-y-3 text-sm text-ink-200">
             {notFit.map(item => (
               <li class="flex items-start gap-2">
-                <span class="mt-0.5 text-ink-400">&#10007;</span>
+                <span class="mt-0.5 text-ink-300">&#10007;</span>
                 <span>{item}</span>
               </li>
             ))}

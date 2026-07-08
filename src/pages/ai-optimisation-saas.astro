@@ -1,0 +1,687 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'AI Optimisation for SaaS: Get Recommended by AI | GEOoptimised';
+const description = 'AI optimization for SaaS: get your product recommended in category queries, comparison prompts, and integration searches across ChatGPT, Perplexity, and Gemini.';
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'AI Optimisation for SaaS',
+  description,
+  url: 'https://geooptimised.com/ai-optimisation-saas/',
+  image: 'https://geooptimised.com/og-image.png',
+  inLanguage: 'en-GB',
+  datePublished: '2026-06-07',
+  dateModified: '2026-06-07',
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://geooptimised.com/ai-optimisation-saas/',
+  },
+  author: { '@id': 'https://geooptimised.com/#organization' },
+  publisher: { '@id': 'https://geooptimised.com/#organization' },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How do I get my SaaS product recommended by ChatGPT?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Getting recommended by ChatGPT for a SaaS product requires building a strong entity footprint across sources that feed into OpenAI\'s training data and retrieval layer. This means: creating authoritative category-level content that mentions your product in context (comparison guides, integration docs, use-case articles), ensuring your product has consistent presence in third-party review platforms (G2, Capterra, Product Hunt), and building SoftwareApplication schema on your site with accurate category, operatingSystem, and featureList fields. ChatGPT\'s Shopping and browsing integrations increasingly favour sources with structured data and high retrieval authority.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What schema markup should a SaaS product use for AI visibility?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SaaS products should implement SoftwareApplication schema on the product and pricing pages (with applicationCategory, operatingSystem, offers, and aggregateRating fields), Organization schema on the homepage (with sameAs links to Wikidata, G2, Capterra, LinkedIn, and Crunchbase), Article schema on documentation and blog content (with author and dateModified), and FAQPage schema on any page with a Q&A section. HowTo schema is appropriate for tutorial or onboarding content with discrete, ordered steps.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How important is documentation content for SaaS AI visibility?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Documentation is one of the highest-value content types for SaaS AI visibility. When users ask AI engines "how do I connect X to Y" or "does Z tool integrate with Slack?", the answer is typically drawn from official documentation pages. Documentation that is publicly accessible (not behind a login), structured with clear H2/H3 headings, and specific about integration steps and configuration options will be cited far more reliably than vague marketing copy. Product documentation pages should be included in your llms.txt to direct AI crawlers to this content.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How should SaaS companies approach category and comparison queries in AI?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SaaS companies should create authoritative comparison and alternatives content on their own domain: "[Your product] vs [Competitor]" pages, "[Category] tools comparison" guides, and "[Your product] alternatives" pages that acknowledge competing tools fairly. AI engines are heavy users of comparison content when answering "what is the best X for Y" queries. Pages that present honest, structured comparisons with specific attribute data (pricing, feature support, integration count) are cited significantly more often than pages that only promote the product.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does SaaS review platform presence affect AI citation?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, significantly. G2, Capterra, GetApp, Trustpilot, and Product Hunt are all heavily represented in LLM training data and are retrieved by RAG-based AI systems. A SaaS product with a well-maintained G2 profile — complete description, current screenshots, active review collection, and correct category classification — is far more likely to be cited in AI-generated software recommendations than a product absent from these platforms. These platforms function as third-party entity validators: AI engines treat their data as corroborating evidence of what your product is and which category it belongs to.',
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'GEO by Industry', item: 'https://geooptimised.com/geo-by-industry/' },
+    { '@type': 'ListItem', position: 3, name: 'AI Optimisation for SaaS', item: 'https://geooptimised.com/ai-optimisation-saas/' },
+  ],
+};
+
+const schema = [articleSchema, faqSchema, breadcrumbSchema];
+
+const tocItems = [
+  { id: 'saas-ai-visibility-problem', label: 'The SaaS AI Visibility Problem' },
+  { id: 'category-queries', label: 'Category & Comparison Queries' },
+  { id: 'saas-schema-setup', label: 'Schema Setup for SaaS' },
+  { id: 'documentation-for-ai', label: 'Documentation as AI Content' },
+  { id: 'integration-pages', label: 'Integration Pages Strategy' },
+  { id: 'review-platforms', label: 'Review Platform Presence' },
+  { id: 'saas-ai-query-types', label: 'SaaS AI Query Types' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const faqs = [
+  {
+    q: 'How do I get my SaaS product recommended by ChatGPT?',
+    a: "Getting recommended by ChatGPT for a SaaS product requires building a strong entity footprint across sources that feed into OpenAI's training data and retrieval layer. This means: creating authoritative category-level content that mentions your product in context (comparison guides, integration docs, use-case articles), ensuring your product has consistent presence in third-party review platforms (G2, Capterra, Product Hunt), and building SoftwareApplication schema on your site with accurate category, operatingSystem, and featureList fields. ChatGPT's Shopping and browsing integrations increasingly favour sources with structured data and high retrieval authority.",
+  },
+  {
+    q: 'What schema markup should a SaaS product use for AI visibility?',
+    a: 'SaaS products should implement SoftwareApplication schema on the product and pricing pages (with applicationCategory, operatingSystem, offers, and aggregateRating fields), Organization schema on the homepage (with sameAs links to Wikidata, G2, Capterra, LinkedIn, and Crunchbase), Article schema on documentation and blog content (with author and dateModified), and FAQPage schema on any page with a Q&A section. HowTo schema is appropriate for tutorial or onboarding content with discrete, ordered steps.',
+  },
+  {
+    q: 'How important is documentation content for SaaS AI visibility?',
+    a: 'Documentation is one of the highest-value content types for SaaS AI visibility. When users ask AI engines "how do I connect X to Y" or "does Z tool integrate with Slack?", the answer is typically drawn from official documentation pages. Documentation that is publicly accessible (not behind a login), structured with clear H2/H3 headings, and specific about integration steps and configuration options will be cited far more reliably than vague marketing copy. Product documentation pages should be included in your llms.txt to direct AI crawlers to this content.',
+  },
+  {
+    q: 'How should SaaS companies approach category and comparison queries in AI?',
+    a: 'SaaS companies should create authoritative comparison and alternatives content on their own domain: "[Your product] vs [Competitor]" pages, "[Category] tools comparison" guides, and "[Your product] alternatives" pages that acknowledge competing tools fairly. AI engines are heavy users of comparison content when answering "what is the best X for Y" queries. Pages that present honest, structured comparisons with specific attribute data (pricing, feature support, integration count) are cited significantly more often than pages that only promote the product.',
+  },
+  {
+    q: 'Does SaaS review platform presence affect AI citation?',
+    a: 'Yes, significantly. G2, Capterra, GetApp, Trustpilot, and Product Hunt are all heavily represented in LLM training data and are retrieved by RAG-based AI systems. A SaaS product with a well-maintained G2 profile — complete description, current screenshots, active review collection, and correct category classification — is far more likely to be cited in AI-generated software recommendations than a product absent from these platforms. These platforms function as third-party entity validators: AI engines treat their data as corroborating evidence of what your product is and which category it belongs to.',
+  },
+];
+
+const related = [
+  {
+    tag: 'Hub',
+    title: 'GEO by Industry',
+    excerpt: 'Platform-specific and sector-specific GEO playbooks — Shopify, WordPress, SaaS, and more.',
+    href: '/geo-by-industry/',
+  },
+  {
+    tag: 'Guide',
+    title: 'Generative Engine Optimisation',
+    excerpt: 'The complete GEO framework — from first principles through to entity strategy and measurement.',
+    href: '/generative-engine-optimisation/',
+  },
+  {
+    tag: 'Guide',
+    title: 'Schema Markup for AI',
+    excerpt: 'JSON-LD implementation guide including SoftwareApplication schema for SaaS products.',
+    href: '/schema-markup-ai/',
+  },
+];
+---
+
+<Base title={title} description={description} schema={schema} canonical="https://geooptimised.com/ai-optimisation-saas/" ogType="article">
+
+  <!-- Breadcrumb -->
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 font-mono text-xs text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li><a href="/geo-by-industry/" class="transition hover:text-[var(--accent)]">GEO by Industry</a></li>
+      <li aria-hidden="true" class="text-ink-600">/</li>
+      <li class="text-ink-200" aria-current="page">AI Optimisation for SaaS</li>
+    </ol>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Industry Playbook</span>
+        <span class="font-mono text-xs text-ink-300">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">11 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        AI Optimisation for SaaS
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        B2B software buyers now open ChatGPT or Perplexity before they open Google. They ask "what is the best project
+        management tool for a 10-person agency?" or "which CRM integrates with HubSpot and Xero?" —
+        and the products that appear in those AI-generated answers capture consideration that never reaches a search results page.
+        <strong class="text-white">AI optimization for SaaS</strong> is the discipline of ensuring your product is recommended
+        accurately and consistently across every major generative platform.
+      </p>
+    </div>
+  </section>
+
+  <!-- Two-column: TOC sidebar + main content -->
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <!-- Sticky TOC sidebar -->
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`} data-toc-link>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+
+      <!-- Key Takeaways -->
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>SaaS products face four distinct AI query types: category queries, comparison queries, integration queries, and use-case queries — each requires a different content strategy.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>SoftwareApplication schema with accurate applicationCategory and featureList fields is the single most direct structured data signal for SaaS AI visibility.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Public documentation is the most cited SaaS content type in AI-generated answers — gating docs behind login is one of the most common AI visibility errors in the sector.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Dedicated integration pages — one page per integration, with schema and structured content — capture high-intent AI queries about compatibility and connectivity.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>G2 and Capterra profiles function as third-party entity validators — AI engines use them to confirm your product's category classification and reputation signals.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Section 1 -->
+      <section id="saas-ai-visibility-problem" class="anchor-top prose-dark mb-16">
+        <h2>The SaaS AI Visibility Problem</h2>
+
+        <p>
+          <strong>SaaS products are among the most frequently queried categories in AI search, yet most are systematically under-represented in AI-generated recommendations.</strong>
+          The reason is not a lack of authority — most established SaaS products have strong domain authority, extensive content
+          libraries, and significant backlink profiles. The reason is that their content is structured for keyword-based search,
+          not for the entity-resolution and attribute-extraction mechanisms that AI engines use.
+        </p>
+
+        <p>
+          When a buyer asks an AI engine for a software recommendation, the AI is doing something fundamentally different from
+          a keyword search engine. It is identifying the relevant product category, selecting candidate tools based on entity
+          data and training frequency, filtering by the specific requirements stated in the query (budget, team size, integration
+          needs, use case), and generating a recommendation with supporting rationale. Each step in this process depends on
+          structured, extractable information — and most SaaS marketing content fails to provide it.
+        </p>
+
+        <p>
+          The SaaS products most consistently cited by AI engines share three characteristics: they have clear, structured
+          entity data (via schema and third-party review platforms), they publish accessible documentation that answers
+          integration and how-to queries, and they have created comparison and category content that positions them within
+          their competitive landscape. This guide covers each area in depth.
+        </p>
+
+        <p>
+          This is part of the
+          <a href="/geo-by-industry/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO by industry</a>
+          hub. The broader framework is covered in our
+          <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation guide</a>.
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="category-queries" class="anchor-top prose-dark mb-16">
+        <h2>Category and Comparison Queries: The Core SaaS AI Battleground</h2>
+
+        <p>
+          <strong>The highest-value AI queries for SaaS products are category and comparison queries — "what is the best X for Y" and "how does A compare to B".</strong>
+          These queries represent commercial intent at the evaluation stage: the buyer has identified a problem and is selecting
+          a solution. AI engines are increasingly the first stop for this evaluation, and the products that dominate these
+          AI-generated responses have a structural advantage in the sales funnel.
+        </p>
+
+        <h3>Own Your Category Content</h3>
+        <p>
+          Create a dedicated category guide on your own domain — a long-form, authoritative page that defines the software
+          category your product belongs to, explains what it does, identifies the key differentiators between products in the
+          category, and names the leading tools (including your product). This content should be structured as a genuine
+          buyer's guide, not as a marketing page. AI engines weigh this type of content heavily when generating category
+          recommendations because it demonstrates category authority rather than product promotion.
+        </p>
+        <p>
+          A well-structured category guide for a project management SaaS, for example, would define what project management
+          software is, explain the different methodologies it supports (Agile, Kanban, Waterfall), identify the key evaluation
+          criteria buyers use (team size suitability, integration ecosystem, pricing model, reporting depth), and then compare
+          the leading tools against those criteria. Your product should be positioned within this framework — not as the
+          unchallenged leader, but as the best fit for a specific buyer profile.
+        </p>
+
+        <h3>Comparison Pages That Get Cited</h3>
+        <p>
+          Dedicated "[Your Product] vs [Competitor]" pages are among the most citable content types in SaaS AI optimisation.
+          AI engines retrieve and cite them heavily because they contain exactly the structured attribute comparison that AI
+          systems need to answer evaluation queries. For maximum AI citability, each comparison page should:
+        </p>
+        <ul>
+          <li>Open with a one-sentence verdict stating which product suits which buyer profile</li>
+          <li>Include a structured comparison table with specific attributes (not vague "better/worse" statements)</li>
+          <li>Give fair treatment to the competitor's strengths — AI engines are sensitive to promotional bias and de-weight one-sided comparisons</li>
+          <li>Address the specific queries buyers ask when comparing these two products</li>
+        </ul>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="saas-schema-setup" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Schema Setup for SaaS AI Visibility</h2>
+          <p>
+            <strong>SaaS products require a specific schema stack that goes beyond the generic Article and Organization markup most sites deploy.</strong>
+            The core schema types for SaaS are SoftwareApplication (for product and pricing pages), Organization (for brand
+            entity), Article or TechArticle (for documentation and blog content), and FAQPage (for Q&amp;A sections across
+            all content types).
+          </p>
+        </div>
+
+        <!-- SaaS schema types table -->
+        <div class="mt-8 overflow-x-auto rounded-xl border border-geo-800">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-geo-800 bg-geo-900">
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-100">Schema Type</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-100">Apply To</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-100">Key Fields for AI</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-100">Priority</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-geo-800">
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-mono">SoftwareApplication</td>
+                <td class="px-4 py-3 text-ink-300">Product, pricing pages</td>
+                <td class="px-4 py-3 text-ink-300">applicationCategory, featureList, offers, aggregateRating</td>
+                <td class="px-4 py-3 text-green-400">Critical</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-mono">Organization</td>
+                <td class="px-4 py-3 text-ink-300">Homepage</td>
+                <td class="px-4 py-3 text-ink-300">name, sameAs, description, foundingDate</td>
+                <td class="px-4 py-3 text-green-400">Critical</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-mono">FAQPage</td>
+                <td class="px-4 py-3 text-ink-300">Feature, pricing, comparison pages</td>
+                <td class="px-4 py-3 text-ink-300">mainEntity Question + acceptedAnswer</td>
+                <td class="px-4 py-3 text-green-400">High</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-mono">TechArticle</td>
+                <td class="px-4 py-3 text-ink-300">Documentation, tutorials</td>
+                <td class="px-4 py-3 text-ink-300">headline, dateModified, author, proficiencyLevel</td>
+                <td class="px-4 py-3 text-green-400">High</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-mono">HowTo</td>
+                <td class="px-4 py-3 text-ink-300">Onboarding, setup guides</td>
+                <td class="px-4 py-3 text-ink-300">step (HowToStep array), totalTime, tool</td>
+                <td class="px-4 py-3 text-yellow-400">Medium</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-mono">WebSite</td>
+                <td class="px-4 py-3 text-ink-300">Homepage</td>
+                <td class="px-4 py-3 text-ink-300">name, url, publisher @id</td>
+                <td class="px-4 py-3 text-yellow-400">Medium</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose-dark mt-8">
+          <h3>SoftwareApplication Schema: The Key Fields</h3>
+          <p>
+            <code>applicationCategory</code> is the most important field in SoftwareApplication schema for AI visibility.
+            Use the most specific applicable category from the Schema.org enumeration: <code>BusinessApplication</code>,
+            <code>CommunicationApplication</code>, <code>FinancialApplication</code>, <code>SecurityApplication</code>,
+            and so on. AI engines use this field to classify your product within its category when responding to
+            "best [category]" queries. An incorrect or missing category means your product may not surface for the
+            exact queries where it should win.
+          </p>
+          <p>
+            <code>featureList</code> should be a comma-separated or array string of your product's key capabilities.
+            Write this as a buyer would phrase it: "Kanban boards, Gantt charts, time tracking, Slack integration,
+            iOS and Android apps" — not as marketing copy. AI engines extract this data when answering
+            feature-specific queries.
+          </p>
+          <p>
+            <code>aggregateRating</code> requires a live data source — typically populated from your G2, Capterra, or
+            Trustpilot review data via a schema implementation that pulls the current rating and review count.
+            A SoftwareApplication schema block with a populated aggregateRating is significantly more likely to be
+            cited in recommendation queries than one without.
+          </p>
+          <p>
+            For full schema implementation guidance, see
+            <a href="/schema-markup-ai/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">schema markup for AI</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="documentation-for-ai" class="anchor-top prose-dark mb-16">
+        <h2>Documentation as High-Value AI Content</h2>
+
+        <p>
+          <strong>Public product documentation is the most cited SaaS content type in AI-generated answers, yet most SaaS companies either gate it behind login or fail to optimise it for AI extraction.</strong>
+          Documentation answers a category of queries — "how do I", "does X support", "what is the limit for" — that represent
+          both high-intent buyer evaluation and active user support. Both audience types increasingly begin with an AI query
+          rather than a support ticket or search.
+        </p>
+
+        <h3>Documentation Accessibility for AI</h3>
+        <p>
+          Documentation gated behind login walls is invisible to AI crawlers. If your product documentation requires
+          authentication to access, it cannot be retrieved by Perplexity, Bing Copilot, or Google AI Overviews — regardless
+          of its quality. The standard GEO recommendation is to make all documentation that does not expose security-sensitive
+          information publicly accessible and indexable. This typically includes: getting-started guides, integration
+          documentation, API reference (non-authenticated endpoints), feature explanations, and configuration guides.
+        </p>
+
+        <h3>Structuring Documentation for AI Citation</h3>
+        <p>
+          AI engines extract answers from documentation differently from how developers read it. Each documentation page should:
+        </p>
+        <ul>
+          <li><strong>Open with a definitive statement</strong> of what the page covers and what problem it solves.</li>
+          <li><strong>Use question-phrased headings</strong> where appropriate: "How do I connect to Zapier?" rather than "Zapier Setup".</li>
+          <li><strong>Provide complete, self-contained answers</strong> within each section — avoid "see step 3 above" references that break when content is extracted.</li>
+          <li><strong>Include explicit prerequisite statements</strong>: "Before configuring this integration, you will need [X, Y, Z]."</li>
+          <li><strong>Apply TechArticle schema</strong> with a <code>dateModified</code> field that is kept current — AI engines weight freshness signals in documentation.</li>
+        </ul>
+
+        <h3>Including Documentation in llms.txt</h3>
+        <p>
+          Your <a href="/llms-txt/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">llms.txt file</a>
+          should explicitly list your key documentation sections as recommended reading for AI crawlers. This includes
+          your main documentation index, integration catalogue, API reference index, and any getting-started guides.
+          Documentation is the content type AI agents use when answering tool-use queries on behalf of users — ensuring
+          AI systems have reliable access to your docs is a direct investment in agentic AI recommendation.
+        </p>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="integration-pages" class="anchor-top prose-dark mb-16">
+        <h2>Integration Pages as AI Citation Magnets</h2>
+
+        <p>
+          <strong>Integration pages — one dedicated page per supported integration — are among the most effective AI visibility investments a SaaS product can make.</strong>
+          Integration queries ("does [Product] integrate with Salesforce?", "what CRMs work with [Product]?") are extremely
+          common in B2B AI search. Products with dedicated, publicly accessible integration pages consistently outperform
+          those with a single aggregated integrations listing page for these queries.
+        </p>
+
+        <h3>The Integration Page Formula</h3>
+        <p>
+          Each integration page should follow this structure:
+        </p>
+        <ol>
+          <li><strong>Opening statement</strong>: "[Product] integrates natively with [Integration], allowing [specific use case description]."</li>
+          <li><strong>What the integration does</strong>: three to five specific, concrete capabilities that the integration enables — written as outcomes, not feature names.</li>
+          <li><strong>How to set it up</strong>: a brief HowTo-structured setup overview (full detail can link to documentation).</li>
+          <li><strong>Requirements</strong>: which plans or tiers include this integration, and any prerequisites.</li>
+          <li><strong>FAQ section</strong>: three to four common questions about this specific integration (data sync frequency, field mapping, authentication method).</li>
+        </ol>
+
+        <p>
+          Apply SoftwareApplication schema on these pages with the specific integration named in the <code>featureList</code>.
+          Apply FAQPage schema to the Q&amp;A section. Ensure these pages are publicly accessible and listed in your sitemap.
+          Integration pages with this structure capture AI citation for the long tail of "[Product] + [Integration]" queries
+          that represent genuine buyer evaluation intent.
+        </p>
+      </section>
+
+      <!-- Section 6 -->
+      <section id="review-platforms" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>Review Platform Presence as Entity Validation</h2>
+          <p>
+            <strong>Third-party review platforms are not just conversion aids for SaaS — they are primary entity validation signals for AI engines.</strong>
+            G2, Capterra, GetApp, Trustpilot, and Product Hunt are all heavily weighted in LLM training data and are retrieved
+            by RAG-based AI systems. A product with consistent, accurate, and well-maintained profiles across these platforms
+            is treated as a credibly established entity by AI recommendation systems.
+          </p>
+        </div>
+
+        <div class="mt-8 space-y-5">
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">G2 Profile Optimisation for AI</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              G2 is the review platform most consistently cited by AI engines for B2B software recommendations.
+              For AI visibility purposes, the most important G2 profile elements are: correct category classification
+              (choose the most specific applicable category, not just the broadest), an accurate and specific product
+              description (not marketing copy), current screenshots and feature data, active review collection,
+              and a complete feature grid. G2 profile data is directly ingested by AI systems as authoritative
+              category placement data.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Capterra and GetApp Consistency</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              Capterra and GetApp (both Gartner Digital Markets properties) use the same underlying data.
+              Ensure your product description, feature list, pricing information, and category classification are
+              identical across both — inconsistencies between profiles create entity ambiguity that reduces AI citation
+              confidence. Update these profiles whenever your product adds a significant new feature category,
+              changes pricing model, or modifies its primary positioning.
+            </p>
+          </div>
+
+          <div class="card p-6">
+            <h3 class="font-display text-base font-semibold text-[var(--accent)]">Crunchbase and LinkedIn as Entity Anchors</h3>
+            <p class="mt-3 text-sm leading-relaxed text-ink-300">
+              For the Organisation entity layer (distinct from the product entity), Crunchbase and LinkedIn are the
+              two most important external data sources. Ensure your Crunchbase profile has an accurate founding date,
+              category, funding information (if applicable), and a current product description. Your LinkedIn company
+              page should have a consistent description, specialities list, and industry classification that aligns
+              with your Schema.org Organization markup. Include Crunchbase and LinkedIn URLs in your
+              <code>sameAs</code> array.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 7: Query types table -->
+      <section id="saas-ai-query-types" class="anchor-top mb-16">
+        <div class="prose-dark">
+          <h2>SaaS AI Query Types and Content Responses</h2>
+          <p>
+            <strong>SaaS products face four distinct AI query types, each requiring a different content strategy to capture citation.</strong>
+            Mapping your content to these query types is the foundation of a systematic SaaS AI visibility programme.
+          </p>
+        </div>
+
+        <div class="mt-8 overflow-x-auto rounded-xl border border-geo-800">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-geo-800 bg-geo-900">
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-100">Query Type</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-100">Example Query</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-100">Content Response</th>
+                <th scope="col" class="px-4 py-3 text-left font-semibold text-ink-100">Schema</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-geo-800">
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-semibold">Category</td>
+                <td class="px-4 py-3 text-ink-300 italic">"Best project management tools for agencies"</td>
+                <td class="px-4 py-3 text-ink-300">Category buyer's guide; comparison table; G2/Capterra profiles</td>
+                <td class="px-4 py-3 text-ink-300 font-mono text-xs">SoftwareApplication, FAQPage</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-semibold">Comparison</td>
+                <td class="px-4 py-3 text-ink-300 italic">"Asana vs Monday.com for remote teams"</td>
+                <td class="px-4 py-3 text-ink-300">Dedicated vs pages with structured attribute tables</td>
+                <td class="px-4 py-3 text-ink-300 font-mono text-xs">Article, FAQPage</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-semibold">Integration</td>
+                <td class="px-4 py-3 text-ink-300 italic">"Does [Product] integrate with HubSpot?"</td>
+                <td class="px-4 py-3 text-ink-300">Per-integration landing pages; public docs</td>
+                <td class="px-4 py-3 text-ink-300 font-mono text-xs">SoftwareApplication (featureList), HowTo</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-semibold">How-to / Support</td>
+                <td class="px-4 py-3 text-ink-300 italic">"How do I set up SSO in [Product]?"</td>
+                <td class="px-4 py-3 text-ink-300">Public documentation; step-by-step guides</td>
+                <td class="px-4 py-3 text-ink-300 font-mono text-xs">TechArticle, HowTo</td>
+              </tr>
+              <tr class="hover:bg-geo-900/50 transition">
+                <td class="px-4 py-3 text-ink-200 font-semibold">Use-case</td>
+                <td class="px-4 py-3 text-ink-300 italic">"Best CRM for financial advisors"</td>
+                <td class="px-4 py-3 text-ink-300">Vertical landing pages; case study summaries</td>
+                <td class="px-4 py-3 text-ink-300 font-mono text-xs">Article, FAQPage</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose-dark mt-6">
+          <p>
+            Mapping your existing content against these five query types reveals which gaps carry the highest commercial cost.
+            For most SaaS companies, integration and use-case query coverage is significantly underdeveloped relative to
+            category and comparison coverage. Closing the integration content gap alone — by creating dedicated pages for
+            each of your top 20 integrations — typically produces measurable AI citation improvements within 60 days
+            for retrieval-based platforms like Perplexity.
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <div class="prose-dark mt-4">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden" data-faq>
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+              data-faq-trigger
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200" data-faq-icon>+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out" data-faq-panel>
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Related Reading -->
+      <div class="mt-16">
+        <span class="eyebrow" id="related">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="border-t hair mt-12 relative overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Get Your SaaS Product Recommended by AI</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        Most SaaS products are invisible in the AI-generated recommendations that now shape B2B software buying decisions.
+        A GEOoptimised SaaS audit identifies exactly where you are absent, which query types you are losing, and what to
+        build first to close the gap.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Request a SaaS GEO audit</a>
+        <a href="/geo-services/" class="btn btn-ghost">View all GEO services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const triggers = document.querySelectorAll('[data-faq-trigger]');
+      triggers.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const faq = btn.closest('[data-faq]');
+          const panel = faq.querySelector('[data-faq-panel]');
+          const icon = faq.querySelector('[data-faq-icon]');
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          document.querySelectorAll('[data-faq]').forEach(item => {
+            item.querySelector('[data-faq-trigger]').setAttribute('aria-expanded', 'false');
+            item.querySelector('[data-faq-panel]').style.maxHeight = '0';
+            item.querySelector('[data-faq-icon]').style.transform = 'rotate(0deg)';
+          });
+
+          if (!isOpen) {
+            btn.setAttribute('aria-expanded', 'true');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- TOC IntersectionObserver -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('[data-toc-link]');
+      if (!links.length) return;
+      const ids = Array.from(links).map(a => a.getAttribute('href').slice(1));
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`[data-toc-link][href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    });
+  </script>
+
+</Base>

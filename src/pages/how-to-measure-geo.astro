@@ -1,0 +1,578 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'How to Measure GEO: Metrics & Framework | GEOoptimised';
+const description = 'How to measure GEO performance: citation frequency, share of voice, AI referral traffic, sentiment scoring, and a step-by-step measurement framework for AI optimisation.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to Measure GEO',
+    description: 'A step-by-step framework for measuring generative engine optimisation performance across citation frequency, share of voice, AI referral traffic, and sentiment.',
+    url: 'https://geooptimised.com/how-to-measure-geo/',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://geooptimised.com/how-to-measure-geo/'
+    },
+    image: 'https://geooptimised.com/og-image.png',
+    datePublished: '2026-06-07',
+    dateModified: '2026-06-07',
+    inLanguage: 'en-GB',
+    author: {
+      '@id': 'https://geooptimised.com/#organization'
+    },
+    publisher: {
+      '@id': 'https://geooptimised.com/#organization'
+    },
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Define your query set',
+        text: 'Identify 20–50 queries your prospects actually submit to AI engines. Group them by intent: brand queries, category queries, and competitor comparison queries.'
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: 'Establish citation frequency baseline',
+        text: 'Run your query set across ChatGPT, Perplexity, Gemini, Copilot, and AI Overviews. Record how often your brand appears in the response and whether it is cited as a source.'
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Measure share of voice',
+        text: 'Count how many responses across your full query set mention your brand. Divide by total responses to get citation share of voice. Benchmark against two or three key competitors on the same query set.'
+      },
+      {
+        '@type': 'HowToStep',
+        position: 4,
+        name: 'Connect AI referral traffic',
+        text: 'In GA4, segment sessions by source/medium. Create a custom channel group for known AI referral domains. Track volume, engagement rate, and conversion path from AI-referred sessions.'
+      },
+      {
+        '@type': 'HowToStep',
+        position: 5,
+        name: 'Score sentiment and accuracy',
+        text: 'Review each citation response for brand description accuracy and sentiment. Flag misrepresentations or negative framings. This qualitative layer identifies entity correction priorities.'
+      },
+      {
+        '@type': 'HowToStep',
+        position: 6,
+        name: 'Report and iterate monthly',
+        text: 'Consolidate metrics into a single GEO scorecard. Review monthly, update content and entity signals in response to measurement findings, and re-run the query set after each intervention.'
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is the most important metric for measuring GEO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Citation frequency — how often your brand is mentioned in AI-generated responses to your target queries — is the primary GEO metric. It is the most direct measure of whether your optimisation programme is working. Share of voice adds competitive context, and AI referral traffic connects citations to business outcomes, but citation frequency is the leading indicator you should track first.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How do you measure GEO share of voice?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'GEO share of voice is measured by running a fixed set of target queries across your chosen AI platforms, recording which brands appear in each response, and calculating the percentage of responses in which your brand is cited. To make the metric meaningful, run the same queries against two or three key competitors so you can see relative position rather than absolute appearance rates in isolation.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Can you track AI referral traffic in Google Analytics?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. AI platforms that send users to external sources — Perplexity being the most consistent — appear as referral traffic in GA4 under their respective domains (e.g. perplexity.ai). ChatGPT and Copilot referrals appear less predictably. Create a custom channel group in GA4 that captures known AI referral domains so you can segment and trend this traffic over time without manual filtering on every report.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How often should you run GEO measurement queries?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Run your full query set monthly as a minimum to establish a reliable trend line. After significant content updates or entity changes, run a focused re-measurement within two to four weeks to detect early movement. Automated monitoring tools can run queries more frequently, but monthly manual measurement is sufficient for most programmes in their first year.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What is sentiment scoring in GEO measurement?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Sentiment scoring in GEO measurement means reviewing how AI engines describe your brand when they cite it — not just whether they cite you. A citation that describes your company inaccurately or in a negative frame can be worse than no citation. Score each response on description accuracy (does the AI describe your offering correctly?) and framing (is the context positive, neutral, or negative?). This qualitative layer surfaces entity correction priorities that quantitative metrics alone will not reveal.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How does GEO measurement differ from traditional SEO reporting?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Traditional SEO reporting centres on keyword rankings and organic traffic, both of which are mechanically trackable via Google Search Console and analytics platforms. GEO measurement requires active query sampling — manually or programmatically prompting AI engines and recording responses — because there is no equivalent to GSC for AI citation data. GEO reporting is more labour-intensive to establish but generates richer signals about brand representation quality, not just traffic volume.'
+        }
+      }
+    ]
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'GEO Metrics', item: 'https://geooptimised.com/geo-metrics/' },
+      { '@type': 'ListItem', position: 3, name: 'How to Measure GEO', item: 'https://geooptimised.com/how-to-measure-geo/' }
+    ]
+  }
+];
+
+const tocItems = [
+  { id: 'why-measurement-matters', label: 'Why GEO Measurement Matters' },
+  { id: 'citation-frequency', label: 'Citation Frequency' },
+  { id: 'share-of-voice', label: 'Share of Voice' },
+  { id: 'ai-referral-traffic', label: 'AI Referral Traffic' },
+  { id: 'sentiment-accuracy', label: 'Sentiment & Accuracy' },
+  { id: 'tooling', label: 'Tooling' },
+  { id: 'measurement-framework', label: 'Measurement Framework' },
+  { id: 'faq', label: 'FAQ' },
+  { id: 'related', label: 'Related Reading' },
+];
+
+const metrics = [
+  {
+    name: 'Citation Frequency',
+    definition: 'How often your brand appears in AI responses to target queries',
+    why: 'Primary leading indicator of GEO programme effectiveness',
+    cadence: 'Monthly query sampling',
+    tool: 'Manual sampling or monitoring platform',
+  },
+  {
+    name: 'Share of Voice',
+    definition: 'Your citation count as a percentage of total citations across your query set',
+    why: 'Contextualises performance against competitors on the same queries',
+    cadence: 'Monthly alongside citation frequency',
+    tool: 'Competitive query sampling',
+  },
+  {
+    name: 'AI Referral Traffic',
+    definition: 'Sessions arriving from AI platform domains (e.g. perplexity.ai)',
+    why: 'Connects citation activity to business outcomes and conversion paths',
+    cadence: 'Weekly in GA4 dashboards',
+    tool: 'GA4 custom channel group',
+  },
+  {
+    name: 'Sentiment Score',
+    definition: 'Accuracy and framing of your brand in AI-generated descriptions',
+    why: 'Surfaces entity misrepresentation that quantitative metrics miss',
+    cadence: 'Monthly alongside citation sampling',
+    tool: 'Manual review, scored rubric',
+  },
+];
+
+const toolingRows = [
+  {
+    tool: 'GA4 + custom channel groups',
+    purpose: 'Track AI referral traffic, engagement, and conversion paths',
+    cost: 'Free',
+  },
+  {
+    tool: 'Perplexity / ChatGPT / Gemini (manual)',
+    purpose: 'Direct query sampling for citation frequency and sentiment review',
+    cost: 'Free or subscription tier',
+  },
+  {
+    tool: 'Dedicated GEO monitoring platforms',
+    purpose: 'Automated query sampling, trend tracking, competitor share of voice',
+    cost: 'Paid — see /geo-monitoring/ for evaluation criteria',
+  },
+  {
+    tool: 'Google Search Console',
+    purpose: 'Track AI Overviews impression data (where available) and organic correlation',
+    cost: 'Free',
+  },
+  {
+    tool: 'Spreadsheet scorecard',
+    purpose: 'Consolidate all metrics into a single monthly GEO report',
+    cost: 'Free',
+  },
+];
+
+const faqs = [
+  {
+    q: 'What is the most important metric for measuring GEO?',
+    a: 'Citation frequency — how often your brand is mentioned in AI-generated responses to your target queries — is the primary GEO metric. It is the most direct measure of whether your optimisation programme is working. Share of voice adds competitive context, and AI referral traffic connects citations to business outcomes, but citation frequency is the leading indicator you should track first.',
+  },
+  {
+    q: 'How do you measure GEO share of voice?',
+    a: 'GEO share of voice is measured by running a fixed set of target queries across your chosen AI platforms, recording which brands appear in each response, and calculating the percentage of responses in which your brand is cited. To make the metric meaningful, run the same queries against two or three key competitors so you can see relative position rather than absolute appearance rates in isolation.',
+  },
+  {
+    q: 'Can you track AI referral traffic in Google Analytics?',
+    a: 'Yes. AI platforms that send users to external sources — Perplexity being the most consistent — appear as referral traffic in GA4 under their respective domains. ChatGPT and Copilot referrals appear less predictably. Create a custom channel group in GA4 that captures known AI referral domains so you can segment and trend this traffic over time without manual filtering on every report.',
+  },
+  {
+    q: 'How often should you run GEO measurement queries?',
+    a: 'Run your full query set monthly as a minimum to establish a reliable trend line. After significant content updates or entity changes, run a focused re-measurement within two to four weeks to detect early movement. Automated monitoring tools can run queries more frequently, but monthly manual measurement is sufficient for most programmes in their first year.',
+  },
+  {
+    q: 'What is sentiment scoring in GEO measurement?',
+    a: 'Sentiment scoring in GEO measurement means reviewing how AI engines describe your brand when they cite it — not just whether they cite you. A citation that describes your company inaccurately or in a negative frame can be worse than no citation. Score each response on description accuracy and framing. This qualitative layer surfaces entity correction priorities that quantitative metrics alone will not reveal.',
+  },
+  {
+    q: 'How does GEO measurement differ from traditional SEO reporting?',
+    a: 'Traditional SEO reporting centres on keyword rankings and organic traffic, both trackable via Google Search Console and analytics platforms. GEO measurement requires active query sampling — manually or programmatically prompting AI engines and recording responses — because there is no equivalent to GSC for AI citation data. GEO reporting is more labour-intensive to establish but generates richer signals about brand representation quality, not just traffic volume.',
+  },
+];
+
+const related = [
+  {
+    tag: 'NODE',
+    title: 'GEO Metrics Hub',
+    excerpt: 'All measurement guides, KPI frameworks, and monitoring approaches for tracking AI citation performance.',
+    href: '/geo-metrics/',
+  },
+  {
+    tag: 'Guide',
+    title: 'GEO Monitoring: How to Track AI Citations',
+    excerpt: 'Platform-by-platform monitoring setup, tooling evaluation, and alert workflows for ongoing GEO tracking.',
+    href: '/geo-monitoring/',
+  },
+  {
+    tag: 'Guide',
+    title: 'AEO ROI: Proving the Business Case',
+    excerpt: 'How to connect AI citation activity to pipeline, revenue, and board-level metrics.',
+    href: '/aeo-roi/',
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  schema={schema}
+  canonical="https://geooptimised.com/how-to-measure-geo/"
+  ogType="article"
+>
+
+  <nav aria-label="Breadcrumb" class="container-wide pt-8">
+    <ol class="flex flex-wrap items-center gap-1.5 text-sm text-ink-300">
+      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
+      <li aria-hidden="true">/</li>
+      <li><a href="/geo-metrics/" class="transition hover:text-[var(--accent)]">GEO Metrics</a></li>
+      <li aria-hidden="true">/</li>
+      <li class="text-ink-200" aria-current="page">How to Measure GEO</li>
+    </ol>
+  </nav>
+
+  <section class="hero-fade">
+    <div class="container-wide pt-16 pb-14">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Measurement</span>
+        <span class="font-mono text-xs text-ink-300">7 June 2026</span>
+        <span class="font-mono text-xs text-ink-300">11 min read</span>
+      </div>
+      <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
+        How to Measure GEO
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink-200">
+        <strong class="text-white">Measuring GEO means tracking how often, how accurately, and with what sentiment AI engines cite your brand — not just whether clicks arrive.</strong> This guide covers the four core GEO metrics, how to capture each one, the tooling available at every budget, and a six-step measurement framework you can implement immediately. It applies equally to measuring AI optimization (the US-spelled variant of the same discipline) across ChatGPT, Perplexity, Gemini, Copilot, and Google AI Overviews.
+      </p>
+    </div>
+  </section>
+
+  <div class="container-wide py-12 lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+
+    <aside class="hidden lg:block">
+      <div class="sticky top-24">
+        <span class="eyebrow">On this page</span>
+        <nav class="toc mt-4 flex flex-col gap-0.5" id="toc-nav">
+          {tocItems.map(item => (
+            <a href={`#${item.id}`}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </aside>
+
+    <div>
+
+      <div class="card p-6 mb-12">
+        <span class="eyebrow">Key Takeaways</span>
+        <ul class="mt-4 space-y-2 text-sm text-ink-200">
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Citation frequency is the primary leading indicator — track how often your brand appears in AI responses to a fixed set of target queries.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Share of voice adds competitive context — run the same query set against key competitors and calculate your citation percentage relative to theirs.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>AI referral traffic in GA4 connects citations to business outcomes; Perplexity is the most reliably measurable AI traffic source today.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>Sentiment and accuracy scoring reveals whether AI engines describe your brand correctly — a citation with a wrong or negative description can be a liability.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
+            <span>A monthly scorecard consolidating all four metrics is sufficient for most programmes; automated monitoring tools add frequency, not fundamentally different data.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prose-dark">
+        <h2 id="why-measurement-matters" class="anchor-top">Why GEO Measurement Matters</h2>
+        <p>
+          <strong>Without a measurement system, GEO is an activity rather than a programme — and activities without metrics cannot be optimised, defended to stakeholders, or scaled confidently.</strong> Traditional SEO has Google Search Console, a free tool that surfaces keyword impressions, click-through rates, and ranking positions. No equivalent tool exists for AI citation tracking today. That gap does not make measurement impossible; it makes a structured manual approach the current best practice.
+        </p>
+        <p>
+          The four metrics that together constitute a complete GEO measurement picture are: citation frequency (are you being cited at all?), share of voice (are you cited more or less than competitors?), AI referral traffic (are citations driving measurable business activity?), and sentiment accuracy (are citations saying what you want them to say?). Each metric answers a different strategic question. Used together, they give a complete view of AI citation performance. For the broader metrics landscape, the <a href="/geo-metrics/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO metrics hub</a> covers every dimension in full.
+        </p>
+        <p>
+          The parent discipline — <a href="/generative-engine-optimisation/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">generative engine optimisation</a> — establishes why AI citations matter to the business. This guide is concerned with how to measure them.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="citation-frequency" class="anchor-top">Citation Frequency: The Primary Leading Indicator</h2>
+        <p>
+          <strong>Citation frequency measures how often your brand appears in AI-generated responses to a defined set of target queries — it is the most direct signal that your GEO programme is working.</strong> To measure it, you need a stable query set: a list of 20 to 50 questions that represent the queries your prospects actually submit to AI engines. These should span brand queries ("what is [your company]?"), category queries ("who are the leading [your category] agencies?"), and problem-framing queries ("how do I [problem you solve]?").
+        </p>
+        <p>
+          Run this query set across each AI platform you are targeting — at minimum ChatGPT, Perplexity, and Google AI Overviews — and record for each response whether your brand: (a) appears at all, (b) is cited as a named source, or (c) is absent. Record results in a spreadsheet. The percentage of responses in which your brand appears is your citation frequency score for that platform and query category. Run this monthly to build a trend line.
+        </p>
+        <p>
+          One important caveat: AI responses are not fully deterministic. Running the same query twice may produce different results. Reduce this variability by running each query three times per platform per session and taking the modal outcome (appeared or did not appear). This is sufficient for trend measurement; it is not a statistically perfect sample, and no current measurement approach is. Treat citation frequency as a directional indicator, not a precise census.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="share-of-voice" class="anchor-top">Share of Voice: Competitive Context for Citations</h2>
+        <p>
+          <strong>GEO share of voice is citation frequency placed in competitive context — it measures how your citation rate compares to competitors on the same queries, not just whether you appear in isolation.</strong> A citation frequency of 40 % on your target queries looks strong in isolation and weak if your primary competitor scores 75 % on the same set.
+        </p>
+        <p>
+          To measure share of voice: run your target query set and record every brand mentioned across all responses. Sum the total brand mentions across all responses, then calculate each brand's share as a percentage of that total. Your share of voice is your brand's percentage of all brand mentions in the response set. This approach captures both the frequency of your citations and the competitive density of each response — some AI answers cite one source, others cite five.
+        </p>
+        <p>
+          Share of voice is most useful when tracked against two or three direct competitors over time. An increasing share of voice on category queries is the clearest evidence that your GEO programme is compounding. A declining share, even when your absolute citation frequency is stable, indicates competitors are gaining ground faster than you. The <a href="/geo-monitoring/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO monitoring guide</a> covers how automated platforms handle competitive share tracking at scale.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="ai-referral-traffic" class="anchor-top">AI Referral Traffic: Connecting Citations to Business Outcomes</h2>
+        <p>
+          <strong>AI referral traffic is the downstream business signal that connects citation activity to measurable website visits, leads, and conversions — it is the metric that answers "is GEO driving revenue?" rather than "is GEO working?"</strong> Perplexity is currently the most reliable source of attributable AI referral traffic because it consistently sends users to source URLs with referral headers intact. ChatGPT, Gemini, and Copilot send referral traffic in lower and less consistent volumes, partly because their primary use cases do not always result in outbound clicks.
+        </p>
+        <p>
+          To capture AI referral traffic in GA4: create a custom channel group that defines a channel called "AI Referral" matching sessions where the source contains known AI platform domains — perplexity.ai, chat.openai.com, gemini.google.com, copilot.microsoft.com, and any others relevant to your programme. Apply this channel group to your standard acquisition reports. Track volume, engagement rate, pages per session, and goal completion rate for this segment. For the financial framing of what these sessions are worth, see the <a href="/aeo-roi/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">AEO ROI guide</a>.
+        </p>
+        <p>
+          AI referral traffic is currently a small percentage of total traffic for most brands. The correct framing is trajectory and conversion quality, not volume. AI-referred sessions consistently show high engagement rates because users who click through from an AI citation are pre-qualified — the AI has already named you as a relevant source for their specific query. Early data suggests AI-referred conversion rates often exceed those from organic search for the same pages.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="sentiment-accuracy" class="anchor-top">Sentiment and Accuracy: The Qualitative Dimension</h2>
+        <p>
+          <strong>Sentiment and accuracy scoring measures not just whether AI engines cite your brand, but whether they describe it correctly and favourably — a dimension that quantitative metrics entirely miss.</strong> An AI response that cites your company but describes it as operating in the wrong category, or positions it as a lower-tier option, is a worse outcome than no citation at all. This qualitative layer is essential for identifying entity correction priorities.
+        </p>
+        <p>
+          Score each citation response on two dimensions. First, description accuracy: does the AI describe your company's category, key services, and differentiators correctly? Flag any factual errors. Second, sentiment framing: is your brand positioned as a recommended choice, a neutral option, or a lower-preference alternative? Assign a three-point scale (positive / neutral / negative) and track the distribution monthly. A shift towards neutral or negative framing on previously positive queries is an early warning signal that a competitor's entity signals are outpacing yours.
+        </p>
+        <p>
+          Accuracy errors almost always trace to entity signal inconsistency — your company is described differently across your website, third-party directories, and structured data, so AI models synthesise a blended description that does not match any single authoritative source. The fix is entity consolidation, not content revision. For the monitoring workflow that catches these issues at scale, see <a href="/geo-monitoring/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO monitoring</a>.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="tooling" class="anchor-top">Tooling for GEO Measurement</h2>
+        <p>
+          <strong>Effective GEO measurement does not require expensive specialist tooling — a well-structured manual process using free platforms is sufficient to get started and establish your baseline.</strong> The table below maps each measurement task to the appropriate tool and indicative cost, from free manual approaches to paid monitoring platforms.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Tool</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Primary Purpose</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Cost Indicator</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[var(--line)]">
+            {toolingRows.map(row => (
+              <tr class="transition hover:bg-white/[.02]">
+                <td class="px-4 py-3 font-semibold text-white">{row.tool}</td>
+                <td class="px-4 py-3 text-ink-300">{row.purpose}</td>
+                <td class="px-4 py-3 text-ink-300">{row.cost}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          Dedicated GEO monitoring platforms automate the query-sampling process and provide dashboards for citation frequency trends, competitive share of voice, and alert workflows. They are worth evaluating once your manual measurement process is established and you understand which metrics matter most for your programme. Starting with a monitoring platform before understanding your baseline metrics often leads to data overload rather than insight. For a guide to evaluating these platforms, see <a href="/geo-tools/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">GEO tools</a>.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="measurement-framework" class="anchor-top">The GEO Measurement Framework: Six Steps</h2>
+        <p>
+          <strong>A repeatable GEO measurement framework is a six-step cycle that runs monthly, produces a single consolidated scorecard, and generates clear optimisation priorities for the following period.</strong> The steps below are sequenced for implementation — complete each before moving to the next when setting up for the first time.
+        </p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto rounded-xl border hair">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b hair bg-white/[.03]">
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Step</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Action</th>
+              <th scope="col" class="px-4 py-3 text-left font-semibold text-white">Output</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[var(--line)]">
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-mono text-xs text-[var(--accent)]">1</td>
+              <td class="px-4 py-3 font-semibold text-white">Define your query set</td>
+              <td class="px-4 py-3 text-ink-300">20–50 queries across brand, category, and problem-framing intent; stable and reused each month</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-mono text-xs text-[var(--accent)]">2</td>
+              <td class="px-4 py-3 font-semibold text-white">Run citation sampling</td>
+              <td class="px-4 py-3 text-ink-300">Citation frequency per platform and query category; raw response log for sentiment review</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-mono text-xs text-[var(--accent)]">3</td>
+              <td class="px-4 py-3 font-semibold text-white">Calculate share of voice</td>
+              <td class="px-4 py-3 text-ink-300">Your brand's citation share versus key competitors on the same query set</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-mono text-xs text-[var(--accent)]">4</td>
+              <td class="px-4 py-3 font-semibold text-white">Pull AI referral traffic</td>
+              <td class="px-4 py-3 text-ink-300">Session volume, engagement rate, and conversions from GA4 AI Referral channel group</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-mono text-xs text-[var(--accent)]">5</td>
+              <td class="px-4 py-3 font-semibold text-white">Score sentiment and accuracy</td>
+              <td class="px-4 py-3 text-ink-300">Description accuracy flags, sentiment distribution, entity correction priorities</td>
+            </tr>
+            <tr class="transition hover:bg-white/[.02]">
+              <td class="px-4 py-3 font-mono text-xs text-[var(--accent)]">6</td>
+              <td class="px-4 py-3 font-semibold text-white">Consolidate and act</td>
+              <td class="px-4 py-3 text-ink-300">Monthly GEO scorecard; prioritised list of content and entity interventions for the next period</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="prose-dark mt-8">
+        <p>
+          The scorecard produced in step six should be a single document — typically a spreadsheet — that records all four metrics month-over-month alongside a brief annotation of any interventions made. This running record is essential for attributing metric movements to specific actions. Without it, you cannot determine whether a citation frequency increase was driven by a content update, an entity schema change, or an external factor such as a model update. If you would like GEOoptimised to run this framework on your behalf, <a href="/contact/" class="text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300">contact us</a> for details.
+        </p>
+      </div>
+
+      <div class="prose-dark mt-16">
+        <h2 id="faq" class="anchor-top">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="mt-8 space-y-2" id="faq-accordion">
+        {faqs.map(faq => (
+          <div class="card overflow-hidden">
+            <button
+              type="button"
+              class="flex w-full items-center justify-between p-5 text-left text-sm font-semibold text-white transition hover:bg-white/[.02]"
+              aria-expanded="false"
+            >
+              <span>{faq.q}</span>
+              <span class="faq-icon ml-4 shrink-0 text-[var(--accent)] transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-body max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+              <p class="px-5 pb-5 text-sm leading-relaxed text-ink-300">{faq.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-16" id="related">
+        <span class="eyebrow">Related reading</span>
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          {related.map(item => (
+            <a href={item.href} class="card card-hover block p-5 no-underline">
+              <span class="eyebrow">{item.tag}</span>
+              <h3 class="mt-2 font-display text-base font-semibold text-white">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink-300">{item.excerpt}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm text-[var(--accent)]">Read article <span aria-hidden="true">&rarr;</span></span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="relative border-t hair mt-12 overflow-hidden">
+    <div class="dot-grid absolute inset-0 opacity-40" aria-hidden="true"></div>
+    <div class="container-wide relative py-20 text-center">
+      <h2 class="font-display text-3xl font-bold grad-text md:text-4xl">Set Up Your GEO Measurement System</h2>
+      <p class="mx-auto mt-5 max-w-xl text-ink-300 leading-relaxed">
+        We establish your citation frequency baseline, configure your GA4 AI referral tracking, and deliver your first monthly GEO scorecard — so you have real data to act on from day one.
+      </p>
+      <div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a href="/contact/" class="btn btn-primary">Talk to us about measurement</a>
+        <a href="/geo-monitoring/" class="btn btn-ghost">Explore GEO monitoring</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const faqBtns = document.querySelectorAll('#faq-accordion button');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement;
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        if (open) {
+          body.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          body.style.maxHeight = body.scrollHeight + 'px';
+          icon.style.transform = 'rotate(45deg)';
+        }
+      });
+    });
+
+    const tocLinks = document.querySelectorAll('#toc-nav a');
+    const headings = Array.from(
+      document.querySelectorAll('h2[id], h3[id]')
+    ) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(link => {
+              link.classList.remove('text-[var(--accent)]');
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.classList.add('text-[var(--accent)]');
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+
+    headings.forEach(h => observer.observe(h));
+  </script>
+
+</Base>
