@@ -68,10 +68,16 @@ NODE_VERSION=22. The `cfut_143…` CF token in master-builds is **dead**; rely o
 source, sample, reproduction note), independently linkable at `/evidence/#<id>`, emitted as `ClaimReview`
 JSON-LD on `/evidence/`.
 
-**Design:** "the scientific register". Paper-light default (`--bg: #FBFAF7`), ink, Source Serif 4
-headings, Source Sans 3 body, IBM Plex Mono for every number. Colour is reserved for evidence grades and
-is never the only signal. Restrained dark variant via `prefers-color-scheme`. Deliberately unlike the
-dark-navy-and-cyan look of every AI SaaS site, including this site's own previous theme.
+**Design:** the original dark system, kept by Sunny's explicit call ("content is better, design was
+better before"). Navy `--bg: #0A0F1E`, cyan `--accent: #00E5CC`, Space Grotesk display, Inter body,
+JetBrains Mono for every number. Hero glow (`.hero-fade`), background grid (`.bg-grid`), glass nav,
+`.card` / `.btn-primary`. A paper-and-serif "scientific register" variant was built and rejected; do not
+reintroduce it.
+
+**Pages style themselves through CSS variables**, so a skin swap is a token change in `global.css`, not
+a markup rewrite. Note `--font-serif` is deliberately mapped to Space Grotesk so existing `font-serif`
+headings resolve to the display face. Evidence grades are retuned for the dark ground and are **never
+colour-alone**: every badge carries its text label.
 
 ## Live routes (11 + 404)
 
