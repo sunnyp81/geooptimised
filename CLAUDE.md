@@ -69,7 +69,7 @@ Pages via GitHub push (`sunnyp81/geooptimised`, branch `master`). Build `npm run
 NODE_VERSION=22. The `cfut_143…` CF token in master-builds is **dead**; rely on the git-push auto-build.
 
 **Data is the product.** Three JSON files drive the site; the pages are views over them:
-- `src/data/claims.json` - 13 graded claims. Six grades: VERIFIED, REFUTED, MISLEADING, DIRECTIONAL,
+- `src/data/claims.json` - 19 graded claims (growing; `/reproduction/` derives its headline from the count). Six grades: VERIFIED, REFUTED, MISLEADING, DIRECTIONAL,
   UNREPRODUCED, UNTRACEABLE. Plus a `VENDOR-INTERESTED` flag.
 - `src/data/tools.json` - 16 tools, verified pricing, verified affiliate terms, `provenance` per fact,
   and `ourEnrolment`. **11 pay a commission, 5 pay nothing** (Ahrefs, Screaming Frog, Clearscope,
@@ -112,13 +112,25 @@ restored as-is.**
   but had no source file; the soft-404 made them look fine. Now 301'd.
 - **`llms.txt` described an agency.** Rewritten to state the entity, the grading scale, and the findings.
 
-## The original-data engine: geooptimised owns measurement
+## The original-data engine: PRIMARY is the key-free reproduction study
 
-**Decided by Sunny, 2026-07-10.** This section supersedes the earlier "SUPERSEDED, DO NOT RUN, pending
-Sunny" note, which proposed that `sourcedbyai.com` produce the primary distributions instead. Sunny's
-instruction was to do the work here and leave `sourcedbyai` alone. That repo stays parked and untouched:
-it has no GitHub remote, its domain still points at a Spaceship parking page, and nothing in it runs.
-Two sites cannot both own measurement, and only one of them is going to be live.
+**The live original-data engine is `/reproduction/`, and it needs no API keys, no cost, and nothing from
+Sunny.** It is the study nobody in the field runs: take the statistics AI-search marketing repeats most,
+go to each primary source by hand (WebSearch + WebFetch), and publish how many reproduce. `reproduction.astro`
+computes its headline from `src/data/claims.json` at build time, so **the study grows every time a claim is
+audited** — the way to grow it is to add verified claims, not to run a harness.
+
+As of 19 claims: ~26% survive as circulated, ~21% have no locatable source, ~47% misrepresent or are
+contradicted by a real source. **Never hardcode these percentages in prose** — `/reproduction/` and the
+homepage derive them. The hard rule when adding a claim: reach the primary source yourself and fetch it;
+never ingest a research agent's summary as if it were verified (rules 1 and 2).
+
+### Secondary (optional, key-gated): the LLM measurement harnesses
+
+The LLM harnesses below would ADD a second kind of original data if keys ever appear, but the site no
+longer waits on them. They are an enhancement, not a blocker. `sourcedbyai.com` stays parked and untouched
+(no remote, domain on a Spaceship parking page); Sunny decided geooptimised owns measurement, and two sites
+cannot both own it.
 
 **Two harnesses. Two different quantities. Never conflate them (rule 8).**
 
