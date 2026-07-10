@@ -1,0 +1,256 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'The grounding clause: two AI engines forbid the evidence base everyone is building';
+const description =
+  'Google’s Gemini grounding terms prohibit "using Links to build an index". Microsoft’s Bing grounding terms prohibit "creating a database of Output". Both clauses are quoted here in full. They constrain what any AI citation dataset, including ours, can lawfully cover.';
+
+const faq = [
+  {
+    q: 'Can you legally build an index of the sources Gemini cites?',
+    a: 'Not through Google’s Grounding with Google Search API. Its Additional Terms of Service, effective 23 March 2026, state that it is a violation "to use Grounding with Google Search to extract or collect one or more of these components for another purpose (for example, using programmatic or automated means to collect Links, using Links to build an index, or using Links to identify destination pages for crawling or scraping)". The same clause separately forbids caching, analysing or syndicating Grounded Results.',
+  },
+  {
+    q: 'Do Microsoft’s Bing grounding terms allow a citation database?',
+    a: 'No. Section 4(b)(o) of the Grounding with Bing Search terms, last updated November 2025, prohibits you from "Copy, store, cache, archive, or create a database of Output." Section 4(b)(g) separately prohibits using the service "to create a database or service that competes with Output received when using the Services".',
+  },
+  {
+    q: 'Which AI engines can lawfully be used to measure citations?',
+    a: 'Perplexity, OpenAI and Anthropic each return real publisher URLs through a documented API field, and none of their public terms contains an equivalent clause forbidding index building. Google AI Overviews, the largest AI answer surface by reach, has no official API at all.',
+  },
+  {
+    q: 'Does this mean published Gemini and Copilot citation tables are unlawful?',
+    a: 'No, and we are not saying that. It means those tables were not built using the grounding APIs. They came from somewhere else: a rendered browser session, a scraped result page, a licensed panel, or a data partnership. Which one is not a footnote, because it determines whether the numbers describe the product a user sees or an API that approximates it.',
+  },
+];
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'The grounding clause: two AI engines forbid the evidence base everyone is building',
+    description,
+    datePublished: '2026-07-10',
+    dateModified: '2026-07-10',
+    author: { '@type': 'Person', '@id': 'https://geooptimised.com/#sunny-patel', name: 'Sunny Patel' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' },
+    citation: [
+      { '@type': 'CreativeWork', name: 'Gemini API Additional Terms of Service', url: 'https://ai.google.dev/gemini-api/terms' },
+      { '@type': 'CreativeWork', name: 'Grounding with Bing Search legal terms', url: 'https://www.microsoft.com/en-us/bing/apis/grounding-legal' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map(f => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'The grounding clause' },
+    ],
+  },
+];
+
+const engines = [
+  { engine: 'Anthropic, web_search', urls: 'Real publisher URLs', index: 'No prohibition found', usable: true },
+  { engine: 'Perplexity, Sonar', urls: 'Real publisher URLs', index: 'No prohibition found', usable: true },
+  { engine: 'OpenAI, web_search', urls: 'Real URLs, plus everything consulted', index: 'No prohibition found', usable: true },
+  { engine: 'Google Gemini, Search grounding', urls: 'Redirect URLs only', index: 'Explicitly forbidden', usable: false },
+  { engine: 'Microsoft Bing grounding', urls: 'Real publisher URLs', index: 'Explicitly forbidden', usable: false },
+  { engine: 'Google AI Overviews', urls: 'No API exists', index: 'Not applicable', usable: false },
+];
+---
+
+<Base title={title} description={description} schema={schema} ogType="article">
+  <article>
+    <header class="wrap pt-14 pb-10">
+      <nav aria-label="Breadcrumb" class="data text-[0.7rem] uppercase tracking-widest mb-6" style="color: var(--muted);">
+        <a href="/">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text);">The grounding clause</span>
+      </nav>
+      <h1 class="font-display font-bold text-[2.2rem] sm:text-[3rem] leading-[1.06] max-w-[22ch]">
+        The grounding clause
+      </h1>
+      <p class="mt-6 max-w-[64ch] text-[1.12rem]" style="color: var(--text-soft);">
+        Two of the largest AI search engines contractually forbid the exact thing an AI citation dataset
+        must do. Google prohibits <em>"using Links to build an index"</em>. Microsoft prohibits
+        <em>"creating a database of Output"</em>. Both clauses are reproduced below in full, with their
+        effective dates. They are why this site measures three engines and not five, and they are why
+        anybody quoting Gemini or Copilot citation shares owes you an answer about where the data came from.
+      </p>
+      <p class="data mt-6 text-[0.72rem] uppercase tracking-widest" style="color: var(--muted);">
+        Primary sources read 10 July 2026
+      </p>
+    </header>
+
+    <hr class="rule" />
+
+    <div class="wrap prose-wrap copy pb-16">
+      <h2>What Google's terms say</h2>
+
+      <p>
+        Grounding with Google Search is the Gemini API feature that answers from live web results and
+        returns the sources it used. It is the obvious instrument for measuring what Gemini cites. The
+        Gemini API Additional Terms of Service, effective 23 March 2026, close that door twice.
+      </p>
+
+      <p>First, on who is allowed to see the results:</p>
+
+      <blockquote>
+        You will only use Grounding with Google Search in an application that is owned and operated by
+        you and will only display the Grounded Results with the associated Search Suggestion(s) to the
+        end user who submitted the prompt.
+      </blockquote>
+
+      <p>
+        A public evidence base is, by construction, read by people who did not submit the prompt. Then,
+        on what may be done with the links themselves:
+      </p>
+
+      <blockquote>
+        You will not, and will not allow your end user or any third party to, cache, frame, syndicate,
+        resell, analyze, train on, or otherwise learn from Grounded Results or Search Suggestions. For
+        clarity, Grounded Results, Search Suggestions, and Links are intended to be used in combination
+        to respond to a given end user prompt and it is a violation of these terms to use Grounding with
+        Google Search to extract or collect one or more of these components for another purpose (for
+        example, using programmatic or automated means to collect Links,
+        <strong>using Links to build an index</strong>, or using Links to identify destination pages for
+        crawling or scraping).
+      </blockquote>
+
+      <p>
+        Collecting links by automated means. Building an index from them. Analysing them. Each is named
+        separately. That is not an accidental overlap with what a citation dataset does. It is a
+        description of one.
+      </p>
+
+      <p class="data text-[0.78rem]" style="color: var(--muted);">
+        Source:
+        <a class="link" href="https://ai.google.dev/gemini-api/terms" rel="nofollow noopener">ai.google.dev/gemini-api/terms</a>,
+        effective 23 March 2026, read 10 July 2026.
+      </p>
+
+      <h2>What Microsoft's terms say</h2>
+
+      <p>
+        Microsoft's equivalent is Grounding with Bing Search, the route to Copilot-style answers with
+        citations. Its terms, last updated November 2025, are shorter and blunter.
+      </p>
+
+      <blockquote>Copy, store, cache, archive, or create a database of Output.</blockquote>
+
+      <p>That is Section 4(b)(o), in the list of things you will not do. Section 4(b)(g) adds:</p>
+
+      <blockquote>
+        Use the Services to create a database or service that competes with Output received when using
+        the Services.
+      </blockquote>
+
+      <p>
+        There is a display obligation too, which matters to anyone planning to redraw citations as a
+        chart: <em>"You must retain the links and attributions to References in the Output without
+        modification, including without limitation retaining the location, description, and linking of
+        the Resources."</em>
+      </p>
+
+      <p class="data text-[0.78rem]" style="color: var(--muted);">
+        Source:
+        <a class="link" href="https://www.microsoft.com/en-us/bing/apis/grounding-legal" rel="nofollow noopener">microsoft.com/en-us/bing/apis/grounding-legal</a>,
+        last updated November 2025, read 10 July 2026.
+      </p>
+
+      <h2>Which engines are left</h2>
+
+      <div class="table-scroll">
+        <table class="ledger-table">
+          <caption class="sr-only">AI engines by citation availability and terms of service posture</caption>
+          <thead>
+            <tr>
+              <th scope="col">Engine</th>
+              <th scope="col">Returns real cited URLs</th>
+              <th scope="col">Index building permitted</th>
+              <th scope="col">Usable for an evidence base</th>
+            </tr>
+          </thead>
+          <tbody>
+            {engines.map(e => (
+              <tr>
+                <td>{e.engine}</td>
+                <td>{e.urls}</td>
+                <td style={e.usable ? '' : 'color: var(--g-refuted);'}>{e.index}</td>
+                <td class="data" style={`color: var(--${e.usable ? 'g-verified' : 'g-refuted'});`}>
+                  {e.usable ? 'Yes' : 'No'}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p class="data mt-3 text-[0.75rem]" style="color: var(--muted);">
+        "No prohibition found" describes the public terms we read on 10 July 2026. It is not legal advice
+        and not a warranty that no such clause exists elsewhere in a provider's agreements.
+      </p>
+
+      <h2>The asymmetry this creates</h2>
+
+      <p>
+        The engines a lawful public dataset may measure are close to the inverse of the engines that
+        matter most by reach. Anyone may publish what Perplexity cites. Nobody may publish what Gemini
+        cites by using Gemini's own grounding API. Google AI Overviews, larger than the three permitted
+        engines combined, offers no interface at all.
+      </p>
+
+      <p>
+        Published tables of "most cited domains in Gemini" and "in Copilot" nevertheless exist. They were
+        therefore produced some other way. We are not accusing anyone of anything, and we have not audited
+        how any specific vendor sources its data. We are saying the question has an answer, the answer
+        changes what the numbers mean, and almost nobody states it.
+      </p>
+
+      <p>
+        So when you read an AI citation study, the useful question is not how large the sample was. It is
+        <strong>which interface produced this, and were you permitted to keep it?</strong>
+      </p>
+
+      <h2>What it means for this site</h2>
+
+      <p>
+        We measure Perplexity, OpenAI and Anthropic. We do not query Gemini's or Bing's grounding APIs.
+        We do not scrape Google AI Overviews. Our answer-volatility harness calls Gemini's plain
+        <code>generateContent</code> endpoint with no search tool attached, so it returns the model's own
+        output rather than Grounded Results, and the clause above does not reach it.
+      </p>
+
+      <p>
+        The cost is real and we would rather state it in advance than have it found later: our citation
+        coverage understates Google, the largest AI answer surface in the world. Every citation figure we
+        publish carries that limitation. So should everyone else's.
+      </p>
+
+      <hr class="rule" />
+
+      <h2>Questions</h2>
+      {faq.map(f => (
+        <>
+          <h3>{f.q}</h3>
+          <p>{f.a}</p>
+        </>
+      ))}
+
+      <hr class="rule" />
+
+      <p class="data text-[0.78rem]" style="color: var(--muted);">
+        Terms change. Google's general terms were scheduled to update on 30 July 2026. Read the primary
+        sources yourself before you build anything. If either clause changes, tell us and we will log the
+        change in <a class="link" href="/corrections/">corrections</a>.
+      </p>
+    </div>
+  </article>
+</Base>

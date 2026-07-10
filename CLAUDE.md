@@ -44,6 +44,21 @@ niche's most-quoted statistics have no traceable source.
 5. **No display advertising. No sponsored placements. No GEO services page.** Commercial GEO intent
    belongs to sunnypatel.co.uk. Duplicating it is what failed the gate.
 6. **No em dashes, no en dashes, no emojis. British English.** "to" not "through" for date ranges.
+7. **Never call Gemini or Bing *grounding* to collect citations.** Google's Grounding with Google Search
+   terms (effective 2026-03-23) forbid "using Links to build an index" and separately forbid caching or
+   analysing Grounded Results. Microsoft's Grounding with Bing Search terms, Section 4(b)(o) (updated
+   2025-11), forbid "Copy, store, cache, archive, or create a database of Output". `scripts/citation-run.mjs`
+   has a runtime guard that throws on `gemini`, `bing`, `copilot` and `azure`. Do not remove it. Verbatim
+   quotes and primary sources are on `/the-grounding-clause/`.
+   Note the boundary: `scripts/volatility-run.mjs` calls Gemini's plain `generateContent` with no search
+   tool attached, so it returns the model's own output rather than Grounded Results. That is lawful, and
+   it must stay that way. The moment a `tools` block is added to that call, the clause bites.
+8. **Brand names and cited source domains are different quantities. Never conflate them.**
+   `volatility-run.mjs` measures which brands a model utters from its weights, with no retrieval.
+   `citation-run.mjs` measures which source domains an engine cites when it does retrieve. Four claims in
+   `claims.json` are about citations, so only `citation-run.mjs` can reproduce them. Citation output is
+   stochastic, so every figure it emits carries a 95% interval and a run count, plus a per-engine Jaccard
+   stability score. A citation figure without an interval does not get published.
 7. **The volatility harness measures model APIs, not chatgpt.com.** Label it "cross-model API
    disagreement". Never "ChatGPT volatility".
 

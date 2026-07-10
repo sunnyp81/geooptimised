@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-10T14:44:35.928Z",
+  "measures": "cited source domains, not brand names",
+  "repeats": 20,
+  "prompts": [
+    "geo-definition",
+    "ai-visibility-measure",
+    "llms-txt",
+    "aio-vs-rank"
+  ],
+  "engines": [],
+  "status": "no-data",
+  "note": "Dry run. No API calls were made and no data was invented."
+}
