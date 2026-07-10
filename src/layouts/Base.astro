@@ -43,7 +43,15 @@ const siteName = 'GEOoptimised';
       ? schema.map(s => <script type="application/ld+json" set:html={JSON.stringify(s)} />)
       : <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   )}
-</head>
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8XDLBZ372Q"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8XDLBZ372Q');
+    </script>
+  </head>
 <body>
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 btn btn-primary">Skip to content</a>
   <Header />
