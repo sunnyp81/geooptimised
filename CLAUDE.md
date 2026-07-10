@@ -91,12 +91,20 @@ restored as-is.**
   but had no source file; the soft-404 made them look fine. Now 301'd.
 - **`llms.txt` described an agency.** Rewritten to state the entity, the grading scale, and the findings.
 
-## The original-data engine
+## The original-data engine — 🔴 SUPERSEDED, DO NOT RUN
 
-`scripts/volatility-run.mjs` + `data/prompts.json` (pre-registered before any run). 360 calls, ~$0.54 per
-full run, ~$2.20/month weekly. `MAX_CALLS=400`, `MAX_EST_USD=1.0`, dry-run by default, no public endpoint.
-**Blocked on Sunny supplying `OPENAI_API_KEY` / `ANTHROPIC_API_KEY` / `GEMINI_API_KEY`.** Do not ship a
-`/volatility/` page until four weekly runs exist.
+`scripts/volatility-run.mjs` + `data/prompts.json` exist and dry-run cleanly (360 calls, ~$0.54/run,
+`MAX_CALLS=400`, `MAX_EST_USD=1.0`, dry-run default, no public endpoint).
+
+**Do not enable it.** A sibling site, `sourcedbyai.com` (`C:\Users\sunny\repos\sourcedbyai`), was built the
+same day with exactly this USP ("every figure is a distribution from repeated runs, variance published"),
+already has a harness, and is blocked on the same API keys. Its dossier recommended publishing the panel
+here instead. Running both duplicates the spend and cannibalises the portfolio.
+
+Recommended split, pending Sunny: **sourcedbyai produces the primary distributions; geooptimised grades
+published claims (including theirs), reviews tools, and discloses what each pays us.** Note that
+sourcedbyai's footer disclosure ("the author runs a GEO agency") and its dossier's premise (that
+geooptimised sells a £750-6,000/mo retainer) are both now false. Nothing spends money until keys exist.
 
 ## Blocked on Sunny
 

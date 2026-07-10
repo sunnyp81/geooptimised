@@ -47,7 +47,30 @@ product.
 
 Retired pages sit in `_retired/` with 301s in `public/_redirects`. They are rewritten, never restored.
 
-## The original-data engine
+## The original-data engine — SUPERSEDED, DO NOT RUN, PENDING SUNNY'S DECISION
+
+🔴 **Discovered after this harness was written:** a parallel session on the same day built
+`sourcedbyai.com` (repo `C:\Users\sunny\repos\sourcedbyai`), whose entire USP is *"every figure is a
+distribution from repeated runs, variance published"*. It already has a measurement harness, built and
+dry-run verified, and it is **blocked on the same API keys**. Its own dossier recommended publishing the
+measurement panel on geooptimised.com instead, and it permanently scope-cut its tool reviews to avoid
+cannibalising this site.
+
+Running both is duplicate spend and portfolio cannibalisation, which is gate criterion 6. Nothing spends
+money until Sunny adds keys, so there is no urgency, but **do not enable `scripts/volatility-run.mjs`
+until the split is decided.** The recommended split:
+
+- **sourcedbyai.com** owns *primary measurement*: it produces the distributions. No vendor reviews, no
+  affiliate.
+- **geooptimised.com** owns *grading and disclosure*: it grades published claims, including sourcedbyai's,
+  reviews tools, and publishes what each pays us.
+
+Note also that sourcedbyai's mandatory footer disclosure says "the author runs a GEO agency", and its
+dossier assumes geooptimised sells a £750-6,000/mo retainer. **Both are now false.** That site's
+differentiation FAIL was reasoned partly from geooptimised's old `/geo-tools/` page, which is now 301'd.
+Its dossier needs revisiting in light of this pivot.
+
+### The harness itself, if the split lands here
 
 `scripts/volatility-run.mjs` runs a pre-registered prompt set (`data/prompts.json`, committed before
 any run so prompts cannot be selected after seeing results) against three model APIs, and writes
