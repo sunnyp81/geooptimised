@@ -145,7 +145,9 @@ ever launched, that article comes down there first.
 
 ## Blocked on Sunny
 
-1. API keys for the volatility harness (above).
+1. API keys for both harnesses (above). `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `PERPLEXITY_API_KEY` for
+   `citation-run.mjs`; add `GEMINI_API_KEY` for `volatility-run.mjs` only, which uses plain
+   `generateContent` with no search tool and is therefore lawful. About $2.75 per citation run.
 2. `[MANUAL]` LinkedIn URL for `Person` schema `sameAs`. Do not invent one.
 3. `[MANUAL]` Decide whether `sunnypatel.co.uk` becomes a `sameAs`. Commit `d860537` deliberately removed
    a commercial cross-link to reduce footprint. **Default: off.**
