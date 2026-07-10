@@ -8,7 +8,7 @@ const description =
 const faq = [
   {
     q: 'Can you legally build an index of the sources Gemini cites?',
-    a: 'Not through Google’s Grounding with Google Search API. Its Additional Terms of Service, effective 23 March 2026, state that it is a violation "to use Grounding with Google Search to extract or collect one or more of these components for another purpose (for example, using programmatic or automated means to collect Links, using Links to build an index, or using Links to identify destination pages for crawling or scraping)". The same clause separately forbids caching, analysing or syndicating Grounded Results.',
+    a: 'Not through Google’s Grounding with Google Search API. Its Additional Terms of Service, effective 23 March 2026, state that it is a violation "to use Grounding with Google Search to extract or collect one or more of these components for another purpose (for example, using programmatic or automated means to collect Links, using Links to build an index, or using Links to identify destination pages for crawling or scraping)". The same clause separately forbids caching, analysing or syndicating Grounded Results, subject to limited exceptions that let a developer store Grounded Result text for up to two years for display optimisation, chat history, or temporary resubmission. None of those exceptions permits publishing an index built from the Links.',
   },
   {
     q: 'Do Microsoft’s Bing grounding terms allow a citation database?',
@@ -91,7 +91,7 @@ const engines = [
 
     <hr class="rule" />
 
-    <div class="wrap prose-wrap copy pb-16">
+    <div class="prose-wrap copy pb-16">
       <h2>What Google's terms say</h2>
 
       <p>
@@ -128,6 +128,15 @@ const engines = [
         Collecting links by automated means. Building an index from them. Analysing them. Each is named
         separately. That is not an accidental overlap with what a citation dataset does. It is a
         description of one.
+      </p>
+
+      <p>
+        One caveat, stated because the clause is not absolute and we would rather give you the whole thing
+        than the convenient half of it. Google's terms carry limited storage exceptions: a developer may
+        retain Grounded Result text for up to two years for display optimisation, for chat history, or
+        temporarily in order to resubmit it for refined results. None of those exceptions permits
+        publishing an index built from the Links, which is the specific act named above and the specific
+        act a public citation dataset requires.
       </p>
 
       <p class="data text-[0.78rem]" style="color: var(--muted);">

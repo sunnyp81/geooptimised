@@ -55,7 +55,7 @@ finding that demolishes a popular claim makes that claim `REFUTED`, not `VERIFIE
 was added on 2026-07-10 after the first draft of the taxonomy graded a false claim `VERIFIED`
 because we had verified the study disproving it. Logged in `corrections.json`.
 
-Orthogonal flag, applied on top of any grade: `VENDOR-INTERESTED` — the publisher sells a product
+Orthogonal flag, applied on top of any grade: `VENDOR-INTERESTED` - the publisher sells a product
 whose value the finding supports. Not disqualifying. Always disclosed.
 
 **The site's own rule, published openly:** we apply these grades to ourselves. When we get one wrong,
@@ -95,8 +95,8 @@ sceptical quote gathered. This site cannot be faceless.
   including when it contradicts him. GEOoptimised exists because he could not verify the numbers he
   kept being asked to repeat.
 - **sameAs:**
-  - `[MANUAL]` LinkedIn profile URL — needed for Person schema. Not invented here.
-  - `[MANUAL — DECISION FOR SUNNY]` whether to add `https://sunnypatel.co.uk` as a `sameAs`.
+  - `[MANUAL]` LinkedIn profile URL - needed for Person schema. Not invented here.
+  - `[MANUAL - DECISION FOR SUNNY]` whether to add `https://sunnypatel.co.uk` as a `sameAs`.
     Commit `d860537` deliberately stripped a commercial body-link to sunnypatel.co.uk to reduce
     footprint under the June 2026 spam update. A Person-schema `sameAs` is entity corroboration
     rather than a commercial link, and is the strongest available signal, but it does associate the
@@ -114,30 +114,32 @@ sceptical quote gathered. This site cannot be faceless.
 
 ## Visual direction (from /design)
 
-The entire AI-marketing category looks identical: near-black navy, cyan or violet glow, Inter,
-gradient orbs. The current site is exactly that (`--bg: #0A0F1E`, `--accent: #00E5CC`). Looking like
-the vendors is fatal for a site whose product is *not being one of them*.
+**Decided by Sunny on 2026-07-10: "content is better, design was better before."** The original dark
+system is canonical. A paper-and-serif "scientific register" variant was built, reviewed and rejected.
+Do not reintroduce it.
 
-- **Direction:** the scientific register. A ledger, a lab notebook, a court record. Printed evidence,
-  not a dashboard.
-- **Palette:** paper-light by default (the opposite of the category), ink-black text, and a semantic
-  grade palette that is the only saturated colour on the page. Green `VERIFIED`, amber
-  `DIRECTIONAL`, orange `UNREPRODUCED`, red `UNTRACEABLE`, purple `MISLEADING`, plus a neutral
-  `VENDOR-INTERESTED` flag. Colour carries meaning here; it is never decoration. Grades must never
-  rely on colour alone (WCAG): each carries a text label.
-- **Type:** a serif for headings (publication authority, not SaaS). A monospace for every number,
-  grade, source and sample size, so data is visually distinct from prose. A neutral sans for body.
-- **Layout signature (the one move this site owns):** **the Claim Card** — a bordered, stamped record
-  showing the claim, its grade, the primary source with sample size and date, and a one-line
-  reproduction note. It renders identically wherever it appears, is independently linkable and
-  quotable, and is marked up as a `Claim`/`ClaimReview`-style JSON-LD object so an LLM can lift it
-  whole. The evidence ledger is a page of these. Every content page embeds the ones it relies on.
-- **Must NOT resemble:** its own current dark-navy/cyan theme; `sunnypatel-nextjs`;
-  `agenticai-associates`; and above all the tools it reviews.
+- **Direction:** the original dark navy and cyan system, carrying the evidence-ledger architecture.
+- **Palette:** `--bg: #0A0F1E`, `--accent: #00E5CC`, amber secondary `#F5A623`. Hero glow
+  (`.hero-fade`), background grid (`.bg-grid`), glass nav (`.nav-glass`).
+- **Grade palette, retuned for the dark ground:** green `VERIFIED`, red `REFUTED`, purple `MISLEADING`,
+  blue `DIRECTIONAL`, amber `UNREPRODUCED`, grey `UNTRACEABLE`, plus a neutral `VENDOR-INTERESTED` flag.
+  Colour carries meaning; it is never decoration. **Grades never rely on colour alone (WCAG): each
+  badge carries its text label.**
+- **Type:** Space Grotesk display, Inter body, JetBrains Mono for every number, grade, source and
+  sample size, so data is visually distinct from prose.
+- **Layout signature (the one move this site owns):** **the Claim Card**, a `.card` record showing the
+  claim, its grade, the primary source with sample size and date, and a one-line reproduction note. It
+  renders identically wherever it appears, is independently linkable at `/evidence/#<id>`, and is
+  emitted as `ClaimReview` JSON-LD so an LLM can lift it whole. The evidence ledger is a page of these.
+- **Implementation note:** pages style themselves through CSS variables, so a skin swap is a token
+  change in `global.css`, not a markup rewrite. `--font-serif` is deliberately mapped to Space Grotesk
+  so existing `font-serif` headings resolve to the display face.
+- **Must NOT resemble:** `sunnypatel-nextjs`; `agenticai-associates`; and the dashboards of the tools
+  it reviews.
 
 ## Entity home plan (from /entity-authority)
 
-- **Entity home URL:** `/about/` — carrying the entity definition, the disambiguation paragraph, the
+- **Entity home URL:** `/about/` - carrying the entity definition, the disambiguation paragraph, the
   named author, the grading taxonomy, the corrections policy, and the full affiliate disclosure.
   This is the page every `sameAs` and citation should point at.
 - **Corroboration targets:** `[MANUAL]` LinkedIn; `[MANUAL]` a Wikidata item is **not** appropriate

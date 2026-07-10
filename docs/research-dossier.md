@@ -44,7 +44,7 @@ no winnable agency market.
 Two-tier structure across all five head terms examined ("generative engine optimisation", "answer
 engine optimization", "geo vs seo", "how to rank in chatgpt", "ai visibility tool"):
 
-- **Tier 1:** DR 80-90+ incumbents with proprietary data — Ahrefs, Semrush, HubSpot, Similarweb,
+- **Tier 1:** DR 80-90+ incumbents with proprietary data - Ahrefs, Semrush, HubSpot, Similarweb,
   Search Engine Land, Neil Patel. Not winnable head-on by a DR-0 domain.
 - **Tier 2:** a fast-multiplying swarm of small, near-identical sites (nicklafferty.com, geoptie.com,
   aristral.com, wellows.com, rankchase.com, stackmatix.com, novastacks-ai.com and dozens more)
@@ -70,7 +70,7 @@ Prompt inventory of ~37 real questions was assembled and clustered. Intent split
 diagnostic: **~25% definitional, ~10% openly sceptical ("is GEO a scam?")**. A mature subtopic does
 not carry a 10% scepticism share. The term is still being fought over.
 
-**Who gets cited today:** a small set of capital-intensive first-party datasets — Ahrefs (17M
+**Who gets cited today:** a small set of capital-intensive first-party datasets - Ahrefs (17M
 citations; 4M AI Overview URLs), Profound (680M citations), Semrush (11,882 prompts / 337,785 URLs),
 Peec (30M sources), SE Ranking (129,000 domains). Plus the founding academic paper.
 
@@ -174,12 +174,12 @@ that does not require funding**, which is precisely why a DR-0 site can take it.
 | Mangools | 30-35% | lifetime recurring | 30d | SEO |
 | SE Ranking | 30% | recurring | 120d | Has an AI Search add-on |
 | Frase | 30-40% | recurring, 12-mo cap | 60d | Bundles AI visibility |
-| Otterly | 20% | recurring, 12-mo cap | — | **The only GEO-native that pays** |
+| Otterly | 20% | recurring, 12-mo cap | - | **The only GEO-native that pays** |
 | Semrush | ~$200 | **one-time bounty** | 120d | Yes |
 | Surfer | 75-125% of first payment | **one-time** | ~90d | SEO |
-| **Ahrefs** | **none** | program closed 2019 | — | Yes |
-| Clearscope, Screaming Frog | **none** | — | — | Yes |
-| Profound, Peec, AthenaHQ, Evertune, Brandlight, Bluefish, Goodie, Gauge, Knowatoa | **none found** | — | — | Yes |
+| **Ahrefs** | **none** | program closed 2019 | - | Yes |
+| Clearscope, Screaming Frog | **none** | - | - | Yes |
+| Profound, Peec, AthenaHQ, Evertune, Brandlight, Bluefish, Goodie, Gauge, Knowatoa | **none found** | - | - | Yes |
 
 Spot-checked directly: `otterly.ai/affiliate`, `otterly.ai/partners`, `peec.ai/affiliate` all 404;
 Semrush's affiliate page returns 200 as a control.
@@ -284,7 +284,7 @@ review pays us, including the ones that pay us nothing.*
 - Contains no banned word.
 
 **Secondary (the original-data engine, what makes it citable).** *A public, reproducible measurement
-of how much AI answers disagree with themselves and with each other* — a fixed, published prompt set
+of how much AI answers disagree with themselves and with each other* - a fixed, published prompt set
 run on a schedule against multiple engines, publishing stability and cross-engine overlap. Extends
 SparkToro's one-off (Nov-Dec 2025) and Indig's single-window analysis into a standing series. This is
 the one dataset the funded vendors will not publish, because it undermines the single blended

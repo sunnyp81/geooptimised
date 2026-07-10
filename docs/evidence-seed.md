@@ -1,4 +1,4 @@
-# Evidence log — claims in AI search, graded by what I could personally reproduce
+# Evidence log - claims in AI search, graded by what I could personally reproduce
 
 Grading:
 - **VERIFIED** = I fetched the primary source myself this session and the numbers matched.
@@ -38,7 +38,7 @@ Grading:
 - Source: Rankability, "State of AI Search". Google Keyword Planner export, 3,751 keywords x 48
   monthly data points, Jun 2022 - May 2026. https://www.rankability.com/reports/state-of-ai-search/
 - I fetched this myself and confirmed the wording: "AEO sits ~17% below its September high",
-  "GEO ~45% below its August high", and "GEO with roughly twice the search volume of AEO — yet
+  "GEO ~45% below its August high", and "GEO with roughly twice the search volume of AEO - yet
   practitioners are converging on 'AEO' as the standard label."
 - SINGLE-SOURCED. No second independent dataset found. Treat as directional.
 
@@ -52,12 +52,12 @@ Grading:
   the same list of brands in any two responses"
 - Verbatim: "when it comes to ordering, AI tool responses are so random that it's more like 1 in
   1,000 runs before you'd see two lists in the same order"
-- **CAUTION — this stat is already being retold wrongly.** The "1 in 1,000" (0.1%) applies to
+- **CAUTION - this stat is already being retold wrongly.** The "1 in 1,000" (0.1%) applies to
   *ordering*. The same-list-membership figure is <1 in 100 (<1%). I was myself handed the
   conflated version during this very research and repeated it before checking. Any page citing
   "0.1% chance of the same list" is wrong.
 
-### There is no single "AI visibility" — the engines barely agree
+### There is no single "AI visibility" - the engines barely agree
 - Claim: of URLs cited for the same prompt, only 2.37% appear in all three of ChatGPT, Perplexity
   and Google AI Overviews. 91% appear in exactly one engine.
 - Source: Kevin Indig, analysing 3.7M citations from 20k prompts using Omnia data, May 2026.
@@ -84,7 +84,7 @@ Grading:
 - Sitecore acquired Scrunch AI (a pure-play GEO tracker), announced 3 June 2026; the ~$225M price is
   Bloomberg-sourced and unconfirmed by Sitecore.
   https://www.prnewswire.com/news-releases/sitecore-acquires-scrunch-to-help-brands-influence-discovery-and-buying-decisions-in-the-ai-search-era-302790214.html
-- Meanwhile Google Search Console shipped AI performance reports (3 Jun 2026) — impressions only,
+- Meanwhile Google Search Console shipped AI performance reports (3 Jun 2026) - impressions only,
   no clicks, no CTR, no queries, AI Overviews and AI Mode not separated.
   https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports
 - Bing Webmaster Tools shipped an AI Performance report with Citation Share (June 2026).
@@ -122,7 +122,7 @@ Grading:
 
 ---
 
-## UNTRACEABLE — do not publish without a primary source
+## UNTRACEABLE - do not publish without a primary source
 
 ### "YouTube mentions correlate with AI visibility at r=0.737"
 - Attributed to a "Semrush AI Visibility Index" of 126M prompts. The Semrush study that *was*
@@ -142,5 +142,5 @@ Grading:
 
 Three of the most-repeated numbers in this niche are untraceable, one is unreproducible, and the
 single most-quoted stat (40%) is a lab benchmark being passed off as a field result. That is the
-gap. It is not a data-scale gap — Ahrefs and Profound win that on capital. It is a **rigour** gap,
+gap. It is not a data-scale gap - Ahrefs and Profound win that on capital. It is a **rigour** gap,
 and rigour does not require funding.

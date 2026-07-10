@@ -1,4 +1,4 @@
-# geooptimised.com — Project Brain
+# geooptimised.com - Project Brain
 
 > Canonical project memory. Repositioned 2026-07-10 from a GEO agency to an independent evidence base.
 > Read `site-identity.md` (what this site is), `docs/research-dossier.md` (why), and
@@ -59,7 +59,7 @@ niche's most-quoted statistics have no traceable source.
    `claims.json` are about citations, so only `citation-run.mjs` can reproduce them. Citation output is
    stochastic, so every figure it emits carries a 95% interval and a run count, plus a per-engine Jaccard
    stability score. A citation figure without an interval does not get published.
-7. **The volatility harness measures model APIs, not chatgpt.com.** Label it "cross-model API
+9. **The volatility harness measures model APIs, not chatgpt.com.** Label it "cross-model API
    disagreement". Never "ChatGPT volatility".
 
 ## Architecture
@@ -69,17 +69,17 @@ Pages via GitHub push (`sunnyp81/geooptimised`, branch `master`). Build `npm run
 NODE_VERSION=22. The `cfut_143…` CF token in master-builds is **dead**; rely on the git-push auto-build.
 
 **Data is the product.** Three JSON files drive the site; the pages are views over them:
-- `src/data/claims.json` — 13 graded claims. Six grades: VERIFIED, REFUTED, MISLEADING, DIRECTIONAL,
+- `src/data/claims.json` - 13 graded claims. Six grades: VERIFIED, REFUTED, MISLEADING, DIRECTIONAL,
   UNREPRODUCED, UNTRACEABLE. Plus a `VENDOR-INTERESTED` flag.
-- `src/data/tools.json` — 16 tools, verified pricing, verified affiliate terms, `provenance` per fact,
+- `src/data/tools.json` - 16 tools, verified pricing, verified affiliate terms, `provenance` per fact,
   and `ourEnrolment`. **11 pay a commission, 5 pay nothing** (Ahrefs, Screaming Frog, Clearscope,
   Peec AI, Profound). The footer and `/who-pays-us/` render enrolment straight from here, so the
   disclosure cannot drift from the truth. Never hardcode these counts in prose; derive them.
   (The commit message for `3bea505` says "six that can pay us nothing". It is five. Left uncorrected
   in history, corrected here.)
-- `src/data/corrections.json` — permanent log. Two entries, both our own pre-launch errors.
+- `src/data/corrections.json` - permanent log. Two entries, both our own pre-launch errors.
 
-**Signature component:** `src/components/ClaimCard.astro` — a stamped record (grade, claim, verdict,
+**Signature component:** `src/components/ClaimCard.astro` - a stamped record (grade, claim, verdict,
 source, sample, reproduction note), independently linkable at `/evidence/#<id>`, emitted as `ClaimReview`
 JSON-LD on `/evidence/`.
 

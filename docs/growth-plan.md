@@ -1,4 +1,4 @@
-# geooptimised.com — standing growth plan
+# geooptimised.com - standing growth plan
 
 Written 2026-07-10 at the close of `/site-build`. A build is not complete until the site has a loop
 that runs without anyone remembering to run it.
@@ -132,7 +132,7 @@ Once four weekly runs exist, publish `/volatility/` and add each finding to the 
 ## Entity corroboration checklist
 
 - [ ] `[MANUAL]` LinkedIn URL for `Person` schema `sameAs`. Not invented.
-- [ ] `[MANUAL — SUNNY'S CALL]` whether to add `sunnypatel.co.uk` as a `sameAs`. Commit `d860537`
+- [ ] `[MANUAL - SUNNY'S CALL]` whether to add `sunnypatel.co.uk` as a `sameAs`. Commit `d860537`
       deliberately stripped a commercial cross-link to reduce footprint under the June 2026 spam update.
       A Person `sameAs` is entity corroboration rather than a commercial link, but it does associate the
       properties. **Default: off.**
@@ -142,7 +142,7 @@ Once four weekly runs exist, publish `/volatility/` and add each finding to the 
       site's own standard.
 - [ ] Submit sitemap, run `/index-push` on the 11 live URLs.
 
-## 90-day review — 2026-10-08
+## 90-day review - 2026-10-08
 
 Compare actual sessions against the month-3 interpolation of the dossier's central case (~1,000/mo).
 **Under 25% of that line, trigger `/site-health`** and diagnose rather than let it decay quietly.
