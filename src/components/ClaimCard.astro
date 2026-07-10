@@ -1,0 +1,102 @@
+---
+import GradeBadge from './GradeBadge.astro';
+
+interface Props {
+  claim: any;
+  compact?: boolean;
+}
+const { claim, compact = false } = Astro.props;
+
+const repro: Record<string, string> = {
+  reproduced: 'We reproduced this from the primary source.',
+  partial: 'We partly reproduced this.',
+  failed: 'We tried to reproduce this and could not.',
+  none: 'No primary source exists to reproduce.',
+};
+---
+<article
+  id={claim.id}
+  class="claim-card group relative border bg-[var(--surface)] scroll-mt-24"
+  style="border-color: var(--line);"
+>
+  <!-- Top rule: grade + flags. The stamp on the record. -->
+  <header
+    class="flex flex-wrap items-center gap-x-3 gap-y-2 px-5 py-3 border-b"
+    style="border-color: var(--line); background: var(--bg-2);"
+  >
+    <GradeBadge grade={claim.grade} />
+    {claim.flags?.map((f: string) => (
+      <span class="data text-[0.6rem] tracking-[0.1em] uppercase px-1.5 py-0.5 border" style="color: var(--muted); border-color: var(--line-strong);">
+        {f}
+      </span>
+    ))}
+    <a
+      href={`/evidence/#${claim.id}`}
+      class="data ml-auto text-[0.65rem] tracking-wider uppercase opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity"
+      style="color: var(--muted);"
+      aria-label={`Permalink to the claim: ${claim.claim}`}
+    >
+      #{claim.id}
+    </a>
+  </header>
+
+  <div class="px-5 py-5">
+    <p class="text-[0.62rem] data uppercase tracking-[0.14em] mb-2" style="color: var(--muted);">The claim, as it circulates</p>
+    <blockquote class="font-serif text-[1.3rem] leading-snug mb-4" style="color: var(--text);">
+      &ldquo;{claim.claim}&rdquo;
+    </blockquote>
+
+    <p class="text-[0.95rem] font-semibold mb-5" style="color: var(--text);">{claim.verdict}</p>
+
+    {!compact && (
+      <>
+        <div class="rule pt-4 mb-4">
+          <p class="text-[0.62rem] data uppercase tracking-[0.14em] mb-2" style="color: var(--muted);">What the source actually says</p>
+          <p class="text-[0.95rem]" style="color: var(--text-soft);">{claim.whatTheSourceActuallySays}</p>
+        </div>
+
+        {claim.quote && (
+          <p class="text-[0.95rem] italic mb-4 pl-4 border-l-2" style="color: var(--text); border-color: var(--line-strong);">
+            &ldquo;{claim.quote}&rdquo;
+          </p>
+        )}
+      </>
+    )}
+
+    <!-- The evidence footer. Everything a reader needs to check us. -->
+    <dl class="rule pt-4 grid gap-x-6 gap-y-2 text-[0.85rem]" style="grid-template-columns: max-content 1fr;">
+      <dt class="data text-[0.62rem] uppercase tracking-[0.12em] pt-1" style="color: var(--muted);">Source</dt>
+      <dd style="color: var(--text-soft);">
+        {claim.source.url ? (
+          <a class="link" href={claim.source.url} rel="noopener nofollow">{claim.source.publisher}</a>
+        ) : (
+          <span>{claim.source.publisher}</span>
+        )}
+        {claim.source.title && claim.source.title !== 'not locatable' && <span>, <cite>{claim.source.title}</cite></span>}
+      </dd>
+
+      <dt class="data text-[0.62rem] uppercase tracking-[0.12em] pt-1" style="color: var(--muted);">Published</dt>
+      <dd class="data text-[0.82rem]" style="color: var(--text-soft);">{claim.source.published}</dd>
+
+      <dt class="data text-[0.62rem] uppercase tracking-[0.12em] pt-1" style="color: var(--muted);">Sample</dt>
+      <dd class="data text-[0.82rem]" style="color: var(--text-soft);">{claim.source.sample}</dd>
+
+      <dt class="data text-[0.62rem] uppercase tracking-[0.12em] pt-1" style="color: var(--muted);">Reproduction</dt>
+      <dd style="color: var(--text-soft);">
+        <span class="data text-[0.82rem]" style="color: var(--text);">{repro[claim.reproduction.status] ?? claim.reproduction.status}</span>
+        <span class="data text-[0.72rem] ml-1" style="color: var(--muted);">checked {claim.reproduction.checkedOn}</span>
+        {!compact && <p class="mt-1.5 text-[0.88rem]">{claim.reproduction.note}</p>}
+      </dd>
+    </dl>
+  </div>
+</article>
+
+<style>
+  .claim-card {
+    box-shadow: 0 1px 0 0 var(--line), 0 1px 2px rgba(0,0,0,0.02);
+    transition: box-shadow 200ms ease-out, transform 200ms ease-out;
+  }
+  .claim-card:hover {
+    box-shadow: 0 1px 0 0 var(--line-strong), 0 6px 20px rgba(0,0,0,0.05);
+  }
+</style>

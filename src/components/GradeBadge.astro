@@ -1,0 +1,28 @@
+---
+interface Props {
+  grade: string;
+  small?: boolean;
+}
+const { grade, small = false } = Astro.props;
+
+const map: Record<string, { varName: string; gloss: string }> = {
+  VERIFIED: { varName: '--g-verified', gloss: 'We fetched the primary source and the numbers reproduced.' },
+  REFUTED: { varName: '--g-refuted', gloss: 'A named primary source directly contradicts this claim.' },
+  MISLEADING: { varName: '--g-misleading', gloss: 'The source is real; the claim misrepresents what it measured.' },
+  DIRECTIONAL: { varName: '--g-directional', gloss: 'A real source, but single-sourced or only partly reproducible.' },
+  UNREPRODUCED: { varName: '--g-unreproduced', gloss: 'A source is cited, but we could not surface the number from it.' },
+  UNTRACEABLE: { varName: '--g-untraceable', gloss: 'No locatable primary source.' },
+};
+const entry = map[grade] ?? { varName: '--muted', gloss: '' };
+---
+<span
+  class:list={[
+    'data inline-flex items-center gap-1.5 border font-semibold uppercase whitespace-nowrap',
+    small ? 'text-[0.6rem] tracking-[0.1em] px-1.5 py-0.5' : 'text-[0.68rem] tracking-[0.13em] px-2.5 py-1',
+  ]}
+  style={`color: var(${entry.varName}); border-color: color-mix(in srgb, var(${entry.varName}) 45%, transparent); background: color-mix(in srgb, var(${entry.varName}) 8%, transparent);`}
+  title={entry.gloss}
+>
+  <span aria-hidden="true" class="inline-block w-1.5 h-1.5 rounded-full" style={`background: var(${entry.varName})`}></span>
+  {grade}
+</span>

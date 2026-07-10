@@ -1,75 +1,75 @@
 ---
+import tools from '../data/tools.json';
 const year = new Date().getFullYear();
+const enrolled = tools.tools.filter((t: any) => t.ourEnrolment === 'enrolled').length;
+
 const groups = [
   {
-    title: 'Services',
+    title: 'The ledger',
     links: [
-      { label: 'GEO Services', href: '/geo-services/' },
-      { label: 'GEO Agency', href: '/geo-agency/' },
-      { label: 'AEO Agency', href: '/aeo-agency/' },
-      { label: 'AEO Services', href: '/aeo-services/' },
-      { label: 'GEO Tools', href: '/geo-tools/' },
+      { label: 'Evidence ledger', href: '/evidence/' },
+      { label: 'Corrections', href: '/corrections/' },
+      { label: 'How we grade', href: '/methodology/' },
     ],
   },
   {
-    title: 'Learn',
+    title: 'Reference',
     links: [
-      { label: 'Generative Engine Optimisation', href: '/generative-engine-optimisation/' },
-      { label: 'Answer Engine Optimisation', href: '/answer-engine-optimisation/' },
-      { label: 'GEO vs SEO', href: '/geo-vs-seo/' },
-      { label: 'GEO Strategy', href: '/geo-strategy/' },
+      { label: 'Generative engine optimisation', href: '/generative-engine-optimisation/' },
+      { label: 'The 40% claim', href: '/the-40-percent-claim/' },
+      { label: 'Is GEO a scam?', href: '/is-geo-a-scam/' },
+    ],
+  },
+  {
+    title: 'Tools',
+    links: [
+      { label: 'Verified pricing and payouts', href: '/tools/' },
+      { label: 'Who pays us', href: '/who-pays-us/' },
+    ],
+  },
+  {
+    title: 'Site',
+    links: [
       { label: 'About', href: '/about/' },
-    ],
-  },
-  {
-    title: 'Company',
-    links: [
       { label: 'Contact', href: '/contact/' },
-      { label: 'AI Brand Visibility', href: '/ai-brand-visibility/' },
     ],
   },
 ];
 ---
-<footer class="border-t hair mt-24 bg-ink-950">
-  <div class="container-wide pt-16 pb-10">
-    <div class="grid md:grid-cols-12 gap-10">
-      <div class="md:col-span-5">
-        <a href="/" class="flex items-center gap-2.5">
-          <span class="relative inline-flex items-center justify-center w-8 h-8 rounded-lg" style="background: linear-gradient(135deg,#00E5CC 0%,#0BB29F 100%)">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#001a16" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="3" />
-              <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/>
-            </svg>
-          </span>
-          <span class="font-display font-semibold text-[17px] tracking-[-0.018em] text-white">
-            GEO<span class="text-ink-300 font-medium">optimised</span>
-          </span>
-        </a>
-        <p class="mt-4 text-ink-300 text-[14px] leading-relaxed max-w-sm">
-          The agency that makes brands visible in AI-generated answers. We optimise for the engines people are actually asking — ChatGPT, Perplexity, Gemini, Claude, and Google AI Overview.
-        </p>
-      </div>
-      <div class="md:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-8">
-        {groups.map(g => (
-          <div>
-            <div class="eyebrow mb-3 !text-ink-300">{g.title}</div>
-            <ul class="flex flex-col gap-2">
-              {g.links.map(l => (
-                <li>
-                  <a href={l.href} class="text-[14px] text-ink-200 hover:text-white transition-colors">{l.label}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
+<footer class="mt-24 border-t" style="border-color: var(--line); background: var(--bg-2);">
+  <div class="wrap py-14">
+    <!-- The disclosure sits above the sitemap. It is the most important thing in the footer. -->
+    <div class="border p-5 mb-12" style="border-color: var(--line-strong); background: var(--surface);">
+      <p class="data text-[0.62rem] uppercase tracking-[0.14em] mb-2" style="color: var(--muted);">Standing disclosure</p>
+      <p class="text-[0.95rem]" style="color: var(--text-soft);">
+        {enrolled === 0 ? (
+          <>GEOoptimised is currently enrolled in <strong style="color: var(--text);">no affiliate programme</strong>. We earn nothing if you buy any tool named on this site. When that changes, this line changes with it, and every affected row on <a class="link" href="/who-pays-us/">who pays us</a> updates the same day.</>
+        ) : (
+          <>GEOoptimised earns a commission from <strong style="color: var(--text);">{enrolled}</strong> of the tools it reviews. Every one is named on <a class="link" href="/who-pays-us/">who pays us</a>, alongside the ones that pay us nothing.</>
+        )}
+      </p>
     </div>
-    <div class="mt-14 pt-6 border-t hair-soft flex flex-col md:flex-row justify-between items-start md:items-center gap-3 text-[13px] text-ink-400">
-      <div>&copy; {year} GEOoptimised. All rights reserved.</div>
-      <div class="flex gap-5">
-        <a href="/contact/" class="hover:text-white transition-colors">Contact</a>
-        <span class="font-mono text-ink-500">v.2026.05</span>
-      </div>
+
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      {groups.map(g => (
+        <div>
+          <p class="data text-[0.62rem] uppercase tracking-[0.14em] mb-3" style="color: var(--muted);">{g.title}</p>
+          <ul class="space-y-2">
+            {g.links.map(l => (
+              <li><a href={l.href} class="text-[0.9rem]" style="color: var(--text-soft);">{l.label}</a></li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="rule mt-12 pt-6 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+      <p class="text-[0.82rem]" style="color: var(--muted);">
+        &copy; {year} GEOoptimised. Written by Sunny Patel. British English throughout.
+      </p>
+      <p class="data text-[0.72rem]" style="color: var(--muted);">
+        Every claim graded. Every source named. Every correction kept.
+      </p>
     </div>
   </div>
 </footer>

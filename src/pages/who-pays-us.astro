@@ -1,0 +1,149 @@
+---
+import Base from '../layouts/Base.astro';
+import toolsData from '../data/tools.json';
+
+const tools = toolsData.tools;
+const payers = tools.filter(t => t.affiliate.hasProgram);
+const nonPayers = tools.filter(t => !t.affiliate.hasProgram);
+const enrolled = tools.filter(t => t.ourEnrolment === 'enrolled');
+
+const title = 'Who pays us: every commercial relationship, named';
+const description = `We publish what each of the ${tools.length} tools we review pays us, including the ones that pay nothing. Currently enrolled in ${enrolled.length} affiliate programmes.`;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Who pays us', item: 'https://geooptimised.com/who-pays-us/' },
+  ],
+};
+---
+<Base title={title} description={description} schema={schema}>
+  <section class="wrap pt-14 pb-8">
+    <nav aria-label="Breadcrumb" class="data text-[0.7rem] uppercase tracking-widest mb-6" style="color: var(--muted);">
+      <a href="/">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text);">Who pays us</span>
+    </nav>
+    <h1 class="font-serif font-bold text-[2.2rem] sm:text-[2.9rem] leading-[1.08] max-w-[18ch]">Who pays us</h1>
+    <p class="mt-6 max-w-[64ch] text-[1.08rem]" style="color: var(--text-soft);">
+      Every site that reviews AI visibility tools has a commercial interest in which one you buy. Almost none
+      of them tell you what it is. This is ours, in full, updated whenever it changes.
+    </p>
+  </section>
+
+  <!-- The headline state. Rendered from data, so it cannot drift from the truth. -->
+  <section class="wrap pb-12">
+    <div class="border p-6 sm:p-8" style="border-color: var(--line-strong); background: var(--surface);">
+      <p class="data text-[0.62rem] uppercase tracking-[0.14em] mb-3" style="color: var(--muted);">Current position</p>
+      {enrolled.length === 0 ? (
+        <>
+          <p class="font-serif text-[1.6rem] sm:text-[2rem] font-bold leading-snug mb-4" style="color: var(--g-verified);">
+            We are enrolled in no affiliate programme. We earn nothing from any tool on this site.
+          </p>
+          <p class="text-[0.98rem]" style="color: var(--text-soft);">
+            Not a positioning statement. Simply where we are today. We intend to join some of the programmes
+            below, because this site has to fund itself somehow and we would rather it be commissions we
+            declare than advertising we cannot control. The day we join one, its row changes from
+            <span class="data">No</span> to <span class="data">Yes</span>, this paragraph changes with it, and
+            an entry goes into <a class="link" href="/corrections/">corrections</a> so the change is dated and
+            permanent.
+          </p>
+        </>
+      ) : (
+        <>
+          <p class="font-serif text-[1.6rem] sm:text-[2rem] font-bold leading-snug mb-4" style="color: var(--text);">
+            We earn a commission from {enrolled.length} of the {tools.length} tools on this site.
+          </p>
+          <p class="text-[0.98rem]" style="color: var(--text-soft);">
+            They are: {enrolled.map(t => t.name).join(', ')}. Each one is marked in the table below, with the
+            exact rate, model and cookie window. The rest pay us nothing.
+          </p>
+        </>
+      )}
+    </div>
+  </section>
+
+  <!-- The full table. -->
+  <section class="wrap pb-14">
+    <h2 class="font-serif text-[1.6rem] font-bold mb-2">Every tool, every payout</h2>
+    <p class="max-w-[64ch] mb-6 text-[0.98rem]" style="color: var(--text-soft);">
+      Sorted by what they pay, highest first, so you can see exactly where the financial pull on our judgement
+      is strongest. <span class="data">{nonPayers.length}</span> of these cannot pay us anything at all.
+    </p>
+
+    <div class="table-scroll border" style="border-color: var(--line-strong); background: var(--surface);">
+      <table class="ledger-table !my-0">
+        <caption class="sr-only">Affiliate terms and our enrolment status for every tool reviewed on GEOoptimised</caption>
+        <thead>
+          <tr>
+            <th scope="col">Tool</th>
+            <th scope="col">Rate</th>
+            <th scope="col">Model</th>
+            <th scope="col">Cookie</th>
+            <th scope="col">Network</th>
+            <th scope="col">Enrolled?</th>
+            <th scope="col">How we know</th>
+          </tr>
+        </thead>
+        <tbody>
+          {[...payers, ...nonPayers].map(t => (
+            <tr>
+              <td class="!font-semibold !text-[0.95rem]" style="color: var(--text);">
+                <a class="link" href={t.url} rel="noopener nofollow">{t.name}</a>
+              </td>
+              <td class="data !font-semibold" style={`color: ${t.affiliate.hasProgram ? 'var(--text)' : 'var(--g-verified)'}`}>
+                {t.affiliate.hasProgram ? t.affiliate.rate : 'NOTHING'}
+              </td>
+              <td class="data text-[0.8rem]">{t.affiliate.model}</td>
+              <td class="data text-[0.8rem]">{t.affiliate.cookie}</td>
+              <td class="data text-[0.8rem]">{t.affiliate.network}</td>
+              <td class="data text-[0.8rem]" style={`color: ${t.ourEnrolment === 'enrolled' ? 'var(--g-unreproduced)' : 'var(--muted)'}`}>
+                {t.ourEnrolment === 'enrolled' ? 'YES' : 'No'}
+              </td>
+              <td class="data text-[0.75rem]" style="color: var(--muted);">
+                {t.affiliate.sourceUrl
+                  ? <a class="link" href={t.affiliate.sourceUrl} rel="noopener nofollow">{t.affiliate.provenance}</a>
+                  : t.affiliate.provenance}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-6 grid gap-3 sm:grid-cols-2">
+      {Object.entries(toolsData.provenanceKey).map(([k, v]) => (
+        <p class="text-[0.82rem]" style="color: var(--muted);">
+          <span class="data" style="color: var(--text);">{k}</span>: {v}
+        </p>
+      ))}
+    </div>
+  </section>
+
+  <!-- The policy. -->
+  <section class="prose-wrap pb-24 copy">
+    <div class="rule pt-10">
+      <h2>The rules we hold ourselves to</h2>
+      <ol>
+        <li><strong>A commission never changes an ordering.</strong> Nightwatch pays the most of anything here, at 30% for the lifetime of a customer. Ahrefs, Screaming Frog and Clearscope can pay us nothing, ever. If our recommendations tracked our revenue, you would be able to tell from this table. Check it against anything we publish.</li>
+        <li><strong>Every affiliate link is marked in the text, at the link.</strong> Not once in a banner at the top of the page. At the link, every time.</li>
+        <li><strong>We publish the terms, not just the fact.</strong> "This post contains affiliate links" tells you nothing. A 30% lifetime commission on a 365-day cookie tells you exactly how much we stand to gain.</li>
+        <li><strong>We name what we cannot earn from.</strong> The tools with no affiliate programme are the ones a commission-funded site has every reason to ignore. They get their own rows.</li>
+        <li><strong>No display advertising, ever.</strong> Not a rule about taste. An ad network chooses what appears next to our grading, and we will not hand that choice away.</li>
+        <li><strong>No sponsored placements, no paid reviews, no "featured tool" slots.</strong> If a vendor pays for position on this page, the page is worthless.</li>
+      </ol>
+
+      <h2>Why publish this at all</h2>
+      <p>
+        Because the alternative is what the field already has. Search for the best AI visibility tools and
+        nearly every result is published by a company that sells one. Profound ranks Profound. Frase ranks Frase.
+        Evertune ranks Evertune. None of that is against the rules, and none of it is disclosed in a way that
+        lets you weigh it.
+      </p>
+      <p>
+        We are not claiming to be free of the conflict. We are claiming to publish it, in the same table as the
+        recommendation, so you can price it in. That is the whole product.
+      </p>
+    </div>
+  </section>
+</Base>

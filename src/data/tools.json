@@ -1,0 +1,336 @@
+{
+  "$comment": "Verified pricing and affiliate terms for AI-search and SEO tools. 'provenance' records HOW we know each fact. 'ourEnrolment' records whether GEOoptimised earns anything from that tool. Both columns are published on /who-pays-us/. If you change a rate here, add a corrections.json entry.",
+  "checkedOn": "2026-07-10",
+  "provenanceKey": {
+    "we-fetched": "We requested the page ourselves on the date shown and read the term off it.",
+    "vendor-page": "Taken from the vendor's own affiliate or pricing page during our research, but not re-fetched by us at publication.",
+    "third-party": "Reported by an aggregator or review site, contradicted or unconfirmed by the vendor's own page. Treat as unverified.",
+    "not-published": "The vendor does not publish this. That absence is itself the finding."
+  },
+  "enrolmentKey": {
+    "not-enrolled": "GEOoptimised earns nothing if you buy this tool. No affiliate link, no referral code, no arrangement.",
+    "enrolled": "GEOoptimised earns a commission if you buy this tool through our link. The exact terms are in this row."
+  },
+  "tools": [
+    {
+      "slug": "nightwatch",
+      "name": "Nightwatch",
+      "url": "https://nightwatch.io/",
+      "category": "rank tracker with AI citation tracking",
+      "entryPrice": "published on site",
+      "pricingProvenance": "vendor-page",
+      "affiliate": {
+        "hasProgram": true,
+        "rate": "30%",
+        "model": "lifetime recurring",
+        "cookie": "365 days",
+        "network": "in-house (PayPal or Stripe, $100 payout threshold)",
+        "restrictions": "no bidding on Nightwatch brand keywords",
+        "sourceUrl": "https://nightwatch.io/seo-affiliate-program/",
+        "provenance": "we-fetched"
+      },
+      "ourEnrolment": "not-enrolled",
+      "note": "The best affiliate economics of any tool in this category, and on-theme: it ships Citation Intelligence for AI mentions. Stated plainly so you can weigh it: if we ever enrol, this is the tool with the strongest financial pull on our judgement. That is exactly why it sits at the top of this table rather than buried in it."
+    },
+    {
+      "slug": "ahrefs",
+      "name": "Ahrefs",
+      "url": "https://ahrefs.com/",
+      "category": "SEO suite with Brand Radar (AI visibility)",
+      "entryPrice": "published on site",
+      "pricingProvenance": "vendor-page",
+      "affiliate": {
+        "hasProgram": false,
+        "rate": "none",
+        "model": "no programme",
+        "cookie": "n/a",
+        "network": "n/a",
+        "restrictions": "",
+        "sourceUrl": "https://ahrefs.com/blog/ahrefs-affiliate-program/",
+        "provenance": "vendor-page"
+      },
+      "ourEnrolment": "not-enrolled",
+      "note": "Ahrefs closed its affiliate programme in 2019 and has said it has no plans to relaunch. It also publishes some of the largest and most methodologically transparent citation research in this field. It can never pay us a penny. Notice how rarely it tops a 'best AI visibility tools' listicle."
+    },
+    {
+      "slug": "screaming-frog",
+      "name": "Screaming Frog",
+      "url": "https://www.screamingfrog.co.uk/",
+      "category": "technical crawler",
+      "entryPrice": "published on site",
+      "pricingProvenance": "vendor-page",
+      "affiliate": {
+        "hasProgram": false,
+        "rate": "none",
+        "model": "no programme",
+        "cookie": "n/a",
+        "network": "n/a",
+        "restrictions": "",
+        "sourceUrl": "https://www.screamingfrog.co.uk/seo-spider/faq/",
+        "provenance": "vendor-page"
+      },
+      "ourEnrolment": "not-enrolled",
+      "note": "Their FAQ confirms no affiliate programme and no reseller discounts. Another tool no commission-funded listicle has any reason to recommend."
+    },
+    {
+      "slug": "clearscope",
+      "name": "Clearscope",
+      "url": "https://www.clearscope.io/",
+      "category": "content optimisation",
+      "entryPrice": "published on site",
+      "pricingProvenance": "vendor-page",
+      "affiliate": {
+        "hasProgram": false,
+        "rate": "none found",
+        "model": "no programme found",
+        "cookie": "n/a",
+        "network": "n/a",
+        "restrictions": "",
+        "sourceUrl": "",
+        "provenance": "not-published"
+      },
+      "ourEnrolment": "not-enrolled",
+      "note": "No partner page found. Absence of a programme is not proof one does not exist, so we record it as 'none found' rather than 'none'."
+    },
+    {
+      "slug": "otterly",
+      "name": "Otterly.ai",
+      "url": "https://otterly.ai/",
+      "category": "AI visibility tracker",
+      "entryPrice": "$29/mo entry tier",
+      "pricingProvenance": "vendor-page",
+      "affiliate": {
+        "hasProgram": true,
+        "rate": "20%",
+        "model": "recurring, first 12 months only",
+        "cookie": "not stated",
+        "network": "in-house",
+        "restrictions": "30-day grace period",
+        "sourceUrl": "https://otterly.ai/referral",
+        "provenance": "vendor-page"
+      },
+      "ourEnrolment": "not-enrolled",
+      "note": "The cheapest credible entry point in the category, and the only GEO-native tracker we found with a real, published referral programme. We separately confirmed that otterly.ai/affiliate and otterly.ai/partners both return 404; the live path is /referral."
+    },
+    {
+      "slug": "rankscale",
+      "name": "Rankscale",
+      "url": "https://rankscale.ai/",
+      "category": "AI visibility tracker",
+      "entryPrice": "from ~$20/mo",
+      "pricingProvenance": "vendor-page",
+      "affiliate": {
+        "hasProgram": true,
+        "rate": "10%",
+        "model": "recurring, capped at 12 months",
+        "cookie": "60 days",
+        "network": "Rewardful",
+        "restrictions": "minimum payout applies",
+        "sourceUrl": "https://rankscale.ai/affiliate-program",
+        "provenance": "vendor-page"
+      },
+      "ourEnrolment": "not-enrolled",
+      "note": "Third-party sites claim '15% lifetime'. The vendor's own page says 10% for up to 12 months. Where a vendor page and an aggregator disagree, we publish the vendor page and flag the conflict."
+    },
+    {
+      "slug": "peec-ai",
+      "name": "Peec AI",
+      "url": "https://peec.ai/",
+      "category": "AI visibility tracker",
+      "entryPrice": "from about €89/mo",
+      "pricingProvenance": "third-party",
+      "affiliate": {
+        "hasProgram": false,
+        "rate": "none found",
+        "model": "no public programme found",
+        "cookie": "n/a",
+        "network": "n/a",
+        "restrictions": "",
+        "sourceUrl": "",
+        "provenance": "not-published"
+      },
+      "ourEnrolment": "not-enrolled",
+      "note": "We could not read a price ladder off peec.ai itself; the figures circulating come from third-party review sites. We confirmed peec.ai/affiliate returns 404. Raised roughly $29M as of November 2025."
+    },
+    {
+      "slug": "profound",
+      "name": "Profound",
+      "url": "https://www.tryprofound.com/",
+      "category": "AI visibility tracker (enterprise)",
+      "entryPrice": "not published",
+      "pricingProvenance": "not-published",
+      "affiliate": {
+        "hasProgram": false,
+        "rate": "agency partner programme, rates not disclosed publicly",
+        "model": "application-gated",
+        "cookie": "n/a",
+        "network": "n/a",
+        "restrictions": "",
+        "sourceUrl": "https://www.tryprofound.com/partners",
+        "provenance": "not-published"
+      },
+      "ourEnrolment": "not-enrolled",
+      "note": "The category leader: $155M raised, a $96M Series C at a $1B valuation in February 2026, and a genuinely large citation dataset. Its own pricing page shows no ladder. It also publishes a 'best generative engine optimisation tools' article in which it ranks itself. Both facts belong in the same sentence."
+    },
+    {
+      "slug": "semrush",
+      "name": "Semrush",
+      "url": "https://www.semrush.com/",
+      "category": "SEO suite with AI Visibility Toolkit",
+      "entryPrice": "AI Visibility Toolkit is a paid add-on to a paid plan",
+      "pricingProvenance": "vendor-page",
+      "affiliate": {
+        "hasProgram": true,
+        "rate": "about $200 per sale, $10 per trial",
+        "model": "one-time bounty, not recurring",
+        "cookie": "120 days",
+        "network": "Impact",
+        "restrictions": "",
+        "sourceUrl": "https://www.semrush.com/kb/97-affiliate-program",
+        "provenance": "vendor-page"
+      },
+      "ourEnrolment": "not-enrolled",
+      "note": "We confirmed the affiliate landing page resolves (HTTP 200) while several GEO-native vendors' equivalents 404. A large one-time bounty rewards a burst of traffic rather than a good long-term recommendation. Adobe agreed to acquire Semrush for about $1.9 billion, expected to close in the first half of 2026."
+    },
+    {
+      "slug": "surfer-seo",
+      "name": "Surfer SEO",
+      "url": "https://surferseo.com/",
+      "category": "content optimisation",
+      "entryPrice": "published on site",
+      "pricingProvenance": "vendor-page",
+      "affiliate": {
+        "hasProgram": true,
+        "rate": "75% to 125% of the first payment",
+        "model": "one-time, explicitly not recurring",
+        "cookie": "about 90 days",
+        "network": "PartnerStack",
+        "restrictions": "",
+        "sourceUrl": "https://surferseo.com/affiliate-program/",
+        "provenance": "vendor-page"
+      },
+      "ourEnrolment": "not-enrolled",
+      "note": "A very large first-payment bounty. Structurally, this pays most for getting someone to sign up once, and nothing at all for whether the tool serves them a year later."
+    },
+    {
+      "slug": "frase",
+      "name": "Frase",
+      "url": "https://www.frase.io/",
+      "category": "content optimisation with AI visibility features",
+      "entryPrice": "published on site",
+      "pricingProvenance": "vendor-page",
+      "affiliate": {
+        "hasProgram": true,
+        "rate": "30%, rising to 40%",
+        "model": "recurring, capped at 12 months",
+        "cookie": "60 days",
+        "network": "FirstPromoter",
+        "restrictions": "",
+        "sourceUrl": "https://www.frase.io/partners/affiliates",
+        "provenance": "vendor-page"
+      },
+      "ourEnrolment": "not-enrolled",
+      "note": "Frase also publishes a 'best AI visibility tools' listicle that features Frase."
+    },
+    {
+      "slug": "scalenut",
+      "name": "Scalenut",
+      "url": "https://www.scalenut.com/",
+      "category": "AI content platform",
+      "entryPrice": "published on site",
+      "pricingProvenance": "vendor-page",
+      "affiliate": {
+        "hasProgram": true,
+        "rate": "30%, rising to 40%",
+        "model": "lifetime recurring",
+        "cookie": "60 days",
+        "network": "FirstPromoter",
+        "restrictions": "",
+        "sourceUrl": "https://www.scalenut.com/affiliate",
+        "provenance": "vendor-page"
+      },
+      "ourEnrolment": "not-enrolled",
+      "note": "Lifetime recurring commission. Among the strongest financial incentives in this table, which is precisely why we are telling you about it rather than letting it quietly shape a ranking."
+    },
+    {
+      "slug": "neuronwriter",
+      "name": "NeuronWriter",
+      "url": "https://neuronwriter.com/",
+      "category": "content optimisation",
+      "entryPrice": "published on site",
+      "pricingProvenance": "vendor-page",
+      "affiliate": {
+        "hasProgram": true,
+        "rate": "30%",
+        "model": "recurring, reported as lifetime",
+        "cookie": "60 days",
+        "network": "in-house",
+        "restrictions": "",
+        "sourceUrl": "https://neuronwriter.com/contact/affiliates/",
+        "provenance": "vendor-page"
+      },
+      "ourEnrolment": "not-enrolled",
+      "note": "Terms partly corroborated by aggregators rather than read cleanly off the vendor's own page. Treat the 'lifetime' qualifier as unconfirmed."
+    },
+    {
+      "slug": "mangools",
+      "name": "Mangools",
+      "url": "https://mangools.com/",
+      "category": "SEO suite",
+      "entryPrice": "published on site",
+      "pricingProvenance": "vendor-page",
+      "affiliate": {
+        "hasProgram": true,
+        "rate": "30%, up to 35%",
+        "model": "lifetime recurring",
+        "cookie": "30 days",
+        "network": "in-house",
+        "restrictions": "payout threshold applies",
+        "sourceUrl": "https://mangools.com/affiliate-program",
+        "provenance": "vendor-page"
+      },
+      "ourEnrolment": "not-enrolled",
+      "note": "A short 30-day cookie against a lifetime commission."
+    },
+    {
+      "slug": "se-ranking",
+      "name": "SE Ranking",
+      "url": "https://seranking.com/",
+      "category": "SEO suite with an AI Search add-on",
+      "entryPrice": "AI Search add-on, about $89/mo",
+      "pricingProvenance": "vendor-page",
+      "affiliate": {
+        "hasProgram": true,
+        "rate": "30%",
+        "model": "disputed: the vendor's legal page reads as one-time, directories claim recurring",
+        "cookie": "120 days",
+        "network": "in-house",
+        "restrictions": "",
+        "sourceUrl": "https://seranking.com/legal/affiliate.html",
+        "provenance": "third-party"
+      },
+      "ourEnrolment": "not-enrolled",
+      "note": "A genuine conflict between the vendor's own legal text and every aggregator. We publish the conflict rather than pick the more flattering number."
+    },
+    {
+      "slug": "writesonic",
+      "name": "Writesonic",
+      "url": "https://writesonic.com/",
+      "category": "AI writer repositioned around AI search",
+      "entryPrice": "published on site, inconsistently across its own pages",
+      "pricingProvenance": "vendor-page",
+      "affiliate": {
+        "hasProgram": true,
+        "rate": "20%",
+        "model": "recurring, 12 months",
+        "cookie": "reported 60 days",
+        "network": "FirstPromoter",
+        "restrictions": "",
+        "sourceUrl": "https://writesonic.com/affiliate",
+        "provenance": "vendor-page"
+      },
+      "ourEnrolment": "not-enrolled",
+      "note": "Aggregators widely claim '30% lifetime'. The vendor's own affiliate page says 20% for 12 months. Writesonic's own pricing pages also contradict each other on tier prices."
+    }
+  ]
+}

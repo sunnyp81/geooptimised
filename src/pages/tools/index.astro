@@ -1,0 +1,173 @@
+---
+import Base from '../../layouts/Base.astro';
+import toolsData from '../../data/tools.json';
+
+const tools = toolsData.tools;
+const noPrice = tools.filter(t => t.pricingProvenance === 'not-published' || t.entryPrice === 'not published');
+const trackers = tools.filter(t => t.category.includes('tracker'));
+const others = tools.filter(t => !t.category.includes('tracker'));
+
+const title = 'AI visibility tools: verified pricing, and what each pays us';
+const description = `Pricing and affiliate terms for ${tools.length} AI search and SEO tools, with the provenance of every fact. ${noPrice.length} of them publish no price at all.`;
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://geooptimised.com/tools/' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'AI search and SEO tools reviewed by GEOoptimised',
+    numberOfItems: tools.length,
+    itemListElement: tools.map((t, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: { '@type': 'SoftwareApplication', name: t.name, url: t.url, applicationCategory: 'BusinessApplication' },
+    })),
+  },
+];
+
+const Row = 'tr';
+---
+<Base title={title} description={description} schema={schema}>
+  <section class="wrap pt-14 pb-8">
+    <nav aria-label="Breadcrumb" class="data text-[0.7rem] uppercase tracking-widest mb-6" style="color: var(--muted);">
+      <a href="/">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text);">Tools</span>
+    </nav>
+    <h1 class="font-serif font-bold text-[2.2rem] sm:text-[2.9rem] leading-[1.08] max-w-[22ch]">
+      AI visibility tools, and what they will not tell you
+    </h1>
+    <p class="mt-6 max-w-[64ch] text-[1.08rem]" style="color: var(--text-soft);">
+      This is not a ranking. We have not run these tools side by side on the same brand for six months, and
+      anyone who claims to have done so at this point in the category's life is selling something. What we have
+      done is establish, from primary sources, what each one costs, what each one pays a site like this to
+      recommend it, and how we know.
+    </p>
+    <p class="mt-4 data text-[0.75rem]" style="color: var(--muted);">
+      {tools.length} tools &middot; checked {toolsData.checkedOn} &middot;
+      <a class="link" href="/who-pays-us/">our commercial interest in each</a>
+    </p>
+  </section>
+
+  <!-- The finding that matters most, stated before the table. -->
+  <section class="wrap pb-12">
+    <div class="border-l-4 pl-6 py-2 max-w-[64ch]" style="border-color: var(--g-unreproduced);">
+      <p class="font-serif text-[1.35rem] leading-snug mb-3" style="color: var(--text);">
+        {noPrice.length} of these tools do not publish a price.
+      </p>
+      <p class="text-[0.98rem]" style="color: var(--text-soft);">
+        Profound, the category leader at a $1 billion valuation, shows no pricing ladder. Peec's numbers exist
+        only on third-party review sites. Writesonic's own pages contradict each other. Every "GEO tool pricing"
+        article you have read filled those gaps with figures it could not source. We leave them empty and say so,
+        because an empty cell is information and an invented one is not.
+      </p>
+    </div>
+  </section>
+
+  <section class="wrap pb-12">
+    <h2 class="font-serif text-[1.6rem] font-bold mb-2">AI visibility trackers</h2>
+    <p class="max-w-[64ch] mb-6 text-[0.98rem]" style="color: var(--text-soft);">
+      Tools whose main job is telling you whether AI assistants mention your brand. Read
+      <a class="link" href="/evidence/#answer-instability">the evidence on answer volatility</a> before you buy
+      any of them: a single blended "AI visibility" percentage is averaging three engines that agree with each
+      other only <span class="data">2.37%</span> of the time.
+    </p>
+
+    <div class="grid gap-5 lg:grid-cols-2">
+      {trackers.map(t => (
+        <article class="border p-5 fade-up" style="border-color: var(--line); background: var(--surface);">
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <h3 class="font-serif text-[1.25rem] font-bold">
+              <a class="link" href={t.url} rel="noopener nofollow">{t.name}</a>
+            </h3>
+            <span class="data text-[0.6rem] uppercase tracking-[0.1em] px-1.5 py-0.5 border shrink-0"
+                  style={`color: ${t.affiliate.hasProgram ? 'var(--muted)' : 'var(--g-verified)'}; border-color: var(--line-strong);`}>
+              {t.affiliate.hasProgram ? `pays ${t.affiliate.rate}` : 'pays us nothing'}
+            </span>
+          </div>
+          <dl class="grid gap-x-4 gap-y-1.5 text-[0.85rem] mb-4" style="grid-template-columns: max-content 1fr;">
+            <dt class="data text-[0.62rem] uppercase tracking-[0.1em] pt-0.5" style="color: var(--muted);">Price</dt>
+            <dd class="data text-[0.82rem]" style={`color: ${t.pricingProvenance === 'not-published' ? 'var(--g-unreproduced)' : 'var(--text-soft)'}`}>
+              {t.entryPrice}
+            </dd>
+            <dt class="data text-[0.62rem] uppercase tracking-[0.1em] pt-0.5" style="color: var(--muted);">Source</dt>
+            <dd class="data text-[0.78rem]" style="color: var(--muted);">{t.pricingProvenance}</dd>
+          </dl>
+          <p class="text-[0.9rem]" style="color: var(--text-soft);">{t.note}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="wrap pb-16">
+    <h2 class="font-serif text-[1.6rem] font-bold mb-2">Suites and content tools</h2>
+    <p class="max-w-[64ch] mb-6 text-[0.98rem]" style="color: var(--text-soft);">
+      Established SEO and content platforms, most of which have added AI visibility features. Note which of them
+      can pay us, and which cannot.
+    </p>
+    <div class="table-scroll border" style="border-color: var(--line-strong); background: var(--surface);">
+      <table class="ledger-table !my-0">
+        <caption class="sr-only">SEO suites and content tools, pricing and payouts</caption>
+        <thead>
+          <tr>
+            <th scope="col">Tool</th>
+            <th scope="col">What it is</th>
+            <th scope="col">Pays us</th>
+            <th scope="col">Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          {others.map(t => (
+            <Row>
+              <td class="!font-semibold !text-[0.95rem]" style="color: var(--text);">
+                <a class="link" href={t.url} rel="noopener nofollow">{t.name}</a>
+              </td>
+              <td class="text-[0.85rem]">{t.category}</td>
+              <td class="data !font-semibold text-[0.85rem]" style={`color: ${t.affiliate.hasProgram ? 'var(--text)' : 'var(--g-verified)'}`}>
+                {t.affiliate.hasProgram ? t.affiliate.rate : 'NOTHING'}
+              </td>
+              <td class="text-[0.85rem]">{t.note}</td>
+            </Row>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="prose-wrap pb-24 copy">
+    <div class="rule pt-10">
+      <h2>Should you buy any of them?</h2>
+      <p>
+        Honestly: probably not yet, and not because they are bad. Because of what the evidence says they can
+        measure. A tracker samples a handful of prompts on a schedule. Real users type millions of variants, and
+        the same prompt returns a different list of brands more than <span class="data">99</span> times out of
+        <span class="data">100</span>. A number built on that foundation moves for reasons that have nothing to do
+        with your marketing.
+      </p>
+      <p>
+        Benjamin Houy built one of these tools, ran it for seven months, and shut it down. His conclusion, which
+        cost him a company to reach:
+      </p>
+      <blockquote>
+        Customers were churning because the product didn't change what they needed to do. There's no secret GEO
+        strategy. AI models reward the same fundamentals that already drive SEO and PR.
+      </blockquote>
+      <p>
+        If you need a number to report upward, buy the cheapest one that names its methodology and treat it as a
+        weather vane, not a speedometer. If you want to be cited more, the evidence points at the unglamorous
+        things: be genuinely worth citing, get mentioned in places that already are, and make your pages easy to
+        quote. None of that requires a subscription.
+      </p>
+      <p class="text-[0.9rem]">
+        Every claim in this section is graded and sourced in the
+        <a class="link" href="/evidence/">evidence ledger</a>. Our commercial interest in each tool named here is
+        published on <a class="link" href="/who-pays-us/">who pays us</a>.
+      </p>
+    </div>
+  </section>
+</Base>

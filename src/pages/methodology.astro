@@ -1,0 +1,130 @@
+---
+import Base from '../layouts/Base.astro';
+import GradeBadge from '../components/GradeBadge.astro';
+import claimsData from '../data/claims.json';
+import toolsData from '../data/tools.json';
+
+const order = ['VERIFIED', 'REFUTED', 'MISLEADING', 'DIRECTIONAL', 'UNREPRODUCED', 'UNTRACEABLE'];
+const gradeDefs: Record<string, string> = claimsData.grades;
+const gradeList = order.map(g => ({ grade: g, meaning: gradeDefs[g] }));
+
+const title = 'How we grade evidence: the method, in full';
+const description = 'The six grades, what each one means, how we decide, and the rules that constrain us. Published so you can check our work rather than trust it.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Methodology', item: 'https://geooptimised.com/methodology/' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'DefinedTermSet',
+    '@id': 'https://geooptimised.com/methodology/#grades',
+    name: 'GEOoptimised evidence grades',
+    hasDefinedTerm: gradeList.map(g => ({
+      '@type': 'DefinedTerm',
+      name: g.grade,
+      description: g.meaning,
+      inDefinedTermSet: 'https://geooptimised.com/methodology/#grades',
+    })),
+  },
+];
+---
+<Base title={title} description={description} schema={schema}>
+  <section class="wrap pt-14 pb-8">
+    <nav aria-label="Breadcrumb" class="data text-[0.7rem] uppercase tracking-widest mb-6" style="color: var(--muted);">
+      <a href="/">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text);">Methodology</span>
+    </nav>
+    <h1 class="font-serif font-bold text-[2.2rem] sm:text-[2.9rem] leading-[1.08] max-w-[20ch]">How we grade</h1>
+    <p class="mt-6 max-w-[64ch] text-[1.08rem]" style="color: var(--text-soft);">
+      A grade is only worth something if you can audit it. Here is the entire method, including the parts that
+      make us look bad.
+    </p>
+  </section>
+
+  <section class="wrap pb-12">
+    <div class="border-t border-b py-8" style="border-color: var(--line-strong);">
+      <p class="data text-[0.62rem] uppercase tracking-[0.14em] mb-6" style="color: var(--muted);">The six grades</p>
+      <dl class="space-y-5 max-w-[70ch]">
+        {gradeList.map(g => (
+          <div class="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-5">
+            <dt class="shrink-0 sm:w-44"><GradeBadge grade={g.grade} /></dt>
+            <dd style="color: var(--text-soft);">{g.meaning}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="prose-wrap pb-24 copy">
+    <h2>The grade describes the claim, never the finding</h2>
+    <p>
+      This is the rule that took us longest to get right, and we got it wrong first. A grade always attaches to
+      the claim <em>as it circulates</em>. It never attaches to the study that settles it.
+    </p>
+    <p>
+      Take "you can track your brand's ranking position inside AI answers". SparkToro's research demolishes it:
+      asked the same question a hundred times, ChatGPT or Google's AI returns the same list of brands fewer than
+      once. We verified that study against the primary source. Our first draft therefore graded the claim
+      <code>VERIFIED</code>, which read as though we endorsed the very thing the study destroys.
+    </p>
+    <p>
+      The claim is <code>REFUTED</code>. The study is what refutes it. Confusing the two is how a citation list
+      turns into an endorsement, and it is logged in <a class="link" href="/corrections/">corrections</a>.
+    </p>
+
+    <h2>What we do before publishing a number</h2>
+    <ol>
+      <li><strong>Find the primary source.</strong> Not the blog citing the blog citing the study. The study.</li>
+      <li><strong>Fetch it and read the number off it ourselves.</strong> If we cannot surface the figure from the source, the claim is <code>UNREPRODUCED</code>, even when we believe it.</li>
+      <li><strong>Record the sample size, the date and the method.</strong> A number without an <span class="data">n</span> is an opinion wearing a decimal point.</li>
+      <li><strong>Check what the source actually measured.</strong> The most-quoted statistic in this field measures a research benchmark, and is quoted as though it measured ChatGPT. That gap is where <code>MISLEADING</code> lives.</li>
+      <li><strong>Declare the publisher's interest.</strong> If a finding supports the value of a product its publisher sells, it carries the <span class="data">VENDOR-INTERESTED</span> flag. Ahrefs, Semrush and Profound all publish genuinely useful, large-sample research. They also all sell something. Both facts get printed.</li>
+      <li><strong>Say who checked, and when.</strong> Every claim carries a <span class="data">checked</span> date. Evidence rots.</li>
+    </ol>
+
+    <h2>What VENDOR-INTERESTED does not mean</h2>
+    <p>
+      It does not mean wrong. The best datasets in AI search belong to companies with a commercial stake in AI
+      search mattering: Ahrefs, Semrush, Profound, Peec. Refusing to cite them would leave us with almost nothing
+      and would be its own kind of dishonesty. The flag exists so you can weigh the incentive, not so we can
+      dismiss the work.
+    </p>
+    <p>
+      A vendor study with a disclosed sample size and method beats an independent blog post with neither. That is
+      not a compromise, it is the whole point of grading rather than tribalism.
+    </p>
+
+    <h2>How we treat our own conflicts</h2>
+    <p>
+      We publish the exact affiliate terms of every tool we review, including the ones that pay us nothing, on
+      <a class="link" href="/who-pays-us/">who pays us</a>. There are currently
+      <span class="data">{toolsData.tools.filter(t => !t.affiliate.hasProgram).length}</span> tools on this site
+      that cannot pay us a penny, and they are named. Nightwatch, which pays more than anything else here, is
+      named too, at the top, rather than buried where the incentive is harder to see.
+    </p>
+
+    <h2>When we are wrong</h2>
+    <p>
+      Corrections are permanent, dated, and kept on <a class="link" href="/corrections/">their own page</a>. We do
+      not silently edit. If a grade changes, the old grade and the reason stay visible. The first two entries in
+      that log are both our own errors, made while building this site, before a single reader arrived.
+    </p>
+    <p>
+      If you can show us a primary source we missed, send it. Regrading in public costs us nothing except the
+      pretence of never having been wrong, which was never worth much.
+    </p>
+
+    <h2>What we cannot do</h2>
+    <p>
+      We do not have Ahrefs' crawler or Profound's citation panel. We cannot run a 4-million-URL study, and any
+      site our size claiming to has just told you something useful about itself. What we can do is read the
+      studies that exist, check whether their numbers survive contact with their own sources, and write down what
+      we find. That is a smaller job. It is also, at present, one nobody else is doing.
+    </p>
+  </section>
+</Base>

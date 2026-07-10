@@ -1,0 +1,27 @@
+# Cloudflare Pages redirects.
+# The site was repositioned on 2026-07-10 from a GEO agency to an independent evidence base.
+# The commercial pages were retired: that intent belongs to sunnypatel.co.uk, and duplicating it
+# was the reason the build gate failed. See docs/research-dossier.md.
+#
+# There must be NO catch-all rule here. A `/* /index.html 200` line is what produced the site-wide
+# soft-404, where every unknown URL returned HTTP 200 serving the homepage.
+
+# Retired commercial pages
+/geo-agency/               /generative-engine-optimisation/   301
+/aeo-agency/               /generative-engine-optimisation/   301
+/geo-services/             /                                  301
+/aeo-services/             /                                  301
+/ai-optimisation-agency/   /                                  301
+/geo-companies/            /tools/                            301
+/aeo-companies/            /tools/                            301
+
+# Retired informational pages, pending a rewrite to the evidence standard (wave 2)
+/answer-engine-optimisation/  /generative-engine-optimisation/  301
+/geo-vs-seo/                  /generative-engine-optimisation/  301
+/geo-strategy/                /generative-engine-optimisation/  301
+/ai-brand-visibility/         /evidence/                        301
+/geo-tools/                   /tools/                           301
+
+# Links that were published pointing at pages which never existed
+/geo-checklist/         /evidence/                          301
+/geo-best-practices/    /generative-engine-optimisation/    301

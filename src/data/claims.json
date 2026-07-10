@@ -1,0 +1,303 @@
+{
+  "$comment": "The evidence ledger. Every claim that circulates in AI-search marketing, graded. 'reproduction.status' records whether WE fetched the primary source and got the same number. Never edit a grade without adding a corrections.json entry.",
+  "gradedOn": "2026-07-10",
+  "grades": {
+    "VERIFIED": "We fetched the primary source ourselves and the numbers reproduced.",
+    "REFUTED": "A named primary source directly contradicts the claim.",
+    "MISLEADING": "The source is real, but the claim misrepresents what it measured.",
+    "DIRECTIONAL": "A real, named source exists, but it is single-sourced or only partly reproducible.",
+    "UNREPRODUCED": "A source is cited for the number, but we could not surface that number from it.",
+    "UNTRACEABLE": "The number circulates widely with no locatable primary source."
+  },
+  "flags": {
+    "VENDOR-INTERESTED": "The publisher sells a product whose value this finding supports. Not disqualifying. Always disclosed."
+  },
+  "claims": [
+    {
+      "id": "forty-percent",
+      "claim": "Generative engine optimisation boosts a brand's visibility in AI answers by up to 40%.",
+      "grade": "MISLEADING",
+      "flags": [],
+      "verdict": "The paper says this. The paper is measuring a benchmark, not ChatGPT.",
+      "source": {
+        "publisher": "Aggarwal, Murahari, Rajpurohit, Kalyan, Narasimhan & Deshpande",
+        "title": "GEO: Generative Engine Optimization",
+        "url": "https://arxiv.org/abs/2311.09735",
+        "published": "2023-11-16, last revised 2024-06-28 (v3). Accepted to KDD 2024.",
+        "sample": "GEO-bench, a benchmark of diverse user queries across multiple domains"
+      },
+      "quote": "GEO can boost visibility by up to 40% in generative engine responses.",
+      "whatTheSourceActuallySays": "The uplift is measured on GEO-bench, a research benchmark the authors introduce in the same paper, using a 'visibility' metric derived from how much of a generated response is attributable to a given source. It is a controlled lab result. It is not a measurement of citation behaviour on ChatGPT, Perplexity, Claude or Google AI Overviews, and the paper does not claim it is. Almost every marketing page that repeats the 40% omits this.",
+      "reproduction": {
+        "status": "reproduced",
+        "checkedOn": "2026-07-10",
+        "note": "We fetched the arXiv abstract and confirmed the sentence verbatim, and confirmed GEO-bench is introduced by the same paper. The abstract page does not state GEO-bench's query count, so we do not publish one. Figures of '~10,000 queries' circulate; we could not confirm that number from the abstract and have not read the full PDF."
+      },
+      "tags": ["foundational", "most-quoted"]
+    },
+    {
+      "id": "ai-overviews-top-10",
+      "claim": "If you rank in Google's organic top 10, you will be cited in AI Overviews.",
+      "grade": "MISLEADING",
+      "flags": ["VENDOR-INTERESTED"],
+      "verdict": "It was mostly true a year ago. It is now true of well under half of citations.",
+      "source": {
+        "publisher": "Ahrefs (Louise Linehan, Xibeijia Guan)",
+        "title": "AI Overview citations and the top 10",
+        "url": "https://ahrefs.com/blog/ai-overview-citations-top-10/",
+        "published": "2026-03-02",
+        "sample": "863,000 keyword SERPs; 4,000,000 AI Overview URLs"
+      },
+      "quote": "Google is selecting far fewer pages straight from the original SERP (~76% in July 2025 vs. ~38% today).",
+      "whatTheSourceActuallySays": "The share of AI Overview citations that also appear in the SERP's first 10 blocks fell from roughly 76% in July 2025 to 37.9% in January 2026. Restricted to organic results only, the figure is 37.10%. The authors attribute the shift to AI Overviews drawing more on the SERPs of fan-out sub-queries than on the original query's SERP.",
+      "reproduction": {
+        "status": "reproduced",
+        "checkedOn": "2026-07-10",
+        "note": "We fetched the article and the figures, sample size, authors and date all matched exactly."
+      },
+      "tags": ["ranking", "ai-overviews"]
+    },
+    {
+      "id": "answer-instability",
+      "claim": "Brands hold a ranking position inside AI answers, and you can track it.",
+      "grade": "REFUTED",
+      "flags": [],
+      "verdict": "Measured and contradicted. There is under a 1-in-100 chance of even the same list twice.",
+      "source": {
+        "publisher": "SparkToro (Rand Fishkin) with Gumshoe.ai (Patrick O'Donnell)",
+        "title": "AIs are highly inconsistent when recommending brands or products",
+        "url": "https://sparktoro.com/blog/new-research-ais-are-highly-inconsistent-when-recommending-brands-or-products-marketers-should-take-care-when-tracking-ai-visibility/",
+        "published": "November to December 2025",
+        "sample": "600 volunteers, 2,961 runs, 12 brand-recommendation prompts run 60 to 100 times each, across ChatGPT, Claude and Google AI Overviews / AI Mode"
+      },
+      "quote": "there's a <1 in 100 chance that ChatGPT or Google's AI, if asked 100X, will give you the same list of brands in any two responses",
+      "whatTheSourceActuallySays": "Same list of brands: under 1 in 100. Same list in the same order: roughly 1 in 1,000. Runners used default, personalised settings rather than pinned temperature, deliberately reflecting real-world conditions. The direct implication is that a single 'AI ranking position' is not a stable quantity.",
+      "reproduction": {
+        "status": "reproduced",
+        "checkedOn": "2026-07-10",
+        "note": "We fetched the SparkToro post and confirmed both probabilities and the methodology verbatim."
+      },
+      "tags": ["measurement", "volatility"]
+    },
+    {
+      "id": "zero-point-one-percent",
+      "claim": "AI assistants return the same brand list less than 0.1% of the time.",
+      "grade": "MISLEADING",
+      "flags": [],
+      "verdict": "Off by a factor of ten. 0.1% is the figure for the same list in the same ORDER.",
+      "source": {
+        "publisher": "SparkToro (Rand Fishkin) with Gumshoe.ai",
+        "title": "AIs are highly inconsistent when recommending brands or products",
+        "url": "https://sparktoro.com/blog/new-research-ais-are-highly-inconsistent-when-recommending-brands-or-products-marketers-should-take-care-when-tracking-ai-visibility/",
+        "published": "November to December 2025",
+        "sample": "as above"
+      },
+      "quote": "when it comes to ordering, AI tool responses are so random that it's more like 1 in 1,000 runs before you'd see two lists in the same order",
+      "whatTheSourceActuallySays": "Two distinct figures exist and are routinely conflated. List membership repeats at under 1 in 100 (under 1%). List ordering repeats at roughly 1 in 1,000 (about 0.1%). Any page citing '0.1% chance of the same list' has swapped one for the other.",
+      "reproduction": {
+        "status": "reproduced",
+        "checkedOn": "2026-07-10",
+        "note": "We caught this because we made the error ourselves. During the research behind this site we were handed the conflated version and repeated it before checking the primary source. The correction is logged at /corrections/."
+      },
+      "tags": ["measurement", "our-own-error"]
+    },
+    {
+      "id": "consensus-gap",
+      "claim": "AI visibility is one number, and a brand visible in ChatGPT is visible across AI search.",
+      "grade": "REFUTED",
+      "flags": [],
+      "verdict": "Only 2.37% of cited URLs appear in all three major engines. 91.07% appear in exactly one.",
+      "source": {
+        "publisher": "Kevin Indig, Growth Memo",
+        "title": "The Consensus Gap",
+        "url": "https://www.growth-memo.com/p/the-consensus-gap",
+        "published": "2026-05-11",
+        "sample": "3,700,000 URL citations from a 20,000-prompt random sample, across ChatGPT, Perplexity and Google AI Overviews, Q3 2025 to Q1 2026, from Omnia's live prompt monitoring pool"
+      },
+      "quote": "only 2.37% of cited URLs show up across all 3 engines",
+      "whatTheSourceActuallySays": "Citations are overwhelmingly fragmented by engine: 2.37% universal overlap, 91.07% single-engine. The commercial consequence is that any tool reporting one blended 'AI Visibility %' across engines is averaging three near-disjoint populations.",
+      "reproduction": {
+        "status": "reproduced",
+        "checkedOn": "2026-07-10",
+        "note": "We fetched the article and confirmed both figures and the dataset. One caveat the secondary coverage consistently omits, which we found on the source: the prompt pool is Europe-weighted and Spain-heavy, plus UK, Nordic and EU markets. It is not a global or US-representative sample. Treat the exact percentages as European."
+      },
+      "tags": ["measurement", "cross-engine"]
+    },
+    {
+      "id": "geo-term-decline",
+      "claim": "Interest in generative engine optimisation is growing rapidly.",
+      "grade": "DIRECTIONAL",
+      "flags": [],
+      "verdict": "Interest in the TERM peaked in August 2025. Underlying AI usage is a different question, and is still growing.",
+      "source": {
+        "publisher": "Rankability",
+        "title": "State of AI Search",
+        "url": "https://www.rankability.com/reports/state-of-ai-search/",
+        "published": "2026",
+        "sample": "Google Keyword Planner export, 3,751 keywords x 48 monthly data points, June 2022 to May 2026"
+      },
+      "quote": "AEO sits ~17% below its September high; GEO ~45% below its August high",
+      "whatTheSourceActuallySays": "Both terms were noise in 2023, measurable in 2024, scaled through 2025, then peaked in late summer 2025 and plateaued. GEO carries roughly twice AEO's search volume, yet the report observes practitioners converging on 'AEO' as the standard label.",
+      "reproduction": {
+        "status": "reproduced",
+        "checkedOn": "2026-07-10",
+        "note": "We fetched the report and confirmed the wording and methodology. Graded DIRECTIONAL rather than VERIFIED because it is single-sourced: we found no second independent dataset measuring term-level trend, and the report gives no absolute volumes. Do not treat the exact percentages as settled."
+      },
+      "tags": ["market", "terminology"]
+    },
+    {
+      "id": "citations-outside-top-10",
+      "claim": "Most AI Overview citations now come from pages that do not rank in Google's organic top 10.",
+      "grade": "VERIFIED",
+      "flags": ["VENDOR-INTERESTED"],
+      "verdict": "True as of January 2026, and it was not true six months earlier.",
+      "source": {
+        "publisher": "Ahrefs (Louise Linehan, Xibeijia Guan)",
+        "title": "AI Overview citations and the top 10",
+        "url": "https://ahrefs.com/blog/ai-overview-citations-top-10/",
+        "published": "2026-03-02",
+        "sample": "863,000 keyword SERPs; 4,000,000 AI Overview URLs"
+      },
+      "quote": "Google is selecting far fewer pages straight from the original SERP (~76% in July 2025 vs. ~38% today).",
+      "whatTheSourceActuallySays": "Ahrefs reports that 37.10% of AI Overview citations come from pages in the organic top 10. The complement, 62.90%, therefore come from outside it. The study attributes the shift to AI Overviews drawing on the SERPs of fan-out sub-queries rather than the original query's SERP. The practical consequence is that optimising only the pages that already rank for your target query addresses a shrinking minority of citations.",
+      "reproduction": {
+        "status": "reproduced",
+        "checkedOn": "2026-07-10",
+        "note": "We fetched the article and confirmed the 37.10% organic-only figure, the sample, the authors and the date. Note that the 'most come from outside the top 10' phrasing is our arithmetic complement of Ahrefs' number, not a sentence Ahrefs prints. We flag it because deriving a claim from a source is exactly the step where numbers usually go wrong. Ahrefs sells Brand Radar, so the finding is vendor-interested."
+      },
+      "tags": ["ranking", "ai-overviews"]
+    },
+    {
+      "id": "llms-txt-helps",
+      "claim": "Adding an llms.txt file improves your chances of being cited by AI assistants.",
+      "grade": "UNTRACEABLE",
+      "flags": [],
+      "verdict": "No study we can find demonstrates it. Google's John Mueller says no AI service has confirmed using the file.",
+      "source": {
+        "publisher": "unattributed; circulates across vendor blogs and SEO guides",
+        "title": "not locatable",
+        "url": "",
+        "published": "unknown",
+        "sample": "none disclosed"
+      },
+      "quote": "",
+      "whatTheSourceActuallySays": "Nothing traceable supports the positive claim. No controlled study, no server-log analysis and no vendor dataset that we could locate shows llms.txt increasing citation. The evidence that exists points the other way, though see the companion claim on this page, because that counter-evidence has its own problems.",
+      "reproduction": {
+        "status": "none",
+        "checkedOn": "2026-07-10",
+        "note": "We looked for a study supporting the claim and found none. We publish an llms.txt file ourselves, to describe the site rather than because we believe it changes anything. If you can produce a controlled study either way, we will grade it."
+      },
+      "tags": ["tactics", "technical"]
+    },
+    {
+      "id": "llms-txt-ignored",
+      "claim": "AI crawlers requested /llms.txt in only 0.1% of hits: 84 out of more than 62,100.",
+      "grade": "UNREPRODUCED",
+      "flags": ["VENDOR-INTERESTED"],
+      "verdict": "We believe the direction. We could not get these numbers off the page they are attributed to.",
+      "source": {
+        "publisher": "Otterly.ai",
+        "title": "Llms.txt Experiment: What Marketers Get Wrong about llms.txt",
+        "url": "https://otterly.ai/blog/llms-txt/",
+        "published": "2026-02-05",
+        "sample": "reported as a single experiment site, server logs, about 90 days"
+      },
+      "quote": "",
+      "whatTheSourceActuallySays": "The article argues that marketers misunderstand llms.txt and that AI bots largely ignore it. When we fetched the page, it did not yield the sample size, the date range, or the 84-of-62,100 figures that are widely attributed to it across other blogs.",
+      "reproduction": {
+        "status": "failed",
+        "checkedOn": "2026-07-10",
+        "note": "This is a claim we would like to be true, because it is convenient for our position on llms.txt. That is precisely why it gets UNREPRODUCED rather than a pass. The qualitative direction is corroborated independently by John Mueller's public comments; the specific numbers are not currently reproducible by us and we will not repeat them. Otterly sells AI search monitoring, so the finding is vendor-interested in the direction of 'a static file is not enough, buy monitoring'. That does not make it wrong."
+      },
+      "tags": ["tactics", "technical", "convenient-for-us"]
+    },
+    {
+      "id": "youtube-correlation",
+      "claim": "YouTube mentions correlate with AI visibility at r = 0.737.",
+      "grade": "UNTRACEABLE",
+      "flags": [],
+      "verdict": "We cannot find the study. The Semrush study that does exist says it did not test this.",
+      "source": {
+        "publisher": "attributed to a 'Semrush AI Visibility Index' of 126 million prompts",
+        "title": "not locatable",
+        "url": "",
+        "published": "unknown",
+        "sample": "claimed 126,000,000 prompts"
+      },
+      "quote": "",
+      "whatTheSourceActuallySays": "Nothing, as far as we can establish. The Semrush study we could locate (11,882 prompts, 337,785 URLs, published 14 January 2026) explicitly states that it did not test YouTube or backlink correlations. The 0.737 figure appears across multiple vendor blogs with no primary link.",
+      "reproduction": {
+        "status": "none",
+        "checkedOn": "2026-07-10",
+        "note": "No primary source located. Until someone produces the underlying report, treat this number as unsupported. If you have a primary link, send it and we will regrade in public."
+      },
+      "tags": ["untraceable", "tactics"]
+    },
+    {
+      "id": "reddit-12x",
+      "claim": "A 100-word Reddit comment gets cited by AI 12 times more often than a 2,000-word guide.",
+      "grade": "UNTRACEABLE",
+      "flags": [],
+      "verdict": "A suspiciously precise number with no methodology anywhere behind it.",
+      "source": {
+        "publisher": "unattributed; circulates across vendor blogs",
+        "title": "not locatable",
+        "url": "",
+        "published": "unknown",
+        "sample": "none disclosed"
+      },
+      "quote": "",
+      "whatTheSourceActuallySays": "Nothing traceable. That Reddit and other user-generated content carry meaningful AI citation share is separately supported, notably by Profound's citation dataset. The specific '12x versus a 2,000-word guide' comparison is not, and reads as marketing copy rather than a measurement.",
+      "reproduction": {
+        "status": "none",
+        "checkedOn": "2026-07-10",
+        "note": "No primary source located. Note the shape of this claim: an exact multiplier, two arbitrary word counts, no sample, no engine named, no date. That shape is the tell."
+      },
+      "tags": ["untraceable", "content"]
+    },
+    {
+      "id": "market-size",
+      "claim": "The GEO market grows from $848M in 2025 to $33.7B by 2034, a 50.5% CAGR.",
+      "grade": "UNTRACEABLE",
+      "flags": [],
+      "verdict": "Repeated across dozens of blogs. We could not trace it to any named research firm.",
+      "source": {
+        "publisher": "unattributed; circulates across secondary blogs",
+        "title": "not locatable",
+        "url": "",
+        "published": "unknown",
+        "sample": "none disclosed"
+      },
+      "quote": "",
+      "whatTheSourceActuallySays": "Nothing we could verify. Separate analyst projections for this category do exist and are also estimates rather than measurements. Capital flows are checkable and are a better signal: Profound raised a $96M Series C at a $1B valuation in February 2026.",
+      "reproduction": {
+        "status": "none",
+        "checkedOn": "2026-07-10",
+        "note": "No primary source located. Market-size projections in emerging categories are, by construction, estimates. Do not use one as evidence that a tactic works."
+      },
+      "tags": ["untraceable", "market"]
+    },
+    {
+      "id": "geo-is-a-category",
+      "claim": "Standalone GEO tracking is a durable product category in its own right.",
+      "grade": "DIRECTIONAL",
+      "flags": [],
+      "verdict": "Contested by someone who tried it. A GEO tracking startup shut down and its founder concluded the opposite.",
+      "source": {
+        "publisher": "Search Engine Land",
+        "title": "GEO startup Lorelight shuts down",
+        "url": "https://searchengineland.com/geo-startup-lorelight-shuts-down-464208",
+        "published": "2025-11-04",
+        "sample": "one company, April to October 2025"
+      },
+      "quote": "GEO makes more sense as a feature within existing SEO platforms, not as a standalone category.",
+      "whatTheSourceActuallySays": "Founder Benjamin Houy shut Lorelight down after roughly seven months. His stated reasons: 'Customers were churning because the product didn't change what they needed to do', and 'There's no secret GEO strategy. AI models reward the same fundamentals that already drive SEO and PR.' Consolidation supports the reading: Sitecore acquired Scrunch AI in June 2026, and Adobe agreed to acquire Semrush for about $1.9 billion.",
+      "reproduction": {
+        "status": "reproduced",
+        "checkedOn": "2026-07-10",
+        "note": "We fetched the Search Engine Land report and confirmed the quotes, the founder's name and the timeline. Graded DIRECTIONAL, not VERIFIED, because it is one founder's experience with one product, which is evidence but not proof. It is nonetheless the single most useful data point we found, because it is a first-hand account against the speaker's own commercial interest."
+      },
+      "tags": ["market", "scepticism"]
+    }
+  ]
+}

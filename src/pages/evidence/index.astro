@@ -1,0 +1,119 @@
+---
+import Base from '../../layouts/Base.astro';
+import ClaimCard from '../../components/ClaimCard.astro';
+import GradeBadge from '../../components/GradeBadge.astro';
+import claimsData from '../../data/claims.json';
+
+const claims = claimsData.claims;
+const order = ['REFUTED', 'MISLEADING', 'UNTRACEABLE', 'UNREPRODUCED', 'DIRECTIONAL', 'VERIFIED'];
+const sorted = [...claims].sort((a, b) => order.indexOf(a.grade) - order.indexOf(b.grade));
+const present = order.filter(g => claims.some(c => c.grade === g));
+const gradeDefs: Record<string, string> = claimsData.grades;
+// Sections run worst-first; the legend reads best-first, which is how a scale should be introduced.
+const legendOrder = ['VERIFIED', 'DIRECTIONAL', 'UNREPRODUCED', 'UNTRACEABLE', 'MISLEADING', 'REFUTED'];
+const legend = legendOrder.map(g => ({ grade: g, meaning: gradeDefs[g] }));
+const groups = present.map(g => ({ grade: g, items: sorted.filter(c => c.grade === g) }));
+
+// ClaimReview rating: 5 = the claim as circulated holds up, 1 = it does not.
+const rating: Record<string, number> = {
+  VERIFIED: 5, DIRECTIONAL: 4, UNREPRODUCED: 2, MISLEADING: 2, UNTRACEABLE: 1, REFUTED: 1,
+};
+
+const title = 'The AI search evidence ledger: every claim, graded';
+const description = `We graded ${claims.length} widely repeated claims about AI search against their primary sources. Verified, refuted, misleading, or untraceable. Each grade shows whether we reproduced the number ourselves.`;
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Evidence ledger', item: 'https://geooptimised.com/evidence/' },
+    ],
+  },
+  ...sorted.map(c => ({
+    '@context': 'https://schema.org',
+    '@type': 'ClaimReview',
+    url: `https://geooptimised.com/evidence/#${c.id}`,
+    claimReviewed: c.claim,
+    datePublished: c.reproduction.checkedOn,
+    author: { '@id': 'https://geooptimised.com/#organization' },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: rating[c.grade] ?? 3,
+      bestRating: 5,
+      worstRating: 1,
+      alternateName: c.grade,
+    },
+    itemReviewed: {
+      '@type': 'Claim',
+      appearance: c.source.url ? [{ '@type': 'CreativeWork', url: c.source.url }] : undefined,
+      author: { '@type': 'Organization', name: c.source.publisher },
+    },
+  })),
+];
+---
+<Base title={title} description={description} schema={schema}>
+  <section class="wrap pt-14 pb-10">
+    <nav aria-label="Breadcrumb" class="data text-[0.7rem] uppercase tracking-widest mb-6" style="color: var(--muted);">
+      <a href="/">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text);">Evidence ledger</span>
+    </nav>
+
+    <h1 class="font-serif font-bold text-[2.2rem] sm:text-[2.9rem] leading-[1.08] max-w-[20ch]">
+      The AI search evidence ledger
+    </h1>
+
+    <p class="mt-6 max-w-[64ch] text-[1.08rem]" style="color: var(--text-soft);">
+      Every claim below circulates widely in writing about generative engine optimisation. We went to the
+      primary source for each one and tried to reproduce the number. The grade records what happened. Where
+      we failed to reproduce something, we say so rather than repeat it, and where we got something wrong
+      ourselves, it is in <a class="link" href="/corrections/">corrections</a>.
+    </p>
+
+    <p class="mt-4 data text-[0.75rem]" style="color: var(--muted);">
+      {claims.length} claims &middot; last checked {claimsData.gradedOn} &middot;
+      <a class="link" href="/methodology/">how we grade</a>
+    </p>
+
+    <!-- Grade legend doubles as jump navigation. Colour is never the only signal. -->
+    <div class="mt-10 border-t border-b py-5" style="border-color: var(--line-strong);">
+      <p class="data text-[0.62rem] uppercase tracking-[0.14em] mb-4" style="color: var(--muted);">The scale</p>
+      <dl class="grid gap-x-6 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
+        {legend.map(g => (
+          <div class="flex items-start gap-3">
+            <dt class="shrink-0 pt-0.5"><GradeBadge grade={g.grade} small={true} /></dt>
+            <dd class="text-[0.85rem]" style="color: var(--text-soft);">{g.meaning}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="wrap pb-24">
+    {groups.map(group => (
+      <div class="mb-16">
+        <div class="flex items-baseline gap-4 mb-6 sticky top-16 py-3 -mx-1 px-1" style="background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(4px);">
+          <h2 class="font-serif text-[1.5rem] font-bold" style="color: var(--text);">{group.grade}</h2>
+          <span class="data text-[0.75rem]" style="color: var(--muted);">
+            {group.items.length} {group.items.length === 1 ? 'claim' : 'claims'}
+          </span>
+        </div>
+        <div class="grid gap-6 lg:grid-cols-2 items-start">
+          {group.items.map(c => (
+            <div class="fade-up"><ClaimCard claim={c} /></div>
+          ))}
+        </div>
+      </div>
+    ))}
+
+    <div class="rule pt-10 max-w-[62ch]">
+      <h2 class="font-serif text-[1.5rem] font-bold mb-4">Found something we got wrong?</h2>
+      <p class="mb-4" style="color: var(--text-soft);">
+        Send the primary source. If it holds up, we regrade the claim in public and log the change in
+        <a class="link" href="/corrections/">corrections</a>, with the date and what changed. We do not
+        silently edit pages.
+      </p>
+      <p class="text-[0.95rem]"><a class="link font-semibold" href="/contact/">Send us a source &rarr;</a></p>
+    </div>
+  </section>
+</Base>

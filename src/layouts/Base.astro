@@ -12,7 +12,7 @@ interface Props {
 }
 
 const { title, description, canonical, schema, ogType = 'website' } = Astro.props;
-const canonicalUrl = canonical || Astro.url.href;
+const canonicalUrl = canonical || new URL(Astro.url.pathname, Astro.site ?? 'https://geooptimised.com').href;
 const siteName = 'GEOoptimised';
 ---
 <!DOCTYPE html>
@@ -23,6 +23,8 @@ const siteName = 'GEOoptimised';
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonicalUrl} />
+  <meta name="theme-color" content="#FBFAF7" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#14130F" media="(prefers-color-scheme: dark)" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content={ogType} />
@@ -33,7 +35,10 @@ const siteName = 'GEOoptimised';
   <meta name="twitter:description" content={description} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
   {schema && (
     Array.isArray(schema)
       ? schema.map(s => <script type="application/ld+json" set:html={JSON.stringify(s)} />)
@@ -41,11 +46,30 @@ const siteName = 'GEOoptimised';
   )}
 </head>
 <body>
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-[var(--accent)] focus:text-ink-950 focus:px-4 focus:py-2 focus:rounded focus:z-50">Skip to content</a>
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:border" style="background: var(--surface); color: var(--text); border-color: var(--line-strong);">Skip to content</a>
   <Header />
   <main id="main">
     <slot />
   </main>
   <Footer />
+
+  <script>
+    // Fade-up on scroll. Respects reduced-motion by simply revealing everything.
+    const els = document.querySelectorAll<HTMLElement>('.fade-up');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || !('IntersectionObserver' in window)) {
+      els.forEach(el => el.classList.add('is-visible'));
+    } else {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            (e.target as HTMLElement).classList.add('is-visible');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(el => io.observe(el));
+    }
+  </script>
 </body>
 </html>

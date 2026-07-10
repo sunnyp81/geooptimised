@@ -1,79 +1,55 @@
 ---
-const navLinks = [
-  { href: '/geo-services/', label: 'Services' },
-  { href: '/generative-engine-optimisation/', label: 'Learn' },
-  { href: '/answer-engine-optimisation/', label: 'AEO' },
+const nav = [
+  { href: '/evidence/', label: 'Evidence ledger' },
+  { href: '/tools/', label: 'Tools' },
+  { href: '/who-pays-us/', label: 'Who pays us' },
+  { href: '/methodology/', label: 'Method' },
   { href: '/about/', label: 'About' },
-  { href: '/contact/', label: 'Contact' },
 ];
+const path = Astro.url.pathname;
 ---
-<header id="site-header" class="fixed top-0 inset-x-0 z-40 transition-all">
-  <div class="container-wide flex items-center justify-between h-[68px]">
-    <a href="/" class="flex items-center gap-2.5 group">
-      <span class="relative inline-flex items-center justify-center w-8 h-8 rounded-lg" style="background: linear-gradient(135deg,#00E5CC 0%,#0BB29F 100%)">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#001a16" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="3" />
-          <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/>
-        </svg>
-        <span class="absolute inset-0 rounded-lg pulse-dot" style="box-shadow: 0 0 0 1px rgba(0,229,204,.4)"></span>
-      </span>
-      <span class="font-display font-semibold text-[17px] tracking-[-0.018em] text-white">
-        GEO<span class="text-ink-300 font-medium">optimised</span>
-      </span>
+<header class="sticky top-0 z-40 border-b" style="border-color: var(--line); background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px);">
+  <div class="wrap flex items-center justify-between h-16 gap-4">
+    <a href="/" class="flex items-baseline gap-2 shrink-0" aria-label="GEOoptimised home">
+      <span class="font-serif text-xl font-bold tracking-tight" style="color: var(--text);">GEOoptimised</span>
+      <span class="data hidden sm:inline text-[0.6rem] uppercase tracking-[0.14em]" style="color: var(--muted);">Evidence, graded</span>
     </a>
 
-    <nav class="hidden md:flex items-center gap-1">
-      {navLinks.map(link => (
-        <a href={link.href} class="px-3 py-2 text-[14px] text-ink-200 hover:text-white rounded-md transition-colors">{link.label}</a>
+    <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
+      {nav.map(item => (
+        <a
+          href={item.href}
+          class="text-[0.9rem]"
+          style={`color: ${path.startsWith(item.href) ? 'var(--text)' : 'var(--muted)'}; ${path.startsWith(item.href) ? 'font-weight:600;' : ''}`}
+          aria-current={path.startsWith(item.href) ? 'page' : undefined}
+        >{item.label}</a>
       ))}
     </nav>
 
-    <div class="hidden md:flex items-center gap-2">
-      <a href="/contact/" class="btn btn-ghost">Book a call</a>
-      <a href="/contact/" class="btn btn-primary">Get AI Audit
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-
-    <button id="menu-toggle" class="md:hidden w-10 h-10 inline-flex items-center justify-center rounded-md border hair text-ink-200" aria-label="Toggle menu" aria-expanded="false">
-      <svg id="menu-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-    </button>
+    <button
+      id="nav-toggle"
+      class="md:hidden data text-[0.7rem] uppercase tracking-widest border px-3 py-1.5"
+      style="color: var(--text); border-color: var(--line-strong);"
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+    >Menu</button>
   </div>
 
-  <div id="mobile-menu" class="hidden md:hidden absolute inset-x-0 top-[68px] nav-glass border-t hair-soft">
-    <div class="container-wide py-6 flex flex-col gap-1">
-      {navLinks.map(link => (
-        <a href={link.href} class="py-3 text-[18px] text-white border-b hair-soft font-display">{link.label}</a>
+  <nav id="mobile-nav" class="md:hidden hidden border-t" style="border-color: var(--line);" aria-label="Primary mobile">
+    <div class="wrap py-3 flex flex-col">
+      {nav.map(item => (
+        <a href={item.href} class="py-2.5 text-[0.95rem] border-b last:border-b-0" style="color: var(--text); border-color: var(--line);">{item.label}</a>
       ))}
-      <a href="/contact/" class="btn btn-primary mt-4 w-full justify-center">Get Free AI Audit</a>
     </div>
-  </div>
+  </nav>
 </header>
 
 <script>
-  const toggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('mobile-menu');
-  const icon = document.getElementById('menu-icon');
-  const header = document.getElementById('site-header');
-
-  toggle?.addEventListener('click', () => {
-    const isHidden = menu?.classList.toggle('hidden') !== false;
-    toggle.setAttribute('aria-expanded', String(!isHidden));
-    if (icon) {
-      icon.innerHTML = isHidden
-        ? '<path d="M3 6h18M3 12h18M3 18h18"/>'
-        : '<path d="M6 6l12 12M6 18L18 6"/>';
-    }
+  const btn = document.getElementById('nav-toggle');
+  const menu = document.getElementById('mobile-nav');
+  btn?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('hidden') === false;
+    btn.setAttribute('aria-expanded', String(open));
+    btn.textContent = open ? 'Close' : 'Menu';
   });
-
-  let scrolled = false;
-  const onScroll = () => {
-    const now = window.scrollY > 8;
-    if (now !== scrolled) {
-      scrolled = now;
-      header?.classList.toggle('nav-glass', scrolled);
-    }
-  };
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
 </script>

@@ -1,150 +1,134 @@
 ---
 import Base from '../layouts/Base.astro';
+import claimsData from '../data/claims.json';
+import toolsData from '../data/tools.json';
 
-const title = 'About GEOoptimised | Generative Engine Optimisation Agency';
-const description = 'GEOoptimised is a specialist Generative Engine Optimisation agency focused exclusively on AI search visibility. We help brands get cited by ChatGPT, Perplexity, Gemini and Google AI Overviews.';
+const title = 'About GEOoptimised: an independent evidence base for AI search';
+const description = 'GEOoptimised grades every published claim about AI search by whether it traces to a primary source and reproduces, and publishes exactly what each tool it reviews pays it. Written by Sunny Patel.';
+
+const nonPayers = toolsData.tools.filter(t => !t.affiliate.hasProgram).length;
 
 const schema = [
   {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "GEOoptimised",
-    "url": "https://geooptimised.com",
-    "email": "hello@geooptimised.com",
-    "description": "Generative Engine Optimisation agency helping brands earn citations from AI search engines including ChatGPT, Perplexity, Gemini and Google AI Overviews.",
-    "foundingDate": "2026",
-    "knowsAbout": [
-      "Generative Engine Optimisation",
-      "Answer Engine Optimisation",
-      "AI search visibility",
-      "Entity authority",
-      "Structured data and schema markup",
-      "LLM retrieval mechanics",
-      "llms.txt optimisation",
-      "Cross-platform AI citation strategy",
-      "Knowledge graph optimisation",
-      "Topical authority architecture"
-    ]
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'About', item: 'https://geooptimised.com/about/' },
+    ],
   },
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://geooptimised.com/" },
-      { "@type": "ListItem", "position": 2, "name": "About", "item": "https://geooptimised.com/about/" }
-    ]
-  }
-];
-
-const expertise = [
-  {
-    title: 'Generative Engine Optimisation',
-    text: 'Full-spectrum GEO strategy covering citation acquisition, source positioning and retrieval-augmented generation alignment across all major AI platforms.',
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': 'https://geooptimised.com/#organization',
+    name: 'GEOoptimised',
+    url: 'https://geooptimised.com',
+    mainEntityOfPage: 'https://geooptimised.com/about/',
+    description: 'An independent evidence base for AI search visibility that grades every published claim by whether it traces to a primary source and reproduces, and publishes exactly what each tool it reviews pays it.',
+    disambiguatingDescription: 'GEOoptimised covers generative engine optimisation, meaning how brands come to be cited by AI assistants such as ChatGPT, Perplexity, Claude and Google AI Overviews. It is unrelated to geographic, location-based or geo-targeted marketing.',
+    founder: { '@id': 'https://geooptimised.com/#sunny-patel' },
+    knowsAbout: [
+      'Generative engine optimisation',
+      'Answer engine optimisation',
+      'AI search citation behaviour',
+      'Evidence grading of marketing claims',
+      'AI visibility measurement and its limits',
+    ],
   },
   {
-    title: 'Answer Engine Optimisation',
-    text: 'AEO methodology for featured snippets, voice search and direct-answer formats that feed into both traditional and AI-generated results.',
-  },
-  {
-    title: 'Entity Authority Architecture',
-    text: 'Building the entity signals, knowledge graph presence and topical authority structures that LLMs use to identify and rank trusted sources.',
-  },
-  {
-    title: 'Structured Data Strategy',
-    text: 'Schema markup implementation that gives language models clean, machine-readable signals about your content, brand relationships and expertise.',
-  },
-  {
-    title: 'LLM Retrieval Mechanics',
-    text: 'Deep understanding of how large language models tokenise queries, score relevance and select sources for citation in generated responses.',
-  },
-  {
-    title: 'Cross-Platform Visibility',
-    text: 'Platform-specific playbooks for ChatGPT, Perplexity, Gemini and Google AI Overviews, each calibrated to how that engine retrieves and cites.',
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': 'https://geooptimised.com/#sunny-patel',
+    name: 'Sunny Patel',
+    jobTitle: 'SEO consultant',
+    description: 'SEO consultant based in Berkshire, England. Runs a portfolio of independent websites and publishes what the data shows, including when it contradicts him.',
+    address: { '@type': 'PostalAddress', addressRegion: 'Berkshire', addressCountry: 'GB' },
   },
 ];
 ---
-
 <Base title={title} description={description} schema={schema}>
-
-  <!-- Breadcrumb -->
-  <nav aria-label="Breadcrumb" class="container-wide pt-28 md:pt-32">
-    <ol class="flex items-center gap-2 font-mono text-xs text-ink-400">
-      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
-      <li aria-hidden="true" class="select-none">/</li>
-      <li class="text-ink-300">About</li>
-    </ol>
-  </nav>
-
-  <!-- Hero -->
-  <section class="hero-fade relative overflow-hidden pt-12 pb-20 sm:pt-16 sm:pb-28">
-    <div class="container-wide text-center">
-      <p class="eyebrow">About GEOoptimised</p>
-      <h1 class="grad-text mx-auto mt-5 max-w-4xl font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-        Built for the AI Search Era
-      </h1>
-      <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-300">
-        A Generative Engine Optimisation agency built from the ground up for the AI search era. We help brands earn the citations that matter when answers replace links.
-      </p>
-    </div>
+  <section class="wrap pt-14 pb-8">
+    <nav aria-label="Breadcrumb" class="data text-[0.7rem] uppercase tracking-widest mb-6" style="color: var(--muted);">
+      <a href="/">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text);">About</span>
+    </nav>
+    <h1 class="font-serif font-bold text-[2.2rem] sm:text-[2.9rem] leading-[1.08] max-w-[20ch]">About GEOoptimised</h1>
   </section>
 
-  <!-- Content -->
-  <section class="py-16 sm:py-20">
-    <div class="container-wide max-w-3xl prose-dark">
-
-      <h2>Why We Exist</h2>
-      <p>
-        The search landscape has fundamentally shifted. ChatGPT, Perplexity, Google AI Overviews, Gemini and Claude now answer the questions your customers ask — often without a single click to a website. Brands that rely solely on traditional blue-link rankings are losing visibility to competitors who understand how large language models retrieve, evaluate and cite sources. GEOoptimised was founded on a simple principle: if AI is the new search interface, then earning AI citations is the new SEO.
+  <!-- Entity home. The definitional sentence sits alone, so an LLM can lift it whole. -->
+  <section class="wrap pb-12">
+    <div class="border-l-4 pl-6 py-1 max-w-[66ch]" style="border-color: var(--text);">
+      <p class="font-serif text-[1.32rem] leading-snug" style="color: var(--text);">
+        GEOoptimised is an independent evidence base for AI search visibility that grades every published claim by
+        whether it traces to a primary source and reproduces, and that publishes exactly what each tool it reviews
+        pays it.
       </p>
-
-      <h2>What We Do</h2>
-      <p>
-        GEOoptimised is a <strong>Generative Engine Optimisation</strong> agency focused exclusively on AI search visibility. We do not bolt GEO onto an existing SEO retainer as an afterthought. Every engagement, every methodology and every measurement framework we use is designed around one outcome: making your brand the source that AI search engines cite.
-      </p>
-      <p>
-        Our work spans the full spectrum of AI discoverability. We optimise for <strong>entity authority</strong> so that LLMs recognise your brand as a trusted source within your niche. We implement <strong>structured data and schema markup</strong> that gives language models clean, machine-readable signals about your content. We configure <strong>llms.txt</strong> files and AI crawler directives so your most important content is accessible to retrieval systems. And we build <strong>cross-platform citation strategies</strong> that account for the differences in how ChatGPT, Perplexity, Gemini and Google AI Overviews each select their sources.
-      </p>
-
-      <h2>How We Think</h2>
-      <p>
-        Our team combines deep technical SEO expertise with a practical understanding of LLM retrieval mechanics. We study how language models tokenise queries, score relevance, and decide which sources to surface in a response. This is not guesswork — we test, measure citation rates across platforms, and refine our approach based on live data.
-      </p>
-      <p>
-        We also believe in practising what we preach. This site is itself optimised for AI citation. From the semantic structure of every page to the entity relationships in our schema, everything is built to demonstrate the methodology we recommend to clients. If you ask an AI about Generative Engine Optimisation agencies, we intend to be cited.
-      </p>
-
     </div>
+    <p class="mt-6 max-w-[66ch] text-[0.98rem]" style="color: var(--text-soft);">
+      GEOoptimised covers <strong style="color: var(--text);">generative engine optimisation</strong>, meaning how
+      brands come to be cited by AI assistants such as ChatGPT, Perplexity, Claude and Google AI Overviews. It is
+      unrelated to geographic, location-based or geo-targeted marketing, which shares the abbreviation and none of
+      the subject matter.
+    </p>
   </section>
 
-  <!-- Expertise Grid -->
-  <section class="border-t border-[var(--line)] py-16 sm:py-20">
-    <div class="container-wide">
-      <p class="eyebrow">Core Competencies</p>
-      <h2 class="mt-4 font-display text-3xl font-bold text-white tracking-tight sm:text-4xl">Our Expertise</h2>
-      <p class="mt-4 max-w-2xl text-ink-300">
-        Our core competencies span every dimension of AI search visibility — from the technical mechanics of LLM retrieval to the strategic positioning that earns citations at scale.
-      </p>
+  <section class="prose-wrap pb-24 copy">
+    <h2>Why this exists</h2>
+    <p>
+      In July 2026 we set out to check the statistics that writing about AI search repeats most often. Of the claims
+      we examined, three led to no primary source we could locate at all. One cited a source whose numbers we could
+      not surface from the page. The single most-quoted figure in the entire field, the
+      <a class="link" href="/the-40-percent-claim/">40% visibility uplift</a>, turned out to describe a research
+      benchmark and is routinely presented as a measurement of ChatGPT.
+    </p>
+    <p>
+      Then we found something worse. A genuinely rigorous statistic, from SparkToro, had drifted by a factor of ten
+      as it was retold, and we had already repeated the wrong version in our own notes before we checked. Nobody had
+      lied. Somebody had paraphrased, and then somebody had paraphrased the paraphrase.
+    </p>
+    <p>
+      Every serious dataset in this field belongs to a company selling something: Ahrefs, Semrush, Profound, Peec.
+      Their research is often excellent. Nobody independent was checking whether the numbers survived contact with
+      their own sources, and nobody was disclosing what they earned from the tools they recommended. Those are two
+      small jobs. They do not require anyone's funding. So we did them.
+    </p>
 
-      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {expertise.map((item) => (
-          <div class="card card-hover p-6">
-            <h3 class="font-display text-lg font-semibold text-white">{item.title}</h3>
-            <p class="mt-3 text-sm leading-relaxed text-ink-300">{item.text}</p>
-          </div>
-        ))}
-      </div>
-    </div>
+    <h2>What we publish</h2>
+    <ul>
+      <li><strong><a class="link" href="/evidence/">The evidence ledger</a>.</strong> {claimsData.claims.length} claims, each graded on one of six grades, each with its primary source, sample size, publication date, and a note recording whether we personally reproduced the number.</li>
+      <li><strong><a class="link" href="/who-pays-us/">Who pays us</a>.</strong> The exact affiliate terms of every tool we review. {nonPayers} of them cannot pay us anything, and they are named alongside the ones that can.</li>
+      <li><strong><a class="link" href="/corrections/">Corrections</a>.</strong> Permanent and dated. The first two entries are our own errors, made before this site had a single reader.</li>
+      <li><strong><a class="link" href="/methodology/">The method</a>.</strong> Published in full, so you can audit a grade rather than trust it.</li>
+    </ul>
+
+    <h2>What we do not do</h2>
+    <p>
+      We do not sell GEO services, and there is nothing here to book. We do not sell a tool, so we have no dashboard
+      to defend. We run no display advertising and will not, because an ad network would choose what appears beside
+      our grading. We do not accept sponsored placements or paid reviews. We intend to earn affiliate commission,
+      and when we do, the tool's row will say so on the same day.
+    </p>
+
+    <h2>Who writes it</h2>
+    <p>
+      <strong>Sunny Patel</strong> is an SEO consultant based in Berkshire, England. He runs a portfolio of
+      independent websites and publishes what the data shows, including when it contradicts him. GEOoptimised exists
+      because he could not verify the numbers he kept being asked to repeat.
+    </p>
+    <p>
+      No claim is made here about certifications, awards, employers or clients. The community this site is written
+      for treats the anonymous "GEO expert" as the villain of the story, and it is right to. A named author who can
+      be held to what he published is the minimum, not a credential.
+    </p>
+
+    <h2>How to hold us to this</h2>
+    <p>
+      Pick any claim in the ledger. Follow its primary source. Read what it actually measured. If our grade is wrong,
+      <a class="link" href="/contact/">send us the source</a> and we will regrade it in public, on the corrections
+      page, with the date and what changed. We do not silently edit pages.
+    </p>
+    <p>
+      That offer is the entire business model of a site like this. If we ever quietly fix something instead of
+      logging it, we have nothing left to sell.
+    </p>
   </section>
-
-  <!-- CTA -->
-  <section class="border-t border-[var(--line)] py-20 sm:py-24">
-    <div class="container-wide max-w-3xl text-center">
-      <h2 class="font-display text-3xl font-bold text-white tracking-tight sm:text-4xl">Ready to Be Cited by AI?</h2>
-      <p class="mx-auto mt-5 max-w-xl text-ink-300">
-        Every day your competitors are being cited in AI-generated answers while your brand is absent. Let us show you exactly where you stand and how to change it.
-      </p>
-      <a href="/contact/" class="btn btn-primary mt-8">Get in Touch</a>
-    </div>
-  </section>
-
 </Base>

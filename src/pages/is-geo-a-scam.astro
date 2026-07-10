@@ -1,0 +1,214 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Is GEO a scam? The sceptics, steelmanned';
+const description = 'Rand Fishkin, Lily Ray, John Mueller and a founder who shut his own GEO tool down. The strongest case against generative engine optimisation, made properly, with sources.';
+
+const faq = [
+  {
+    q: 'Is generative engine optimisation a scam?',
+    a: 'The practice is not a scam. Much of the marketing around it is. AI assistants demonstrably cite some sources over others, so influencing that is a real objective. What is not established is that a distinct discipline, with its own tools and retainers, produces outcomes that ordinary SEO and PR fundamentals would not. The most credible practitioners in the field, including Lily Ray and Rand Fishkin, argue publicly that much of what is sold as GEO is repackaged SEO, and a founder who built and ran a GEO tracking tool shut it down after concluding the same thing.',
+  },
+  {
+    q: 'Can you track your brand’s ranking position in ChatGPT?',
+    a: 'No. SparkToro and Gumshoe ran 12 brand-recommendation prompts 60 to 100 times each across ChatGPT, Claude and Google AI Overviews, using 600 volunteers and 2,961 runs. The same list of brands repeats fewer than 1 time in 100. The same list in the same order repeats roughly 1 time in 1,000. There is no stable position to track. As Rand Fishkin puts it, any tool that gives you a ranking position in AI is "full of baloney".',
+  },
+  {
+    q: 'Do AI visibility tools agree with each other?',
+    a: 'Not reliably. Paul Dyer, CEO of /prompt, told Digiday that if you give three different tools the same prompts you get three different answers. Kevin Indig’s analysis of 3.7 million citations found only 2.37% of cited URLs appear across ChatGPT, Perplexity and Google AI Overviews for the same prompt, while 91.07% appear in exactly one. Any single blended AI visibility score is averaging three near-disjoint populations.',
+  },
+  {
+    q: 'So should I ignore AI search entirely?',
+    a: 'No, and that is the opposite error. ChatGPT reached roughly 900 million weekly active users by February 2026. People are using these systems to decide things. The defensible position is that being cited is worth having, that the levers are mostly the unglamorous ones (be worth citing, be mentioned where AI systems already look, be easy to quote), and that nobody yet has reliable measurement. Act on the first two. Be sceptical of anyone selling you the third.',
+  },
+];
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Is GEO a scam?', item: 'https://geooptimised.com/is-geo-a-scam/' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Is GEO a scam? The sceptics, steelmanned',
+    description,
+    datePublished: '2026-07-10',
+    dateModified: '2026-07-10',
+    author: { '@type': 'Person', '@id': 'https://geooptimised.com/#sunny-patel', name: 'Sunny Patel' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  },
+];
+---
+<Base title={title} description={description} schema={schema} ogType="article">
+  <article>
+    <header class="wrap pt-14 pb-8">
+      <nav aria-label="Breadcrumb" class="data text-[0.7rem] uppercase tracking-widest mb-6" style="color: var(--muted);">
+        <a href="/">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text);">Is GEO a scam?</span>
+      </nav>
+      <h1 class="font-serif font-bold text-[2.2rem] sm:text-[3rem] leading-[1.06] max-w-[18ch]">Is GEO a scam?</h1>
+      <p class="mt-6 max-w-[64ch] text-[1.12rem]" style="color: var(--text-soft);">
+        We run a site about generative engine optimisation, so the honest thing is to make the case against it as
+        strongly as we can, using the words of the people who make it best. Then say where we think they are right.
+      </p>
+      <p class="mt-4 data text-[0.72rem]" style="color: var(--muted);">
+        By Sunny Patel &middot; 10 July 2026
+      </p>
+    </header>
+
+    <!-- The extractable answer, in the first screen, in three sentences. Built to be quoted. -->
+    <section class="wrap pb-12">
+      <div class="border-l-4 pl-6 py-1 max-w-[64ch]" style="border-color: var(--text);">
+        <p class="font-serif text-[1.3rem] leading-snug" style="color: var(--text);">
+          The practice is not a scam. A great deal of the marketing around it is. AI assistants really do cite some
+          sources over others, so influencing that is a real goal, but no good evidence shows that a separate
+          discipline, with separate tools and separate retainers, beats doing the fundamentals well.
+        </p>
+      </div>
+    </section>
+
+    <section class="prose-wrap pb-24 copy">
+      <h2>The case against, made properly</h2>
+
+      <h3>1. There is no ranking, so there is nothing to rank for</h3>
+      <p>
+        This is the strongest argument, and it is empirical rather than rhetorical. SparkToro's Rand Fishkin, working
+        with Patrick O'Donnell of Gumshoe.ai, put 12 brand-recommendation prompts through ChatGPT, Claude and Google's
+        AI Overviews between November and December 2025. Six hundred volunteers ran each prompt 60 to 100 times,
+        2,961 runs in total, on default personalised settings rather than pinned parameters, because that is what real
+        users have.
+      </p>
+      <blockquote>
+        There's a &lt;1 in 100 chance that ChatGPT or Google's AI, if asked 100X, will give you the same list of brands
+        in any two responses.
+      </blockquote>
+      <p>
+        Same list, in the same order? Roughly <span class="data">1 in 1,000</span>. Fishkin's summary of what this does
+        to the tooling market is unimprovable: any tool that gives you a ranking position in AI is "full of baloney".
+      </p>
+      <p>
+        A discipline organised around improving a position cannot survive the discovery that the position does not
+        exist. <a class="link" href="/evidence/#answer-instability">See the graded record</a>.
+      </p>
+
+      <h3>2. The tools contradict each other, and cannot all be right</h3>
+      <p>
+        Paul Dyer, chief executive of /prompt, told Digiday: "If you use three different tools and give them the same
+        prompts, you get three different answers." That sounds like a maturity problem. Kevin Indig's data suggests it
+        is structural. Analysing <span class="data">3.7 million</span> citations from <span class="data">20,000</span>
+        prompts, he found only <span class="data">2.37%</span> of cited URLs appear across all three of ChatGPT,
+        Perplexity and Google AI Overviews, and <span class="data">91.07%</span> appear in exactly one.
+      </p>
+      <p>
+        A single blended "AI visibility" percentage is therefore averaging three populations that barely overlap. The
+        number can move because one engine changed, and tell you nothing about the other two.
+        <a class="link" href="/evidence/#consensus-gap">Graded record</a>.
+      </p>
+
+      <h3>3. Someone built the tool, sold it, and concluded it should not exist</h3>
+      <p>
+        This is the piece of evidence we find hardest to argue with, because it runs against the speaker's own
+        interest. Benjamin Houy launched Lorelight, a GEO tracking tool, in April 2025. He shut it down about seven
+        months later. His public reasoning:
+      </p>
+      <blockquote>
+        Customers were churning because the product didn't change what they needed to do. There's no secret GEO
+        strategy. AI models reward the same fundamentals that already drive SEO and PR. GEO makes more sense as a
+        feature within existing SEO platforms, not as a standalone category.
+      </blockquote>
+      <p>
+        Sitecore's acquisition of Scrunch AI in June 2026, and Adobe's agreement to acquire Semrush for about
+        $1.9 billion, both point the same way: this becomes a feature inside a bigger suite.
+        <a class="link" href="/evidence/#geo-is-a-category">Graded record</a>.
+      </p>
+
+      <h3>4. The industry's headline numbers do not survive contact with their sources</h3>
+      <p>
+        We tried to verify the statistics that this field repeats most often. Three of them lead to no primary source
+        at all: the claimed correlation between YouTube mentions and AI visibility, the "Reddit comments get cited 12x
+        more" line, and the market-size projection that appears in dozens of guides. The single most-quoted figure,
+        the <a class="link" href="/the-40-percent-claim/">40% uplift</a>, comes from a real paper measuring a research
+        benchmark, and is routinely presented as a measurement of ChatGPT.
+      </p>
+      <p>
+        John Mueller of Google, on the general pattern: "The higher the urgency, and the stronger the push of new
+        acronyms, the more likely they're just making spam and scamming." Lily Ray, more bluntly: "Anybody that's
+        pretending to be an expert in [GEO], they're lying."
+      </p>
+
+      <h3>5. Publishers with real traffic are not convinced</h3>
+      <p>
+        Neil Vogel, chief executive of People Inc., one of the largest digital publishers there is: "This whole
+        conversation is not rooted in any fact. If there's anyone who can prove to me that they can optimize the
+        output of these rapidly developing tools, I would love to talk to them."
+      </p>
+
+      <h2>Where the sceptics are right</h2>
+      <ul>
+        <li><strong>There is no AI ranking.</strong> This is settled by measurement, not debate. Anyone selling you a position is selling you noise.</li>
+        <li><strong>Most GEO tactics are SEO and PR tactics.</strong> Be authoritative, be mentioned in places that matter, be clear and quotable. That list predates ChatGPT by twenty years.</li>
+        <li><strong>The measurement layer is not ready.</strong> Google's own AI performance report in Search Console gives impressions with no clicks, no click-through rate and no queries. OpenAI ships no publisher analytics at all.</li>
+        <li><strong>Most "case studies" cannot be checked.</strong> No control group, no disclosed method, published by the party selling the service.</li>
+      </ul>
+
+      <h2>Where we think they overshoot</h2>
+      <p>
+        "It is all just SEO" is a comfortable position that quietly assumes the retrieval surface has not changed. It
+        has. Ahrefs found the proportion of AI Overview citations drawn from the organic top 10 fell from about 76% to
+        <span class="data">37.9%</span> in six months. If citation increasingly comes from somewhere other than the
+        pages ranking for your query, then optimising only for the pages ranking for your query is, by arithmetic,
+        addressing a shrinking share of the surface.
+      </p>
+      <p>
+        That does not vindicate the tooling market, and it certainly does not vindicate a 40% uplift promise. It does
+        mean the work is not identical to 2019 SEO, and the honest position sits between the two camps rather than in
+        either.
+      </p>
+      <p>
+        Note also what Mike King of iPullRank argues, which is not "GEO is nonsense" but something sharper: treating
+        "how do we appear in ChatGPT" as an <em>SEO</em> problem is itself the mistake. The levers run through
+        Wikipedia, Reddit, third-party publications and licensed data partnerships, which is brand and PR work that an
+        SEO budget does not fund. On that reading, GEO is a real budget line and a fake technical discipline.
+      </p>
+
+      <h2>What we would actually do</h2>
+      <ol>
+        <li><strong>Stop buying a number.</strong> If you need one to report upward, pick the cheapest tool that publishes its methodology, and label it a weather vane in the deck.</li>
+        <li><strong>Be worth citing.</strong> Original data, named authors, clear claims. The things that made you citable to humans.</li>
+        <li><strong>Be mentioned where the models already look.</strong> Earned media and community presence beat on-page tinkering, according to every large study we could find.</li>
+        <li><strong>Make pages easy to quote.</strong> Answer the question in the first three sentences. Put the number next to its source.</li>
+        <li><strong>Measure what you can bank.</strong> Referral traffic, branded search, conversions. Not citation share.</li>
+      </ol>
+      <p>
+        None of that requires a retainer with the word GEO in it. Which is, we suspect, why so few people selling GEO
+        retainers write it down.
+      </p>
+
+      <h2>Common questions</h2>
+      {faq.map(f => (
+        <>
+          <h3>{f.q}</h3>
+          <p>{f.a}</p>
+        </>
+      ))}
+
+      <div class="rule mt-12 pt-8">
+        <p class="text-[0.95rem]" style="color: var(--muted);">
+          Every quotation on this page is attributed to a named person, and every statistic is graded in the
+          <a class="link" href="/evidence/">evidence ledger</a> with its primary source and sample size. We sell no GEO
+          services and, at the time of writing, earn nothing from any tool mentioned. See
+          <a class="link" href="/who-pays-us/">who pays us</a>.
+        </p>
+      </div>
+    </section>
+  </article>
+</Base>

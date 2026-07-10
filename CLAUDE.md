@@ -1,67 +1,122 @@
-# CLAUDE.md
+# geooptimised.com — Project Brain
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+> Canonical project memory. Repositioned 2026-07-10 from a GEO agency to an independent evidence base.
+> Read `site-identity.md` (what this site is), `docs/research-dossier.md` (why), and
+> `docs/growth-plan.md` (what happens next) before changing anything.
 
-## Build & Dev Commands
+## What this site is
 
-```bash
-npm run dev        # Start dev server
-npm run build      # Static build → dist/
-npm run preview    # Preview production build locally
-```
+**An independent evidence base for AI search visibility that grades every published claim by whether it
+traces to a primary source and reproduces, and that publishes exactly what each tool it reviews pays it.**
 
-Deploy: Cloudflare Pages via GitHub (`sunnyp81/geooptimised`). Build command `npm run build`, output `dist`, NODE_VERSION=22.
+It is not an agency, not a tool vendor, not ad-funded. Monetisation is affiliate commission, fully
+disclosed, plus a future digital product. That model was chosen after a research gate; see below.
+
+## Why the agency site was killed (2026-07-10)
+
+The `/site-build` gate returned **NO-GO on the agency positioning**, on evidence, not taste:
+
+1. **It did not work.** 0 clicks / 15 impressions in six months (GSC), positions 88 to 99. The ROOT
+   pillar was unknown to Google, never crawled. No external backlink discovered.
+2. **It cannibalised Sunny.** `sunnypatel.co.uk` already runs `/services/ai-search-optimisation`, a GEO
+   case study and seven GEO/AEO posts. `agenticai.associates` already sells AI consultancy on retainers.
+   And `sunnypatel.co.uk/blog/best-aeo-agencies/` earned **1,418 impressions, 0 clicks**, at position
+   38.6. Commercial intent in this niche does not convert for us.
+3. **The category is consolidating.** Lorelight, a GEO tracker, shut down after ~7 months. Founder
+   Benjamin Houy: *"GEO makes more sense as a feature within existing SEO platforms, not as a standalone
+   category."* Sitecore bought Scrunch; Adobe is buying Semrush.
+4. **It was not hands-off.** Every CTA funnelled to `/contact/`, selling Sunny's time.
+
+The gate passed on a **pivot**: rigour is the one moat that does not require capital, and three of the
+niche's most-quoted statistics have no traceable source.
+
+## The rules that cannot be broken
+
+1. **No number without a source, a sample size and a date.** Every statistic in prose must first exist in
+   `src/data/claims.json` with a grade.
+2. **The grade describes the claim as it circulates, never the finding that settles it.** A true study
+   that demolishes a popular claim makes that claim `REFUTED`, not `VERIFIED`. (We got this wrong once;
+   it is logged in `corrections.json`.)
+3. **A commission never reorders a table.** Ahrefs, Screaming Frog and Clearscope pay nothing and are
+   named. Nightwatch pays the most (30% lifetime, 365-day cookie) and sits at the top of the disclosure,
+   not buried.
+4. **Corrections are permanent and dated.** Never silently edit a published claim.
+5. **No display advertising. No sponsored placements. No GEO services page.** Commercial GEO intent
+   belongs to sunnypatel.co.uk. Duplicating it is what failed the gate.
+6. **No em dashes, no en dashes, no emojis. British English.** "to" not "through" for date ranges.
+7. **The volatility harness measures model APIs, not chatgpt.com.** Label it "cross-model API
+   disagreement". Never "ChatGPT volatility".
 
 ## Architecture
 
-**Stack:** Astro 5 + Tailwind CSS 4 (via `@tailwindcss/vite`), static output, no SSR. `@astrojs/sitemap` auto-generates sitemap-index.xml.
+**Stack:** Astro 5 + Tailwind 4 (`@tailwindcss/vite`), static, `@astrojs/sitemap`. Deploy: Cloudflare
+Pages via GitHub push (`sunnyp81/geooptimised`, branch `master`). Build `npm run build`, output `dist`,
+NODE_VERSION=22. The `cfut_143…` CF token in master-builds is **dead**; rely on the git-push auto-build.
 
-**Layout system:** Single `Base.astro` layout handles all pages. Props: `title`, `description`, `schema` (JSON-LD object or array), `canonical` (optional), `ogType` (default "website"). Schema is injected as `<script type="application/ld+json">` — pass an array for multiple schema blocks.
+**Data is the product.** Three JSON files drive the site; the pages are views over them:
+- `src/data/claims.json` — 13 graded claims. Six grades: VERIFIED, REFUTED, MISLEADING, DIRECTIONAL,
+  UNREPRODUCED, UNTRACEABLE. Plus a `VENDOR-INTERESTED` flag.
+- `src/data/tools.json` — 16 tools, verified pricing, verified affiliate terms, `provenance` per fact,
+  and `ourEnrolment`. The footer and `/who-pays-us/` render enrolment straight from here, so the
+  disclosure cannot drift from the truth.
+- `src/data/corrections.json` — permanent log. Two entries, both our own pre-launch errors.
 
-**Design tokens:** Defined in `src/styles/global.css` via Tailwind 4 `@theme` block. Two scales: `geo-950`→`geo-50` (dark navy primary) and `accent-600`→`accent-300` (cyan). Body is `bg-geo-950 text-gray-200`. Font is Inter (400–800).
+**Signature component:** `src/components/ClaimCard.astro` — a stamped record (grade, claim, verdict,
+source, sample, reproduction note), independently linkable at `/evidence/#<id>`, emitted as `ClaimReview`
+JSON-LD on `/evidence/`.
 
-**Header/Footer:** Hardcoded nav arrays. Mobile menu uses inline vanilla JS toggle. If adding pages to nav, update both `Header.astro` and `Footer.astro`.
+**Design:** "the scientific register". Paper-light default (`--bg: #FBFAF7`), ink, Source Serif 4
+headings, Source Sans 3 body, IBM Plex Mono for every number. Colour is reserved for evidence grades and
+is never the only signal. Restrained dark variant via `prefers-color-scheme`. Deliberately unlike the
+dark-navy-and-cyan look of every AI SaaS site, including this site's own previous theme.
 
-## Content Model — Topical Map
+## Live routes (11 + 404)
 
-This site follows a ROOT/NODE/SEED topical map architecture (123 total pages planned). The full map lives at `G:\My Drive\Claude Code Work\Topical_Maps\geooptimised.com_topical_map.md`.
+`/`, `/evidence/`, `/generative-engine-optimisation/`, `/tools/`, `/who-pays-us/`, `/methodology/`,
+`/corrections/`, `/the-40-percent-claim/`, `/is-geo-a-scam/`, `/about/`, `/contact/`, plus `404.astro`.
 
-- **ROOT** (1 page): `/generative-engine-optimisation/` — pillar, links to all NODEs
-- **NODEs** (12 pages): Hub pages for major topic clusters
-- **SEEDs** (87+ pages): Long-tail pages under each NODE
+Twelve old pages are in `_retired/` with 301s in `public/_redirects`. Seven were commercial; five were
+informational but carried unverified claims. **They get rewritten to the evidence standard, never
+restored as-is.**
 
-Publication velocity: launch set of 8, then 3–4 pages/day ramping every 2 weeks.
+## Defects found and fixed on 2026-07-10
 
-## Page Patterns
+- **Site-wide soft-404.** Every unknown URL returned HTTP 200 serving the homepage. Fixed by shipping
+  `src/pages/404.astro` (emits `dist/404.html`). Mitigating factor at the time: those responses
+  self-canonicalised to `/`. **Verify after every deploy that `/does-not-exist/` returns 404.**
+- **Two invisible broken links.** `/geo-checklist/` and `/geo-best-practices/` were linked from content
+  but had no source file; the soft-404 made them look fine. Now 301'd.
+- **`llms.txt` described an agency.** Rewritten to state the entity, the grading scale, and the findings.
 
-Every page must include:
-1. **JSON-LD schema** — Article + FAQPage for content pages, Service/ProfessionalService for commercial pages, BreadcrumbList on all non-homepage pages
-2. **Internal links** — every SEED links to its parent NODE and ROOT; cross-NODE bridges where topically relevant
-3. **LLM-citable structure** — lead every section with a bold declarative statement; LLMs prefer confident, quotable definitions
+## The original-data engine
 
-Content sections follow: hero → definition/intro → body sections (cards/tables/lists) → CTA to `/contact/`.
+`scripts/volatility-run.mjs` + `data/prompts.json` (pre-registered before any run). 360 calls, ~$0.54 per
+full run, ~$2.20/month weekly. `MAX_CALLS=400`, `MAX_EST_USD=1.0`, dry-run by default, no public endpoint.
+**Blocked on Sunny supplying `OPENAI_API_KEY` / `ANTHROPIC_API_KEY` / `GEMINI_API_KEY`.** Do not ship a
+`/volatility/` page until four weekly runs exist.
 
-Link styling: `text-accent-400 underline decoration-accent-500/30 underline-offset-2 hover:text-accent-300`.
+## Blocked on Sunny
 
-## Brand & Copy Rules
+1. API keys for the volatility harness (above).
+2. `[MANUAL]` LinkedIn URL for `Person` schema `sameAs`. Do not invent one.
+3. `[MANUAL]` Decide whether `sunnypatel.co.uk` becomes a `sameAs`. Commit `d860537` deliberately removed
+   a commercial cross-link to reduce footprint. **Default: off.**
+4. `[MANUAL]` Confirm `hello@geooptimised.com` receives mail. It is published on `/contact/` but was
+   inherited from the old schema and never verified.
+5. Affiliate enrolment decisions, once a page ranks. Nightwatch first.
 
-- Brand name is **GEOoptimised** (exact capitalisation)
-- British English throughout: optimisation, colour, organisation
-- Exception: "optimization" (US spelling) appears naturally in keyword targets since search volume is US-heavy
-- No emojis
-- Tone: authoritative specialist, data-driven, not salesy
-- Key differentiators: brand=category, practitioner authority, dual-ranking (AI + traditional), platform-specific playbooks
+## Commands
 
-## Adding New Pages
+```bash
+npm run dev        # dev server
+npm run build      # static build -> dist/
+npm run preview    # preview production build
+node scripts/volatility-run.mjs --dry-run   # plan + cost estimate, no API calls
+```
 
-1. Create `src/pages/{slug}.astro` — URL becomes `/{slug}/`
-2. Import `Base` layout, pass title/description/schema
-3. Include BreadcrumbList schema: Home → parent NODE → current page
-4. Link back to parent NODE and ROOT in content
-5. Add to Header/Footer nav arrays if it's a top-level page
-6. After deploy: IndexNow ping, submit to GSC sitemap
+## Honest expectations
 
-## Static Assets
-
-- `public/robots.txt` — allows all, points to sitemap-index.xml
-- `public/llms.txt` — declares site purpose and expertise for AI crawlers; update when adding major new content areas
+Central case: **~£100/mo at month 6, ~£320/mo at month 12**, compounding afterwards via lifetime-recurring
+commissions. This site does **not** reach £2,000/mo within 12 months, and "GEO" as a search term peaked in
+August 2025 and sits ~45% below peak. If wave 2 lands and traffic still does not move, re-point the same
+grading machinery at "AI SEO" or "AI visibility". The ledger, components and disclosure all transfer.

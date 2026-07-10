@@ -1,0 +1,19 @@
+{
+  "$comment": "The fixed prompt set for the answer-volatility series. It is published here, in the repo, before any run, so that nobody (including us) can select prompts after seeing results. Changing this file starts a new series with a new version number; it never edits an existing one.",
+  "version": 1,
+  "createdOn": "2026-07-10",
+  "runsPerPrompt": 20,
+  "prompts": [
+    { "id": "seo-tools", "text": "Recommend the best SEO tools. Give a short list of brand names." },
+    { "id": "ai-visibility-tools", "text": "Which tools track whether AI assistants mention my brand? Give a short list of brand names." },
+    { "id": "crm-smb", "text": "Recommend the best CRM for a small business. Give a short list of brand names." },
+    { "id": "running-shoes", "text": "Recommend the best running shoes for a marathon. Give a short list of brand names." },
+    { "id": "uk-energy", "text": "Recommend the best UK energy suppliers. Give a short list of brand names." },
+    { "id": "project-mgmt", "text": "Recommend the best project management software. Give a short list of brand names." }
+  ],
+  "models": [
+    { "provider": "openai", "model": "gpt-4o-mini", "label": "OpenAI gpt-4o-mini (API)" },
+    { "provider": "anthropic", "model": "claude-haiku-4-5-20251001", "label": "Anthropic Claude Haiku 4.5 (API)" },
+    { "provider": "google", "model": "gemini-2.5-flash-lite", "label": "Google Gemini 2.5 Flash-Lite (API)" }
+  ]
+}

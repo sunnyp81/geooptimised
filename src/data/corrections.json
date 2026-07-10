@@ -1,0 +1,25 @@
+{
+  "$comment": "Public corrections log. Every correction stays here permanently with its date. Nothing is silently edited. If a grade in claims.json changes, it gets an entry here.",
+  "corrections": [
+    {
+      "id": "sparktoro-0-1-percent",
+      "date": "2026-07-10",
+      "status": "corrected before publication",
+      "affects": "/evidence/#answer-instability",
+      "weSaid": "SparkToro found that AI assistants return an identical brand list less than 0.1% of the time.",
+      "actuallyTrue": "SparkToro found that the same brand list repeats less than 1 time in 100 (under 1%). The 1-in-1,000 figure, about 0.1%, applies to getting the same list in the same ORDER. The two are routinely conflated.",
+      "howWeFoundOut": "The error entered our own research notes from a secondary summary. We caught it while fetching the SparkToro post directly to verify the figure before writing about it. We had already repeated the wrong number once in our working notes.",
+      "lesson": "This is the exact failure this site exists to catch, and we committed it on day one, on the single claim we were most confident about. A real statistic drifted by a factor of ten in the space of one retelling. Nobody lied. Somebody paraphrased."
+    },
+    {
+      "id": "grade-taxonomy-refuted",
+      "date": "2026-07-10",
+      "status": "corrected before publication",
+      "affects": "/methodology/",
+      "weSaid": "The first draft of the grading scale had five grades and no way to mark a claim that a good study disproves.",
+      "actuallyTrue": "It graded the popular claim 'you can track your brand's ranking position in AI answers' as VERIFIED, because we had verified the SparkToro study that demolishes it. That is backwards. A sixth grade, REFUTED, now covers it, and the scale is explicit that a grade describes the claim as it circulates, never the finding that settles it.",
+      "howWeFoundOut": "We found it while building the page that renders the ledger. Two claims came out reading as though we endorsed the thing we were disproving.",
+      "lesson": "A grading scale that cannot express 'this popular claim is false' is not a grading scale, it is a citation list."
+    }
+  ]
+}

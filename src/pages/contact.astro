@@ -1,214 +1,49 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const title = 'Contact GEOoptimised | Get a GEO Audit';
-const description = 'Get in touch with GEOoptimised for a free AI visibility assessment. Find out how your brand performs in ChatGPT, Perplexity, Gemini and Google AI Overviews.';
+const title = 'Contact: send us a source';
+const description = 'Found a claim we graded wrongly, or a primary source we missed? Send it. We regrade in public and log the change with a date.';
 
-const schema = [
-  {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "name": "Contact GEOoptimised",
-    "url": "https://geooptimised.com/contact/",
-    "description": "Contact GEOoptimised to start your Generative Engine Optimisation journey with a free AI visibility assessment.",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "GEOoptimised",
-      "url": "https://geooptimised.com",
-      "email": "hello@geooptimised.com"
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://geooptimised.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://geooptimised.com/contact/" }
-    ]
-  }
-];
-
-const whatYouGet = [
-  'AI citation audit across ChatGPT, Perplexity, Gemini and Copilot',
-  'Entity graph analysis for your brand',
-  'Competitor citation benchmarking',
-  'Content gap identification for AI visibility',
-  'Prioritised action plan with estimated impact',
-  'No-obligation strategy call to walk through findings',
-];
-
-const timeline = [
-  { day: 'Day 0', action: 'Submit your details below' },
-  { day: 'Day 1', action: 'We run your AI visibility audit' },
-  { day: 'Day 2-3', action: 'Entity and competitor analysis' },
-  { day: 'Day 4', action: 'Report compiled with recommendations' },
-  { day: 'Day 5', action: 'Strategy call to review findings' },
-];
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://geooptimised.com/contact/' },
+  ],
+};
 ---
-
 <Base title={title} description={description} schema={schema}>
+  <section class="wrap pt-14 pb-24 max-w-[46rem]">
+    <nav aria-label="Breadcrumb" class="data text-[0.7rem] uppercase tracking-widest mb-6" style="color: var(--muted);">
+      <a href="/">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text);">Contact</span>
+    </nav>
+    <h1 class="font-serif font-bold text-[2.2rem] sm:text-[2.9rem] leading-[1.08] max-w-[18ch] mb-6">
+      Send us a source
+    </h1>
 
-  <!-- Breadcrumb -->
-  <nav aria-label="Breadcrumb" class="container-wide pt-8">
-    <ol class="flex items-center gap-1.5 text-sm text-ink-400">
-      <li><a href="/" class="transition hover:text-[var(--accent)]">Home</a></li>
-      <li aria-hidden="true">/</li>
-      <li class="text-ink-200" aria-current="page">Contact</li>
+    <p class="mb-5 text-[1.05rem]" style="color: var(--text-soft);">
+      There is nothing to book here and nothing to buy. The one thing genuinely worth your email is a primary source
+      we missed, or a grade you think we got wrong.
+    </p>
+
+    <div class="border p-6 mb-10" style="border-color: var(--line-strong); background: var(--surface);">
+      <p class="data text-[0.62rem] uppercase tracking-[0.14em] mb-3" style="color: var(--muted);">Email</p>
+      <p class="font-serif text-[1.4rem]">
+        <a class="link" href="mailto:hello@geooptimised.com">hello@geooptimised.com</a>
+      </p>
+    </div>
+
+    <h2 class="font-serif text-[1.5rem] font-bold mb-4">What happens next</h2>
+    <ol class="space-y-3 mb-10 list-decimal pl-5" style="color: var(--text-soft);">
+      <li>We fetch the source you send and try to read the number off it ourselves.</li>
+      <li>If it holds up, the claim is regraded and the change is logged on <a class="link" href="/corrections/">corrections</a>, permanently, with the date and what changed.</li>
+      <li>If it does not hold up, we will tell you why, and that reasoning goes on the claim.</li>
     </ol>
-  </nav>
 
-  <!-- Header -->
-  <section class="hero-fade">
-    <div class="container-wide pt-16 pb-14 text-center">
-      <span class="eyebrow">Free AI Visibility Audit</span>
-      <h1 class="mx-auto mt-5 max-w-3xl font-display text-4xl font-bold leading-tight grad-text md:text-5xl lg:text-6xl">
-        Find out how often AI cites you. Or doesn't.
-      </h1>
-      <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-200">
-        We start every engagement with a <strong class="text-white">free AI visibility assessment</strong>. We audit how your brand currently performs across ChatGPT, Perplexity, Gemini and Google AI Overviews — and show you exactly where the opportunities are. No commitment, no obligation. Just data.
-      </p>
-      <p class="mt-3 text-ink-400">
-        You can also reach us directly at <a href="mailto:hello@geooptimised.com" class="text-[var(--accent)] border-b border-[var(--accent)]/35 hover:border-[var(--accent)] transition">hello@geooptimised.com</a>.
-      </p>
-    </div>
+    <p class="text-[0.95rem]" style="color: var(--muted);">
+      We do not offer GEO consultancy, audits or retainers, and we will not refer you to anyone who pays us to.
+      Our full commercial position is on <a class="link" href="/who-pays-us/">who pays us</a>.
+    </p>
   </section>
-
-  <!-- Form + Sidebar -->
-  <section class="container-wide pb-20">
-    <div class="grid gap-10 lg:grid-cols-[7fr_5fr]">
-
-      <!-- Left: Form -->
-      <div class="card p-8">
-        <form action="https://formsubmit.co/hello@geooptimised.com" method="POST" class="space-y-6">
-
-          <div class="grid gap-6 sm:grid-cols-2">
-            <div>
-              <label for="name" class="block text-sm font-medium text-ink-200">Name</label>
-              <input type="text" id="name" name="name" required autocomplete="name"
-                class="input mt-2" placeholder="Your name" />
-            </div>
-            <div>
-              <label for="email" class="block text-sm font-medium text-ink-200">Email</label>
-              <input type="email" id="email" name="email" required autocomplete="email"
-                class="input mt-2" placeholder="you@company.com" />
-            </div>
-          </div>
-
-          <div>
-            <label for="website" class="block text-sm font-medium text-ink-200">Website URL</label>
-            <input type="url" id="website" name="website" autocomplete="url"
-              class="input mt-2" placeholder="https://yoursite.com" />
-          </div>
-
-          <!-- Focus selector: 3 toggle buttons -->
-          <fieldset>
-            <legend class="block text-sm font-medium text-ink-200 mb-2">Primary focus</legend>
-            <div class="flex flex-wrap gap-2" id="focus-group">
-              <button type="button" data-value="GEO" class="focus-btn btn btn-ghost text-sm px-4 py-2">GEO</button>
-              <button type="button" data-value="AEO" class="focus-btn btn btn-ghost text-sm px-4 py-2">AEO</button>
-              <button type="button" data-value="Both" class="focus-btn btn btn-ghost text-sm px-4 py-2">Both / Not sure</button>
-            </div>
-            <input type="hidden" name="focus" id="focus-input" value="" />
-          </fieldset>
-
-          <!-- Budget range: pill buttons -->
-          <fieldset>
-            <legend class="block text-sm font-medium text-ink-200 mb-2">Monthly budget range</legend>
-            <div class="flex flex-wrap gap-2" id="budget-group">
-              <button type="button" data-value="Under £1k" class="budget-btn btn btn-ghost text-sm px-4 py-2">Under &pound;1k</button>
-              <button type="button" data-value="£1k-3k" class="budget-btn btn btn-ghost text-sm px-4 py-2">&pound;1k-3k</button>
-              <button type="button" data-value="£3k-5k" class="budget-btn btn btn-ghost text-sm px-4 py-2">&pound;3k-5k</button>
-              <button type="button" data-value="£5k+" class="budget-btn btn btn-ghost text-sm px-4 py-2">&pound;5k+</button>
-            </div>
-            <input type="hidden" name="budget" id="budget-input" value="" />
-          </fieldset>
-
-          <div>
-            <label for="message" class="block text-sm font-medium text-ink-200">Tell us about your goals</label>
-            <textarea id="message" name="message" rows="4" required
-              class="input mt-2 resize-y"
-              placeholder="What would you like help with?"></textarea>
-          </div>
-
-          <!-- FormSubmit config -->
-          <input type="hidden" name="_subject" value="New GEO enquiry from geooptimised.com" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="https://geooptimised.com/contact/?submitted=true" />
-          <input type="text" name="_honey" style="display:none" />
-
-          <button type="submit" class="btn btn-primary w-full justify-center">
-            Send Message
-          </button>
-
-        </form>
-      </div>
-
-      <!-- Right: Sidebar cards -->
-      <div class="space-y-6">
-
-        <!-- What you get -->
-        <div class="card p-6">
-          <span class="eyebrow">What you get</span>
-          <ul class="mt-4 space-y-3 text-sm text-ink-200">
-            {whatYouGet.map(item => (
-              <li class="flex items-start gap-2">
-                <span class="mt-0.5 text-[var(--accent)]">&#10003;</span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <!-- Timeline -->
-        <div class="card p-6">
-          <span class="eyebrow">Timeline</span>
-          <ol class="mt-4 space-y-3 text-sm">
-            {timeline.map(item => (
-              <li class="flex gap-3">
-                <span class="font-mono text-xs text-[var(--accent)] whitespace-nowrap mt-0.5">{item.day}</span>
-                <span class="text-ink-200">{item.action}</span>
-              </li>
-            ))}
-          </ol>
-        </div>
-
-        <!-- Testimonial -->
-        <div class="card p-6">
-          <div class="flex gap-0.5 text-[var(--accent)]" aria-label="5 out of 5 stars">
-            {[1,2,3,4,5].map(() => (
-              <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            ))}
-          </div>
-          <blockquote class="mt-3 text-sm text-ink-200 leading-relaxed italic">
-            "Within two weeks of the audit we had a clear picture of exactly where we were invisible to AI search. The action plan paid for itself in the first month."
-          </blockquote>
-          <p class="mt-3 text-xs text-ink-400">Marketing Director, B2B SaaS</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <script>
-    function initToggleGroup(groupId, inputId) {
-      const btns = document.querySelectorAll(`#${groupId} button`);
-      const input = document.getElementById(inputId);
-      btns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          btns.forEach(b => {
-            b.style.background = '';
-            b.style.borderColor = '';
-            b.style.color = '';
-          });
-          btn.style.background = 'var(--accent)';
-          btn.style.borderColor = 'var(--accent)';
-          btn.style.color = '#00231F';
-          input.value = btn.dataset.value;
-        });
-      });
-    }
-    initToggleGroup('focus-group', 'focus-input');
-    initToggleGroup('budget-group', 'budget-input');
-  </script>
-
 </Base>

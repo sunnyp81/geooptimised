@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Page not found | GEOoptimised';
+const description = 'That page does not exist on GEOoptimised.';
+---
+<Base title={title} description={description}>
+  <section class="wrap py-28 max-w-[46rem]">
+    <p class="data text-[0.65rem] uppercase tracking-[0.18em] mb-6" style="color: var(--muted);">Error 404</p>
+    <h1 class="font-serif font-bold text-[2.2rem] sm:text-[2.8rem] leading-[1.1] mb-6">
+      No such page. We checked.
+    </h1>
+    <p class="mb-8 text-[1.05rem]" style="color: var(--text-soft);">
+      This URL does not exist, and returns a real <span class="data">404</span> rather than quietly serving you the
+      homepage with a <span class="data">200</span>. That distinction matters more than it sounds: a site that
+      answers every wrong address with a cheerful "yes" is telling search engines it cannot be trusted about what
+      it contains.
+    </p>
+    <ul class="space-y-3 text-[1rem]">
+      <li><a class="link" href="/evidence/">The evidence ledger</a></li>
+      <li><a class="link" href="/generative-engine-optimisation/">What generative engine optimisation is</a></li>
+      <li><a class="link" href="/tools/">Tools, with verified pricing</a></li>
+      <li><a class="link" href="/who-pays-us/">Who pays us</a></li>
+      <li><a class="link" href="/">Home</a></li>
+    </ul>
+  </section>
+</Base>

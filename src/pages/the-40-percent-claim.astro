@@ -1,0 +1,202 @@
+---
+import Base from '../layouts/Base.astro';
+import ClaimCard from '../components/ClaimCard.astro';
+import claimsData from '../data/claims.json';
+
+const claim = claimsData.claims.find(c => c.id === 'forty-percent');
+
+const title = 'The 40% claim: anatomy of AI search’s most-quoted statistic';
+const description = 'Everyone repeats that GEO boosts visibility by up to 40%. The paper is real and peer-reviewed. It measured a research benchmark, not ChatGPT. Here is exactly what it says.';
+
+const faq = [
+  {
+    q: 'Where does the 40% figure come from?',
+    a: 'From the paper that named the field: "GEO: Generative Engine Optimization" by Pranjal Aggarwal, Vishvak Murahari, Tanmay Rajpurohit, Ashwin Kalyan, Karthik Narasimhan and Ameet Deshpande, first submitted to arXiv in November 2023 and accepted to KDD 2024. The abstract states that GEO "can boost visibility by up to 40% in generative engine responses".',
+  },
+  {
+    q: 'Is the 40% figure false?',
+    a: 'No. The paper says it, and the paper is real, peer-reviewed and worth reading. The problem is what it is taken to mean. The uplift was measured on GEO-bench, a benchmark the authors built and introduced in the same paper, using a visibility metric based on how much of a generated response is attributable to a given source. It is a controlled result on a research benchmark, not a measurement of live citation behaviour on ChatGPT, Perplexity, Claude or Google AI Overviews.',
+  },
+  {
+    q: 'Does that mean generative engine optimisation does not work?',
+    a: 'It means this particular number is not evidence that it does. The paper demonstrates that content changes can shift how much a generative system draws on a source under benchmark conditions, which is genuinely interesting. It does not establish that a given tactic will get your brand cited more often by a commercial AI assistant, and the paper never claims it does.',
+  },
+  {
+    q: 'What should I cite instead?',
+    a: 'If you want evidence about live systems, cite studies that measured live systems, and cite their sample sizes. Ahrefs analysed 863,000 keyword SERPs and 4 million AI Overview URLs. SparkToro and Gumshoe ran 2,961 prompt runs with 600 volunteers. Kevin Indig analysed 3.7 million citations across 20,000 prompts. All three have limits, and all three are measuring the real thing.',
+  },
+];
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'The 40% claim', item: 'https://geooptimised.com/the-40-percent-claim/' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'The 40% claim: anatomy of AI search’s most-quoted statistic',
+    description,
+    datePublished: '2026-07-10',
+    dateModified: '2026-07-10',
+    author: { '@type': 'Person', '@id': 'https://geooptimised.com/#sunny-patel', name: 'Sunny Patel' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' },
+    citation: [{ '@type': 'ScholarlyArticle', name: 'GEO: Generative Engine Optimization', url: 'https://arxiv.org/abs/2311.09735' }],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map(f => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  },
+];
+---
+<Base title={title} description={description} schema={schema} ogType="article">
+  <article>
+    <header class="wrap pt-14 pb-10">
+      <nav aria-label="Breadcrumb" class="data text-[0.7rem] uppercase tracking-widest mb-6" style="color: var(--muted);">
+        <a href="/">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text);">The 40% claim</span>
+      </nav>
+      <h1 class="font-serif font-bold text-[2.2rem] sm:text-[3rem] leading-[1.06] max-w-[20ch]">
+        The 40% claim
+      </h1>
+      <p class="mt-6 max-w-[64ch] text-[1.12rem]" style="color: var(--text-soft);">
+        It is the most repeated statistic in generative engine optimisation, and it appears in almost every guide,
+        pitch deck and agency landing page in the field. The paper behind it is real. What the paper measured is
+        not what the marketing says it measured.
+      </p>
+      <p class="mt-4 data text-[0.72rem]" style="color: var(--muted);">
+        By Sunny Patel &middot; 10 July 2026 &middot; Primary source checked by us
+      </p>
+    </header>
+
+    <!-- Lead with the graded record. The definitional answer sits in the first 3 sentences, extractable. -->
+    <section class="wrap pb-12">
+      <div class="max-w-[46rem]">
+        {claim && <ClaimCard claim={claim} />}
+      </div>
+    </section>
+
+    <section class="prose-wrap pb-24 copy">
+      <h2>What the paper actually is</h2>
+      <p>
+        The 40% figure comes from <cite>GEO: Generative Engine Optimization</cite>, a paper by Pranjal Aggarwal,
+        Vishvak Murahari, Tanmay Rajpurohit, Ashwin Kalyan, Karthik Narasimhan and Ameet Deshpande. It was
+        submitted to arXiv on 16 November 2023, last revised on 28 June 2024, and accepted to KDD 2024, one of the
+        serious data-mining conferences. This is not a vendor white paper. It is the academic work that gave the
+        field its name.
+      </p>
+      <p>The abstract contains the sentence everybody quotes:</p>
+      <blockquote>GEO can boost visibility by up to 40% in generative engine responses.</blockquote>
+      <p>
+        Every word of that is accurate. The trouble starts when it is lifted out and set next to a screenshot of
+        ChatGPT.
+      </p>
+
+      <h2>What "visibility" means in the paper, and what it does not</h2>
+      <p>
+        Alongside the method, the authors introduce <strong>GEO-bench</strong>, a benchmark of diverse user queries
+        across multiple domains with relevant web sources attached. The uplift is measured on that benchmark. The
+        "visibility" being boosted is a metric the authors define, based on how much of a generated response is
+        attributable to a given source, roughly how much of the answer's substance came from you.
+      </p>
+      <p>
+        So the claim, stated precisely, is: <em>under benchmark conditions, applying these content modifications
+        increased a source's share of the generated response by up to 40% relative to unmodified content.</em>
+      </p>
+      <p>That is a real and interesting result. Here is what it is not:</p>
+      <ul>
+        <li>It is <strong>not</strong> a measurement of how often ChatGPT, Perplexity, Claude or Google AI Overviews cite you.</li>
+        <li>It is <strong>not</strong> a 40% increase in traffic, leads, mentions or citations.</li>
+        <li>It is <strong>not</strong> "up to 40% more visible in AI search", the phrasing that appears on agency pages.</li>
+        <li>It is <strong>not</strong> a promise that any single tactic delivers 40%. "Up to" is doing heavy lifting, and the uplift varied by method and by domain.</li>
+      </ul>
+      <p>
+        The authors do not claim any of those things. The people quoting them do, usually by omission rather than
+        assertion, which is harder to argue with and easier to forgive.
+      </p>
+
+      <h2>How to check this yourself in ninety seconds</h2>
+      <ol>
+        <li>Open <a class="link" href="https://arxiv.org/abs/2311.09735" rel="noopener nofollow">arxiv.org/abs/2311.09735</a>.</li>
+        <li>Read the abstract. Find the 40% sentence.</li>
+        <li>Now find the words "GEO-bench" in the same abstract. It is the benchmark introduced in the same breath.</li>
+        <li>Ask yourself where in that abstract anyone measured chatgpt.com.</li>
+      </ol>
+      <p>
+        That is the entire audit. It takes less time than reading most of the articles that get it wrong. We
+        publish one detail those articles do not: the arXiv abstract page does not state how many queries GEO-bench
+        contains. A figure of roughly ten thousand circulates widely. We could not confirm it from the abstract and
+        have not read the full PDF, so we do not print it. That is the standard we are asking of everybody else.
+      </p>
+
+      <h2>Why this particular error matters</h2>
+      <p>
+        Because it is load-bearing. The 40% figure is doing a specific job in this industry: it converts a research
+        result into a sales promise. A prospective client hears "peer-reviewed research shows a 40% uplift" and
+        reasonably concludes that a well-understood intervention produces a well-measured outcome. Neither half of
+        that is established.
+      </p>
+      <p>
+        And the field notices. Google's John Mueller has been blunt about the pattern: "The higher the urgency, and
+        the stronger the push of new acronyms, the more likely they're just making spam and scamming." Lily Ray,
+        who has done as much serious work here as anyone, puts it more directly: "Anybody that's pretending to be
+        an expert in [GEO], they're lying." Those are not attacks on the paper. They are attacks on what has been
+        built on top of it.
+      </p>
+
+      <h2>What we would cite instead</h2>
+      <p>
+        There is real evidence about live systems, and it is more interesting than the 40%, because it is more
+        inconvenient:
+      </p>
+      <ul>
+        <li>
+          <strong>Ahrefs</strong> found the share of AI Overview citations that also rank in the organic top 10 fell
+          from about <span class="data">76%</span> in July 2025 to <span class="data">37.9%</span> in January 2026,
+          across <span class="data">863,000</span> keyword SERPs.
+          <a class="link" href="/evidence/#ai-overviews-top-10">Graded</a>.
+        </li>
+        <li>
+          <strong>SparkToro and Gumshoe</strong> ran <span class="data">2,961</span> prompt runs and found the same
+          brand list repeats fewer than <span class="data">1</span> time in <span class="data">100</span>.
+          <a class="link" href="/evidence/#answer-instability">Graded</a>.
+        </li>
+        <li>
+          <strong>Kevin Indig</strong> analysed <span class="data">3.7 million</span> citations and found only
+          <span class="data">2.37%</span> of cited URLs appear across all three major engines.
+          <a class="link" href="/evidence/#consensus-gap">Graded</a>.
+        </li>
+      </ul>
+      <p>
+        None of these supports a tidy percentage uplift you can put on a landing page. All three describe a system
+        that is noisier, more fragmented and less controllable than the 40% implies. That is presumably why they
+        get quoted less.
+      </p>
+
+      <h2>Questions people ask about this</h2>
+      {faq.map(f => (
+        <>
+          <h3>{f.q}</h3>
+          <p>{f.a}</p>
+        </>
+      ))}
+
+      <div class="rule mt-12 pt-8">
+        <p class="text-[0.95rem]" style="color: var(--muted);">
+          Think we have this wrong? The paper is linked above. Send us the passage we missed and we will regrade in
+          public, on <a class="link" href="/corrections/">the corrections page</a>, with the date.
+          Our commercial interests are listed on <a class="link" href="/who-pays-us/">who pays us</a>; at the time of
+          writing, nobody pays us anything.
+        </p>
+      </div>
+    </section>
+  </article>
+</Base>
