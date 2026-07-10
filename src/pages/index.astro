@@ -14,6 +14,8 @@ const untraceable = claims.filter(c => c.grade === 'UNTRACEABLE').length;
 // Numerals mid-sentence read badly in prose. Headline keeps the digit; body copy spells it out.
 const words = ['Nothing', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
 const untraceableWord = words[untraceable] ?? String(untraceable);
+const survives = claims.filter(c => c.grade === 'VERIFIED' || c.grade === 'DIRECTIONAL').length;
+const survivesPct = Math.round((survives / claims.length) * 100);
 const featured = claims.find(c => c.id === 'forty-percent');
 const ourError = correctionsData.corrections[0];
 
@@ -92,6 +94,12 @@ const schema = [
       <p class="mt-3 data text-[0.72rem]" style="color: var(--muted);">
         {claims.length} claims graded. Every grade links to its primary source. Disagree with one? The method is
         <a class="link" href="/methodology/">published</a>, so you can check us.
+      </p>
+
+      <p class="mt-6 text-[1rem]" style="color: var(--text-soft);">
+        We turned this into a study nobody else runs. Of {claims.length} of the field's most-repeated statistics,
+        <strong style="color: var(--text);">only {survivesPct}% survive a check against their own primary source.</strong>
+        <a class="link font-semibold ml-1" href="/reproduction/">Read the reproduction study &rarr;</a>
       </p>
     </div>
   </section>

@@ -298,6 +298,138 @@
         "note": "We fetched the Search Engine Land report and confirmed the quotes, the founder's name and the timeline. Graded DIRECTIONAL, not VERIFIED, because it is one founder's experience with one product, which is evidence but not proof. It is nonetheless the single most useful data point we found, because it is a first-hand account against the speaker's own commercial interest."
       },
       "tags": ["market", "scepticism"]
+    },
+    {
+      "id": "schema-boosts-citations",
+      "claim": "Adding schema markup increases how often AI assistants cite your pages.",
+      "grade": "REFUTED",
+      "flags": [],
+      "verdict": "The publisher that sells rank tools ran the experiment and found no uplift on any platform.",
+      "source": {
+        "publisher": "Ahrefs (Louise Linehan, Xibeijia Guan)",
+        "title": "We Tracked 1,885 Pages Adding Schema. AI Citations Barely Moved.",
+        "url": "https://ahrefs.com/blog/schema-ai-citations/",
+        "published": "2026-05-11",
+        "sample": "1,885 URLs that added JSON-LD, against 4,000 matched controls, Aug 2025 to Mar 2026"
+      },
+      "quote": "Adding schema produced no major uplift in citations on any platform.",
+      "whatTheSourceActuallySays": "Across the platforms measured, the change in citations after adding schema was statistically indistinguishable from zero: Google AI Mode +2.4%, ChatGPT +2.2%, and Google AI Overviews actually -4.6% (a small but significant decline). The pages studied were already receiving AI citations, so the experiment tests whether schema lifts already-cited pages, not whether it helps undiscovered ones.",
+      "reproduction": {
+        "status": "reproduced",
+        "checkedOn": "2026-07-10",
+        "note": "We fetched the article and confirmed the conclusion, the per-platform figures, the sample of 1,885 treated pages against 4,000 controls, the dates and the authors. Ahrefs sells rank tracking rather than schema tooling, so if anything the incentive ran towards a tidy positive result; it did not find one."
+      },
+      "tags": ["tactics", "technical", "holds-up-badly"]
+    },
+    {
+      "id": "long-form-cited-more",
+      "claim": "Long-form content (2,000+ words) gets cited more often by AI.",
+      "grade": "REFUTED",
+      "flags": [],
+      "verdict": "Word count and citation are essentially uncorrelated, and most cited pages are short.",
+      "source": {
+        "publisher": "Ahrefs",
+        "title": "Short vs Long Content in AI Overviews",
+        "url": "https://ahrefs.com/blog/short-vs-long-content-in-ai-overviews/",
+        "published": "2025-12-03",
+        "sample": "560,346 AI Overviews, 1,677,876 cited URLs, 174,048 pages with valid word counts"
+      },
+      "quote": "The Spearman correlation between word count and citation position is 0.04, essentially zero.",
+      "whatTheSourceActuallySays": "There is almost no relationship between how long a page is and whether it is cited: Spearman 0.04. In fact 53.4% of pages cited by AI Overviews are under 1,000 words, and only 16.0% are over 2,000. The idea that long-form mega-guides dominate AI citation is contradicted by the distribution.",
+      "reproduction": {
+        "status": "reproduced",
+        "checkedOn": "2026-07-10",
+        "note": "We fetched the article and confirmed the 0.04 correlation, the 53.4% under-1,000-words figure, the sample sizes and the date. Scope caveat worth carrying: this dataset is Google AI Overviews only, not ChatGPT or Perplexity."
+      },
+      "tags": ["tactics", "content", "holds-up-badly"]
+    },
+    {
+      "id": "ghost-citations",
+      "claim": "Most pages an AI cites as a source never get their brand named in the answer.",
+      "grade": "VERIFIED",
+      "flags": ["VENDOR-INTERESTED"],
+      "verdict": "True in the study that coined the term: 61.7% were cited without the brand appearing. Small sample, though.",
+      "source": {
+        "publisher": "Semrush",
+        "title": "The Ghost Citations Study",
+        "url": "https://www.semrush.com/blog/the-ghost-citations-study/",
+        "published": "2026-06-09",
+        "sample": "3,981 domain appearances across 115 prompts, 14 countries, on ChatGPT, Gemini, Google AI Overviews and Google AI Mode"
+      },
+      "quote": "Almost 62% (61.7%) were ghost citations. AI platforms used the page as a source link, but the brand name never appeared in the actual answer.",
+      "whatTheSourceActuallySays": "In 61.7% of cases the AI used a page as a linked source but did not mention the brand in the text of the answer, which undercuts the idea that a citation reliably delivers a brand mention. Note the modest sample: 115 prompts. Perplexity was not included.",
+      "reproduction": {
+        "status": "reproduced",
+        "checkedOn": "2026-07-10",
+        "note": "We fetched the article and confirmed the 61.7% figure, the 3,981 domain appearances, the 115 prompts and the date. We grade it VERIFIED because the number reproduces exactly, while flagging that 115 prompts is a thin base for how broadly this stat is now generalised. Semrush sells an AI visibility toolkit."
+      },
+      "tags": ["measurement", "holds-up", "thin-sample"]
+    },
+    {
+      "id": "mentions-beat-backlinks",
+      "claim": "Brand mentions correlate with AI visibility about three times more strongly than backlinks.",
+      "grade": "VERIFIED",
+      "flags": ["VENDOR-INTERESTED"],
+      "verdict": "The 0.664 vs 0.218 numbers reproduce exactly. The word the claim drops is 'weak'.",
+      "source": {
+        "publisher": "Ahrefs",
+        "title": "AI Overview brand correlation study",
+        "url": "https://ahrefs.com/blog/ai-overview-brand-correlation/",
+        "published": "2025-05-26",
+        "sample": "75,000 brands, domain rating over 40, minimum 800 monthly search volume, Spearman correlation"
+      },
+      "quote": "Web mentions (0.664) correlate much more strongly than backlinks (0.218).",
+      "whatTheSourceActuallySays": "Branded web mentions correlate with Google AI Overview visibility at Spearman 0.664, against 0.218 for backlinks, which is roughly the three-to-one the claim states. But the authors add the part usually dropped: 'correlation does not equal causation', and 'all the factors we studied revealed moderate to very weak correlations'. So mentions beat backlinks relatively, while both are weak in absolute terms, and the scope is AI Overviews, not AI search generally.",
+      "reproduction": {
+        "status": "reproduced",
+        "checkedOn": "2026-07-10",
+        "note": "We fetched the article and confirmed both correlation figures, the 75,000-brand sample, the method, the date and the caveats. The bare claim reproduces, so it is VERIFIED. What is misleading is the common extension of it, that mentions therefore 'matter more than links', which the study neither tests nor supports."
+      },
+      "tags": ["measurement", "holds-up", "scope-caveat"]
+    },
+    {
+      "id": "reddit-most-cited",
+      "claim": "Reddit is the most-cited source in AI answers.",
+      "grade": "MISLEADING",
+      "flags": ["VENDOR-INTERESTED"],
+      "verdict": "True on some engines, false on the biggest one. It flips by platform.",
+      "source": {
+        "publisher": "Profound",
+        "title": "AI platform citation patterns",
+        "url": "https://www.tryprofound.com/blog/ai-platform-citation-patterns",
+        "published": "August 2024 to June 2025",
+        "sample": "680,000,000 citations across ChatGPT, Google AI Overviews and Perplexity"
+      },
+      "quote": "Reddit emerges as the leading source for both Google AI Overviews (2.2%) and Perplexity (6.6%).",
+      "whatTheSourceActuallySays": "The most-cited domain depends entirely on which engine you mean. On ChatGPT the top source is Wikipedia at 7.8%, with Reddit second at 1.8%. On Google AI Overviews and Perplexity, Reddit is first (2.2% and 6.6%). A blanket 'Reddit is most-cited' is true for two engines and false for ChatGPT, the largest.",
+      "reproduction": {
+        "status": "reproduced",
+        "checkedOn": "2026-07-10",
+        "note": "We fetched the Profound analysis and confirmed the per-platform leaders and their percentages, and the 680M-citation dataset. The claim is graded MISLEADING because it states as a universal fact something that is platform-specific and reverses across platforms. Profound sells AI visibility tracking."
+      },
+      "tags": ["measurement", "cross-engine"]
+    },
+    {
+      "id": "adobe-58-percent-ai-shopping",
+      "claim": "Adobe (or Salesforce) found that 58% of consumers now use AI instead of search engines for product recommendations.",
+      "grade": "MISLEADING",
+      "flags": ["VENDOR-INTERESTED"],
+      "verdict": "The 58% is real, but it is Capgemini's, not Adobe's, and it is a survey of what people say they do.",
+      "source": {
+        "publisher": "Capgemini Research Institute",
+        "title": "What Matters to Today's Consumer (4th edition)",
+        "url": "https://www.capgemini.com/news/press-releases/71-of-consumers-want-generative-ai-integrated-into-their-shopping-experiences/",
+        "published": "2025-01-09",
+        "sample": "12,000 consumers across 12 countries, surveyed October to November 2024"
+      },
+      "quote": "More than half (58%) have replaced traditional search engines with Gen AI tools as their go-to for product/service recommendations.",
+      "whatTheSourceActuallySays": "The 58% figure comes from Capgemini, not Adobe or Salesforce, and it is a self-reported survey of stated behaviour (up from 25% the year before), not a measurement of actual traffic. Adobe did publish a 58% figure in the same period, but it is about consumers' willingness to share personal information for convenience, an unrelated question, which is the likely root of the misattribution.",
+      "reproduction": {
+        "status": "reproduced",
+        "checkedOn": "2026-07-10",
+        "note": "We fetched the Capgemini release and confirmed the 58% wording, the up-from-25% comparison, the 12,000-consumer sample, the countries and the dates. Graded MISLEADING because the claim as circulated attributes the number to the wrong company and presents a stated-preference survey as measured behaviour. The underlying Capgemini number is real."
+      },
+      "tags": ["market", "misattribution", "survey"]
     }
   ]
 }

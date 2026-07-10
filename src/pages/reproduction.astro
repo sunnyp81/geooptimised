@@ -1,0 +1,225 @@
+---
+import Base from '../layouts/Base.astro';
+import GradeBadge from '../components/GradeBadge.astro';
+import claimsData from '../data/claims.json';
+
+const claims = claimsData.claims;
+const N = claims.length;
+
+// The study's classification. A claim "survives" reproduction only when we reached the primary
+// source and the number came back. Everything else is a distinct failure mode, and the failure
+// modes are the finding.
+const reproduced = claims.filter(c => c.reproduction?.status === 'reproduced');
+const refuted = claims.filter(c => c.grade === 'REFUTED');
+const misleading = claims.filter(c => c.grade === 'MISLEADING');
+const unreproduced = claims.filter(c => c.grade === 'UNREPRODUCED');
+const untraceable = claims.filter(c => c.grade === 'UNTRACEABLE');
+const directional = claims.filter(c => c.grade === 'DIRECTIONAL');
+
+// Headline: of the claims we audited, how many survive a check against their own primary source
+// exactly as they are repeated? A REFUTED or MISLEADING claim does NOT survive even when the
+// underlying study is real, because the claim as circulated misrepresents it.
+const survives = claims.filter(c => c.grade === 'VERIFIED' || c.grade === 'DIRECTIONAL');
+const survivesPct = Math.round((survives.length / N) * 100);
+const noPrimary = untraceable.length; // no locatable primary source at all
+const noPrimaryPct = Math.round((noPrimary / N) * 100);
+const misrepresents = refuted.length + misleading.length;
+const misrepresentsPct = Math.round((misrepresents / N) * 100);
+
+const buckets = [
+  { key: 'survives', label: 'Survive as circulated', n: survives.length, tone: 'g-verified',
+    note: 'Reached the primary source; the claim holds (VERIFIED), or holds but is single-sourced (DIRECTIONAL).' },
+  { key: 'misrepresents', label: 'A real source says otherwise', n: misrepresents.length, tone: 'g-refuted',
+    note: 'A real, named study exists, but it contradicts the claim as repeated (REFUTED) or measured something other than what the claim asserts (MISLEADING).' },
+  { key: 'unreproduced', label: 'Cited, but did not reproduce', n: unreproduced.length, tone: 'g-unreproduced',
+    note: 'A source is named, but we could not surface the number from it when we fetched it.' },
+  { key: 'untraceable', label: 'No source at all', n: untraceable.length, tone: 'g-untraceable',
+    note: 'The number circulates widely with no locatable primary source we could reach.' },
+];
+
+const title = 'The AI search reproduction study: how many repeated statistics survive a check';
+const description = `We took ${N} of the most-repeated statistics in AI search and tried to reproduce each from its primary source. ${survivesPct}% survive as circulated. ${noPrimaryPct}% have no locatable source at all. Running study, updated as claims are added.`;
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Reproduction study', item: 'https://geooptimised.com/reproduction/' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: 'AI search statistic reproduction study',
+    description: `A running audit of widely-repeated AI-search statistics, each checked against its primary source and graded by whether it reproduced. ${N} claims as of ${claimsData.gradedOn}.`,
+    creator: { '@id': 'https://geooptimised.com/#organization' },
+    dateModified: claimsData.gradedOn,
+    url: 'https://geooptimised.com/reproduction/',
+    isAccessibleForFree: true,
+    variableMeasured: ['reproduction status', 'evidence grade', 'primary source', 'sample size'],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    datePublished: '2026-07-10',
+    dateModified: claimsData.gradedOn,
+    author: { '@type': 'Person', '@id': 'https://geooptimised.com/#sunny-patel', name: 'Sunny Patel' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' },
+  },
+];
+---
+<Base title={title} description={description} schema={schema} ogType="article">
+  <!-- Hero: the headline number IS the study. -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid" aria-hidden="true"></div>
+    <div class="absolute inset-0 hero-fade" aria-hidden="true"></div>
+    <div class="wrap relative pt-14 pb-16">
+      <nav aria-label="Breadcrumb" class="eyebrow mb-6">
+        <a href="/">Home</a> <span aria-hidden="true">/</span> Reproduction study
+      </nav>
+      <p class="eyebrow mb-5">Original data &middot; Running study &middot; Updated {claimsData.gradedOn}</p>
+
+      <h1 class="font-display font-bold text-[2.3rem] leading-[1.06] sm:text-[3.2rem] max-w-[22ch] grad-text">
+        We tried to reproduce {N} repeated AI-search statistics. Here is what happened.
+      </h1>
+
+      <p class="mt-7 max-w-[64ch] text-[1.12rem]" style="color: var(--text-soft);">
+        This is the study nobody in the field runs. We took the statistics that get quoted most often about
+        AI search, went to the primary source behind each, and recorded whether the number actually came back.
+        No API keys, no proprietary panel, no crawler. Just the reproduction, done by hand and shown in full.
+      </p>
+
+      <!-- The three headline numbers. -->
+      <div class="mt-12 grid gap-4 sm:grid-cols-3">
+        <div class="card p-6">
+          <p class="data text-5xl font-bold" style="color: var(--g-verified);">{survivesPct}%</p>
+          <p class="mt-3 text-[0.95rem]" style="color: var(--text-soft);">survive a check against their own primary source, as they are circulated.</p>
+        </div>
+        <div class="card p-6">
+          <p class="data text-5xl font-bold" style="color: var(--g-untraceable);">{noPrimaryPct}%</p>
+          <p class="mt-3 text-[0.95rem]" style="color: var(--text-soft);">have <strong style="color:var(--text)">no locatable primary source at all</strong>, despite circulating widely.</p>
+        </div>
+        <div class="card p-6">
+          <p class="data text-5xl font-bold" style="color: var(--g-refuted);">{misrepresentsPct}%</p>
+          <p class="mt-3 text-[0.95rem]" style="color: var(--text-soft);">cite a real study but <strong style="color:var(--text)">misrepresent what it measured</strong>, or are contradicted by it.</p>
+        </div>
+      </div>
+
+      <p class="mt-6 data text-[0.72rem]" style="color: var(--muted);">
+        n = {N} claims &middot; not a random sample; see method below &middot; every claim links to its primary source in the
+        <a class="link" href="/evidence/">ledger</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- The distribution. -->
+  <section class="wrap py-16">
+    <h2 class="font-display text-[1.8rem] font-bold mb-2">The distribution</h2>
+    <p class="max-w-[64ch] mb-8" style="color: var(--text-soft);">
+      Every audited claim lands in exactly one of four buckets. The failure modes are the interesting part:
+      a field's statistics can fail to reproduce in more than one way, and each way means something different.
+    </p>
+
+    <div class="space-y-3">
+      {buckets.map(b => (
+        <div class="card p-5">
+          <div class="flex items-baseline justify-between gap-4 mb-2">
+            <h3 class="font-display text-[1.15rem] font-semibold" style="color: var(--text);">{b.label}</h3>
+            <span class="data text-2xl font-bold" style={`color: var(--${b.tone});`}>{b.n}</span>
+          </div>
+          <!-- Proportion bar. Width is data-driven; the track keeps it readable at n=0. -->
+          <div class="h-1.5 rounded-full overflow-hidden mb-3" style="background: var(--line);">
+            <div style={`width: ${Math.round((b.n / N) * 100)}%; height: 100%; background: var(--${b.tone});`}></div>
+          </div>
+          <p class="text-[0.9rem]" style="color: var(--text-soft);">{b.note}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Method, stated plainly, including the selection-bias caveat. -->
+  <section class="prose-wrap pb-16 copy">
+    <div class="rule pt-10">
+      <h2>How this study was built</h2>
+      <p>
+        For each statistic, the procedure was the same one described on <a class="link" href="/methodology/">how we
+        grade</a>: find the primary source, not the blog citing the blog; fetch it and read the number off it
+        ourselves; record the sample size, the date and what was actually measured; and grade the claim by what
+        happened. The full record for every claim, with its source link and our reproduction note, is the
+        <a class="link" href="/evidence/">evidence ledger</a>. This page is the count.
+      </p>
+
+      <h3>What "survives" means</h3>
+      <p>
+        A claim survives only if we reached its primary source and the number came back <em>as the claim is
+        circulated</em>. A claim can fail even when the underlying study is real and excellent: if the study
+        measured a research benchmark and the claim presents it as a measurement of ChatGPT, the claim does not
+        survive, because the thing being repeated is not the thing that was found. That is the difference between
+        auditing a study and auditing a claim, and it is the whole point.
+      </p>
+
+      <h3>The honest limitation: this is not a random sample</h3>
+      <p>
+        We did not draw these statistics from a defined population at random. We collected the ones we kept
+        encountering, the numbers that recur across guides, decks and vendor blogs about AI search. That is a
+        real selection effect and we will not hide it behind a headline percentage. The claim this study makes is
+        narrow and defensible: <strong>among the statistics this field repeats most, a large share do not survive
+        contact with their own sources.</strong> It is not a claim about every statistic ever published.
+      </p>
+      <p>
+        It is also a <strong>running study</strong>. The count above is computed from the live ledger at build
+        time, so it moves as we audit more claims. When it moves, this page moves with it, and any claim we
+        regrade leaves a dated trail in <a class="link" href="/corrections/">corrections</a>. We would rather
+        publish a study that visibly changes than a snapshot that pretends to be final.
+      </p>
+
+      <h3>Reproduce the reproduction</h3>
+      <p>
+        Every number here is checkable. Pick any claim in the <a class="link" href="/evidence/">ledger</a>, follow
+        its primary-source link, and see whether you get what we got. If you do not, that is the most useful email
+        we can receive: <a class="link" href="/contact/">send it</a>, and if you are right the claim is regraded in
+        public, with the date and what changed. A reproduction study that could not itself be reproduced would be
+        the richest possible joke at our expense, so the whole apparatus is built to be re-run by a stranger.
+      </p>
+    </div>
+  </section>
+
+  <!-- The roll-call, grouped, so a reader can scan what failed. -->
+  <section class="wrap pb-24">
+    <div class="rule pt-10">
+      <h2 class="font-display text-[1.6rem] font-bold mb-6">Every claim in the study</h2>
+      <div class="table-scroll card">
+        <table class="ledger-table !my-0">
+          <caption class="sr-only">All audited claims with their grade and reproduction status</caption>
+          <thead>
+            <tr>
+              <th scope="col">Claim</th>
+              <th scope="col">Grade</th>
+              <th scope="col">Reproduced?</th>
+            </tr>
+          </thead>
+          <tbody>
+            {claims.map(c => (
+              <tr>
+                <td class="!text-[0.9rem]" style="color: var(--text);">
+                  <a class="link" href={`/evidence/#${c.id}`}>{c.claim}</a>
+                </td>
+                <td><GradeBadge grade={c.grade} small={true} /></td>
+                <td class="data text-[0.8rem]" style="color: var(--muted);">
+                  {c.reproduction?.status === 'reproduced' ? 'yes'
+                    : c.reproduction?.status === 'failed' ? 'no'
+                    : c.reproduction?.status === 'partial' ? 'partly'
+                    : 'no source'}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</Base>
