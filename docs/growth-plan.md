@@ -47,28 +47,44 @@ product.
 
 Retired pages sit in `_retired/` with 301s in `public/_redirects`. They are rewritten, never restored.
 
-## The original-data engine — SUPERSEDED, DO NOT RUN, PENDING SUNNY'S DECISION
+## The original-data engine: DECIDED, geooptimised owns measurement
 
-🔴 **Discovered after this harness was written:** a parallel session on the same day built
-`sourcedbyai.com` (repo `C:\Users\sunny\repos\sourcedbyai`), whose entire USP is *"every figure is a
-distribution from repeated runs, variance published"*. It already has a measurement harness, built and
-dry-run verified, and it is **blocked on the same API keys**. Its own dossier recommended publishing the
-measurement panel on geooptimised.com instead, and it permanently scope-cut its tool reviews to avoid
-cannibalising this site.
+**Sunny decided on 2026-07-10.** This supersedes the earlier "pending Sunny's decision" note that proposed
+`sourcedbyai.com` produce the primary distributions. The instruction was to do the work here and leave
+`sourcedbyai` alone. That repo is parked: no GitHub remote, domain still on a Spaceship parking page,
+nothing running. Only one site is going to be live, so only one site can own measurement.
 
-Running both is duplicate spend and portfolio cannibalisation, which is gate criterion 6. Nothing spends
-money until Sunny adds keys, so there is no urgency, but **do not enable `scripts/volatility-run.mjs`
-until the split is decided.** The recommended split:
+Two harnesses, two different quantities, both dry-run by default with a hard call ceiling and no public
+endpoint:
 
-- **sourcedbyai.com** owns *primary measurement*: it produces the distributions. No vendor reviews, no
-  affiliate.
-- **geooptimised.com** owns *grading and disclosure*: it grades published claims, including sourcedbyai's,
-  reviews tools, and publishes what each pays us.
+- `scripts/volatility-run.mjs` measures which **brand names** a model utters from its own weights, with no
+  retrieval. It reproduces the brand-volatility claims.
+- `scripts/citation-run.mjs` measures which **source domains** an engine cites when it does retrieve. It
+  reproduces the four citation claims in `claims.json`, which nothing here could previously reproduce.
+  It refuses to call Gemini or Bing grounding, whose terms forbid building an index from returned links.
 
-Note also that sourcedbyai's mandatory footer disclosure says "the author runs a GEO agency", and its
-dossier assumes geooptimised sells a £750-6,000/mo retainer. **Both are now false.** That site's
-differentiation FAIL was reasoned partly from geooptimised's old `/geo-tools/` page, which is now 301'd.
-Its dossier needs revisiting in light of this pivot.
+Neither invents a number when keys are absent. About $2.75 per citation run at 4 prompts and 20 repeats.
+
+### Corrections to the superseded note
+
+It was **right** that `sourcedbyai`'s dossier is stale where it argues for publishing here on the grounds
+that geooptimised "sells a £750-6,000/mo GEO retainer". That stopped being true at `3bea505`, which killed
+the agency positioning and 301'd `/geo-services/` and `/geo-tools/` to the homepage. The dossier's
+differentiation FAIL was also reasoned partly from that now-retired `/geo-tools/` page.
+
+It was **wrong** that `sourcedbyai`'s footer disclosure ("the author separately operates a Generative
+Engine Optimisation consultancy") is false. Checked on 2026-07-10:
+`https://sunnypatel.co.uk/services/ai-search-optimisation/` returns 200 and actively sells AI Search
+Optimisation. Sunny still runs a GEO consultancy. It is simply no longer this site. The disclosure stands.
+
+Neither correction changes the decision. `sourcedbyai` is not being edited to fix its dossier, per
+Sunny's instruction to leave it alone.
+
+### Duplicate-content hazard
+
+`sourcedbyai` holds a near-identical article to `/the-grounding-clause/`. It is not deployed, so nothing
+is duplicated today. Both sites must never publish it. If `sourcedbyai` is ever launched, that article
+comes down there first.
 
 ### The harness itself, if the split lands here
 

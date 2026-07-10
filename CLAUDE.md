@@ -112,20 +112,36 @@ restored as-is.**
   but had no source file; the soft-404 made them look fine. Now 301'd.
 - **`llms.txt` described an agency.** Rewritten to state the entity, the grading scale, and the findings.
 
-## The original-data engine — 🔴 SUPERSEDED, DO NOT RUN
+## The original-data engine: geooptimised owns measurement
 
-`scripts/volatility-run.mjs` + `data/prompts.json` exist and dry-run cleanly (360 calls, ~$0.54/run,
-`MAX_CALLS=400`, `MAX_EST_USD=1.0`, dry-run default, no public endpoint).
+**Decided by Sunny, 2026-07-10.** This section supersedes the earlier "SUPERSEDED, DO NOT RUN, pending
+Sunny" note, which proposed that `sourcedbyai.com` produce the primary distributions instead. Sunny's
+instruction was to do the work here and leave `sourcedbyai` alone. That repo stays parked and untouched:
+it has no GitHub remote, its domain still points at a Spaceship parking page, and nothing in it runs.
+Two sites cannot both own measurement, and only one of them is going to be live.
 
-**Do not enable it.** A sibling site, `sourcedbyai.com` (`C:\Users\sunny\repos\sourcedbyai`), was built the
-same day with exactly this USP ("every figure is a distribution from repeated runs, variance published"),
-already has a harness, and is blocked on the same API keys. Its dossier recommended publishing the panel
-here instead. Running both duplicates the spend and cannibalises the portfolio.
+**Two harnesses. Two different quantities. Never conflate them (rule 8).**
 
-Recommended split, pending Sunny: **sourcedbyai produces the primary distributions; geooptimised grades
-published claims (including theirs), reviews tools, and discloses what each pays us.** Note that
-sourcedbyai's footer disclosure ("the author runs a GEO agency") and its dossier's premise (that
-geooptimised sells a £750-6,000/mo retainer) are both now false. Nothing spends money until keys exist.
+| Script | Measures | Retrieval | Reproduces |
+|---|---|---|---|
+| `scripts/volatility-run.mjs` | brand names the model utters | none, plain `generateContent` | the brand-volatility claims |
+| `scripts/citation-run.mjs` | cited source domains | yes, web search tools | the four citation claims in `claims.json` |
+
+Both are dry-run by default, both enforce a hard `MAX_CALLS` ceiling before any request, neither exposes a
+public endpoint, and neither invents a number when keys are absent. `citation-run.mjs` additionally refuses
+to call Gemini or Bing grounding (rule 7) and reports every domain as a share across repeated runs with a
+95% interval, a run count, and a per-engine Jaccard stability score.
+
+Nothing spends money until keys exist. About $2.75 per run at the current prompt set and 20 repeats.
+
+**One correction carried over from the superseded note, which was right:** `sourcedbyai`'s research dossier
+argues for publishing its panel here on the grounds that geooptimised "sells a £750-6,000/mo GEO retainer".
+That stopped being true at commit `3bea505`, which killed the agency positioning. The dossier is stale on
+that point. It does not change the decision above, and `sourcedbyai` is not being edited to fix it.
+
+**Duplicate-content hazard:** `sourcedbyai` contains a near-identical article to `/the-grounding-clause/`.
+It is not deployed, so nothing is duplicated today. Both sites must never publish it. If `sourcedbyai` is
+ever launched, that article comes down there first.
 
 ## Blocked on Sunny
 
