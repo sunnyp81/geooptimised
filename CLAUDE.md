@@ -57,8 +57,11 @@ NODE_VERSION=22. The `cfut_143…` CF token in master-builds is **dead**; rely o
 - `src/data/claims.json` — 13 graded claims. Six grades: VERIFIED, REFUTED, MISLEADING, DIRECTIONAL,
   UNREPRODUCED, UNTRACEABLE. Plus a `VENDOR-INTERESTED` flag.
 - `src/data/tools.json` — 16 tools, verified pricing, verified affiliate terms, `provenance` per fact,
-  and `ourEnrolment`. The footer and `/who-pays-us/` render enrolment straight from here, so the
-  disclosure cannot drift from the truth.
+  and `ourEnrolment`. **11 pay a commission, 5 pay nothing** (Ahrefs, Screaming Frog, Clearscope,
+  Peec AI, Profound). The footer and `/who-pays-us/` render enrolment straight from here, so the
+  disclosure cannot drift from the truth. Never hardcode these counts in prose; derive them.
+  (The commit message for `3bea505` says "six that can pay us nothing". It is five. Left uncorrected
+  in history, corrected here.)
 - `src/data/corrections.json` — permanent log. Two entries, both our own pre-launch errors.
 
 **Signature component:** `src/components/ClaimCard.astro` — a stamped record (grade, claim, verdict,
