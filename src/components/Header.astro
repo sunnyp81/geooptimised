@@ -8,11 +8,11 @@ const nav = [
 ];
 const path = Astro.url.pathname;
 ---
-<header class="sticky top-0 z-40 border-b" style="border-color: var(--line); background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px);">
+<header class="sticky top-0 z-40 nav-glass">
   <div class="wrap flex items-center justify-between h-16 gap-4">
-    <a href="/" class="flex items-baseline gap-2 shrink-0" aria-label="GEOoptimised home">
-      <span class="font-serif text-xl font-bold tracking-tight" style="color: var(--text);">GEOoptimised</span>
-      <span class="data hidden sm:inline text-[0.6rem] uppercase tracking-[0.14em]" style="color: var(--muted);">Evidence, graded</span>
+    <a href="/" class="flex items-baseline gap-2.5 shrink-0" aria-label="GEOoptimised home">
+      <span class="font-display text-xl font-bold" style="color: var(--text);">GEOoptimised</span>
+      <span class="eyebrow hidden sm:inline">Evidence, graded</span>
     </a>
 
     <nav class="hidden md:flex items-center gap-6" aria-label="Primary">

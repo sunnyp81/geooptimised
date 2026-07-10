@@ -39,7 +39,7 @@ const Row = 'tr';
     <nav aria-label="Breadcrumb" class="data text-[0.7rem] uppercase tracking-widest mb-6" style="color: var(--muted);">
       <a href="/">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text);">Tools</span>
     </nav>
-    <h1 class="font-serif font-bold text-[2.2rem] sm:text-[2.9rem] leading-[1.08] max-w-[22ch]">
+    <h1 class="font-display font-bold text-[2.2rem] sm:text-[2.9rem] leading-[1.08] max-w-[22ch]">
       AI visibility tools, and what they will not tell you
     </h1>
     <p class="mt-6 max-w-[64ch] text-[1.08rem]" style="color: var(--text-soft);">
@@ -57,7 +57,7 @@ const Row = 'tr';
   <!-- The finding that matters most, stated before the table. -->
   <section class="wrap pb-12">
     <div class="border-l-4 pl-6 py-2 max-w-[64ch]" style="border-color: var(--g-unreproduced);">
-      <p class="font-serif text-[1.35rem] leading-snug mb-3" style="color: var(--text);">
+      <p class="font-display text-[1.35rem] leading-snug mb-3" style="color: var(--text);">
         {noPrice.length} of these tools do not publish a price.
       </p>
       <p class="text-[0.98rem]" style="color: var(--text-soft);">
@@ -70,7 +70,7 @@ const Row = 'tr';
   </section>
 
   <section class="wrap pb-12">
-    <h2 class="font-serif text-[1.6rem] font-bold mb-2">AI visibility trackers</h2>
+    <h2 class="font-display text-[1.6rem] font-bold mb-2">AI visibility trackers</h2>
     <p class="max-w-[64ch] mb-6 text-[0.98rem]" style="color: var(--text-soft);">
       Tools whose main job is telling you whether AI assistants mention your brand. Read
       <a class="link" href="/evidence/#answer-instability">the evidence on answer volatility</a> before you buy
@@ -82,7 +82,7 @@ const Row = 'tr';
       {trackers.map(t => (
         <article class="border p-5 fade-up" style="border-color: var(--line); background: var(--surface);">
           <div class="flex items-start justify-between gap-4 mb-3">
-            <h3 class="font-serif text-[1.25rem] font-bold">
+            <h3 class="font-display text-[1.25rem] font-bold">
               <a class="link" href={t.url} rel="noopener nofollow">{t.name}</a>
             </h3>
             <span class="data text-[0.6rem] uppercase tracking-[0.1em] px-1.5 py-0.5 border shrink-0"
@@ -105,7 +105,7 @@ const Row = 'tr';
   </section>
 
   <section class="wrap pb-16">
-    <h2 class="font-serif text-[1.6rem] font-bold mb-2">Suites and content tools</h2>
+    <h2 class="font-display text-[1.6rem] font-bold mb-2">Suites and content tools</h2>
     <p class="max-w-[64ch] mb-6 text-[0.98rem]" style="color: var(--text-soft);">
       Established SEO and content platforms, most of which have added AI visibility features. Note which of them
       can pay us, and which cannot.

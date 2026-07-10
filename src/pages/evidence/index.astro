@@ -59,7 +59,7 @@ const schema = [
       <a href="/">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text);">Evidence ledger</span>
     </nav>
 
-    <h1 class="font-serif font-bold text-[2.2rem] sm:text-[2.9rem] leading-[1.08] max-w-[20ch]">
+    <h1 class="font-display font-bold text-[2.2rem] sm:text-[2.9rem] leading-[1.08] max-w-[20ch]">
       The AI search evidence ledger
     </h1>
 
@@ -93,7 +93,7 @@ const schema = [
     {groups.map(group => (
       <div class="mb-16">
         <div class="flex items-baseline gap-4 mb-6 sticky top-16 py-3 -mx-1 px-1" style="background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(4px);">
-          <h2 class="font-serif text-[1.5rem] font-bold" style="color: var(--text);">{group.grade}</h2>
+          <h2 class="font-display text-[1.5rem] font-bold" style="color: var(--text);">{group.grade}</h2>
           <span class="data text-[0.75rem]" style="color: var(--muted);">
             {group.items.length} {group.items.length === 1 ? 'claim' : 'claims'}
           </span>
@@ -107,7 +107,7 @@ const schema = [
     ))}
 
     <div class="rule pt-10 max-w-[62ch]">
-      <h2 class="font-serif text-[1.5rem] font-bold mb-4">Found something we got wrong?</h2>
+      <h2 class="font-display text-[1.5rem] font-bold mb-4">Found something we got wrong?</h2>
       <p class="mb-4" style="color: var(--text-soft);">
         Send the primary source. If it holds up, we regrade the claim in public and log the change in
         <a class="link" href="/corrections/">corrections</a>, with the date and what changed. We do not

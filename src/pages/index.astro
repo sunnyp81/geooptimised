@@ -53,51 +53,53 @@ const schema = [
 ];
 ---
 <Base title={title} description={description} schema={schema}>
-  <!-- Hero. The proof leads. No promise, no gradient, no dashboard mock. -->
-  <section class="wrap pt-16 pb-14 md:pt-24 md:pb-20">
-    <p class="data text-[0.65rem] uppercase tracking-[0.18em] mb-6" style="color: var(--muted);">
-      AI search &middot; Evidence ledger &middot; Checked {claimsData.gradedOn}
-    </p>
+  <!-- Hero. The proof leads: no promise, no dashboard mock. -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid" aria-hidden="true"></div>
+    <div class="absolute inset-0 hero-fade" aria-hidden="true"></div>
 
-    <h1 class="font-serif font-bold text-[2.35rem] leading-[1.06] sm:text-[3.1rem] md:text-[3.75rem] max-w-[19ch]">
-      {untraceable} of the most-repeated claims in AI search have no source we could find.
-    </h1>
+    <div class="wrap relative pt-16 pb-14 md:pt-24 md:pb-20">
+      <p class="eyebrow mb-6">
+        AI search &middot; Evidence ledger &middot; Checked {claimsData.gradedOn}
+      </p>
 
-    <p class="mt-7 max-w-[62ch] text-[1.12rem]" style="color: var(--text-soft);">
-      We went looking for the primary source behind every number this industry repeats. Some reproduced
-      exactly. One drifted by a factor of ten in the retelling. {untraceableWord} lead nowhere at all. Below
-      is the ledger, and beneath it, the list of every tool we review and precisely what each one pays us.
-    </p>
+      <h1 class="font-display font-bold text-[2.35rem] leading-[1.06] sm:text-[3.1rem] md:text-[3.75rem] max-w-[19ch] grad-text">
+        {untraceable} of the most-repeated claims in AI search have no source we could find.
+      </h1>
 
-    <div class="mt-9 flex flex-wrap items-center gap-4">
-      <a href="/evidence/" class="inline-flex items-center px-5 py-2.5 border font-semibold text-[0.95rem]"
-         style="background: var(--text); color: var(--bg); border-color: var(--text);">
-        Read the ledger
-      </a>
-      <a href="/who-pays-us/" class="link text-[0.95rem] font-semibold">See who pays us &rarr;</a>
+      <p class="mt-7 max-w-[62ch] text-[1.12rem]" style="color: var(--text-soft);">
+        We went looking for the primary source behind every number this industry repeats. Some reproduced
+        exactly. One drifted by a factor of ten in the retelling. {untraceableWord} lead nowhere at all. Below
+        is the ledger, and beneath it, the list of every tool we review and precisely what each one pays us.
+      </p>
+
+      <div class="mt-9 flex flex-wrap items-center gap-4">
+        <a href="/evidence/" class="btn btn-primary">Read the ledger</a>
+        <a href="/who-pays-us/" class="btn btn-ghost">See who pays us &rarr;</a>
+      </div>
+
+      <!-- The tally. -->
+      <div class="mt-14 card overflow-hidden">
+        <dl class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
+          {tally.map(t => (
+            <div class="px-5 py-6 border-b lg:border-b-0 border-r" style="border-color: var(--line);">
+              <dd class="data text-3xl font-semibold mb-2" style="color: var(--text);">{String(t.count).padStart(2, '0')}</dd>
+              <dt><GradeBadge grade={t.grade} small={true} /></dt>
+            </div>
+          ))}
+        </dl>
+      </div>
+      <p class="mt-3 data text-[0.72rem]" style="color: var(--muted);">
+        {claims.length} claims graded. Every grade links to its primary source. Disagree with one? The method is
+        <a class="link" href="/methodology/">published</a>, so you can check us.
+      </p>
     </div>
-
-    <!-- The tally. Ledger, not dashboard: a ruled row of counts. -->
-    <div class="mt-14 border-t border-b" style="border-color: var(--line-strong);">
-      <dl class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 [&>*:last-child]:border-r-0">
-        {tally.map(t => (
-          <div class="px-4 py-5 border-b lg:border-b-0 border-r" style="border-color: var(--line);">
-            <dd class="data text-3xl font-semibold mb-2" style="color: var(--text);">{String(t.count).padStart(2, '0')}</dd>
-            <dt><GradeBadge grade={t.grade} small={true} /></dt>
-          </div>
-        ))}
-      </dl>
-    </div>
-    <p class="mt-3 data text-[0.72rem]" style="color: var(--muted);">
-      {claims.length} claims graded. Every grade links to its primary source. Disagree with one? The method is
-      <a class="link" href="/methodology/">published</a>, so you can check us.
-    </p>
   </section>
 
   <!-- Show, don't tell: the single most-quoted stat in the field, graded. -->
   <section class="wrap pb-20">
     <div class="rule pt-10">
-      <h2 class="font-serif text-[1.8rem] font-bold mb-2">Start with the number everybody quotes</h2>
+      <h2 class="font-display text-[1.8rem] font-bold mb-2">Start with the number everybody quotes</h2>
       <p class="max-w-[62ch] mb-8" style="color: var(--text-soft);">
         If you have read anything about generative engine optimisation, you have met the 40% figure.
         It comes from a real, peer-reviewed paper. It does not mean what the marketing pages say it means.
@@ -117,7 +119,7 @@ const schema = [
   <section class="border-t border-b" style="border-color: var(--line-strong); background: var(--bg-2);">
     <div class="wrap py-16">
       <p class="data text-[0.65rem] uppercase tracking-[0.18em] mb-4" style="color: var(--muted);">The conflict, stated up front</p>
-      <h2 class="font-serif text-[1.9rem] sm:text-[2.3rem] font-bold max-w-[24ch] mb-6">
+      <h2 class="font-display text-[1.9rem] sm:text-[2.3rem] font-bold max-w-[24ch] mb-6">
         Some of the best tools in this field cannot pay us a penny.
       </h2>
       <p class="max-w-[64ch] mb-9" style="color: var(--text-soft);">
@@ -168,7 +170,7 @@ const schema = [
     <div class="grid gap-10 lg:grid-cols-[1.05fr_1fr] lg:gap-16 items-start">
       <div>
         <p class="data text-[0.65rem] uppercase tracking-[0.18em] mb-4" style="color: var(--muted);">Correction 001</p>
-        <h2 class="font-serif text-[1.9rem] sm:text-[2.2rem] font-bold mb-5 max-w-[20ch]">
+        <h2 class="font-display text-[1.9rem] sm:text-[2.2rem] font-bold mb-5 max-w-[20ch]">
           The first error in the ledger is ours.
         </h2>
         <p class="mb-4" style="color: var(--text-soft);">{ourError.lesson}</p>
@@ -193,7 +195,7 @@ const schema = [
   <section class="wrap pb-24">
     <div class="rule pt-12 grid gap-10 md:grid-cols-2 md:gap-16">
       <div>
-        <h2 class="font-serif text-[1.6rem] font-bold mb-5">What this site is not</h2>
+        <h2 class="font-display text-[1.6rem] font-bold mb-5">What this site is not</h2>
         <ul class="space-y-3 text-[0.98rem]" style="color: var(--text-soft);">
           <li><strong style="color: var(--text);">Not an agency.</strong> We sell no GEO services. There is nothing to book.</li>
           <li><strong style="color: var(--text);">Not a tool vendor.</strong> We have no dashboard to defend and no subscription to protect.</li>
@@ -202,7 +204,7 @@ const schema = [
         </ul>
       </div>
       <div>
-        <h2 class="font-serif text-[1.6rem] font-bold mb-5">Start here</h2>
+        <h2 class="font-display text-[1.6rem] font-bold mb-5">Start here</h2>
         <ul class="space-y-3 text-[0.98rem]">
           <li><a class="link" href="/evidence/">The evidence ledger</a><span style="color: var(--muted);">: {claims.length} claims, graded against their primary sources</span></li>
           <li><a class="link" href="/generative-engine-optimisation/">What generative engine optimisation actually is</a><span style="color: var(--muted);">, and what it is not</span></li>

@@ -20,7 +20,7 @@ const entry = map[grade] ?? { varName: '--muted', gloss: '' };
     'data inline-flex items-center gap-1.5 border font-semibold uppercase whitespace-nowrap',
     small ? 'text-[0.6rem] tracking-[0.1em] px-1.5 py-0.5' : 'text-[0.68rem] tracking-[0.13em] px-2.5 py-1',
   ]}
-  style={`color: var(${entry.varName}); border-color: color-mix(in srgb, var(${entry.varName}) 45%, transparent); background: color-mix(in srgb, var(${entry.varName}) 8%, transparent);`}
+  style={`color: var(${entry.varName}); border-color: color-mix(in srgb, var(${entry.varName}) 40%, transparent); background: color-mix(in srgb, var(${entry.varName}) 12%, transparent); border-radius: 6px;`}
   title={entry.gloss}
 >
   <span aria-hidden="true" class="inline-block w-1.5 h-1.5 rounded-full" style={`background: var(${entry.varName})`}></span>

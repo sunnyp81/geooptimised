@@ -24,7 +24,7 @@ const schema = {
     <nav aria-label="Breadcrumb" class="data text-[0.7rem] uppercase tracking-widest mb-6" style="color: var(--muted);">
       <a href="/">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text);">Who pays us</span>
     </nav>
-    <h1 class="font-serif font-bold text-[2.2rem] sm:text-[2.9rem] leading-[1.08] max-w-[18ch]">Who pays us</h1>
+    <h1 class="font-display font-bold text-[2.2rem] sm:text-[2.9rem] leading-[1.08] max-w-[18ch]">Who pays us</h1>
     <p class="mt-6 max-w-[64ch] text-[1.08rem]" style="color: var(--text-soft);">
       Every site that reviews AI visibility tools has a commercial interest in which one you buy. Almost none
       of them tell you what it is. This is ours, in full, updated whenever it changes.
@@ -37,7 +37,7 @@ const schema = {
       <p class="data text-[0.62rem] uppercase tracking-[0.14em] mb-3" style="color: var(--muted);">Current position</p>
       {enrolled.length === 0 ? (
         <>
-          <p class="font-serif text-[1.6rem] sm:text-[2rem] font-bold leading-snug mb-4" style="color: var(--g-verified);">
+          <p class="font-display text-[1.6rem] sm:text-[2rem] font-bold leading-snug mb-4" style="color: var(--g-verified);">
             We are enrolled in no affiliate programme. We earn nothing from any tool on this site.
           </p>
           <p class="text-[0.98rem]" style="color: var(--text-soft);">
@@ -51,7 +51,7 @@ const schema = {
         </>
       ) : (
         <>
-          <p class="font-serif text-[1.6rem] sm:text-[2rem] font-bold leading-snug mb-4" style="color: var(--text);">
+          <p class="font-display text-[1.6rem] sm:text-[2rem] font-bold leading-snug mb-4" style="color: var(--text);">
             We earn a commission from {enrolled.length} of the {tools.length} tools on this site.
           </p>
           <p class="text-[0.98rem]" style="color: var(--text-soft);">
@@ -65,7 +65,7 @@ const schema = {
 
   <!-- The full table. -->
   <section class="wrap pb-14">
-    <h2 class="font-serif text-[1.6rem] font-bold mb-2">Every tool, every payout</h2>
+    <h2 class="font-display text-[1.6rem] font-bold mb-2">Every tool, every payout</h2>
     <p class="max-w-[64ch] mb-6 text-[0.98rem]" style="color: var(--text-soft);">
       Sorted by what they pay, highest first, so you can see exactly where the financial pull on our judgement
       is strongest. <span class="data">{nonPayers.length}</span> of these cannot pay us anything at all.
