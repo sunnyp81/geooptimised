@@ -1,0 +1,35 @@
+# *
+User-agent: *
+Disallow: /**.html$
+Disallow: /account-recovery
+Disallow: /affiliate/customer
+Disallow: /generic/customer/application
+Disallow: /img/PDFs/ASFResponsiblelending.pdf
+Disallow: /disclaimer.php
+Disallow: /views/main.html
+Disallow: /img/PDFs/ASFFAQs-Knowledge
+Disallow: /signup
+Disallow: /views/includes/footer_include.html
+Disallow: /qcwawtemdnscladd.html
+Disallow: /gen/customer/application
+Disallow: /{{paymentMenuHref}}
+Disallow: /customer/new
+Disallow: /ournetwork
+Disallow: /dealership/
+Disallow: /registration/
+Disallow: /mobile/
+Disallow: /customer/
+Disallow: /email-test
+Disallow: /codeofconduct
+Disallow: /b/*
+Disallow: /cookieframe
+Disallow: /thirdparty/*
+Disallow: /de/locations/*
+Disallow: /es/locations/*
+Disallow: /ie/locations/*
+
+# Host
+Host: https://www.bumper.co
+
+# Sitemaps
+Sitemap: https://www.bumper.co/sitemap.xml

@@ -1,0 +1,6 @@
+User-Agent: *
+Disallow:/search/
+Disallow:/umbraco/
+Disallow: /*.pdf$
+
+Sitemap: https://www.benendenhospital.org.uk/sitemap-xml

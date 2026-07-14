@@ -1,0 +1,8 @@
+# START BLOCK
+# ---------------------------
+User-agent: *
+Disallow:
+
+Sitemap: https://www.saffery.com/sitemap_index.xml
+# ---------------------------
+# END BLOCK

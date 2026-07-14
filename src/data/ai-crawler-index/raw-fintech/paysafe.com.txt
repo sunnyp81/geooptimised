@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /fileadmin/_temp_/
+Disallow: /fileadmin/flarecontent/
+Disallow: /t3lib/
+Disallow: /typo3/
+Disallow: /typo3_src/
+Disallow: /typo3conf/
+Disallow: /clear.gif
+Allow: /typo3conf/ext/theme/Resources/Public/Template/Main/*
+Disallow: */search-results/
+Host: https://www.paysafe.com
+Sitemap: https://www.paysafe.com/sitemap_index.xml

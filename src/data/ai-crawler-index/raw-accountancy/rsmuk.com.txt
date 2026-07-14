@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /sitecoreDisallow: https://id.rsmuk.com
+Disallow: https://cm.rsmuk.com/*
+Disallow: https://id.rsmuk.com/*
+
+Sitemap: https://www.rsmuk.com/sitemap.xml

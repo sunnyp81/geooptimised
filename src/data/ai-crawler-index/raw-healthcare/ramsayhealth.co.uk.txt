@@ -1,0 +1,20 @@
+User-agent: *
+allow: /
+Disallow: /webupdate
+Disallow: /*method=*
+Disallow: /*hospital=*
+Disallow: *=image*
+Disallow: *?assetid*
+Disallow: *&_z*
+Disallow: *?id*
+Disallow: *?subject*
+Disallow: *?hospital*
+Disallow: *&hospital*
+Disallow: *?query*
+Disallow: *?tag=*
+Disallow: /system-pages/unsubscribe
+Disallow: *?freeText=*
+Disallow: *?cludoquery=*
+Disallow: *search?term=*
+
+sitemap: https://www.ramsayhealth.co.uk/sitemap_index.xml

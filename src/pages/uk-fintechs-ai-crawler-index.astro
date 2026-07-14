@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import data from '../data/ai-crawler-index.json';
+import data from '../data/ai-crawler-index-fintech.json';
 
 const recs = data.records;
 const N = recs.length;
@@ -68,8 +68,8 @@ const llmsStateMap: Record<string, { label: string; tone: string; title: string 
   empty_200:                 { label: 'empty',tone: '--muted',          title: 'HTTP 200 with an empty body.' },
 };
 
-const title = 'UK law firms AI crawler access index: what the top 50 robots.txt files actually say';
-const description = `We fetched robots.txt and llms.txt for each of the UK's top 50 law firms by revenue on ${fetchedOn}. ${silentOnAI.length} of ${readable.length} readable files name no AI crawler at all. ${aiSpecific.length} of ${N} holds an AI crawler to stricter rules than it gives Googlebot. ${llmsPresent.length} publish a genuine llms.txt. Raw responses saved for every firm.`;
+const title = `UK fintechs AI crawler access index: what ${N} robots.txt files actually say`;
+const description = `We fetched robots.txt and llms.txt for ${N} UK fintech companies from the 2025 FinTech 50 on ${fetchedOn}. ${silentOnAI.length} of ${readable.length} readable files name no AI crawler at all. ${aiSpecific.length} of ${N} holds an AI crawler to stricter rules than it gives Googlebot. ${llmsPresent.length} publish a genuine llms.txt. Raw responses saved for every company.`;
 
 const schema = [
   {
@@ -77,18 +77,18 @@ const schema = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
-      { '@type': 'ListItem', position: 2, name: 'UK law firms AI crawler access index', item: 'https://geooptimised.com/uk-law-firms-ai-crawler-index/' },
+      { '@type': 'ListItem', position: 2, name: 'UK fintechs AI crawler access index', item: 'https://geooptimised.com/uk-fintechs-ai-crawler-index/' },
     ],
   },
   {
     '@context': 'https://schema.org',
     '@type': 'Dataset',
-    name: 'UK Law Firms AI Crawler Access Index',
-    description: `Per-firm robots.txt and llms.txt directives for AI crawlers across the UK's top ${N} law firms by revenue, fetched ${fetchedOn}. Records whether each of ${AGENTS.length} AI user-agent tokens is allowed, blocked, partly limited or not mentioned (the file's syntax shape), plus a derived AI-specific stance judged against each file's effective rules for Googlebot, with every raw response retained.`,
+    name: 'UK Fintechs AI Crawler Access Index',
+    description: `Per-company robots.txt and llms.txt directives for AI crawlers across ${N} UK fintech companies from the 2025 FinTech 50, fetched ${fetchedOn}. Records whether each of ${AGENTS.length} AI user-agent tokens is allowed, blocked, partly limited or not mentioned (the file's syntax shape), plus a derived AI-specific stance judged against each file's effective rules for Googlebot, with every raw response retained.`,
     creator: { '@id': 'https://geooptimised.com/#organization' },
     dateModified: fetchedOn,
     datePublished: fetchedOn,
-    url: 'https://geooptimised.com/uk-law-firms-ai-crawler-index/',
+    url: 'https://geooptimised.com/uk-fintechs-ai-crawler-index/',
     isAccessibleForFree: true,
     measurementTechnique: 'Direct HTTP fetch of /robots.txt and /llms.txt per domain, followed by user-agent group parsing.',
     variableMeasured: ['robots.txt directive per AI user-agent', 'AI-specific stance versus Googlebot benchmark', 'robots.txt readability state', 'llms.txt presence and genuineness', 'HTTP status', 'fetch date'],
@@ -114,16 +114,16 @@ const schema = [
     <div class="absolute inset-0 hero-fade" aria-hidden="true"></div>
     <div class="wrap relative pt-14 pb-16">
       <nav aria-label="Breadcrumb" class="eyebrow mb-6">
-        <a href="/">Home</a> <span aria-hidden="true">/</span> UK law firms AI crawler index
+        <a href="/">Home</a> <span aria-hidden="true">/</span> UK fintechs AI crawler index
       </nav>
-      <p class="eyebrow mb-5">Original data &middot; {N} firms &middot; Fetched {fetchedOn}</p>
+      <p class="eyebrow mb-5">Original data &middot; {N} companies &middot; Fetched {fetchedOn}</p>
 
       <h1 class="font-display font-bold text-[2.2rem] leading-[1.07] sm:text-[3.1rem] max-w-[24ch] grad-text">
-        We read the robots.txt of every top-50 UK law firm. Almost none say anything about AI crawlers.
+        We read the robots.txt of {N} leading UK fintechs. Almost none say anything about AI crawlers.
       </h1>
 
       <p class="mt-7 max-w-[66ch] text-[1.1rem]" style="color: var(--text-soft);">
-        For each firm in a published revenue ranking we fetched <code>/robots.txt</code> and
+        For each company in a published innovation ranking we fetched <code>/robots.txt</code> and
         <code>/llms.txt</code> ourselves, saved every raw response, and parsed each file for the
         {AGENTS.length} AI user-agent tokens that OpenAI, Anthropic, Perplexity, Google, Microsoft, Apple and
         Common Crawl publish. This is what the files say, and, just as important, what they do not say.
@@ -370,8 +370,8 @@ const schema = [
       </div>
 
       <p class="mt-4 data text-[0.7rem]" style="color: var(--muted);">
-        Raw responses for every firm are retained at <code>src/data/ai-crawler-index/raw/</code> in the site
-        repository, and the parsed dataset is <code>src/data/ai-crawler-index.json</code>.
+        Raw responses for every company are retained at <code>src/data/ai-crawler-index/raw-fintech/</code> in the site
+        repository, and the parsed dataset is <code>src/data/ai-crawler-index-fintech.json</code>.
       </p>
     </div>
   </section>
@@ -381,7 +381,7 @@ const schema = [
     <div class="rule pt-10 card p-5">
       <h3 class="font-display text-[1.05rem] font-semibold mb-2">Other sector indices</h3>
       <p class="text-[0.9rem]" style="color: var(--text-soft);">
-        The same methodology applied to three more UK sectors: <a class="link" href="/uk-fintechs-ai-crawler-index/">fintech companies</a>,
+        The same methodology applied to three more UK sectors: <a class="link" href="/uk-law-firms-ai-crawler-index/">law firms</a>,
         <a class="link" href="/uk-private-healthcare-ai-crawler-index/">private healthcare providers</a> and
         <a class="link" href="/uk-accountancy-firms-ai-crawler-index/">accountancy firms</a>.
       </p>
@@ -393,13 +393,11 @@ const schema = [
     <div class="rule pt-10">
       <h2>Methodology</h2>
 
-      <h3>The firm list</h3>
+      <h3>The company list</h3>
       <p>
-        The population is the top {N} firms from <a class="link" href={src.url} rel="nofollow">{src.publisher}, "{src.title}"</a>:
-        {src.ranking} We fetched that ranking on {src.fetchedOn}. {src.caveat} The two primary
-        rankings in this field, The Lawyer UK 200 and the Legal Business LB100, are the stronger sources but sit
-        behind paywalls, so we used a freely accessible published compilation and state that plainly. The list
-        orders firms by revenue; it is not a ranking of AI readiness, and nothing here should be read as one.
+        The population is {N} companies from <a class="link" href={src.url} rel="nofollow">{src.publisher}, "{src.title}"</a>:
+        {src.ranking} We fetched that list on {src.fetchedOn}. {src.caveat} The list is judged on
+        innovation, not company size or AI readiness, and nothing here should be read as one.
       </p>
 
       <h3>The fetch</h3>
@@ -457,15 +455,15 @@ const schema = [
       <h3>Limitations</h3>
       <ul>
         <li>This is a single snapshot on {fetchedOn}. robots.txt and llms.txt change; the retained raw files fix what we saw on that date.</li>
-        <li>The population is a revenue ranking, not a random or complete sample of UK firms. It says nothing about firms outside the top {N}.</li>
+        <li>The population is an innovation-judged list, not a random or complete sample of UK fintechs. It says nothing about companies outside this list.</li>
         <li>Firms behind bot protection ({gated.length} of {N}) have an unreadable stance here. That is a finding about access, not evidence that they block or permit any crawler.</li>
         <li>robots.txt and llms.txt are voluntary requests. Compliance is at the operator's discretion, so a directive is a stated preference, not an enforced outcome, and we measure no outcome.</li>
         <li>We checked {AGENTS.length} named AI tokens. Other agents exist (for example Amazonbot, Bytespider, meta-externalagent, which appear in some of these files); they are out of scope and not counted.</li>
       </ul>
 
       <p>
-        The dataset behind this page is public: <code>src/data/ai-crawler-index.json</code> plus one raw file per
-        firm. Anyone can refetch a domain and check our reading against the saved response. If a firm's file has
+        The dataset behind this page is public: <code>src/data/ai-crawler-index-fintech.json</code> plus one raw file per
+        company. Anyone can refetch a domain and check our reading against the saved response. If a company's file has
         changed since {fetchedOn}, that is expected, and a fresh fetch is the way to confirm it. See also
         <a class="link" href="/methodology/">how we grade</a> and the <a class="link" href="/reproduction/">reproduction study</a>.
       </p>

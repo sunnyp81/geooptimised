@@ -1,0 +1,11 @@
+# Version 2024.10.16
+# kpmg.com
+User-agent: cludo
+Allow:
+User-agent: *
+Allow: /
+Disallow: /es/es.html?*utm_
+Disallow: /es/es.html?*action
+User-agent: YouDaoBot
+Disallow: /
+Sitemap: https://kpmg.com/sitemap-index.xml

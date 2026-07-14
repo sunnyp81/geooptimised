@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+    <meta name="keywords" content="" />
+    <meta name="description" content="Accountancy and business advice to help you succeed." />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+    <title>BDO  - BDO</title>
+    
+<!--Script in Start HEAD:-->
+    
+<script data-cookieconsent="ignore">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("consent", "default", {
+        ad_personalization: "denied",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        analytics_storage: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+        security_storage: "granted",
+        wait_for_update: 500,
+    });
+    gtag("set", "ads_data_redaction", true);
+    gtag("set", "url_passthrough", true);
+</script>
+
+<!-- Google Tag Manager -->
+    <script data-cookieconsent="ignore">
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W263TG');</script>
+<!-- End Google Tag Manager -->
+
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="87a51d12-ebd0-4d3d-bf5d-ead8383f9764" data-blockingmode="auto" type="text/javascript"></script>
+    
+    <script data-cookieconsent="ignore">
+        function injectWhenCookiebotAcceptedScripts() {
+            var rawHtml = null;
+            var container = document.getElementById("scriptsAfterCookiebotAccepted");
+            container.innerHTML = rawHtml;
+
+            var scripts = container.getElementsByTagName("script");
+            for (var i = 0; i < scripts.length; i++)
+            {
+                eval(scripts[i].innerText);
+            }   
+        }
+    </script>
+
+    
+<script id="googleServices" type="text/javascript" data-cookieconsent="ignore">
+
+            function initializeGoogleTags() {
+                window.dataLayer = window.dataLayer || [];
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+
+                gtag("consent", "default", {
+                    ad_personalization: "denied",
+                    ad_storage: "denied",
+                    ad_user_data: "denied",
+                    analytics_storage: "denied",
+                    functionality_storage: "denied",
+                    personalization_storage: "denied",
+                    security_storage: "granted",
+                    wait_for_update: 500,
+                });
+
+                gtag('js', new Date());
+
+
+                     gtag('config', 'G-S8M9KW26GP', { 'anonymize_ip': true, 'forceSSL': true });
+
+                let script = document.createElement('script');
+                script.src = 'https://www.googletagmanager.com/gtag/js?id=G-S8M9KW26GP';
+                script.setAttribute("data-cookieconsent", "ignore");
+                script.setAttribute("async", "");
+                let ga = document.getElementById("googleServices");
+                ga.before(script);
+            }
+        
+
+         function CookiebotCallback_OnAccept() {
+
+                    if (Cookiebot.consent.statistics && Cookiebot.consent.marketing) {
+                        initializeGoogleTags();
+                    }
+                             injectWhenCookiebotAcceptedScripts();
+         }
+</script>
+    
+    <link rel="canonical" href="https://www.bdo.co.uk/en-gb/page-not-found" />
+
+    
+
+    
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="https://www.bdo.co.uk/Error/404">
+
+<meta property="og:type" content="website">
+    
+
+    
+<link rel="stylesheet" href="/getattachment/b4219295-52bc-4d78-b0c2-66d06452d39e/extras-uk.css" type="text/css" />
+<!-- Fathom - beautiful, simple website analytics -->
+                <script src="https://cdn.usefathom.com/script.js" data-site="LOLKVGQE" defer></script>
+              <!-- / Fathom -->
+
+<meta name="google-site-verification" content="lpKB44lbSNZkmnSKOIhgN_IrI9VqPhhaYEq5NRRyxlA" />
+
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0051/9081.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+
+
+<script
+  type="text/javascript"
+  src="https://sdk.ceros.com/embedded-player-sdk-v5.min.js"
+></script>
+<script>
+function applyConsent(hasConsent) {
+  var foundExperienceInterval = setInterval(function () {
+    var cerosFrames = document.querySelectorAll("iframe.ceros-experience");
+    for (let cerosFrame of cerosFrames) {
+      var cerosContainer = cerosFrame.parentNode;
+      var expId = cerosContainer.getAttribute("id");
+      if (expId) {
+        clearInterval(foundExperienceInterval);
+        CerosSDK.findExperience(expId)
+          .done(function (experience) {
+            experience.setUserConsentForAnalytics(hasConsent);
+          });
+      }
+    }
+  }, 500);
+}
+applyConsent(false);
+window.addEventListener("CookiebotOnConsentReady", function () {
+  applyConsent(Cookiebot.consent.statistics);
+});
+</script>
+
+<script type="text/javascript">
+document.write(unescape("%3Cscript src='https://ecomms.bdo.co.uk/wt.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" src="https://secure.agile365enterprise.com/js/793903.js" ></script>
+<noscript><img src="https://secure.agile365enterprise.com/793903.png" style="display:none;" /></noscript>
+
+
+<!-- Start VWO Async SmartCode -->
+<link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
+<script type='text/javascript' id='vwoCode'>
+window._vwo_code || (function() {
+var account_id=638445,
+version=2.1,
+settings_tolerance=2000,
+hide_element='body',
+hide_element_style = 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;transition:none !important;',
+/* DO NOT EDIT BELOW THIS LINE */
+f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+'_settings',cc={};try{var c=JSON.parse(localStorage.getItem('_vwo_'+account_id+'_config'));cc=c&&typeof c==='object'?c:{}}catch(e){}var stT=cc.stT==='session'?w.sessionStorage:w.localStorage;code={nonce:v&&v.nonce,use_existing_jquery:function(){return typeof use_existing_jquery!=='undefined'?use_existing_jquery:undefined},library_tolerance:function(){return typeof library_tolerance!=='undefined'?library_tolerance:undefined},settings_tolerance:function(){return cc.sT||settings_tolerance},hide_element_style:function(){return'{'+(cc.hES||hide_element_style)+'}'},hide_element:function(){if(performance.getEntriesByName('first-contentful-paint')[0]){return''}return typeof cc.hE==='string'?cc.hE:hide_element},getVersion:function(){return version},finish:function(e){if(!f){f=true;var t=d.getElementById('_vis_opt_path_hides');if(t)t.parentNode.removeChild(t);if(e)(new Image).src='https://dev.visualwebsiteoptimizer.com/ee.gif?a='+account_id+e}},finished:function(){return f},addScript:function(e){var t=d.createElement('script');t.type='text/javascript';if(e.src){t.src=e.src}else{t.text=e.text}v&&t.setAttribute('nonce',v.nonce);d.getElementsByTagName('head')[0].appendChild(t)},load:function(e,t){var n=this.getSettings(),i=d.createElement('script'),r=this;t=t||{};if(n){i.textContent=n;d.getElementsByTagName('head')[0].appendChild(i);if(!w.VWO||VWO.caE){stT.removeItem(cK);r.load(e)}}else{var o=new XMLHttpRequest;o.open('GET',e,true);o.withCredentials=!t.dSC;o.responseType=t.responseType||'text';o.onload=function(){if(t.onloadCb){return t.onloadCb(o,e)}if(o.status===200||o.status===304){_vwo_code.addScript({text:o.responseText})}else{_vwo_code.finish('&e=loading_failure:'+e)}};o.onerror=function(){if(t.onerrorCb){return t.onerrorCb(e)}_vwo_code.finish('&e=loading_failure:'+e)};o.send()}},getSettings:function(){try{var e=stT.getItem(cK);if(!e){return}e=JSON.parse(e);if(Date.now()>e.e){stT.removeItem(cK);return}return e.s}catch(e){return}},init:function(){if(d.URL.indexOf('__vwo_disable__')>-1)return;var e=this.settings_tolerance();w._vwo_settings_timer=setTimeout(function(){_vwo_code.finish();stT.removeItem(cK)},e);var t;if(this.hide_element()!=='body'){t=d.createElement('style');var n=this.hide_element(),i=n?n+this.hide_element_style():'',r=d.getElementsByTagName('head')[0];t.setAttribute('id','_vis_opt_path_hides');v&&t.setAttribute('nonce',v.nonce);t.setAttribute('type','text/css');if(t.styleSheet)t.styleSheet.cssText=i;else t.appendChild(d.createTextNode(i));r.appendChild(t)}else{t=d.getElementsByTagName('head')[0];var i=d.createElement('div');i.style.cssText='z-index: 2147483647 !important;position: fixed !important;left: 0 !important;top: 0 !important;width: 100% !important;height: 100% !important;background: white !important;display: block !important;';i.setAttribute('id','_vis_opt_path_hides');i.classList.add('_vis_hide_layer');t.parentNode.insertBefore(i,t.nextSibling)}var o=window._vis_opt_url||d.URL,s='https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(o)+'&vn='+version;if(w.location.search.indexOf('_vwo_xhr')!==-1){this.addScript({src:s})}else{this.load(s+'&x=true')}}};w._vwo_code=code;code.init();})();
+</script>
+<!-- End VWO Async SmartCode -->
+
+<script src="https://cdn.userway.org/widget.js" data-account="gfUCLN0jUM"></script>
+<meta name="google-site-verification" content="Wmmz-8ddoT8VaaNJdp-8pPIaxgLO5Q6dbwtuPns5fVk" />
+
+<meta name="msvalidate.01" content="FB3D4ECBA0E8298D7D513921A51C08AA" />
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "gup7zm55ky");
+</script>
+    <!-- Preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+<link rel="preconnect" href="https://use.typekit.net" crossorigin="anonymous">
+
+<!-- Preload Fonts -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" as="style" />
+<link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons" as="style">
+<link rel="preload" href="https://use.typekit.net/yxr5raf.css" as="style">
+
+<!-- Preload Master CSS -->
+<link rel="preload" href="/dist/master.css?v=NsLNG8UfPjHTaE4Q3eGEWeqjsBxNOn9NwPYp316qFH4" as="style" type="text/css">
+
+<!-- Apply Stylesheets -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+<link rel="stylesheet" href="https://use.typekit.net/yxr5raf.css">
+<link rel="stylesheet" href="/dist/master.css?v=NsLNG8UfPjHTaE4Q3eGEWeqjsBxNOn9NwPYp316qFH4" type="text/css" />
+
+    
+<script type="text/javascript">!function(T,l,y){var S=T.location,k="script",D="instrumentationKey",C="ingestionendpoint",I="disableExceptionTracking",E="ai.device.",b="toLowerCase",w="crossOrigin",N="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"5",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[b](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,u,p,l;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][b]()]=i[1])}if(!e[C]){var r=e.endpointsuffix,o=r?e.location:null;e[C]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[D]||d[D]||"",u=s[C],p=u?u+"/v2/track":d.endpointUrl,(l=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=p,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),l.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,p)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:N,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(N,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(l,p))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(k);n.src=h;var e=y[w];return!e&&""!==e||"undefined"==n[w]||(n[w]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(k)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[I]&&!0!==s[I]){var c="onerror";t(["_"+c]);var u=T[c];T[c]=function(e,t,n,a,i){var r=u&&u(e,t,n,a,i);return!0!==r&&m["_"+c]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);function a(){y.onInit&&y.onInit(n)}(T[t]=n).queue&&0===n.queue.length?(n.queue.push(a),n.trackPageView({})):a()}(window,document,{
+src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js", // The SDK URL Source
+crossOrigin: "anonymous", 
+cfg: { // Application Insights Configuration
+    connectionString: 'InstrumentationKey=7e4d3ed1-4059-404e-bc13-1df6b795f445;IngestionEndpoint=https://westeurope-5.in.applicationinsights.azure.com/;LiveEndpoint=https://westeurope.livediagnostics.monitor.azure.com/'
+}});</script></head>
+<body data-lang="en-GB">
+    <div id="scriptsAfterCookiebotAccepted"></div>
+    
+<script type="text/javascript"> _linkedin_data_partner_id = "372737"; </script><script type="text/javascript"> (function(){var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript";b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s);})(); </script> <noscript> <img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=372737&fmt=gif" /> </noscript>
+
+<script type="text/javascript"> _linkedin_partner_id = "372737"; window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || []; window._linkedin_data_partner_ids.push(_linkedin_partner_id); </script><script type="text/javascript"> (function(){var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript";b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s);})(); </script> <noscript> <img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=372737&fmt=gif" /> </noscript>
+
+<script>
+ isRobotNotificationDisplayed = true; 
+ </script>
+    
+<div id="react_0HNMR64CTD2OT"><div data-reactroot=""><div class="header" id="header" data-ktc-search-exclude="true" style="position:relative"><div class="header__main-menu"><ul class="header__main-menu-list"><li class="header__main-menu-item"><a class="header__main-menu-link" href="/en-gb/news">News</a></li><li class="header__main-menu-item"><a class="header__main-menu-link" href="/en-gb/locations">Locations</a></li><li class="header__main-menu-item"><a class="header__main-menu-link" href="/en-gb/our-people">Our people</a></li><li class="header__main-menu-item"><a class="header__main-menu-link" href="/en-gb/events">Events</a></li><li class="header__main-menu-item"><a class="header__main-menu-link" href="/en-gb/careers">Careers</a></li></ul><a role="button" class="btn px-6 py-3 text-base" href="/en-gb/contact" target="_self" title=""><span class="btn-text"><span class="">Contact </span></span></a></div><nav class="header__mega-menu"><a href="/en-gb/home" class="header__logo"><img src="https://cdn.bdo.global/images/bdo_logo/1.0.0/bdo_logo_color.png" class="header__logo-img" alt="logo"/><div class="header__logo-text">United Kingdom</div></a><div class="header__mega-menu-wrapper"><div class="header__mobile-menu-header"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="header__mobile-menu-header-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M11 2C15.968 2 20 6.032 20 11C20 15.968 15.968 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2ZM11 18C14.8675 18 18 14.8675 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18ZM19.4853 18.0711L22.3137 20.8995L20.8995 22.3137L18.0711 19.4853L19.4853 18.0711Z"></path></svg><svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 15 15" class="header__mobile-menu-header-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 3C1.22386 3 1 3.22386 1 3.5C1 3.77614 1.22386 4 1.5 4H13.5C13.7761 4 14 3.77614 14 3.5C14 3.22386 13.7761 3 13.5 3H1.5ZM1 7.5C1 7.22386 1.22386 7 1.5 7H13.5C13.7761 7 14 7.22386 14 7.5C14 7.77614 13.7761 8 13.5 8H1.5C1.22386 8 1 7.77614 1 7.5ZM1 11.5C1 11.2239 1.22386 11 1.5 11H13.5C13.7761 11 14 11.2239 14 11.5C14 11.7761 13.7761 12 13.5 12H1.5C1.22386 12 1 11.7761 1 11.5Z" fill="currentColor"></path></svg></div><div class="header__mega-menu-desktop"><ul class="header__mega-menu-list"></ul><div class="header__search relative"><div class="pl-2"><a class="pointer-events-none" href="/" aria-label="Search icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="header__search-icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M11 2C15.968 2 20 6.032 20 11C20 15.968 15.968 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2ZM11 18C14.8675 18 18 14.8675 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18ZM19.4853 18.0711L22.3137 20.8995L20.8995 22.3137L18.0711 19.4853L19.4853 18.0711Z"></path></svg></a></div><input type="text" name="Search" title="Search" placeholder="Search" class="header__search-input" value="" autoComplete="off"/></div></div></div></nav></div></div></div>
+    
+<div id="react_0HNMR64CTD2OU"><div class="breadcrumbs" data-reactroot=""><ul class="breadcrumbs__list"><li class="breadcrumbs__list-item"><div class="px-2"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" class="breadcrumbs__item-icon" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg></div><div class="pt-[1px]"><a href="/en-gb/home" target="" title="" class="animated-link inline text-lighter-black hover:text-lighter-black"><span class="hover-underline">Home</span></a></div></li><li class="breadcrumbs__list-item"><div class="px-2 hidden lg:flex"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" class="breadcrumbs__item-icon" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg></div><div class="breadcrumbs__last-list-item-container"><span class="breadcrumbs__last-list-item">Page Not Found</span></div></li></ul></div></div>
+    
+<div id="react_0HNMR64CTD2OS"><div class="error-page-content section-container" data-reactroot=""><h2 class="error-page-content-title">Page Not Found</h2><div class="error-page-content-description"><p>&nbsp;</p>
+
+<p>Page not found. Please return to our <a href="https://www.bdo.co.uk/" target="_self">home page</a>.</p>
+</div></div></div>
+
+    <div id="react_0HNMR64CTD2OV"></div>
+    
+<div id="react_0HNMR64CTD2P0" class="footer__wrapper"><footer class="footer" data-ktc-search-exclude="true" data-reactroot=""><div class="footer__container container"><div class="footer__left-container"><ul class="footer__menu"><li class="footer__menu-item"><div class=""><a href="/en-gb/contact" target="" title="" class="animated-link inline text-white hover:text-white"><span class="hover-underline">Contact </span></a></div></li><li class="footer__menu-item"><div class=""><a href="/en-gb/locations" target="" title="" class="animated-link inline text-white hover:text-white"><span class="hover-underline">Locations</span></a></div></li><li class="footer__menu-item"><div class=""><a href="/en-gb/bdo-global-portal-terms-conditions" target="" title="" class="animated-link inline text-white hover:text-white"><span class="hover-underline">BDO Global Portal</span></a></div></li><li class="footer__menu-item"><div class=""><a href="/en-gb/sitemap" target="" title="" class="animated-link inline text-white hover:text-white"><span class="hover-underline">Sitemap</span></a></div></li><li class="footer__menu-item"><div class=""><a href="https://www.bdo.co.uk/en-gb/locations" target="_blank" title="Locations (Opens in a new window/tab)" class="animated-link inline text-white hover:text-white"><span class="hover-underline">Locations</span><span class="sr-only">Opens in a new window/tab</span></a></div><div class="footer__menu-icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></div></li><li class="footer__menu-item"><div class=""><a href="https://www.bdo.co.uk/en-gb/about/our-alumni" target="_blank" title="Alumni (Opens in a new window/tab)" class="animated-link inline text-white hover:text-white"><span class="hover-underline">Alumni</span><span class="sr-only">Opens in a new window/tab</span></a></div><div class="footer__menu-icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></div></li><li class="footer__menu-item"><div class=""><a href="https://www.bdo.co.uk/getmedia/bdb31c40-afbc-4d17-8b54-d5f153775425/BDO-Modern-Slavery-Statement-2025.pdf" target="_blank" title="Modern Slavery Statement (Opens in a new window/tab)" class="animated-link inline text-white hover:text-white"><span class="hover-underline">Modern Slavery Statement</span><span class="sr-only">Opens in a new window/tab</span></a></div><div class="footer__menu-icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></div></li><li class="footer__menu-item"><div class=""><a href="/en-gb/accessibility-statement" target="_blank" title="Legal &amp; Privacy (Opens in a new window/tab)" class="animated-link inline text-white hover:text-white"><span class="hover-underline">Legal & Privacy</span><span class="sr-only">Opens in a new window/tab</span></a></div><div class="footer__menu-icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"></path></svg></div></li></ul></div><div class="footer__right-container"><div class="footer__social-icons"><ul class="footer__social-menu"><li class="footer__social-item"><a class="footer__social-link" href="https://www.instagram.com/lifeatbdo" target="_blank" title="LinkedIn (Opens in a new window/tab)" aria-label="LinkedIn"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4 35.0457 4 24Z" fill="#404040"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M18.134 20.5649H13.6016V34.183H18.134V20.5649Z" fill="#E7E7E7"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M18.432 16.3522C18.4026 15.017 17.4477 14 15.8972 14C14.3467 14 13.333 15.017 13.333 16.3522C13.333 17.6598 14.3167 18.7061 15.8384 18.7061H15.8673C17.4477 18.7061 18.432 17.6598 18.432 16.3522Z" fill="#E7E7E7"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M34.4795 26.3748C34.4795 22.1919 32.2435 20.2451 29.2609 20.2451C26.8545 20.2451 25.7771 21.5669 25.1756 22.4941V20.5653H20.6426C20.7023 21.8431 20.6426 34.1833 20.6426 34.1833H25.1756V26.5779C25.1756 26.1709 25.205 25.7649 25.3248 25.4735C25.6524 24.6604 26.3982 23.8185 27.6504 23.8185C29.2912 23.8185 29.947 25.0673 29.947 26.8973V34.183H34.4793L34.4795 26.3748Z" fill="#E7E7E7"></path></svg><span class="sr-only">Opens in a new window/tab</span></a></li><li class="footer__social-item"><a class="footer__social-link" href="https://www.youtube.com/user/bdollp" target="_blank" title="YouTube (Opens in a new window/tab)" aria-label="YouTube"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4 35.0457 4 24Z" fill="#404040"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M35.1999 19.4514C35.1999 19.4514 34.9763 17.8839 34.2913 17.1936C33.422 16.2872 32.4477 16.2829 32.0013 16.2303C28.8027 16 24.0049 16 24.0049 16H23.9949C23.9949 16 19.197 16 15.9984 16.2303C15.5513 16.2829 14.5777 16.2872 13.7077 17.1936C13.0227 17.8839 12.7999 19.4514 12.7999 19.4514C12.7999 19.4514 12.5713 21.2926 12.5713 23.1331V24.8591C12.5713 26.7003 12.7999 28.5408 12.7999 28.5408C12.7999 28.5408 13.0227 30.1083 13.7077 30.7986C14.5777 31.705 15.7199 31.6765 16.2284 31.7711C18.057 31.946 23.9999 32 23.9999 32C23.9999 32 28.8027 31.9929 32.0013 31.7626C32.4477 31.7092 33.422 31.705 34.2913 30.7986C34.9763 30.1083 35.1999 28.5408 35.1999 28.5408C35.1999 28.5408 35.4284 26.7003 35.4284 24.8591V23.1331C35.4284 21.2926 35.1999 19.4514 35.1999 19.4514Z" fill="#E7E7E7"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M21.7147 27.4287L21.7139 20.5715L28.571 24.0119L21.7147 27.4287Z" fill="#404040"></path></svg><span class="sr-only">Opens in a new window/tab</span></a></li><li class="footer__social-item"><a class="footer__social-link" href="https://www.instagram.com/lifeatbdo/" target="_blank" title="Instagram (Opens in a new window/tab)" aria-label="Instagram"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4 35.0457 4 24Z" fill="#404040"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M29.6941 17.0266C28.9874 17.0266 28.4141 17.5992 28.4141 18.3061C28.4141 19.0128 28.9874 19.5861 29.6941 19.5861C30.4007 19.5861 30.9741 19.0128 30.9741 18.3061C30.9741 17.5995 30.4007 17.0261 29.6941 17.0261V17.0266Z" fill="#E7E7E7"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M18.5225 24.0001C18.5225 20.9749 20.9752 18.5222 24.0003 18.5222H24.0001C27.0252 18.5222 29.4772 20.9749 29.4772 24.0001C29.4772 27.0252 27.0254 29.4768 24.0003 29.4768C20.9752 29.4768 18.5225 27.0252 18.5225 24.0001ZM27.5559 24.0001C27.5559 22.0363 25.9639 20.4445 24.0003 20.4445C22.0365 20.4445 20.4447 22.0363 20.4447 24.0001C20.4447 25.9636 22.0365 27.5556 24.0003 27.5556C25.9639 27.5556 27.5559 25.9636 27.5559 24.0001Z" fill="#E7E7E7"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M19.6024 13.3977C20.7402 13.3459 21.1038 13.3333 24.0007 13.3333H23.9973C26.8951 13.3333 27.2574 13.3459 28.3952 13.3977C29.5307 13.4497 30.3063 13.6295 30.9863 13.8933C31.6885 14.1655 32.2819 14.5299 32.8752 15.1233C33.4686 15.7162 33.833 16.3113 34.1063 17.0128C34.3686 17.6911 34.5486 18.4662 34.6019 19.6018C34.653 20.7396 34.6663 21.1031 34.6663 24C34.6663 26.8969 34.653 27.2596 34.6019 28.3974C34.5486 29.5325 34.3686 30.3079 34.1063 30.9863C33.833 31.6877 33.4686 32.2828 32.8752 32.8757C32.2825 33.469 31.6883 33.8344 30.987 34.1068C30.3083 34.3706 29.5323 34.5504 28.3967 34.6024C27.2589 34.6541 26.8965 34.6668 23.9993 34.6668C21.1026 34.6668 20.7393 34.6541 19.6015 34.6024C18.4662 34.5504 17.6908 34.3706 17.0122 34.1068C16.311 33.8344 15.7159 33.469 15.1232 32.8757C14.5301 32.2828 14.1657 31.6877 13.893 30.9861C13.6295 30.3079 13.4497 29.5328 13.3975 28.3972C13.3459 27.2594 13.333 26.8969 13.333 24C13.333 21.1031 13.3463 20.7393 13.3972 19.6015C13.4483 18.4664 13.6283 17.6911 13.8928 17.0126C14.1661 16.3113 14.5306 15.7162 15.1239 15.1233C15.7168 14.5302 16.3119 14.1657 17.0135 13.8933C17.6917 13.6295 18.4668 13.4497 19.6024 13.3977ZM23.6452 15.2554C23.4295 15.2553 23.2296 15.2552 23.0438 15.2555V15.2528C21.0558 15.2551 20.6744 15.2684 19.6904 15.3128C18.6504 15.3606 18.0857 15.534 17.7097 15.6806C17.2119 15.8744 16.8564 16.1055 16.4831 16.4789C16.1097 16.8522 15.8782 17.2077 15.6848 17.7055C15.5388 18.0815 15.365 18.646 15.3175 19.686C15.2664 20.8105 15.2561 21.1465 15.2561 23.9949C15.2561 26.8434 15.2664 27.1812 15.3175 28.3056C15.3648 29.3457 15.5388 29.9101 15.6848 30.2857C15.8786 30.7837 16.1097 31.1383 16.4831 31.5117C16.8564 31.885 17.2119 32.1161 17.7097 32.3095C18.086 32.4555 18.6504 32.6292 19.6904 32.6772C20.8149 32.7284 21.1524 32.7395 24.0007 32.7395C26.8487 32.7395 27.1865 32.7284 28.311 32.6772C29.351 32.6297 29.9159 32.4564 30.2914 32.3097C30.7894 32.1163 31.1439 31.8852 31.5172 31.5119C31.8905 31.1388 32.1221 30.7843 32.3154 30.2866C32.4614 29.911 32.6352 29.3465 32.6828 28.3065C32.7339 27.1821 32.745 26.8443 32.745 23.9976C32.745 21.1509 32.7339 20.8131 32.6828 19.6887C32.6354 18.6487 32.4614 18.0842 32.3154 17.7086C32.1217 17.2109 31.8905 16.8553 31.5172 16.482C31.1441 16.1086 30.7892 15.8775 30.2914 15.6842C29.9154 15.5382 29.351 15.3644 28.311 15.3168C27.1863 15.2657 26.8487 15.2555 24.0007 15.2555C23.8776 15.2555 23.7592 15.2555 23.6452 15.2554Z" fill="#E7E7E7"></path></svg><span class="sr-only">Opens in a new window/tab</span></a></li></ul></div><div class="footer__copyright">BDO Copyright © 2026. See Terms & Conditions for more information.</div></div></div></footer></div>
+
+    
+    <script src="/dist/vendor.bundle.js?v=8FnlmZ0k6viykDa8OmolrbVJp1r5MegylyQ01zyXE9M" data-cookieconsent="ignore"></script>
+    <script src="/dist/master.bundle.js?v=Gab0iwho5InzRwunOBzQI3aj7clJINq26b0GU_bjtco" data-cookieconsent="ignore"></script>
+    <script>ReactDOM.hydrate(React.createElement(ErrorPageContent, {"title":"Page Not Found","description":"\u003cp\u003e\u0026nbsp;\u003c/p\u003e\r\n\r\n\u003cp\u003ePage not found. Please return to our \u003ca href=\u0022https://www.bdo.co.uk/\u0022 target=\u0022_self\u0022\u003ehome page\u003c/a\u003e.\u003c/p\u003e\r\n"}), document.getElementById("react_0HNMR64CTD2OS"));
+ReactDOM.hydrate(React.createElement(Header, {"headerDetails":{"menuItems":[{"title":"News","url":"/en-gb/news","target":"_self"},{"title":"Locations","url":"/en-gb/locations","target":"_self"},{"title":"Our people","url":"/en-gb/our-people","target":"_self"},{"title":"Events","url":"/en-gb/events","target":"_self"},{"title":"Careers","url":"/en-gb/careers","target":"_self"}],"cultures":[],"contact":{"title":"Contact ","url":"/en-gb/contact","target":"_self"},"siteName":"United Kingdom","logoURL":"/en-gb/home","logoImageURL":"https://cdn.bdo.global/images/bdo_logo/1.0.0/bdo_logo_color.png","searchPageURL":"/en-gb/search","megaMenuItems":[{"featured":[],"children":[{"description":"Having the right business advisers and the insight that comes from their extensive experience, makes overcoming business challenges and reaching your company\u0026rsquo;s goals easier. Whatever you are try","children":[{"title":"Actuarial Services","url":"/en-gb/services/advisory/actuarial-services","target":"_self"},{"title":"BDO Digital","url":"/en-gb/services/advisory/bdo-digital","target":"_self"},{"title":"Business Grant Services","url":"https://www.bdo.co.uk/en-gb/services/advisory/business-grant-services","target":"_self"},{"title":"Business Restructuring","url":"/en-gb/services/advisory/business-restructuring","target":"_self"},{"title":"Crypto Asset Services ","url":"/en-gb/services/advisory/crypto-asset-services","target":"_self"},{"title":"Deal Advisory","url":"/en-gb/services/advisory/deal-advisory","target":"_self"},{"title":"Economic Consulting ","url":"/en-gb/services/advisory/economic-consulting","target":"_self"},{"title":"Financial Crime Consulting","url":"https://www.bdo.co.uk/en-gb/services/advisory/financial-crime-consulting","target":"_self"},{"title":"Financial Model Services","url":"/en-gb/services/advisory/financial-modelling-assurance","target":"_self"},{"title":"Forensic Accounting Services","url":"/en-gb/services/advisory/forensic-accounting-services","target":"_self"},{"title":"GDPR, Privacy \u0026 Data protection services","url":"https://www.bdo.co.uk/en-gb/services/advisory/gdpr-privacy-data-protection-services/privacy-and-data-protection-services","target":"_self"},{"title":"International Advisory Services","url":"/en-gb/services/advisory/international-advisory-services","target":"_self"},{"title":"International Institutions and Donor Assurance","url":"/en-gb/services/advisory/international-institutions-and-donor-assurance","target":"_self"},{"title":"Pensions Covenant Advisory","url":"/en-gb/services/advisory/pensions-covenant-advisory","target":"_self"},{"title":"People Advisory Services","url":"/en-gb/services/advisory/people-advisory-services","target":"_self"},{"title":"Procurement, Contracts \u0026 Supply Chain Services","url":"https://www.bdo.co.uk/en-gb/services/advisory/procurement-contracts-supply-chain-services","target":"_self"},{"title":"Quantitative Risk \u0026 Valuation Advisory ","url":"/en-gb/services/advisory/quantitative-advisory-valuation","target":"_self"},{"title":" Risk Advisory Services","url":"/en-gb/services/advisory/risk-advisory-services","target":"_self"},{"title":"Sustainability and ESG Advisory","url":"https://www.bdo.co.uk/en-gb/services/advisory/esg-and-sustainability-advisory","target":"_self"},{"title":"Valuation Services","url":"/en-gb/services/advisory/valuation-services","target":"_self"}],"title":"Advisory","url":"/en-gb/services/advisory","target":"_self"},{"description":"Audit must inspire confidence for investors, shareholders and all stakeholders. Our tailored service is always robust and transparent. Our advice on IFRS, GAAP and financial reporting is delivered by ","children":[{"title":"External Audit","url":"/en-gb/services/audit-assurance/external-audit","target":"_self"},{"title":"Financial Reporting Solutions","url":"/en-gb/services/audit-assurance/financial-reporting-solutions","target":"_self"},{"title":"Governance, Risk and Compliance","url":"/en-gb/services/audit-assurance/governance-risk-and-compliance","target":"_self"},{"title":"IFRS","url":"/en-gb/services/audit-assurance/ifrs-us-gaap-and-international-gaap","target":"_self"},{"title":"Internal Audit and Risk Assurance","url":"/en-gb/services/audit-assurance/internal-audit-and-risk-assurance","target":"_self"},{"title":"Non-Executive Director Programme","url":"/en-gb/bdo-ned","target":"_self"},{"title":"Other Assurance Services","url":"/en-gb/services/audit-assurance/other-assurance-services","target":"_self"},{"title":"UK GAAP and Narrative Reporting","url":"/en-gb/services/audit-assurance/uk-gaap-and-narrative-reporting","target":"_self"},{"title":"US GAAP and SEC Reporting","url":"https://www.bdo.co.uk/en-gb/services/audit-assurance/us-gaap-and-sec-reporting","target":"_self"}],"title":"Audit \u0026 Assurance","url":"/en-gb/services/audit-assurance","target":"_self"},{"description":"Cost-effectively meet your changing requirements and growth challenges by picking from our range of outsourced accounting, advisory and compliance services delivered here in the UK and across the worl","children":[{"title":"Business Planning and Advisory ","url":"/en-gb/services/business-services-outsourcing/business-planning-and-advisory","target":"_self"},{"title":"Company Formation and Company Secretarial ","url":"/en-gb/services/business-services-outsourcing/company-formation-and-company-secretarial","target":"_self"},{"title":"Doing Business in the UK","url":"/en-gb/services/business-services-outsourcing/doing-business-in-the-uk","target":"_self"},{"title":"Finance Function of the Future","url":"/en-gb/services/business-services-outsourcing/finance-function-of-the-future","target":"_self"},{"title":"Financial Reporting Advisory","url":"/en-gb/services/business-services-outsourcing/financial-reporting-advisory","target":"_self"},{"title":"Global Compliance \u0026 Reporting","url":"/en-gb/services/business-services-outsourcing/global-compliance-reporting","target":"_self"},{"title":" Outsourced Accounting and Bookkeeping","url":"/en-gb/services/business-services-outsourcing/uk-accounting-services","target":"_self"},{"title":"Payroll ","url":"/en-gb/services/business-services-outsourcing/payroll","target":"_self"},{"title":"Strategic Resourcing Solutions","url":"/en-gb/services/business-services-outsourcing/strategic-resourcing-solutions","target":"_self"},{"title":"Support and Services for Entrepreneurs","url":"/en-gb/services/business-services-outsourcing/support-and-services-for-entrepreneurs","target":"_self"},{"title":"Technology Advisory Services","url":"/en-gb/services/business-services-outsourcing/technology-advisory-services","target":"_self"}],"title":"Business Services \u0026 Outsourcing","url":"/en-gb/services/business-services-outsourcing","target":"_self"},{"description":"UK and international tax legislation is constantly evolving. Our tax experts will give you practical advice and insight that ensures you manage your tax affairs effectively today and in the future. We","children":[{"title":"Capital Allowances Services ","url":"/en-gb/services/tax/capital-allowances-services","target":"_self"},{"title":"Corporate International Tax and Transfer Pricing Services","url":"/en-gb/services/tax/corporate-international-tax-services","target":"_self"},{"title":"Corporate Tax Services ","url":"/en-gb/services/tax/corporate-tax-services","target":"_self"},{"title":"Global Employer Services","url":"/en-gb/services/tax/global-employer-services","target":"_self"},{"title":"Innovation and R\u0026D Tax Incentives","url":"/en-gb/services/tax/innovation-and-r-d-tax-incentives","target":"_self"},{"title":"Partnership Tax","url":"/en-gb/services/tax/partnership-tax","target":"_self"},{"title":"Private Client Services","url":"/en-gb/services/tax/private-client-services","target":"_self"},{"title":"Real Estate and Construction Taxes","url":"/en-gb/services/tax/real-estate-and-construction-taxes","target":"_self"},{"title":"Tax Assurance and Risk Management","url":"/en-gb/services/tax/tax-assurance-and-risk-management","target":"_self"},{"title":"Tax Automation \u0026 Innovation Services ","url":"/en-gb/services/tax/tax-automation-and-innovation-services","target":"_self"},{"title":"Tax Dispute Resolution Services ","url":"/en-gb/services/tax/tax-dispute-resolution-services","target":"_self"},{"title":"VAT and Indirect Taxes","url":"/en-gb/services/tax/vat-and-indirect-taxes","target":"_self"}],"title":"Tax","url":"/en-gb/services/tax","target":"_self"}],"title":"Services","url":"/en-gb/services","target":"_self"},{"featured":[],"children":[{"description":"","children":[],"title":"Energy Transition and Renewables","url":"/en-gb/industries/renewable-energy-transition","target":"_self"},{"description":"","children":[],"title":"Financial Services","url":"/en-gb/industries/financial-services","target":"_self"},{"description":"","children":[],"title":"Health and Social Care ","url":"/en-gb/industries/health-and-social-care","target":"_self"},{"description":"","children":[],"title":"Infrastructure and Capital projects","url":"/en-gb/industries/infrastructure-and-capital-projects","target":"_self"},{"description":"","children":[],"title":"Leisure and Hospitality","url":"/en-gb/industries/leisure-and-hospitality","target":"_self"},{"description":"","children":[],"title":"Life Sciences","url":"/en-gb/industries/life-sciences","target":"_self"},{"description":"","children":[],"title":"Manufacturing","url":"/en-gb/industries/manufacturing","target":"_self"},{"description":"","children":[],"title":"Medical Practitioners","url":"/en-gb/industries/medical-practitioners","target":"_self"},{"description":"","children":[],"title":"Natural Resources","url":"/en-gb/industries/natural-resources-energy","target":"_self"},{"description":"","children":[],"title":"Not for Profit","url":"/en-gb/industries/not-for-profit","target":"_self"},{"description":"","children":[],"title":"Private Equity","url":"/en-gb/industries/private-equity","target":"_self"},{"description":"","children":[],"title":"Professional Services","url":"/en-gb/professional-services","target":"_self"},{"description":"","children":[],"title":"Public Markets","url":"/en-gb/industries/public-markets","target":"_self"},{"description":"","children":[],"title":"Public Sector","url":"/en-gb/industries/public-sector","target":"_self"},{"description":"","children":[],"title":"Real Estate \u0026 Construction","url":"/en-gb/industries/real-estate-and-construction","target":"_self"},{"description":"","children":[],"title":"Retail and Consumer Brands","url":"/en-gb/industries/retail-and-consumer-brands","target":"_self"},{"description":"","children":[],"title":"Technology, Media \u0026 Telecoms","url":"/en-gb/industries/technology-and-media","target":"_self"},{"description":"","children":[],"title":"Transport","url":"/en-gb/industries/transport","target":"_self"}],"title":"Industries","url":"/en-gb/industries","target":"_self"},{"featured":[],"children":[],"title":"Insights","url":"/en-gb/insights","target":"_self"},{"featured":[],"children":[{"description":"","children":[],"title":"Global Network","url":"/en-gb/about/global-network","target":"_self"},{"description":"","children":[],"title":"Our AI principles","url":"/en-gb/about/our-ai-principles","target":"_self"},{"description":"","children":[{"title":"Inclusion \u0026 Belonging","url":"/en-gb/about/our-culture/be-yourself","target":"_self"},{"title":"Citizenship \u0026 Wellbeing","url":"/en-gb/about/our-culture/citizenship-wellbeing","target":"_self"},{"title":"Our Purpose \u0026 Values","url":"/en-gb/about/our-culture/our-purpose-values","target":"_self"}],"title":"Our Culture","url":"/en-gb/about/our-culture","target":"_self"},{"description":"","children":[],"title":"Our Performance","url":"/en-gb/about/our-performance","target":"_self"},{"description":"","children":[{"title":"Governance Bodies - Terms of Reference ","url":"/en-gb/about/legal-regulatory/governance-bodies-terms-of-reference","target":"_self"},{"title":"Modern Slavery Act Statement","url":"/en-gb/about/legal-regulatory/modern-slavery-act-statement","target":"_self"},{"title":"Transparency Report","url":"/en-gb/about/legal-regulatory/transparency-report","target":"_self"}],"title":"Legal \u0026 Regulatory","url":"/en-gb/about/legal-regulatory","target":"_self"},{"description":"","children":[],"title":"Our Alumni","url":"/en-gb/about/our-alumni","target":"_self"},{"description":"","children":[{"title":"Our Environmental Commitments","url":"/en-gb/about/our-environmental-commitments","target":"_self"}],"title":"Our Sustainability and ESG Commitments","url":"/en-gb/about/our-sustainability-and-esg-commitments","target":"_self"},{"description":"","children":[],"title":"Reporting Portal","url":"/en-gb/about/reporting-portal","target":"_self"}],"title":"About","url":"/en-gb/about","target":"_self"},{"featured":[],"children":[],"title":"Store ","url":"https://utm.io/uh4bu","target":"_self"}]}}), document.getElementById("react_0HNMR64CTD2OT"));
+ReactDOM.hydrate(React.createElement(Breadcrumbs, {"breadcrumbsSettings":{"links":[{"title":"Home","url":"/en-gb/home","target":"_self"},{"title":"Page Not Found","url":"/en-gb/page-not-found","target":"_self"}]}}), document.getElementById("react_0HNMR64CTD2OU"));
+ReactDOM.hydrate(React.createElement(FormStylingJS, {}), document.getElementById("react_0HNMR64CTD2OV"));
+ReactDOM.hydrate(React.createElement(Footer, {"footerSettings":{"displaySubscriptionsSection":false,"subscriptionButtonLink":null,"socialButtons":[{"altText":"LinkedIn","ariaLabel":"LinkedIn","iconType":"linkedin","customIcon":null,"order":1,"url":"https://www.instagram.com/lifeatbdo"},{"altText":"YouTube","ariaLabel":"YouTube","iconType":"youtube","customIcon":null,"order":2,"url":"https://www.youtube.com/user/bdollp"},{"altText":"Instagram","ariaLabel":"Instagram","iconType":"instagram","customIcon":null,"order":3,"url":"https://www.instagram.com/lifeatbdo/"}],"footerLinks":[{"openInNewTab":false,"order":-3,"title":"Contact ","url":"/en-gb/contact","target":"_self"},{"openInNewTab":false,"order":-2,"title":"Locations","url":"/en-gb/locations","target":"_self"},{"openInNewTab":false,"order":-1,"title":"BDO Global Portal","url":"/en-gb/bdo-global-portal-terms-conditions","target":"_self"},{"openInNewTab":false,"order":0,"title":"Sitemap","url":"/en-gb/sitemap","target":"_self"},{"openInNewTab":true,"order":2,"title":"Locations","url":"https://www.bdo.co.uk/en-gb/locations","target":"_self"},{"openInNewTab":true,"order":3,"title":"Alumni","url":"https://www.bdo.co.uk/en-gb/about/our-alumni","target":"_self"},{"openInNewTab":true,"order":4,"title":"Modern Slavery Statement","url":"https://www.bdo.co.uk/getmedia/bdb31c40-afbc-4d17-8b54-d5f153775425/BDO-Modern-Slavery-Statement-2025.pdf","target":"_self"},{"openInNewTab":true,"order":6,"title":"Legal \u0026 Privacy","url":"/en-gb/accessibility-statement","target":"_self"}]}}), document.getElementById("react_0HNMR64CTD2P0"));
+</script>
+    
+<script type="text/javascript">
+_linkedin_partner_id = "372737";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script><script type="text/javascript">
+(function(l) {
+if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+window.lintrk.q=[]}
+var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})(window.lintrk);
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=372737&fmt=gif" />
+</noscript>
+</body>
+</html>

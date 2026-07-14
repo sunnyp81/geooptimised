@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://lovewell-blake.imgix.net">
+<link rel="preconnect" href="https://maps.googleapis.com">
+<script type="text/javascript">
+  var _iub = _iub || [];
+  _iub.csConfiguration = {
+    "cookiePolicyInOtherWindow": true,
+    "lang": "en-GB",
+    "perPurposeConsent": true,
+    "purposes": "1,2,3,4,5",
+    "reloadOnConsent": true,
+    "siteId": 2170399,
+    "cookiePolicyId": 25984965,
+    "i18n": {
+      "en-GB": {
+        "banner": {
+          "dynamic": {
+            "body": "We and selected third parties use cookies or similar technologies for technical purposes and, with your consent, for functionality, experience, measurement and marketing (personalised ads) as specified in the <a href=\"/privacy-policy\" title=\"Privacy Policy\">Privacy Policy</a>. Denying consent may make related features unavailable."
+          }
+        }
+      }
+    },
+    "cookiePolicyUrl": "https://www.lovewell-blake.co.uk/privacy-policy",
+    "banner": {
+      "acceptButtonColor": "#002147",
+      "acceptButtonDisplay": true,
+      "backgroundColor": "#FFFFFF",
+      "closeButtonDisplay": false,
+      "customizeButtonColor": "#A5A5A5",
+      "customizeButtonDisplay": true,
+      "listPurposes": true,
+      "position": "float-bottom-center",
+      "textColor": "#1C1C1C"
+    },
+    "callback": {
+      onPreferenceExpressedOrNotNeeded: function (preference) {
+        dataLayer.push({
+          iubenda_ccpa_opted_out: _iub.cs.api.isCcpaOptedOut(),
+        });
+        // preferences parameter may be undefined if both GDPR and LGPD do not apply
+        // we may need the line below to find USPR preferences instead of relying
+        // on preferences parameter
+        var otherPreferences = _iub.cs.api.getPreferences();
+        if (otherPreferences) {
+          var usprPreferences = otherPreferences.uspr;
+          if (usprPreferences) {
+            for (const purposeName in usprPreferences) {
+              if (usprPreferences[purposeName]) {
+                dataLayer.push({
+                  event: 'iubenda_consent_given_purpose_' + purposeName,
+                });
+              }
+            }
+          }
+        }
+        if (!preference) {
+          dataLayer.push({
+            event: 'iubenda_preference_not_needed',
+          });
+        }
+        else if (preference.consent === true) {
+          dataLayer.push({
+            event: 'iubenda_consent_given',
+          });
+        }
+        else if (preference.consent === false) {
+          dataLayer.push({
+            event: 'iubenda_consent_rejected',
+          });
+        }
+        else if (preference.purposes) {
+          for (const purposeId in preference.purposes) {
+            if (preference.purposes[purposeId]) {
+              dataLayer.push({
+                event: 'iubenda_consent_given_purpose_' + purposeId,
+              });
+            }
+          }
+        }
+      }
+    }
+  };
+</script>
+<script type="text/javascript" src="//cs.iubenda.com/sync/2170399.js"></script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/stable/iubenda_cs.js" charset="UTF-8" async></script>
+
+
+    <title>404 | Lovewell Blake</title>
+    <link rel="canonical" href="">
+    <meta property="og:url" content="">
+<link rel="shortcut icon" href="https://lovewell-blake-assets.s3.eu-west-2.amazonaws.com/assets/seo/lb_digital_logo_rgb_colour.png">
+    <meta property="og:site_name" content="Lovewell Blake">
+    <meta property="og:title" content="404 | Lovewell Blake">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en-US">
+    <meta name="twitter:card" content="summary">
+<script>(function (w, d, s, l, i){w[l]=w[l] || []; w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'}); var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l !='dataLayer' ? '&l=' + l : ''; j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-PXFKZM');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"Lovewell Blake","@id":"https://www.lovewell-blake.co.uk#site-owner","url":"https://www.lovewell-blake.co.uk","sameAs":["https://www.facebook.com/LovewellBlake/","https://www.linkedin.com/company/lovewell-blake-chartered-accountants/","https://twitter.com/LovewellBlake","https://www.youtube.com/channel/UCPcWlIk3EpKVAF6d79NnY_Q","https://www.instagram.com/lovewellblakelb/"]},{"@type":"WebSite","url":"https://www.lovewell-blake.co.uk","publisher":{"@id":"https://www.lovewell-blake.co.uk#site-owner"},"@id":"https://www.lovewell-blake.co.uk#website","name":"Lovewell Blake"},{"@type":"WebPage","@id":"https://www.lovewell-blake.co.uk#web_page","url":"https://www.lovewell-blake.co.uk/llms.txt","name":"404 | Lovewell Blake","isPartOf":{"@id":"https://www.lovewell-blake.co.uk#website"},"inLanguage":"en-US","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Thing","name":"Home","id":"https://www.lovewell-blake.co.uk"}}]}}]}</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="/favicon.ico" />
+<link href="/humans.txt" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,600,700,700i&display=swap" rel="stylesheet">
+
+<link rel="preload" as="style" href="https://www.lovewell-blake.co.uk/build/assets/styles-C4nYUCDl.css" /><link rel="stylesheet" href="https://www.lovewell-blake.co.uk/build/assets/styles-C4nYUCDl.css" />
+
+
+
+
+<script class="_iub_cs_activate" data-iub-purposes="4" type="text/plain">
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-49088177-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+<script data-suppressedsrc="https://data.staticfiles.io/accounts/ea6c82-892711e7-2c4ecb/load.js" class="_iub_cs_activate" data-iub-purposes="5" type="text/plain" async defer></script>
+
+
+<script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=hhmznyayve8mrs717wc01a" async="true"></script>
+
+
+  </head>
+
+  <body class="animation-begin">
+    
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXFKZM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+    <div id="top"></div>
+
+    
+    <header class="header" x-data="{offCanvasOpen: false, subMenuActive: false}">
+    <div class="header__search header__search--mobile"></div>
+ <div class="header__top">
+    <div class="site-width columns">
+        <div class="header__top-navigation" x>
+            
+            <ul class="nav top-navigation">
+                
+                <li class="nav__item" x-data="{dropdownOpen: false}">
+                    
+                    <button
+                        class="nav__link  nav__link--has-submenu"
+                        @click="dropdownOpen = !dropdownOpen"
+                        x-bind:aria-expanded="dropdownOpen"
+                        x-ref="button"
+                    >
+                        About us
+                    </button>
+                     
+                    <ul
+                        class="nav__submenu"
+                        x-show="dropdownOpen"
+                        x-ref="panel"
+                        @keydown.escape.window="dropdownOpen = false"
+                        @click.outside="dropdownOpen = false"
+                        x-transition:enter.duration.300ms
+                        x-transition:leave.duration.300ms
+                        x-transition.opacity
+                        x-cloak
+                    >
+                        
+                        <li class="nav__item">
+                            <a href="/about-us" class="nav__link">About Us</a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="/contact/staff" class="nav__link">Our people</a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="/contact" class="nav__link">Contact us</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li class="nav__item" x-data="{dropdownOpen: false}">
+                    
+                    <button
+                        class="nav__link  nav__link--has-submenu"
+                        @click="dropdownOpen = !dropdownOpen"
+                        x-bind:aria-expanded="dropdownOpen"
+                        x-ref="button"
+                    >
+                        Resources
+                    </button>
+                     
+                    <ul
+                        class="nav__submenu"
+                        x-show="dropdownOpen"
+                        x-ref="panel"
+                        @keydown.escape.window="dropdownOpen = false"
+                        @click.outside="dropdownOpen = false"
+                        x-transition:enter.duration.300ms
+                        x-transition:leave.duration.300ms
+                        x-transition.opacity
+                        x-cloak
+                    >
+                        
+                        <li class="nav__item">
+                            <a href="/about-us/glossary-of-terms" class="nav__link">Glossary of terms</a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="https://lovewell-blake-assets.s3.eu-west-2.amazonaws.com/assets/downloads/lovewell-blake-tax-card-2026-2027.pdf" class="nav__link">Tax Rates 2026-27</a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="https://lovewell-blake-assets.s3.eu-west-2.amazonaws.com/assets/downloads/autumn-budget-summary-2025.pdf" class="nav__link">Autumn Budget 2025</a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="https://lovewell-blake-assets.s3.eu-west-2.amazonaws.com/assets/downloads/spring-statement-2026.pdf" class="nav__link">Spring Statement 2026</a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="https://www.lovewell-blake.co.uk/norfolk-limited" class="nav__link">Norfolk Limited report</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+                
+                <li class="nav__item" x-data="{dropdownOpen: false}">
+                    
+                    <a
+                        class="nav__link "
+                        href="/careers"
+                    >
+                        Careers
+                    </a>
+                     
+                </li>
+                
+                <li class="nav__item" x-data="{dropdownOpen: false}">
+                    
+                    <a
+                        class="nav__link "
+                        href="/online-payments"
+                    >
+                        Pay Online
+                    </a>
+                     
+                </li>
+                
+            </ul>
+            
+        </div>
+    </div>
+</div>
+
+    <div class="header__body">
+        <div class="site-width columns">
+            <div class="header__main">
+                <div class="header__logo">
+                    <figure class="header__logo-image">
+                        <a href="/" title="Home">
+                            <img
+                                class="header__logo-image--full"
+                                src="https://www.lovewell-blake.co.uk/build/assets/lb-logo-primary-DIjkNpJE.png"
+                                alt="Lovewell Blake"
+                            />
+                            <img
+                                class="header__logo-image--sticky"
+                                src="https://www.lovewell-blake.co.uk/build/assets/lb-logo-primary--short-CwbM60_t.png"
+                                alt="Lovewell Blake"
+                            />
+                        </a>
+                    </figure>
+                </div>
+                 <div class="header__primary-navigation">
+    <ul class="nav">
+        
+        <li
+            class="nav__item nav__item--full"
+            :class="{'dropdown-open': dropdownOpen}"
+            x-data="{dropdownOpen: false}"
+        >
+            
+            <button
+                class="nav__link  nav__link--has-submenu"
+                @click="dropdownOpen = !dropdownOpen"
+                x-bind:aria-expanded="dropdownOpen"
+                x-ref="button"
+            >
+                For Business
+            </button>
+             
+            <div
+                class="nav__submenu nav__submenu--full"
+                x-show="dropdownOpen"
+                x-ref="panel"
+                @keydown.escape.window="dropdownOpen = false"
+                @click.outside="dropdownOpen = false"
+                x-cloak
+                x-transition:enter.duration.500ms
+                x-transition:leave.duration.500ms
+                x-transition.opacity
+            >
+                <div class="nav__submenu--top">
+                    <div class="columns">
+                        <div class="nav__submenu-inner">
+                            <ul class="nav__submenu-list">
+                                
+                                <li class="nav__item">
+                                    <a href="/services/accountancy-audit/accounts-tax-compliance" class="nav__link">Accounts and Tax compliance</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/accountancy-audit/audit" class="nav__link">Audit and Assurance</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/outsourcing-and-hr/bookkeeping-services" class="nav__link">Bookkeeping</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/lbfp/services/business-protective-insurances" class="nav__link">Business Protection</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/business-tax/business-tax-planning" class="nav__link">Business Tax Planning</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/outsourcing-and-hr/cloud-accounting" class="nav__link">Cloud Accounting</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/outsourcing-and-hr/company-secretarial" class="nav__link">Company Secretarial</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/specialist-services/corporate-finance" class="nav__link">Corporate Finance</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/doing-business-in-the-uk" class="nav__link">Doing business in the UK</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/outsourcing-and-hr/hr-consultancy" class="nav__link">HR Consultancy</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/international/international" class="nav__link">International Services for Business</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/outsourcing-and-hr/payroll-for-business" class="nav__link">Payroll Outsourcing</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/business-tax/research-and-development" class="nav__link">Research and Development Tax Consulting</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/business-tax/tax-investigation-service" class="nav__link">Tax Investigation Service</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/international/uk-subsidiary-and-outsourcing-services" class="nav__link">UK Subsidiary and Outsourcing Services</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/business-tax/vat-advice-and-services" class="nav__link">VAT Advisory</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/lbfp/services/workplace-pensions" class="nav__link">Workplace Pensions</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="nav__item nav__item--view-all">
+                    <div class="columns">
+                        <div class="nav__submenu-inner">
+                        <a href="/for-business" class="nav__link"
+                            >All Business Services</a
+                        >
+                        </div>
+                    </div>
+                </button>
+                
+            </div>
+            
+        </li>
+        
+        <li
+            class="nav__item nav__item--full"
+            :class="{'dropdown-open': dropdownOpen}"
+            x-data="{dropdownOpen: false}"
+        >
+            
+            <button
+                class="nav__link  nav__link--has-submenu"
+                @click="dropdownOpen = !dropdownOpen"
+                x-bind:aria-expanded="dropdownOpen"
+                x-ref="button"
+            >
+                For Individuals
+            </button>
+             
+            <div
+                class="nav__submenu nav__submenu--full"
+                x-show="dropdownOpen"
+                x-ref="panel"
+                @keydown.escape.window="dropdownOpen = false"
+                @click.outside="dropdownOpen = false"
+                x-cloak
+                x-transition:enter.duration.500ms
+                x-transition:leave.duration.500ms
+                x-transition.opacity
+            >
+                <div class="nav__submenu--top">
+                    <div class="columns">
+                        <div class="nav__submenu-inner">
+                            <ul class="nav__submenu-list">
+                                
+                                <li class="nav__item">
+                                    <a href="/services/personal-tax/estate-administration-and-planning" class="nav__link">Estate Administration</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/personal-tax/international-tax-for-individuals" class="nav__link">International Tax for Individuals</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/lbfp/services/inheritance-tax-iht" class="nav__link">Inheritance Tax</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/lbfp/services/pension-planning" class="nav__link">Pension Fund Management</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/personal-tax/personal-tax-services" class="nav__link">Personal Tax Planning</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/personal-tax/personal-tax-returns" class="nav__link">Personal Tax Returns</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/lbfp/services/your-retirement-experience" class="nav__link">Planning for retirement</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/lbfp/services/protecting-your-family" class="nav__link">Protecting your family</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/business-tax/tax-investigation-service" class="nav__link">Tax Investigation Service</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/personal-tax/trusts" class="nav__link">Trusts</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/lbfp" class="nav__link">Wealth Management</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="nav__item nav__item--view-all">
+                    <div class="columns">
+                        <div class="nav__submenu-inner">
+                        <a href="/for-individuals" class="nav__link"
+                            >All Personal Services</a
+                        >
+                        </div>
+                    </div>
+                </button>
+                
+            </div>
+            
+        </li>
+        
+        <li
+            class="nav__item nav__item--full"
+            :class="{'dropdown-open': dropdownOpen}"
+            x-data="{dropdownOpen: false}"
+        >
+            
+            <button
+                class="nav__link  nav__link--has-submenu"
+                @click="dropdownOpen = !dropdownOpen"
+                x-bind:aria-expanded="dropdownOpen"
+                x-ref="button"
+            >
+                By Sector
+            </button>
+             
+            <div
+                class="nav__submenu nav__submenu--full"
+                x-show="dropdownOpen"
+                x-ref="panel"
+                @keydown.escape.window="dropdownOpen = false"
+                @click.outside="dropdownOpen = false"
+                x-cloak
+                x-transition:enter.duration.500ms
+                x-transition:leave.duration.500ms
+                x-transition.opacity
+            >
+                <div class="nav__submenu--top">
+                    <div class="columns">
+                        <div class="nav__submenu-inner">
+                            <ul class="nav__submenu-list">
+                                
+                                <li class="nav__item">
+                                    <a href="/sectors/accountants-for-agriculture" class="nav__link">Agriculture</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/specialist-services/care-homes" class="nav__link">Care Homes</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/specialist-services/charities" class="nav__link">Charities and Schools</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/specialist-services/construction-and-property" class="nav__link">Construction and Property</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/specialist-services/energy" class="nav__link">Energy</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/sectors/accountants-for-healthcare" class="nav__link">Healthcare</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/specialist-services/hospitality-and-leisure" class="nav__link">Hospitality and Leisure</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/specialist-services/landlords" class="nav__link">Landlords</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/sectors/landed-estates" class="nav__link">Landed Estates</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/sectors/accountants-for-professional-practices" class="nav__link">Professional Practices</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/services/specialist-services/tech-sector" class="nav__link">Technology</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="nav__item nav__item--view-all">
+                    <div class="columns">
+                        <div class="nav__submenu-inner">
+                        <a href="/by-sector" class="nav__link"
+                            >All Sectors</a
+                        >
+                        </div>
+                    </div>
+                </button>
+                
+            </div>
+            
+        </li>
+        
+        <li
+            class="nav__item nav__item--small"
+            :class="{'dropdown-open': dropdownOpen}"
+            x-data="{dropdownOpen: false}"
+        >
+            
+            <button
+                class="nav__link  nav__link--has-submenu"
+                @click="dropdownOpen = !dropdownOpen"
+                x-bind:aria-expanded="dropdownOpen"
+                x-ref="button"
+            >
+                Insights
+            </button>
+             
+            <div
+                class="nav__submenu nav__submenu--small"
+                x-show="dropdownOpen"
+                x-ref="panel"
+                @keydown.escape.window="dropdownOpen = false"
+                @click.outside="dropdownOpen = false"
+                x-cloak
+                x-transition:enter.duration.500ms
+                x-transition:leave.duration.500ms
+                x-transition.opacity
+            >
+                <div class="nav__submenu--top">
+                    <div class="columns">
+                        <div class="nav__submenu-inner">
+                            <ul class="nav__submenu-list">
+                                
+                                <li class="nav__item">
+                                    <a href="/news" class="nav__link">News</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/events" class="nav__link">Events</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/knowledge" class="nav__link">Knowledge</a>
+                                </li>
+                                
+                                <li class="nav__item">
+                                    <a href="/podcasts" class="nav__link">Podcasts</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="nav__item nav__item--view-all">
+                    <div class="columns">
+                        <div class="nav__submenu-inner">
+                        <a href="https://www.lovewell-blake.co.uk/news" class="nav__link"
+                            >View news</a
+                        >
+                        </div>
+                    </div>
+                </button>
+                
+            </div>
+            
+        </li>
+        
+    </ul>
+    <div class="header__search header__search--desktop"></div>
+
+</div>
+ 
+                <div class="menu__trigger">
+    <span class="menu__trigger-label">Menu</span>
+    <button
+        class="menu__trigger-icon"
+        @click="offCanvasOpen = !offCanvasOpen, subMenuActive = false"
+        x-show="!offCanvasOpen"
+    >
+        <svg class="menu__trigger-icon-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 12H21" stroke="#002147" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 6H21" stroke="#002147" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 18H21" stroke="#002147" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button
+        class="menu__trigger-icon"
+        @click="offCanvasOpen = !offCanvasOpen"
+        x-show="offCanvasOpen"
+        x-cloak
+    >
+        <svg class="menu__trigger-close-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18" stroke="#002147" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 6L18 18" stroke="#002147" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+</div>
+<div
+    class="menu__off-canvas"
+    x-cloak
+    x-show="offCanvasOpen"
+    @keydown.escape.window="offCanvasOpen = false"
+    @click.outside="offCanvasOpen = false"
+    x-transition:enter.duration.300ms
+    x-transition:leave.duration.300ms
+    x-transition.opacity
+    :class="{'off-canvas__submenu--active': subMenuActive}"
+>
+    <nav class="menu__off-canvas-inner">
+        <ul class="menu__list menu__list--primary">
+            
+            <li
+                class="menu__item menu__item--has-dropdown"
+                x-data="{submenuOpen: false}"
+            >
+                
+                <button
+                    type="button"
+                    class="button menu__link menu__link--mobile"
+                    @click="subMenuActive = !subMenuActive, submenuOpen = !submenuOpen"
+                    x-ref="button"
+                    x-bind:aria-expanded="submenuOpen"
+                    aria-haspopup="true"
+                    role="menuitem"
+                >
+                    For Business
+                </button>
+                <div
+                    class="nav__submenu-container"
+                    :class="{'nav__submenu-container--active': submenuOpen}"
+                    x-ref="panel"
+                    @keydown.escape.window="submenuOpen = false"
+                >
+                    <button
+                        class="off-canvas__submenu-back"
+                        @click="submenuOpen = false, subMenuActive = false"
+                    >
+                         Back
+                    </button>
+                    <span class="off-canvas__submenu-title">For Business</span>
+                    <ul
+                        class="off-canvas__submenu"
+                        x-ref="panel"
+                    >
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/accountancy-audit/accounts-tax-compliance">Accounts and Tax compliance</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/accountancy-audit/audit">Audit and Assurance</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/outsourcing-and-hr/bookkeeping-services">Bookkeeping</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/lbfp/services/business-protective-insurances">Business Protection</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/business-tax/business-tax-planning">Business Tax Planning</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/outsourcing-and-hr/cloud-accounting">Cloud Accounting</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/outsourcing-and-hr/company-secretarial">Company Secretarial</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/specialist-services/corporate-finance">Corporate Finance</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/doing-business-in-the-uk">Doing business in the UK</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/outsourcing-and-hr/hr-consultancy">HR Consultancy</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/international/international">International Services for Business</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/outsourcing-and-hr/payroll-for-business">Payroll Outsourcing</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/business-tax/research-and-development">Research and Development Tax Consulting</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/business-tax/tax-investigation-service">Tax Investigation Service</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/international/uk-subsidiary-and-outsourcing-services">UK Subsidiary and Outsourcing Services</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/business-tax/vat-advice-and-services">VAT Advisory</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/lbfp/services/workplace-pensions">Workplace Pensions</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </li>
+            
+            <li
+                class="menu__item menu__item--has-dropdown"
+                x-data="{submenuOpen: false}"
+            >
+                
+                <button
+                    type="button"
+                    class="button menu__link menu__link--mobile"
+                    @click="subMenuActive = !subMenuActive, submenuOpen = !submenuOpen"
+                    x-ref="button"
+                    x-bind:aria-expanded="submenuOpen"
+                    aria-haspopup="true"
+                    role="menuitem"
+                >
+                    For Individuals
+                </button>
+                <div
+                    class="nav__submenu-container"
+                    :class="{'nav__submenu-container--active': submenuOpen}"
+                    x-ref="panel"
+                    @keydown.escape.window="submenuOpen = false"
+                >
+                    <button
+                        class="off-canvas__submenu-back"
+                        @click="submenuOpen = false, subMenuActive = false"
+                    >
+                         Back
+                    </button>
+                    <span class="off-canvas__submenu-title">For Individuals</span>
+                    <ul
+                        class="off-canvas__submenu"
+                        x-ref="panel"
+                    >
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/personal-tax/estate-administration-and-planning">Estate Administration</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/personal-tax/international-tax-for-individuals">International Tax for Individuals</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/lbfp/services/inheritance-tax-iht">Inheritance Tax</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/lbfp/services/pension-planning">Pension Fund Management</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/personal-tax/personal-tax-services">Personal Tax Planning</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/personal-tax/personal-tax-returns">Personal Tax Returns</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/lbfp/services/your-retirement-experience">Planning for retirement</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/lbfp/services/protecting-your-family">Protecting your family</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/business-tax/tax-investigation-service">Tax Investigation Service</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/personal-tax/trusts">Trusts</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/lbfp">Wealth Management</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </li>
+            
+            <li
+                class="menu__item menu__item--has-dropdown"
+                x-data="{submenuOpen: false}"
+            >
+                
+                <button
+                    type="button"
+                    class="button menu__link menu__link--mobile"
+                    @click="subMenuActive = !subMenuActive, submenuOpen = !submenuOpen"
+                    x-ref="button"
+                    x-bind:aria-expanded="submenuOpen"
+                    aria-haspopup="true"
+                    role="menuitem"
+                >
+                    By Sector
+                </button>
+                <div
+                    class="nav__submenu-container"
+                    :class="{'nav__submenu-container--active': submenuOpen}"
+                    x-ref="panel"
+                    @keydown.escape.window="submenuOpen = false"
+                >
+                    <button
+                        class="off-canvas__submenu-back"
+                        @click="submenuOpen = false, subMenuActive = false"
+                    >
+                         Back
+                    </button>
+                    <span class="off-canvas__submenu-title">By Sector</span>
+                    <ul
+                        class="off-canvas__submenu"
+                        x-ref="panel"
+                    >
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/sectors/accountants-for-agriculture">Agriculture</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/specialist-services/care-homes">Care Homes</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/specialist-services/charities">Charities and Schools</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/specialist-services/construction-and-property">Construction and Property</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/specialist-services/energy">Energy</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/sectors/accountants-for-healthcare">Healthcare</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/specialist-services/hospitality-and-leisure">Hospitality and Leisure</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/specialist-services/landlords">Landlords</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/sectors/landed-estates">Landed Estates</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/sectors/accountants-for-professional-practices">Professional Practices</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/services/specialist-services/tech-sector">Technology</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </li>
+            
+            <li
+                class="menu__item menu__item--has-dropdown"
+                x-data="{submenuOpen: false}"
+            >
+                
+                <button
+                    type="button"
+                    class="button menu__link menu__link--mobile"
+                    @click="subMenuActive = !subMenuActive, submenuOpen = !submenuOpen"
+                    x-ref="button"
+                    x-bind:aria-expanded="submenuOpen"
+                    aria-haspopup="true"
+                    role="menuitem"
+                >
+                    Insights
+                </button>
+                <div
+                    class="nav__submenu-container"
+                    :class="{'nav__submenu-container--active': submenuOpen}"
+                    x-ref="panel"
+                    @keydown.escape.window="submenuOpen = false"
+                >
+                    <button
+                        class="off-canvas__submenu-back"
+                        @click="submenuOpen = false, subMenuActive = false"
+                    >
+                         Back
+                    </button>
+                    <span class="off-canvas__submenu-title">Insights</span>
+                    <ul
+                        class="off-canvas__submenu"
+                        x-ref="panel"
+                    >
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/news">News</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/events">Events</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/knowledge">Knowledge</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/podcasts">Podcasts</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </li>
+            
+        </ul>
+        <ul class="menu__list menu__list--secondary">
+            
+            <li
+                class="menu__item menu__item--has-dropdown"
+                x-data="{submenuOpen: false}"
+            >
+                
+                <button
+                    type="button"
+                    class="button menu__link menu__link--mobile"
+                    @click="subMenuActive = !subMenuActive, submenuOpen = !submenuOpen"
+                    x-ref="button"
+                    x-bind:aria-expanded="submenuOpen"
+                    aria-haspopup="true"
+                    role="menuitem"
+                >
+                    About us
+                </button>
+                <div
+                    class="nav__submenu-container"
+                    :class="{'nav__submenu-container--active': submenuOpen}"
+                    x-ref="panel"
+                    @keydown.escape.window="submenuOpen = false"
+                >
+                    <button
+                        class="off-canvas__submenu-back"
+                        @click="submenuOpen = false, subMenuActive = false"
+                    >
+                         Back
+                    </button>
+                    <span class="off-canvas__submenu-title">About us</span>
+                    <ul
+                        class="off-canvas__submenu"
+                        x-ref="panel"
+                    >
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/about-us">About Us</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/contact/staff">Our people</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/contact">Contact us</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </li>
+            
+            <li
+                class="menu__item menu__item--has-dropdown"
+                x-data="{submenuOpen: false}"
+            >
+                
+                <button
+                    type="button"
+                    class="button menu__link menu__link--mobile"
+                    @click="subMenuActive = !subMenuActive, submenuOpen = !submenuOpen"
+                    x-ref="button"
+                    x-bind:aria-expanded="submenuOpen"
+                    aria-haspopup="true"
+                    role="menuitem"
+                >
+                    Resources
+                </button>
+                <div
+                    class="nav__submenu-container"
+                    :class="{'nav__submenu-container--active': submenuOpen}"
+                    x-ref="panel"
+                    @keydown.escape.window="submenuOpen = false"
+                >
+                    <button
+                        class="off-canvas__submenu-back"
+                        @click="submenuOpen = false, subMenuActive = false"
+                    >
+                         Back
+                    </button>
+                    <span class="off-canvas__submenu-title">Resources</span>
+                    <ul
+                        class="off-canvas__submenu"
+                        x-ref="panel"
+                    >
+                        
+                        <li class="nav__submenu-item">
+                            <a href="/about-us/glossary-of-terms">Glossary of terms</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="https://lovewell-blake-assets.s3.eu-west-2.amazonaws.com/assets/downloads/lovewell-blake-tax-card-2026-2027.pdf">Tax Rates 2026-27</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="https://lovewell-blake-assets.s3.eu-west-2.amazonaws.com/assets/downloads/autumn-budget-summary-2025.pdf">Autumn Budget 2025</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="https://lovewell-blake-assets.s3.eu-west-2.amazonaws.com/assets/downloads/spring-statement-2026.pdf">Spring Statement 2026</a>
+                        </li>
+                        
+                        <li class="nav__submenu-item">
+                            <a href="https://www.lovewell-blake.co.uk/norfolk-limited">Norfolk Limited report</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </li>
+            
+            <li
+                class="menu__item "
+                x-data="{submenuOpen: false}"
+            >
+                
+                <a
+                    href="/careers"
+                    class="button menu__link menu__link--mobile "
+                >
+                    Careers
+                </a>
+                
+            </li>
+            
+            <li
+                class="menu__item "
+                x-data="{submenuOpen: false}"
+            >
+                
+                <a
+                    href="/online-payments"
+                    class="button menu__link menu__link--mobile "
+                >
+                    Pay Online
+                </a>
+                
+            </li>
+            
+        </ul>
+        <div class="menu__off-canvas-ctas">
+            
+  
+    
+
+  
+  <a href="tel:0800 6526623" class="bg-- cta cta--telephone_cta">
+    
+      <span class="cta__label"><span>Call us on</span> 0800 6526623</span>
+    
+  </a>
+  
+
+  
+  <a href="mailto:info@lovewell-blake.co.uk" class="bg-- cta cta--email_cta">
+    <span class="cta__label">info@lovewell-blake.co.uk</span>
+  </a>
+  
+
+  
+    
+    
+        
+        <a class="bg-- cta cta--enquiry_cta" data-modal-trigger="form_contact-us">
+            <span class="cta__label">Send an enquiry</span>
+        </a>
+
+            
+            
+            
+        
+    
+
+    
+
+  
+
+
+  
+
+
+        </div>
+    </nav>
+</div>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+    
+
+    <div class="container">
+      
+
+
+
+<div class="container">
+    <div class="hero-panel hero-panel--no-image hero-panel--no-overlap   site-width columns">
+  <div class="hero-panel__content columns-limited">
+    <div class="hero-panel__content-top">
+      <div class="panel-border panel-border--hero">
+          <div class="panel-border__border-x"></div>
+          <div class="panel-border__border-y"></div>
+      </div>
+      <div class="hero-panel__title-container">
+        
+        <h1 class="hero-panel__title ">Page not&nbsp;found</h1>
+        
+      </div>
+      
+    </div>
+    
+      <div class="hero-panel__standfirst"><p>The page you have requested could not be found.</p></div>
+    
+    
+    <div class="hero-panel__mobile-ctas">
+        <div class="hero-ctas">
+    
+  
+    
+
+  
+  <a href="tel:0800 6526623" class="bg-- cta cta--telephone_cta">
+    
+      <span class="cta__label"><span>Call us on</span> 0800 6526623</span>
+    
+  </a>
+  
+
+  
+    
+    
+        
+        <a class="bg-- cta cta--enquiry_cta" data-modal-trigger="form_contact-us">
+            <span class="cta__label">Send an enquiry</span>
+        </a>
+
+            
+            
+            
+        
+    
+
+    
+
+  
+
+
+  
+
+
+</div>
+
+      </div>
+    
+  </div>
+  
+
+  
+</div>
+
+</div>
+
+    </div>
+
+    
+<div class="site-sectors">
+  <div class="site-width columns">
+    
+      <div class="site-sectors__list">
+        
+          <div class="site-sector">
+            <div class="site-sector__title">
+              <a href="/sectors/accountants-for-private-clients">Private Client services</a>
+            </div>
+            <div class="site-sector__content">
+              
+            </div>
+          </div>
+        
+          <div class="site-sector">
+            <div class="site-sector__title">
+              <a href="/sectors/corporate-advisory-services">Corporate Advisory services</a>
+            </div>
+            <div class="site-sector__content">
+              
+            </div>
+          </div>
+        
+          <div class="site-sector">
+            <div class="site-sector__title">
+              <a href="/sectors/services-to-business-and-smes">Services to Business and SMEs</a>
+            </div>
+            <div class="site-sector__content">
+              
+            </div>
+          </div>
+        
+          <div class="site-sector">
+            <div class="site-sector__title">
+              <a href="/sectors/audit-compliance-and-assurance-services">Audit, Compliance and Assurance Services</a>
+            </div>
+            <div class="site-sector__content">
+              
+            </div>
+          </div>
+        
+        <div class="site-sector site-sector--specialist-column">
+          <div class="site-sector__title">
+            Sectors
+          </div>
+          <div class="site-sector__content">
+            <ul class="site-sector__specialists">
+              
+                <li>
+                  <a href="/sectors/accountants-for-agriculture" class="chev-link">Agriculture</a>
+                </li>
+              
+                <li>
+                  <a href="/sectors/accountants-for-professional-practices" class="chev-link">Professional Practices</a>
+                </li>
+              
+                <li>
+                  <a href="/sectors/accountants-for-healthcare" class="chev-link">Healthcare</a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+  </div>
+</div>
+
+
+  <div class="newsletter-signup-panel">
+  <div class="newsletter-signup-panel__inner site-width columns">
+    <div class="newsletter-signup-panel__container">
+      <div class="newsletter-signup-panel__content">
+        <h2 class="h3">Get the latest updates straight to your inbox</h2>
+        <p>Enter your email address here to receive all the latest news from Lovewell Blake.
+        
+          <span class="privacy-policy-link"><a href="/privacy-policy">Privacy Policy</a></span>
+        
+        </p>
+      </div>
+      <div class="newsletter-signup-panel__form adforms-form">
+        
+        <div class='activedemand-replace' data-exclude-css="1" data-type='Form' data-id='230034'>
+          <div class="form" id="newsletter_form" data-ajax-form>
+  <div class="ajax-form__success">
+    <p>Thank you for subscribing to our newsletter.</p>
+  </div>
+  <form method="POST" action="https://www.lovewell-blake.co.uk/!/forms/newsletter_form" enctype="multipart/form-data"><input type="hidden" name="_token" value="biQrZVsvMp6Dz2mhowc0jwnxr5Yz2TDxnXqYd1oe" autocomplete="off"><input type="hidden" name="_redirect" value="https://www.lovewell-blake.co.uk/llms.txt#newsletter_form" />
+<input type="hidden" name="_error_redirect" value="https://www.lovewell-blake.co.uk/llms.txt#newsletter_form" />
+    
+
+    
+      <div class="fieldset__fields">
+        
+          <div class="field field--text field--email field--required">
+            <label for="form__newsletter-form-form-email-field_email-address">Email Address</label>
+            <input name="email" id="form_newsletter-form-form-email-field_email-address" value="" required type="email" placeholder="Email Address" />
+          </div>
+        
+      </div>
+      <input type="text" name="username" id="username"/>
+      <input type="hidden" name="_token" value="biQrZVsvMp6Dz2mhowc0jwnxr5Yz2TDxnXqYd1oe">
+      <div class="form__actions">
+        <button class="btn btn--secondary btn--chev" type="submit">Sign up</button>
+      </div>
+    
+  </form>
+</div>
+
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer">
+  <div class="site-width columns">
+    <div class="footer__main">
+      <div class="footer__left">
+        <figure class="footer__logo">
+          <a href="/" target="_blank" rel="noopener" title="Home">
+            <img src="https://www.lovewell-blake.co.uk/build/assets/lb-logo-primary-DIjkNpJE.png" alt="Lovewell Blake" loading="lazy">
+          </a>
+        </figure>
+        <div class="footer__body">
+          <p>&copy;  Lovewell&nbsp;Blake LLP and Lovewell&nbsp;Blake Financial Planning&nbsp;Limited</p>
+          
+          
+
+            
+              <ul class="nav footer-nav">
+                
+                  <li class="nav__item">
+                    <a href="/privacy-policy" class="nav__link" title="Privacy Policy">
+                      Privacy Policy
+                    </a>
+                  </li>
+                
+                  <li class="nav__item">
+                    <a href="/termsofbusiness" class="nav__link" title="Terms of Business">
+                      Terms of Business
+                    </a>
+                  </li>
+                
+                <li>
+                  <a href="#" class="iubenda-cs-preferences-link nav__link" title="Manage cookies">
+                    Manage cookies
+                  </a>
+                </li>
+              </ul>
+
+              <p class="footer__byline">Made with <a href="https://withcandour.co.uk/" target="_blank" rel="noopener">Candour</a></p>
+            
+          </div>
+      </div>
+      <div class="footer__right">
+        <ul class="footer-socials">
+          
+            <li>
+              <a href="https://www.facebook.com/LovewellBlake/" target="_blank" rel="noopener" class="footer-socials__item footer-socials__item--facebook" title="Facebook">
+                Facebook
+              </a>
+            </li>
+          
+            <li>
+              <a href="https://www.linkedin.com/company/lovewell-blake-chartered-accountants/" target="_blank" rel="noopener" class="footer-socials__item footer-socials__item--linkedin" title="Linkedin">
+                Linkedin
+              </a>
+            </li>
+          
+            <li>
+              <a href="https://twitter.com/LovewellBlake" target="_blank" rel="noopener" class="footer-socials__item footer-socials__item--twitter" title="Twitter">
+                Twitter
+              </a>
+            </li>
+          
+            <li>
+              <a href="https://www.youtube.com/channel/UCPcWlIk3EpKVAF6d79NnY_Q" target="_blank" rel="noopener" class="footer-socials__item footer-socials__item--youtube" title="Youtube">
+                Youtube
+              </a>
+            </li>
+          
+            <li>
+              <a href="https://www.instagram.com/lovewellblakelb/" target="_blank" rel="noopener" class="footer-socials__item footer-socials__item--instagram" title="Instagram">
+                Instagram
+              </a>
+            </li>
+          
+        </ul>
+        <div class="footer-accreds">
+          <figure class="footer-accreds__item footer-accreds__item--xero">
+            <a href="https://www.xero.com/uk/advisors/accountant/lovewell-blake-861770c4ac2d/" target="_blank" rel="noopener">
+              <img src="https://www.lovewell-blake.co.uk/build/assets/xero-partnership-fcZ7Mr7Y.png" alt="Xero platinum championship partner" loading="lazy" />
+            </a>
+          </figure>
+          <figure class="footer-accreds__item footer-accreds__item--hlb">
+            <img src="https://www.lovewell-blake.co.uk/build/assets/hlb-badge-CjjhB9Lv.png" alt="We are an independent member of the Global Advisory and Accounting Network" loading="lazy" />
+          </figure>
+          <figure class="footer-accreds__item footer-accreds__item--ce">
+            <img src="https://www.lovewell-blake.co.uk/build/assets/cyberessentials_certification-DjCjqy9b.png" alt="Cyber Essentials Plus Checkmark" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <div class="modal" id="form_contact-us">
+  <div class="modal__title">
+    <h2>How can we help?</h2>
+    <div class="modal__close" data-close-modals></div>
+  </div>
+  <div class="modal__content">
+    
+    <div class="modal__form adforms-form adforms-form--modal">
+      <div class='activedemand-replace' data-exclude-css="1" data-type='Form' data-id='230031'>
+        <div class="form" id="enquiry_form" data-ajax-form>
+  <div class="ajax-form__success">
+    <p>Your enquiry has been submitted successfully.</p>
+  </div>
+  <form method="POST" action="https://www.lovewell-blake.co.uk/!/forms/enquiry_form"><input type="hidden" name="_token" value="biQrZVsvMp6Dz2mhowc0jwnxr5Yz2TDxnXqYd1oe" autocomplete="off"><input type="hidden" name="_redirect" value="https://www.lovewell-blake.co.uk/llms.txt#enquiry_form" />
+<input type="hidden" name="_error_redirect" value="https://www.lovewell-blake.co.uk/llms.txt#enquiry_form" />
+  
+
+  
+    <div class="text-wrapper">
+      <p><span>Let us have a few simple details about yourself and your query and we will be back in touch shortly.</span></p>
+    </div>
+    <div class="fieldset__fields">
+
+      
+        <div class="field field--text">
+          <label for="form__enquiry-form-form-first-name-field_full-name">First Name</label>
+          <input name="first_name" id="form_enquiry-form-form-first-name-field_first-name" value="" type="text" />
+        </div>
+      
+      
+        <div class="field field--text ">
+          <label for="form__enquiry-form-form-last-name-field_last-name">Last Name</label>
+          <input name="last_name" id="form_enquiry-form-form-last-name-field_last-name" value="" type="text" />
+        </div>
+      
+      
+        <div class="field field--text field--email field--required">
+          <label for="form__enquiry-form-form-email-field_email-address">Email Address</label>
+          <input name="email" id="form_enquiry-form-form-email-field_email-address" value="" required type="email" />
+        </div>
+      
+      
+        <div class="field field--text ">
+          <label for="form__enquiry-form-form-phone-field_telephone-number">Phone Number</label>
+          <input name="phone" id="form_enquiry-form-form-phone-field_telephone-number" value="" type="text" />
+        </div>
+      
+      
+        <div class="field field--text">
+          <label for="form__enquiry-form-form-company-name-fieldcompany-name">Company Name</label>
+          <input name="company_name" id="form_enquiry-form-form-company-name-field_company-name" value="" type="text" />
+        </div>
+      
+      
+        <div class="field field--text field--required">
+          <label for="form__enquiry-form-form-location-field_location">Location</label>
+          <input name="location" id="form_enquiry-form-form-location-field_location" value="" required type="text" />
+        </div>
+      
+      
+        <div class="field field--text">
+          <label for="form__enquiry-form-form-message-field_message">Message</label>
+          <textarea name="message" id="form_enquiry-form-form-message-field_message" value="" rows="4"></textarea>
+        </div>
+      
+        
+        <div class="field field--checkbox">
+          <input type="checkbox" name="optin[]" id="form_enquiry-form-form-optin-field_optin" value="yes"></input>
+          <label for="form__enquiry-form-form-optin-field_optin"> Optin to receive communication by email. You can change your preferences at any time. </label>
+        </div>
+      
+    </div>
+    <input type="text" name="username" id="username"/>
+    <input type="hidden" name="_token" value="biQrZVsvMp6Dz2mhowc0jwnxr5Yz2TDxnXqYd1oe">
+    <div class="form__actions">
+      <button class="btn btn--secondary btn--chev" type="submit">Submit</button>
+    </div>
+  
+</form>
+</div>
+
+      </div>
+
+    </div>
+    <div class="modal-form__links">
+      <a href="/privacy-policy">Privacy notice</a>
+    </div>
+  </div>
+</div>
+<div class="modal__close-cover" data-modal-close="form_contact-us" data-close-modals></div>
+
+
+
+
+
+
+    <div id="glossary-tooltip-container" class="glossary-tooltip glossary-tooltip--loading">
+    <span class="glossary-tooltip__label">Glossary</span>
+    <h4 class="glossary-tooltip__title">Test</h4>
+    <p class="glossary-tooltip__definition">This is a test definition</p>
+    <a class="glossary-tooltip__link" href="#">more</a>
+</div>
+
+
+
+<link rel="modulepreload" as="script" href="https://www.lovewell-blake.co.uk/build/assets/site-DmlwX6zF.js" /><link rel="modulepreload" as="script" href="https://www.lovewell-blake.co.uk/build/assets/chunk-aKtaBQYM.js" /><script type="module" src="https://www.lovewell-blake.co.uk/build/assets/site-DmlwX6zF.js"></script>
+
+
+
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDm4UWG73ag4QaHJG4kYuRdNgMzSidlW18"></script>
+
+<script defer src="https://cgtforms.com/lovewellblakelz/smartforms/b6a7ff31-b8d7-40b7-9a68-bb19faf682b2.js" type="text/javascript"></script>
+
+  </body>
+</html>

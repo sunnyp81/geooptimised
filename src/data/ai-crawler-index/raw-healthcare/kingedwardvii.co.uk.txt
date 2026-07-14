@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /wp/wp-admin/
+Allow: /wp/wp-admin/admin-ajax.php
+
+Disallow: *_its=
+Disallow: /search/
+
+Sitemap: https://www.kingedwardvii.co.uk/sitemap_index.xml
+
+Disallow: /*utm_source=
+Disallow: /*utm_medium=
+Disallow: /*utm_campaign=
+Disallow: /*utm_content=

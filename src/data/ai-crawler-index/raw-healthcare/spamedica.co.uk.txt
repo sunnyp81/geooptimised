@@ -1,0 +1,10 @@
+User-agent: *
+
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /cdn-cgi/l/email-protection
+
+User-agent: druidai-kb
+Allow: /
+
+sitemap: https://www.spamedica.co.uk/sitemap_index.xml

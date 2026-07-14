@@ -1,0 +1,7 @@
+User-agent:*
+Allow:*
+
+User-agent: URLmetrics
+Disallow: /
+
+Sitemap: https://www.zuto.com/sitemap.xml

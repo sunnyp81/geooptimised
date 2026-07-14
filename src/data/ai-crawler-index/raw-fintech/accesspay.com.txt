@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+Disallow: *ictd*
+Allow: /wp-admin/admin-ajax.php
+Sitemap: https://accesspay.com/sitemap.xml
+Disallow: /legal-notices/
+Disallow: /russia-notification/
+Disallow: /free-up-millions-in-working-capital-with-increased-cash-visibility/
+Disallow: /solutions/security-and-compliance/
+Disallow: /integrations/erp-integration/
+Disallow: /author/
+User-agent: SiteAuditBot

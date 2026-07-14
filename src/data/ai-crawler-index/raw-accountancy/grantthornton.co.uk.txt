@@ -1,0 +1,13 @@
+User-agent: Rogerbot
+Disallow: /?utm*
+Disallow: /?utm
+Disallow: /*?tags*
+Disallow: /?tags
+
+User-agent: *
+Allow: /
+Disallow: /search/
+Disallow: /*GetVCard
+
+Sitemap: https://www.grantthornton.co.uk/sitemap.xml
+Sitemap: https://www.grantthornton.co.uk/news-sitemap.xml

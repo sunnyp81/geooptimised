@@ -1,0 +1,12 @@
+User-agent: * 
+Allow:  /
+Disallow: */data/*
+Disallow: */Data/*
+Disallow: */page-data/*
+Disallow: */Page-Data/*
+Disallow: */content/hca/home/*
+Disallow: /settings/*
+Disallow: /undefined/*
+
+Sitemap: https://www.hcahealthcare.co.uk/sitemap.hca.consultant-finder.xml
+Sitemap: https://www.hcahealthcare.co.uk/sitemap.xml

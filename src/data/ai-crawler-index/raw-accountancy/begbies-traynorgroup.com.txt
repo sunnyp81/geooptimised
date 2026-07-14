@@ -1,0 +1,7 @@
+#Created via RobotsController
+Sitemap: https://www.begbies-traynorgroup.com/sitemap.xml
+
+User-Agent: *
+Allow: /
+Allow: /administrative-receivership
+Disallow: /adm

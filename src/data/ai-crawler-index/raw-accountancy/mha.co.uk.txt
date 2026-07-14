@@ -1,0 +1,13 @@
+# robots.txt for https://www.mha.co.uk/
+
+sitemap: https://www.mha.co.uk/sitemaps-1-sitemap.xml
+
+# default - don't allow web crawlers to index cpresources/ or vendor/
+
+User-agent: *
+Disallow: /cpresources/
+Disallow: /vendor/
+Disallow: /.env
+Disallow: /cache/
+Disallow: /cdn-cgi/
+

@@ -1,0 +1,24 @@
+User-agent: * 
+Disallow: /*?*.html
+Disallow: /*.html
+Disallow: /*?*nike*
+Disallow: /*?*kors*
+Disallow: /*?*gucci*
+Disallow: /*?*air*max*
+Disallow: /cms/*
+Disallow: /cms-*
+Disallow: /intranet/*
+Disallow: /global.asa
+
+
+User-agent: Googlebot 
+Disallow: /*?*.html
+Disallow: /*.html
+Disallow: /*?*nike*
+Disallow: /*?*kors*
+Disallow: /*?*gucci*
+Disallow: /*?*air*max*
+Disallow: /cms/*
+Disallow: /cms-*
+Disallow: /intranet/*
+Disallow: /global.asa

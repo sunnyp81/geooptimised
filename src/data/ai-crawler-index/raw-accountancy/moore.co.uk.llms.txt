@@ -1,0 +1,1179 @@
+<!doctype html>
+<!--[if IE 7]>
+<html class="ie ie7 sr" lang="en-GB"> <![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8 sr" lang="en-GB"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="ie no-js sr" lang="en-GB"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta charset="UTF-8">
+
+    <title>Page not found - Moore UK</title>
+    <!-- Font Library -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,500,600&display=swap" rel="stylesheet">
+    <!-- Mobile viewport optimize -->
+    <meta name="viewport"
+          content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+    
+    <meta name='robots' content='noindex, follow' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	        <link rel="icon" type="image/png" href="https://www.moore.co.uk/app/themes/MKS-GLOBAL/assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="https://www.moore.co.uk/app/themes/MKS-GLOBAL/assets/images/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="https://www.moore.co.uk/app/themes/MKS-GLOBAL/assets/images/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://www.moore.co.uk/app/themes/MKS-GLOBAL/assets/images/favicon/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="GrandToursProject" />
+        <link rel="manifest" href="/site.webmanifest" />
+
+
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="theme-color" content="#ffffff">
+        
+	<!-- This site is optimized with the Yoast SEO plugin v23.9 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:title" content="Page not found - Moore UK" />
+	<meta property="og:site_name" content="Moore UK" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.moore.co.uk/#website","url":"https://www.moore.co.uk/","name":"Moore UK","description":"","publisher":{"@id":"https://www.moore.co.uk/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.moore.co.uk/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-GB"},{"@type":"Organization","@id":"https://www.moore.co.uk/#organization","name":"Moore UK","url":"https://www.moore.co.uk/","logo":{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://www.moore.co.uk/#/schema/logo/image/","url":"https://www.moore.co.uk/app/uploads/2025/05/Moore-UK.svg","contentUrl":"https://www.moore.co.uk/app/uploads/2025/05/Moore-UK.svg","width":1,"height":1,"caption":"Moore UK"},"image":{"@id":"https://www.moore.co.uk/#/schema/logo/image/"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.moore.co.uk\/wp\/wp-includes\/js\/wp-emoji-release.min.js"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<style id='acf-reports-style-inline-css' type='text/css'>
+.wp-block-report {
+    --gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    padding: 20px;
+    background-color: #FFF;
+    border: 1px solid var(--color-mks-dark-blue);
+}
+.wp-block-report__cover {
+    width: 40%;
+    object-fit: cover;
+    object-position: center;
+}
+.wp-block-report__content {
+    width: calc(60% - var(--gap));
+}
+</style>
+<style id='acf-page-links-style-inline-css' type='text/css'>
+.wp-page-cards {
+    display: grid;
+    gap: 15px;
+    margin: 0 15px;
+}
+.wp-page-card {
+    position: relative;
+    min-height: 350px;
+}
+.wp-page-card .copy-wrap {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #000;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    padding: 10px;
+}
+.wp-page-card .copy {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.15s ease;
+}
+
+.wp-page-card h4 {
+    margin: 0;
+    font-size: 18px;
+    color: var(--color-mks-dark-grey);
+    text-wrap: balance;
+}
+
+.wp-page-card .cta {
+    overflow: hidden;
+    max-height: 0;
+    padding-top: 0;
+    transition: all 0.15s ease;
+    transition-delay: 0.15s;
+}
+
+.wp-page-card .cta .btn {
+    background-color: var(--color-mks-dark-blue);
+    color: #FFF;
+}
+
+.wp-page-card .cta .btn:hover {
+    background-color: var(--color-mks-blue);
+}
+
+.wp-page-card:hover .copy {
+    max-height: 500px;
+    color: var(--color-mks-dark-grey);
+}
+
+.wp-page-card:hover .cta {
+    max-height: 500px;
+    padding-top: 20px;
+}
+
+@media screen and (min-width: 960px){
+    .wp-page-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+</style>
+<link rel='stylesheet' id='site-style-css' href='https://www.moore.co.uk/app/themes/MKS-GLOBAL/assets/css/style.css?ver=1.3.3' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.moore.co.uk/wp/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.moore.co.uk/wp/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://www.moore.co.uk/wp-json/" />            <!-- Force24 Tracking -->
+<script>
+    (function (f, o, r, c, e, _2, _4) {
+        f.Force24Object = e, f[e] = f[e] || function () {
+            f[e].q = f[e].q || [], f[e].q.push(arguments)
+        }, f[e].l = 1 * new Date, _2 = o.createElement(r),
+        _4 = o.getElementsByTagName(r)[0], _2.async = !0, _2.src = c, _4.parentNode.insertBefore(_2, _4)
+    })(window, document, "script", "https://static.websites.data-crypt.com/scripts/activity/v3/inject-v3.min.js", "f24");
+
+    f24('config', 'set_tracking_id', '96107dd8-1172-4635-91c9-f5c374055630');
+    f24('config', 'set_client_id', '4c6fb62d-b5c6-40aa-a91a-8fd3c0d82a6e');
+</script>
+<!-- End Force24 Tracking -->    
+
+</head>
+<body class="error404">
+
+<header class="main-header">
+    <div class="container">
+        <a href="https://www.moore.co.uk" class="logo h5">
+                            <img src="https://www.moore.co.uk/app/uploads/2025/05/Moore-UK.svg" alt="Moore Kingston Smith SGD Law" style="max-width: 180px">
+                    </a>
+        <div class="navigation">
+            
+<style>
+    .nav-menu {
+        display: none;
+        gap: 20px;
+
+    }
+    @media screen and (min-width: 1000px){
+        .nav-menu {
+            display: flex;
+        }
+    }
+
+    .mobile-draw-open .nav-menu {
+        display: block;
+        position: fixed;
+        top: 68px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--color-mks-dark-blue);
+        z-index: 1000;
+    }
+    .admin-bar.mobile-draw-open .nav-menu {
+        top: 110px;
+    }
+
+    .nav-menu a {
+        color: #FFF;
+        font-weight: 400;
+    }
+    @media screen and (min-width: 1000px){
+        .nav-menu a {
+            color: var(--color-text);
+        }
+    }
+
+    .menu-items {
+        display: grid;
+        list-style: none;
+        padding: 0;
+    }
+    @media screen and (min-width: 1000px){
+        .menu-items {
+            display: flex;
+        }
+    }
+
+    .menu-item {
+        position: relative;
+    }
+    .menu-item.has-submenu  .menu-link:after {
+        content: "";
+        border: solid var(--color-mks-blue);
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        position: relative;
+        top: -2px;
+        margin-left: 8px;
+        transition: all 300ms ease;
+    }
+    .menu-item.has-submenu.open  .menu-link:after {
+        transform: rotate(-45deg);
+    }
+    @media screen and (min-width: 1000px){
+        .menu-item.has-submenu  .menu-link:after {
+            border: solid var(--color-mks-blue);
+            border-width: 0 2px 2px 0;
+        }
+    }
+
+
+    .menu-link {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+    .dropdown {
+        display: none;
+        text-transform: none;
+    }
+    .nav-menu .dropdown a {
+        text-transform: none;
+        font-weight: 300;
+        display: inline-block;
+        width: auto;
+    }
+    .open .dropdown {
+        display: block;
+    }
+
+    @media screen and (max-width: 1000px){
+        .nav-menu ul li {
+            font-size: 20px;
+        }
+        .nav-menu ul ul li {
+            font-size: 16px;
+        }
+    }
+    @media screen and (min-width: 1000px){
+        .dropdown {
+            display: flex;
+            visibility: hidden;
+            opacity: 0;
+            margin-top: 25px;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 300ms ease-in-out;
+            z-index: 100;
+        }
+        .dropdown-wrap {
+            display: flex;
+            background: var(--color-mks-dark-blue);
+            padding: 25px;
+            box-shadow: 10px 0 30px rgba(0,0,0,0.25);
+        }
+    }
+
+
+
+    .nav-menu .dropdown a {
+        color: white;
+        white-space: nowrap;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 300ms ease;
+    }
+
+    .nav-menu .dropdown--mega a {
+        white-space: normal;
+    }
+
+    .nav-menu .dropdown a:hover {
+        border-bottom: 1px solid var(--color-mks-blue);
+    }
+
+    .dropdown ul {
+        list-style: none;
+        padding: 0 0 0 25px;
+    }
+    @media screen and (min-width: 1000px){
+        .dropdown ul {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+
+
+    @media screen and (min-width: 1000px){
+        .dropdown--mega {
+            display: flex;
+            position: fixed;
+            top: 86px;
+            width: 100%;
+            max-width: 1440px;
+            font-size: 16px;
+            flex-wrap: wrap;
+            padding: 0 25px;
+        }
+        .admin-bar .dropdown--mega {
+            top: 117px;
+        }
+        .scrolling .dropdown--mega {
+            top: 70px;
+        }
+        .admin-bar.scrolling .dropdown--mega {
+            top: 100px;
+        }
+        .dropdown--mega .dropdown-wrap {
+            display: flex;
+            padding: 55px;
+            gap: 55px;
+            width: 100%;
+        }
+        .dropdown__column {
+            flex: 1 1 calc(20% - 50px);
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        .dropdown__column .mega-submenu {
+            display: none;
+        }
+
+        .dropdown__column .submenu-open .mega-submenu {
+            display: grid;
+        }
+
+        .mega-submenu {
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .menu-title:after {
+            content: "";
+            border: solid var(--color-mks-blue);
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            position: relative;
+            top: -2px;
+            margin-left: 8px;
+            transition: all 300ms ease;
+        }
+        .submenu-open .menu-title:after {
+            transform: rotate(-45deg);
+        }
+    }
+
+
+
+    .dropdown__column .menu-title{
+        margin-bottom: 8px;
+        display: inline-block;
+    }
+    .dropdown__column ul {
+        display: grid;
+        gap: 8px;
+    }
+    .menu-item.active .dropdown--mega. {
+        display: flex;
+
+    }
+
+    .menu-item.active .dropdown {
+        opacity: 1;
+        visibility: visible;
+        margin-top: 0;
+    }
+
+    .nav-menu a.menu-title {
+        font-weight: 700;
+    }
+</style>
+<nav class="nav-menu">
+    <ul class="menu-items">
+                    <li class="menu-item has-submenu">
+                <a href="https://www.moore.co.uk/services/" class="menu-link">Services</a>
+                                    <div class="dropdown dropdown--mega">
+                        <div class="dropdown-wrap">
+
+                                                            <ul class="dropdown__column">
+                                    <li class=" mega-menu-item">
+                                                                                    <a href="https://www.moore.co.uk/services/accounting-audit-and-assurance/" class="menu-title">Audit & assurance</a>
+                                                                                                                            <ul class=" mega-submenu">
+                                                                                                                                                            <li><a href="https://www.moore.co.uk/services/accounting-audit-and-assurance/audit-services/">External Audit</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/services/consulting-and-advisory/governance-risk-internal-audit/">Internal audit</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/services/accounting-audit-and-assurance/sustainability-services/">Sustainability & ESG assurance</a></li>
+                                                                                                                                                </ul>
+                                                                            </li>
+                                </ul>
+                                                            <ul class="dropdown__column">
+                                    <li class=" mega-menu-item">
+                                                                                    <a href="https://www.moore.co.uk/services/accounting-outsourcing/" class="menu-title">Accounting & outsourcing</a>
+                                                                                                                            <ul class=" mega-submenu">
+                                                                                                                                                            <li><a href="https://www.moore.co.uk/services/accounting-outsourcing/accounts-preparation-and-compliance/">Accounts preparation & compliance</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/services/accounting-outsourcing/business-outsourcing-services/">Outsourced accounting</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/services/accounting-outsourcing/payroll-services/">Payroll services</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/services/accounting-audit-and-assurance/company-secretarial/">Company secretarial</a></li>
+                                                                                                                                                </ul>
+                                                                            </li>
+                                </ul>
+                                                            <ul class="dropdown__column">
+                                    <li class=" mega-menu-item">
+                                                                                    <a href="https://www.moore.co.uk/services/consulting-and-advisory/" class="menu-title">Advisory & consulting</a>
+                                                                                                                            <ul class=" mega-submenu">
+                                                                                                                                                            <li><a href="https://www.moore.co.uk/services/consulting-and-advisory/corporate-finance-services/">Corporate finance</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/services/consulting-and-advisory/accounting-systems-software/">Digital transformation</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/services/consulting-and-advisory/human-resources/">HR consultancy</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/services/consulting-and-advisory/it-consultancy/">Technology, data & cyber security advisory</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/services/consulting-and-advisory/legal-services/">Legal services</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/services/consulting-and-advisory/restructuring-insolvency/">Restructuring & insolvency</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/services/consulting-and-advisory/wealth-management/">Wealth management</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/services/consulting-and-advisory/forensic-accounting/">Forensic accounting</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/services/consulting-and-advisory/business-valuation/">Business valuation</a></li>
+                                                                                                                                                </ul>
+                                                                            </li>
+                                </ul>
+                                                            <ul class="dropdown__column">
+                                    <li class=" mega-menu-item">
+                                                                                    <a href="https://www.moore.co.uk/services/tax/" class="menu-title">Tax</a>
+                                                                                                                            <ul class=" mega-submenu">
+                                                                                                                                                            <li><a href="https://www.moore.co.uk/services/tax/business-tax/">Business & corporate tax</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/services/international-services/international-tax-2/">International & cross-border tax</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/services/tax/private-client-tax/">Private client tax</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/services/tax/sdlt-advice/">SDLT advice</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/services/tax/specialist-tax-advisory/">Specialist tax advisory</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/services/tax/vat/">VAT</a></li>
+                                                                                                                                                </ul>
+                                                                            </li>
+                                </ul>
+                                                    </div>
+                    </div>
+                            </li>
+                    <li class="menu-item has-submenu">
+                <a href="https://www.moore.co.uk/sectors/" class="menu-link">Sectors</a>
+                                    <div class="dropdown dropdown--mega">
+                        <div class="dropdown-wrap">
+
+                                                            <ul class="dropdown__column">
+                                    <li class=" mega-menu-item">
+                                                                                                                            <ul class=" mega-submenu">
+                                                                                                                                                            <li><a href="https://www.moore.co.uk/sectors/education/">Education</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/sectors/energy-mining-renewables/">Energy, mining & renewables</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/sectors/financial-services/">Financial services</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/sectors/food-drink-hospitality/">Food, drink & hospitality</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/sectors/manufacturing-distribution/">Manufacturing & distribution</a></li>
+                                                                                                                                                </ul>
+                                                                            </li>
+                                </ul>
+                                                            <ul class="dropdown__column">
+                                    <li class=" mega-menu-item">
+                                                                                                                            <ul class=" mega-submenu">
+                                                                                                                                                            <li><a href="https://www.moore.co.uk/sectors/owner-managed-businesses/">Owner managed businesses</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/sectors/professional-practices/">Professional practices</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/sectors/public-sector/">Public sector</a></li>
+                                                                                                                                                </ul>
+                                                                            </li>
+                                </ul>
+                                                            <ul class="dropdown__column">
+                                    <li class=" mega-menu-item">
+                                                                                                                            <ul class=" mega-submenu">
+                                                                                                                                                            <li><a href="https://www.moore.co.uk/sectors/real-estate-construction/">Real estate & construction</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/sectors/retail-wholesale/">Retail & wholesale</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/sectors/maritime/">Maritime</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/sectors/technology-media/">Technology & media</a></li>
+                                                                                                                                                </ul>
+                                                                            </li>
+                                </ul>
+                                                    </div>
+                    </div>
+                            </li>
+                    <li class="menu-item single">
+                <a href="https://www.moore.co.uk/insights/" class="menu-link">Insights</a>
+                            </li>
+                    <li class="menu-item has-submenu">
+                <a href="https://www.moore.co.uk/about-us/" class="menu-link">About us</a>
+                                    <div class="dropdown">
+                        <div class="dropdown-wrap">
+
+                                                            <ul class="dropdown__column">
+                                    <li class=" ">
+                                                                                                                            <ul class=" submenu">
+                                                                                                                                                            <li><a href="https://www.moore.co.uk/about-us/">About us</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/about-us/global-network/">Global network</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore-global.com/intelligence/">Global Intelligence</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/about-us/why-esg-is-important-to-moore/">Why ESG is important to Moore</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/about-us/request-for-proposal/">Request for proposal</a></li>
+                                                                                                                                                                                                                <li><a href="https://www.moore.co.uk/about-us/press-enquiries/">Press enquiries</a></li>
+                                                                                                                                                </ul>
+                                                                            </li>
+                                </ul>
+                                                    </div>
+                    </div>
+                            </li>
+                    <li class="menu-item single">
+                <a href="https://www.moore.co.uk/locations/" class="menu-link">Locations</a>
+                            </li>
+                    <li class="menu-item single">
+                <a href="https://www.moore.co.uk/people/" class="menu-link">People</a>
+                            </li>
+                    <li class="menu-item single">
+                <a href="https://www.mooreukcareers.co.uk/" class="menu-link">Careers</a>
+                            </li>
+                    <li class="menu-item single">
+                <a href="https://www.moore.co.uk/contact/" class="menu-link">Contact Us</a>
+                            </li>
+            </ul>
+</nav>
+
+
+<script>
+    const menuItems = document.querySelectorAll('.menu-item');
+    function isMobileDevice() {
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        // Common mobile user agent patterns
+        const isMobileUA = /android|iphone|ipod|blackberry|bb10|mini|windows\sce|palm/i.test(userAgent);
+
+        // Exclude tablets and larger screens
+        const maxMobileWidth = 768; // Adjust if needed
+
+        const isSmallScreen = window.innerWidth <= maxMobileWidth;
+
+        return isMobileUA && isSmallScreen;
+    }
+
+    const isTouchDevice = () =>
+        'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    if (isMobileDevice()) {
+        // Handle top-level menu-link taps
+        document.querySelectorAll('.menu-link').forEach(link => {
+            link.addEventListener('touchstart', function (e) {
+                const menuItem = this.closest('.menu-item');
+
+                if (activeLink !== this) {
+                    e.preventDefault();
+                    // Close all other open menus
+                    document.querySelectorAll('.menu-item').forEach(item => {
+                        if (item !== menuItem) item.classList.remove('open');
+                    });
+
+                    menuItem.classList.toggle('open');
+                    activeLink = this;
+                } else {
+                    // Second tap: follow link
+                    activeLink = null;
+                }
+            });
+        });
+
+        // Handle second-level menu-title taps
+        document.querySelectorAll('.menu-title').forEach(title => {
+            title.addEventListener('touchstart', function (e) {
+                const megaItem = this.closest('.mega-menu-item');
+
+                if (activeTitle !== this) {
+                    e.preventDefault();
+                    // Close other submenus in the same column
+                    // ✅ New: close all other submenus globally
+                    document.querySelectorAll('.mega-menu-item').forEach(item => {
+                        if (item !== megaItem) item.classList.remove('submenu-open');
+                    });
+
+                    megaItem.classList.toggle('submenu-open');
+                    activeTitle = this;
+                } else {
+                    // Second tap: follow link
+                    activeTitle = null;
+                }
+            });
+        });
+
+        // Close menus when tapping outside
+        document.addEventListener('touchstart', function (e) {
+            const isMenuTap = e.target.closest('.menu-items');
+            if (!isMenuTap) {
+                document.querySelectorAll('.menu-item').forEach(item => item.classList.remove('open'));
+                document.querySelectorAll('.mega-menu-item').forEach(item => item.classList.remove('submenu-open'));
+                activeLink = null;
+                activeTitle = null;
+            }
+        });
+    } else {
+        // Desktop hover behaviour
+        menuItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                menuItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+            });
+
+            item.addEventListener('mouseleave', () => {
+                setTimeout(() => {
+                    if (!item.matches(':hover')) {
+                        item.classList.remove('active');
+                    }
+                }, 300);
+            });
+        });
+
+        document.querySelector('.nav-menu').addEventListener('mouseleave', () => {
+            menuItems.forEach(item => item.classList.remove('active'));
+        });
+    }
+</script>            <div class="n-ctas">
+                <a href="#0" class="n-search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="open"><path d="M368 208A160 160 0 1 0 48 208a160 160 0 1 0 320 0zM337.1 371.1C301.7 399.2 256.8 416 208 416C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208c0 48.8-16.8 93.7-44.9 129.1L505 471c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L337.1 371.1z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="close"><path d="M7.5 41C-1.8 31.6-1.8 16.4 7.5 7S32.1-2.3 41.5 7l215 215 215-215c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-215 215 215 215c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-215-215-215 215c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l215-215-215-215z"/></svg>
+                </a>
+                <div class="menu-btn">
+                    <div class="menu-btn__burger">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="header-pad"></div>
+
+<div class="n-search-con">
+    <form class="form-search " action="/" method="get">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M368 208A160 160 0 1 0 48 208a160 160 0 1 0 320 0zM337.1 371.1C301.7 399.2 256.8 416 208 416C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208c0 48.8-16.8 93.7-44.9 129.1L505 471c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L337.1 371.1z"/></svg>
+        <div class="input-set">
+            <div class="input-field">
+                <input id="search" name="s" type="text" placeholder="Search">
+            </div>
+        </div>
+        <input type="submit" value="Search" class="btn btn--small btn--primary">
+    </form>
+</div>
+
+
+
+    <main class="insights-archive no-hero">
+        <section class="block">
+            <div class="container">
+                <h1 class="sm:mb-lg">Insights</h1>
+                                <div class="insight-cards">
+                                            <div class="feed feed__insights">
+                                                            
+<a href="https://www.moore.co.uk/insights/frs-102-changes/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/12/cloud.png">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/12/cloud-300x150.png'
+             alt="What is changing under FRS 102 in 2026? New FRS 102: Amendments to lease accounting"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        What is changing under FRS 102 in 2026? New FRS 102: Amendments to lease accounting        <span>12.05.2026</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/moore-kingston-smith-expands-into-the-south/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2026/04/Website-image-1024x620.png">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2026/04/Website-image-300x182.png'
+             alt="Moore Kingston Smith expands into the South"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        Moore Kingston Smith expands into the South        <span>15.04.2026</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/european-manufacturing-distribution-ma-overview-h2-2025/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/08/CNC-Laser-and-gas-cutting-of-metal-modern-industrial-technology-Making-Industrial-Details.-The-laser-optics-and-CNC-are-used-to-direct-the-material-or-the-laser-beam-generated-scaled-1-1024x683.webp">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/08/CNC-Laser-and-gas-cutting-of-metal-modern-industrial-technology-Making-Industrial-Details.-The-laser-optics-and-CNC-are-used-to-direct-the-material-or-the-laser-beam-generated-scaled-1-300x200.webp'
+             alt="European manufacturing &amp; distribution M&amp;A overview: H2 2025"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        European manufacturing &amp; distribution M&amp;A overview: H2 2025        <span>17.02.2026</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/construction-industry-scheme-tackling-fraud/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2026/02/CIS-CHANGES.png">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2026/02/CIS-CHANGES-300x150.png'
+             alt="Construction Industry Scheme: tackling fraud"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        Construction Industry Scheme: tackling fraud        <span>09.02.2026</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/postponed-vat-accounting/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2026/01/Untitled-design-13-1024x597.png">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2026/01/Untitled-design-13-300x175.png'
+             alt="What is postponed VAT accounting?"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        What is postponed VAT accounting?        <span>27.01.2026</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/payroll-annual-reporting-obligations/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2026/01/Untitled-design-11-1024x597.png">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2026/01/Untitled-design-11-300x175.png'
+             alt="What are the payroll annual reporting obligations?"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        What are the payroll annual reporting obligations?        <span>27.01.2026</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/construction-industry-scheme/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2026/01/Untitled-design-12-1024x597.png">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2026/01/Untitled-design-12-300x175.png'
+             alt="What are the construction industry scheme changes?"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        What are the construction industry scheme changes?        <span>27.01.2026</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/christmas-break-a-perfect-time-for-tax-planning/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/12/christmas-tree-1081317_640.jpg">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/12/christmas-tree-1081317_640-300x188.jpg'
+             alt="Christmas break: A perfect time for tax planning"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        Christmas break: A perfect time for tax planning        <span>19.12.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/how-monitoring-cash-flow-can-open-barriers-to-investment-for-ombs/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/12/cash.png">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/12/cash-300x120.png'
+             alt="How monitoring cash flow can open barriers to investment for owner-managed businesses (OMB)’s"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        How monitoring cash flow can open barriers to investment for owner-managed businesses (OMB)’s        <span>11.12.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/maximise-tax-efficiency/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/12/tax.png">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/12/tax-300x131.png'
+             alt="Five ways to maximise tax efficiency before the new year"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        Five ways to maximise tax efficiency before the new year        <span>11.12.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/autumn-budget-2025-what-it-means-for-businesses-and-individuals/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/11/the-budget-1.png">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/11/the-budget-1-300x131.png'
+             alt="Autumn Budget 2025: What it means for businesses and individuals"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        Autumn Budget 2025: What it means for businesses and individuals        <span>26.11.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/omb-report-why-businesses-are-holding-back-on-investment/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/07/consulting-1024x576.png">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/07/consulting-300x169.png'
+             alt="OMB Report: Why businesses are holding back on investment"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        OMB Report: Why businesses are holding back on investment        <span>18.11.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/companies-house-fees-are-changing-from-february-2026/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/08/Untitled-design-11-1024x620.png">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/08/Untitled-design-11-300x182.png'
+             alt="Companies House fees are changing from February 2026"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        Companies House fees are changing from February 2026        <span>05.11.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/sleepwalking-through-rd-tax-relief-changes-could-cost-manufacturers/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/05/Untitled-design-28-1024x416.png">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/05/Untitled-design-28-300x122.png'
+             alt="Sleepwalking through R&amp;D tax relief changes could cost manufacturers"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        Sleepwalking through R&amp;D tax relief changes could cost manufacturers        <span>09.10.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/how-owner-managed-businesses-can-prepare-for-the-uk-autumn-budget/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/09/owner-managed-business-UK-autumn-budget-2025-1-1024x410-1.jpg">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/09/owner-managed-business-UK-autumn-budget-2025-1-1024x410-1-300x120.jpg'
+             alt="How owner-managed businesses can prepare for the UK Autumn Budget"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        How owner-managed businesses can prepare for the UK Autumn Budget        <span>24.09.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/hmrc-advisory-fuel-rates/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/09/new-hmrc-rates-september-2025-moore-south-blog-09-2025-1024x473-1.jpg">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/09/new-hmrc-rates-september-2025-moore-south-blog-09-2025-1024x473-1-300x139.jpg'
+             alt="New HMRC Advisory Fuel Rates for September 2025: What Employers and Employees Need to Know"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        New HMRC Advisory Fuel Rates for September 2025: What Employers and Employees Need to Know        <span>24.09.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/people-the-real-power-tool-in-uk-manufacturing/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2026/01/Manufacturing-1024x683.jpg">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2026/01/Manufacturing-300x200.jpg'
+             alt="People: The real power tool in UK manufacturing"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        People: The real power tool in UK manufacturing        <span>23.09.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/act-now-securing-business-property-relief-before-the-6-april-2026-deadline/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/08/Untitled-design-14-1024x620.png">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/08/Untitled-design-14-300x182.png'
+             alt="Act Now: Securing Business Property Relief Before the 6 April 2026 Deadline"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        Act Now: Securing Business Property Relief Before the 6 April 2026 Deadline        <span>12.09.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/the-real-impact-of-the-2024-autumn-budget-iht-announcements/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/08/Untitled-design-36-1024x620.png">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/08/Untitled-design-36-300x182.png'
+             alt="The real impact of the 2024 Autumn Budget IHT announcements"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        The real impact of the 2024 Autumn Budget IHT announcements        <span>18.08.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/company-directors-will-have-to-verify-their-identity-with-companies-house-from-autumn-2025/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/08/Untitled-design-12-1024x620.png">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/08/Untitled-design-12-300x182.png'
+             alt="Company Directors will have to verify their identity with Companies House from Autumn 2025"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        Company Directors will have to verify their identity with Companies House from Autumn 2025        <span>05.08.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/spring-statement-2025-simplifying-the-spring-statement/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/07/spring-statement-blog-1024x620.jpg">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/07/spring-statement-blog-300x182.jpg'
+             alt="Spring Statement 2025: Simplifying the Spring Statement"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        Spring Statement 2025: Simplifying the Spring Statement        <span>29.07.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/ma-fundraising-european-manufacturing-distribution-h1-2025/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/08/CNC-Laser-and-gas-cutting-of-metal-modern-industrial-technology-Making-Industrial-Details.-The-laser-optics-and-CNC-are-used-to-direct-the-material-or-the-laser-beam-generated-scaled-1-1024x683.webp">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/08/CNC-Laser-and-gas-cutting-of-metal-modern-industrial-technology-Making-Industrial-Details.-The-laser-optics-and-CNC-are-used-to-direct-the-material-or-the-laser-beam-generated-scaled-1-300x200.webp'
+             alt="M&amp;A and fundraising in the European manufacturing and distribution sector: H1 2025 trends"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        M&amp;A and fundraising in the European manufacturing and distribution sector: H1 2025 trends        <span>28.07.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/converting-a-property-convert-the-vat-rate-to-5-to-make-huge-savings/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/05/Real-estate-min.jpg">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/05/Real-estate-min-300x112.jpg'
+             alt="Converting a property? Convert the VAT rate to 5% to make huge savings"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        Converting a property? Convert the VAT rate to 5% to make huge savings        <span>26.05.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/new-inheritance-tax-rules-could-hit-business-owners/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/05/IHT-1.jpg">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/05/IHT-1-300x164.jpg'
+             alt="New Inheritance Tax Rules Could Hit Business Owners Hard"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        New Inheritance Tax Rules Could Hit Business Owners Hard        <span>12.05.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/mandatory-payrolling-of-benefits-in-kind-delayed-until-april-2027/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/08/Untitled-design-16-1024x620.png">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/08/Untitled-design-16-300x182.png'
+             alt="Mandatory payrolling of Benefits in Kind delayed until April 2027"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        Mandatory payrolling of Benefits in Kind delayed until April 2027        <span>30.04.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/johnston-carmichael-appoints-new-head-of-financial-services/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/08/Moore-Abstract-BG-Square.jpg">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/08/Moore-Abstract-BG-Square-300x300.jpg'
+             alt="Johnston Carmichael appoints new Head of Financial Services"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        Johnston Carmichael appoints new Head of Financial Services        <span>21.04.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/moore-east-midlands-announces-two-key-promotions/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/08/Untitled-design-10-1024x620.png">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/08/Untitled-design-10-300x182.png'
+             alt="Moore East Midlands announces two key promotions"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        Moore East Midlands announces two key promotions        <span>09.04.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/when-does-making-tax-digital-for-income-tax-start-mtd-for-income-tax-threshold/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/08/Untitled-design-17-1024x620.png">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/08/Untitled-design-17-300x182.png'
+             alt="When does Making Tax Digital for Income Tax start? | MTD for income tax threshold"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        When does Making Tax Digital for Income Tax start? | MTD for income tax threshold        <span>07.04.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/company-directors-and-pscs-can-voluntarily-verify-their-identity-from-8-april-2025/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/08/Untitled-design-14-1024x620.png">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/08/Untitled-design-14-300x182.png'
+             alt="Company Directors and PSCs can voluntarily verify their identity from 8 April 2025"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        Company Directors and PSCs can voluntarily verify their identity from 8 April 2025        <span>04.04.2025</span>
+    </h3>
+</a>
+                                                            
+<a href="https://www.moore.co.uk/insights/spring-statement-2025-what-you-need-to-know/" class="insight_card">
+    <picture>
+        <source media="(min-width:500px)" srcset="https://www.moore.co.uk/app/uploads/2025/08/Untitled-design-13-1-1024x620.png">
+        <img class="item-image" src='https://www.moore.co.uk/app/uploads/2025/08/Untitled-design-13-1-300x182.png'
+             alt="Spring Statement 2025: What you need to know"
+             loading="eager"/>
+    </picture>
+        <h3 class="title">
+        Spring Statement 2025: What you need to know        <span>26.03.2025</span>
+    </h3>
+</a>
+                                                    </div>
+                                    </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <span aria-current="page" class="page-numbers current">1</span>
+<a class="page-numbers" href="https://www.moore.co.uk/llms.txt/page/2/">2</a>
+<a class="next page-numbers" href="https://www.moore.co.uk/llms.txt/page/2/"><span class="next">></span></a>                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+<button class="contact-pane-toggle">Get in touch</button>
+<div class="contact-pane">
+    <h2>Get in touch</h2>
+    <div class="forminator-ui forminator-custom-form forminator-custom-form-830 forminator-design--default  forminator_ajax" data-forminator-render="0" data-form="forminator-module-830" data-uid="6a5634da402c4"><br/></div><form
+				id="forminator-module-830"
+				class="forminator-ui forminator-custom-form forminator-custom-form-830 forminator-design--default  forminator_ajax"
+				method="post"
+				data-forminator-render="0"
+				data-form-id="830"
+				
+				data-design="default"
+				
+				
+				
+				data-grid="open"
+				
+				
+				style="display: none;"
+				
+				data-uid="6a5634da402c4"
+			><div role="alert" aria-live="polite" class="forminator-response-message forminator-error" aria-hidden="true"></div><div class="forminator-row"><div id="name-1" class="forminator-field-name forminator-col forminator-col-12 "><div class="forminator-field"><label for="forminator-field-name-1_6a5634da402c4" id="forminator-field-name-1_6a5634da402c4-label" class="forminator-label">Name <span class="forminator-required">*</span></label><input type="text" name="name-1" value="" placeholder="E.g. John" id="forminator-field-name-1_6a5634da402c4" class="forminator-input forminator-name--field" aria-required="true" /></div></div></div><div class="forminator-row"><div id="email-1" class="forminator-field-email forminator-col forminator-col-12 "><div class="forminator-field"><label for="forminator-field-email-1_6a5634da402c4" id="forminator-field-email-1_6a5634da402c4-label" class="forminator-label">Email Address <span class="forminator-required">*</span></label><input type="email" name="email-1" value="" placeholder="E.g. john@doe.com" id="forminator-field-email-1_6a5634da402c4" class="forminator-input forminator-email--field" data-required="true" aria-required="true" /></div></div></div><div class="forminator-row"><div id="phone-1" class="forminator-field-phone forminator-col forminator-col-12 "><div class="forminator-field"><label for="forminator-field-phone-1_6a5634da402c4" id="forminator-field-phone-1_6a5634da402c4-label" class="forminator-label">Phone Number <span class="forminator-required">*</span></label><input type="text" name="phone-1" value="" placeholder="E.g. +1 3004005000" id="forminator-field-phone-1_6a5634da402c4" class="forminator-input forminator-field--phone" data-required="1" aria-required="true" autocomplete="off" /></div></div></div><div class="forminator-row"><div id="text-1" class="forminator-field-text forminator-col forminator-col-12 "><div class="forminator-field"><label for="forminator-field-text-1_6a5634da402c4" id="forminator-field-text-1_6a5634da402c4-label" class="forminator-label">Job title</label><input type="text" name="text-1" value="" placeholder="" id="forminator-field-text-1_6a5634da402c4" class="forminator-input forminator-name--field" data-required="" /></div></div></div><div class="forminator-row"><div id="text-2" class="forminator-field-text forminator-col forminator-col-12 "><div class="forminator-field"><label for="forminator-field-text-2_6a5634da402c4" id="forminator-field-text-2_6a5634da402c4-label" class="forminator-label">Company</label><input type="text" name="text-2" value="" placeholder="" id="forminator-field-text-2_6a5634da402c4" class="forminator-input forminator-name--field" data-required="" /></div></div></div><div class="forminator-row"><div id="text-3" class="forminator-field-text forminator-col forminator-col-12 "><div class="forminator-field"><label for="forminator-field-text-3_6a5634da402c4" id="forminator-field-text-3_6a5634da402c4-label" class="forminator-label">Postcode <span class="forminator-required">*</span></label><input type="text" name="text-3" value="" placeholder="" id="forminator-field-text-3_6a5634da402c4" class="forminator-input forminator-name--field" data-required="1" /></div></div></div><div class="forminator-row"><div id="select-2" class="forminator-field-select forminator-col forminator-col-12 "><div class="forminator-field"><label for="forminator-form-830__field--select-2_6a5634da402c4" id="forminator-form-830__field--select-2_6a5634da402c4-label" class="forminator-label">Which office would you like to contact?</label><select  id="forminator-form-830__field--select-2_6a5634da402c4" class="forminator-select--field forminator-select2 forminator-select2-multiple" data-required="" name="select-2" data-default-value="" data-hidden-behavior="zero" data-placeholder="" data-search="false" data-search-placeholder="" data-checkbox="false" data-allow-clear="false" aria-labelledby="forminator-form-830__field--select-2_6a5634da402c4-label"><option value="Aberdeen - Johnston Carmichael"  data-calculation="0">Aberdeen - Johnston Carmichael</option><option value="Belfast - Moore Northern Ireland"  data-calculation="0">Belfast - Moore Northern Ireland</option><option value="Chichester - Moore South"  data-calculation="0">Chichester - Moore South</option><option value="Coleraine - Moore Northern Ireland"  data-calculation="0">Coleraine - Moore Northern Ireland</option><option value="Corby - Moore East Midlands"  data-calculation="0">Corby - Moore East Midlands</option><option value="Derry ~ Londonderry - Moore Northern Ireland"  data-calculation="0">Derry ~ Londonderry - Moore Northern Ireland</option><option value="Isle of Man - Moore Dixon"  data-calculation="0">Isle of Man - Moore Dixon</option><option value="Dundee - Johnston Carmichael"  data-calculation="0">Dundee - Johnston Carmichael</option><option value="Edinburgh - Johnston Carmichael"  data-calculation="0">Edinburgh - Johnston Carmichael</option><option value="Enfield - Moore Northern Home Counties"  data-calculation="0">Enfield - Moore Northern Home Counties</option><option value="Glasgow - Johnston Carmichael"  data-calculation="0">Glasgow - Johnston Carmichael</option><option value="Guildford - Moore South"  data-calculation="0">Guildford - Moore South</option><option value="London (Heathrow) - Moore Kingston Smith"  data-calculation="0">London (Heathrow) - Moore Kingston Smith</option><option value="London - Johnston Carmichael"  data-calculation="0">London - Johnston Carmichael</option><option value="London - Moore Family Office"  data-calculation="0">London - Moore Family Office</option><option value="London (City) - Moore Kingston Smith"  data-calculation="0">London (City) - Moore Kingston Smith</option><option value="London (West End) - Moore Kingston Smith"  data-calculation="0">London (West End) - Moore Kingston Smith</option><option value="Newcastle upon Tyne - Johnston Carmichael"  data-calculation="0">Newcastle upon Tyne - Johnston Carmichael</option><option value="Newport (Isle of Wight) changed to Isle of Wight - Moore South"  data-calculation="0">Newport (Isle of Wight) changed to Isle of Wight - Moore South</option><option value="Northampton - Moore East Midlands"  data-calculation="0">Northampton - Moore East Midlands</option><option value="Peterborough - Moore East Midlands"  data-calculation="0">Peterborough - Moore East Midlands</option><option value="Redhill - Moore Kingston Smith"  data-calculation="0">Redhill - Moore Kingston Smith</option><option value="Reading - Moore Kingston Smith"  data-calculation="0">Reading - Moore Kingston Smith</option><option value="Romford - Moore Kingston Smith"  data-calculation="0">Romford - Moore Kingston Smith</option><option value="Salisbury - Moore South"  data-calculation="0">Salisbury - Moore South</option><option value="Sheffield - Moore Insight"  data-calculation="0">Sheffield - Moore Insight</option><option value="Southampton - Moore South"  data-calculation="0">Southampton - Moore South</option><option value="St Albans - Moore Kingston Smith"  data-calculation="0">St Albans - Moore Kingston Smith</option><option value="Jersey - Moore Stephens Jersey"  data-calculation="0">Jersey - Moore Stephens Jersey</option><option value="Guernsey - Moore Stephens Channel Islands"  data-calculation="0">Guernsey - Moore Stephens Channel Islands</option><option value="Stevenage - Northern Home Counties"  data-calculation="0">Stevenage - Northern Home Counties</option><option value="Stoke on Trent - Moore Stoke"  data-calculation="0">Stoke on Trent - Moore Stoke</option></select></div></div></div><div class="forminator-row"><div id="select-1" class="forminator-field-select forminator-col forminator-col-12 "><div class="forminator-field"><label for="forminator-form-830__field--select-1_6a5634da402c4" id="forminator-form-830__field--select-1_6a5634da402c4-label" class="forminator-label">Services Required <span class="forminator-required">*</span></label><select multiple id="forminator-form-830__field--select-1_6a5634da402c4" class="forminator-select--field forminator-select2 forminator-select2-multiple" data-required="1" name="select-1[]" data-default-value="" data-hidden-behavior="zero" data-placeholder="Please select an option" data-search="false" data-search-placeholder="Search" data-checkbox="false" data-allow-clear="true" aria-labelledby="forminator-form-830__field--select-1_6a5634da402c4-label"><option value="Accounting, audit &amp; assurance"  data-calculation="0">Accounting, audit &amp; assurance</option><option value="Audit"  data-calculation="0">Audit</option><option value="Business outsourcing"  data-calculation="0">Business outsourcing</option><option value="Business tax"  data-calculation="0">Business tax</option><option value="Capital allowances"  data-calculation="0">Capital allowances</option><option value="Cloud accounting"  data-calculation="0">Cloud accounting</option><option value="Company secretarial"  data-calculation="0">Company secretarial</option><option value="Consulting &amp; advisory"  data-calculation="0">Consulting &amp; advisory</option><option value="Corporate finance"  data-calculation="0">Corporate finance</option><option value="Dispute advisory &amp; investigations"  data-calculation="0">Dispute advisory &amp; investigations</option><option value="Doing business in China"  data-calculation="0">Doing business in China</option><option value="Global mobility"  data-calculation="0">Global mobility</option><option value="Governance, risk &amp; internal audit"  data-calculation="0">Governance, risk &amp; internal audit</option><option value="Human resources"  data-calculation="0">Human resources</option><option value="International Services"  data-calculation="0">International Services</option><option value="International Tax"  data-calculation="0">International Tax</option><option value="IT consultancy"  data-calculation="0">IT consultancy</option><option value="Legal services"  data-calculation="0">Legal services</option><option value="Making Tax Digital for Income Tax self assessment information hub"  data-calculation="0">Making Tax Digital for Income Tax self assessment information hub</option><option value="Payroll services"  data-calculation="0">Payroll services</option><option value="Private client tax"  data-calculation="0">Private client tax</option><option value="R&amp;D tax relief"  data-calculation="0">R&amp;D tax relief</option><option value="Restructuring &amp; insolvency"  data-calculation="0">Restructuring &amp; insolvency</option><option value="SDLT advice"  data-calculation="0">SDLT advice</option><option value="Sustainability services"  data-calculation="0">Sustainability services</option><option value="Tax"  data-calculation="0">Tax</option><option value="Tax investigations"  data-calculation="0">Tax investigations</option><option value="Trusts, estates &amp; probate"  data-calculation="0">Trusts, estates &amp; probate</option><option value="VAT"  data-calculation="0">VAT</option><option value="Wealth management"  data-calculation="0">Wealth management</option></select></div></div></div><div class="forminator-row"><div id="textarea-1" class="forminator-field-textarea forminator-col forminator-col-12 "><div class="forminator-field"><label for="forminator-field-textarea-1_6a5634da402c4" id="forminator-field-textarea-1_6a5634da402c4-label" class="forminator-label">Message</label><textarea name="textarea-1" placeholder="Enter your message..." id="forminator-field-textarea-1_6a5634da402c4" class="forminator-textarea" rows="6" style="min-height:140px;" ></textarea></div></div></div><div class="forminator-row"><div id="checkbox-1" class="forminator-field-checkbox forminator-col forminator-col-12 "><div role="group" class="forminator-field required" aria-labelledby="forminator-checkbox-group-forminator-field-checkbox-1-6a5634da402c4-label"><label id="forminator-field-checkbox-1-1-6a5634da402c4-label" for="forminator-field-checkbox-1-1-6a5634da402c4" class="forminator-checkbox" title="I have read and accept the Moore UK privacy policy:"><input type="checkbox" name="checkbox-1[]" value="privacy-policy" id="forminator-field-checkbox-1-1-6a5634da402c4" aria-labelledby="forminator-field-checkbox-1-1-6a5634da402c4-label" data-calculation="0" checked="checked"  data-hidden-behavior="zero"/><span class="forminator-checkbox-box" aria-hidden="true"></span><span class="forminator-checkbox-label">I have read and accept the Moore UK privacy policy:</span></label></div></div></div><div class="forminator-row"><div id="captcha-1" class="forminator-field-captcha forminator-col forminator-col-12 "><div class="forminator-captcha-left forminator-g-recaptcha" data-theme="light"  data-sitekey="6LcSmmUsAAAAAFhfs4GAIE7l-eiuX0p1SvL4_3rA" data-size="normal"></div> </div></div><div class="forminator-row forminator-hidden"><input type="hidden" id="hidden-1_6a5634da402c4" name="hidden-1" value="" /></div><div class="forminator-row forminator-hidden"><input type="hidden" id="hidden-2_6a5634da402c4" name="hidden-2" value="https://www.moore.co.uk/insights/spring-statement-2025-what-you-need-to-know/" /></div><input type="hidden" name="referer_url" value="" /><div class="forminator-row forminator-row-last"><div class="forminator-col"><div class="forminator-field"><button class="forminator-button forminator-button-submit btn btn--primary">Send Message</button></div></div></div><input type="hidden" id="forminator_nonce" name="forminator_nonce" value="e77020ff3c" /><input type="hidden" name="_wp_http_referer" value="/llms.txt" /><input type="hidden" name="form_id" value="830"><input type="hidden" name="page_id" value="1378"><input type="hidden" name="form_type" value="default"><input type="hidden" name="current_url" value="https://www.moore.co.uk/insights/spring-statement-2025-what-you-need-to-know/"><input type="hidden" name="render_id" value="0"><input type="hidden" name="action" value="forminator_submit_form_custom-forms"></form></div><footer>
+    <div class="container">
+        <div class="main-footer-content">
+            <div class="footer-col footer-contact-col">
+                <h4>Contact us</h4>
+                                    <p>If you have a general enquiry rather than a question for a specific partner, then please phone or email us and we will respond as quickly as possible.</p>
+                                                <div class="footer-contact-info">
+                    <p>
+                                                                                        </div>
+                                
+                <div class="footer-social-links">
+                                            <a href="https://www.linkedin.com/company/moore-uk/" class="footer-social-link" target="_blank">
+                                                                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/></svg>
+                                                                                                            </a>
+                                            <a href="https://x.com/MooreUKNetwork" class="footer-social-link" target="_blank">
+                                                                                                                                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+                                                    </a>
+                                    </div>
+                                            </div>
+            
+            
+                    </div>
+        <!-- TODO Create custom field for legal section -->
+        <div class="main-footer-legal">
+            <div class="footer-copyright">
+                <div class="footer-nav">
+                    <ul id="menu-footer-legal" class="menu"><li id="menu-item-1248" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1248"><a href="https://www.moore.co.uk/cookies/">Cookies</a></li>
+<li id="menu-item-1249" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1249"><a href="https://www.moore.co.uk/privacy-policy-2/">Privacy Policy</a></li>
+<li id="menu-item-1247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1247"><a href="https://www.moore.co.uk/anti-slavery-and-human-trafficking-policy/">Anti-slavery and human trafficking policy</a></li>
+<li id="menu-item-1250" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-1250"><a rel="privacy-policy" href="https://www.moore.co.uk/website-disclaimer/">Website Disclaimer</a></li>
+</ul>                </div>
+                                <p>© Moore UK</p>
+                            </div>
+        </div>
+    </div>
+</footer>
+
+<input type="hidden" id="gpt_nonce" name="gpt_nonce" value="600776a220" /><input type="hidden" name="_wp_http_referer" value="/llms.txt" /><link rel='stylesheet' id='forminator-module-css-830-css' href='https://www.moore.co.uk/app/uploads/forminator/830_2ce99d5e8584952e32059e218907bb3c/css/style-830.css?ver=1776958586' type='text/css' media='all' />
+<link rel='stylesheet' id='forminator-icons-css' href='https://www.moore.co.uk/app/plugins/forminator/assets/forminator-ui/css/forminator-icons.min.css?ver=1.43.1' type='text/css' media='all' />
+<link rel='stylesheet' id='forminator-utilities-css' href='https://www.moore.co.uk/app/plugins/forminator/assets/forminator-ui/css/src/forminator-utilities.min.css?ver=1.43.1' type='text/css' media='all' />
+<link rel='stylesheet' id='forminator-grid-default-css' href='https://www.moore.co.uk/app/plugins/forminator/assets/forminator-ui/css/src/grid/forminator-grid.open.min.css?ver=1.43.1' type='text/css' media='all' />
+<link rel='stylesheet' id='forminator-forms-default-base-css' href='https://www.moore.co.uk/app/plugins/forminator/assets/forminator-ui/css/src/form/forminator-form-default.base.min.css?ver=1.43.1' type='text/css' media='all' />
+<link rel='stylesheet' id='forminator-forms-default-select2-css' href='https://www.moore.co.uk/app/plugins/forminator/assets/forminator-ui/css/src/form/forminator-form-default.select2.min.css?ver=1.43.1' type='text/css' media='all' />
+<link rel='stylesheet' id='forminator-forms-default-full-css' href='https://www.moore.co.uk/app/plugins/forminator/assets/forminator-ui/css/src/form/forminator-form-default.full.min.css?ver=1.43.1' type='text/css' media='all' />
+<link rel='stylesheet' id='intlTelInput-forminator-css-css' href='https://www.moore.co.uk/app/plugins/forminator/assets/css/intlTelInput.min.css?ver=4.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='buttons-css' href='https://www.moore.co.uk/wp/wp-includes/css/buttons.min.css?ver=6.7.1' type='text/css' media='all' />
+<script type="text/javascript" id="site-script-js-extra">
+/* <![CDATA[ */
+var my_ajax_object = {"ajax_url":"https:\/\/www.moore.co.uk\/wp\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.moore.co.uk/app/themes/MKS-GLOBAL/assets/js/bundle.js" id="site-script-js"></script>
+<script type="text/javascript" src="https://www.moore.co.uk/app/plugins/forminator/assets/forminator-ui/js/select2.full.min.js" id="forminator-select2-js"></script>
+<script type="text/javascript" src="https://www.moore.co.uk/app/plugins/forminator/assets/js/library/jquery.validate.min.js" id="forminator-jquery-validate-js"></script>
+<script type="text/javascript" src="https://www.moore.co.uk/app/plugins/forminator/assets/forminator-ui/js/forminator-form.min.js" id="forminator-form-js"></script>
+<script type="text/javascript" id="forminator-front-scripts-js-extra">
+/* <![CDATA[ */
+var ForminatorFront = {"ajaxUrl":"https:\/\/www.moore.co.uk\/wp\/wp-admin\/admin-ajax.php","cform":{"processing":"Submitting form, please wait","error":"An error occurred while processing the form. Please try again","upload_error":"An upload error occurred while processing the form. Please try again","pagination_prev":"Previous","pagination_next":"Next","pagination_go":"Submit","gateway":{"processing":"Processing payment, please wait","paid":"Success! Payment confirmed. Submitting form, please wait","error":"Error! Something went wrong when verifying the payment"},"captcha_error":"Invalid CAPTCHA","no_file_chosen":"No file chosen","intlTelInput_utils_script":"https:\/\/www.moore.co.uk\/app\/plugins\/forminator\/assets\/js\/library\/intlTelInputUtils.js","process_error":"Please try again","payment_failed":"Payment failed. Please try again.","payment_cancelled":"Payment was cancelled"},"poll":{"processing":"Submitting vote, please wait","error":"An error occurred saving the vote. Please try again"},"quiz":{"view_results":"View Results"},"select2":{"load_more":"Loading more results\u2026","no_result_found":"No results found","searching":"Searching\u2026","loaded_error":"The results could not be loaded."}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.moore.co.uk/app/plugins/forminator/build/front/front.multi.min.js" id="forminator-front-scripts-js"></script>
+<script type="text/javascript" src="https://www.moore.co.uk/app/plugins/forminator/assets/js/library/intlTelInput.min.js" id="forminator-intlTelInput-js"></script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=en_GB&amp;onload=forminator_render_captcha&amp;render=explicit" id="forminator-google-recaptcha-js"></script>
+<script type="text/javascript">jQuery(function() {jQuery.ajax({url: 'https://www.moore.co.uk/wp/wp-admin/admin-ajax.php',type: "POST",data: {action: "forminator_get_nonce",form_id: "830",},success: function (response) {jQuery('#forminator-module-830 #forminator_nonce').val( response.data );}});})</script>		<script type="text/javascript">
+			jQuery(function () {
+				window.Forminator_Cform_Paginations = window.Forminator_Cform_Paginations || [];
+								window.Forminator_Cform_Paginations[830] =
+						{"has-pagination":false,"pagination-header-design":"show","pagination-header":"nav","last-steps":"Finish","last-previous":"Previous","pagination-labels":"default","has-paypal":false};
+
+				var runForminatorFront = function () {
+					jQuery('#forminator-module-830[data-forminator-render="0"]')
+						.forminatorFront({"form_type":"custom-form","inline_validation":true,"print_value":false,"rules":"\"name-1\": \"required\",\"name-1\": \"trim\",\"email-1\": {\n\"required\": true,\"emailWP\": true,},\n\"phone-1\": {\"required\": true,\"trim\": true,},\"text-3\": {\"required\": true,},\"select-1[]\": \"required\",\"checkbox-1[]\": \"required\",","messages":"\"name-1\": \"This field is required. Please input your name.\",\n\"email-1\": {\n\"required\": \"This field is required. Please input a valid email.\",\n\"emailWP\": \"This is not a valid email.\",\n\"email\": \"This is not a valid email.\",\n},\n\"phone-1\": {\n\"required\": \"This field is required. Please input a phone number.\",\n\"trim\": \"This field is required. Please input a phone number.\",\n\"phone\": \"Please enter a valid phone number.\",\n},\n\"text-3\": {\"required\": \"This field is required. Please enter text.\",\n},\"select-1[]\": \"This field is required. Please select a value.\",\n\"checkbox-1[]\": \"This field is required. Please select a value.\",\n","conditions":{"fields":[],"relations":{"name-1":[],"email-1":[],"phone-1":[],"text-1":[],"text-2":[],"text-3":[],"select-2":[],"select-1":[],"textarea-1":[],"checkbox-1":[],"captcha-1":[],"hidden-1":[],"hidden-2":[],"submit":[]}},"calendar":"{\"days\":[\"Su\",\"Mo\",\"Tu\",\"We\",\"Th\",\"Fr\",\"Sa\"],\"months\":[\"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\"]}","paypal_config":{"live_id":"","sandbox_id":"","redirect_url":"https:\/\/www.moore.co.uk\/llms.txt","form_id":830},"forminator_fields":["address","calculation","captcha","consent","currency","custom","date","email","gdprcheckbox","group","hidden","html","checkbox","name","number","page-break","password","paypal","phone","postdata","radio","rating","section","select","slider","stripe-ocs","stripe","text","textarea","time","upload","url"],"general_messages":{"calculation_error":"Failed to calculate field.","payment_require_ssl_error":"SSL required to submit this form, please check your URL.","payment_require_amount_error":"PayPal amount must be greater than 0.","form_has_error":"Please correct the errors before submission."},"payment_require_ssl":false,"has_loader":true,"loader_label":"Submitting...","calcs_memoize_time":300,"is_reset_enabled":true,"has_stripe":false,"has_paypal":false,"submit_button_class":"btn btn--primary"});
+				}
+
+				if (window.elementorFrontend) {
+					if (typeof elementorFrontend.hooks !== "undefined") {
+						elementorFrontend.hooks.addAction('frontend/element_ready/global', function () {
+							runForminatorFront();
+						});
+					}
+				} else {
+					runForminatorFront();
+				}
+
+										if (typeof ForminatorValidationErrors !== 'undefined') {
+					var forminatorFrontSubmit = jQuery(ForminatorValidationErrors.selector).data('forminatorFrontSubmit');
+					if (typeof forminatorFrontSubmit !== 'undefined') {
+						forminatorFrontSubmit.show_messages(ForminatorValidationErrors.errors);
+					}
+				}
+				if (typeof ForminatorFormHider !== 'undefined') {
+					var forminatorFront = jQuery(ForminatorFormHider.selector).data('forminatorFront');
+					if (typeof forminatorFront !== 'undefined') {
+						jQuery(forminatorFront.forminator_selector).find('.forminator-row').hide();
+						jQuery(forminatorFront.forminator_selector).find('.forminator-pagination-steps').hide();
+						jQuery(forminatorFront.forminator_selector).find('.forminator-pagination-footer').hide();
+					}
+				}
+			});
+		</script>
+		</body>
+</html>

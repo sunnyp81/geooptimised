@@ -1,0 +1,17 @@
+#Any search crawler can crawl our site
+User-agent: *
+
+#Allow only below mentioned paths
+Allow: /uk
+Allow: /es
+Allow: /au
+
+#Disallow the following
+Disallow: /uk/errors/*
+Disallow: /es/errors/*
+Disallow: /au/errors/*
+
+#Crawl all sitemaps mentioned below as per each market
+Sitemap: https://www.genesiscare.com/uk.sitemap.xml
+Sitemap: https://www.genesiscare.com/es.sitemap.xml 
+Sitemap: https://www.genesiscare.com/au.sitemap.xml

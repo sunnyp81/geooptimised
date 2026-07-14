@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head itemscope itemtype="http://schema.org/WebSite">
+      <!-- Google Tag Manager -->
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+
+})(window,document,'script','dataLayer','GTM-PGLN23N');</script>
+
+<!-- End Google Tag Manager -->
+  		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="referrer" content="origin-when-cross-origin">
+		<script>document.documentElement.setAttribute('data-ua', navigator.userAgent)</script>
+		<style>
+			[x-cloak] {
+				display: none !important;
+			}
+		</style>
+		<link rel="stylesheet" href="/assets/main.min.css?id=0d3d5d4ad6218cdd701c2ac1e71b7f7e">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#00aba9">
+		<meta name="theme-color" content="#ffffff">
+
+					<meta name="probely-verification" content="b4dc476c-8d89-4074-81e8-d6b6e22ec7f2" />
+		
+		    	<title>ClearBank | Accounts, Clearing and Embedded Banking for financial…</title><meta name="generator" content="SEOmatic">
+<meta name="keywords" content="ClearBank,Accounts,Embedded Banking,Clearing,Clear payments,Virtual accounts,Real accounts,Operating accounts,Financial Services Compensation Scheme,FSCS,Clear Bank,UK payment schemes,Faster Payments,CHAPS,BACS,Connect to payment schemes,Payment schemes,Bank accounts,Payment rails,Business bank accounts">
+<meta name="description" content="Go back to the home page to find your way, or perhaps check our latest news .">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta name="robots" content="none">
+<meta content="119281139468503" property="fb:profile_id">
+<meta content="en_US" property="og:locale">
+<meta content="ClearBank" property="og:site_name">
+<meta content="website" property="og:type">
+<meta content="https://clear.bank/" property="og:url">
+<meta content="ClearBank | Accounts, Clearing and Embedded Banking for financial…" property="og:title">
+<meta content="Go back to the home page to find your way, or perhaps check our latest news ." property="og:description">
+<meta content="https://clear.bank/uploads/images/In-page-images/_1200x630_crop_center-center_82_none/ClearBank_LinkedIn.png?mtime=1703852965" property="og:image">
+<meta content="1200" property="og:image:width">
+<meta content="630" property="og:image:height">
+<meta content="ClearBank logo" property="og:image:alt">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@clear_bank">
+<meta name="twitter:creator" content="@clear_bank">
+<meta name="twitter:title" content="ClearBank | Accounts, Clearing and Embedded Banking for financial…">
+<meta name="twitter:description" content="Go back to the home page to find your way, or perhaps check our latest news .">
+<meta name="twitter:image" content="https://clear.bank/uploads/images/In-page-images/_800x800_crop_center-center_82_none/ClearBank_LinkedIn.png?mtime=1703852965">
+<meta name="twitter:image:width" content="800">
+<meta name="twitter:image:height" content="800">
+<meta name="twitter:image:alt" content="ClearBank logo">
+<link href="https://clear.bank/" rel="home">
+<link type="text/plain" href="https://clear.bank/humans.txt" rel="author"></head>
+
+	
+	<body class="">
+          <!-- Google Tag Manager (noscript) -->
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGLN23N"
+
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- End Google Tag Manager (noscript) -->
+    		<a class="skip-link" href="#main">Skip to content</a>
+
+													
+					
+
+
+	<header 
+			x-data="components.header()"
+			class="site-header transition-all duration-200 ease-in-out min-h-[70.3px] mdw:min-h-[90.08px]"
+			:class="{ '-stuck': isStuck }"
+			@disable-scroll-reveal.window="disableScrollReveal = true"
+			@show-menu.window="handleShowMenuEvent($event)"
+	>
+	<div x-cloak>
+				<div 
+			class="absolute inset-0 backdrop-blur-xl bg-white/50 transition"
+			:class="{ 
+				'bg-white/100': mobileMenuOpen,
+				'mdw:opacity-0': currentMenu,
+				'mdw:opacity-100': !currentMenu,
+			}"
+		></div>
+					<div class="container relative">
+		<div class="flex flex-wrap items-center justify-between ">
+			<a class="z-10 -no-base" href="https://clear.bank/" aria-label="Home">
+        				  <svg class="w-full max-w-[125px] mdw:max-w-[180px] py-[25px]" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 300 49" fill="none">
+  <path d="M150 48.115c2.442 0 4.223-1.782 4.223-4.224 0-2.441-1.781-4.223-4.223-4.223s-4.224 1.782-4.224 4.224c0 2.441 1.782 4.223 4.224 4.223Zm63.088-5.015c-3.365 0-5.873-2.112-5.873-4.752 0-3.3 2.904-4.883 6.599-5.213l9.437-.792v2.838c0 4.025-4.751 7.919-9.503 7.919h-.66Zm-105.917 0c-3.365 0-5.873-2.112-5.873-4.752 0-3.3 2.903-4.883 6.599-5.213l9.437-.792v2.838c0 4.025-4.752 7.919-9.503 7.919h-.66Zm62.891-1.056V26.866h10.954c5.676 0 9.503 2.441 9.503 7.589 0 5.213-3.827 7.589-9.503 7.589h-10.954ZM65.596 28.25c.858-5.147 4.026-8.777 9.701-8.777 5.741 0 8.513 3.63 9.239 8.777h-18.94Zm76.749-13.396c-7.787 0-13.199 5.147-13.199 12.67V47.72h6.27V27.525c0-4.157 2.771-7.06 6.929-7.06h5.081v-5.61h-5.081Zm81.236 27.255v5.61h5.939V26.733c0-6.666-4.883-12.539-13.99-12.539-7.721 0-13.396 4.29-13.924 10.69h6.269c.594-3.43 3.498-5.279 7.523-5.279h.33c4.686 0 7.523 2.574 7.523 7.128v.791l-10.295.858c-5.675.462-12.01 2.772-12.01 10.23 0 5.41 4.685 9.766 11.482 9.766 5.61 0 9.833-3.3 11.153-6.27Zm26.199-27.915c-8.645 0-14.716 5.675-14.716 14.188V47.72h6.269V28.78c0-5.411 3.432-8.975 8.447-8.975 5.015 0 8.447 3.564 8.447 8.975v18.94h6.269V28.383c0-8.513-6.071-14.188-14.716-14.188ZM90.41 37.16h-5.874c-1.386 3.564-4.554 5.94-9.041 5.94-6.137 0-9.437-4.356-10.097-9.965h25.275v-2.178c0-10.097-5.94-16.762-15.244-16.762-9.899 0-16.366 7.721-16.366 17.092 0 9.37 6.467 17.092 16.366 17.092 8.117 0 13.462-4.817 14.98-11.219Zm27.254 4.95v5.61h5.939V26.733c0-6.666-4.883-12.539-13.99-12.539-7.721 0-13.397 4.29-13.924 10.69h6.269c.594-3.43 3.497-5.279 7.523-5.279h.33c4.685 0 7.523 2.574 7.523 7.128v.791l-10.295.858c-5.675.462-12.01 2.772-12.01 10.23 0 5.41 4.685 9.766 11.482 9.766 5.61 0 9.833-3.3 11.153-6.27Zm52.332-20.656V7.464h10.162c5.346 0 8.645 2.31 8.645 7.061 0 4.62-3.299 6.93-8.645 6.93h-10.162Zm-6.27 26.265h18.28c8.909 0 14.914-4.817 14.914-12.802 0-6.666-5.015-10.56-9.371-11.153 4.026-1.188 7.656-4.29 7.656-9.767 0-6.995-5.478-12.208-14.453-12.208h-17.026v45.93Zm121.756-18.61 14.254-14.254h-7.721l-15.706 16.3V1.79h-6.269v45.93h6.269v-9.437l4.949-4.883 11.021 14.32H300l-14.518-18.61ZM54.047 1.79h-6.269v45.93h6.27V1.79ZM0 24.754c0 13.33 10.559 23.625 23.757 23.625 7.787 0 14.584-3.63 18.808-9.239l-4.752-3.761c-3.365 4.289-8.117 7.193-14.056 7.193-9.767 0-17.356-7.985-17.356-17.818 0-9.833 7.59-17.818 17.356-17.818 5.94 0 10.69 2.904 14.056 7.193l4.752-3.761c-4.224-5.61-11.02-9.24-18.808-9.24C10.56 1.129 0 11.424 0 24.755Z" fill="currentColor"></path>
+</svg>
+
+        			</a>
+
+							<button @click="mobileMenuOpen = !mobileMenuOpen" class="relative mdw:hidden w-[36px] h-[36px] z-10">
+	<i 
+		:class="{ 
+			'opacity-0': mobileMenuOpen,
+			'opacity-100': !mobileMenuOpen,
+		}"
+		class="absolute top-[13px] left-[5px] w-[25px] h-[2px] bg-black transition transform-opacity rounded-full"
+	></i>
+	<i 
+		:class="{ 
+			'rotate-45': mobileMenuOpen,	
+			'rotate-0': !mobileMenuOpen,
+		}"
+		class="absolute top-[19px] left-[5px] w-[25px] h-[2px] bg-black transform transition-transform rounded-full"
+	></i>
+	<i 
+		:class="{ 
+			'-rotate-45': mobileMenuOpen,
+			'rotate-0': !mobileMenuOpen,
+		}"
+		class="absolute top-[19px] left-[5px] w-[25px] h-[2px] bg-black transform transition-transform rounded-full"
+	></i>
+		<i 
+		:class="{ 
+			'opacity-0': mobileMenuOpen,
+			'opacity-100': !mobileMenuOpen,
+		}"
+		class="absolute top-[25px] left-[5px] w-[25px] h-[2px] bg-black transition transform-opacity rounded-full"
+	></i>
+</button>				<nav 
+					class="main-menu" 
+					:class="{ 
+						'-open': mobileMenuOpen,
+					}"
+					:style="mobileMenuOpen ? 'height: ' + mobileMenuHeight + 'px' : ''"
+				>
+										<div 
+						class="main-menu__underlay absolute inset-0 h-screen bg-white rounded-l-[30px] pointer-events-none transition duration-[150ms] ease-in-out transform origin-right"
+						:class="{
+							'opacity-0 scale-x-[0.96]': !currentMenu,
+							'opacity-100 scale-x-100': currentMenu,
+						}"
+					></div>
+
+					<ul 
+						@click.away="currentMenu = ''" 
+						class="relative list-none mdw:flex mdw:items-center mdw:gap-x-[32px] lgw:gap-x-8"
+					>
+
+						
+													<li>
+								
+										
+																					<button 
+												@click="currentMenu = currentMenu === '14ba1a5c-47db-40ed-af75-fd27700d0fdd' ? '' : '14ba1a5c-47db-40ed-af75-fd27700d0fdd'"
+												class="h4 flex w-full border-b pb-[3px] items-center justify-between transition duration-200 ease-in-out theme-link mdw:text-lg mdw:w-auto lgw:!font-text lgw:text-[20px] lgw:leading-[1.3]"
+												:class="{
+													'border-black': currentMenu === '14ba1a5c-47db-40ed-af75-fd27700d0fdd',
+													'border-transparent': currentMenu !== '14ba1a5c-47db-40ed-af75-fd27700d0fdd',
+												}"
+												:aria-expanded="currentMenu === '14ba1a5c-47db-40ed-af75-fd27700d0fdd'"
+												aria-controls="submenu-14ba1a5c-47db-40ed-af75-fd27700d0fdd"
+												x-ref="menu-products"
+											>
+												<span>Products</span>
+												<span>
+													<svg class="hidden mdw:block w-3 mt-0.5 ml-[9px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 13 8">
+  <path d="m11.727 1.5-5 5-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+													<svg class="mdw:hidden" width="16" height="13" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <path d="M15.597 6.78a.9.9 0 0 0-.28-.648L10.182.999C9.98.804 9.77.718 9.55.718c-.5 0-.859.351-.859.828 0 .25.102.46.258.617l1.758 1.781 2.265 2.07-1.812-.109H1.69c-.523 0-.883.36-.883.875 0 .508.36.867.883.867h9.469l1.812-.109-2.265 2.07-1.758 1.782a.86.86 0 0 0-.258.617c0 .476.36.828.86.828a.88.88 0 0 0 .617-.266l5.148-5.148a.896.896 0 0 0 .281-.64Z" fill="currentColor"></path>
+</svg>
+
+												</span>
+											</button>
+										
+																															<div 
+												id="submenu-14ba1a5c-47db-40ed-af75-fd27700d0fdd"
+												class="main-menu__subsection absolute top-0 inset-x-5 z-10 bg-white mdw:pb-[120px] transition mdw:top-[120px] mdw:left-16 mdw:translate-x-0"
+												:class="{ 'pointer-events-none': currentMenu !== '14ba1a5c-47db-40ed-af75-fd27700d0fdd' }"
+												x-show="currentMenu === '14ba1a5c-47db-40ed-af75-fd27700d0fdd'"
+												x-transition:enter="transition ease-in-out duration-300"
+												x-transition:enter-start="opacity-0 translate-x-5 mdw:translate-x-0"
+												x-transition:enter-end="opacity-100 translate-x-0"
+												x-transition:leave="transition ease-in-out duration-300"
+												x-transition:leave-start="opacity-100 translate-x-0"
+												x-transition:leave-end="opacity-0 translate-x-5 mdw:translate-x-0"
+											>
+												<button
+													@click="currentMenu = ''"
+													class="mdw:hidden inline-flex items-center justify-center w-5 h-5 mb-6"
+												>
+													<svg class="rotate-180" width="16" height="13" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <path d="M15.597 6.78a.9.9 0 0 0-.28-.648L10.182.999C9.98.804 9.77.718 9.55.718c-.5 0-.859.351-.859.828 0 .25.102.46.258.617l1.758 1.781 2.265 2.07-1.812-.109H1.69c-.523 0-.883.36-.883.875 0 .508.36.867.883.867h9.469l1.812-.109-2.265 2.07-1.758 1.782a.86.86 0 0 0-.258.617c0 .476.36.828.86.828a.88.88 0 0 0 .617-.266l5.148-5.148a.896.896 0 0 0 .281-.64Z" fill="currentColor"></path>
+</svg>
+
+												</button>
+
+																																																				
+																											
+																										
+																										
+																																						
+																																																						
+																													<div class="relative group mb-6 mdw:mb-4 last:mb-0 ">
+																<a class="h5 lg:h5 box-link" href="https://clear.bank/accounts">Accounts</a>
+														
+																															</div>
+																											
+																										
+																																						
+																																																						
+																													<div class="relative group mb-6 mdw:mb-4 last:mb-0 ">
+																<a class="h5 lg:h5 box-link" href="https://clear.bank/clearing">Clearing</a>
+														
+																															</div>
+																											
+																										
+																																						
+																																																						
+																													<div class="relative group mb-6 mdw:mb-4 last:mb-0 ">
+																<a class="h5 lg:h5 box-link" href="https://clear.bank/digital-assets">Digital Assets</a>
+														
+																															</div>
+																											
+																										
+																																						
+																																																						
+																													<div class="relative group mb-6 mdw:mb-4 last:mb-0 ">
+																<a class="h5 lg:h5 box-link" href="https://clear.bank/embedded-banking">Embedded Banking</a>
+														
+																															</div>
+																											
+																										
+																																						
+																										
+																																								<div class="border-b border-black mb-6 mdw:pt-2">
+														</div>
+													
+																																																				
+																													<div class="body2 mb-2 text-grey-500 mdw:mb-4 last:mb-0">For Developers</div>
+																											
+																										
+																										
+																																						
+																																																						
+																													<div class="relative group mb-6 mdw:mb-4 last:mb-0 ">
+																<a class="h5 lg:h5 box-link" href="https://clear.bank/explore-our-api">Explore our API</a>
+														
+																																	<div class="text-grey-500 lg:text-black group-hover:text-teal-dark transition body3 mt-0.5">
+																		ClearBank’s API enables you to offer real-time payments and innovative banking products to your customers.
+																	</div>
+																															</div>
+																											
+																										
+												
+												
+																								<div class="h-16 mdw:hidden"></div>
+
+											</div>
+																				
+								
+							</li>
+													<li>
+								
+										
+																					<button 
+												@click="currentMenu = currentMenu === 'a2fbafee-0d89-4a9b-8e7a-fd2cd41d32a3' ? '' : 'a2fbafee-0d89-4a9b-8e7a-fd2cd41d32a3'"
+												class="h4 flex w-full border-b pb-[3px] items-center justify-between transition duration-200 ease-in-out theme-link mdw:text-lg mdw:w-auto lgw:!font-text lgw:text-[20px] lgw:leading-[1.3]"
+												:class="{
+													'border-black': currentMenu === 'a2fbafee-0d89-4a9b-8e7a-fd2cd41d32a3',
+													'border-transparent': currentMenu !== 'a2fbafee-0d89-4a9b-8e7a-fd2cd41d32a3',
+												}"
+												:aria-expanded="currentMenu === 'a2fbafee-0d89-4a9b-8e7a-fd2cd41d32a3'"
+												aria-controls="submenu-a2fbafee-0d89-4a9b-8e7a-fd2cd41d32a3"
+												x-ref="menu-use-cases"
+											>
+												<span>Use cases</span>
+												<span>
+													<svg class="hidden mdw:block w-3 mt-0.5 ml-[9px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 13 8">
+  <path d="m11.727 1.5-5 5-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+													<svg class="mdw:hidden" width="16" height="13" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <path d="M15.597 6.78a.9.9 0 0 0-.28-.648L10.182.999C9.98.804 9.77.718 9.55.718c-.5 0-.859.351-.859.828 0 .25.102.46.258.617l1.758 1.781 2.265 2.07-1.812-.109H1.69c-.523 0-.883.36-.883.875 0 .508.36.867.883.867h9.469l1.812-.109-2.265 2.07-1.758 1.782a.86.86 0 0 0-.258.617c0 .476.36.828.86.828a.88.88 0 0 0 .617-.266l5.148-5.148a.896.896 0 0 0 .281-.64Z" fill="currentColor"></path>
+</svg>
+
+												</span>
+											</button>
+										
+																															<div 
+												id="submenu-a2fbafee-0d89-4a9b-8e7a-fd2cd41d32a3"
+												class="main-menu__subsection absolute top-0 inset-x-5 z-10 bg-white mdw:pb-[120px] transition mdw:top-[120px] mdw:left-16 mdw:translate-x-0"
+												:class="{ 'pointer-events-none': currentMenu !== 'a2fbafee-0d89-4a9b-8e7a-fd2cd41d32a3' }"
+												x-show="currentMenu === 'a2fbafee-0d89-4a9b-8e7a-fd2cd41d32a3'"
+												x-transition:enter="transition ease-in-out duration-300"
+												x-transition:enter-start="opacity-0 translate-x-5 mdw:translate-x-0"
+												x-transition:enter-end="opacity-100 translate-x-0"
+												x-transition:leave="transition ease-in-out duration-300"
+												x-transition:leave-start="opacity-100 translate-x-0"
+												x-transition:leave-end="opacity-0 translate-x-5 mdw:translate-x-0"
+											>
+												<button
+													@click="currentMenu = ''"
+													class="mdw:hidden inline-flex items-center justify-center w-5 h-5 mb-6"
+												>
+													<svg class="rotate-180" width="16" height="13" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <path d="M15.597 6.78a.9.9 0 0 0-.28-.648L10.182.999C9.98.804 9.77.718 9.55.718c-.5 0-.859.351-.859.828 0 .25.102.46.258.617l1.758 1.781 2.265 2.07-1.812-.109H1.69c-.523 0-.883.36-.883.875 0 .508.36.867.883.867h9.469l1.812-.109-2.265 2.07-1.758 1.782a.86.86 0 0 0-.258.617c0 .476.36.828.86.828a.88.88 0 0 0 .617-.266l5.148-5.148a.896.896 0 0 0 .281-.64Z" fill="currentColor"></path>
+</svg>
+
+												</button>
+
+																																																				
+																													<div class="body2 mb-2 text-grey-500 mdw:mb-4 last:mb-0">Who we work with</div>
+																											
+																										
+																										
+																																						
+																																																						
+																													<div class="relative group mb-6 mdw:mb-4 last:mb-0 ">
+																<a class="h5 lg:h5 box-link" href="https://clear.bank/use-cases/acquirers">Acquirers</a>
+														
+																															</div>
+																											
+																										
+																																						
+																																																						
+																													<div class="relative group mb-6 mdw:mb-4 last:mb-0 ">
+																<a class="h5 lg:h5 box-link" href="https://clear.bank/use-cases/banks">Banks</a>
+														
+																															</div>
+																											
+																										
+																																						
+																																																						
+																													<div class="relative group mb-6 mdw:mb-4 last:mb-0 ">
+																<a class="h5 lg:h5 box-link" href="https://clear.bank/use-cases/building-societies-and-credit-unions">Building societies and credit unions</a>
+														
+																															</div>
+																											
+																										
+																																						
+																																																						
+																													<div class="relative group mb-6 mdw:mb-4 last:mb-0 ">
+																<a class="h5 lg:h5 box-link" href="https://clear.bank/use-cases/corporates">Corporates</a>
+														
+																															</div>
+																											
+																										
+																																						
+																																																						
+																													<div class="relative group mb-6 mdw:mb-4 last:mb-0 ">
+																<a class="h5 lg:h5 box-link" href="https://clear.bank/use-cases/digital-assets">Digital asset platforms</a>
+														
+																															</div>
+																											
+																										
+																																						
+																																																						
+																													<div class="relative group mb-6 mdw:mb-4 last:mb-0 ">
+																<a class="h5 lg:h5 box-link" href="https://clear.bank/use-cases/fintech">Fintechs</a>
+														
+																															</div>
+																											
+																										
+																																						
+																																																						
+																													<div class="relative group mb-6 mdw:mb-4 last:mb-0 ">
+																<a class="h5 lg:h5 box-link" href="https://clear.bank/use-cases/non-bank-financial-institutions">Non-bank financial institutions</a>
+														
+																															</div>
+																											
+																										
+																																						
+																																																						
+																													<div class="relative group mb-6 mdw:mb-4 last:mb-0 ">
+																<a class="h5 lg:h5 box-link" href="https://clear.bank/use-cases/pre-regulated">Pre-regulated firms</a>
+														
+																															</div>
+																											
+																										
+																																						
+																										
+																																								<div class="border-b border-black mb-6 mdw:pt-2">
+														</div>
+													
+																																																				
+																													<div class="body2 mb-2 text-grey-500 mdw:mb-4 last:mb-0">Collaborate with us</div>
+																											
+																										
+																										
+																																						
+																																																						
+																													<div class="relative group mb-6 mdw:mb-4 last:mb-0 ">
+																<a class="h5 lg:h5 box-link" href="https://clear.bank/partners">Partners</a>
+														
+																															</div>
+																											
+																										
+												
+												
+																								<div class="h-16 mdw:hidden"></div>
+
+											</div>
+																				
+								
+							</li>
+													<li>
+								
+										
+																					<button 
+												@click="currentMenu = currentMenu === '41feafb6-1eec-43ed-b14a-686481933e37' ? '' : '41feafb6-1eec-43ed-b14a-686481933e37'"
+												class="h4 flex w-full border-b pb-[3px] items-center justify-between transition duration-200 ease-in-out theme-link mdw:text-lg mdw:w-auto lgw:!font-text lgw:text-[20px] lgw:leading-[1.3]"
+												:class="{
+													'border-black': currentMenu === '41feafb6-1eec-43ed-b14a-686481933e37',
+													'border-transparent': currentMenu !== '41feafb6-1eec-43ed-b14a-686481933e37',
+												}"
+												:aria-expanded="currentMenu === '41feafb6-1eec-43ed-b14a-686481933e37'"
+												aria-controls="submenu-41feafb6-1eec-43ed-b14a-686481933e37"
+												x-ref="menu-about"
+											>
+												<span>About</span>
+												<span>
+													<svg class="hidden mdw:block w-3 mt-0.5 ml-[9px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 13 8">
+  <path d="m11.727 1.5-5 5-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+													<svg class="mdw:hidden" width="16" height="13" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <path d="M15.597 6.78a.9.9 0 0 0-.28-.648L10.182.999C9.98.804 9.77.718 9.55.718c-.5 0-.859.351-.859.828 0 .25.102.46.258.617l1.758 1.781 2.265 2.07-1.812-.109H1.69c-.523 0-.883.36-.883.875 0 .508.36.867.883.867h9.469l1.812-.109-2.265 2.07-1.758 1.782a.86.86 0 0 0-.258.617c0 .476.36.828.86.828a.88.88 0 0 0 .617-.266l5.148-5.148a.896.896 0 0 0 .281-.64Z" fill="currentColor"></path>
+</svg>
+
+												</span>
+											</button>
+										
+																															<div 
+												id="submenu-41feafb6-1eec-43ed-b14a-686481933e37"
+												class="main-menu__subsection absolute top-0 inset-x-5 z-10 bg-white mdw:pb-[120px] transition mdw:top-[120px] mdw:left-16 mdw:translate-x-0"
+												:class="{ 'pointer-events-none': currentMenu !== '41feafb6-1eec-43ed-b14a-686481933e37' }"
+												x-show="currentMenu === '41feafb6-1eec-43ed-b14a-686481933e37'"
+												x-transition:enter="transition ease-in-out duration-300"
+												x-transition:enter-start="opacity-0 translate-x-5 mdw:translate-x-0"
+												x-transition:enter-end="opacity-100 translate-x-0"
+												x-transition:leave="transition ease-in-out duration-300"
+												x-transition:leave-start="opacity-100 translate-x-0"
+												x-transition:leave-end="opacity-0 translate-x-5 mdw:translate-x-0"
+											>
+												<button
+													@click="currentMenu = ''"
+													class="mdw:hidden inline-flex items-center justify-center w-5 h-5 mb-6"
+												>
+													<svg class="rotate-180" width="16" height="13" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <path d="M15.597 6.78a.9.9 0 0 0-.28-.648L10.182.999C9.98.804 9.77.718 9.55.718c-.5 0-.859.351-.859.828 0 .25.102.46.258.617l1.758 1.781 2.265 2.07-1.812-.109H1.69c-.523 0-.883.36-.883.875 0 .508.36.867.883.867h9.469l1.812-.109-2.265 2.07-1.758 1.782a.86.86 0 0 0-.258.617c0 .476.36.828.86.828a.88.88 0 0 0 .617-.266l5.148-5.148a.896.896 0 0 0 .281-.64Z" fill="currentColor"></path>
+</svg>
+
+												</button>
+
+																																																				
+																													<div class="body2 mb-2 text-grey-500 mdw:mb-4 last:mb-0">Mission</div>
+																											
+																										
+																										
+																																						
+																																																						
+																													<div class="relative group mb-6 mdw:mb-4 last:mb-0 ">
+																<a class="h5 lg:h5 box-link" href="https://clear.bank/our-company">Our company</a>
+														
+																															</div>
+																											
+																										
+																																						
+																																																						
+																													<div class="relative group mb-6 mdw:mb-4 last:mb-0 ">
+																<a class="h5 lg:h5 box-link" href="https://clear.bank/leadership">Our leadership</a>
+														
+																															</div>
+																											
+																										
+																																						
+																																																						
+																													<div class="relative group mb-6 mdw:mb-4 last:mb-0 ">
+																<a class="h5 lg:h5 box-link" href="https://clear.bank/join-clearbank">Join ClearBank</a>
+														
+																															</div>
+																											
+																										
+																																						
+																										
+																																								<div class="border-b border-black mb-6 mdw:pt-2">
+														</div>
+													
+																																																				
+																													<div class="body2 mb-2 text-grey-500 mdw:mb-4 last:mb-0">Documentation and enquiries</div>
+																											
+																										
+																										
+																																						
+																																																						
+																													<div class="relative group mb-6 mdw:mb-4 last:mb-0 ">
+																<a class="h5 lg:h5 box-link" href="https://clear.bank/regulatory-governance">Regulatory and governance</a>
+														
+																															</div>
+																											
+																										
+																																						
+																																																						
+																													<div class="relative group mb-6 mdw:mb-4 last:mb-0 ">
+																<a class="h5 lg:h5 box-link" href="https://clear.bank/contact-us">Contact us</a>
+														
+																															</div>
+																											
+																										
+												
+												
+																								<div class="h-16 mdw:hidden"></div>
+
+											</div>
+																				
+								
+							</li>
+													<li>
+								
+																											
+																														<a class="h4 font-text mdw:text-lg lgw:text-xl lgw:text-[20px] border-b border-transparent flex pb-[3px]" href="https://clear.bank/learn">Learn</a>
+																			
+									
+							</li>
+													<li>
+								
+																											
+																														
+	
+	<a  class="btn-dyn -teal font-text text-lg !px-[20px] !pt-[8px] !pb-[9px] lgw:text-xl lgw:text-[20px]" href="https://clear.bank/begin">
+
+	<span>Begin</span>
+	<span class="btn-dyn__icons !ml-[8px]">
+		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" fill="none">
+  <path d="M15.597 6.78a.9.9 0 0 0-.28-.648L10.182.999C9.98.804 9.77.718 9.55.718c-.5 0-.859.351-.859.828 0 .25.102.46.258.617l1.758 1.781 2.265 2.07-1.812-.109H1.69c-.523 0-.883.36-.883.875 0 .508.36.867.883.867h9.469l1.812-.109-2.265 2.07-1.758 1.782a.86.86 0 0 0-.258.617c0 .476.36.828.86.828a.88.88 0 0 0 .617-.266l5.148-5.148a.896.896 0 0 0 .281-.64Z" fill="currentColor"></path>
+</svg>
+
+		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" fill="none">
+  <path d="M15.597 6.78a.9.9 0 0 0-.28-.648L10.182.999C9.98.804 9.77.718 9.55.718c-.5 0-.859.351-.859.828 0 .25.102.46.258.617l1.758 1.781 2.265 2.07-1.812-.109H1.69c-.523 0-.883.36-.883.875 0 .508.36.867.883.867h9.469l1.812-.109-2.265 2.07-1.758 1.782a.86.86 0 0 0-.258.617c0 .476.36.828.86.828a.88.88 0 0 0 .617-.266l5.148-5.148a.896.896 0 0 0 .281-.64Z" fill="currentColor"></path>
+</svg>
+
+	</span>
+
+	</a>
+																			
+									
+							</li>
+												
+					</ul>
+				</nav>
+			 		</div>
+  </div>
+
+    </div>
+</header>		
+		<main id="main" class="relative">
+			
+	<div class="container pt-[156px] pb-[203px] mdw:pb-[254px] mdw:pt-[196px]">
+					<div class="lg:mb-[16px] w-full max-w-[1395px]">
+				<h1 class="h2 max-w-[403px] lg:max-w-[650px] lgw:max-w-[750px] text-gradient -text-gradient5">It seems we can’t find what you’re looking for.</h1>
+			</div>
+		
+					<div class="w-full max-w-[350px] lg:max-w-[433px] h6 redactor mb-[15px] mdw:mb-[24px]">
+				<p>Go back to the home page to find your way, or perhaps check our <a href="https://clear.bank/newsroom">latest news</a>.</p>
+			</div>
+		
+					<a class="btn -right-arrow -black" href="https://clear.bank/">Back to ClearBank</a>
+			</div>
+
+		</main>
+
+    
+<div class="image-modal js_image-modal backdrop-blur-xl">
+  <div class="container">
+
+  <div class="image-modal__close js-image-modal__close">
+    <svg class="max-w-[48px] max-h-[48px] md:max-h-[60px] md:max-w-[60px] report-icon-close" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="36" cy="36" r="35.5" fill="black" stroke="black"/>
+  <path d="M22.6593 47.4265C22.2023 47.8835 22.1847 48.6394 22.6593 49.0964C23.1339 49.571 23.8898 49.571 24.3468 49.0964L36.0011 37.4597L47.6378 49.0964C48.0949 49.571 48.8683 49.571 49.3253 49.0964C49.7824 48.6394 49.7824 47.8835 49.3253 47.4265L37.671 35.7722L49.3253 24.1179C49.7824 23.6609 49.7999 22.8875 49.3253 22.4304C48.8507 21.9734 48.0949 21.9734 47.6378 22.4304L36.0011 34.0847L24.3468 22.4304C23.8898 21.9734 23.1163 21.9558 22.6593 22.4304C22.2023 22.905 22.2023 23.6609 22.6593 24.1179L34.3136 35.7722L22.6593 47.4265Z" fill="white"/>
+</svg>  </div>
+    <div class="image-modal__slide">
+      <div class="swiper js_slider overflow-hidden z-0 mdw:w-10/12 relative" data-swiper="{&quot;initialSlide&quot;:0,&quot;slidesPerView&quot;:1,&quot;centeredSlides&quot;:false,&quot;effect&quot;:&quot;slide&quot;,&quot;autoplay&quot;:false,&quot;loop&quot;:true,&quot;arrows&quot;:true,&quot;simulateTouch&quot;:false,&quot;allowTouchMove&quot;:false}" data-id="886035163">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+        <!-- Slides -->
+                  </div>
+      </div>
+
+      <div class="navigation relative flex flex-row justify-between">
+        <div class="slide-prev slider-prev-886035163">
+        <svg class="max-w-[40px] max-h-[40px] md:max-h-[72px] md:max-w-[72px]" width="72" height="72" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" fill="none">
+  <circle cx="36" cy="36" r="35.5" transform="rotate(90 36 36)" stroke="#B8B8B8"></circle>
+  <path d="M28.8291 36C28.8291 35.6699 28.9561 35.3779 29.1973 35.1367L39.252 25.3105C39.4805 25.0947 39.7598 24.9678 40.0771 24.9678C40.7373 24.9678 41.2451 25.4629 41.2451 26.123C41.2451 26.4531 41.1182 26.7451 40.915 26.9482L31.6729 36L40.915 45.039C41.1182 45.2549 41.2451 45.5469 41.2451 45.8642C41.2451 46.5244 40.7373 47.0195 40.0771 47.0195C39.7598 47.0195 39.4805 46.8926 39.2646 46.6767L29.1973 36.8506C28.9561 36.6347 28.8291 36.3174 28.8291 36Z" fill="black"></path>
+</svg>
+
+        </div>
+        <div class="slide-next slider-next-886035163">
+        <svg class="max-w-[40px] max-h-[40px] md:max-h-[72px] md:max-w-[72px]" width="72" height="72" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 72 72">
+  <circle cx="36" cy="36" r="35.5" stroke="#b8b8b8" transform="matrix(0 -1 1 0 0 72)"></circle>
+  <path d="m43.1709 36c0 .3301-.127.6221-.3682.8633l-10.0547 9.8262c-.2285.2158-.5078.3427-.8251.3427-.6602 0-1.168-.4951-1.168-1.1552 0-.3301.1269-.6221.3301-.8252l9.2421-9.0518-9.2421-9.039c-.2032-.2159-.3301-.5079-.3301-.8252 0-.6602.5078-1.1553 1.168-1.1553.3173 0 .5966.1269.8125.3428l10.0673 9.8261c.2412.2159.3682.5332.3682.8506z" fill="#000"></path>
+</svg>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  	<div class="subscription-modal js_subscription-modal flex content-end">
+  <div class="subscription-modal__inner rounded-[16px] bg-white p-[20px] mdw:p-[32px]">
+    <div class="subscription-modal__close js-subscription-modal__close">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.36412 28.0537C8.02134 27.7236 8.03404 27.1777 8.36412 26.8477L16.7811 18.4307L8.36412 10.0137C8.03404 9.68359 8.03404 9.1377 8.36412 8.79492C8.69419 8.45215 9.25279 8.46484 9.58287 8.79492L17.9999 17.2119L26.4042 8.79492C26.7342 8.46484 27.2801 8.46484 27.6229 8.79492C27.9657 9.125 27.953 9.68359 27.6229 10.0137L19.2059 18.4307L27.6229 26.8477C27.953 27.1777 27.953 27.7236 27.6229 28.0537C27.2928 28.3965 26.7342 28.3965 26.4042 28.0537L17.9999 19.6494L9.58287 28.0537C9.25279 28.3965 8.70689 28.3965 8.36412 28.0537Z" fill="black"/>
+</svg>
+    </div>
+
+    <div class="subscription-modal__form">
+
+              <h2 class="h4 js-hubspot-text-default">Let’s stay in touch</h2>
+                    <h2 class="h4 js-hubspot-text-success js-hubspot-text-success--hidden">You&#039;re subscribed!</h2>
+      
+            <p class="body1 mt-[16px] text-grey-700 js-hubspot-body js-hubspot-text-default">Subscribe for our insights, news and exclusive events – straight to your inbox</p>
+      
+            <p class="body1 mt-[16px] text-grey-700 js-hubspot-body js-hubspot-text-success js-hubspot-text-success--hidden">Thanks for connecting with us.</p>
+      
+            <p class="body1 mt-[20px] mdw:mt-[32px] custom-submitted-message js-hubspot-body js-hubspot-text-success js-hubspot-text-success--hidden">Keep an eye on your inbox – exciting updates are on their way!</p>
+      
+
+      <div class="mt-[20px] mdw:mt-[32px]">
+        <script charset="utf-8" type="text/javascript" src="https://js-eu1.hsforms.net/forms/embed/v2.js"></script>
+
+        <script>
+          hbspt.forms.create({
+          portalId: "26597044",
+          formId: "d5f98b6a-85bc-4743-92b2-e71e2f5ffab9",
+          region: "eu1",
+          sfdcCampaignId: "",
+          onFormSubmitted: function($form) {
+            let successTexts = document.querySelectorAll('.js-hubspot-text-success');
+            let defaultTexts = document.querySelectorAll('.js-hubspot-text-default');
+            if(defaultTexts.length > 0) {
+              for (let i = 0; i < defaultTexts.length; i++) {
+                defaultTexts[i].classList.add('js-hubspot-text-default--hidden');
+              }
+            }
+            if(successTexts.length > 0) {
+              for (let i = 0; i < successTexts.length; i++) {
+                successTexts[i].classList.remove('js-hubspot-text-success--hidden');
+              }
+            }
+            localStorage.setItem("SubscriptionSubmitted", "true");
+          }
+          });
+        </script>
+      </div>
+    </div>
+
+  </div>
+</div>    
+
+<div class="llp-modal js_llp-modal flex content-end">
+  <div class="llp-modal__inner rounded-[16px] bg-white p-[20px] mdw:p-[40px]">
+    <div class="llp-modal__close js-llp-modal__close">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.36412 28.0537C8.02134 27.7236 8.03404 27.1777 8.36412 26.8477L16.7811 18.4307L8.36412 10.0137C8.03404 9.68359 8.03404 9.1377 8.36412 8.79492C8.69419 8.45215 9.25279 8.46484 9.58287 8.79492L17.9999 17.2119L26.4042 8.79492C26.7342 8.46484 27.2801 8.46484 27.6229 8.79492C27.9657 9.125 27.953 9.68359 27.6229 10.0137L19.2059 18.4307L27.6229 26.8477C27.953 27.1777 27.953 27.7236 27.6229 28.0537C27.2928 28.3965 26.7342 28.3965 26.4042 28.0537L17.9999 19.6494L9.58287 28.0537C9.25279 28.3965 8.70689 28.3965 8.36412 28.0537Z" fill="black"/>
+</svg>
+    </div>
+
+    
+
+    
+    <div class="">
+          </div>
+
+
+  </div>
+</div>
+									
+<footer class="bg-black text-grey-500 pt-[66px] pb-[120px] md:pt-[80px] md:pb-[70px] relative z-[3]">
+	<div class="container">
+		<div class="flex flex-col md:flex-row items-start justify-between mb-12 mdw:mb-16">
+			<svg class="w-full max-w-[158px] mdw:max-w-[232px] text-white mr-[64px] mb-[40px] md:mb-0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 300 49" fill="none">
+  <path d="M150 48.115c2.442 0 4.223-1.782 4.223-4.224 0-2.441-1.781-4.223-4.223-4.223s-4.224 1.782-4.224 4.224c0 2.441 1.782 4.223 4.224 4.223Zm63.088-5.015c-3.365 0-5.873-2.112-5.873-4.752 0-3.3 2.904-4.883 6.599-5.213l9.437-.792v2.838c0 4.025-4.751 7.919-9.503 7.919h-.66Zm-105.917 0c-3.365 0-5.873-2.112-5.873-4.752 0-3.3 2.903-4.883 6.599-5.213l9.437-.792v2.838c0 4.025-4.752 7.919-9.503 7.919h-.66Zm62.891-1.056V26.866h10.954c5.676 0 9.503 2.441 9.503 7.589 0 5.213-3.827 7.589-9.503 7.589h-10.954ZM65.596 28.25c.858-5.147 4.026-8.777 9.701-8.777 5.741 0 8.513 3.63 9.239 8.777h-18.94Zm76.749-13.396c-7.787 0-13.199 5.147-13.199 12.67V47.72h6.27V27.525c0-4.157 2.771-7.06 6.929-7.06h5.081v-5.61h-5.081Zm81.236 27.255v5.61h5.939V26.733c0-6.666-4.883-12.539-13.99-12.539-7.721 0-13.396 4.29-13.924 10.69h6.269c.594-3.43 3.498-5.279 7.523-5.279h.33c4.686 0 7.523 2.574 7.523 7.128v.791l-10.295.858c-5.675.462-12.01 2.772-12.01 10.23 0 5.41 4.685 9.766 11.482 9.766 5.61 0 9.833-3.3 11.153-6.27Zm26.199-27.915c-8.645 0-14.716 5.675-14.716 14.188V47.72h6.269V28.78c0-5.411 3.432-8.975 8.447-8.975 5.015 0 8.447 3.564 8.447 8.975v18.94h6.269V28.383c0-8.513-6.071-14.188-14.716-14.188ZM90.41 37.16h-5.874c-1.386 3.564-4.554 5.94-9.041 5.94-6.137 0-9.437-4.356-10.097-9.965h25.275v-2.178c0-10.097-5.94-16.762-15.244-16.762-9.899 0-16.366 7.721-16.366 17.092 0 9.37 6.467 17.092 16.366 17.092 8.117 0 13.462-4.817 14.98-11.219Zm27.254 4.95v5.61h5.939V26.733c0-6.666-4.883-12.539-13.99-12.539-7.721 0-13.397 4.29-13.924 10.69h6.269c.594-3.43 3.497-5.279 7.523-5.279h.33c4.685 0 7.523 2.574 7.523 7.128v.791l-10.295.858c-5.675.462-12.01 2.772-12.01 10.23 0 5.41 4.685 9.766 11.482 9.766 5.61 0 9.833-3.3 11.153-6.27Zm52.332-20.656V7.464h10.162c5.346 0 8.645 2.31 8.645 7.061 0 4.62-3.299 6.93-8.645 6.93h-10.162Zm-6.27 26.265h18.28c8.909 0 14.914-4.817 14.914-12.802 0-6.666-5.015-10.56-9.371-11.153 4.026-1.188 7.656-4.29 7.656-9.767 0-6.995-5.478-12.208-14.453-12.208h-17.026v45.93Zm121.756-18.61 14.254-14.254h-7.721l-15.706 16.3V1.79h-6.269v45.93h6.269v-9.437l4.949-4.883 11.021 14.32H300l-14.518-18.61ZM54.047 1.79h-6.269v45.93h6.27V1.79ZM0 24.754c0 13.33 10.559 23.625 23.757 23.625 7.787 0 14.584-3.63 18.808-9.239l-4.752-3.761c-3.365 4.289-8.117 7.193-14.056 7.193-9.767 0-17.356-7.985-17.356-17.818 0-9.833 7.59-17.818 17.356-17.818 5.94 0 10.69 2.904 14.056 7.193l4.752-3.761c-4.224-5.61-11.02-9.24-18.808-9.24C10.56 1.129 0 11.424 0 24.755Z" fill="currentColor"></path>
+</svg>
+
+
+							<div class="columns-2 sm:columns-3 gap-x-[27px] md:gap-x-[56px]">
+											                                  <div class="mb-[36px] lg:mb-[40px] break-inside-avoid">
+                    <div class="body1 leading-[1.4] mdw:text-lg text-white mb-1">Products</div>
+                    <ul class="list-reset">
+                                                                                                    <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/accounts">Accounts</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/clearing">Clearing</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/embedded-banking">Embedded Banking</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/explore-our-api">Explore our API</a></li>
+                                                                                            </ul>
+                  </div>
+                								
+																																																													                                  <div class="mb-[36px] lg:mb-[40px] break-inside-avoid">
+                    <div class="body1 leading-[1.4] mdw:text-lg text-white mb-1">Use cases</div>
+                    <ul class="list-reset">
+                                                                                                    <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/use-cases/acquirers">Acquirers</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/use-cases/banks">Banks</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/use-cases/building-societies-and-credit-unions">Building societies and credit unions</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/use-cases/digital-assets">Digital asset platforms</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/use-cases/fintech">Fintechs</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/use-cases/non-bank-financial-institutions">Non-bank financial institutions</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/use-cases/pre-regulated">Pre-regulated firms</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/partners">Partners</a></li>
+                                                                                            </ul>
+                  </div>
+                								
+																																																																																																									                                  <div class="mb-[36px] lg:mb-[40px] break-inside-avoid">
+                    <div class="body1 leading-[1.4] mdw:text-lg text-white mb-1">About</div>
+                    <ul class="list-reset">
+                                                                                                    <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/our-company">Our company</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/join-clearbank">Join ClearBank</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/regulatory-governance">Regulatory and governance</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/report-and-accounts">Reports and accounts</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/press-kit">Press</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/contact-us">Contact us</a></li>
+                                                                                            </ul>
+                  </div>
+                								
+																																																																																			                                  <div class="mb-[36px] lg:mb-[40px] break-inside-avoid">
+                    <div class="body1 leading-[1.4] mdw:text-lg text-white mb-1">Learn</div>
+                    <ul class="list-reset">
+                                                                                                    <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/learn/insights">Insights</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/learn/reports">Reports</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/learn/case-studies">Case studies</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/learn/news">News</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/learn/buyers-guide">Buyer's guide</a></li>
+                                                                                            </ul>
+                  </div>
+                								
+																																																																								                                  <div class="mb-[36px] lg:mb-[40px] break-inside-avoid">
+                    <div class="body1 leading-[1.4] mdw:text-lg text-white mb-1">Follow us</div>
+                    <ul class="list-reset">
+                                                                                                    <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://www.linkedin.com/company/clear.bank">LinkedIn</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://twitter.com/clear_bank">X.com</a></li>
+                                                                                            </ul>
+                  </div>
+                								
+																																							                                  <div class="mb-[36px] lg:mb-[40px] break-inside-avoid">
+                    <div class="body1 leading-[1.4] mdw:text-lg text-white mb-1">Customer support</div>
+                    <ul class="list-reset">
+                                                                                                    <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/legal/how-to-make-a-complaint">How to make a complaint</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/legal/fraud-and-security">Fraud</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/fscs-protection">FSCS protection</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/faqs">FAQs</a></li>
+                                                                                            </ul>
+                  </div>
+                								
+																																																													                                  <div class="mb-[36px] lg:mb-[40px] break-inside-avoid">
+                    <div class="body1 leading-[1.4] mdw:text-lg text-white mb-1">Legal</div>
+                    <ul class="list-reset">
+                                                                                                    <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/legal">Legal</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/data-protection-and-privacy">Data protection and privacy</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/security">Security</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/modern-slavery-statement">Modern slavery statement</a></li>
+                                                                                                        <li class="mb-[8px] lg:mb-[4px] last:mb-0"><a class="body3 text-grey-400 hover:text-white transition" href="https://clear.bank/legal/bcr-commitments">BCR Commitments</a></li>
+                                                                                            </ul>
+                  </div>
+                								
+																																																																								                                  <div class="mb-[36px] lg:mb-[40px] break-inside-avoid hidden md:block">
+                    <div class="body1 leading-[1.4] mdw:text-lg text-white mb-1">Sign up for updates</div>
+                    <ul class="list-reset">
+                                                                                                    <li class="mb-[8px] lg:mb-[4px] last:mb-0">
+                              <button class="btn -right-arrow -white mt-[8px] js-subscription-modal-button" aria-label="subscription modal button">Count me in</button>
+                            </li>
+                                                                                            </ul>
+                  </div>
+                								
+																										</div>
+
+                <div class="columns-1 gap-x-[27px] md:gap-x-[56px] md:hidden mt-[30px]">
+          <div class="mb-[36px] lg:mb-[40px] break-inside-avoid">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="body1 leading-[1.4] mdw:text-lg text-white mb-1">Sign up for updates</div>
+                    <ul class="list-reset">
+                      <li class="mb-[8px] lg:mb-[4px] last:mb-0">
+                        <button class="btn -right-arrow -white mt-[8px] js-subscription-modal-button" aria-label="subscription modal button">Count me in</button>
+                      </li>
+                    </ul>
+                                                                                                </div>
+        </div>
+					</div>
+
+		<div class="w-full max-w-[664px]">
+							<div class="body3 mb-[16px]">Copyright © ClearBank Limited 2026. All rights reserved.</div>
+			
+							<div class="body4 redactor"><p>ClearBank Limited is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority (FRN: 754568). Registered in England and Wales under Company Number 09736376. Registered Address: ClearBank Limited, Level 27, The Broadgate Tower, 20 Primrose Street, London, United Kingdom, EC2A 2EW. <br /> </p><p>ClearBank Limited is a subscriber to the <a href="https://www.wearepay.uk/what-we-do/payment-systems/access-to-payment-systems/code-of-conduct-for-indirect-access-providers/">Code of Conduct for Indirect Access Providers</a> in respect of the indirect access services which it provides to its customers.</p><p>ClearBank Europe N.V. is authorised by the European Central Bank and regulated by De Nederlandsche Bank. ClearBank Europe N.V. is registered at the Chamber of Commerce Amsterdam Trade Registry under number 89463366. Registered address: ClearBank Europe N.V., Stadhouderskade 85, 1073 AT Amsterdam, The Netherlands. VAT ID is NL864989829B01.</p><p>ClearBank Group Holdings Limited is a Prudential Regulation Authority approved parent holding company (FRN: 987231). Registered in England and Wales under Company Number 14254435. Registered Address: ClearBank Group Holdings Limited, Level 27, The Broadgate Tower, 20 Primrose Street, London, United Kingdom, EC2A 2EW. <br /> </p></div>
+					</div>
+	</div>
+</footer>					
+				<div 
+			x-cloak
+			x-data="{ show: false }"
+			@effect-menu.window="show = event.detail.state"
+			class="hidden mdw:block fixed inset-0 h-screen w-screen backdrop-blur-xl transition-all duration-200 ease-in-out z-[2]"
+			:class="{
+				'bg-grey-200/50 opacity-0 pointer-events-none': !show,
+				'bg-grey-200/50 opacity-100 pointer-events-auto': show,
+			}"
+		></div>
+
+				<div
+			x-cloak
+			x-data="{
+				show: false,
+				content: '',
+			}"
+			@modal-drawer.window="() => {
+				show = true
+				content = $event.detail.content
+			}"
+			@click.away="() => {
+				show = false
+			}"
+			x-init="$watch('show', (state) => {
+				if(state) {
+					window.scrollBy(0,1) // Make sure site header isn't visible
+					document.documentElement.style.overflow = 'hidden'
+				}
+				else {
+					$el.scrollTop = 0
+					document.documentElement.style.overflow = ''
+					$dispatch('effect-menu', { state: false })
+				}
+			})"
+			x-show="show"
+			x-transition:enter="transform transition ease-in-out duration-[150ms]]"
+			x-transition:enter-start="opacity-0 translate-x-[40px]"
+			x-transition:enter-end="opacity-100 translate-x-[0]"
+			x-transition:leave="transform transition ease-in-out duration-[150ms]]"
+			x-transition:leave-start="opacity-100 translate-x-[0]"
+			x-transition:leave-end="opacity-0 translate-x-[40px]"
+			class="fixed top-0 bottom-0 right-0 bg-white mdw:rounded-l-[30px] w-full mdw:max-w-[800px] xl:max-w-[1155px] z-[30] overflow-auto"
+		>
+			<div class="px-[20px] py-[40px] mdw:p-16">
+				<button 
+					@click="show = false"
+					class="w-[48px] h-[48px] mdw:w-[60px] mdw:h-[60px] flex items-center justify-center rounded-full bg-black text-white group mb-[40px] hover:bg-teal-dark"
+				>
+					<svg class="w-[18px] h-[18px] transform group-hover:rotate-90 duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 29">
+  <path d="M.804 26.427c-.457.457-.475 1.213 0 1.67.474.474 1.23.474 1.687 0L14.146 16.46l11.636 11.637c.457.474 1.23.474 1.688 0a1.188 1.188 0 0 0 0-1.67L15.816 14.773 27.47 3.118c.457-.457.475-1.23 0-1.687-.475-.457-1.23-.457-1.688 0L14.146 13.085 2.49 1.431c-.457-.457-1.23-.475-1.687 0-.457.474-.457 1.23 0 1.687l11.654 11.655L.804 26.427Z" fill="currentColor"></path>
+</svg>
+
+				</button>
+				<div 
+					x-html="content"
+					class=" w-full max-w-[727px]"
+				></div>
+			</div>
+		</div>
+
+    
+		
+        
+					<div id="d9leQu_yRrKH5IPu9QvGCL4ntnxOUWr1gdPQruMLaAxU"></div>
+      						<script>
+				if(!localStorage.getItem('allowCookies') && typeof d365mktConfigureTracking === 'function') {
+					function d365mktConfigureTracking() {
+						return {Anonymize: true};
+					}
+				}
+			</script>
+		
+		<script src="/assets/main.min.js?id=e07e18cb4f08834e28e60043308effff"></script>
+
+					<!-- Start of HubSpot Embed Code --> <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/26597044.js"></script> <!-- End of HubSpot Embed Code -->
+
+
+<script>
+ // Listen for successful form submission
+ window.addEventListener('hs-form-event:on-submission:success', async (event) => {
+   if (window.HubSpotFormsV4) {
+     const form = window.HubSpotFormsV4.getFormFromEvent(event);
+     const rawValues = await form.getFormFieldValues();
+    
+     // Clean up field names (HubSpot adds prefixes like "0-1/")
+     const data = {};
+     rawValues.forEach(field => {
+       const name = field.name.includes('/') ? field.name.split('/').pop() : field.name;
+       data[name] = field.value;
+     });
+    
+     // Send to AISeller
+     if (window.AISeller?.setContext) {
+       await window.AISeller.setContext(data);
+       console.log(data);
+     }
+   }
+ });
+</script>
+
+<script>
+function callWidget(action = 'showAndConnect') {
+ // Input validation
+ if (typeof action !== 'string') {
+   return false;
+ }
+
+ const windowWithAISeller = window;
+ const { AISeller } = windowWithAISeller;
+
+
+ if (!AISeller) {
+   return false;
+
+ }
+
+
+ try {
+   // Handle function-based AISeller (fully loaded)
+   if (typeof AISeller === 'function') {
+     if (typeof AISeller[action] === 'function') {
+       AISeller[action]();
+       return true;
+     } else {
+       AISeller(action);
+       return true;
+     }
+   }
+
+
+   // Handle object-based AISeller
+   if (typeof AISeller === 'object') {
+     // Queue-based (still loading)
+     if (Array.isArray(AISeller.q)) {
+       AISeller.q.push([action]);
+       return true;
+     }
+
+
+     // Direct method call
+     if (typeof AISeller[action] === 'function') {
+       AISeller[action]();
+       return true;
+
+     }
+
+
+     // Action not found
+     return false;
+
+   }
+
+
+   // Unexpected AISeller type
+   return false;
+
+ } catch (error) {
+   return false;
+ }
+}
+</script>
+			<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","author":{"@id":"https://clear.bank/#identity"},"copyrightHolder":{"@id":"https://clear.bank/#identity"},"creator":{"@id":"#creator"},"description":"Go back to the home page to find your way, or perhaps check our latest news .","image":{"@type":"ImageObject","url":"https://clear.bank/uploads/images/In-page-images/_1200x630_fit_center-center_82_none/ClearBank_LinkedIn.png?mtime=1703852965"},"mainEntityOfPage":"https://clear.bank/","name":"Accounts, Clearing and Embedded Banking for financial institutions","url":"https://clear.bank/"},{"@id":"https://clear.bank/#identity","@type":"LocalBusiness","address":{"@type":"PostalAddress","addressCountry":"United Kingdom","addressRegion":"London","postalCode":"SE1 9PA","streetAddress":"13 Dirty Lane"},"alternateName":"ClearBank","image":{"@type":"ImageObject","height":"438","url":"https://clear.bank/uploads/ClearBank.png","width":"1000"},"logo":{"@type":"ImageObject","height":"60","url":"https://clear.bank/uploads/_600x60_fit_center-center_82_none/ClearBank.png?mtime=1769702518","width":"137"},"name":"ClearBank","priceRange":"$","url":"https://clear.bank/"},{"@id":"#creator","@type":"Organization"}]}</script></body>
+</html>

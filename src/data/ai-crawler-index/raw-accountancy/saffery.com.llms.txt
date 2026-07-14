@@ -1,0 +1,1256 @@
+<!doctype html>
+
+
+<html lang="en-GB">
+    <head>
+    <meta charset="utf-8">
+<script>
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+</script>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name='robots' content='noindex, follow' />
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v27.8 (Yoast SEO v27.8) - https://yoast.com/product/yoast-seo-premium-wordpress/ -->
+	<title>Page not found - Saffery</title>
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:title" content="Page not found - Saffery" />
+	<meta property="og:site_name" content="Saffery" />
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.google.com' />
+		<style>
+			.lazyload,
+			.lazyloading {
+				max-width: 100%;
+			}
+		</style>
+		    <script>
+        function cmplzCallClarity(method, params) {
+            if (typeof window.clarity === 'function') {
+                try {
+                    window.clarity(method, params);
+                } catch (e) {
+                    console.warn('Clarity API error:', e);
+                }
+            }
+        }
+
+        function cmplzGetConsentFromEvent(e) {
+            var d = e && e.detail && e.detail.categories ? e.detail.categories : [];
+            var categories = Array.isArray(d) ? d : [];
+
+            return {
+                analyticsAllowed: categories.indexOf('statistics') !== -1,
+                adsAllowed: categories.indexOf('marketing') !== -1
+            };
+        }
+
+        function cmplzSendClarityConsent(analyticsAllowed, adsAllowed) {
+            var status = function (b) { return b ? "granted" : "denied"; };
+            cmplzCallClarity('consentv2', {
+                analytics_Storage: status(!!analyticsAllowed),
+                ad_Storage: status(!!adsAllowed)
+            });
+        }
+
+        function cmplzEraseClarityCookies() {
+            cmplzCallClarity('consent', false);
+        }
+
+        document.addEventListener('cmplz_fire_categories', function (e) {
+            var consent = cmplzGetConsentFromEvent(e);
+            cmplzSendClarityConsent(consent.analyticsAllowed, consent.adsAllowed);
+        });
+
+        document.addEventListener('cmplz_revoke', function (e) {
+            var consent = cmplzGetConsentFromEvent(e);
+            cmplzSendClarityConsent(consent.analyticsAllowed, consent.adsAllowed);
+            if (!consent.analyticsAllowed && !consent.adsAllowed) {
+                cmplzEraseClarityCookies();
+            }
+        });
+
+    </script>
+    <style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='cmplz-general-css' href='https://www.saffery.com/app/plugins/complianz-gdpr-premium-multisite/assets/css/cookieblocker.min.css?ver=1780307461' media='all' />
+<link rel='stylesheet' id='ultimate/css-css' href='https://www.saffery.com/app/themes/saffery/dist/styles/main.css?id=6515dbe901bfb5f6b5de3865464b2423' media='all' />
+<script id="jquery-core-js" src="https://www.saffery.com/cms/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+		<script type="text/javascript">
+			(function(c, l, a, r, i, t, y) {
+				c[a] = c[a] || function() {
+					(c[a].q = c[a].q || []).push(arguments)
+				};
+				t = l.createElement(r);
+				t.async = 1;
+				t.src = "https://www.clarity.ms/tag/" + i + "?ref=wordpress";
+				y = l.getElementsByTagName(r)[0];
+				y.parentNode.insertBefore(t, y);
+			})(window, document, "clarity", "script", "frylkksko7");
+		</script>
+				<style>.cmplz-hidden {
+					display: none !important;
+				}</style>		<script>
+			document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+		</script>
+				<style>
+			.no-js img.lazyload {
+				display: none;
+			}
+
+			figure.wp-block-image img.lazyloading {
+				min-width: 150px;
+			}
+
+			.lazyload,
+			.lazyloading {
+				--smush-placeholder-width: 100px;
+				--smush-placeholder-bg-max-width: 120px;
+				--smush-placeholder-aspect-ratio: 1/1;
+				width: var(--smush-image-width, var(--smush-placeholder-width)) !important;
+				aspect-ratio: var(--smush-image-aspect-ratio, var(--smush-placeholder-aspect-ratio)) !important;
+			}
+
+						.lazyload, .lazyloading {
+				opacity: 0;
+			}
+
+			.lazyloaded {
+				opacity: 1;
+				transition: opacity 400ms;
+				transition-delay: 0ms;
+			}
+
+					</style>
+		
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=rsk">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=rsk">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=rsk">
+    <link rel="manifest" href="/favicon/site.webmanifest?v=rsk">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=rsk" color="#02b9b8">
+    <link rel="shortcut icon" href="/favicon/favicon.ico?v=rsk">
+    <meta name="msapplication-TileColor" content="#003d40">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=rsk">
+    <meta name="theme-color" content="#003d40">
+
+    
+<!-- Schema & Structured Data For WP v1.60 - -->
+<script type="application/ld+json" class="saswp-schema-markup-output">
+[{"@context":"https:\/\/schema.org\/","@graph":[{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#accounting","name":"Accounting","url":"https:\/\/www.saffery.com\/our-services\/accounting-services\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#audit-and-assurance","name":"Audit and assurance","url":"https:\/\/www.saffery.com\/our-services\/audit-and-assurance\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#business-advisory","name":"Business advisory","url":"https:\/\/www.saffery.com\/our-services\/business-advisory-services\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#cloud-accounting","name":"Cloud accounting","url":"https:\/\/www.saffery.com\/our-services\/cloud-accounting-services\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#forensic-and-litigation-services","name":"Forensic and litigation services","url":"https:\/\/www.saffery.com\/our-services\/forensic-litigation-services\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#outsourcing","name":"Outsourcing","url":"https:\/\/www.saffery.com\/our-services\/outsourcing-services\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#payroll","name":"Payroll","url":"https:\/\/www.saffery.com\/our-services\/payroll-services\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#sustainability-and-esg","name":"Sustainability and ESG","url":"https:\/\/www.saffery.com\/our-services\/sustainability-and-esg-services\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#tax","name":"Tax","url":"https:\/\/www.saffery.com\/our-services\/tax-services\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#transaction-services","name":"Transaction services","url":"https:\/\/www.saffery.com\/our-services\/transaction-services\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#trusts","name":"Trusts","url":"https:\/\/www.saffery.com\/our-services\/trusts-services\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#valuation-services","name":"Valuation services","url":"https:\/\/www.saffery.com\/our-services\/valuation-services\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#vat","name":"VAT","url":"https:\/\/www.saffery.com\/our-services\/vat-services\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#charities-and-not-for-profits","name":"Charities and not-for-profits","url":"https:\/\/www.saffery.com\/our-sectors\/charity-not-for-profit-services\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#crypto-and-digital-assets","name":"Crypto and digital assets","url":"https:\/\/www.saffery.com\/our-sectors\/crypto-digital-assets\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#entrepreneurs","name":"Entrepreneurs","url":"https:\/\/www.saffery.com\/our-sectors\/entrepreneurs\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#family-office","name":"Family office","url":"https:\/\/www.saffery.com\/our-sectors\/family-office\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#film-tv-and-video-games","name":"Film, TV and video games","url":"https:\/\/www.saffery.com\/our-sectors\/film-tv-and-video-games\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#financial-services","name":"Financial services","url":"https:\/\/www.saffery.com\/our-sectors\/financial-services\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#food-and-drink","name":"Food and drink","url":"https:\/\/www.saffery.com\/our-sectors\/food-drink\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#hospitality-and-leisure","name":"Hospitality and leisure","url":"https:\/\/www.saffery.com\/our-sectors\/hospitality-leisure\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#international","name":"International","url":"https:\/\/www.saffery.com\/our-sectors\/international\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#landed-estates-and-rural-businesses","name":"Landed estates and rural businesses","url":"https:\/\/www.saffery.com\/our-sectors\/landed-estates-and-rural-businesses\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#life-sciences","name":"Life sciences","url":"https:\/\/www.saffery.com\/our-sectors\/life-sciences\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#manufacturing","name":"Manufacturing","url":"https:\/\/www.saffery.com\/our-sectors\/manufacturing\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#private-wealth","name":"Private wealth","url":"https:\/\/www.saffery.com\/our-sectors\/private-wealth\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#professional-practices","name":"Professional practices","url":"https:\/\/www.saffery.com\/our-sectors\/professional-practices\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#real-estate","name":"Real estate","url":"https:\/\/www.saffery.com\/our-sectors\/real-estate\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#recruitment-and-executive-search-businesses","name":"Recruitment and executive search businesses","url":"https:\/\/www.saffery.com\/our-sectors\/recruitment-executive-search-businesses-accountants\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#retail","name":"Retail","url":"https:\/\/www.saffery.com\/our-sectors\/retail\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#sports-and-entertainment","name":"Sports and entertainment","url":"https:\/\/www.saffery.com\/our-sectors\/sports-entertainment-accountancy-services\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#spotlight-topics","name":"Spotlight topics","url":"https:\/\/www.saffery.com\/insights\/spotlight-topics\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#business-advisory","name":"Business advisory","url":"https:\/\/www.saffery.com\/insights\/tag\/business-advisory\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#corporate-tax","name":"Corporate tax","url":"https:\/\/www.saffery.com\/insights\/tag\/corporate-tax\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#family-wealth","name":"Family wealth","url":"https:\/\/www.saffery.com\/insights\/tag\/family-wealth\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#land-and-rural","name":"Land and rural","url":"https:\/\/www.saffery.com\/insights\/tag\/land-and-rural\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#not-for-profit","name":"Not-for-profit","url":"https:\/\/www.saffery.com\/insights\/tag\/not-for-profit\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#personal-tax","name":"Personal tax","url":"https:\/\/www.saffery.com\/insights\/tag\/personal-tax\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#sustainability-and-esg","name":"Sustainability and ESG","url":"https:\/\/www.saffery.com\/insights\/tag\/sustainability-and-esg\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#vat","name":"VAT","url":"https:\/\/www.saffery.com\/insights\/tag\/vat\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#events","name":"Events","url":"https:\/\/www.saffery.com\/insights\/.\/events\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#news","name":"News","url":"https:\/\/www.saffery.com\/insights\/.\/news\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#podcasts","name":"Podcasts","url":"https:\/\/www.saffery.com\/podcasts\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#case-studies","name":"Case studies","url":"https:\/\/www.saffery.com\/insights\/.\/case-studies\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#stay-informed","name":"Stay informed","url":"https:\/\/www.saffery.com\/stay-informed\/"},{"@context":"https:\/\/schema.org\/","@type":"SiteNavigationElement","@id":"https:\/\/www.saffery.com\/#contact-us","name":"Contact us","url":"https:\/\/www.saffery.com\/contact-us\/"}]},
+
+{"@context":"https:\/\/schema.org\/","@type":"Person","name":"annakleinman","url":"","sameAs":[],"image":{"@type":"ImageObject","url":"https:\/\/secure.gravatar.com\/avatar\/ac7049ae5216e855bcb866b3147c3fef024165efdd35c76931a763c4cda97fbd?s=96&r=g","height":96,"width":96},"address":{"@type":"PostalAddress"}},
+
+{"@context":"https:\/\/schema.org\/","@type":"FAQPage","@id":"FAQ","headline":"FAQ","keywords":"Personal tax, ","datePublished":"2025-06-18T00:00:00Z","dateModified":"2025-06-18T00:00:00Z","dateCreated":"2025-06-18T00:00:00Z","author":{"@type":"Organization","name":"Saffery LLP","description":"Partner-led and people-focused, Saffery is a firm of chartered accountants, providing tax and business advice to companies, partnerships, individuals, and not-for-profit organisations.","url":"https:\/\/www.saffery.com\/","image":{"@type":"ImageObject","url":"https:\/\/media.saffery.com\/sf-content\/uploads\/2025\/06\/SFY-001-Logo-Positive-Digital-1-scaled.jpg"}},"mainEntity":[{"@type":"Question","name":"What are the office opening hours?","acceptedAnswer":{"@type":"Answer","text":"Our offices are open from 9.00am to 5.00pm, Monday to Friday"}}],"image":[{"@type":"ImageObject","@id":"https:\/\/www.saffery.com\/insights\/articles\/temporary-repatriation-facility-trf-how-it-works-and-what-to-include-in-your-2025-26-tax-return\/#primaryimage","url":"https:\/\/media.saffery.com\/sf-content\/uploads\/2026\/07\/Temporary-Repatriation-Facility-thumbnail-1200x900.jpg","width":"1200","height":"900","caption":"A professional considers benefits of the Temporary Repatriation Facility"},{"@type":"ImageObject","url":"https:\/\/media.saffery.com\/sf-content\/uploads\/2026\/07\/Temporary-Repatriation-Facility-thumbnail-1200x900.jpg","width":"1200","height":"900","caption":"A professional considers benefits of the Temporary Repatriation Facility"},{"@type":"ImageObject","url":"https:\/\/media.saffery.com\/sf-content\/uploads\/2026\/07\/Temporary-Repatriation-Facility-thumbnail-1200x675.jpg","width":"1200","height":"675","caption":"A professional considers benefits of the Temporary Repatriation Facility"},{"@type":"ImageObject","url":"https:\/\/media.saffery.com\/sf-content\/uploads\/2026\/07\/Temporary-Repatriation-Facility-thumbnail-680x680.jpg","width":"680","height":"680","caption":"A professional considers benefits of the Temporary Repatriation Facility"}]},
+
+{"@context":"https:\/\/schema.org\/","@type":"Corporation","@id":"https:\/\/www.saffery.com#Organization","name":"Saffery","url":"https:\/\/www.saffery.com","sameAs":["https:\/\/uk.linkedin.com\/company\/saffery","https:\/\/www.instagram.com\/saffery_uk\/"],"legalName":"Saffery LLP","logo":{"@type":"ImageObject","url":"https:\/\/media.saffery.com\/sf-content\/uploads\/2025\/06\/SFY-001-Logo-Positive-Digital-scaled.jpg","width":"2048","height":"490"},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","telephone":"+44 330 094 3384","url":"https:\/\/www.saffery.com\/contact-us\/"},"address":{"streetAddress":"71 Queen Victoria Street","addressLocality":"London","addressCountry":"UK","postalCode":"EC4V 4BE","telephone":"0330 094 3384","email":"info@saffery.com"},"memberOf":"Nexia","image":[{"@type":"ImageObject","@id":"https:\/\/www.saffery.com\/insights\/articles\/temporary-repatriation-facility-trf-how-it-works-and-what-to-include-in-your-2025-26-tax-return\/#primaryimage","url":"https:\/\/media.saffery.com\/sf-content\/uploads\/2026\/07\/Temporary-Repatriation-Facility-thumbnail-1200x900.jpg","width":"1200","height":"900","caption":"A professional considers benefits of the Temporary Repatriation Facility"},{"@type":"ImageObject","url":"https:\/\/media.saffery.com\/sf-content\/uploads\/2026\/07\/Temporary-Repatriation-Facility-thumbnail-1200x900.jpg","width":"1200","height":"900","caption":"A professional considers benefits of the Temporary Repatriation Facility"},{"@type":"ImageObject","url":"https:\/\/media.saffery.com\/sf-content\/uploads\/2026\/07\/Temporary-Repatriation-Facility-thumbnail-1200x675.jpg","width":"1200","height":"675","caption":"A professional considers benefits of the Temporary Repatriation Facility"},{"@type":"ImageObject","url":"https:\/\/media.saffery.com\/sf-content\/uploads\/2026\/07\/Temporary-Repatriation-Facility-thumbnail-680x680.jpg","width":"680","height":"680","caption":"A professional considers benefits of the Temporary Repatriation Facility"}]},
+
+{"@context":"https:\/\/schema.org\/","@type":"Article","@id":"https:\/\/www.saffery.com\/insights\/articles\/temporary-repatriation-facility-trf-how-it-works-and-what-to-include-in-your-2025-26-tax-return\/Saffery","url":"https:\/\/www.saffery.com\/insights\/articles\/temporary-repatriation-facility-trf-how-it-works-and-what-to-include-in-your-2025-26-tax-return\/","inLanguage":"en-GB","mainEntityOfPage":"https:\/\/www.saffery.com\/insights\/articles\/temporary-repatriation-facility-trf-how-it-works-and-what-to-include-in-your-2025-26-tax-return\/","headline":"Temporary Repatriation Facility (TRF): how it works and what to include in your 2025-26 tax return","description":"Explore the UK Temporary Repatriation Facility (TRF): reduced tax rates, eligibility, and how to remit offshore income and gains from 2025\u20132028.","articleBody":"What is the Temporary Repatriation Facility (TRF)? A UK tax opportunity for offshore funds\r\nThe Temporary Repatriation Facility (TRF) gives some individuals a limited opportunity to bring historic foreign income and gains into the UK at a reduced tax rate.\r\n\r\nIf you have previously used the remittance basis and still hold funds offshore, the TRF may be relevant. However, it is not automatic. Whether it applies and the tax position will depend on decisions made now and what is included in your tax returns.\r\nTemporary Repatriation Facility (TRF): key rules, rates and eligibility (2025-2028)\r\nThe Temporary Repatriation Facility (TRF) allows a person who has previously claimed the remittance basis, who is a UK tax resident, to remit previously accrued foreign income and gains (FIG) to the UK after 5 April 2025 at a reduced rate. The relief is available for three tax years.\r\n\r\nTo use the TRF, you must \u2018designate\u2019 in your tax return the amount of FIG on which you want to pay the TRF charge.\r\n\r\nDesignations made in 2025-26 and 2026-27 will be taxed at a flat rate of 12%, with the rate rising to 15% for designations made in 2027-28.\r\n\r\nOnce an amount has been designated and the tax paid, it can be brought to the UK without further UK tax. Taxpayers can, therefore, make designations in respect of amounts they wish to remit in the future. The taxpayer will not need to declare remittances of designated FIG made in subsequent years.\r\n\r\nIf a remittance does arise in a tax year, the amount must be designated in the same or an earlier tax year to ensure the TRF rates apply.\r\nTemporary Repatriation Facility (TRF): at a glance\r\nTax rates\r\n\r\n \t12% in 2025-26 and 2026-27\r\n \t15% in 2027-28\r\n\r\nWho can use it\r\n\r\n \tIndividuals who previously used the remittance basis and are UK resident in the year of claim\r\n\r\nTime limit\r\n\r\n \tAvailable for three tax years from 6 April 2025 to 5 April 2028\r\n\r\nRemittances\r\n\r\n \tAmounts do not need to be brought to the UK in the same year they are designated\r\n\r\nWhat qualifies for the TRF? Foreign income and gains you can designate\r\nThe rules refer to \u2018qualifying overseas capital\u2019. In simple terms, this means FIG that:\r\n\r\n \tArose before 6 April 2025,\r\n \tWere not taxed in the UK because the remittance basis applied, and\r\n \tCould otherwise be taxable if brought to the UK.\r\n\r\nIn practice, this may include:\r\n\r\n \tCash held offshore\r\n \tForeign income and gains used to acquire investments or other assets\r\n \tAmounts where the original source is uncertain\r\n \tSpecific offshore trust distributions\r\n\r\nYou do not have to include everything. Deciding what to designate, and when, will often depend on the nature of the funds and your wider tax position.\r\nHow to report TRF in your 2025-26 UK tax return\r\nWhy your 2025-26 return is critical for TRF claims\r\nThe TRF is claimed through the self-assessment tax return. It does not apply unless an election is made.\r\n\r\nFor 2025-26 the self-assessment tax return filing deadline is 31 January 2027 (for online returns).\r\n\r\nWhile amendments may be possible until 12 months after the filing deadline, getting the position right in the original return is usually preferable.\r\nTRF on SA109 tax return pages: boxes 50-54 explained\r\nThe 2025-26 Residence and foreign income and gains (FIG) regime etc (SA109) pages include specific boxes for TRF claims:\r\n\r\nBox 50 \u2013 confirms that a TRF election is being made\r\n\r\nBox 51 \u2013 amounts designated from personal foreign income and gains\r\n\r\nBox 52 \u2013 amounts designated from trust distributions\r\n\r\nBox 53 \u2013 amounts designated that have been brought to the UK in the tax year\r\n\r\nAdditional detail will often be needed to explain how amounts have been calculated.\r\nWhat does \u2018designation\u2019 mean under the TRF? Practical examples\r\nTo use the TRF you must designate an amount in your tax return.\r\n\r\nIn practical terms, this means:\r\n\r\n \tIdentifying an amount of pre-6 April 2025 FIG (or an amount where the source is uncertain and it is to be treated as pre-6 April 2025 FIG), and\r\n \tIncluding that amount in the return in the relevant box or boxes so it is taxed at the reduced rate.\r\n\r\nThe return must show the total amount designated and, separately, any part of that amount that has already been brought to the UK.\r\nTRF reporting: what to include in \u2018any other information\u2019 (Box 54)\r\nThe detail included in the \u201cAny other information\u201d box (box 54) is likely to be important to ensure the tax return is correct, compliance obligations are met and to reduce the possibility of an HMRC enquiry.\r\n\r\nHMRC guidance indicates that further detail needed here may be:\r\n\r\n \tDetails of funds or accounts being designated\r\n \tExplanations of partial designations\r\n \tAnalysis supporting trust matching\r\n \tConfirmation of how remittances relate to designated amounts\r\n \tNotification of any TRF capital account\r\n\r\nEven where this information is not included in the return, records must be retained to support the position taken.\r\nTRF checklist: key steps before filing your tax return\r\nIdentifying historic funds for TRF\r\nThe starting point is understanding what funds exist and where they came from.\r\n\r\nThis may involve:\r\n\r\n \tReviewing offshore bank accounts\r\n \tTracing movements over time\r\n \tDistinguishing income, gains and capital\r\n \tReconstructing records where these are incomplete\r\n\r\nThis can take time, particularly where funds have been held for many years.\r\nMixed funds and TRF\r\nMixed funds are common and remain an area where care is needed.\r\n\r\nThe TRF introduces some helpful rules, such that amounts which are designated are treated as being remitted before other amounts, but detailed analysis may still be required. In some cases, it may also be worth considering whether to use a separate TRF capital account to track designated funds more clearly.\r\nTRF exchange rates\r\nThe TRF uses exchange rates at the start of the tax year, rather than the date funds are brought to the UK.\r\nHow to pay TRF tax without triggering a taxable remittance\r\nCare is also needed when paying the TRF charge. Using un-designated foreign income or gains to pay the tax can itself create a taxable remittance. Planning how the tax will be funded should therefore be part of the initial analysis.\r\nTRF and offshore trusts\r\nThe TRF applies to individuals, but it can also be relevant where offshore trusts are involved.\r\n\r\nDistributions received during the TRF period may, in some cases, be matched to pre\u20116 April 2025 income or gains and be brought within the TRF.\r\nWhy TRF is more complex for offshore trusts\r\nFor offshore trust structures, additional issues arise, including:\r\n\r\n \tWhether the beneficiary qualifies\r\n \tHow distributions are matched to underlying income or gains\r\n \tWhether more than one designation may be required\r\n \tWhether a separate calculation is needed for TRF purposes\r\n\r\nTiming may also be important. The timing of distributions can affect whether the TRF is available and the rate that applies.\r\nTRF compliance checklist: step-by-step guide for 2025-26\r\n\r\n \tIdentify relevant funds\r\n \tAnalyse what qualifies for the TRF\r\n \tDecide what to designate\r\n \tPlan how the tax will be paid\r\n \tComplete the tax return\r\n \tKeep records\r\n\r\nTemporary Repatriation Facility (TRF): why you should take advice now\r\nThe TRF runs until April 2028, but decisions for 2025-26 need to be considered ahead of the filing deadlines.\r\n\r\nFor many individuals, this is a one-off opportunity and may form part of a broader review of historic transactions and future plans.\r\nHow Saffery\u2019s international private client team can help with TRF\r\nMany of our clients have international tax issues. They may be arriving in or leaving the UK, may have previously used the remittance basis, or may hold overseas investments, businesses or trust interests.\r\n\r\nWe can help with:\r\n\r\n \tIdentifying which funds qualify for the TRF\r\n \tReviewing offshore accounts and mixed funds\r\n \tAdvising on what to designate and when\r\n \tConsidering the position for offshore trusts\r\n \tPreparing tax returns, including the Residence and foreign income and gains (FIG) regime etc (SA109) pages\r\n \tManaging HMRC compliance risk\r\n\r\nWe also advise internationally mobile individuals on wider structuring and planning, including steps that may be worth considering before arriving in or leaving the UK.\r\n\r\nWhere appropriate, we work with overseas advisers to ensure cross\u2011border issues are properly managed.\r\n\r\nIf you would like to discuss the Temporary Repatriation Facility (TRF), please speak to your usual Saffery contact or get in touch with Alexandra Britton-Davis.","datePublished":"2026-07-14T11:45:15+01:00","dateModified":"2026-07-14T11:46:27+01:00","author":{"@type":"Person"},"editor":{"@type":"Person","name":"annakleinman","url":"https:\/\/www.saffery.com\/insights\/author\/annakleinman\/","sameAs":[],"image":{"@type":"ImageObject","url":"https:\/\/secure.gravatar.com\/avatar\/ac7049ae5216e855bcb866b3147c3fef024165efdd35c76931a763c4cda97fbd?s=96&r=g","height":96,"width":96}},"keywords":"Personal tax, ","publisher":{"@type":"Organization","name":"Saffery","url":"https:\/\/www.saffery.com","logo":{"@type":"ImageObject","url":"https:\/\/media.saffery.com\/sf-content\/uploads\/2025\/06\/SFY-001-Logo-Positive-Digital-scaled.jpg","width":2048,"height":490}},"comment":null,"image":{"@type":"ImageObject","url":"https:\/\/media.saffery.com\/sf-content\/uploads\/2026\/07\/Temporary-Repatriation-Facility-thumbnail.jpg","width":680,"height":510},"articleSection":["Articles"]}]
+</script>
+
+<link rel='stylesheet' id='gform_basic-css' href='https://www.saffery.com/app/plugins/gravityforms/assets/css/dist/basic.min.css?ver=2.10.3' media='all' />
+<link rel='stylesheet' id='gform_theme_components-css' href='https://www.saffery.com/app/plugins/gravityforms/assets/css/dist/theme-components.min.css?ver=2.10.3' media='all' />
+<link rel='stylesheet' id='gform_theme-css' href='https://www.saffery.com/app/plugins/gravityforms/assets/css/dist/theme.min.css?ver=2.10.3' media='all' />
+
+</head>
+    <body data-cmplz=1 class="error404 wp-theme-saffery saffery-body">
+        <header class="header saf-nav__header" id="navigation">
+
+    <div class="position-relative">
+        <div class="saf-nav">
+            <!-- International Section of Nav -->
+                            <div class="saf-nav__int d-none d-lg-block">
+                    <div class="container d-flex flex-row justify-content-end position-relative">
+
+                        <div class="saf-nav__item-wrapper position-relative">
+
+                            
+                            <span class="saf-nav__item saf-nav__item-int-active">Saffery</span>
+
+                            <span class="saf-nav__item saf-nav__item-panel" data-text="International" id="saf-nav__menu-panel--101" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-menu="saf-nav__menu-panel--101">
+                                Locations
+                                <span class="saf-nav__item-drop-icon"></span>
+                            </span>
+                            <div class="dropdown-menu dropdown-menu-right saf-nav__menu-panel--dropdown" aria-labelledby="saf-nav__menu-panel--101">
+                                                                                                            <div class="saf-nav__item-wrapper">
+                                            <a href="https://www.saffery.com/" class="saf-nav__item saf-nav__item--primary" data-text="United Kingdom">
+                                                United Kingdom                                            </a>
+                                        </div>
+                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                            <a href="https://www.saffery.com/ie/" class="saf-nav__item saf-nav__item--primary" data-text="Ireland">
+                                                Ireland                                            </a>
+                                        </div>
+                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                            <a href="https://www.nexiasaffery.com/" class="saf-nav__item saf-nav__item--primary" data-text="Nexia">
+                                                Nexia                                            </a>
+                                        </div>
+                                                                                                </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            
+            <!-- Top Section of Nav -->
+            <div class="saf-nav__top">
+                <div class="container d-flex flex-row px-20 px-lg-10 position-relative">
+
+                    <!-- Logo -->
+                    <a href="https://www.saffery.com" class="saf-nav__logo">
+                        <img src="https://www.saffery.com/app/themes/saffery/dist/images/Saffery-Logo-Positive.svg" alt="Saffery" no-lazy>
+                    </a>
+
+                    <!-- Primary Nav links with Search Trigger -->
+                    <div class="saf-nav__secondary ml-auto d-none d-lg-flex align-items-lg-center justify-content-lg-end">
+                                                                                                                    <a href="https://www.saffery.com/about-us/" data-text="About us" class="saf-nav__item">About us</a>
+                                                                                            <a href="/our-people/" data-text="Our people" class="saf-nav__item">Our people</a>
+                                                                                            <a href="/offices/" data-text="Offices" class="saf-nav__item">Offices</a>
+                                                                                            <a href="https://www.saffery.com/careers/" data-text="Careers" class="saf-nav__item">Careers</a>
+                                                                                            <a href="https://www.saffery.com/stay-informed/" data-text="Stay informed" class="saf-nav__item">Stay informed</a>
+                                                    
+                        <span class="saf-nav__item saf-nav__item--search">
+                            <i class="material-icons">search</i>
+                        </span>
+
+                    </div>
+
+                    <!-- Mobile Nav Menu Trigger -->
+                    <div class="saf-nav__toggle d-block d-lg-none ml-auto">
+                        <i class="material-icons">menu</i>
+                        <i class="material-icons">close</i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section of Nav -->
+            <div class="saf-nav__bottom">
+                <div class="container py-0 px-0 saf-nav__bottom-list">
+                    <div class="d-flex flex-column flex-lg-row">
+
+                                                    <button type="button" class="btn btn-yellow btn-floating mt-6 mb-0 d-flex align-items-center justify-content-center d-md-none" data-toggle="modal" data-target="#floating-form">
+                                <i class="material-icons">mail</i><span class="pl-5 fs-18 text-height-1">Get in touch</span>
+                            </button>
+                        
+                        <!-- Secondary Nav Links -->
+                                                                                    <div class="saf-nav__item-wrapper parent">
+                                                                                                                    <span class="saf-nav__item saf-nav__item-panel" data-menu="saf-nav__menu-panel--0">
+                                            Services                                        </span>
+                                                                    </div>
+                                                            <div class="saf-nav__item-wrapper parent">
+                                                                                                                    <span class="saf-nav__item saf-nav__item-panel" data-menu="saf-nav__menu-panel--1">
+                                            Sectors                                        </span>
+                                                                    </div>
+                                                            <div class="saf-nav__item-wrapper parent">
+                                                                                                                    <span class="saf-nav__item saf-nav__item-panel" data-menu="saf-nav__menu-panel--2">
+                                            Insights                                        </span>
+                                                                    </div>
+                                                            <div class="saf-nav__item-wrapper parent">
+                                                                            <a href="/contact-us/" class="saf-nav__item">
+                                            Contact us                                        </a>
+                                                                    </div>
+                                                    
+                        <!-- Primary Nav -->
+                                                    <div class="d-block d-lg-none">
+                                                                    <div class="saf-nav__item-wrapper">
+                                                                                                                                <a href="https://www.saffery.com/about-us/" class="saf-nav__item saf-nav__item--primary" data-text="About us">
+                                            About us                                            </a>
+                                                                            </div>
+                                                                    <div class="saf-nav__item-wrapper">
+                                                                                                                                <a href="/our-people/" class="saf-nav__item saf-nav__item--primary" data-text="Our people">
+                                            Our people                                            </a>
+                                                                            </div>
+                                                                    <div class="saf-nav__item-wrapper">
+                                                                                                                                <a href="/offices/" class="saf-nav__item saf-nav__item--primary" data-text="Offices">
+                                            Offices                                            </a>
+                                                                            </div>
+                                                                    <div class="saf-nav__item-wrapper">
+                                                                                                                                <a href="https://www.saffery.com/careers/" class="saf-nav__item saf-nav__item--primary" data-text="Careers">
+                                            Careers                                            </a>
+                                                                            </div>
+                                                                    <div class="saf-nav__item-wrapper">
+                                                                                                                                <a href="https://www.saffery.com/stay-informed/" class="saf-nav__item saf-nav__item--primary" data-text="Stay informed">
+                                            Stay informed                                            </a>
+                                                                            </div>
+                                                            </div>
+                        
+                    </div>
+                </div>
+
+                                                                                        <div class="saf-nav__menu-slide saf-nav__menu-panel saf-nav__menu-panel--0">
+                                <div class="saf-nav__menu">
+                                    <div class="container px-0 px-lg-15 py-0">
+                                                                                <div class="row saf-nav__menu-list-row">
+                                            <button class="saf-nav__menu-back btn btn-back px-15 d-flex d-lg-none">Back</button>
+                                            <div class="col-12 col-lg-8 px-lg-40 py-lg-50 saf-nav__menu-list-wrapper">
+                                                <div class="saf-nav__menu-list py-10 py-lg-0">
+                                                                                                                                                                    <div class="row">
+                                                                                                                            <div class="col-12 col-lg-6 col-border">
+                                                                                                                                                                                                                                                                                                        <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-services/accounting-services/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Accounting                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-services/audit-and-assurance/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Audit and assurance                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-services/business-advisory-services/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Business advisory                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-services/cloud-accounting-services/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Cloud accounting                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-services/forensic-litigation-services/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Forensic and litigation services                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-services/outsourcing-services/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Outsourcing                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-services/payroll-services/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Payroll                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                            <div class="col-12 col-lg-6 col-border">
+                                                                                                                                                                                                                                                                                                        <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-services/sustainability-and-esg-services/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Sustainability and ESG                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-services/tax-services/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Tax                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-services/transaction-services/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Transaction services                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-services/trusts-services/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Trusts                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-services/valuation-services/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Valuation services                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-services/vat-services/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        VAT                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                        <!-- Mobile sidebar content -->
+                                                    <div class="col-lg-4 d-block d-lg-none p-20 mt-6">
+                                                                                                                            </div>
+                                                </div>
+                                            </div>
+                                            <!-- Desktop sidebar content -->
+                                            <div class="col-lg-4 d-none d-lg-block p-lg-50 bg-grey">
+                                                            <div class="h4 mb-20 text-primary">
+                Services            </div>
+
+            <p>We provide a full range of tax, accounting and business advisory services to our clients to help them achieve their personal or corporate objectives.</p>
+                                                                    </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                                                                <div class="saf-nav__menu-slide saf-nav__menu-panel saf-nav__menu-panel--1">
+                                <div class="saf-nav__menu">
+                                    <div class="container px-0 px-lg-15 py-0">
+                                                                                <div class="row saf-nav__menu-list-row">
+                                            <button class="saf-nav__menu-back btn btn-back px-15 d-flex d-lg-none">Back</button>
+                                            <div class="col-12 col-lg-8 px-lg-40 py-lg-50 saf-nav__menu-list-wrapper">
+                                                <div class="saf-nav__menu-list py-10 py-lg-0">
+                                                                                                                                                                    <div class="row">
+                                                                                                                            <div class="col-12 col-lg-6 col-border">
+                                                                                                                                                                                                                                                                                                        <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-sectors/charity-not-for-profit-services/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Charities and not-for-profits                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-sectors/crypto-digital-assets/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Crypto and digital assets                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-sectors/entrepreneurs/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Entrepreneurs                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-sectors/family-office/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Family office                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-sectors/film-tv-and-video-games/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Film, TV and video games                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-sectors/financial-services/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Financial services                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-sectors/food-drink/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Food and drink                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-sectors/hospitality-leisure/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Hospitality and leisure                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-sectors/international/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        International                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-sectors/landed-estates-and-rural-businesses/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Landed estates and rural businesses                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                            <div class="col-12 col-lg-6 col-border">
+                                                                                                                                                                                                                                                                                                        <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-sectors/life-sciences/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Life sciences                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-sectors/manufacturing/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Manufacturing                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-sectors/private-wealth/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Private wealth                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-sectors/professional-practices/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Professional practices                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-sectors/real-estate/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Real estate                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-sectors/recruitment-executive-search-businesses-accountants/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Recruitment and executive search businesses                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-sectors/retail/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Retail                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/our-sectors/sports-entertainment-accountancy-services/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Sports and entertainment                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                        <!-- Mobile sidebar content -->
+                                                    <div class="col-lg-4 d-block d-lg-none p-20 mt-6">
+                                                                                                                            </div>
+                                                </div>
+                                            </div>
+                                            <!-- Desktop sidebar content -->
+                                            <div class="col-lg-4 d-none d-lg-block p-lg-50 bg-grey">
+                                                            <div class="h4 mb-20 text-primary">
+                Sectors            </div>
+
+            <p>We specialise in specific sectors and areas of business where we have real in-depth expertise and experience, working with a variety of clients including private individuals, owner-managed businesses and not-for-profit entities.</p>
+                                                                    </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                                                                <div class="saf-nav__menu-slide saf-nav__menu-panel saf-nav__menu-panel--2">
+                                <div class="saf-nav__menu">
+                                    <div class="container px-0 px-lg-15 py-0">
+                                                                                <div class="row saf-nav__menu-list-row flex-lg-row-reverse">
+                                            <button class="saf-nav__menu-back btn btn-back px-15 d-flex d-lg-none">Back</button>
+                                            <div class="col-12 col-lg-8 px-lg-40 py-lg-50 saf-nav__menu-list-wrapper">
+                                                <div class="saf-nav__menu-list saf-nav__menu-list--insights py-10 py-lg-0">
+                                                                                                                                                                    <div class="row">
+                                                                                                                            <div class="col-12 col-lg-6 col-border">
+                                                                                                                                                                                                                                                                                                        <div class="saf-nav__item-wrapper">
+                                                                                    <a href="/insights/spotlight-topics/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary saf-nav__item--bold">
+                                                                                        Spotlight topics                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/insights/tag/business-advisory/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Business advisory                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/insights/tag/corporate-tax/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Corporate tax                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/insights/tag/family-wealth/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Family wealth                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/insights/tag/land-and-rural/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Land and rural                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/insights/tag/not-for-profit/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Not-for-profit                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/insights/tag/personal-tax/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Personal tax                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/insights/tag/sustainability-and-esg/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        Sustainability and ESG                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/insights/tag/vat/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary">
+                                                                                        VAT                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                            <div class="col-12 col-lg-6 col-border">
+                                                                                                                                                                                                                                                                                                        <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/insights/./events/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary saf-nav__item--bold">
+                                                                                        Events                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/insights/./news/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary saf-nav__item--bold">
+                                                                                        News                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="/podcasts/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary saf-nav__item--bold">
+                                                                                        Podcasts                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/insights/./case-studies/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary saf-nav__item--bold">
+                                                                                        Case studies                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                                                <div class="saf-nav__item-wrapper">
+                                                                                    <a href="https://www.saffery.com/stay-informed/"
+                                                                                                                                                                               class="saf-nav__item saf-nav__item--primary saf-nav__item--bold">
+                                                                                        Stay informed                                                                                    </a>
+                                                                                </div>
+                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                        <!-- Mobile sidebar content -->
+                                                    <div class="col-lg-4 d-block d-lg-none p-20 mt-6">
+                                                                <a href="/insights/all-insights/" class="btn btn-outline-primary mt-20">View all</a>                                                            </div>
+                                                </div>
+                                            </div>
+                                            <!-- Desktop sidebar content -->
+                                            <div class="col-lg-4 d-none d-lg-block p-lg-50 bg-grey">
+                                                            <div class="h4 mb-20 text-primary">
+                Insights            </div>
+
+            <p>View the latest news, publications, webinars, factsheets and forthcoming events at Saffery.
+<br>
+</p>
+                <a href="/insights/all-insights/" class="btn btn-outline-primary mt-20">View all</a>                                                    </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                                                                                        
+                                    <div class="saf-nav__menu-slide saf-nav__menu-panel saf-nav__int-panel saf-nav__menu-panel--int | d-block d-lg-none">
+                        <div class="saf-nav__menu">
+                            <div class="container px-0 px-lg-15 py-0">
+                                <div class="row saf-nav__menu-list-row">
+                                    <button class="saf-nav__menu-back btn btn-back px-15 d-flex d-lg-none">Back</button>
+                                    <div class="col-12 col-lg-8 px-lg-40 py-lg-50 saf-nav__menu-list-wrapper">
+                                        <div class="saf-nav__menu-list py-10 py-lg-0">
+                                                                                    <div class="saf-nav__item-wrapper">
+                                                                                                    <a href="https://www.saffery.com/" class="saf-nav__item saf-nav__item-primary">
+                                                        United Kingdom                                                    </a>
+                                                                                            </div>
+                                                                                    <div class="saf-nav__item-wrapper">
+                                                                                                    <a href="https://www.saffery.com/ie/" class="saf-nav__item saf-nav__item-primary">
+                                                        Ireland                                                    </a>
+                                                                                            </div>
+                                                                                    <div class="saf-nav__item-wrapper">
+                                                                                                    <a href="https://www.nexiasaffery.com/" class="saf-nav__item saf-nav__item-primary">
+                                                        Nexia                                                    </a>
+                                                                                            </div>
+                                                                                </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="saf-nav__menu-slide saf-nav__menu-panel saf-nav__int-panel saf-nav__menu-panel--int-2 | d-block d-lg-none">
+                        <div class="saf-nav__menu">
+                            <div class="container px-0 px-lg-15 py-0">
+                                <div class="row saf-nav__menu-list-row">
+                                    <button class="saf-nav__menu-back btn btn-back px-15 d-flex d-lg-none" data-menu="saf-nav__menu-panel--int">Back</button>
+                                    <div class="col-12 col-lg-8 px-lg-40 py-lg-50 saf-nav__menu-list-wrapper">
+                                        <div class="saf-nav__menu-list py-10 py-lg-0">
+                                                                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                <div class="saf-nav-search">
+                    <div class="container px-0 px-lg-3">
+                        <button class="saf-nav__menu-back btn btn-back px-15">Back</button>
+
+                        <div class="saf-nav-search__inner">
+                            <!-- Search Top Section -->
+                            <div class="saf-nav-search__top d-flex align-items-center py-30 pt-lg-60 pb-lg-30 px-20">
+
+                                <!-- Search Icon -->
+                                <div class="saf-nav-search__icon">
+                                    <i class="material-icons">search</i>
+                                </div>
+
+                                <!-- Search Input Field -->
+                                <div class="saf-nav-search__input d-flex flex-row-reverse flex-lg-row">
+
+                                    <input name="search" class="form-control search-nav" ref="searchInput" placeholder="Search" />
+
+                                    <div class="saf-nav-search__cancel d-none d-lg-block">
+                                        <i class="material-icons">close</i>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Search Results -->
+                            <div class="saf-nav-search__results">
+
+                                <!-- Loading icon -->
+                                <div class="w-100 saf-nav-search__loading-icon d-none align-items-center justify-content-center px-20 pb-20 pt-0">
+                                    <div class="loading">
+                                        <div class="loading-spinner">
+                                            <div class="custom-loader"></div>
+                                        </div>
+                                        <div class="loading-label">Searching</div>
+                                    </div>
+                                </div>
+
+                                <!-- AJAX results -->
+                                <div class="saf-nav-search__results-ajax"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                                <div class="saf-nav__int-mobile d-block d-lg-none position-absolute fixed-bottom">
+                    <div class="container px-0 px-sm-20">
+                        <div class="saf-nav__int py-0">
+                            <span class="saf-nav__item-wrapper position-relative">
+                                <span class="saf-nav__item saf-nav__item-main saf-nav__item-panel saf-nav__item-int-active pl-45" data-text="Saffery" data-menu="saf-nav__menu-panel--int">
+                                    Saffery                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+        <div class="saf-nav__backdrop anim-fade"></div>
+    </div>
+</header>
+
+<button type="button" class="btn btn-yellow btn-floating mb-15 mb-md-0 d-flex align-items-center justify-content-center" data-toggle="modal" data-target="#floating-form">
+    <i class="material-icons">mail</i><span class="pl-5 fs-18 text-height-1">Get in touch</span>
+</button>
+<section class="404-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-10 offset-lg-1 pt-80 pb-15 pb-lg-50">
+                
+<div class="page-header">
+  <h1 class="mb-0">Not Found</h1>
+</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="404-content bg-grey">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-10 offset-lg-1 pt-50 pb-15 pb-lg-50">
+                <div class="h2 mb-20">
+                    Sorry, but the page you were trying to view does not exist.                </div>
+
+                
+    <form role="search" method="get" id="searchform" class="searchform" action="https://www.saffery.com/" >
+        <div class="form-group position-relative">
+            <span class="search-bar-icon position-absolute"><i class="material-icons">search</i></span>
+            <input type="search" id="s" name="s" class="form-control search-bar-input px-60 border-0 bg-white" placeholder="Search…" autocomplete="off" value="" aria-describedby="Search Field" >
+            <span class="search-bar-reset position-absolute"><i class="material-icons">close</i></span>
+        </di>
+    </form>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="page-footer">
+
+    <div class="page-footer-sub-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 d-lg-block pt-25">
+                    <div class="social-links">
+                        
+<div class="social-icons">
+
+            <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/company/saffery" class="social-icon mr-10"
+           target="_blank" rel="noopener" aria-label="LinkedIn">
+        <span class="social-icon-wrapper">
+           <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <g id="Icon/linkedin">
+            <path id="Vector" d="M8.33337 11.2353C8.33337 9.80386 9.50807 8.63269 10.9438 8.63269C12.3796 8.63269 13.5543 9.80386 13.5543 11.2353C13.5543 12.6667 12.3796 13.8379 10.9438 13.8379C9.44281 13.8379 8.33337 12.6667 8.33337 11.2353ZM8.65968 30.2994V15.8549H13.1627V30.2994H8.65968ZM25.497 30.2994V23.2723C25.497 21.5806 25.4318 19.4335 23.1476 19.4335C20.7982 19.4335 20.4719 21.2553 20.4719 23.1422V30.2994H15.9689V15.8549H20.2761V17.8069H20.3414C20.9288 16.7008 22.4298 15.4645 24.5834 15.4645C29.1516 15.4645 30 18.4575 30 22.3614V30.2994H25.497Z" fill="#003D40"/>
+            </g>
+            </svg>
+
+        </span>
+        </a>
+        
+    
+    
+            <!-- Instagram -->
+        <a href="https://www.instagram.com/saffery_uk/" class="social-icon mr-10" target="_blank" rel="noopener" aria-label="Instagram">
+        <span class="social-icon-wrapper">
+          <svg width="40" height="40" viewBox="-7 0 40 21" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <g id="Group 1">
+            <path id="Vector" d="M0.333413 16.0409V8.38341C0.338149 8.30978 0.338149 8.23592 0.333413 8.1623C0.331121 7.26207 0.428697 6.36437 0.624352 5.48566C0.82131 4.55028 1.24172 3.67645 1.84967 2.9388C2.45762 2.20115 3.23507 1.62159 4.11561 1.2496C5.13579 0.836468 6.22694 0.626936 7.32757 0.632811H8.06074H15.7182H15.9393C16.8396 0.630518 17.7373 0.728095 18.616 0.923749C19.5514 1.12071 20.4252 1.54111 21.1628 2.14907C21.9005 2.75702 22.4801 3.53446 22.852 4.41501C23.3161 5.43262 23.5733 6.53235 23.6085 7.65024C23.6085 7.89463 23.6085 8.13902 23.6667 8.38341V16.0409C23.6619 16.1145 23.6619 16.1884 23.6667 16.262C23.669 17.1622 23.5714 18.0599 23.3757 18.9387C23.1788 19.874 22.7584 20.7479 22.1504 21.4855C21.5425 22.2232 20.765 22.8027 19.8845 23.1747C18.8643 23.5878 17.7731 23.7974 16.6725 23.7915L15.9393 23.8497H8.1422H7.92109C7.02086 23.852 6.12316 23.7544 5.24445 23.5588C4.30907 23.3618 3.43524 22.9414 2.69759 22.3334C1.95994 21.7255 1.38038 20.948 1.00839 20.0675C0.595259 19.0473 0.385726 17.9562 0.391601 16.8555C0.333413 16.5297 0.333413 16.2853 0.333413 16.0409ZM21.5254 12.2122C21.5254 11.2462 21.5254 10.2687 21.5254 9.30277C21.5254 8.33686 21.4672 7.47568 21.3741 6.56795C21.2958 5.70779 20.9498 4.8938 20.3849 4.24045C19.9934 3.80466 19.5167 3.45382 18.9843 3.20962C18.4518 2.96541 17.875 2.83303 17.2893 2.82067C15.9161 2.7392 14.5545 2.71593 13.1812 2.70429C11.808 2.69265 10.4581 2.70429 9.09648 2.70429C8.17711 2.70429 7.26938 2.76248 6.36166 2.85558C5.50149 2.9339 4.68751 3.27984 4.03415 3.84477C3.58916 4.22971 3.22827 4.70222 2.97398 5.23282C2.71969 5.76341 2.57747 6.34072 2.55618 6.92872C2.47472 8.30195 2.45144 9.66354 2.43981 11.0368C2.42817 12.41 2.43981 13.7599 2.43981 15.1215C2.43981 16.0409 2.49799 16.9486 2.59109 17.8564C2.66942 18.7165 3.01536 19.5305 3.58029 20.1839C3.97174 20.6196 4.44843 20.9705 4.98088 21.2147C5.51333 21.4589 6.09022 21.5913 6.67587 21.6036C8.0491 21.6851 9.41069 21.7084 10.7839 21.72C12.1571 21.7317 13.5071 21.72 14.8687 21.72C15.8807 21.7246 16.8917 21.6585 17.8945 21.5222C18.6769 21.4359 19.4132 21.1084 20.0012 20.5851C20.5892 20.0617 20.9999 19.3684 21.1762 18.6012C21.3291 18.0352 21.415 17.4532 21.4323 16.8672C21.4904 15.3543 21.5021 13.7832 21.5254 12.2122Z" fill="#003D40"/>
+            <path id="Vector_2" d="M17.9528 12.212C17.9528 13.3951 17.6019 14.5516 16.9447 15.5353C16.2874 16.519 15.3532 17.2857 14.2602 17.7384C13.1672 18.1911 11.9644 18.3096 10.8041 18.0788C9.64377 17.848 8.57793 17.2783 7.74138 16.4417C6.90482 15.6052 6.33512 14.5393 6.10432 13.379C5.87351 12.2187 5.99197 11.016 6.44471 9.92294C6.89745 8.82993 7.66414 7.89572 8.64782 7.23844C9.63151 6.58117 10.788 6.23035 11.9711 6.23035C13.5575 6.23035 15.079 6.86056 16.2008 7.98234C17.3226 9.10413 17.9528 10.6256 17.9528 12.212ZM11.9711 16.0873C12.7375 16.0873 13.4868 15.8601 14.1241 15.4342C14.7614 15.0084 15.2581 14.4032 15.5514 13.6951C15.8447 12.9869 15.9214 12.2077 15.7719 11.456C15.6224 10.7043 15.2533 10.0138 14.7113 9.47179C14.1694 8.92982 13.4788 8.56073 12.7271 8.4112C11.9754 8.26167 11.1962 8.33842 10.4881 8.63173C9.77994 8.92504 9.1747 9.42175 8.74888 10.059C8.32306 10.6963 8.09578 11.4456 8.09578 12.212C8.09885 13.2389 8.50812 14.2228 9.23422 14.9489C9.96031 15.675 10.9442 16.0843 11.9711 16.0873Z" fill="#003D40"/>
+            <path id="Vector_3" d="M18.1735 4.60103C18.3684 4.58326 18.5648 4.60631 18.7503 4.6687C18.9358 4.7311 19.1062 4.83147 19.2508 4.96342C19.3953 5.09537 19.5107 5.25599 19.5897 5.43505C19.6687 5.6141 19.7095 5.80766 19.7095 6.00336C19.7095 6.19906 19.6687 6.39261 19.5897 6.57166C19.5107 6.75072 19.3953 6.91134 19.2508 7.04329C19.1062 7.17524 18.9358 7.27562 18.7503 7.33801C18.5648 7.40041 18.3684 7.42345 18.1735 7.40568C17.9786 7.42345 17.7821 7.40041 17.5966 7.33801C17.4112 7.27562 17.2407 7.17524 17.0962 7.04329C16.9516 6.91134 16.8362 6.75072 16.7572 6.57166C16.6782 6.39261 16.6375 6.19906 16.6375 6.00336C16.6375 5.80766 16.6782 5.6141 16.7572 5.43505C16.8362 5.25599 16.9516 5.09537 17.0962 4.96342C17.2407 4.83147 17.4112 4.7311 17.5966 4.6687C17.7821 4.60631 17.9786 4.58326 18.1735 4.60103Z" fill="#003D40"/>
+            </g>
+            </svg>
+
+        </span>
+        </a>
+        
+    
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-7 order-1 order-lg-0">
+                                            <div class="footer-text | pt-20 pb-15">
+                            <p class="text-dark-teal">
+                                Saffery LLP is a member of Nexia, a leading, global network of independent accounting and consulting firms. Please see the <a href="https://nexia.com/member-firm-disclaimer/" target="_blank" rel="noopener">Member firm disclaimer</a> for further details.
+
+<br><p style="font-size: 14px">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a> apply.</p>                            </p>
+                        </div>
+                                        </div>
+                <div class="col-12 col-lg-5 order-0 order-lg-1">
+                    <div class="footer-logo pt-20 pb-15 px-0 d-none d-md-block">
+                                                        <div class="footer-logo-slider d-flex justify-content-start justify-content-lg-end w-100">
+                                                                                <div class="footer-logo-slider-item">
+                                                <a href="https://www.greatplacetowork.co.uk/certified-company/1357050" target="" rel="noopener">                                                    <img src="https://media.saffery.com/sf-content/uploads/2025/11/Saffery_LLP_GB_English_2025_Certification_Badge.svg" alt="Great Place to Work 2025">
+                                                </a>                                            </div>
+                                                                                    <div class="footer-logo-slider-item">
+                                                <a href="https://nexia.com/" target="" rel="noopener">                                                    <img src="https://media.saffery.com/sf-content/uploads/2025/11/Proud-of-Nexia-badge-small-size.svg" alt="Proud member of Nexia logo">
+                                                </a>                                            </div>
+                                                                        </div>
+                                                                        </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="footer-sub-nav">
+                        
+                            <ul class="footer-sub-nav-list">
+                                                                    <li class="footer-sub-nav-item">
+                                        <a href="/copyright/">Copyright</a>
+                                    </li>
+                                                                    <li class="footer-sub-nav-item">
+                                        <a href="/legal-and-regulatory-information/">Legal</a>
+                                    </li>
+                                                                    <li class="footer-sub-nav-item">
+                                        <a href="/modern-slavery-act-statement/">Modern Slavery Act Statement</a>
+                                    </li>
+                                                                    <li class="footer-sub-nav-item">
+                                        <a href="/privacy-policy/">Privacy Policy</a>
+                                    </li>
+                                                                    <li class="footer-sub-nav-item">
+                                        <a href="https://www.saffery.com/cookie-policy-uk/">Cookie Policy</a>
+                                    </li>
+                                                            </ul>
+
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<div class="ajax-only d-flex justify-content-center align-items-center" role="status">
+    <div class="loading | text-white">
+        <div class="loading-spinner">
+            <div class="custom-loader"></div>
+        </div>
+        <div class="loading-label">Loading</div>
+    </div>
+</div>
+
+<div class="modal fade" id="floating-form" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41" fill="none">
+                            <path d="M31.0897 29.5841L29.3333 31.3555L20 21.9424L10.6667 31.3555L8.91028 29.5841L18.2436 20.1711L8.91028 10.758L10.6667 8.98664L20 18.3997L29.3333 8.98664L31.0897 10.758L21.7564 20.1711L31.0897 29.5841Z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                </button>
+                <div class="comp-form-wrapper px-20 pt-40 px-lg-40 py-lg-80 bg-dark-teal">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row | row-intro">
+                                    <div class="col-12">
+                                                                                    <h2 class="mb-10">Get in touch</h2>
+                                                                                                                            <p class="mb-30 mb-lg-20 text-bright-teal-40">Provide your details and one of our experts will be in touch.</p>
+                                        
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 pt-15">
+                                        
+                <div class='gf_browser_unknown gform_wrapper gravity-theme gform-theme--no-framework' data-form-theme='gravity-theme' data-form-index='0' id='gform_wrapper_18' ><div id='gf_18' class='gform_anchor' tabindex='-1'></div>
+                        <div class='gform_heading'>
+                            <p class='gform_description'>Form used on the main contact page</p>
+                        </div><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_18' id='gform_18'  action='/llms.txt#gf_18' data-formid='18' novalidate><div class='gf_invisible ginput_recaptchav3' data-sitekey='6Ldmg7EqAAAAAFCbgJIwTlPY4aJgbeqtEJAVMVEU' data-tabindex='0'><input id="input_e14e70c7f29dd02032e20468cb0394a6" class="gfield_recaptcha_response" type="hidden" name="input_e14e70c7f29dd02032e20468cb0394a6" value=""/></div>
+                        <div class='gform-body gform_body'><div id='gform_fields_18' class='gform_fields top_label form_sublabel_below description_below validation_below'><div id="field_18_19" class="gfield gfield--type-honeypot gform_validation_container field_sublabel_below gfield--has-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_18_19'>Name</label><div class='ginput_container'><input name='input_19' id='input_18_19' type='text' value='' autocomplete='new-password'/></div><div class='gfield_description' id='gfield_description_18_19'>This field is for validation purposes and should be left unchanged.</div></div><div id="field_18_2" class="gfield gfield--type-text gfield--input-type-text gfield--width-half gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_18_2'>Full name<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_text'><input name='input_2' id='input_18_2' type='text' value='' class='large'     aria-required="true" aria-invalid="false"   /></div></div><div id="field_18_14" class="gfield gfield--type-text gfield--input-type-text gfield--width-half field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_18_14'>Company name</label><div class='ginput_container ginput_container_text'><input name='input_14' id='input_18_14' type='text' value='' class='large'      aria-invalid="false"   /></div></div><div id="field_18_5" class="gfield gfield--type-email gfield--input-type-email gfield--width-half gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_18_5'>Email<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_5' id='input_18_5' type='email' value='' class='large'    aria-required="true" aria-invalid="false"  />
+                        </div></div><div id="field_18_8" class="gfield gfield--type-phone gfield--input-type-phone gfield--width-half gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_18_8'>Telephone number<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_phone'><input name='input_8' id='input_18_8' type='tel' value='' class='large'   aria-required="true" aria-invalid="false"   /></div></div><div id="field_18_1" class="gfield gfield--type-select gfield--input-type-select gfield--width-half gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_18_1'>What service are you interested in?<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_select'><select name='input_1' id='input_18_1' class='large gfield_select'    aria-required="true" aria-invalid="false" ><option value='Accounting' selected='selected'>Accounting</option><option value='Audit &amp; Assurance' >Audit &amp; Assurance</option><option value='Business Advisory' >Business Advisory</option><option value='Cloud Accounting' >Cloud Accounting</option><option value='Forensic &amp; Litigation' >Forensic &amp; Litigation</option><option value='Outsourcing' >Outsourcing</option><option value='Payroll' >Payroll</option><option value='Sustainability and ESG' >Sustainability and ESG</option><option value='Tax' >Tax</option><option value='Transaction services' >Transaction services</option><option value='Trusts' >Trusts</option><option value='Valuation services' >Valuation services</option><option value='VAT' >VAT</option><option value='Other' >Other</option></select></div></div><div id="field_18_17" class="gfield gfield--type-phone gfield--input-type-phone gfield--width-half gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_18_17'>Postcode<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_phone'><input name='input_17' id='input_18_17' type='tel' value='' class='large'   aria-required="true" aria-invalid="false"   /></div></div><div id="field_18_4" class="gfield gfield--type-textarea gfield--input-type-textarea gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_18_4'>Your enquiry<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_textarea'><textarea name='input_4' id='input_18_4' class='textarea medium'   maxlength='1000'  aria-required="true" aria-invalid="false"   rows='10' cols='50'></textarea></div></div><div id="field_18_10" class="gfield gfield--type-hidden gfield--input-type-hidden gfield--width-full gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_10' id='input_18_10' type='hidden' class='gform_hidden'  aria-invalid="false" value='https://www.saffery.com/llms.txt' /></div></div><div id="field_18_18" class="gfield gfield--type-hidden gfield--input-type-hidden gfield--width-full gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_18' id='input_18_18' type='hidden' class='gform_hidden'  aria-invalid="false" value='' /></div></div><div id="field_18_3" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_3' id='input_18_3' type='hidden' class='gform_hidden'  aria-invalid="false" value='' /></div></div></div></div>
+        <div class='gform-footer gform_footer top_label'> <button type="submit" id="gform_submit_button_18" class="gform_button button btn btn-primary" onclick="gform.submission.handleButtonClick(this);" data-submission-type="submit">Submit</button> <input type='hidden' name='gform_ajax' value='form_id=18&amp;title=&amp;description=1&amp;tabindex=0&amp;theme=gravity-theme&amp;styles=[]&amp;hash=a4ab3bbe06328cbaed00f0804c364635' />
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_18' value='iframe' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_18' id='gform_theme_18' value='gravity-theme' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_18' id='gform_style_settings_18' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_18' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='18' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_currency' data-currency='GBP' value='ogJeqIWmyQcIihrZaFKO+26gMq4H1TSe0mpFqAGsm2WfVjzZU1v9sq+XJ6CYi+Sse8EhUOj0EdEo8J6mdFHO0NmpfztY/fQ7CFZpWMdoXPqOTOI=' />
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_18' value='WyJbXSIsIjJjOWYwNzkyMDg1YTAzYzgzMzVjNjQ0ZmU0NjA0YWJkIl0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_18' id='gform_target_page_number_18' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_18' id='gform_source_page_number_18' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div>
+		                <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_18' id='gform_ajax_frame_18' title='This iframe contains the logic required to handle Ajax powered Gravity Forms.'></iframe>
+		                <script>
+gform.initializeOnLoaded( function() {gformInitSpinner( 18, 'https://www.saffery.com/app/themes/saffery/dist/images/loading.gif', true );jQuery('#gform_ajax_frame_18').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_18');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_18').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_18').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_18').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_18').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_18').offset().top - mt); }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_18').val();gformInitSpinner( 18, 'https://www.saffery.com/app/themes/saffery/dist/images/loading.gif', true );jQuery(document).trigger('gform_page_loaded', [18, current_page]);window['gf_submitting_18'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_18').replaceWith(confirmation_content);jQuery(document).scrollTop(jQuery('#gf_18').offset().top - mt);jQuery(document).trigger('gform_confirmation_loaded', [18]);window['gf_submitting_18'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_18').text());}else{jQuery('#gform_18').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "18", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_18" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_18";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_18" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 18, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} );
+</script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let app = {
+        name: "Saffery",
+        page: {
+            title: "Temporary Repatriation Facility (TRF): how it works and what to include in your 2025-26 tax return"
+        },
+        url: {
+            home: 'https://www.saffery.com',
+            current: 'https://www.saffery.com/llms.txt',
+            ajax: 'https://www.saffery.com/cms/wp-admin/admin-ajax.php',
+            theme: 'https://www.saffery.com/app/themes/saffery'
+        }
+    };
+</script>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/cms/wp-*.php","/cms/wp-admin/*","/app/uploads/*","/app/*","/app/plugins/*","/app/themes/saffery/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const selectors = [
+                '.single-people .article-hero-image-wrapper img',
+                '.comp-people .comp-people-image img',
+                '.comp-people-carousel .img-wrap-people img',
+                '.list-card .people .article-image'
+            ];
+
+            selectors.forEach(selector => {
+                document.querySelectorAll(selector).forEach(el => {
+                    el.addEventListener('contextmenu', e => e.preventDefault());
+                    el.addEventListener('dragstart', e => e.preventDefault());
+
+                    if (el.tagName === 'IMG') {
+                        el.setAttribute('draggable', 'false');
+                    }
+                });
+            });
+
+        });
+    </script>
+    <style>
+        .single-people .article-hero-image-wrapper img,
+        .comp-people .comp-people-image img,
+        .comp-people-carousel .img-wrap-people img {
+            -webkit-user-drag: none;
+            user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+    
+<!-- Consent Management powered by Complianz | GDPR/CCPA Cookie Consent https://wordpress.org/plugins/complianz-gdpr -->
+<div id="cmplz-cookiebanner-container"><div class="cmplz-cookiebanner cmplz-hidden banner-3 bottom-right-view-preferences optin cmplz-bottom-right cmplz-categories-type-view-preferences" aria-modal="true" data-nosnippet="true" role="dialog" aria-live="polite" aria-labelledby="cmplz-header-3-optin" aria-describedby="cmplz-message-3-optin">
+	<div class="cmplz-header">
+		<div class="cmplz-logo"></div>
+		<div class="cmplz-title" id="cmplz-header-3-optin">Enhancing your experience</div>
+		<div class="cmplz-close" tabindex="0" role="button" aria-label="close-dialog">
+			<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+		</div>
+	</div>
+
+	<div class="cmplz-divider cmplz-divider-header"></div>
+	<div class="cmplz-body">
+		<div class="cmplz-message" id="cmplz-message-3-optin"><p><strong>We use cookies to give you the best possible experience on our website</strong> and to understand what content you enjoy reading. If you choose not to allow cookies, some parts of the website may not work as expected. You can learn more in our <a href="https://www.saffery.com/cookie-policy-uk/">cookie policy</a>.</p></div>
+		<!-- categories start -->
+		<div class="cmplz-categories">
+			<details class="cmplz-category cmplz-functional" >
+				<summary>
+						<span class="cmplz-category-header">
+							<span class="cmplz-category-title">Functional</span>
+							<span class='cmplz-always-active'>
+								<span class="cmplz-banner-checkbox">
+									<input type="checkbox"
+										   id="cmplz-functional-optin"
+										   data-category="cmplz_functional"
+										   class="cmplz-consent-checkbox cmplz-functional"
+										   size="40"
+										   value="1"/>
+									<label class="cmplz-label" for="cmplz-functional-optin"><span class="screen-reader-text">Functional</span></label>
+								</span>
+								Always active							</span>
+							<span class="cmplz-icon cmplz-open">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  height="18" ><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+							</span>
+						</span>
+				</summary>
+				<div class="cmplz-description">
+					<span class="cmplz-description-functional">The technical storage or access is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user, or for the sole purpose of carrying out the transmission of a communication over an electronic communications network.</span>
+				</div>
+			</details>
+
+			<details class="cmplz-category cmplz-preferences" >
+				<summary>
+						<span class="cmplz-category-header">
+							<span class="cmplz-category-title">Preferences</span>
+							<span class="cmplz-banner-checkbox">
+								<input type="checkbox"
+									   id="cmplz-preferences-optin"
+									   data-category="cmplz_preferences"
+									   class="cmplz-consent-checkbox cmplz-preferences"
+									   size="40"
+									   value="1"/>
+								<label class="cmplz-label" for="cmplz-preferences-optin"><span class="screen-reader-text">Preferences</span></label>
+							</span>
+							<span class="cmplz-icon cmplz-open">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  height="18" ><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+							</span>
+						</span>
+				</summary>
+				<div class="cmplz-description">
+					<span class="cmplz-description-preferences">The technical storage or access is necessary for the legitimate purpose of storing preferences that are not requested by the subscriber or user.</span>
+				</div>
+			</details>
+
+			<details class="cmplz-category cmplz-statistics" >
+				<summary>
+						<span class="cmplz-category-header">
+							<span class="cmplz-category-title">Statistics</span>
+							<span class="cmplz-banner-checkbox">
+								<input type="checkbox"
+									   id="cmplz-statistics-optin"
+									   data-category="cmplz_statistics"
+									   class="cmplz-consent-checkbox cmplz-statistics"
+									   size="40"
+									   value="1"/>
+								<label class="cmplz-label" for="cmplz-statistics-optin"><span class="screen-reader-text">Statistics</span></label>
+							</span>
+							<span class="cmplz-icon cmplz-open">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  height="18" ><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+							</span>
+						</span>
+				</summary>
+				<div class="cmplz-description">
+					<span class="cmplz-description-statistics">The technical storage or access that is used exclusively for statistical purposes.</span>
+					<span class="cmplz-description-statistics-anonymous">The technical storage or access that is used exclusively for anonymous statistical purposes. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, information stored or retrieved for this purpose alone cannot usually be used to identify you.</span>
+				</div>
+			</details>
+			<details class="cmplz-category cmplz-marketing" >
+				<summary>
+						<span class="cmplz-category-header">
+							<span class="cmplz-category-title">Marketing</span>
+							<span class="cmplz-banner-checkbox">
+								<input type="checkbox"
+									   id="cmplz-marketing-optin"
+									   data-category="cmplz_marketing"
+									   class="cmplz-consent-checkbox cmplz-marketing"
+									   size="40"
+									   value="1"/>
+								<label class="cmplz-label" for="cmplz-marketing-optin"><span class="screen-reader-text">Marketing</span></label>
+							</span>
+							<span class="cmplz-icon cmplz-open">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  height="18" ><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+							</span>
+						</span>
+				</summary>
+				<div class="cmplz-description">
+					<span class="cmplz-description-marketing">The technical storage or access is required to create user profiles to send advertising, or to track the user on a website or across several websites for similar marketing purposes.</span>
+				</div>
+			</details>
+		</div><!-- categories end -->
+			</div>
+
+	<div class="cmplz-links cmplz-information">
+		<ul>
+			<li><a class="cmplz-link cmplz-manage-options cookie-statement" href="#" data-relative_url="#cmplz-manage-consent-container">Manage options</a></li>
+			<li><a class="cmplz-link cmplz-manage-third-parties cookie-statement" href="#" data-relative_url="#cmplz-cookies-overview">Manage services</a></li>
+			<li><a class="cmplz-link cmplz-manage-vendors tcf cookie-statement" href="#" data-relative_url="#cmplz-tcf-wrapper">Manage {vendor_count} vendors</a></li>
+			<li><a class="cmplz-link cmplz-external cmplz-read-more-purposes tcf" target="_blank" rel="noopener noreferrer nofollow" href="https://cookiedatabase.org/tcf/purposes/" aria-label="Read more about TCF purposes on Cookie Database">Read more about these purposes</a></li>
+		</ul>
+			</div>
+
+	<div class="cmplz-divider cmplz-footer"></div>
+
+	<div class="cmplz-buttons">
+		<button class="cmplz-btn cmplz-accept">Accept</button>
+		<button class="cmplz-btn cmplz-deny">Deny</button>
+		<button class="cmplz-btn cmplz-view-preferences">Change Preferences</button>
+		<button class="cmplz-btn cmplz-save-preferences">Save preferences</button>
+		<a class="cmplz-btn cmplz-manage-options tcf cookie-statement" href="#" data-relative_url="#cmplz-manage-consent-container">Change Preferences</a>
+			</div>
+
+	
+	<div class="cmplz-documents cmplz-links">
+		<ul>
+			<li><a class="cmplz-link cookie-statement" href="#" data-relative_url="">{title}</a></li>
+			<li><a class="cmplz-link privacy-statement" href="#" data-relative_url="">{title}</a></li>
+			<li><a class="cmplz-link impressum" href="#" data-relative_url="">{title}</a></li>
+		</ul>
+			</div>
+</div>
+</div>
+					<div id="cmplz-manage-consent" data-nosnippet="true"><button class="cmplz-btn cmplz-hidden cmplz-manage-consent manage-consent-3">Manage consent</button>
+
+</div><script id="gforms_recaptcha_recaptcha-js-extra">
+var gforms_recaptcha_recaptcha_strings = {"nonce":"0c5cc6567a","disconnect":"Disconnecting","change_connection_type":"Resetting","spinner":"https://www.saffery.com/app/plugins/gravityforms/images/spinner.svg","connection_type":"classic","disable_badge":"1","change_connection_type_title":"Change Connection Type","change_connection_type_message":"Changing the connection type will delete your current settings.  Do you want to proceed?","disconnect_title":"Disconnect","disconnect_message":"Disconnecting from reCAPTCHA will delete your current settings.  Do you want to proceed?","site_key":"6Ldmg7EqAAAAAFCbgJIwTlPY4aJgbeqtEJAVMVEU"};
+//# sourceURL=gforms_recaptcha_recaptcha-js-extra
+</script>
+<script data-wp-strategy="defer" defer id="gforms_recaptcha_recaptcha-js" src="https://www.google.com/recaptcha/api.js?render=6Ldmg7EqAAAAAFCbgJIwTlPY4aJgbeqtEJAVMVEU&#038;ver=2.2.2"></script>
+<script data-wp-strategy="defer" defer id="gforms_recaptcha_frontend-js" src="https://www.saffery.com/app/plugins/gravityformsrecaptcha/js/frontend.min.js?ver=2.2.2"></script>
+<script id="smush-lazy-load-js-before">
+var smushLazyLoadOptions = {"autoResizingEnabled":false,"autoResizeOptions":{"precision":5,"skipAutoWidth":true}};
+//# sourceURL=smush-lazy-load-js-before
+</script>
+<script id="smush-lazy-load-js" src="https://www.saffery.com/app/plugins/wp-smushit/app/assets/js/smush-lazy-load.min.js?ver=4.1.0"></script>
+<script id="ultimate/js-js-extra">
+var ajax_var = {"url":"https://www.saffery.com/cms/wp-admin/admin-ajax.php","nonce":"feb90bc4b3","blog_id":"1"};
+var google_maps_api = {"key":"AIzaSyD2pAFrRahQb0yYtwVaOq_DGL0OrqwLnoc"};
+//# sourceURL=ultimate%2Fjs-js-extra
+</script>
+<script src="https://www.saffery.com/app/themes/saffery/dist/scripts/main.js?id=a3e67289be9b59d1faf56879e789a3cf" defer="defer" type="text/javascript"></script>
+<script id="cmplz-cookiebanner-js-extra">
+var complianz = {"prefix":"cmplz_rt_","user_banner_id":"3","set_cookies":[],"block_ajax_content":"0","banner_version":"59","version":"7.5.7.3","store_consent":"","do_not_track_enabled":"","consenttype":"optin","region":"uk","geoip":"0","dismiss_timeout":"","disable_cookiebanner":"","soft_cookiewall":"","dismiss_on_scroll":"","cookie_expiry":"365","url":"https://www.saffery.com/wp-json/complianz/v1/","locale":"lang=en&locale=en_GB","set_cookies_on_root":"0","cookie_domain":"","current_policy_id":"6","cookie_path":"/","categories":{"statistics":"statistics","marketing":"marketing"},"tcf_active":"","placeholdertext":"Click to accept {category} cookies and enable this content","css_file":"https://www.saffery.com/app/uploads/complianz/css/banner-{banner_id}-{type}.css?v=59","page_links":{"uk":{"cookie-statement":{"title":"Cookie Policy ","url":"https://www.saffery.com/cookie-policy-uk/"},"privacy-statement":{"title":"Privacy Statement","url":"https://www.saffery.com/privacy-statement-uk/"},"privacy-statement-children":{"title":"","url":"https://www.saffery.com/our-people/jonathan-davis/"}}},"tm_categories":"1","forceEnableStats":"","preview":"","clean_cookies":"","aria_label":"Click to accept {category} cookies and enable this content"};
+//# sourceURL=cmplz-cookiebanner-js-extra
+</script>
+<script defer id="cmplz-cookiebanner-js" src="https://www.saffery.com/app/plugins/complianz-gdpr-premium-multisite/cookiebanner/js/complianz.min.js?ver=1780307462"></script>
+<script id="wp-dom-ready-js" src="https://www.saffery.com/cms/wp-includes/js/dist/dom-ready.min.js?ver=a06281ae5cf5500e9317"></script>
+<script id="wp-hooks-js" src="https://www.saffery.com/cms/wp-includes/js/dist/hooks.min.js?ver=7496969728ca0f95732d"></script>
+<script id="wp-i18n-js" src="https://www.saffery.com/cms/wp-includes/js/dist/i18n.min.js?ver=781d11515ad3d91786ec"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="wp-a11y-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2026-05-19 18:30:50+0000","generator":"GlotPress\/4.0.3","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"en_GB"},"Notifications":["Notifications"]}},"comment":{"reference":"wp-includes\/js\/dist\/a11y.js"}} );
+//# sourceURL=wp-a11y-js-translations
+</script>
+<script id="wp-a11y-js" src="https://www.saffery.com/cms/wp-includes/js/dist/a11y.min.js?ver=af934e5259bc51b8718e"></script>
+<script id="gform_json-js" defer='defer' src="https://www.saffery.com/app/plugins/gravityforms/js/jquery.json.min.js?ver=2.10.3"></script>
+<script id="gform_gravityforms-js-extra">
+var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":1,"iconText":"Select date"}};
+var gf_legacy_multi = [];
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled","error":"Error","message":"Message"},"vars":{"images_url":"https://www.saffery.com/app/plugins/gravityforms/images"}};
+var gf_global = {"gf_currency_config":{"name":"Pound Sterling","symbol_left":"&#163;","symbol_right":"","symbol_padding":" ","thousand_separator":",","decimal_separator":".","decimals":2,"code":"GBP"},"base_url":"https://www.saffery.com/app/plugins/gravityforms","number_formats":[],"spinnerUrl":"https://www.saffery.com/app/plugins/gravityforms/images/spinner.svg","version_hash":"1f526edf32432bbe773b448ddd887934","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+//# sourceURL=gform_gravityforms-js-extra
+</script>
+<script id="gform_gravityforms-js" defer='defer' src="https://www.saffery.com/app/plugins/gravityforms/js/gravityforms.min.js?ver=2.10.3"></script>
+<script id="gform_textarea_counter-js" defer='defer' src="https://www.saffery.com/app/plugins/gravityforms/js/jquery.textareaCounter.plugin.min.js?ver=2.10.3"></script>
+<script id="gform_gravityforms_utils-js" defer='defer' src="https://www.saffery.com/app/plugins/gravityforms/assets/js/dist/utils.min.js?ver=3f278756f0a3032bed328ff6a9f6c01d"></script>
+<script id="gform_gravityforms_theme_vendors-js" defer='defer' src="https://www.saffery.com/app/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=7c651d0ba638ce98b9c65141edddd567"></script>
+<script id="gform_gravityforms_theme-js-extra">
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"1f526edf32432bbe773b448ddd887934"},"ajax":{"ajaxurl":"https://www.saffery.com/cms/wp-admin/admin-ajax.php","ajax_submission_nonce":"c6e4878348","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again.","error_403":"The request was blocked (403 error) for unknown security reasons. Remove any code-like text (scripts or DB queries) and try again."}}}},"hmr_dev":"","public_path":"https://www.saffery.com/app/plugins/gravityforms/assets/js/dist/","config_nonce":"4e3b351635"};
+//# sourceURL=gform_gravityforms_theme-js-extra
+</script>
+<script id="gform_gravityforms_theme-js" defer='defer' src="https://www.saffery.com/app/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=301fdc9aa6144168f3b854c4c2c8f6d3"></script>
+<!-- Statistics script Complianz GDPR/CCPA -->
+						<script data-category="functional">
+							window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+	'security_storage': "granted",
+	'functionality_storage': "granted",
+	'personalization_storage': "denied",
+	'analytics_storage': 'denied',
+	'ad_storage': "denied",
+	'ad_user_data': 'denied',
+	'ad_personalization': 'denied',
+});
+
+dataLayer.push({
+	'event': 'default_consent'
+});
+
+document.addEventListener("cmplz_fire_categories", function (e) {
+	function gtag(){
+		dataLayer.push(arguments);
+	}
+	var consentedCategories = e.detail.categories;
+	let preferences = 'denied';
+	let statistics = 'denied';
+	let marketing = 'denied';
+
+	if (cmplz_in_array( 'preferences', consentedCategories )) {
+		preferences = 'granted';
+	}
+
+	if (cmplz_in_array( 'statistics', consentedCategories )) {
+		statistics = 'granted';
+	}
+
+	if (cmplz_in_array( 'marketing', consentedCategories )) {
+		marketing = 'granted';
+	}
+
+	gtag('consent', 'update', {
+		'security_storage': "granted",
+		'functionality_storage': "granted",
+		'personalization_storage': preferences,
+		'analytics_storage': statistics,
+		'ad_storage': marketing,
+		'ad_user_data': marketing,
+		'ad_personalization': marketing,
+	});
+});
+
+document.addEventListener("cmplz_cookie_warning_loaded", function (e) {
+	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-WXZW3SG');
+});
+
+document.addEventListener("cmplz_revoke", function (e) {
+	gtag('consent', 'update', {
+		'security_storage': "granted",
+		'functionality_storage': "granted",
+		'personalization_storage': "denied",
+		'analytics_storage': 'denied',
+		'ad_storage': "denied",
+		'ad_user_data': 'denied',
+		'ad_personalization': 'denied',
+	});
+});
+						</script><script>
+gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 18) {if(!jQuery('#input_18_4+.ginput_counter').length){jQuery('#input_18_4').textareaCount(    {'maxCharacterSize': 1000,    'originalStyle': 'ginput_counter gfield_description',	 'truncate': true,	 'errorStyle' : '',    'displayFormat' : '#input of #max max characters'    });jQuery('#input_18_4').next('.ginput_counter').attr('aria-live','polite');}} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
+</script>
+<script>
+gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "18", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_18" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_18";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_18" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 18, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );
+</script>
+    </body>
+</html>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/?utm_source=w3tc&utm_medium=footer_comment&utm_campaign=free_plugin
+
+Object Caching 140/170 objects using Redis
+Page Caching using Disk: Enhanced (Page is 404) 
+
+Served from: www.saffery.com @ 2026-07-14 14:08:42 by W3 Total Cache
+-->

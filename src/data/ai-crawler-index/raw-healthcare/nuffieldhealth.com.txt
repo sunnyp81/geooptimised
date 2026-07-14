@@ -1,0 +1,23 @@
+User-agent: AlphaSeoBot
+Disallow: /
+
+User-agent: AlphaSeoBot-SA
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: SemrushBot-SA
+Disallow: /
+
+User-agent: Screaming Frog SEO Spider
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: *
+Disallow: /_preview*
+Disallow: /search?*
+
+Sitemap: https://www.nuffieldhealth.com/sitemap_index.xml

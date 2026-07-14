@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+User-agent: Caliperbot/1.0
+Allow: /
+Sitemap: https://www.powdr.com/sitemap-index.xml
+Host: https://www.powdr.com

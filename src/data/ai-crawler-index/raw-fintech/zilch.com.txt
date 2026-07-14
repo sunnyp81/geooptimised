@@ -1,0 +1,11 @@
+User-Agent: *
+Disallow:
+
+#International Sitemap
+https://www.zilch.com/sitemap_index.xml
+
+#USA Sitemap
+Sitemap: https://www.zilch.com/us/sitemap_index.xml
+
+#UK Sitemap
+Sitemap: https://www.zilch.com/uk/sitemap_index.xml

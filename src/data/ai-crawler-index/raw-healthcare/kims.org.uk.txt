@@ -1,0 +1,18 @@
+User-agent: *
+
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /trackback/
+Disallow: /xmlrpc.php
+Disallow: /*feed$
+Disallow: /?additional_treatments=*
+Disallow: /?consultant=*
+Disallow: /?s=*
+Disallow: /search/
+Disallow: *?pdf=*
+Disallow: *&pdf=*
+Disallow: /wp-content/cache/*
+
+Allow: /wp-admin/admin-ajax.php
+
+Sitemap: https://kims.org.uk/sitemap_index.xml

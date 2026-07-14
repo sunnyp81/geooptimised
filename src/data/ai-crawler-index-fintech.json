@@ -1,0 +1,3978 @@
+{
+  "$comment": "AI Crawler Access Index. Each record is one firm's robots.txt and llms.txt as WE fetched them. 'state' records whether the file was genuinely readable or was gated by bot protection / returned a soft-404. Per-crawler 'status' describes the file's syntax shape only: 'not_listed' means the token does not appear (NOT a block); 'partial' means named with path-level or allowlist rules (NOT a judgement that the firm restricts AI); 'indeterminate' means we could not read the file. 'aiSpecificStance' is the derived judgement: 'restricts_ai_specifically' only when an AI token's effective directives (RFC 9309 grouping, most specific match wins) are clearly stricter than the same file's effective directives for Googlebot; restriction inherited from 'User-agent: *' or shared with Googlebot's own group is never AI-specific. robots.txt is a request, not enforcement.",
+  "study": "UK Fintechs AI Crawler Access Index",
+  "firmListSource": {
+    "publisher": "BusinessCloud",
+    "title": "FinTech 50 2025: UKs most innovative financial tech creators",
+    "url": "https://businesscloud.co.uk/fintech-50-uks-most-innovative-financial-tech-creators-for-2025/",
+    "ranking": "the 2025 FinTech 50, BusinessClouds annual list of the UKs most innovative fintech companies, judged by an independent panel rather than ordered strictly by revenue.",
+    "fetchedOn": "2026-07-14",
+    "caveat": "This is an innovation-judged list, not a revenue ranking. It is the freely accessible published list available; firm-to-domain mapping was done by inspection, and a wrong domain would surface below as unreachable, never as a false directive."
+  },
+  "agentsChecked": [
+    "GPTBot",
+    "OAI-SearchBot",
+    "ChatGPT-User",
+    "ClaudeBot",
+    "Claude-Web",
+    "anthropic-ai",
+    "PerplexityBot",
+    "Perplexity-User",
+    "Google-Extended",
+    "Bingbot",
+    "CCBot",
+    "Applebot-Extended"
+  ],
+  "fetchedOn": "2026-07-14",
+  "method": "For each firm's primary domain we fetched https://<domain>/robots.txt and https://<domain>/llms.txt ourselves, following redirects, and saved every raw response verbatim under raw-*/. robots.txt was parsed with standard user-agent grouping. A response was only parsed for directives when its body was a genuine robots.txt; HTML bot-challenge pages (Vercel, Cloudflare, Azure WAF, Incapsula) returning 200/403/429 were recorded as unreadable, never parsed.",
+  "records": [
+    {
+      "rank": 1,
+      "firm": "Zuto",
+      "domain": "zuto.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.zuto.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T13:08:12.208Z",
+        "rawFile": "raw-fintech/zuto.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.zuto.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:12.208Z",
+        "rawFile": "raw-fintech/zuto.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "allowed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 2,
+      "firm": "Paysafe",
+      "domain": "paysafe.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.paysafe.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T13:08:12.108Z",
+        "rawFile": "raw-fintech/paysafe.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.paysafe.com/llms.txt",
+        "state": "present",
+        "genuine": true,
+        "fetchedAt": "2026-07-14T13:08:12.108Z",
+        "rawFile": "raw-fintech/paysafe.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "partial",
+          "disallow": [
+            "/fileadmin/_temp_/",
+            "/fileadmin/flarecontent/",
+            "/t3lib/",
+            "/typo3/",
+            "/typo3_src/",
+            "/typo3conf/",
+            "/clear.gif",
+            "*/search-results/"
+          ]
+        },
+        "OAI-SearchBot": {
+          "status": "partial",
+          "disallow": [
+            "/fileadmin/_temp_/",
+            "/fileadmin/flarecontent/",
+            "/t3lib/",
+            "/typo3/",
+            "/typo3_src/",
+            "/typo3conf/",
+            "/clear.gif",
+            "*/search-results/"
+          ]
+        },
+        "ChatGPT-User": {
+          "status": "partial",
+          "disallow": [
+            "/fileadmin/_temp_/",
+            "/fileadmin/flarecontent/",
+            "/t3lib/",
+            "/typo3/",
+            "/typo3_src/",
+            "/typo3conf/",
+            "/clear.gif",
+            "*/search-results/"
+          ]
+        },
+        "ClaudeBot": {
+          "status": "partial",
+          "disallow": [
+            "/fileadmin/_temp_/",
+            "/fileadmin/flarecontent/",
+            "/t3lib/",
+            "/typo3/",
+            "/typo3_src/",
+            "/typo3conf/",
+            "/clear.gif",
+            "*/search-results/"
+          ]
+        },
+        "Claude-Web": {
+          "status": "partial",
+          "disallow": [
+            "/fileadmin/_temp_/",
+            "/fileadmin/flarecontent/",
+            "/t3lib/",
+            "/typo3/",
+            "/typo3_src/",
+            "/typo3conf/",
+            "/clear.gif",
+            "*/search-results/"
+          ]
+        },
+        "anthropic-ai": {
+          "status": "partial",
+          "disallow": [
+            "/fileadmin/_temp_/",
+            "/fileadmin/flarecontent/",
+            "/t3lib/",
+            "/typo3/",
+            "/typo3_src/",
+            "/typo3conf/",
+            "/clear.gif",
+            "*/search-results/"
+          ]
+        },
+        "PerplexityBot": {
+          "status": "partial",
+          "disallow": [
+            "/fileadmin/_temp_/",
+            "/fileadmin/flarecontent/",
+            "/t3lib/",
+            "/typo3/",
+            "/typo3_src/",
+            "/typo3conf/",
+            "/clear.gif",
+            "*/search-results/"
+          ]
+        },
+        "Perplexity-User": {
+          "status": "partial",
+          "disallow": [
+            "/fileadmin/_temp_/",
+            "/fileadmin/flarecontent/",
+            "/t3lib/",
+            "/typo3/",
+            "/typo3_src/",
+            "/typo3conf/",
+            "/clear.gif",
+            "*/search-results/"
+          ]
+        },
+        "Google-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/fileadmin/_temp_/",
+            "/fileadmin/flarecontent/",
+            "/t3lib/",
+            "/typo3/",
+            "/typo3_src/",
+            "/typo3conf/",
+            "/clear.gif",
+            "*/search-results/"
+          ]
+        },
+        "Bingbot": {
+          "status": "partial",
+          "disallow": [
+            "/fileadmin/_temp_/",
+            "/fileadmin/flarecontent/",
+            "/t3lib/",
+            "/typo3/",
+            "/typo3_src/",
+            "/typo3conf/",
+            "/clear.gif",
+            "*/search-results/"
+          ]
+        },
+        "CCBot": {
+          "status": "partial",
+          "disallow": [
+            "/fileadmin/_temp_/",
+            "/fileadmin/flarecontent/",
+            "/t3lib/",
+            "/typo3/",
+            "/typo3_src/",
+            "/typo3conf/",
+            "/clear.gif",
+            "*/search-results/"
+          ]
+        },
+        "Applebot-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/fileadmin/_temp_/",
+            "/fileadmin/flarecontent/",
+            "/t3lib/",
+            "/typo3/",
+            "/typo3_src/",
+            "/typo3conf/",
+            "/clear.gif",
+            "*/search-results/"
+          ]
+        }
+      }
+    },
+    {
+      "rank": 3,
+      "firm": "My Digital",
+      "domain": "mydigital.co.uk",
+      "aiSpecificStance": "indeterminate",
+      "aiSpecificNote": "robots.txt could not be read (bot protection or no response), so its stance is unknown.",
+      "robots": {
+        "httpStatus": 0,
+        "effectiveUrl": "https://mydigital.co.uk/robots.txt",
+        "state": "unreachable",
+        "readable": false,
+        "wildcardDisallowsRoot": null,
+        "fetchedAt": "2026-07-14T13:08:15.376Z",
+        "rawFile": "raw-fintech/mydigital.co.uk.txt",
+        "error": "fetch failed"
+      },
+      "llms": {
+        "httpStatus": 0,
+        "effectiveUrl": "https://mydigital.co.uk/llms.txt",
+        "state": "unreachable",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:15.376Z",
+        "rawFile": "raw-fintech/mydigital.co.uk.llms.txt",
+        "error": "fetch failed"
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 4,
+      "firm": "Bumper",
+      "domain": "bumper.co",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.bumper.co/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T13:08:12.280Z",
+        "rawFile": "raw-fintech/bumper.co.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.bumper.co/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:12.280Z",
+        "rawFile": "raw-fintech/bumper.co.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "partial",
+          "disallow": [
+            "/**.html$",
+            "/account-recovery",
+            "/affiliate/customer",
+            "/generic/customer/application",
+            "/img/PDFs/ASFResponsiblelending.pdf",
+            "/disclaimer.php",
+            "/views/main.html",
+            "/img/PDFs/ASFFAQs-Knowledge",
+            "/signup",
+            "/views/includes/footer_include.html",
+            "/qcwawtemdnscladd.html",
+            "/gen/customer/application",
+            "/{{paymentMenuHref}}",
+            "/customer/new",
+            "/ournetwork",
+            "/dealership/",
+            "/registration/",
+            "/mobile/",
+            "/customer/",
+            "/email-test",
+            "/codeofconduct",
+            "/b/*",
+            "/cookieframe",
+            "/thirdparty/*",
+            "/de/locations/*",
+            "/es/locations/*",
+            "/ie/locations/*"
+          ]
+        },
+        "OAI-SearchBot": {
+          "status": "partial",
+          "disallow": [
+            "/**.html$",
+            "/account-recovery",
+            "/affiliate/customer",
+            "/generic/customer/application",
+            "/img/PDFs/ASFResponsiblelending.pdf",
+            "/disclaimer.php",
+            "/views/main.html",
+            "/img/PDFs/ASFFAQs-Knowledge",
+            "/signup",
+            "/views/includes/footer_include.html",
+            "/qcwawtemdnscladd.html",
+            "/gen/customer/application",
+            "/{{paymentMenuHref}}",
+            "/customer/new",
+            "/ournetwork",
+            "/dealership/",
+            "/registration/",
+            "/mobile/",
+            "/customer/",
+            "/email-test",
+            "/codeofconduct",
+            "/b/*",
+            "/cookieframe",
+            "/thirdparty/*",
+            "/de/locations/*",
+            "/es/locations/*",
+            "/ie/locations/*"
+          ]
+        },
+        "ChatGPT-User": {
+          "status": "partial",
+          "disallow": [
+            "/**.html$",
+            "/account-recovery",
+            "/affiliate/customer",
+            "/generic/customer/application",
+            "/img/PDFs/ASFResponsiblelending.pdf",
+            "/disclaimer.php",
+            "/views/main.html",
+            "/img/PDFs/ASFFAQs-Knowledge",
+            "/signup",
+            "/views/includes/footer_include.html",
+            "/qcwawtemdnscladd.html",
+            "/gen/customer/application",
+            "/{{paymentMenuHref}}",
+            "/customer/new",
+            "/ournetwork",
+            "/dealership/",
+            "/registration/",
+            "/mobile/",
+            "/customer/",
+            "/email-test",
+            "/codeofconduct",
+            "/b/*",
+            "/cookieframe",
+            "/thirdparty/*",
+            "/de/locations/*",
+            "/es/locations/*",
+            "/ie/locations/*"
+          ]
+        },
+        "ClaudeBot": {
+          "status": "partial",
+          "disallow": [
+            "/**.html$",
+            "/account-recovery",
+            "/affiliate/customer",
+            "/generic/customer/application",
+            "/img/PDFs/ASFResponsiblelending.pdf",
+            "/disclaimer.php",
+            "/views/main.html",
+            "/img/PDFs/ASFFAQs-Knowledge",
+            "/signup",
+            "/views/includes/footer_include.html",
+            "/qcwawtemdnscladd.html",
+            "/gen/customer/application",
+            "/{{paymentMenuHref}}",
+            "/customer/new",
+            "/ournetwork",
+            "/dealership/",
+            "/registration/",
+            "/mobile/",
+            "/customer/",
+            "/email-test",
+            "/codeofconduct",
+            "/b/*",
+            "/cookieframe",
+            "/thirdparty/*",
+            "/de/locations/*",
+            "/es/locations/*",
+            "/ie/locations/*"
+          ]
+        },
+        "Claude-Web": {
+          "status": "partial",
+          "disallow": [
+            "/**.html$",
+            "/account-recovery",
+            "/affiliate/customer",
+            "/generic/customer/application",
+            "/img/PDFs/ASFResponsiblelending.pdf",
+            "/disclaimer.php",
+            "/views/main.html",
+            "/img/PDFs/ASFFAQs-Knowledge",
+            "/signup",
+            "/views/includes/footer_include.html",
+            "/qcwawtemdnscladd.html",
+            "/gen/customer/application",
+            "/{{paymentMenuHref}}",
+            "/customer/new",
+            "/ournetwork",
+            "/dealership/",
+            "/registration/",
+            "/mobile/",
+            "/customer/",
+            "/email-test",
+            "/codeofconduct",
+            "/b/*",
+            "/cookieframe",
+            "/thirdparty/*",
+            "/de/locations/*",
+            "/es/locations/*",
+            "/ie/locations/*"
+          ]
+        },
+        "anthropic-ai": {
+          "status": "partial",
+          "disallow": [
+            "/**.html$",
+            "/account-recovery",
+            "/affiliate/customer",
+            "/generic/customer/application",
+            "/img/PDFs/ASFResponsiblelending.pdf",
+            "/disclaimer.php",
+            "/views/main.html",
+            "/img/PDFs/ASFFAQs-Knowledge",
+            "/signup",
+            "/views/includes/footer_include.html",
+            "/qcwawtemdnscladd.html",
+            "/gen/customer/application",
+            "/{{paymentMenuHref}}",
+            "/customer/new",
+            "/ournetwork",
+            "/dealership/",
+            "/registration/",
+            "/mobile/",
+            "/customer/",
+            "/email-test",
+            "/codeofconduct",
+            "/b/*",
+            "/cookieframe",
+            "/thirdparty/*",
+            "/de/locations/*",
+            "/es/locations/*",
+            "/ie/locations/*"
+          ]
+        },
+        "PerplexityBot": {
+          "status": "partial",
+          "disallow": [
+            "/**.html$",
+            "/account-recovery",
+            "/affiliate/customer",
+            "/generic/customer/application",
+            "/img/PDFs/ASFResponsiblelending.pdf",
+            "/disclaimer.php",
+            "/views/main.html",
+            "/img/PDFs/ASFFAQs-Knowledge",
+            "/signup",
+            "/views/includes/footer_include.html",
+            "/qcwawtemdnscladd.html",
+            "/gen/customer/application",
+            "/{{paymentMenuHref}}",
+            "/customer/new",
+            "/ournetwork",
+            "/dealership/",
+            "/registration/",
+            "/mobile/",
+            "/customer/",
+            "/email-test",
+            "/codeofconduct",
+            "/b/*",
+            "/cookieframe",
+            "/thirdparty/*",
+            "/de/locations/*",
+            "/es/locations/*",
+            "/ie/locations/*"
+          ]
+        },
+        "Perplexity-User": {
+          "status": "partial",
+          "disallow": [
+            "/**.html$",
+            "/account-recovery",
+            "/affiliate/customer",
+            "/generic/customer/application",
+            "/img/PDFs/ASFResponsiblelending.pdf",
+            "/disclaimer.php",
+            "/views/main.html",
+            "/img/PDFs/ASFFAQs-Knowledge",
+            "/signup",
+            "/views/includes/footer_include.html",
+            "/qcwawtemdnscladd.html",
+            "/gen/customer/application",
+            "/{{paymentMenuHref}}",
+            "/customer/new",
+            "/ournetwork",
+            "/dealership/",
+            "/registration/",
+            "/mobile/",
+            "/customer/",
+            "/email-test",
+            "/codeofconduct",
+            "/b/*",
+            "/cookieframe",
+            "/thirdparty/*",
+            "/de/locations/*",
+            "/es/locations/*",
+            "/ie/locations/*"
+          ]
+        },
+        "Google-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/**.html$",
+            "/account-recovery",
+            "/affiliate/customer",
+            "/generic/customer/application",
+            "/img/PDFs/ASFResponsiblelending.pdf",
+            "/disclaimer.php",
+            "/views/main.html",
+            "/img/PDFs/ASFFAQs-Knowledge",
+            "/signup",
+            "/views/includes/footer_include.html",
+            "/qcwawtemdnscladd.html",
+            "/gen/customer/application",
+            "/{{paymentMenuHref}}",
+            "/customer/new",
+            "/ournetwork",
+            "/dealership/",
+            "/registration/",
+            "/mobile/",
+            "/customer/",
+            "/email-test",
+            "/codeofconduct",
+            "/b/*",
+            "/cookieframe",
+            "/thirdparty/*",
+            "/de/locations/*",
+            "/es/locations/*",
+            "/ie/locations/*"
+          ]
+        },
+        "Bingbot": {
+          "status": "partial",
+          "disallow": [
+            "/**.html$",
+            "/account-recovery",
+            "/affiliate/customer",
+            "/generic/customer/application",
+            "/img/PDFs/ASFResponsiblelending.pdf",
+            "/disclaimer.php",
+            "/views/main.html",
+            "/img/PDFs/ASFFAQs-Knowledge",
+            "/signup",
+            "/views/includes/footer_include.html",
+            "/qcwawtemdnscladd.html",
+            "/gen/customer/application",
+            "/{{paymentMenuHref}}",
+            "/customer/new",
+            "/ournetwork",
+            "/dealership/",
+            "/registration/",
+            "/mobile/",
+            "/customer/",
+            "/email-test",
+            "/codeofconduct",
+            "/b/*",
+            "/cookieframe",
+            "/thirdparty/*",
+            "/de/locations/*",
+            "/es/locations/*",
+            "/ie/locations/*"
+          ]
+        },
+        "CCBot": {
+          "status": "partial",
+          "disallow": [
+            "/**.html$",
+            "/account-recovery",
+            "/affiliate/customer",
+            "/generic/customer/application",
+            "/img/PDFs/ASFResponsiblelending.pdf",
+            "/disclaimer.php",
+            "/views/main.html",
+            "/img/PDFs/ASFFAQs-Knowledge",
+            "/signup",
+            "/views/includes/footer_include.html",
+            "/qcwawtemdnscladd.html",
+            "/gen/customer/application",
+            "/{{paymentMenuHref}}",
+            "/customer/new",
+            "/ournetwork",
+            "/dealership/",
+            "/registration/",
+            "/mobile/",
+            "/customer/",
+            "/email-test",
+            "/codeofconduct",
+            "/b/*",
+            "/cookieframe",
+            "/thirdparty/*",
+            "/de/locations/*",
+            "/es/locations/*",
+            "/ie/locations/*"
+          ]
+        },
+        "Applebot-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/**.html$",
+            "/account-recovery",
+            "/affiliate/customer",
+            "/generic/customer/application",
+            "/img/PDFs/ASFResponsiblelending.pdf",
+            "/disclaimer.php",
+            "/views/main.html",
+            "/img/PDFs/ASFFAQs-Knowledge",
+            "/signup",
+            "/views/includes/footer_include.html",
+            "/qcwawtemdnscladd.html",
+            "/gen/customer/application",
+            "/{{paymentMenuHref}}",
+            "/customer/new",
+            "/ournetwork",
+            "/dealership/",
+            "/registration/",
+            "/mobile/",
+            "/customer/",
+            "/email-test",
+            "/codeofconduct",
+            "/b/*",
+            "/cookieframe",
+            "/thirdparty/*",
+            "/de/locations/*",
+            "/es/locations/*",
+            "/ie/locations/*"
+          ]
+        }
+      }
+    },
+    {
+      "rank": 5,
+      "firm": "Collctiv",
+      "domain": "collctiv.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.collctiv.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T13:08:12.440Z",
+        "rawFile": "raw-fintech/collctiv.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.collctiv.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:12.440Z",
+        "rawFile": "raw-fintech/collctiv.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "partial",
+          "disallow": [
+            "/*?utm_source=",
+            "/*?utm_medium=",
+            "/*?utm_campaign=",
+            "/*?utm_content=",
+            "/*?utm_id="
+          ]
+        },
+        "OAI-SearchBot": {
+          "status": "partial",
+          "disallow": [
+            "/*?utm_source=",
+            "/*?utm_medium=",
+            "/*?utm_campaign=",
+            "/*?utm_content=",
+            "/*?utm_id="
+          ]
+        },
+        "ChatGPT-User": {
+          "status": "partial",
+          "disallow": [
+            "/*?utm_source=",
+            "/*?utm_medium=",
+            "/*?utm_campaign=",
+            "/*?utm_content=",
+            "/*?utm_id="
+          ]
+        },
+        "ClaudeBot": {
+          "status": "partial",
+          "disallow": [
+            "/*?utm_source=",
+            "/*?utm_medium=",
+            "/*?utm_campaign=",
+            "/*?utm_content=",
+            "/*?utm_id="
+          ]
+        },
+        "Claude-Web": {
+          "status": "partial",
+          "disallow": [
+            "/*?utm_source=",
+            "/*?utm_medium=",
+            "/*?utm_campaign=",
+            "/*?utm_content=",
+            "/*?utm_id="
+          ]
+        },
+        "anthropic-ai": {
+          "status": "partial",
+          "disallow": [
+            "/*?utm_source=",
+            "/*?utm_medium=",
+            "/*?utm_campaign=",
+            "/*?utm_content=",
+            "/*?utm_id="
+          ]
+        },
+        "PerplexityBot": {
+          "status": "partial",
+          "disallow": [
+            "/*?utm_source=",
+            "/*?utm_medium=",
+            "/*?utm_campaign=",
+            "/*?utm_content=",
+            "/*?utm_id="
+          ]
+        },
+        "Perplexity-User": {
+          "status": "partial",
+          "disallow": [
+            "/*?utm_source=",
+            "/*?utm_medium=",
+            "/*?utm_campaign=",
+            "/*?utm_content=",
+            "/*?utm_id="
+          ]
+        },
+        "Google-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/*?utm_source=",
+            "/*?utm_medium=",
+            "/*?utm_campaign=",
+            "/*?utm_content=",
+            "/*?utm_id="
+          ]
+        },
+        "Bingbot": {
+          "status": "partial",
+          "disallow": [
+            "/*?utm_source=",
+            "/*?utm_medium=",
+            "/*?utm_campaign=",
+            "/*?utm_content=",
+            "/*?utm_id="
+          ]
+        },
+        "CCBot": {
+          "status": "partial",
+          "disallow": [
+            "/*?utm_source=",
+            "/*?utm_medium=",
+            "/*?utm_campaign=",
+            "/*?utm_content=",
+            "/*?utm_id="
+          ]
+        },
+        "Applebot-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/*?utm_source=",
+            "/*?utm_medium=",
+            "/*?utm_campaign=",
+            "/*?utm_content=",
+            "/*?utm_id="
+          ]
+        }
+      }
+    },
+    {
+      "rank": 6,
+      "firm": "Blackbullion",
+      "domain": "blackbullion.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.blackbullion.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T13:08:12.291Z",
+        "rawFile": "raw-fintech/blackbullion.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.blackbullion.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:12.291Z",
+        "rawFile": "raw-fintech/blackbullion.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "partial",
+          "disallow": [
+            "/account/*",
+            "/ajax/*",
+            "/api/*",
+            "/applications/*",
+            "/onboarding/",
+            "/connect/*"
+          ]
+        },
+        "OAI-SearchBot": {
+          "status": "partial",
+          "disallow": [
+            "/account/*",
+            "/ajax/*",
+            "/api/*",
+            "/applications/*",
+            "/onboarding/",
+            "/connect/*"
+          ]
+        },
+        "ChatGPT-User": {
+          "status": "partial",
+          "disallow": [
+            "/account/*",
+            "/ajax/*",
+            "/api/*",
+            "/applications/*",
+            "/onboarding/",
+            "/connect/*"
+          ]
+        },
+        "ClaudeBot": {
+          "status": "partial",
+          "disallow": [
+            "/account/*",
+            "/ajax/*",
+            "/api/*",
+            "/applications/*",
+            "/onboarding/",
+            "/connect/*"
+          ]
+        },
+        "Claude-Web": {
+          "status": "partial",
+          "disallow": [
+            "/account/*",
+            "/ajax/*",
+            "/api/*",
+            "/applications/*",
+            "/onboarding/",
+            "/connect/*"
+          ]
+        },
+        "anthropic-ai": {
+          "status": "partial",
+          "disallow": [
+            "/account/*",
+            "/ajax/*",
+            "/api/*",
+            "/applications/*",
+            "/onboarding/",
+            "/connect/*"
+          ]
+        },
+        "PerplexityBot": {
+          "status": "partial",
+          "disallow": [
+            "/account/*",
+            "/ajax/*",
+            "/api/*",
+            "/applications/*",
+            "/onboarding/",
+            "/connect/*"
+          ]
+        },
+        "Perplexity-User": {
+          "status": "partial",
+          "disallow": [
+            "/account/*",
+            "/ajax/*",
+            "/api/*",
+            "/applications/*",
+            "/onboarding/",
+            "/connect/*"
+          ]
+        },
+        "Google-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/account/*",
+            "/ajax/*",
+            "/api/*",
+            "/applications/*",
+            "/onboarding/",
+            "/connect/*"
+          ]
+        },
+        "Bingbot": {
+          "status": "partial",
+          "disallow": [
+            "/account/*",
+            "/ajax/*",
+            "/api/*",
+            "/applications/*",
+            "/onboarding/",
+            "/connect/*"
+          ]
+        },
+        "CCBot": {
+          "status": "partial",
+          "disallow": [
+            "/account/*",
+            "/ajax/*",
+            "/api/*",
+            "/applications/*",
+            "/onboarding/",
+            "/connect/*"
+          ]
+        },
+        "Applebot-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/account/*",
+            "/ajax/*",
+            "/api/*",
+            "/applications/*",
+            "/onboarding/",
+            "/connect/*"
+          ]
+        }
+      }
+    },
+    {
+      "rank": 7,
+      "firm": "Hydr",
+      "domain": "hydr.co",
+      "aiSpecificStance": "indeterminate",
+      "aiSpecificNote": "robots.txt could not be read (bot protection or no response), so its stance is unknown.",
+      "robots": {
+        "httpStatus": 0,
+        "effectiveUrl": "https://hydr.co/robots.txt",
+        "state": "unreachable",
+        "readable": false,
+        "wildcardDisallowsRoot": null,
+        "fetchedAt": "2026-07-14T13:08:12.237Z",
+        "rawFile": "raw-fintech/hydr.co.txt",
+        "error": "fetch failed"
+      },
+      "llms": {
+        "httpStatus": 0,
+        "effectiveUrl": "https://hydr.co/llms.txt",
+        "state": "unreachable",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:12.237Z",
+        "rawFile": "raw-fintech/hydr.co.llms.txt",
+        "error": "fetch failed"
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 8,
+      "firm": "AccessPay",
+      "domain": "accesspay.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://accesspay.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T13:08:13.853Z",
+        "rawFile": "raw-fintech/accesspay.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://accesspay.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:13.853Z",
+        "rawFile": "raw-fintech/accesspay.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "*ictd*",
+            "/legal-notices/",
+            "/russia-notification/",
+            "/free-up-millions-in-working-capital-with-increased-cash-visibility/",
+            "/solutions/security-and-compliance/",
+            "/integrations/erp-integration/",
+            "/author/"
+          ]
+        },
+        "OAI-SearchBot": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "*ictd*",
+            "/legal-notices/",
+            "/russia-notification/",
+            "/free-up-millions-in-working-capital-with-increased-cash-visibility/",
+            "/solutions/security-and-compliance/",
+            "/integrations/erp-integration/",
+            "/author/"
+          ]
+        },
+        "ChatGPT-User": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "*ictd*",
+            "/legal-notices/",
+            "/russia-notification/",
+            "/free-up-millions-in-working-capital-with-increased-cash-visibility/",
+            "/solutions/security-and-compliance/",
+            "/integrations/erp-integration/",
+            "/author/"
+          ]
+        },
+        "ClaudeBot": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "*ictd*",
+            "/legal-notices/",
+            "/russia-notification/",
+            "/free-up-millions-in-working-capital-with-increased-cash-visibility/",
+            "/solutions/security-and-compliance/",
+            "/integrations/erp-integration/",
+            "/author/"
+          ]
+        },
+        "Claude-Web": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "*ictd*",
+            "/legal-notices/",
+            "/russia-notification/",
+            "/free-up-millions-in-working-capital-with-increased-cash-visibility/",
+            "/solutions/security-and-compliance/",
+            "/integrations/erp-integration/",
+            "/author/"
+          ]
+        },
+        "anthropic-ai": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "*ictd*",
+            "/legal-notices/",
+            "/russia-notification/",
+            "/free-up-millions-in-working-capital-with-increased-cash-visibility/",
+            "/solutions/security-and-compliance/",
+            "/integrations/erp-integration/",
+            "/author/"
+          ]
+        },
+        "PerplexityBot": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "*ictd*",
+            "/legal-notices/",
+            "/russia-notification/",
+            "/free-up-millions-in-working-capital-with-increased-cash-visibility/",
+            "/solutions/security-and-compliance/",
+            "/integrations/erp-integration/",
+            "/author/"
+          ]
+        },
+        "Perplexity-User": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "*ictd*",
+            "/legal-notices/",
+            "/russia-notification/",
+            "/free-up-millions-in-working-capital-with-increased-cash-visibility/",
+            "/solutions/security-and-compliance/",
+            "/integrations/erp-integration/",
+            "/author/"
+          ]
+        },
+        "Google-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "*ictd*",
+            "/legal-notices/",
+            "/russia-notification/",
+            "/free-up-millions-in-working-capital-with-increased-cash-visibility/",
+            "/solutions/security-and-compliance/",
+            "/integrations/erp-integration/",
+            "/author/"
+          ]
+        },
+        "Bingbot": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "*ictd*",
+            "/legal-notices/",
+            "/russia-notification/",
+            "/free-up-millions-in-working-capital-with-increased-cash-visibility/",
+            "/solutions/security-and-compliance/",
+            "/integrations/erp-integration/",
+            "/author/"
+          ]
+        },
+        "CCBot": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "*ictd*",
+            "/legal-notices/",
+            "/russia-notification/",
+            "/free-up-millions-in-working-capital-with-increased-cash-visibility/",
+            "/solutions/security-and-compliance/",
+            "/integrations/erp-integration/",
+            "/author/"
+          ]
+        },
+        "Applebot-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "*ictd*",
+            "/legal-notices/",
+            "/russia-notification/",
+            "/free-up-millions-in-working-capital-with-increased-cash-visibility/",
+            "/solutions/security-and-compliance/",
+            "/integrations/erp-integration/",
+            "/author/"
+          ]
+        }
+      }
+    },
+    {
+      "rank": 9,
+      "firm": "Delio",
+      "domain": "delio.io",
+      "aiSpecificStance": "indeterminate",
+      "aiSpecificNote": "robots.txt could not be read (bot protection or no response), so its stance is unknown.",
+      "robots": {
+        "httpStatus": 0,
+        "effectiveUrl": "https://delio.io/robots.txt",
+        "state": "unreachable",
+        "readable": false,
+        "wildcardDisallowsRoot": null,
+        "fetchedAt": "2026-07-14T13:08:13.141Z",
+        "rawFile": "raw-fintech/delio.io.txt",
+        "error": "fetch failed"
+      },
+      "llms": {
+        "httpStatus": 0,
+        "effectiveUrl": "https://delio.io/llms.txt",
+        "state": "unreachable",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:13.141Z",
+        "rawFile": "raw-fintech/delio.io.llms.txt",
+        "error": "fetch failed"
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 10,
+      "firm": "Suits Me",
+      "domain": "suitsmecard.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://suitsmecard.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T13:08:12.730Z",
+        "rawFile": "raw-fintech/suitsmecard.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://suitsmecard.com/llms.txt",
+        "state": "present",
+        "genuine": true,
+        "fetchedAt": "2026-07-14T13:08:12.730Z",
+        "rawFile": "raw-fintech/suitsmecard.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "partial",
+          "disallow": [
+            "/wp/wp-admin/",
+            "/?s=",
+            "/page/*/?s=",
+            "/search/",
+            "/wp-json/",
+            "/?rest_route="
+          ]
+        },
+        "OAI-SearchBot": {
+          "status": "partial",
+          "disallow": [
+            "/wp/wp-admin/",
+            "/?s=",
+            "/page/*/?s=",
+            "/search/",
+            "/wp-json/",
+            "/?rest_route="
+          ]
+        },
+        "ChatGPT-User": {
+          "status": "partial",
+          "disallow": [
+            "/wp/wp-admin/",
+            "/?s=",
+            "/page/*/?s=",
+            "/search/",
+            "/wp-json/",
+            "/?rest_route="
+          ]
+        },
+        "ClaudeBot": {
+          "status": "partial",
+          "disallow": [
+            "/wp/wp-admin/",
+            "/?s=",
+            "/page/*/?s=",
+            "/search/",
+            "/wp-json/",
+            "/?rest_route="
+          ]
+        },
+        "Claude-Web": {
+          "status": "partial",
+          "disallow": [
+            "/wp/wp-admin/",
+            "/?s=",
+            "/page/*/?s=",
+            "/search/",
+            "/wp-json/",
+            "/?rest_route="
+          ]
+        },
+        "anthropic-ai": {
+          "status": "partial",
+          "disallow": [
+            "/wp/wp-admin/",
+            "/?s=",
+            "/page/*/?s=",
+            "/search/",
+            "/wp-json/",
+            "/?rest_route="
+          ]
+        },
+        "PerplexityBot": {
+          "status": "partial",
+          "disallow": [
+            "/wp/wp-admin/",
+            "/?s=",
+            "/page/*/?s=",
+            "/search/",
+            "/wp-json/",
+            "/?rest_route="
+          ]
+        },
+        "Perplexity-User": {
+          "status": "partial",
+          "disallow": [
+            "/wp/wp-admin/",
+            "/?s=",
+            "/page/*/?s=",
+            "/search/",
+            "/wp-json/",
+            "/?rest_route="
+          ]
+        },
+        "Google-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/wp/wp-admin/",
+            "/?s=",
+            "/page/*/?s=",
+            "/search/",
+            "/wp-json/",
+            "/?rest_route="
+          ]
+        },
+        "Bingbot": {
+          "status": "partial",
+          "disallow": [
+            "/wp/wp-admin/",
+            "/?s=",
+            "/page/*/?s=",
+            "/search/",
+            "/wp-json/",
+            "/?rest_route="
+          ]
+        },
+        "CCBot": {
+          "status": "partial",
+          "disallow": [
+            "/wp/wp-admin/",
+            "/?s=",
+            "/page/*/?s=",
+            "/search/",
+            "/wp-json/",
+            "/?rest_route="
+          ]
+        },
+        "Applebot-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/wp/wp-admin/",
+            "/?s=",
+            "/page/*/?s=",
+            "/search/",
+            "/wp-json/",
+            "/?rest_route="
+          ]
+        }
+      }
+    },
+    {
+      "rank": 11,
+      "firm": "Round Treasury",
+      "domain": "roundtreasury.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.roundtreasury.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T13:08:13.129Z",
+        "rawFile": "raw-fintech/roundtreasury.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.roundtreasury.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:13.129Z",
+        "rawFile": "raw-fintech/roundtreasury.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 12,
+      "firm": "Snoop",
+      "domain": "snoop.app",
+      "aiSpecificStance": "indeterminate",
+      "aiSpecificNote": "robots.txt could not be read (bot protection or no response), so its stance is unknown.",
+      "robots": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://snoop.app/robots.txt",
+        "state": "absent",
+        "readable": false,
+        "wildcardDisallowsRoot": null,
+        "fetchedAt": "2026-07-14T13:08:12.837Z",
+        "rawFile": "raw-fintech/snoop.app.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://snoop.app/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:12.837Z",
+        "rawFile": "raw-fintech/snoop.app.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 13,
+      "firm": "Revolut",
+      "domain": "revolut.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.revolut.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T13:08:12.959Z",
+        "rawFile": "raw-fintech/revolut.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 403,
+        "effectiveUrl": "https://www.revolut.com/llms.txt",
+        "state": "blocked_by_bot_protection",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:12.959Z",
+        "rawFile": "raw-fintech/revolut.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "partial",
+          "disallow": [
+            "/api/",
+            "*/email-verification",
+            "*/help",
+            "*/help-centre",
+            "/*.json$",
+            "/*_buildManifest.js$",
+            "/*_middlewareManifest.js$",
+            "/*_ssgManifest.js$",
+            "/*embedded",
+            "/*/query:*",
+            "*?*",
+            "*/api/*amount*",
+            "/en-AT/money-transfer/send-money",
+            "/en-BE/money-transfer/send-money",
+            "/en-BG/money-transfer/send-money",
+            "/en-BR/money-transfer/send-money",
+            "/en-CL/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-DE/money-transfer/send-money",
+            "/en-ES/money-transfer/send-money",
+            "/en-FR/money-transfer/send-money",
+            "/en-GR/money-transfer/send-money",
+            "/en-HR/money-transfer/send-money",
+            "/en-HU/money-transfer/send-money",
+            "/en-IT/money-transfer/send-money",
+            "/en-JP/money-transfer/send-money",
+            "/en-LT/money-transfer/send-money",
+            "/en-MX/money-transfer/send-money",
+            "/en-PL/money-transfer/send-money",
+            "/en-PT/money-transfer/send-money",
+            "/en-RO/money-transfer/send-money",
+            "/en-SK/money-transfer/send-money",
+            "/en-EC/money-transfer/send-money",
+            "/en-EE/money-transfer/send-money",
+            "/en-AZ/money-transfer/send-money",
+            "/en-LV/money-transfer/send-money",
+            "*/international-transfers/",
+            "/en-ES/currency-converter/convert",
+            "/en-BG/currency-converter/convert",
+            "/en-CZ/currency-converter/convert",
+            "/en-DA/currency-converter/convert",
+            "/en-DE/currency-converter/convert",
+            "/en-GR/currency-converter/convert",
+            "/en-AZ/currency-converter/convert",
+            "/en-FR/currency-converter/convert",
+            "/en-HR/currency-converter/convert",
+            "/en-HU/currency-converter/convert",
+            "/en-IT/currency-converter/convert",
+            "/en-JP/currency-converter/convert",
+            "/en-LT/currency-converter/convert",
+            "/en-NL/currency-converter/convert",
+            "/en-PL/currency-converter/convert",
+            "/en-BR/currency-converter/convert",
+            "/en-RO/currency-converter/convert",
+            "/en-LV/currency-converter/convert",
+            "/en-SE/currency-converter/convert",
+            "/en-SL/currency-converter/convert"
+          ]
+        },
+        "OAI-SearchBot": {
+          "status": "partial",
+          "disallow": [
+            "/api/",
+            "*/email-verification",
+            "*/help",
+            "*/help-centre",
+            "/*.json$",
+            "/*_buildManifest.js$",
+            "/*_middlewareManifest.js$",
+            "/*_ssgManifest.js$",
+            "/*embedded",
+            "/*/query:*",
+            "*?*",
+            "*/api/*amount*",
+            "/en-AT/money-transfer/send-money",
+            "/en-BE/money-transfer/send-money",
+            "/en-BG/money-transfer/send-money",
+            "/en-BR/money-transfer/send-money",
+            "/en-CL/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-DE/money-transfer/send-money",
+            "/en-ES/money-transfer/send-money",
+            "/en-FR/money-transfer/send-money",
+            "/en-GR/money-transfer/send-money",
+            "/en-HR/money-transfer/send-money",
+            "/en-HU/money-transfer/send-money",
+            "/en-IT/money-transfer/send-money",
+            "/en-JP/money-transfer/send-money",
+            "/en-LT/money-transfer/send-money",
+            "/en-MX/money-transfer/send-money",
+            "/en-PL/money-transfer/send-money",
+            "/en-PT/money-transfer/send-money",
+            "/en-RO/money-transfer/send-money",
+            "/en-SK/money-transfer/send-money",
+            "/en-EC/money-transfer/send-money",
+            "/en-EE/money-transfer/send-money",
+            "/en-AZ/money-transfer/send-money",
+            "/en-LV/money-transfer/send-money",
+            "*/international-transfers/",
+            "/en-ES/currency-converter/convert",
+            "/en-BG/currency-converter/convert",
+            "/en-CZ/currency-converter/convert",
+            "/en-DA/currency-converter/convert",
+            "/en-DE/currency-converter/convert",
+            "/en-GR/currency-converter/convert",
+            "/en-AZ/currency-converter/convert",
+            "/en-FR/currency-converter/convert",
+            "/en-HR/currency-converter/convert",
+            "/en-HU/currency-converter/convert",
+            "/en-IT/currency-converter/convert",
+            "/en-JP/currency-converter/convert",
+            "/en-LT/currency-converter/convert",
+            "/en-NL/currency-converter/convert",
+            "/en-PL/currency-converter/convert",
+            "/en-BR/currency-converter/convert",
+            "/en-RO/currency-converter/convert",
+            "/en-LV/currency-converter/convert",
+            "/en-SE/currency-converter/convert",
+            "/en-SL/currency-converter/convert"
+          ]
+        },
+        "ChatGPT-User": {
+          "status": "partial",
+          "disallow": [
+            "/api/",
+            "*/email-verification",
+            "*/help",
+            "*/help-centre",
+            "/*.json$",
+            "/*_buildManifest.js$",
+            "/*_middlewareManifest.js$",
+            "/*_ssgManifest.js$",
+            "/*embedded",
+            "/*/query:*",
+            "*?*",
+            "*/api/*amount*",
+            "/en-AT/money-transfer/send-money",
+            "/en-BE/money-transfer/send-money",
+            "/en-BG/money-transfer/send-money",
+            "/en-BR/money-transfer/send-money",
+            "/en-CL/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-DE/money-transfer/send-money",
+            "/en-ES/money-transfer/send-money",
+            "/en-FR/money-transfer/send-money",
+            "/en-GR/money-transfer/send-money",
+            "/en-HR/money-transfer/send-money",
+            "/en-HU/money-transfer/send-money",
+            "/en-IT/money-transfer/send-money",
+            "/en-JP/money-transfer/send-money",
+            "/en-LT/money-transfer/send-money",
+            "/en-MX/money-transfer/send-money",
+            "/en-PL/money-transfer/send-money",
+            "/en-PT/money-transfer/send-money",
+            "/en-RO/money-transfer/send-money",
+            "/en-SK/money-transfer/send-money",
+            "/en-EC/money-transfer/send-money",
+            "/en-EE/money-transfer/send-money",
+            "/en-AZ/money-transfer/send-money",
+            "/en-LV/money-transfer/send-money",
+            "*/international-transfers/",
+            "/en-ES/currency-converter/convert",
+            "/en-BG/currency-converter/convert",
+            "/en-CZ/currency-converter/convert",
+            "/en-DA/currency-converter/convert",
+            "/en-DE/currency-converter/convert",
+            "/en-GR/currency-converter/convert",
+            "/en-AZ/currency-converter/convert",
+            "/en-FR/currency-converter/convert",
+            "/en-HR/currency-converter/convert",
+            "/en-HU/currency-converter/convert",
+            "/en-IT/currency-converter/convert",
+            "/en-JP/currency-converter/convert",
+            "/en-LT/currency-converter/convert",
+            "/en-NL/currency-converter/convert",
+            "/en-PL/currency-converter/convert",
+            "/en-BR/currency-converter/convert",
+            "/en-RO/currency-converter/convert",
+            "/en-LV/currency-converter/convert",
+            "/en-SE/currency-converter/convert",
+            "/en-SL/currency-converter/convert"
+          ]
+        },
+        "ClaudeBot": {
+          "status": "partial",
+          "disallow": [
+            "/api/",
+            "*/email-verification",
+            "*/help",
+            "*/help-centre",
+            "/*.json$",
+            "/*_buildManifest.js$",
+            "/*_middlewareManifest.js$",
+            "/*_ssgManifest.js$",
+            "/*embedded",
+            "/*/query:*",
+            "*?*",
+            "*/api/*amount*",
+            "/en-AT/money-transfer/send-money",
+            "/en-BE/money-transfer/send-money",
+            "/en-BG/money-transfer/send-money",
+            "/en-BR/money-transfer/send-money",
+            "/en-CL/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-DE/money-transfer/send-money",
+            "/en-ES/money-transfer/send-money",
+            "/en-FR/money-transfer/send-money",
+            "/en-GR/money-transfer/send-money",
+            "/en-HR/money-transfer/send-money",
+            "/en-HU/money-transfer/send-money",
+            "/en-IT/money-transfer/send-money",
+            "/en-JP/money-transfer/send-money",
+            "/en-LT/money-transfer/send-money",
+            "/en-MX/money-transfer/send-money",
+            "/en-PL/money-transfer/send-money",
+            "/en-PT/money-transfer/send-money",
+            "/en-RO/money-transfer/send-money",
+            "/en-SK/money-transfer/send-money",
+            "/en-EC/money-transfer/send-money",
+            "/en-EE/money-transfer/send-money",
+            "/en-AZ/money-transfer/send-money",
+            "/en-LV/money-transfer/send-money",
+            "*/international-transfers/",
+            "/en-ES/currency-converter/convert",
+            "/en-BG/currency-converter/convert",
+            "/en-CZ/currency-converter/convert",
+            "/en-DA/currency-converter/convert",
+            "/en-DE/currency-converter/convert",
+            "/en-GR/currency-converter/convert",
+            "/en-AZ/currency-converter/convert",
+            "/en-FR/currency-converter/convert",
+            "/en-HR/currency-converter/convert",
+            "/en-HU/currency-converter/convert",
+            "/en-IT/currency-converter/convert",
+            "/en-JP/currency-converter/convert",
+            "/en-LT/currency-converter/convert",
+            "/en-NL/currency-converter/convert",
+            "/en-PL/currency-converter/convert",
+            "/en-BR/currency-converter/convert",
+            "/en-RO/currency-converter/convert",
+            "/en-LV/currency-converter/convert",
+            "/en-SE/currency-converter/convert",
+            "/en-SL/currency-converter/convert"
+          ]
+        },
+        "Claude-Web": {
+          "status": "partial",
+          "disallow": [
+            "/api/",
+            "*/email-verification",
+            "*/help",
+            "*/help-centre",
+            "/*.json$",
+            "/*_buildManifest.js$",
+            "/*_middlewareManifest.js$",
+            "/*_ssgManifest.js$",
+            "/*embedded",
+            "/*/query:*",
+            "*?*",
+            "*/api/*amount*",
+            "/en-AT/money-transfer/send-money",
+            "/en-BE/money-transfer/send-money",
+            "/en-BG/money-transfer/send-money",
+            "/en-BR/money-transfer/send-money",
+            "/en-CL/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-DE/money-transfer/send-money",
+            "/en-ES/money-transfer/send-money",
+            "/en-FR/money-transfer/send-money",
+            "/en-GR/money-transfer/send-money",
+            "/en-HR/money-transfer/send-money",
+            "/en-HU/money-transfer/send-money",
+            "/en-IT/money-transfer/send-money",
+            "/en-JP/money-transfer/send-money",
+            "/en-LT/money-transfer/send-money",
+            "/en-MX/money-transfer/send-money",
+            "/en-PL/money-transfer/send-money",
+            "/en-PT/money-transfer/send-money",
+            "/en-RO/money-transfer/send-money",
+            "/en-SK/money-transfer/send-money",
+            "/en-EC/money-transfer/send-money",
+            "/en-EE/money-transfer/send-money",
+            "/en-AZ/money-transfer/send-money",
+            "/en-LV/money-transfer/send-money",
+            "*/international-transfers/",
+            "/en-ES/currency-converter/convert",
+            "/en-BG/currency-converter/convert",
+            "/en-CZ/currency-converter/convert",
+            "/en-DA/currency-converter/convert",
+            "/en-DE/currency-converter/convert",
+            "/en-GR/currency-converter/convert",
+            "/en-AZ/currency-converter/convert",
+            "/en-FR/currency-converter/convert",
+            "/en-HR/currency-converter/convert",
+            "/en-HU/currency-converter/convert",
+            "/en-IT/currency-converter/convert",
+            "/en-JP/currency-converter/convert",
+            "/en-LT/currency-converter/convert",
+            "/en-NL/currency-converter/convert",
+            "/en-PL/currency-converter/convert",
+            "/en-BR/currency-converter/convert",
+            "/en-RO/currency-converter/convert",
+            "/en-LV/currency-converter/convert",
+            "/en-SE/currency-converter/convert",
+            "/en-SL/currency-converter/convert"
+          ]
+        },
+        "anthropic-ai": {
+          "status": "partial",
+          "disallow": [
+            "/api/",
+            "*/email-verification",
+            "*/help",
+            "*/help-centre",
+            "/*.json$",
+            "/*_buildManifest.js$",
+            "/*_middlewareManifest.js$",
+            "/*_ssgManifest.js$",
+            "/*embedded",
+            "/*/query:*",
+            "*?*",
+            "*/api/*amount*",
+            "/en-AT/money-transfer/send-money",
+            "/en-BE/money-transfer/send-money",
+            "/en-BG/money-transfer/send-money",
+            "/en-BR/money-transfer/send-money",
+            "/en-CL/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-DE/money-transfer/send-money",
+            "/en-ES/money-transfer/send-money",
+            "/en-FR/money-transfer/send-money",
+            "/en-GR/money-transfer/send-money",
+            "/en-HR/money-transfer/send-money",
+            "/en-HU/money-transfer/send-money",
+            "/en-IT/money-transfer/send-money",
+            "/en-JP/money-transfer/send-money",
+            "/en-LT/money-transfer/send-money",
+            "/en-MX/money-transfer/send-money",
+            "/en-PL/money-transfer/send-money",
+            "/en-PT/money-transfer/send-money",
+            "/en-RO/money-transfer/send-money",
+            "/en-SK/money-transfer/send-money",
+            "/en-EC/money-transfer/send-money",
+            "/en-EE/money-transfer/send-money",
+            "/en-AZ/money-transfer/send-money",
+            "/en-LV/money-transfer/send-money",
+            "*/international-transfers/",
+            "/en-ES/currency-converter/convert",
+            "/en-BG/currency-converter/convert",
+            "/en-CZ/currency-converter/convert",
+            "/en-DA/currency-converter/convert",
+            "/en-DE/currency-converter/convert",
+            "/en-GR/currency-converter/convert",
+            "/en-AZ/currency-converter/convert",
+            "/en-FR/currency-converter/convert",
+            "/en-HR/currency-converter/convert",
+            "/en-HU/currency-converter/convert",
+            "/en-IT/currency-converter/convert",
+            "/en-JP/currency-converter/convert",
+            "/en-LT/currency-converter/convert",
+            "/en-NL/currency-converter/convert",
+            "/en-PL/currency-converter/convert",
+            "/en-BR/currency-converter/convert",
+            "/en-RO/currency-converter/convert",
+            "/en-LV/currency-converter/convert",
+            "/en-SE/currency-converter/convert",
+            "/en-SL/currency-converter/convert"
+          ]
+        },
+        "PerplexityBot": {
+          "status": "partial",
+          "disallow": [
+            "/api/",
+            "*/email-verification",
+            "*/help",
+            "*/help-centre",
+            "/*.json$",
+            "/*_buildManifest.js$",
+            "/*_middlewareManifest.js$",
+            "/*_ssgManifest.js$",
+            "/*embedded",
+            "/*/query:*",
+            "*?*",
+            "*/api/*amount*",
+            "/en-AT/money-transfer/send-money",
+            "/en-BE/money-transfer/send-money",
+            "/en-BG/money-transfer/send-money",
+            "/en-BR/money-transfer/send-money",
+            "/en-CL/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-DE/money-transfer/send-money",
+            "/en-ES/money-transfer/send-money",
+            "/en-FR/money-transfer/send-money",
+            "/en-GR/money-transfer/send-money",
+            "/en-HR/money-transfer/send-money",
+            "/en-HU/money-transfer/send-money",
+            "/en-IT/money-transfer/send-money",
+            "/en-JP/money-transfer/send-money",
+            "/en-LT/money-transfer/send-money",
+            "/en-MX/money-transfer/send-money",
+            "/en-PL/money-transfer/send-money",
+            "/en-PT/money-transfer/send-money",
+            "/en-RO/money-transfer/send-money",
+            "/en-SK/money-transfer/send-money",
+            "/en-EC/money-transfer/send-money",
+            "/en-EE/money-transfer/send-money",
+            "/en-AZ/money-transfer/send-money",
+            "/en-LV/money-transfer/send-money",
+            "*/international-transfers/",
+            "/en-ES/currency-converter/convert",
+            "/en-BG/currency-converter/convert",
+            "/en-CZ/currency-converter/convert",
+            "/en-DA/currency-converter/convert",
+            "/en-DE/currency-converter/convert",
+            "/en-GR/currency-converter/convert",
+            "/en-AZ/currency-converter/convert",
+            "/en-FR/currency-converter/convert",
+            "/en-HR/currency-converter/convert",
+            "/en-HU/currency-converter/convert",
+            "/en-IT/currency-converter/convert",
+            "/en-JP/currency-converter/convert",
+            "/en-LT/currency-converter/convert",
+            "/en-NL/currency-converter/convert",
+            "/en-PL/currency-converter/convert",
+            "/en-BR/currency-converter/convert",
+            "/en-RO/currency-converter/convert",
+            "/en-LV/currency-converter/convert",
+            "/en-SE/currency-converter/convert",
+            "/en-SL/currency-converter/convert"
+          ]
+        },
+        "Perplexity-User": {
+          "status": "partial",
+          "disallow": [
+            "/api/",
+            "*/email-verification",
+            "*/help",
+            "*/help-centre",
+            "/*.json$",
+            "/*_buildManifest.js$",
+            "/*_middlewareManifest.js$",
+            "/*_ssgManifest.js$",
+            "/*embedded",
+            "/*/query:*",
+            "*?*",
+            "*/api/*amount*",
+            "/en-AT/money-transfer/send-money",
+            "/en-BE/money-transfer/send-money",
+            "/en-BG/money-transfer/send-money",
+            "/en-BR/money-transfer/send-money",
+            "/en-CL/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-DE/money-transfer/send-money",
+            "/en-ES/money-transfer/send-money",
+            "/en-FR/money-transfer/send-money",
+            "/en-GR/money-transfer/send-money",
+            "/en-HR/money-transfer/send-money",
+            "/en-HU/money-transfer/send-money",
+            "/en-IT/money-transfer/send-money",
+            "/en-JP/money-transfer/send-money",
+            "/en-LT/money-transfer/send-money",
+            "/en-MX/money-transfer/send-money",
+            "/en-PL/money-transfer/send-money",
+            "/en-PT/money-transfer/send-money",
+            "/en-RO/money-transfer/send-money",
+            "/en-SK/money-transfer/send-money",
+            "/en-EC/money-transfer/send-money",
+            "/en-EE/money-transfer/send-money",
+            "/en-AZ/money-transfer/send-money",
+            "/en-LV/money-transfer/send-money",
+            "*/international-transfers/",
+            "/en-ES/currency-converter/convert",
+            "/en-BG/currency-converter/convert",
+            "/en-CZ/currency-converter/convert",
+            "/en-DA/currency-converter/convert",
+            "/en-DE/currency-converter/convert",
+            "/en-GR/currency-converter/convert",
+            "/en-AZ/currency-converter/convert",
+            "/en-FR/currency-converter/convert",
+            "/en-HR/currency-converter/convert",
+            "/en-HU/currency-converter/convert",
+            "/en-IT/currency-converter/convert",
+            "/en-JP/currency-converter/convert",
+            "/en-LT/currency-converter/convert",
+            "/en-NL/currency-converter/convert",
+            "/en-PL/currency-converter/convert",
+            "/en-BR/currency-converter/convert",
+            "/en-RO/currency-converter/convert",
+            "/en-LV/currency-converter/convert",
+            "/en-SE/currency-converter/convert",
+            "/en-SL/currency-converter/convert"
+          ]
+        },
+        "Google-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/api/",
+            "*/email-verification",
+            "*/help",
+            "*/help-centre",
+            "/*.json$",
+            "/*_buildManifest.js$",
+            "/*_middlewareManifest.js$",
+            "/*_ssgManifest.js$",
+            "/*embedded",
+            "/*/query:*",
+            "*?*",
+            "*/api/*amount*",
+            "/en-AT/money-transfer/send-money",
+            "/en-BE/money-transfer/send-money",
+            "/en-BG/money-transfer/send-money",
+            "/en-BR/money-transfer/send-money",
+            "/en-CL/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-DE/money-transfer/send-money",
+            "/en-ES/money-transfer/send-money",
+            "/en-FR/money-transfer/send-money",
+            "/en-GR/money-transfer/send-money",
+            "/en-HR/money-transfer/send-money",
+            "/en-HU/money-transfer/send-money",
+            "/en-IT/money-transfer/send-money",
+            "/en-JP/money-transfer/send-money",
+            "/en-LT/money-transfer/send-money",
+            "/en-MX/money-transfer/send-money",
+            "/en-PL/money-transfer/send-money",
+            "/en-PT/money-transfer/send-money",
+            "/en-RO/money-transfer/send-money",
+            "/en-SK/money-transfer/send-money",
+            "/en-EC/money-transfer/send-money",
+            "/en-EE/money-transfer/send-money",
+            "/en-AZ/money-transfer/send-money",
+            "/en-LV/money-transfer/send-money",
+            "*/international-transfers/",
+            "/en-ES/currency-converter/convert",
+            "/en-BG/currency-converter/convert",
+            "/en-CZ/currency-converter/convert",
+            "/en-DA/currency-converter/convert",
+            "/en-DE/currency-converter/convert",
+            "/en-GR/currency-converter/convert",
+            "/en-AZ/currency-converter/convert",
+            "/en-FR/currency-converter/convert",
+            "/en-HR/currency-converter/convert",
+            "/en-HU/currency-converter/convert",
+            "/en-IT/currency-converter/convert",
+            "/en-JP/currency-converter/convert",
+            "/en-LT/currency-converter/convert",
+            "/en-NL/currency-converter/convert",
+            "/en-PL/currency-converter/convert",
+            "/en-BR/currency-converter/convert",
+            "/en-RO/currency-converter/convert",
+            "/en-LV/currency-converter/convert",
+            "/en-SE/currency-converter/convert",
+            "/en-SL/currency-converter/convert"
+          ]
+        },
+        "Bingbot": {
+          "status": "partial",
+          "disallow": [
+            "/api/",
+            "*/email-verification",
+            "*/help",
+            "*/help-centre",
+            "/*.json$",
+            "/*_buildManifest.js$",
+            "/*_middlewareManifest.js$",
+            "/*_ssgManifest.js$",
+            "/*embedded",
+            "/*/query:*",
+            "*?*",
+            "*/api/*amount*",
+            "/en-AT/money-transfer/send-money",
+            "/en-BE/money-transfer/send-money",
+            "/en-BG/money-transfer/send-money",
+            "/en-BR/money-transfer/send-money",
+            "/en-CL/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-DE/money-transfer/send-money",
+            "/en-ES/money-transfer/send-money",
+            "/en-FR/money-transfer/send-money",
+            "/en-GR/money-transfer/send-money",
+            "/en-HR/money-transfer/send-money",
+            "/en-HU/money-transfer/send-money",
+            "/en-IT/money-transfer/send-money",
+            "/en-JP/money-transfer/send-money",
+            "/en-LT/money-transfer/send-money",
+            "/en-MX/money-transfer/send-money",
+            "/en-PL/money-transfer/send-money",
+            "/en-PT/money-transfer/send-money",
+            "/en-RO/money-transfer/send-money",
+            "/en-SK/money-transfer/send-money",
+            "/en-EC/money-transfer/send-money",
+            "/en-EE/money-transfer/send-money",
+            "/en-AZ/money-transfer/send-money",
+            "/en-LV/money-transfer/send-money",
+            "*/international-transfers/",
+            "/en-ES/currency-converter/convert",
+            "/en-BG/currency-converter/convert",
+            "/en-CZ/currency-converter/convert",
+            "/en-DA/currency-converter/convert",
+            "/en-DE/currency-converter/convert",
+            "/en-GR/currency-converter/convert",
+            "/en-AZ/currency-converter/convert",
+            "/en-FR/currency-converter/convert",
+            "/en-HR/currency-converter/convert",
+            "/en-HU/currency-converter/convert",
+            "/en-IT/currency-converter/convert",
+            "/en-JP/currency-converter/convert",
+            "/en-LT/currency-converter/convert",
+            "/en-NL/currency-converter/convert",
+            "/en-PL/currency-converter/convert",
+            "/en-BR/currency-converter/convert",
+            "/en-RO/currency-converter/convert",
+            "/en-LV/currency-converter/convert",
+            "/en-SE/currency-converter/convert",
+            "/en-SL/currency-converter/convert"
+          ]
+        },
+        "CCBot": {
+          "status": "partial",
+          "disallow": [
+            "/api/",
+            "*/email-verification",
+            "*/help",
+            "*/help-centre",
+            "/*.json$",
+            "/*_buildManifest.js$",
+            "/*_middlewareManifest.js$",
+            "/*_ssgManifest.js$",
+            "/*embedded",
+            "/*/query:*",
+            "*?*",
+            "*/api/*amount*",
+            "/en-AT/money-transfer/send-money",
+            "/en-BE/money-transfer/send-money",
+            "/en-BG/money-transfer/send-money",
+            "/en-BR/money-transfer/send-money",
+            "/en-CL/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-DE/money-transfer/send-money",
+            "/en-ES/money-transfer/send-money",
+            "/en-FR/money-transfer/send-money",
+            "/en-GR/money-transfer/send-money",
+            "/en-HR/money-transfer/send-money",
+            "/en-HU/money-transfer/send-money",
+            "/en-IT/money-transfer/send-money",
+            "/en-JP/money-transfer/send-money",
+            "/en-LT/money-transfer/send-money",
+            "/en-MX/money-transfer/send-money",
+            "/en-PL/money-transfer/send-money",
+            "/en-PT/money-transfer/send-money",
+            "/en-RO/money-transfer/send-money",
+            "/en-SK/money-transfer/send-money",
+            "/en-EC/money-transfer/send-money",
+            "/en-EE/money-transfer/send-money",
+            "/en-AZ/money-transfer/send-money",
+            "/en-LV/money-transfer/send-money",
+            "*/international-transfers/",
+            "/en-ES/currency-converter/convert",
+            "/en-BG/currency-converter/convert",
+            "/en-CZ/currency-converter/convert",
+            "/en-DA/currency-converter/convert",
+            "/en-DE/currency-converter/convert",
+            "/en-GR/currency-converter/convert",
+            "/en-AZ/currency-converter/convert",
+            "/en-FR/currency-converter/convert",
+            "/en-HR/currency-converter/convert",
+            "/en-HU/currency-converter/convert",
+            "/en-IT/currency-converter/convert",
+            "/en-JP/currency-converter/convert",
+            "/en-LT/currency-converter/convert",
+            "/en-NL/currency-converter/convert",
+            "/en-PL/currency-converter/convert",
+            "/en-BR/currency-converter/convert",
+            "/en-RO/currency-converter/convert",
+            "/en-LV/currency-converter/convert",
+            "/en-SE/currency-converter/convert",
+            "/en-SL/currency-converter/convert"
+          ]
+        },
+        "Applebot-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/api/",
+            "*/email-verification",
+            "*/help",
+            "*/help-centre",
+            "/*.json$",
+            "/*_buildManifest.js$",
+            "/*_middlewareManifest.js$",
+            "/*_ssgManifest.js$",
+            "/*embedded",
+            "/*/query:*",
+            "*?*",
+            "*/api/*amount*",
+            "/en-AT/money-transfer/send-money",
+            "/en-BE/money-transfer/send-money",
+            "/en-BG/money-transfer/send-money",
+            "/en-BR/money-transfer/send-money",
+            "/en-CL/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-CZ/money-transfer/send-money",
+            "/en-DE/money-transfer/send-money",
+            "/en-ES/money-transfer/send-money",
+            "/en-FR/money-transfer/send-money",
+            "/en-GR/money-transfer/send-money",
+            "/en-HR/money-transfer/send-money",
+            "/en-HU/money-transfer/send-money",
+            "/en-IT/money-transfer/send-money",
+            "/en-JP/money-transfer/send-money",
+            "/en-LT/money-transfer/send-money",
+            "/en-MX/money-transfer/send-money",
+            "/en-PL/money-transfer/send-money",
+            "/en-PT/money-transfer/send-money",
+            "/en-RO/money-transfer/send-money",
+            "/en-SK/money-transfer/send-money",
+            "/en-EC/money-transfer/send-money",
+            "/en-EE/money-transfer/send-money",
+            "/en-AZ/money-transfer/send-money",
+            "/en-LV/money-transfer/send-money",
+            "*/international-transfers/",
+            "/en-ES/currency-converter/convert",
+            "/en-BG/currency-converter/convert",
+            "/en-CZ/currency-converter/convert",
+            "/en-DA/currency-converter/convert",
+            "/en-DE/currency-converter/convert",
+            "/en-GR/currency-converter/convert",
+            "/en-AZ/currency-converter/convert",
+            "/en-FR/currency-converter/convert",
+            "/en-HR/currency-converter/convert",
+            "/en-HU/currency-converter/convert",
+            "/en-IT/currency-converter/convert",
+            "/en-JP/currency-converter/convert",
+            "/en-LT/currency-converter/convert",
+            "/en-NL/currency-converter/convert",
+            "/en-PL/currency-converter/convert",
+            "/en-BR/currency-converter/convert",
+            "/en-RO/currency-converter/convert",
+            "/en-LV/currency-converter/convert",
+            "/en-SE/currency-converter/convert",
+            "/en-SL/currency-converter/convert"
+          ]
+        }
+      }
+    },
+    {
+      "rank": 14,
+      "firm": "BankiFi",
+      "domain": "bankifi.com",
+      "aiSpecificStance": "indeterminate",
+      "aiSpecificNote": "robots.txt could not be read (bot protection or no response), so its stance is unknown.",
+      "robots": {
+        "httpStatus": 0,
+        "effectiveUrl": "https://bankifi.com/robots.txt",
+        "state": "unreachable",
+        "readable": false,
+        "wildcardDisallowsRoot": null,
+        "fetchedAt": "2026-07-14T13:08:22.941Z",
+        "rawFile": "raw-fintech/bankifi.com.txt",
+        "error": "fetch failed"
+      },
+      "llms": {
+        "httpStatus": 0,
+        "effectiveUrl": "https://bankifi.com/llms.txt",
+        "state": "unreachable",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:22.941Z",
+        "rawFile": "raw-fintech/bankifi.com.llms.txt",
+        "error": "fetch failed"
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 15,
+      "firm": "Financielle",
+      "domain": "financielle.co.uk",
+      "aiSpecificStance": "indeterminate",
+      "aiSpecificNote": "robots.txt could not be read (bot protection or no response), so its stance is unknown.",
+      "robots": {
+        "httpStatus": 0,
+        "effectiveUrl": "https://financielle.co.uk/robots.txt",
+        "state": "unreachable",
+        "readable": false,
+        "wildcardDisallowsRoot": null,
+        "fetchedAt": "2026-07-14T13:08:13.010Z",
+        "rawFile": "raw-fintech/financielle.co.uk.txt",
+        "error": "fetch failed"
+      },
+      "llms": {
+        "httpStatus": 0,
+        "effectiveUrl": "https://financielle.co.uk/llms.txt",
+        "state": "unreachable",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:13.010Z",
+        "rawFile": "raw-fintech/financielle.co.uk.llms.txt",
+        "error": "fetch failed"
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 16,
+      "firm": "Zilch",
+      "domain": "zilch.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.zilch.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T13:08:14.008Z",
+        "rawFile": "raw-fintech/zilch.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.zilch.com/uk/",
+        "state": "soft404_html",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:14.008Z",
+        "rawFile": "raw-fintech/zilch.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "allowed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 17,
+      "firm": "Kani Payments",
+      "domain": "kanipayments.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://kanipayments.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T13:08:13.701Z",
+        "rawFile": "raw-fintech/kanipayments.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://kanipayments.com/llms.txt",
+        "state": "present",
+        "genuine": true,
+        "fetchedAt": "2026-07-14T13:08:13.701Z",
+        "rawFile": "raw-fintech/kanipayments.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "allowed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 18,
+      "firm": "Inicio AI",
+      "domain": "inicio.ai",
+      "aiSpecificStance": "indeterminate",
+      "aiSpecificNote": "robots.txt could not be read (bot protection or no response), so its stance is unknown.",
+      "robots": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://m.inicio.ai/robots.txt",
+        "state": "absent",
+        "readable": false,
+        "wildcardDisallowsRoot": null,
+        "fetchedAt": "2026-07-14T13:08:16.159Z",
+        "rawFile": "raw-fintech/inicio.ai.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://m.inicio.ai/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:16.159Z",
+        "rawFile": "raw-fintech/inicio.ai.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 19,
+      "firm": "Zopa",
+      "domain": "zopa.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.zopa.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T13:08:14.224Z",
+        "rawFile": "raw-fintech/zopa.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.zopa.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:14.224Z",
+        "rawFile": "raw-fintech/zopa.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "allowed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 20,
+      "firm": "Salad Money",
+      "domain": "saladmoney.co.uk",
+      "aiSpecificStance": "indeterminate",
+      "aiSpecificNote": "robots.txt could not be read (bot protection or no response), so its stance is unknown.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.saladmoney.co.uk/",
+        "state": "blocked_by_bot_protection",
+        "readable": false,
+        "wildcardDisallowsRoot": null,
+        "fetchedAt": "2026-07-14T13:08:14.135Z",
+        "rawFile": "raw-fintech/saladmoney.co.uk.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.saladmoney.co.uk/",
+        "state": "soft404_html",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:14.135Z",
+        "rawFile": "raw-fintech/saladmoney.co.uk.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 21,
+      "firm": "Iplicit",
+      "domain": "iplicit.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.iplicit.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T13:08:14.452Z",
+        "rawFile": "raw-fintech/iplicit.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.iplicit.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:14.452Z",
+        "rawFile": "raw-fintech/iplicit.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 22,
+      "firm": "Right Revenue",
+      "domain": "rightrevenue.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://rightrevenue.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T13:08:14.449Z",
+        "rawFile": "raw-fintech/rightrevenue.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://rightrevenue.com/llms.txt",
+        "state": "present",
+        "genuine": true,
+        "fetchedAt": "2026-07-14T13:08:14.449Z",
+        "rawFile": "raw-fintech/rightrevenue.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "allowed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 23,
+      "firm": "ClearBank",
+      "domain": "clear.bank",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://clear.bank/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T13:08:15.388Z",
+        "rawFile": "raw-fintech/clear.bank.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://clear.bank/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:15.388Z",
+        "rawFile": "raw-fintech/clear.bank.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "partial",
+          "disallow": [
+            "/cpresources/",
+            "/vendor/",
+            "/.env",
+            "/cache/"
+          ]
+        },
+        "OAI-SearchBot": {
+          "status": "partial",
+          "disallow": [
+            "/cpresources/",
+            "/vendor/",
+            "/.env",
+            "/cache/"
+          ]
+        },
+        "ChatGPT-User": {
+          "status": "partial",
+          "disallow": [
+            "/cpresources/",
+            "/vendor/",
+            "/.env",
+            "/cache/"
+          ]
+        },
+        "ClaudeBot": {
+          "status": "partial",
+          "disallow": [
+            "/cpresources/",
+            "/vendor/",
+            "/.env",
+            "/cache/"
+          ]
+        },
+        "Claude-Web": {
+          "status": "partial",
+          "disallow": [
+            "/cpresources/",
+            "/vendor/",
+            "/.env",
+            "/cache/"
+          ]
+        },
+        "anthropic-ai": {
+          "status": "partial",
+          "disallow": [
+            "/cpresources/",
+            "/vendor/",
+            "/.env",
+            "/cache/"
+          ]
+        },
+        "PerplexityBot": {
+          "status": "partial",
+          "disallow": [
+            "/cpresources/",
+            "/vendor/",
+            "/.env",
+            "/cache/"
+          ]
+        },
+        "Perplexity-User": {
+          "status": "partial",
+          "disallow": [
+            "/cpresources/",
+            "/vendor/",
+            "/.env",
+            "/cache/"
+          ]
+        },
+        "Google-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/cpresources/",
+            "/vendor/",
+            "/.env",
+            "/cache/"
+          ]
+        },
+        "Bingbot": {
+          "status": "partial",
+          "disallow": [
+            "/cpresources/",
+            "/vendor/",
+            "/.env",
+            "/cache/"
+          ]
+        },
+        "CCBot": {
+          "status": "partial",
+          "disallow": [
+            "/cpresources/",
+            "/vendor/",
+            "/.env",
+            "/cache/"
+          ]
+        },
+        "Applebot-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/cpresources/",
+            "/vendor/",
+            "/.env",
+            "/cache/"
+          ]
+        }
+      }
+    },
+    {
+      "rank": 24,
+      "firm": "Radius Payment Solutions",
+      "domain": "radiuspaymentsolutions.com",
+      "aiSpecificStance": "indeterminate",
+      "aiSpecificNote": "robots.txt could not be read (bot protection or no response), so its stance is unknown.",
+      "robots": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.radius.com/en-gb/robots.txt",
+        "state": "absent",
+        "readable": false,
+        "wildcardDisallowsRoot": null,
+        "fetchedAt": "2026-07-14T13:08:15.052Z",
+        "rawFile": "raw-fintech/radiuspaymentsolutions.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.radius.com/en-gb/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:15.052Z",
+        "rawFile": "raw-fintech/radiuspaymentsolutions.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 25,
+      "firm": "Swiipr",
+      "domain": "swiipr.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://swiipr.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T13:08:17.974Z",
+        "rawFile": "raw-fintech/swiipr.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://swiipr.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:17.975Z",
+        "rawFile": "raw-fintech/swiipr.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "/wp-content/uploads/wpforms/"
+          ]
+        },
+        "OAI-SearchBot": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "/wp-content/uploads/wpforms/"
+          ]
+        },
+        "ChatGPT-User": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "/wp-content/uploads/wpforms/"
+          ]
+        },
+        "ClaudeBot": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "/wp-content/uploads/wpforms/"
+          ]
+        },
+        "Claude-Web": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "/wp-content/uploads/wpforms/"
+          ]
+        },
+        "anthropic-ai": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "/wp-content/uploads/wpforms/"
+          ]
+        },
+        "PerplexityBot": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "/wp-content/uploads/wpforms/"
+          ]
+        },
+        "Perplexity-User": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "/wp-content/uploads/wpforms/"
+          ]
+        },
+        "Google-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "/wp-content/uploads/wpforms/"
+          ]
+        },
+        "Bingbot": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "/wp-content/uploads/wpforms/"
+          ]
+        },
+        "CCBot": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "/wp-content/uploads/wpforms/"
+          ]
+        },
+        "Applebot-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/wp-admin/",
+            "/wp-content/uploads/wpforms/"
+          ]
+        }
+      }
+    },
+    {
+      "rank": 26,
+      "firm": "GFA Exchange",
+      "domain": "gfaexchange.com",
+      "aiSpecificStance": "indeterminate",
+      "aiSpecificNote": "robots.txt could not be read (bot protection or no response), so its stance is unknown.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.gfaexchange.com/robots.txt",
+        "state": "other_status_502",
+        "readable": false,
+        "wildcardDisallowsRoot": null,
+        "fetchedAt": "2026-07-14T13:08:15.591Z",
+        "rawFile": "raw-fintech/gfaexchange.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.gfaexchange.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:15.591Z",
+        "rawFile": "raw-fintech/gfaexchange.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 27,
+      "firm": "Powdr",
+      "domain": "powdr.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.powdr.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T13:08:15.960Z",
+        "rawFile": "raw-fintech/powdr.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.powdr.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:15.960Z",
+        "rawFile": "raw-fintech/powdr.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "allowed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 28,
+      "firm": "Weavr",
+      "domain": "weavr.io",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.weavr.io/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T13:08:16.079Z",
+        "rawFile": "raw-fintech/weavr.io.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.weavr.io/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:16.079Z",
+        "rawFile": "raw-fintech/weavr.io.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "allowed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 29,
+      "firm": "Open ECX",
+      "domain": "openecx.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://openecx.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T13:08:15.875Z",
+        "rawFile": "raw-fintech/openecx.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://openecx.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:15.875Z",
+        "rawFile": "raw-fintech/openecx.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "partial",
+          "disallow": [
+            "/_hcms/preview/",
+            "/hs/manage-preferences/",
+            "/hs/preferences-center/",
+            "/*?*hs_preview=*",
+            "/*?*hsCacheBuster=*"
+          ]
+        },
+        "OAI-SearchBot": {
+          "status": "partial",
+          "disallow": [
+            "/_hcms/preview/",
+            "/hs/manage-preferences/",
+            "/hs/preferences-center/",
+            "/*?*hs_preview=*",
+            "/*?*hsCacheBuster=*"
+          ]
+        },
+        "ChatGPT-User": {
+          "status": "partial",
+          "disallow": [
+            "/_hcms/preview/",
+            "/hs/manage-preferences/",
+            "/hs/preferences-center/",
+            "/*?*hs_preview=*",
+            "/*?*hsCacheBuster=*"
+          ]
+        },
+        "ClaudeBot": {
+          "status": "partial",
+          "disallow": [
+            "/_hcms/preview/",
+            "/hs/manage-preferences/",
+            "/hs/preferences-center/",
+            "/*?*hs_preview=*",
+            "/*?*hsCacheBuster=*"
+          ]
+        },
+        "Claude-Web": {
+          "status": "partial",
+          "disallow": [
+            "/_hcms/preview/",
+            "/hs/manage-preferences/",
+            "/hs/preferences-center/",
+            "/*?*hs_preview=*",
+            "/*?*hsCacheBuster=*"
+          ]
+        },
+        "anthropic-ai": {
+          "status": "partial",
+          "disallow": [
+            "/_hcms/preview/",
+            "/hs/manage-preferences/",
+            "/hs/preferences-center/",
+            "/*?*hs_preview=*",
+            "/*?*hsCacheBuster=*"
+          ]
+        },
+        "PerplexityBot": {
+          "status": "partial",
+          "disallow": [
+            "/_hcms/preview/",
+            "/hs/manage-preferences/",
+            "/hs/preferences-center/",
+            "/*?*hs_preview=*",
+            "/*?*hsCacheBuster=*"
+          ]
+        },
+        "Perplexity-User": {
+          "status": "partial",
+          "disallow": [
+            "/_hcms/preview/",
+            "/hs/manage-preferences/",
+            "/hs/preferences-center/",
+            "/*?*hs_preview=*",
+            "/*?*hsCacheBuster=*"
+          ]
+        },
+        "Google-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/_hcms/preview/",
+            "/hs/manage-preferences/",
+            "/hs/preferences-center/",
+            "/*?*hs_preview=*",
+            "/*?*hsCacheBuster=*"
+          ]
+        },
+        "Bingbot": {
+          "status": "partial",
+          "disallow": [
+            "/_hcms/preview/",
+            "/hs/manage-preferences/",
+            "/hs/preferences-center/",
+            "/*?*hs_preview=*",
+            "/*?*hsCacheBuster=*"
+          ]
+        },
+        "CCBot": {
+          "status": "partial",
+          "disallow": [
+            "/_hcms/preview/",
+            "/hs/manage-preferences/",
+            "/hs/preferences-center/",
+            "/*?*hs_preview=*",
+            "/*?*hsCacheBuster=*"
+          ]
+        },
+        "Applebot-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/_hcms/preview/",
+            "/hs/manage-preferences/",
+            "/hs/preferences-center/",
+            "/*?*hs_preview=*",
+            "/*?*hsCacheBuster=*"
+          ]
+        }
+      }
+    },
+    {
+      "rank": 30,
+      "firm": "TrueLayer",
+      "domain": "truelayer.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://truelayer.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T13:08:16.016Z",
+        "rawFile": "raw-fintech/truelayer.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://truelayer.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T13:08:16.016Z",
+        "rawFile": "raw-fintech/truelayer.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "allowed",
+          "disallow": []
+        }
+      }
+    }
+  ]
+}

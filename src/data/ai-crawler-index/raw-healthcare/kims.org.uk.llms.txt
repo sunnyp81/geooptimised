@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-GB">
+<head><link rel="stylesheet" href="https://kims.org.uk/wp-content/cache/minify/" media="all" />
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+    <!-- Resolve FOUC -->
+    <style>html{visibility: hidden;opacity:0;}</style>
+
+	<meta name='robots' content='noindex, follow' />
+<!-- CookiePro Cookies Consent Notice start for kims.org.uk --> 
+<script src="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="49af0cc2-8bb3-4c28-931d-e3a7855225bf" ></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- CookiePro Cookies Consent Notice end for kims.org.uk -->    <!-- Start VWO Common Smartcode -->
+    <script data-jetpack-boost="ignore" type='text/javascript'>
+        var _vwo_clicks = 10;
+    </script>
+    <!-- End VWO Common Smartcode -->
+        <!-- Start VWO Async SmartCode -->
+    <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
+    <script data-jetpack-boost="ignore" type='text/javascript' id='vwoCode'>
+        /* Fix: wp-rocket (application/ld+json) */
+        window._vwo_code || (function () {
+            var w=window,
+            d=document;
+            var account_id=934690,
+            version=2.2,
+            settings_tolerance=2000,
+            library_tolerance=2500,
+            use_existing_jquery=false,
+            platform='web',
+            hide_element='body',
+            hide_element_style='opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important',
+            f=0;
+            /* DO NOT EDIT BELOW THIS LINE */
+            if(f=!1,v=d.querySelector('#vwoCode'),cc={},-1<d.URL.indexOf('__vwo_disable__')||w._vwo_code)return;try{var e=JSON.parse(localStorage.getItem('_vwo_'+account_id+'_config'));cc=e&&'object'==typeof e?e:{}}catch(e){}function r(t){try{return decodeURIComponent(t)}catch(e){return t}}var s=function(){var e={combination:[],combinationChoose:[],split:[],exclude:[],uuid:null,consent:null,optOut:null},t=d.cookie||'';if(!t)return e;for(var n,i,o=/(?:^|;\s*)(?:(_vis_opt_exp_(\d+)_combi=([^;]*))|(_vis_opt_exp_(\d+)_combi_choose=([^;]*))|(_vis_opt_exp_(\d+)_split=([^:;]*))|(_vis_opt_exp_(\d+)_exclude=[^;]*)|(_vis_opt_out=([^;]*))|(_vwo_global_opt_out=[^;]*)|(_vwo_uuid=([^;]*))|(_vwo_consent=([^;]*)))/g;null!==(n=o.exec(t));)try{n[1]?e.combination.push({id:n[2],value:r(n[3])}):n[4]?e.combinationChoose.push({id:n[5],value:r(n[6])}):n[7]?e.split.push({id:n[8],value:r(n[9])}):n[10]?e.exclude.push({id:n[11]}):n[12]?e.optOut=r(n[13]):n[14]?e.optOut=!0:n[15]?e.uuid=r(n[16]):n[17]&&(i=r(n[18]),e.consent=i&&3<=i.length?i.substring(0,3):null)}catch(e){}return e}();function i(){var e=function(){if(w.VWO&&Array.isArray(w.VWO))for(var e=0;e<w.VWO.length;e++){var t=w.VWO[e];if(Array.isArray(t)&&('setVisitorId'===t[0]||'setSessionId'===t[0]))return!0}return!1}(),t='a='+account_id+'&u='+encodeURIComponent(w._vis_opt_url||d.URL)+'&vn='+version+'&ph=1'+('undefined'!=typeof platform?'&p='+platform:'')+'&st='+w.performance.now();e||((n=function(){var e,t=[],n={},i=w.VWO&&w.VWO.appliedCampaigns||{};for(e in i){var o=i[e]&&i[e].v;o&&(t.push(e+'-'+o+'-1'),n[e]=!0)}if(s&&s.combination)for(var r=0;r<s.combination.length;r++){var a=s.combination[r];n[a.id]||t.push(a.id+'-'+a.value)}return t.join('|')}())&&(t+='&c='+n),(n=function(){var e=[],t={};if(s&&s.combinationChoose)for(var n=0;n<s.combinationChoose.length;n++){var i=s.combinationChoose[n];e.push(i.id+'-'+i.value),t[i.id]=!0}if(s&&s.split)for(var o=0;o<s.split.length;o++)t[(i=s.split[o]).id]||e.push(i.id+'-'+i.value);return e.join('|')}())&&(t+='&cc='+n),(n=function(){var e={},t=[];if(w.VWO&&Array.isArray(w.VWO))for(var n=0;n<w.VWO.length;n++){var i=w.VWO[n];if(Array.isArray(i)&&'setVariation'===i[0]&&i[1]&&Array.isArray(i[1]))for(var o=0;o<i[1].length;o++){var r,a=i[1][o];a&&'object'==typeof a&&(r=a.e,a=a.v,r&&a&&(e[r]=a))}}for(r in e)t.push(r+'-'+e[r]);return t.join('|')}())&&(t+='&sv='+n)),s&&s.optOut&&(t+='&o='+s.optOut);var n=function(){var e=[],t={};if(s&&s.exclude)for(var n=0;n<s.exclude.length;n++){var i=s.exclude[n];t[i.id]||(e.push(i.id),t[i.id]=!0)}return e.join('|')}();return n&&(t+='&e='+n),s&&s.uuid&&(t+='&id='+s.uuid),s&&s.consent&&(t+='&consent='+s.consent),w.name&&-1<w.name.indexOf('_vis_preview')&&(t+='&pM=true'),w.VWO&&w.VWO.ed&&(t+='&ed='+w.VWO.ed),t}code={nonce:v&&v.nonce,use_existing_jquery:function(){return'undefined'!=typeof use_existing_jquery?use_existing_jquery:void 0},library_tolerance:function(){return'undefined'!=typeof library_tolerance?library_tolerance:void 0},settings_tolerance:function(){return cc.sT||settings_tolerance},hide_element_style:function(){return'{'+(cc.hES||hide_element_style)+'}'},hide_element:function(){return performance.getEntriesByName('first-contentful-paint')[0]?'':'string'==typeof cc.hE?cc.hE:hide_element},getVersion:function(){return version},finish:function(e){var t;f||(f=!0,(t=d.getElementById('_vis_opt_path_hides'))&&t.parentNode.removeChild(t),e&&((new Image).src='https://dev.visualwebsiteoptimizer.com/ee.gif?a='+account_id+e))},finished:function(){return f},addScript:function(e){var t=d.createElement('script');t.type='text/javascript',e.src?t.src=e.src:t.text=e.text,v&&t.setAttribute('nonce',v.nonce),d.getElementsByTagName('head')[0].appendChild(t)},load:function(e,t){t=t||{};var n=new XMLHttpRequest;n.open('GET',e,!0),n.withCredentials=!t.dSC,n.responseType=t.responseType||'text',n.onload=function(){if(t.onloadCb)return t.onloadCb(n,e);200===n.status?_vwo_code.addScript({text:n.responseText}):_vwo_code.finish('&e=loading_failure:'+e)},n.onerror=function(){if(t.onerrorCb)return t.onerrorCb(e);_vwo_code.finish('&e=loading_failure:'+e)},n.send()},init:function(){var e,t=this.settings_tolerance();w._vwo_settings_timer=setTimeout(function(){_vwo_code.finish()},t),'body'!==this.hide_element()?(n=d.createElement('style'),e=(t=this.hide_element())?t+this.hide_element_style():'',t=d.getElementsByTagName('head')[0],n.setAttribute('id','_vis_opt_path_hides'),v&&n.setAttribute('nonce',v.nonce),n.setAttribute('type','text/css'),n.styleSheet?n.styleSheet.cssText=e:n.appendChild(d.createTextNode(e)),t.appendChild(n)):(n=d.getElementsByTagName('head')[0],(e=d.createElement('div')).style.cssText='z-index: 2147483647 !important;position: fixed !important;left: 0 !important;top: 0 !important;width: 100% !important;height: 100% !important;background: white !important;',e.setAttribute('id','_vis_opt_path_hides'),e.classList.add('_vis_hide_layer'),n.parentNode.insertBefore(e,n.nextSibling));var n='https://dev.visualwebsiteoptimizer.com/j.php?'+i();-1!==w.location.search.indexOf('_vwo_xhr')?this.addScript({src:n}):this.load(n+'&x=true',{l:1})}};w._vwo_code=code;code.init();})();
+    </script>
+    <!-- End VWO Async SmartCode -->
+    
+	<!-- This site is optimized with the Yoast SEO Premium plugin v27.7 (Yoast SEO v27.8) - https://yoast.com/product/yoast-seo-premium-wordpress/ -->
+	<title>Page not found | KIMS Hospital</title>
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:title" content="Page not found | KIMS Hospital" />
+	<meta property="og:site_name" content="KIMS Hospital" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebSite","@id":"https:\/\/kims.org.uk\/#website","url":"https:\/\/kims.org.uk\/","name":"KIMS Hospital","description":"","publisher":{"@id":"https:\/\/kims.org.uk\/#organization"},"alternateName":"KIMS","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/kims.org.uk\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-GB"},{"@type":["Organization","Place"],"@id":"https:\/\/kims.org.uk\/#organization","name":"KIMS Hospital","alternateName":"KIMS","url":"https:\/\/kims.org.uk\/","logo":{"@id":"#local-main-organization-logo"},"image":{"@id":"#local-main-organization-logo"},"sameAs":["https:\/\/www.facebook.com\/KIMSMaidstone\/","https:\/\/x.com\/KIMShospital","https:\/\/www.linkedin.com\/company\/kims","https:\/\/en.wikipedia.org\/wiki\/KIMS_Hospital,_Maidstone"],"telephone":[],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"17:00"}]},{"@type":"ImageObject","inLanguage":"en-GB","@id":"#local-main-organization-logo","url":"https:\/\/kims.org.uk\/wp-content\/uploads\/2019\/01\/logo.jpg","contentUrl":"https:\/\/kims.org.uk\/wp-content\/uploads\/2019\/01\/logo.jpg","width":383,"height":215,"caption":"KIMS Hospital"}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//code.jquery.com' />
+<link rel='dns-prefetch' href='//sibforms.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<link rel="alternate" type="application/rss+xml" title="KIMS Hospital &raquo; Feed" href="https://kims.org.uk/feed/" />
+<link rel="alternate" type="application/rss+xml" title="KIMS Hospital &raquo; Comments Feed" href="https://kims.org.uk/comments/feed/" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='custom-google-fonts-css' href='https://fonts.googleapis.com/css?family=Lato:300,400,400i,700&#038;ver=7.0.1' media='all' />
+<link rel='stylesheet' id='brevo-form-styles-css' href='https://sibforms.com/forms/end-form/build/sib-styles.css?ver=7.0.1' media='all' />
+<link rel='stylesheet' id='kims-theme-style-css' href='https://kims.org.uk/wp-content/themes/kims/style.css?ver=7.0.1' media='all' />
+<link rel='stylesheet' id='kims-theme-global-styles-css' href='https://kims.org.uk/wp-content/themes/kims/public/styles/global.css?ver=20251009000' media='all' />
+<link rel='stylesheet' id='kims-theme-main-styles-css' href='https://kims.org.uk/wp-content/themes/kims/public/styles/style-main.css?ver=20251009000' media='all' />
+<link rel='stylesheet' id='searchwp-live-search-css' href='https://kims.org.uk/wp-content/plugins/searchwp-live-ajax-search/assets/styles/style.min.css?ver=1.8.7' media='all' />
+<style id="searchwp-live-search-inline-css">
+.searchwp-live-search-result .searchwp-live-search-result--title a {
+  font-size: 16px;
+}
+.searchwp-live-search-result .searchwp-live-search-result--price {
+  font-size: 14px;
+}
+.searchwp-live-search-result .searchwp-live-search-result--add-to-cart .button {
+  font-size: 14px;
+}
+
+/*# sourceURL=searchwp-live-search-inline-css */
+</style>
+<link rel='stylesheet' id='font-awesome-css' href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css?ver=4.3.0' media='all' />
+<link rel='stylesheet' id='dkpdf-frontend-css' href='https://kims.org.uk/wp-content/plugins/dk-pdf/build/frontend-style.css?ver=2.3.1' media='all' />
+<script id="jquery-core-js" src="https://kims.org.uk/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://kims.org.uk/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="kims-theme-jquery-js" src="https://code.jquery.com/jquery-3.3.1.min.js?ver=3.3.1"></script>
+<script data-wp-strategy="defer" defer id="brevo-form-script-js" src="https://sibforms.com/forms/end-form/build/main.js?ver=7.0.1"></script>
+<link rel="https://api.w.org/" href="https://kims.org.uk/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://kims.org.uk/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.0.1" />
+<style type="text/css">#wpadminbar #wp-admin-bar-event-feed-for-eventbrite-purge-cache-btn .ab-icon:before { content: "\f463"; top: 2px; }</style>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TRB24FC');
+    </script>
+    <!-- End Google Tag Manager -->
+
+            <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "url": "https://kims.org.uk",
+                "logo": "/var/www/vhosts/kims.org.uk/httpdocs/wp-content/themes/kims/images/logo.jpg"
+            }
+        </script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "MedicalBusiness",
+            "name": "KIMS Hospital",
+            "address": [
+                {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Newnham Court Way",
+                    "addressLocality": "Weavering, Maidstone",
+                    "addressRegion": "Kent",
+                    "postalCode": "ME14 5FT",
+                    "addressCountry": "UK"
+                },
+                {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Beadle House",
+                    "addressLocality": "London Road, Sevenoaks",
+                    "addressRegion": "Kent",
+                    "postalCode": "TN13 2JD",
+                    "addressCountry": "UK"
+                }
+            ],
+            "telephone": "01622 237 500",
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday",
+                        "Saturday",
+                        "Sunday"
+                    ],
+                    "opens": "00:00",
+                    "closes": "23:59"
+                }
+            ]
+        }
+    </script>
+</head>
+
+<body data-rsssl=1 class="error404 wp-theme-kims hfeed no-sidebar">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRB24FC"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Skip to content -->
+    <a id="skiptocontent" class="visuallyhidden" href="#main">Skip to content</a>
+
+    <!-- For syncing JavaScript and CSS media queries -->
+    <div id="breakpoint-sync" class="hidden"></div>
+
+        
+    <div id="site-container" class="site-container  ">
+
+        <!-- Header -->
+        <header id="header" class="header js-header" role="banner">
+            
+            <nav id="main-nav" class="main-nav">
+                <div class="global-bar">
+                    <div class="global-logo main-logo">
+                        <a href="/" class="logo" aria-label="Link to the homepage">
+                            
+<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 650 364">
+  <defs>
+    <clipPath id="a">
+      <path fill="none" d="M0 0h650v364H0z"/>
+    </clipPath>
+  </defs>
+  <g data-name="Layer 1">
+    <g clip-path="url(#a)">
+      <path fill="#9dc41a" d="M73.32 261.67c-.83 0-1.64-.34-2.22-1.03-1.04-1.23-.87-3.06.35-4.08 43.68-36.69 9.74-89.63-8.49-118.07l-1.28-2c-19.2-30.96-22.39-74.53 8.6-97.96 1.28-.97 3.1-.72 4.07.56.97 1.27.71 3.1-.56 4.06-28.22 21.34-24.99 61.54-7.2 90.24l1.25 1.95c19.2 29.93 54.93 85.66 7.34 125.65-.54.47-1.21.67-1.87.67"/>
+      <path fill="#282e73" d="M67.39 173.41c-.86 0-1.71-.37-2.28-1.11l-3.5-4.45c-22.55-28.69-37.46-47.63-51.54-75.33C-5.5 61.91-.15 40.78 7.09 28.45 17.74 10.26 37.74 1.51 52.81.9 69.2.31 83.24 8.97 88.56 22.98c4.99 13.14.56 27.51-11.55 37.52-1.23 1.02-3.07.85-4.08-.4-1.03-1.22-.85-3.05.39-4.08 10.29-8.5 13.96-20.07 9.82-30.97-4.42-11.64-16.26-18.86-30.1-18.34-13.48.53-31.39 8.36-40.94 24.67-9.33 15.91-8.24 36.13 3.14 58.51 13.82 27.18 28.59 45.96 50.93 74.38l3.5 4.46c.99 1.26.77 3.08-.49 4.07-.53.42-1.17.61-1.79.61"/>
+    </g>
+    <path fill="#282e73" d="M74.29 196.69c-.16 0-.32-.01-.49-.03-1.58-.28-2.64-1.77-2.38-3.34 6.58-39.21 29.02-57.71 48.81-74.02 6.49-5.34 12.62-10.38 18.14-15.99 30.15-30.67 29.45-61.19 16.03-76.56-16.45-18.86-43.97-12.25-63.93 2.66-1.28.96-3.1.69-4.06-.6-.96-1.28-.69-3.1.59-4.05 30.68-22.92 58.15-17.44 71.77-1.83 15.12 17.32 16.48 51.12-16.27 84.43-5.73 5.83-11.97 10.97-18.57 16.41-19.94 16.42-40.55 33.41-46.78 70.49-.23 1.42-1.45 2.42-2.85 2.42"/>
+    <path fill="#282e73" d="M178.8 105.81h27.69v64.84h.69l51.91-64.84h32.3l-61.14 73.84 64.6 78.21h-33.92l-53.75-66.68h-.69v66.68H178.8V105.81z"/>
+    <path fill="#282e73" d="M316.29 105.81h27.69v152.05h-27.69z"/>
+    <path fill="#282e73" d="M372.38 105.81h25.14l39.92 57.45c5.31 7.84 9.22 13.61 12.68 19.62h.47c3.24-5.77 7.15-12.47 12.46-20.54l36.46-56.53h25.38v152.05h-27.92v-85.83c0-6.23 0-14.07.47-20.08h-.47c-2.07 4.39-7.62 12.92-10.39 17.08l-29.99 46.6H443.9l-33.23-47.76c-3.23-4.61-7.37-9.92-10.38-15.69h-.45c.22 6 .22 13.85.22 19.15v86.52h-27.68V105.81Z"/>
+    <path fill="#282e73" d="M560.65 225.79c9 6.23 20.54 11.08 34.39 11.08 12.69 0 25.37-4.84 25.37-17.99 0-29.77-65.75-26.08-65.75-72.44 0-22.39 17.76-41.99 49.38-41.99 15.69 0 28.84 3.46 37.14 7.61v25.37c-12-6.22-24.22-9.69-36.24-9.69-10.6 0-20.74 4.16-20.74 16.38 0 27.92 65.74 24.23 65.74 72.46 0 26.99-23.07 43.6-54.22 43.6-17.77 0-34.37-5.06-45.92-13.15l10.84-21.23Z"/>
+    <path fill="#9dc41a" d="M227.27 362.01v-32.85h-38.64v32.85h-9.91v-73.38h9.91v31.74h38.64v-31.74h9.91v73.38h-9.91z"/>
+    <path fill="#9dc41a" d="M262.56 298.54c6.57-6.57 15.7-10.47 26.28-10.47 11.36 0 21.05 4.23 27.5 11.47 5.9 6.68 9.24 15.7 9.24 26.05 0 11.25-4.01 20.94-10.8 27.61-6.57 6.35-15.48 9.92-25.95 9.92s-18.71-3.23-25.17-9.14c-7.24-6.68-11.47-16.59-11.47-28.17s3.79-20.49 10.36-27.28m26.28-1.55c-15.81 0-26.05 11.14-26.05 28.73s10.24 28.73 26.05 28.73 26.06-11.13 26.06-28.73-9.35-28.73-26.06-28.73"/>
+    <path fill="#9dc41a" d="M358.01 363.13c-9.91 0-16.59-3.23-20.93-6.13l4.45-7.68c3.12 2.34 9.02 5.34 16.15 5.34 6.35 0 13.81-3 13.81-10.24 0-12.03-17.71-14.48-26.62-24.27-3.12-3.34-5.12-7.58-5.12-13.25 0-10.47 8.02-18.82 22.05-18.82 7.79 0 13.36 1.89 16.92 3.68l-.11 9.79c-4.45-2.78-10.36-4.89-16.37-4.89-6.79 0-12.47 2.78-12.47 9.24 0 15.36 32.3 15.26 32.3 37.52 0 11.91-10.47 19.72-24.06 19.72"/>
+    <path fill="#9dc41a" d="M414.49 335.62h-5.23v26.39h-9.91v-73.38h16.26c15.48 0 25.28 8.35 25.28 23.05 0 11.8-7.57 23.94-26.4 23.94m.22-38.19h-5.46v29.73h6.01c10.58 0 15.26-6.23 15.26-15.37 0-8.46-5.35-14.36-15.81-14.36"/>
+    <path fill="#9dc41a" d="M456.38 288.63h9.91v73.38h-9.91z"/>
+    <path fill="#9dc41a" d="M534.59 297.43h-20.48v64.58h-10.03v-64.58h-21.04v-8.8h54.56l-3.01 8.8z"/>
+    <path fill="#9dc41a" d="m588.28 362.01-7.46-19.16h-28.4l-6.9 19.16h-9.8l28.18-73.6h6.35l28.62 73.6h-10.58Zm-18.48-49.89c-1.33-3.67-2.23-6.68-2.78-9.13h-.11c-.67 2.67-1.56 5.45-2.9 9.02l-8.13 22.27h21.6l-7.69-22.16Z"/>
+    <path fill="#9dc41a" d="M612.8 362.01v-73.38h9.91v64.58H650v8.8h-37.2z"/>
+  </g>
+</svg>
+
+
+
+
+<!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg-logo-ten" data-name="svg-logo-ten" viewBox="0 0 302.58 94.68">
+  <defs>
+    <linearGradient id="linear-gradient" x1="170.61" x2="233.13" y1="20.92" y2="72" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ae8625"/>
+      <stop offset=".08" stop-color="#c69f3e"/>
+      <stop offset=".16" stop-color="#dbb654"/>
+      <stop offset=".25" stop-color="#e8c462"/>
+      <stop offset=".32" stop-color="#edc967"/>
+      <stop offset=".75" stop-color="#d2ac47"/>
+      <stop offset="1" stop-color="#edc967"/>
+    </linearGradient>
+    <linearGradient xlink:href="#linear-gradient" id="linear-gradient-2" x1="221" x2="282.61" y1="3.13" y2="53.47"/>
+    <linearGradient xlink:href="#linear-gradient" id="linear-gradient-3" x1="222.87" x2="270.95" y1="52.59" y2="91.87"/>
+  </defs>
+  <path fill="#252f63" class="cls-1" stroke-width="0" d="M.03.5h10.14v23.73h.25L29.41.5h11.82L18.86 27.52 42.5 56.15H30.09L10.42 31.74h-.25v24.41H.03V.5zm50.32 0h10.14v55.64H50.35zm20.52 0h9.2l14.61 21.02c1.94 2.87 3.37 4.98 4.64 7.18h.17c1.18-2.11 2.62-4.56 4.56-7.52L117.4.5h9.29v55.64h-10.22V24.73c0-2.28 0-5.15.17-7.35h-.17c-.76 1.61-2.79 4.73-3.8 6.25l-10.98 17.05h-4.65L84.88 23.2c-1.18-1.69-2.7-3.63-3.8-5.74h-.17c.08 2.2.08 5.07.08 7.01v31.66H70.86V.5Zm68.9 43.91c3.29 2.28 7.52 4.05 12.59 4.05 4.65 0 9.28-1.77 9.28-6.58 0-10.89-24.06-9.54-24.06-26.51 0-8.19 6.5-15.37 18.07-15.37 5.74 0 10.55 1.27 13.59 2.78v9.29c-4.39-2.28-8.86-3.54-13.26-3.54-3.88 0-7.59 1.52-7.59 5.99 0 10.22 24.06 8.87 24.06 26.52 0 9.88-8.44 15.95-19.84 15.95-6.5 0-12.58-1.85-16.8-4.81l3.97-7.77Z"/>
+  <path fill="#b8b6d7" class="cls-2" stroke-width="0" d="M17.77 67.4v11.62H3.63V67.4H0v26.86h3.63V82.24h14.14v12.02h3.62V67.4h-3.62zm22.53 3.06c-5.79 0-9.54 4.07-9.54 10.51s3.75 10.51 9.54 10.51 9.53-4.07 9.53-10.51-3.42-10.51-9.53-10.51m-9.62.57c2.4-2.41 5.75-3.83 9.62-3.83 4.16 0 7.7 1.55 10.07 4.2 2.16 2.44 3.38 5.75 3.38 9.53 0 4.12-1.47 7.66-3.95 10.11-2.41 2.32-5.67 3.63-9.5 3.63s-6.85-1.18-9.21-3.34c-2.65-2.44-4.2-6.07-4.2-10.31s1.39-7.5 3.79-9.98m34.93 23.63c-3.63 0-6.07-1.18-7.66-2.24l1.63-2.81c1.14.86 3.3 1.96 5.91 1.96 2.32 0 5.05-1.1 5.05-3.75 0-4.4-6.48-5.3-9.74-8.88-1.14-1.22-1.87-2.77-1.87-4.85 0-3.83 2.93-6.89 8.07-6.89 2.85 0 4.89.69 6.19 1.34l-.04 3.59c-1.63-1.02-3.79-1.79-5.99-1.79-2.49 0-4.56 1.02-4.56 3.38 0 5.62 11.82 5.58 11.82 13.73 0 4.36-3.83 7.21-8.8 7.21m20.74-24.05h-2V81.5h2.2c3.87 0 5.58-2.28 5.58-5.62 0-3.1-1.96-5.25-5.78-5.25m-.08 13.97h-1.92v9.66h-3.63V67.41h5.95c5.67 0 9.25 3.05 9.25 8.43 0 4.32-2.77 8.76-9.66 8.76m15.34-17.2h3.63v26.85h-3.63zm9.76 0v3.23h7.7v23.63h3.66V70.63h7.5l1.1-3.23h-19.96zm31.74 8.6a29.48 29.48 0 0 1-1.02-3.34h-.04c-.25.98-.57 2-1.06 3.3l-2.97 8.15h7.9L143.11 76Zm6.77 18.26-2.73-7.01h-10.39l-2.52 7.01h-3.59l10.31-26.94h2.32l10.47 26.94h-3.87Zm8.97-26.86v26.86h13.61v-3.22h-9.98V67.4h-3.63z"/>
+  <path fill="url(#linear-gradient)" stroke-width="0" d="M192.09 1.47c-4.69 5.21-13.28 9.4-13.28 9.4l-.02 15.94h.02c2.73 0 13.36-4.45 16.42-6.59v74.46h15.94V.41h-18.13c-.3.35-.62.71-.95 1.07Z"/>
+  <path fill="url(#linear-gradient-2)" stroke-width="0" d="M243.66 16.36c14.61 0 26.89 10.11 30.25 23.7h16.27c-1.55-9.74-6.09-18.72-13.2-25.83-8.9-8.9-20.74-13.8-33.32-13.8-10.19 0-19.89 3.22-27.94 9.16v24.18c5.1-10.29 15.69-17.41 27.94-17.41Z"/>
+  <path fill="url(#linear-gradient-3)" stroke-width="0" d="M243.66 78.75c-12.25 0-22.84-7.11-27.94-17.41v24.18c8.05 5.95 17.75 9.16 27.94 9.16 12.59 0 24.42-4.9 33.32-13.8 4.3-4.3 7.65-9.28 9.98-14.7h-18.35c-5.69 7.61-14.75 12.57-24.96 12.57Z"/>
+  <path fill="#252f63" class="cls-1" stroke-width="0" d="M253.69 31.83c1.02-1.14 2.05-2.28 3.08-3.41l.04-.05c.6-.66 1.19-1.32 1.79-1.98.39-.44.78-.88 1.18-1.34.12-.14.24-.3.35-.45.31-.44.27-.99-.1-1.35a.93.93 0 0 0-1.22-.08l-.13.1c-.26.19-.56.41-.83.65-1.18 1.03-2.36 2.07-3.53 3.12l-1.48 1.33c-1.77 1.59-3.77 3.4-5.72 5.09-3.96 3.45-7.75 6.5-11.58 9.33-1.96 1.45-3.79 2.68-5.57 3.74-.93.56-1.88 1.07-2.82 1.5-.62.29-1.36.61-2.14.8-.45.11-.94.2-1.42.12-.46-.07-.74-.29-.93-.71-.16-.36-.24-.74-.26-1.18-.04-.87.1-1.73.23-2.39.26-1.3.67-2.68 1.25-4.21.73-1.89 1.68-3.82 2.91-5.91 1.54-2.61 3.28-4.77 5.32-6.59.12-.11.23-.22.34-.34.12-.13.2-.29.23-.44.02-.08.06-.38-.11-.64a.772.772 0 0 0-.65-.34h-.11c-.14.05-.32.1-.5.22-.58.39-1.14.85-1.7 1.41a24.616 24.616 0 0 0-2.65 3.07 40.003 40.003 0 0 0-4.58 8.26c-.88 2.14-1.44 4.08-1.73 5.93-.13.85-.15 1.74-.06 2.63.07.66.27 1.26.61 1.79.42.65 1 1.08 1.74 1.28.56.15 1.14.18 1.72.09.84-.13 1.69-.38 2.6-.77.86-.37 1.74-.8 2.6-1.28 1.62-.9 3.32-1.99 5.19-3.31 2.78-1.96 5.63-4.16 9.25-7.14 1.5-1.24 3.04-2.55 4.7-4-.79.94-1.55 1.86-2.28 2.78-2.72 3.4-5.4 7.07-7.95 10.88-3.39 5.07-6.52 10.29-9.3 15.52-.91 1.7-.45.82-1.07 2.21-.26.59-.6 1.37-.86 2.2-.09.27-.14.54-.2.81-.04.21 0 .4.02.53.13.55.81.87 1.27.47.31-.27.34-.69.45-1.06.09-.29.23-.56.35-.83.23-.54.5-1.15.78-1.71.63-1.26.31-.58 1.17-2.18 3.09-5.74 6.58-11.45 10.39-16.98 3.6-5.23 7.62-10.34 11.94-15.19Zm42.46 20.62s-.03-.02-.05-.02c-.3-.13-.63-.15-.96-.16-1.35-.05-2.7-.1-4.06-.1-1.89-.01-3.77-.03-5.66-.03h-.48c-1.13 0-2.16 0-3.22.09-.26-.15-.5-.33-.71-.54a.654.654 0 0 1-.2-.34c.14-.55.49-.99 1.11-1.38.13-.08.26-.17.39-.25a.92.92 0 0 0 .33-1.04.947.947 0 0 0-.89-.61h-.13l-.39.12c-1.12.39-2.25.79-3.37 1.18-.57.2-1.09.38-1.6.5-.3.07-.6.1-.91.08h-.07s-.02-.02-.05-.11c-.11-.29-.23-.58-.38-.87-.3-.57-.85-.84-1.51-.76-.3.04-.59.13-.85.29l-.13.07c-.37.22-.75.44-1.12.69-.19.14-.39.28-.58.42.03-.05.06-.1.09-.14.13-.21.1-.42.09-.48v-.27l-.19-.19a.782.782 0 0 0-1.09 0c-.6.52-1.29.99-2.1 1.45-1.48.83-2.96 1.66-4.44 2.48-.22.12-.44.22-.66.33l-.06.03c-.13.06-.26.12-.38.18-.22.11-.47.16-.74.22h-.07c-.15.05-.28.04-.39-.01-.01-.03-.03-.06-.03-.09-.11-.4-.12-.84-.03-1.32.09-.51.22-.9.5-1.19.17-.16.25-.36.3-.5.11-.27.08-.58-.08-.83-.19-.29-.51-.46-.84-.42-.27.02-.5.13-.67.32-.07.08-.14.16-.23.26-.27-.27-.57-.42-.8-.52-.34-.15-.71-.22-1.18-.24-.88-.04-1.75.2-2.68.72-.74.41-1.43.95-2.05 1.61-.14.15-.27.3-.41.44l-.09.1c-.82.43-1.72.85-2.81 1.32-1.1.48-2.24.89-3.37 1.24-.5.15-1.01.26-1.52.32-.27.03-.52.02-.78-.05-.54-.13-.8-.51-.78-1.14 0-.25.05-.49.14-.72.26.1.56.13.87.08 1.24-.2 2.25-.83 3.01-1.88.12-.16.2-.33.26-.47.11-.24.16-.51.13-.82a1.25 1.25 0 0 0-.44-.87c-.23-.19-.49-.31-.77-.34-.29-.03-.59 0-.89.09-1.53.46-2.73 1.4-3.57 2.79-.13.21-.24.45-.34.72-.23.64-.32 1.22-.27 1.77.13 1.58 1.18 2.4 2.12 2.65.56.15 1.11.18 1.64.1.67-.1 1.28-.24 1.86-.42 1.31-.41 2.69-.97 4.21-1.72-.1.45-.03.9.22 1.33.23.41.61.66 1.05.71.51.05 1-.01 1.44-.21.5-.22.9-.44 1.26-.68l.1-.07c.42-.28.95-.63 1.44-.99.59-.44 1.16-.88 1.74-1.33l.35-.27c.03.49.14.97.36 1.43.24.52.67.84 1.22.92.76.11 1.47.04 2.1-.22.51-.21 1.01-.42 1.49-.68l.61-.33a81.8 81.8 0 0 0 2.39-1.31c-.2.42-.41.87-.6 1.34-.17.42-.35.86-.41 1.37v.04l.02.22c.02.08.03.15.06.22.04.11.1.21.17.3.33.44.88.51 1.32.18.1-.07.23-.18.34-.33.17-.24.33-.5.48-.76.24-.41.55-.93.93-1.4.89-1.1 1.97-2.1 3.2-2.95.25-.17.53-.33.8-.48l.18-.1c.03.05.05.11.08.17.08.16.15.32.24.47.27.46.7.74 1.21.79.32.03.69.06 1.07.06.7 0 1.27-.1 1.81-.3.39-.15.78-.28 1.18-.42-.12.6 0 1.18.38 1.71h-.04c-.66.23-1.29.56-1.87 1.02-.5.39-.87.82-1.15 1.3-.13.23-.23.46-.3.69-.2.7.1 1.45.73 1.81.34.2.7.31 1.05.33.16 0 .32.01.48.01.49 0 .92-.05 1.33-.14.89-.2 1.66-.49 2.33-.87.4-.22.72-.48 1.01-.79.51-.56.68-1.25.47-1.96.04.13 2.8 0 3.08 0h3.24c1.77 0 3.55 0 5.32.02.35 0 .71 0 1.03-.13s.6-.44.59-.79c0-.31-.24-.57-.52-.71Zm-17.36 2.58c.38-.27.77-.46 1.16-.57l.15-.04c.37-.11.72-.2 1.08-.2.17.12.3.25.42.41v.04c-.15.2-.37.37-.71.55-.63.33-1.34.56-2.09.67-.24.04-.48.03-.72.02h-.15c.04-.07.08-.13.14-.19.23-.27.47-.5.74-.69Zm-20.54-4.34c-.28.23-.57.45-.86.67l-.16.12c-.76.58-1.53 1.16-2.31 1.72-.44.32-.89.59-1.28.82-.18.11-.39.19-.6.28.02-.07.04-.14.07-.21l.08-.18c.06-.12.11-.25.18-.36.7-1.14 1.63-2.02 2.77-2.6.45-.23.89-.35 1.33-.37h.09c.25 0 .47.04.68.11Z"/>
+</svg> -->
+                        </a>
+                    </div>
+                    <div class="main-doctify">
+    <div id="0ymn931msmall"></div><script src="https://www.doctify.com/get-script?widget_container_id=0ymn931msmall&type=horizontal-widget&tenant=athena-uk&language=en&profileType=practice&layoutType=layoutA&slugs=kims-hospital,lycahealth-orpington,sevenoaks-medical-centre,the-gut-health-centre,the-royal-tunbridge-wells-clinic&background=white&linkUrl=https://www.doctify.com/uk/practice/kims-hospital "></script>
+</div>                    <div class="global-contact main-contact">
+                                                <a href="tel:01622 237 500">
+                            <span>
+                                <span class="global-contact-word">Call us</span>
+                                <span class="global-contact-number">01622 237 500</span>                            </span>
+                            <span class="icon icon-phone"></span>
+                        </a>
+                    </div>
+                    <div class="global-search main-search">
+                        <a href="/search" class="button button--blue-outline js-search-overlay-open">
+                            <span>Search</span>
+                            <span class="icon icon-search"></span>
+                        </a>
+                    </div>   
+                    <div class="global-actions">                        
+                        <a href="https://kims.org.uk/make-a-general-enquiry/" class="button button--blue-outline js-global-enquiries-menu">
+                            <abbr title="Enquire now"><span>Enquiries</span></abbr>                            
+                        </a> 
+                        <a href="https://appointments.kims.org.uk/" class="button button--berry">
+                            <abbr title="Book online"><span>Book online</span></abbr>
+                        </a>                       
+                        <ul id="menu-enquiries" class="enquiry-menu-container">
+                            <li class="menu-item">                                
+                                <a href="https://kims.org.uk/make-a-general-enquiry/" class="button button--blue-outline">
+                                    <abbr title="Enquire now"><span>Enquiries</span></abbr>     
+                                </a>  
+                            </li>
+                            <li class="menu-item">
+                                <a href="https://kims.org.uk/appointment-enquiry/" class="button button--green">
+                                    <abbr title="Request an appointment"><span>Appointment</span></abbr>     
+                                </a>  
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="main-bar">
+                    <div class="container container-full container-flex">
+                        <div class="main-logo">
+                            <a href="/" class="logo" aria-label="Link to the homepage">
+                                
+<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 650 364">
+  <defs>
+    <clipPath id="a">
+      <path fill="none" d="M0 0h650v364H0z"/>
+    </clipPath>
+  </defs>
+  <g data-name="Layer 1">
+    <g clip-path="url(#a)">
+      <path fill="#9dc41a" d="M73.32 261.67c-.83 0-1.64-.34-2.22-1.03-1.04-1.23-.87-3.06.35-4.08 43.68-36.69 9.74-89.63-8.49-118.07l-1.28-2c-19.2-30.96-22.39-74.53 8.6-97.96 1.28-.97 3.1-.72 4.07.56.97 1.27.71 3.1-.56 4.06-28.22 21.34-24.99 61.54-7.2 90.24l1.25 1.95c19.2 29.93 54.93 85.66 7.34 125.65-.54.47-1.21.67-1.87.67"/>
+      <path fill="#ffffff" d="M67.39 173.41c-.86 0-1.71-.37-2.28-1.11l-3.5-4.45c-22.55-28.69-37.46-47.63-51.54-75.33C-5.5 61.91-.15 40.78 7.09 28.45 17.74 10.26 37.74 1.51 52.81.9 69.2.31 83.24 8.97 88.56 22.98c4.99 13.14.56 27.51-11.55 37.52-1.23 1.02-3.07.85-4.08-.4-1.03-1.22-.85-3.05.39-4.08 10.29-8.5 13.96-20.07 9.82-30.97-4.42-11.64-16.26-18.86-30.1-18.34-13.48.53-31.39 8.36-40.94 24.67-9.33 15.91-8.24 36.13 3.14 58.51 13.82 27.18 28.59 45.96 50.93 74.38l3.5 4.46c.99 1.26.77 3.08-.49 4.07-.53.42-1.17.61-1.79.61"/>
+    </g>
+    <path fill="#ffffff" d="M74.29 196.69c-.16 0-.32-.01-.49-.03-1.58-.28-2.64-1.77-2.38-3.34 6.58-39.21 29.02-57.71 48.81-74.02 6.49-5.34 12.62-10.38 18.14-15.99 30.15-30.67 29.45-61.19 16.03-76.56-16.45-18.86-43.97-12.25-63.93 2.66-1.28.96-3.1.69-4.06-.6-.96-1.28-.69-3.1.59-4.05 30.68-22.92 58.15-17.44 71.77-1.83 15.12 17.32 16.48 51.12-16.27 84.43-5.73 5.83-11.97 10.97-18.57 16.41-19.94 16.42-40.55 33.41-46.78 70.49-.23 1.42-1.45 2.42-2.85 2.42"/>
+    <path fill="#ffffff" d="M178.8 105.81h27.69v64.84h.69l51.91-64.84h32.3l-61.14 73.84 64.6 78.21h-33.92l-53.75-66.68h-.69v66.68H178.8V105.81z"/>
+    <path fill="#ffffff" d="M316.29 105.81h27.69v152.05h-27.69z"/>
+    <path fill="#ffffff" d="M372.38 105.81h25.14l39.92 57.45c5.31 7.84 9.22 13.61 12.68 19.62h.47c3.24-5.77 7.15-12.47 12.46-20.54l36.46-56.53h25.38v152.05h-27.92v-85.83c0-6.23 0-14.07.47-20.08h-.47c-2.07 4.39-7.62 12.92-10.39 17.08l-29.99 46.6H443.9l-33.23-47.76c-3.23-4.61-7.37-9.92-10.38-15.69h-.45c.22 6 .22 13.85.22 19.15v86.52h-27.68V105.81Z"/>
+    <path fill="#ffffff" d="M560.65 225.79c9 6.23 20.54 11.08 34.39 11.08 12.69 0 25.37-4.84 25.37-17.99 0-29.77-65.75-26.08-65.75-72.44 0-22.39 17.76-41.99 49.38-41.99 15.69 0 28.84 3.46 37.14 7.61v25.37c-12-6.22-24.22-9.69-36.24-9.69-10.6 0-20.74 4.16-20.74 16.38 0 27.92 65.74 24.23 65.74 72.46 0 26.99-23.07 43.6-54.22 43.6-17.77 0-34.37-5.06-45.92-13.15l10.84-21.23Z"/>
+    <path fill="#9dc41a" d="M227.27 362.01v-32.85h-38.64v32.85h-9.91v-73.38h9.91v31.74h38.64v-31.74h9.91v73.38h-9.91z"/>
+    <path fill="#9dc41a" d="M262.56 298.54c6.57-6.57 15.7-10.47 26.28-10.47 11.36 0 21.05 4.23 27.5 11.47 5.9 6.68 9.24 15.7 9.24 26.05 0 11.25-4.01 20.94-10.8 27.61-6.57 6.35-15.48 9.92-25.95 9.92s-18.71-3.23-25.17-9.14c-7.24-6.68-11.47-16.59-11.47-28.17s3.79-20.49 10.36-27.28m26.28-1.55c-15.81 0-26.05 11.14-26.05 28.73s10.24 28.73 26.05 28.73 26.06-11.13 26.06-28.73-9.35-28.73-26.06-28.73"/>
+    <path fill="#9dc41a" d="M358.01 363.13c-9.91 0-16.59-3.23-20.93-6.13l4.45-7.68c3.12 2.34 9.02 5.34 16.15 5.34 6.35 0 13.81-3 13.81-10.24 0-12.03-17.71-14.48-26.62-24.27-3.12-3.34-5.12-7.58-5.12-13.25 0-10.47 8.02-18.82 22.05-18.82 7.79 0 13.36 1.89 16.92 3.68l-.11 9.79c-4.45-2.78-10.36-4.89-16.37-4.89-6.79 0-12.47 2.78-12.47 9.24 0 15.36 32.3 15.26 32.3 37.52 0 11.91-10.47 19.72-24.06 19.72"/>
+    <path fill="#9dc41a" d="M414.49 335.62h-5.23v26.39h-9.91v-73.38h16.26c15.48 0 25.28 8.35 25.28 23.05 0 11.8-7.57 23.94-26.4 23.94m.22-38.19h-5.46v29.73h6.01c10.58 0 15.26-6.23 15.26-15.37 0-8.46-5.35-14.36-15.81-14.36"/>
+    <path fill="#9dc41a" d="M456.38 288.63h9.91v73.38h-9.91z"/>
+    <path fill="#9dc41a" d="M534.59 297.43h-20.48v64.58h-10.03v-64.58h-21.04v-8.8h54.56l-3.01 8.8z"/>
+    <path fill="#9dc41a" d="m588.28 362.01-7.46-19.16h-28.4l-6.9 19.16h-9.8l28.18-73.6h6.35l28.62 73.6h-10.58Zm-18.48-49.89c-1.33-3.67-2.23-6.68-2.78-9.13h-.11c-.67 2.67-1.56 5.45-2.9 9.02l-8.13 22.27h21.6l-7.69-22.16Z"/>
+    <path fill="#9dc41a" d="M612.8 362.01v-73.38h9.91v64.58H650v8.8h-37.2z"/>
+  </g>
+</svg>
+
+<!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-logo-ten-m" data-name="svg-logo-ten" viewBox="0 0 302.58 94.68">
+  <defs>
+    <linearGradient id="linear-gradient-m" x1="170.61" x2="233.13" y1="20.92" y2="72" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ae8625"/>
+      <stop offset=".08" stop-color="#c69f3e"/>
+      <stop offset=".16" stop-color="#dbb654"/>
+      <stop offset=".25" stop-color="#e8c462"/>
+      <stop offset=".32" stop-color="#edc967"/>
+      <stop offset=".75" stop-color="#d2ac47"/>
+      <stop offset="1" stop-color="#edc967"/>
+    </linearGradient>
+    <linearGradient xlink:href="#linear-gradient-m" id="linear-gradient-m-2" x1="221" x2="282.61" y1="3.13" y2="53.47"/>
+    <linearGradient xlink:href="#linear-gradient-m" id="linear-gradient-m-3" x1="222.87" x2="270.95" y1="52.59" y2="91.87"/>
+  </defs>
+  <path fill="#252f63" class="cls-1" stroke-width="0" d="M.03.5h10.14v23.73h.25L29.41.5h11.82L18.86 27.52 42.5 56.15H30.09L10.42 31.74h-.25v24.41H.03V.5zm50.32 0h10.14v55.64H50.35zm20.52 0h9.2l14.61 21.02c1.94 2.87 3.37 4.98 4.64 7.18h.17c1.18-2.11 2.62-4.56 4.56-7.52L117.4.5h9.29v55.64h-10.22V24.73c0-2.28 0-5.15.17-7.35h-.17c-.76 1.61-2.79 4.73-3.8 6.25l-10.98 17.05h-4.65L84.88 23.2c-1.18-1.69-2.7-3.63-3.8-5.74h-.17c.08 2.2.08 5.07.08 7.01v31.66H70.86V.5Zm68.9 43.91c3.29 2.28 7.52 4.05 12.59 4.05 4.65 0 9.28-1.77 9.28-6.58 0-10.89-24.06-9.54-24.06-26.51 0-8.19 6.5-15.37 18.07-15.37 5.74 0 10.55 1.27 13.59 2.78v9.29c-4.39-2.28-8.86-3.54-13.26-3.54-3.88 0-7.59 1.52-7.59 5.99 0 10.22 24.06 8.87 24.06 26.52 0 9.88-8.44 15.95-19.84 15.95-6.5 0-12.58-1.85-16.8-4.81l3.97-7.77Z"/>
+  <path fill="#b8b6d7" class="cls-2" stroke-width="0" d="M17.77 67.4v11.62H3.63V67.4H0v26.86h3.63V82.24h14.14v12.02h3.62V67.4h-3.62zm22.53 3.06c-5.79 0-9.54 4.07-9.54 10.51s3.75 10.51 9.54 10.51 9.53-4.07 9.53-10.51-3.42-10.51-9.53-10.51m-9.62.57c2.4-2.41 5.75-3.83 9.62-3.83 4.16 0 7.7 1.55 10.07 4.2 2.16 2.44 3.38 5.75 3.38 9.53 0 4.12-1.47 7.66-3.95 10.11-2.41 2.32-5.67 3.63-9.5 3.63s-6.85-1.18-9.21-3.34c-2.65-2.44-4.2-6.07-4.2-10.31s1.39-7.5 3.79-9.98m34.93 23.63c-3.63 0-6.07-1.18-7.66-2.24l1.63-2.81c1.14.86 3.3 1.96 5.91 1.96 2.32 0 5.05-1.1 5.05-3.75 0-4.4-6.48-5.3-9.74-8.88-1.14-1.22-1.87-2.77-1.87-4.85 0-3.83 2.93-6.89 8.07-6.89 2.85 0 4.89.69 6.19 1.34l-.04 3.59c-1.63-1.02-3.79-1.79-5.99-1.79-2.49 0-4.56 1.02-4.56 3.38 0 5.62 11.82 5.58 11.82 13.73 0 4.36-3.83 7.21-8.8 7.21m20.74-24.05h-2V81.5h2.2c3.87 0 5.58-2.28 5.58-5.62 0-3.1-1.96-5.25-5.78-5.25m-.08 13.97h-1.92v9.66h-3.63V67.41h5.95c5.67 0 9.25 3.05 9.25 8.43 0 4.32-2.77 8.76-9.66 8.76m15.34-17.2h3.63v26.85h-3.63zm9.76 0v3.23h7.7v23.63h3.66V70.63h7.5l1.1-3.23h-19.96zm31.74 8.6a29.48 29.48 0 0 1-1.02-3.34h-.04c-.25.98-.57 2-1.06 3.3l-2.97 8.15h7.9L143.11 76Zm6.77 18.26-2.73-7.01h-10.39l-2.52 7.01h-3.59l10.31-26.94h2.32l10.47 26.94h-3.87Zm8.97-26.86v26.86h13.61v-3.22h-9.98V67.4h-3.63z"/>
+  <path fill="url(#linear-gradient-m)" stroke-width="0" d="M192.09 1.47c-4.69 5.21-13.28 9.4-13.28 9.4l-.02 15.94h.02c2.73 0 13.36-4.45 16.42-6.59v74.46h15.94V.41h-18.13c-.3.35-.62.71-.95 1.07Z"/>
+  <path fill="url(#linear-gradient-m-2)" stroke-width="0" d="M243.66 16.36c14.61 0 26.89 10.11 30.25 23.7h16.27c-1.55-9.74-6.09-18.72-13.2-25.83-8.9-8.9-20.74-13.8-33.32-13.8-10.19 0-19.89 3.22-27.94 9.16v24.18c5.1-10.29 15.69-17.41 27.94-17.41Z"/>
+  <path fill="url(#linear-gradient-m-3)" stroke-width="0" d="M243.66 78.75c-12.25 0-22.84-7.11-27.94-17.41v24.18c8.05 5.95 17.75 9.16 27.94 9.16 12.59 0 24.42-4.9 33.32-13.8 4.3-4.3 7.65-9.28 9.98-14.7h-18.35c-5.69 7.61-14.75 12.57-24.96 12.57Z"/>
+  <path fill="#252f63" class="cls-1" stroke-width="0" d="M253.69 31.83c1.02-1.14 2.05-2.28 3.08-3.41l.04-.05c.6-.66 1.19-1.32 1.79-1.98.39-.44.78-.88 1.18-1.34.12-.14.24-.3.35-.45.31-.44.27-.99-.1-1.35a.93.93 0 0 0-1.22-.08l-.13.1c-.26.19-.56.41-.83.65-1.18 1.03-2.36 2.07-3.53 3.12l-1.48 1.33c-1.77 1.59-3.77 3.4-5.72 5.09-3.96 3.45-7.75 6.5-11.58 9.33-1.96 1.45-3.79 2.68-5.57 3.74-.93.56-1.88 1.07-2.82 1.5-.62.29-1.36.61-2.14.8-.45.11-.94.2-1.42.12-.46-.07-.74-.29-.93-.71-.16-.36-.24-.74-.26-1.18-.04-.87.1-1.73.23-2.39.26-1.3.67-2.68 1.25-4.21.73-1.89 1.68-3.82 2.91-5.91 1.54-2.61 3.28-4.77 5.32-6.59.12-.11.23-.22.34-.34.12-.13.2-.29.23-.44.02-.08.06-.38-.11-.64a.772.772 0 0 0-.65-.34h-.11c-.14.05-.32.1-.5.22-.58.39-1.14.85-1.7 1.41a24.616 24.616 0 0 0-2.65 3.07 40.003 40.003 0 0 0-4.58 8.26c-.88 2.14-1.44 4.08-1.73 5.93-.13.85-.15 1.74-.06 2.63.07.66.27 1.26.61 1.79.42.65 1 1.08 1.74 1.28.56.15 1.14.18 1.72.09.84-.13 1.69-.38 2.6-.77.86-.37 1.74-.8 2.6-1.28 1.62-.9 3.32-1.99 5.19-3.31 2.78-1.96 5.63-4.16 9.25-7.14 1.5-1.24 3.04-2.55 4.7-4-.79.94-1.55 1.86-2.28 2.78-2.72 3.4-5.4 7.07-7.95 10.88-3.39 5.07-6.52 10.29-9.3 15.52-.91 1.7-.45.82-1.07 2.21-.26.59-.6 1.37-.86 2.2-.09.27-.14.54-.2.81-.04.21 0 .4.02.53.13.55.81.87 1.27.47.31-.27.34-.69.45-1.06.09-.29.23-.56.35-.83.23-.54.5-1.15.78-1.71.63-1.26.31-.58 1.17-2.18 3.09-5.74 6.58-11.45 10.39-16.98 3.6-5.23 7.62-10.34 11.94-15.19Zm42.46 20.62s-.03-.02-.05-.02c-.3-.13-.63-.15-.96-.16-1.35-.05-2.7-.1-4.06-.1-1.89-.01-3.77-.03-5.66-.03h-.48c-1.13 0-2.16 0-3.22.09-.26-.15-.5-.33-.71-.54a.654.654 0 0 1-.2-.34c.14-.55.49-.99 1.11-1.38.13-.08.26-.17.39-.25a.92.92 0 0 0 .33-1.04.947.947 0 0 0-.89-.61h-.13l-.39.12c-1.12.39-2.25.79-3.37 1.18-.57.2-1.09.38-1.6.5-.3.07-.6.1-.91.08h-.07s-.02-.02-.05-.11c-.11-.29-.23-.58-.38-.87-.3-.57-.85-.84-1.51-.76-.3.04-.59.13-.85.29l-.13.07c-.37.22-.75.44-1.12.69-.19.14-.39.28-.58.42.03-.05.06-.1.09-.14.13-.21.1-.42.09-.48v-.27l-.19-.19a.782.782 0 0 0-1.09 0c-.6.52-1.29.99-2.1 1.45-1.48.83-2.96 1.66-4.44 2.48-.22.12-.44.22-.66.33l-.06.03c-.13.06-.26.12-.38.18-.22.11-.47.16-.74.22h-.07c-.15.05-.28.04-.39-.01-.01-.03-.03-.06-.03-.09-.11-.4-.12-.84-.03-1.32.09-.51.22-.9.5-1.19.17-.16.25-.36.3-.5.11-.27.08-.58-.08-.83-.19-.29-.51-.46-.84-.42-.27.02-.5.13-.67.32-.07.08-.14.16-.23.26-.27-.27-.57-.42-.8-.52-.34-.15-.71-.22-1.18-.24-.88-.04-1.75.2-2.68.72-.74.41-1.43.95-2.05 1.61-.14.15-.27.3-.41.44l-.09.1c-.82.43-1.72.85-2.81 1.32-1.1.48-2.24.89-3.37 1.24-.5.15-1.01.26-1.52.32-.27.03-.52.02-.78-.05-.54-.13-.8-.51-.78-1.14 0-.25.05-.49.14-.72.26.1.56.13.87.08 1.24-.2 2.25-.83 3.01-1.88.12-.16.2-.33.26-.47.11-.24.16-.51.13-.82a1.25 1.25 0 0 0-.44-.87c-.23-.19-.49-.31-.77-.34-.29-.03-.59 0-.89.09-1.53.46-2.73 1.4-3.57 2.79-.13.21-.24.45-.34.72-.23.64-.32 1.22-.27 1.77.13 1.58 1.18 2.4 2.12 2.65.56.15 1.11.18 1.64.1.67-.1 1.28-.24 1.86-.42 1.31-.41 2.69-.97 4.21-1.72-.1.45-.03.9.22 1.33.23.41.61.66 1.05.71.51.05 1-.01 1.44-.21.5-.22.9-.44 1.26-.68l.1-.07c.42-.28.95-.63 1.44-.99.59-.44 1.16-.88 1.74-1.33l.35-.27c.03.49.14.97.36 1.43.24.52.67.84 1.22.92.76.11 1.47.04 2.1-.22.51-.21 1.01-.42 1.49-.68l.61-.33a81.8 81.8 0 0 0 2.39-1.31c-.2.42-.41.87-.6 1.34-.17.42-.35.86-.41 1.37v.04l.02.22c.02.08.03.15.06.22.04.11.1.21.17.3.33.44.88.51 1.32.18.1-.07.23-.18.34-.33.17-.24.33-.5.48-.76.24-.41.55-.93.93-1.4.89-1.1 1.97-2.1 3.2-2.95.25-.17.53-.33.8-.48l.18-.1c.03.05.05.11.08.17.08.16.15.32.24.47.27.46.7.74 1.21.79.32.03.69.06 1.07.06.7 0 1.27-.1 1.81-.3.39-.15.78-.28 1.18-.42-.12.6 0 1.18.38 1.71h-.04c-.66.23-1.29.56-1.87 1.02-.5.39-.87.82-1.15 1.3-.13.23-.23.46-.3.69-.2.7.1 1.45.73 1.81.34.2.7.31 1.05.33.16 0 .32.01.48.01.49 0 .92-.05 1.33-.14.89-.2 1.66-.49 2.33-.87.4-.22.72-.48 1.01-.79.51-.56.68-1.25.47-1.96.04.13 2.8 0 3.08 0h3.24c1.77 0 3.55 0 5.32.02.35 0 .71 0 1.03-.13s.6-.44.59-.79c0-.31-.24-.57-.52-.71Zm-17.36 2.58c.38-.27.77-.46 1.16-.57l.15-.04c.37-.11.72-.2 1.08-.2.17.12.3.25.42.41v.04c-.15.2-.37.37-.71.55-.63.33-1.34.56-2.09.67-.24.04-.48.03-.72.02h-.15c.04-.07.08-.13.14-.19.23-.27.47-.5.74-.69Zm-20.54-4.34c-.28.23-.57.45-.86.67l-.16.12c-.76.58-1.53 1.16-2.31 1.72-.44.32-.89.59-1.28.82-.18.11-.39.19-.6.28.02-.07.04-.14.07-.21l.08-.18c.06-.12.11-.25.18-.36.7-1.14 1.63-2.02 2.77-2.6.45-.23.89-.35 1.33-.37h.09c.25 0 .47.04.68.11Z"/>
+</svg> -->
+                            </a>
+                        </div>
+                        <div class="main-doctify">
+    <div id="0ymn931msmall"></div><script src="https://www.doctify.com/get-script?widget_container_id=0ymn931msmall&type=horizontal-widget&tenant=athena-uk&language=en&profileType=practice&layoutType=layoutA&slugs=kims-hospital,lycahealth-orpington,sevenoaks-medical-centre,the-gut-health-centre,the-royal-tunbridge-wells-clinic&background=white&linkUrl=https://www.doctify.com/uk/practice/kims-hospital "></script>
+</div>                        <div class="main-contact">
+                            <a href="#main-contact" class="js-contact-overlay-open">
+                                <span>Call us</span>
+                                <span class="icon icon-phone"></span> 
+                            </a>
+                        </div>
+                        <div class="main-search">
+                            <a href="/search" class="button button--blue-outline js-search-overlay-open">
+                                <span>Search</span>
+                                <span class="icon icon-search"></span> 
+                            </a>
+                        </div>
+                        <div class="main-enquiry">
+                            <a href="https://kims.org.uk/make-a-general-enquiry/" class="button button--blue-outline js-global-enquiries-menu">
+                                <abbr title="Enquire now"><span>Enquiries</span></abbr>                            
+                            </a>
+                        </div>
+                        <div class="main-book">
+                            <a href="https://appointments.kims.org.uk/" class="button button--berry">
+                                <abbr title="Book online"><span>Book online</span></abbr>
+                            </a>  
+                        </div>
+                        <div class="main-menu">
+                            
+<ul id="menu-main-nav" class="menu"><li id="menu-item-7415" class="has-submenu has-megamenu id-locations menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7415"><a href="#" class="js-megamenu-open js-submenu-open " data-megamenu-id="megamenu-locations">Locations<span class="icon-list-ul"></span></a>
+
+            <ul class='sub-menu'>
+                <li class='menu-item menu-item-back'>
+                    <span class='js-submenu-close'>
+                        <span class='icon-chev-left'></span>
+                        Back
+                    </span>
+                </li>
+	<li id="menu-item-9487" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9487"><a href="https://kims.org.uk/about-us/">KIMS Hospital<span class="icon-chev-right"></span></a>	<li id="menu-item-7433" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7433"><a href="https://kims.org.uk/sevenoaks-medical-centre/">Sevenoaks Medical Centre<span class="icon-chev-right"></span></a>	<li id="menu-item-9208" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9208"><a href="https://kims.org.uk/lycahealth-orpington/">LycaHealth Orpington<span class="icon-chev-right"></span></a>	<li id="menu-item-9460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9460"><a href="https://kims.org.uk/the-royal-tunbridge-wells-clinic/">The Royal Tunbridge Wells Clinic<span class="icon-chev-right"></span></a>	<li id="menu-item-10017" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10017"><a href="https://kims.org.uk/the-gut-health-centre/">The Gut Health Centre<span class="icon-chev-right"></span></a></ul>
+<li id="menu-item-50" class="has-submenu has-megamenu id-treatments-and-services menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-50"><a href="https://kims.org.uk/treatments/" class="js-megamenu-open js-submenu-open " data-megamenu-id="megamenu-treatments-and-services">Treatments and Services<span class="icon-list-ul"></span></a>
+
+            <ul class='sub-menu'>
+                <li class='menu-item menu-item-back'>
+                    <span class='js-submenu-close'>
+                        <span class='icon-chev-left'></span>
+                        Back
+                    </span>
+                </li>
+	<li id="menu-item-7417" class="has-subsubmenu menu-item menu-item-type-post_type menu-item-object-page menu-item-7417"><a href="https://kims.org.uk/treatments/" class="js-subsubmenu-open ">Treatments<span class="icon-chev-right"></span></a>
+	
+                        <ul class='subsub-menu'>
+	
+                                <li class='menu-item'>
+                                    <a href="https://kims.org.uk/treatments/">                                        
+                                        All Treatments
+                                        <span class='icon-chev-right'></span>
+                                    </a>
+                                </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/treatment/knee-replacement/">
+                                    Knee replacement surgery
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/treatment/hip-replacement/">
+                                    Hip replacement surgery
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/treatment/pacemaker/">
+                                    Pacemaker
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/treatment/cataract-surgery/">
+                                    Cataract Surgery
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>	</ul></li>
+	<li id="menu-item-48" class="has-subsubmenu menu-item menu-item-type-post_type menu-item-object-page menu-item-48"><a href="https://kims.org.uk/scans-tests/" class="js-subsubmenu-open ">Scans &#038; Tests<span class="icon-chev-right"></span></a>
+	
+                        <ul class='subsub-menu'>
+	
+                                <li class='menu-item'>
+                                    <a href="https://kims.org.uk/scans-tests/">                                        
+                                        All Scans & Tests
+                                        <span class='icon-chev-right'></span>
+                                    </a>
+                                </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/scans-tests/mri-scan/">
+                                    MRI scan
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/scans-tests/ct-scan/">
+                                    CT scan
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/scans-tests/x-ray/">
+                                    X-ray
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/scans-tests/ecg-electrocardiogram/">
+                                    ECG test
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>	</ul></li>
+	<li id="menu-item-7418" class="has-subsubmenu menu-item menu-item-type-post_type menu-item-object-page menu-item-7418"><a href="https://kims.org.uk/services-specialties/" class="js-subsubmenu-open ">Other Services<span class="icon-chev-right"></span></a>
+	
+                        <ul class='subsub-menu'>
+	
+                                <li class='menu-item'>
+                                    <a href="https://kims.org.uk/services-specialties/">                                        
+                                        All Other Services
+                                        <span class='icon-chev-right'></span>
+                                    </a>
+                                </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/service/gut-health/">
+                                    Gut Health
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/service/menopause-hrt/">
+                                    Menopause &#038; HRT services
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/service/ear-nose-throat-ent/">
+                                    Ear, nose &#038; throat (ENT)
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/service/health-checks/">
+                                    Health Checks
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/service/physiotherapy/">
+                                    Physiotherapy
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>	</ul></li>
+</ul>
+<li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a href="https://kims.org.uk/services-specialties/">Specialties<span class="icon-chev-right"></span></a><li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a href="https://kims.org.uk/consultants/">Find a Consultant<span class="icon-chev-right"></span></a><li id="menu-item-51" class="has-submenu has-megamenu id-your-journey menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-51"><a href="https://kims.org.uk/your-journey/" class="js-megamenu-open js-submenu-open " data-megamenu-id="megamenu-your-journey">Your Journey<span class="icon-list-ul"></span></a>
+
+            <ul class='sub-menu'>
+                <li class='menu-item menu-item-back'>
+                    <span class='js-submenu-close'>
+                        <span class='icon-chev-left'></span>
+                        Back
+                    </span>
+                </li>
+	<li id="menu-item-145" class="hide-in-megamenu menu-item menu-item-type-post_type menu-item-object-page menu-item-145"><a href="https://kims.org.uk/your-journey/">Your Journey<span class="icon-chev-right"></span></a>	<li id="menu-item-140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-140"><a href="https://kims.org.uk/your-journey/seeing-your-consultant/">Seeing your consultant<span class="icon-chev-right"></span></a>	<li id="menu-item-136" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136"><a href="https://kims.org.uk/your-journey/scans-and-tests/">Scans &#038; tests<span class="icon-chev-right"></span></a>	<li id="menu-item-139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139"><a href="https://kims.org.uk/your-journey/pre-operative-assessment/">Pre-operative assessment<span class="icon-chev-right"></span></a>	<li id="menu-item-142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142"><a href="https://kims.org.uk/your-journey/your-arrival/">Your arrival<span class="icon-chev-right"></span></a>	<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="https://kims.org.uk/your-journey/your-room/">Your room<span class="icon-chev-right"></span></a>	<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="https://kims.org.uk/your-journey/your-meals/">Your meals<span class="icon-chev-right"></span></a>	<li id="menu-item-141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141"><a href="https://kims.org.uk/your-journey/while-youre-with-us/">While you’re with us<span class="icon-chev-right"></span></a>	<li id="menu-item-138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-138"><a href="https://kims.org.uk/your-journey/having-visitors/">Having visitors<span class="icon-chev-right"></span></a>	<li id="menu-item-137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137"><a href="https://kims.org.uk/your-journey/discharge-aftercare/">Discharge &#038; aftercare<span class="icon-chev-right"></span></a></ul>
+<li id="menu-item-46" class="has-submenu has-megamenu id-funding-your-care menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-46"><a href="https://kims.org.uk/funding-your-healthcare/" class="js-megamenu-open js-submenu-open " data-megamenu-id="megamenu-funding-your-care">Funding Your Care<span class="icon-list-ul"></span></a>
+
+            <ul class='sub-menu'>
+                <li class='menu-item menu-item-back'>
+                    <span class='js-submenu-close'>
+                        <span class='icon-chev-left'></span>
+                        Back
+                    </span>
+                </li>
+	<li id="menu-item-146" class="hide-in-megamenu menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a href="https://kims.org.uk/funding-your-healthcare/">Funding Your Healthcare<span class="icon-chev-right"></span></a>	<li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a href="https://kims.org.uk/funding-your-healthcare/insured-patients/">Using your private medical insurance<span class="icon-chev-right"></span></a>	<li id="menu-item-2754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2754"><a href="https://kims.org.uk/funding-your-healthcare/self-pay/">Self-pay patients<span class="icon-chev-right"></span></a>	<li id="menu-item-6798" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6798"><a href="https://kims.org.uk/funding-your-healthcare/personal-medical-loans/">Spreading the cost of your treatment<span class="icon-chev-right"></span></a>	<li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="https://kims.org.uk/funding-your-healthcare/prices/">Private treatment costs and self-pay prices<span class="icon-chev-right"></span></a>	<li id="menu-item-5747" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5747"><a href="https://kims.org.uk/funding-your-healthcare/self-pay-step-by-step/">Step-by-step guide to self-pay<span class="icon-chev-right"></span></a>	<li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a href="https://kims.org.uk/funding-your-healthcare/nhs-patients/">NHS patients<span class="icon-chev-right"></span></a>	<li id="menu-item-9232" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9232"><a href="https://kims.org.uk/funding-your-healthcare/nhs-patients-guide-step-by-step/">NHS Patients Guide: Step-by-step<span class="icon-chev-right"></span></a></ul>
+<li id="menu-item-7623" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7623"><a href="/careers/">Careers<span class="icon-chev-right"></span></a></ul>                        </div>
+                        <div class="main-nav-button">
+                            <a href="#fallback-main-nav" class="menu-overlay-open js-menu-overlay-open" data-scroll-ignore>
+                                <span>Menu</span>
+                                <span class="icon icon-menu"></span> 
+                            </a>
+                            <button class="menu-overlay-close js-menu-overlay-close">
+                                <span>Close</span>
+                                <span class="icon icon-close"></span> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+<div class="overlay overlay--search">
+	<div class="overlay-box">
+		<div class="container">
+			<button class="overlay-close js-search-overlay-close">
+				<span>Close</span>
+                <span class="icon icon-close"></span>
+			</button>
+			<div class="overlay-header"><span class="overlay-title">&nbsp;</span></div>
+			<div class="overlay-container">
+				<div class="overlay--search-input">
+                    
+
+<form role="search" method="get" class="search-form search-input" action="https://kims.org.uk/">
+	<label for="search-form-6a5634cfa1dd2">
+		<span class="visuallyhidden">Search for:</span>
+	</label>
+    <input
+        type="search"
+        id="search-form-6a5634cfa1dd2"
+        class="searchbox search-field"
+        placeholder="Enter your search here" 
+        value="" 
+        name="s" data-swplive="true" data-swpengine="default" data-swpconfig="default"
+        aria-label="Search input"
+    />
+        <input type="hidden" name="post_type" value="any" />
+    <button class="searchbutton search-submit" aria-label="Search" type="submit">
+        <span class="icon icon-search"></span>
+        <span class="visuallyhidden">Search</span>
+    </button>
+</form>
+				</div>
+                        
+                
+                    <div class="overlay--search-suggested">
+                        <span class="overlay--search-suggested-title">Suggested search terms</span>
+
+                        
+                            <a href="/?s=online+booking" class="suggested-search"><span class="icon-search"></span>Online booking</a>
+
+                        
+                            <a href="/?s=prices" class="suggested-search"><span class="icon-search"></span>Prices</a>
+
+                        
+                            <a href="/?s=private+gp" class="suggested-search"><span class="icon-search"></span>Private GP</a>
+
+                        
+                            <a href="/?s=gut+health" class="suggested-search"><span class="icon-search"></span>Gut Health</a>
+
+                        
+                            <a href="/?s=knee+replacement" class="suggested-search"><span class="icon-search"></span>Knee replacement</a>
+
+                        
+                            <a href="/?s=hip+replacement" class="suggested-search"><span class="icon-search"></span>Hip replacement</a>
+
+                        
+                            <a href="/?s=consultants" class="suggested-search"><span class="icon-search"></span>Consultants</a>
+
+                        
+                            <a href="/?s=mri+scan" class="suggested-search"><span class="icon-search"></span>MRI scan</a>
+
+                        
+                            <a href="/?s=private+medical+insurance" class="suggested-search"><span class="icon-search"></span>Private medical insurance</a>
+
+                        
+                    </div>  
+
+                			</div>
+		</div>
+	</div>
+</div>
+                
+<div class="megamenu"><div class="megamenu-panel" data-megamenu="megamenu-locations">
+
+<div class="megamenu-panel-col">
+    <div class="megamenu-panel-col-header">
+        <span class="megamenu-panel-title">Locations</span>
+    </div>
+    <div class="megamenu-panel-col-summary">
+        <span>Access the same great care at a location that’s close to you</span>
+    </div>
+</div>
+<div class="megamenu-panel-col">
+            
+    <div class="deck deck--locations deck--3-cols">
+        
+<article class="location-card theme-- js-slider-item">
+    <div class="location-card-content">
+        <h3 class="location-card-title">KIMS Hospital</h3>
+        <p class="location-card-summary">Find out more about the facilities available at KIMS Hospital.</p>
+        <div class="button-container">
+            <span class="button"></span>
+        </div>
+    </div>
+            <a href="https://kims.org.uk/about-us/" class="coverlink hide-text">Discover more</a>
+    </article>
+
+<article class="location-card theme-- js-slider-item">
+    <div class="location-card-content">
+        <h3 class="location-card-title">Sevenoaks Medical Centre</h3>
+        <p class="location-card-summary">Find out more about Sevenoaks Medical Centre, our consulting and diagnostic facility for patients in West Kent.</p>
+        <div class="button-container">
+            <span class="button"></span>
+        </div>
+    </div>
+            <a href="https://kims.org.uk/sevenoaks-medical-centre/" class="coverlink hide-text">Discover more</a>
+    </article>
+
+<article class="location-card theme-- js-slider-item">
+    <div class="location-card-content">
+        <h3 class="location-card-title">LycaHealth Orpington</h3>
+        <p class="location-card-summary">Find out more about LycaHealth Orpington, our consulting and diagnostic facility for patients around South East London. </p>
+        <div class="button-container">
+            <span class="button"></span>
+        </div>
+    </div>
+            <a href="https://kims.org.uk/lycahealth-orpington/" class="coverlink hide-text">Discover more</a>
+    </article>
+
+<article class="location-card theme-- js-slider-item">
+    <div class="location-card-content">
+        <h3 class="location-card-title">The Royal Tunbridge Wells Clinic</h3>
+        <p class="location-card-summary">Find out more about The Royal Tunbridge Wells Clinic, offering consultations and outpatient treatments in the heart of Tunbridge Wells.</p>
+        <div class="button-container">
+            <span class="button"></span>
+        </div>
+    </div>
+            <a href="https://kims.org.uk/the-royal-tunbridge-wells-clinic/" class="coverlink hide-text">Discover more</a>
+    </article>
+
+<article class="location-card theme-- js-slider-item">
+    <div class="location-card-content">
+        <h3 class="location-card-title">The Gut Health Centre, Orpington</h3>
+        <p class="location-card-summary">The Gut Health Centre offers expert endoscopy services in a comfortable, calm environment. We provide care for both private and NHS patients, combining advanced technology with compassionate specialist support.</p>
+        <div class="button-container">
+            <span class="button"></span>
+        </div>
+    </div>
+            <a href="https://kims.org.uk/the-gut-health-centre/" class="coverlink hide-text">Discover more</a>
+    </article>
+ 
+    </div>
+    <div class="deck--locations-link">
+        <a href="/contact/" class="button">See where we are and how to contact us</a>
+    </div>
+</div></div><div class="megamenu-panel" data-megamenu="megamenu-treatments-and-services">
+
+<div class="megamenu-panel-col-header megamenu-panel-col-header-link">
+    <span class="megamenu-panel-title">Treatments and Services</span>
+</div>
+
+<div class="megamenu-panel-col">
+    <div class="megamenu-panel-col-menus">
+
+        <ul class="megamenu-menu">
+            <li class="menu-header">Specialties</li>
+            <li class='menu-item'>
+                        <a href="https://kims.org.uk/service/private-gp-service/">
+                            Private GP service
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li><li class='menu-item'>
+                        <a href="https://kims.org.uk/service/orthopaedic-surgery/">
+                            Orthopaedic surgery
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li><li class='menu-item'>
+                        <a href="https://kims.org.uk/service/cardiology/">
+                            Cardiology
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li><li class='menu-item'>
+                        <a href="https://kims.org.uk/service/general-surgery/">
+                            General surgery
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li>            <li class="menu-button"><a href="/services-specialties/">See more specialties <span class='icon-arrow-right'></span></a></li>
+        </ul>
+        <ul class="megamenu-menu">
+            <li class="menu-header">Treatments</li>
+            <li class='menu-item'>
+                        <a href="https://kims.org.uk/treatment/knee-replacement/">
+                            Knee replacement surgery
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li><li class='menu-item'>
+                        <a href="https://kims.org.uk/treatment/hip-replacement/">
+                            Hip replacement surgery
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li><li class='menu-item'>
+                        <a href="https://kims.org.uk/treatment/pacemaker/">
+                            Pacemaker
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li><li class='menu-item'>
+                        <a href="https://kims.org.uk/treatment/cataract-surgery/">
+                            Cataract Surgery
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li>            <li class="menu-button"><a href="/treatments/">See more treatments <span class='icon-arrow-right'></span></a></li>
+        </ul>        
+        <ul class="megamenu-menu">
+            <li class="menu-header">Scans &amp; tests</li>
+            <li class='menu-item'>
+                        <a href="https://kims.org.uk/scans-tests/mri-scan/">
+                            MRI scan
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li><li class='menu-item'>
+                        <a href="https://kims.org.uk/scans-tests/ct-scan/">
+                            CT scan
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li><li class='menu-item'>
+                        <a href="https://kims.org.uk/scans-tests/x-ray/">
+                            X-ray
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li><li class='menu-item'>
+                        <a href="https://kims.org.uk/scans-tests/ecg-electrocardiogram/">
+                            ECG test
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li>            <li class="menu-button"><a href="/scans-tests/">See more scans &amp; tests <span class='icon-arrow-right'></span></a></li>
+        </ul>
+        <ul class="megamenu-menu">
+            <li class="menu-header">Other services</li>
+            <li class='menu-item'>
+                        <a href="https://kims.org.uk/service/gut-health/">
+                            Gut Health
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li><li class='menu-item'>
+                        <a href="https://kims.org.uk/service/menopause-hrt/">
+                            Menopause &#038; HRT services
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li><li class='menu-item'>
+                        <a href="https://kims.org.uk/service/ear-nose-throat-ent/">
+                            Ear, nose &#038; throat (ENT)
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li><li class='menu-item'>
+                        <a href="https://kims.org.uk/service/health-checks/">
+                            Health Checks
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li><li class='menu-item'>
+                        <a href="https://kims.org.uk/service/physiotherapy/">
+                            Physiotherapy
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li>        </ul>      
+    </div>
+</div></div><div class="megamenu-panel" data-megamenu="megamenu-your-journey">
+
+<div class="megamenu-panel-col-header megamenu-panel-col-header-link">
+    <a class="button" href="https://kims.org.uk/your-journey/">Your Journey</a>
+</div>
+
+<div class="megamenu-panel-col">
+    <div class="megamenu-panel-col-menus">
+        <ul class="megamenu-menu"><li class="menu-header">Before treatment</li><li class='menu-item'>
+                    <a href="https://kims.org.uk/your-journey/seeing-your-consultant/">
+                        Seeing your consultant
+                        <span class='icon-arrow-right'></span>
+                    </a>
+                </li><li class='menu-item'>
+                    <a href="https://kims.org.uk/your-journey/scans-and-tests/">
+                        Scans &#038; tests
+                        <span class='icon-arrow-right'></span>
+                    </a>
+                </li><li class='menu-item'>
+                    <a href="https://kims.org.uk/your-journey/pre-operative-assessment/">
+                        Pre-operative assessment
+                        <span class='icon-arrow-right'></span>
+                    </a>
+                </li></ul><ul class="megamenu-menu"><li class="menu-header">Your stay</li><li class='menu-item'>
+                    <a href="https://kims.org.uk/your-journey/your-arrival/">
+                        Your arrival
+                        <span class='icon-arrow-right'></span>
+                    </a>
+                </li><li class='menu-item'>
+                    <a href="https://kims.org.uk/your-journey/your-room/">
+                        Your room
+                        <span class='icon-arrow-right'></span>
+                    </a>
+                </li><li class='menu-item'>
+                    <a href="https://kims.org.uk/your-journey/your-meals/">
+                        Your meals
+                        <span class='icon-arrow-right'></span>
+                    </a>
+                </li><li class='menu-item'>
+                    <a href="https://kims.org.uk/your-journey/while-youre-with-us/">
+                        While you’re with us
+                        <span class='icon-arrow-right'></span>
+                    </a>
+                </li><li class='menu-item'>
+                    <a href="https://kims.org.uk/your-journey/having-visitors/">
+                        Having visitors
+                        <span class='icon-arrow-right'></span>
+                    </a>
+                </li></ul><ul class="megamenu-menu"><li class="menu-header">After treatment</li><li class='menu-item'>
+                    <a href="https://kims.org.uk/your-journey/discharge-aftercare/">
+                        Discharge &#038; aftercare
+                        <span class='icon-arrow-right'></span>
+                    </a>
+                </li></ul>    </div>
+</div>
+
+<div class="megamenu-panel-col">
+    <div class="deck deck--duo">
+        
+
+<article class="tile tile--small theme--blue js-slider-item ">
+    	<div class="tile-image">
+		<div class="image-background">                  
+            <img width="570" height="339" src="https://kims.org.uk/wp-content/uploads/2019/01/journey-megamenu.jpg" class="attachment-tile-xs size-tile-xs" alt="A patient handing documents to a receptionist at the KIMS Hospital front desk, representing the patient journey." decoding="async" fetchpriority="high" srcset="https://kims.org.uk/wp-content/uploads/2019/01/journey-megamenu.jpg 570w, https://kims.org.uk/wp-content/uploads/2019/01/journey-megamenu-300x178.jpg 300w, https://kims.org.uk/wp-content/uploads/2019/01/journey-megamenu-262x156.jpg 262w" sizes="(max-width: 570px) 100vw, 570px" />		</div>
+	</div>
+    	<div class="tile-box">
+		<div class="tile-content">
+
+                        
+			<div class="tile-content-header">
+
+                                
+                    <h3 class="tile-title">Your Journey</h3>
+                    
+                    
+                			</div>
+            
+                        
+            			    <span class="icon icon-arrow-right"></span>
+                        
+            
+		</div>
+        
+        	</div>
+
+    
+    	    <a href="https://kims.org.uk/your-journey/" class="coverlink hide-text">Find out more</a>
+    </article>
+
+                
+        
+
+<article class="tile tile--small theme--blue js-slider-item ">
+    	<div class="tile-image">
+		<div class="image-background">                  
+            <img width="570" height="339" src="https://kims.org.uk/wp-content/uploads/2019/03/patientstories.jpg" class="attachment-tile-xs size-tile-xs" alt="Patient receiving physiotherapy" decoding="async" srcset="https://kims.org.uk/wp-content/uploads/2019/03/patientstories.jpg 570w, https://kims.org.uk/wp-content/uploads/2019/03/patientstories-300x178.jpg 300w, https://kims.org.uk/wp-content/uploads/2019/03/patientstories-262x156.jpg 262w" sizes="(max-width: 570px) 100vw, 570px" />		</div>
+	</div>
+    	<div class="tile-box">
+		<div class="tile-content">
+
+                        
+			<div class="tile-content-header">
+
+                                
+                    <h3 class="tile-title">Patient stories</h3>
+                    
+                    
+                			</div>
+            
+                        
+            			    <span class="icon icon-arrow-right"></span>
+                        
+            
+		</div>
+        
+        	</div>
+
+    
+    	    <a href="https://kims.org.uk/our-hospital/patient-stories/" class="coverlink hide-text">Find out more</a>
+    </article>
+    </div>
+</div></div><div class="megamenu-panel" data-megamenu="megamenu-funding-your-care">
+
+<div class="megamenu-panel-col">
+    
+
+<article class="tile tile--small theme--blue js-slider-item ">
+    	<div class="tile-image">
+		<div class="image-background">                  
+            <img width="408" height="150" src="https://kims.org.uk/wp-content/uploads/2019/01/funding-megamenu.jpg" class="attachment-tile-xs size-tile-xs" alt="A female staff member with a headset smiling at a desk, representing patient support and funding enquiries." decoding="async" srcset="https://kims.org.uk/wp-content/uploads/2019/01/funding-megamenu.jpg 408w, https://kims.org.uk/wp-content/uploads/2019/01/funding-megamenu-300x110.jpg 300w, https://kims.org.uk/wp-content/uploads/2019/01/funding-megamenu-262x96.jpg 262w" sizes="(max-width: 408px) 100vw, 408px" />		</div>
+	</div>
+    	<div class="tile-box">
+		<div class="tile-content">
+
+                        
+			<div class="tile-content-header">
+
+                                
+                    <h3 class="tile-title">Funding Your Healthcare</h3>
+                    
+                    
+                			</div>
+            
+                        
+            			    <span class="icon icon-arrow-right"></span>
+                        
+            
+		</div>
+        
+        	</div>
+
+    
+    	    <a href="https://kims.org.uk/funding-your-healthcare/" class="coverlink hide-text">Find out more</a>
+    </article>
+</div>
+<div class="megamenu-panel-col">
+    <div class="megamenu-panel-col-menus">
+        <ul class="megamenu-menu"><li class='menu-item'>
+                        <a href="https://kims.org.uk/funding-your-healthcare/insured-patients/">
+                            Using your private medical insurance
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li><li class='menu-item'>
+                        <a href="https://kims.org.uk/funding-your-healthcare/self-pay/">
+                            Self-pay patients
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li><li class='menu-item'>
+                        <a href="https://kims.org.uk/funding-your-healthcare/personal-medical-loans/">
+                            Spreading the cost of your treatment
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li><li class='menu-item'>
+                        <a href="https://kims.org.uk/funding-your-healthcare/prices/">
+                            Private treatment costs and self-pay prices
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li></ul><ul class="megamenu-menu"><li class='menu-item'>
+                        <a href="https://kims.org.uk/funding-your-healthcare/self-pay-step-by-step/">
+                            Step-by-step guide to self-pay
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li><li class='menu-item'>
+                        <a href="https://kims.org.uk/funding-your-healthcare/nhs-patients/">
+                            NHS patients
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li><li class='menu-item'>
+                        <a href="https://kims.org.uk/funding-your-healthcare/nhs-patients-guide-step-by-step/">
+                            NHS Patients Guide: Step-by-step
+                            <span class='icon-arrow-right'></span>
+                        </a>
+                    </li></ul>    </div>
+</div></div></div>            </nav>
+        </header>
+
+        <div class="megamenu-overlay js-megamenu-close"></div>
+
+        <!-- Main -->
+        <main id="content" class="main" role="main">
+            <div class="mobile-doctify">
+                
+    <div id="mobilesmall"></div><script src="https://www.doctify.com/get-script?widget_container_id=mobilesmall&type=horizontal-widget&tenant=athena-uk&language=en&profileType=practice&layoutType=layoutA&slugs=kims-hospital,lycahealth-orpington,sevenoaks-medical-centre,the-gut-health-centre,the-royal-tunbridge-wells-clinic&background=white&linkUrl=https://www.doctify.com/uk/practice/kims-hospital "></script>
+            </div>
+            
+<div class="sticky-drawer">
+    <a href="tel:01622 237665" id="sticky-phone-button" class="button js-contact-overlay-open">
+        <span class="icon icon-phone"></span> 
+        <span>Call us</span>
+    </a>
+    <a href="/search" id="sticky-search-button" class="button js-search-overlay-open">
+        <span class="icon icon-search"></span> 
+        <span>Search</span>
+    </a>
+      
+    <a href="https://appointments.kims.org.uk/"  id="sticky-default-book"  class="button button--berry">
+        <span>Book online</span>
+    </a> 
+</div>    <section class="page-not-found">
+        <div class="page-not-found__image">
+            <div class="image-background">
+                <img width="1920" height="740" src="https://kims.org.uk/wp-content/uploads/2019/01/404-1920x740.jpg" class="attachment-hero size-hero" alt="" decoding="async" />            </div>
+        </div>
+        <div class="container container-sm-full container-flex--center">
+            <div class="page-not-found__content">
+                <header class="section-header">
+                    <h2 class="section-title">Page not found</h2>
+                </header>
+                <p>Sorry, it looks like this page either isn't working or has been moved!</p>
+                <div class="page-not-found__actions">
+                    <div class="button-container">
+                        <a href="/" class="button button--white-outline">Go to our homepage</a>
+                    </div>
+                    <form role="search" method="get" class="search-form search-input" action="https://kims.org.uk/">
+                        <label for="searchbox-hero">
+                            <span class="visuallyhidden">Search for:</span>
+                        </label>
+                        <input
+                            type="search"
+                            id="searchbox-hero"
+                            class="searchbox search-field"
+                            placeholder="Search our site now" 
+                            name="s"
+                            aria-label="Search input"
+                        />
+                        <button class="searchbutton" type="submit">
+                            <span class="icon icon-search"></span>
+                            <span class="searchbutton-text">Search</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        </main>
+
+        <div id="main-contact" class="overlay overlay--contact">
+	<div class="overlay-box">
+		<div class="container">
+			<button class="overlay-close js-contact-overlay-close">
+				<span class="icon icon-close"></span> <span>Close</span>
+			</button>
+			<div class="overlay-header">
+				<span class="overlay-title">Contact KIMS Hospital</span>
+			</div>
+			<div class="overlay-container">
+				<div class="overlay-content">
+					<a class="overlay-phone" href="tel:01622 237665"><span class="icon icon-phone"></span>01622 237665</a>				</div>
+				<div class="button-container">
+					<a href="https://kims.org.uk/contact/" class="button">All contact numbers</a>
+				</div>
+				<div class="button-container">
+					<a href="https://kims.org.uk/contact/#map" class="button">Directions</a>
+				</div>
+			</div>
+			<div class="overlay-actions">
+						
+													<a href="https://kims.org.uk/contact/" class="button">Contact KIMS Hospital</a>
+													
+													<a href="https://kims.org.uk/contact-us-sevenoaks-medical-centre/" class="button">Contact Sevenoaks Medical Centre</a>
+													
+													<a href="https://kims.org.uk/contact-us-lycahealth-orpington/" class="button">Contact LycaHealth Orpington</a>
+													
+													<a href="https://kims.org.uk/contact-us-tunbridge-wells-clinic/" class="button">Contact The Royal Tunbridge Wells Clinic</a>
+													
+													<a href="https://kims.org.uk/contact-us-lycahealth-orpington/" class="button">Contact The Gut Health Centre, Orpington</a>
+															<a href="https://appointments.kims.org.uk/" class="button button--berry">
+					<span>Book online</span>
+				</a>
+				<a href="https://kims.org.uk/appointment-enquiry/" class="button button--green">
+					<span>Request an appointment</span>
+				</a>                              
+				<a href="https://kims.org.uk/make-a-general-enquiry/" class="button button--green">
+					<span>Make an enquiry</span>
+				</a>  
+			</div>
+		</div>
+	</div>
+</div>
+
+        <div id="fallback-main-nav" class="fallback-main-menu">
+            <div class="overlay overlay--menu">
+                
+<ul id="menu-main-nav-1" class="menu"><li class="has-submenu has-megamenu id-locations menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7415"><a href="#" class="js-megamenu-open js-submenu-open " data-megamenu-id="megamenu-locations">Locations<span class="icon-list-ul"></span></a>
+
+            <ul class='sub-menu'>
+                <li class='menu-item menu-item-back'>
+                    <span class='js-submenu-close'>
+                        <span class='icon-chev-left'></span>
+                        Back
+                    </span>
+                </li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9487"><a href="https://kims.org.uk/about-us/">KIMS Hospital<span class="icon-chev-right"></span></a>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7433"><a href="https://kims.org.uk/sevenoaks-medical-centre/">Sevenoaks Medical Centre<span class="icon-chev-right"></span></a>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9208"><a href="https://kims.org.uk/lycahealth-orpington/">LycaHealth Orpington<span class="icon-chev-right"></span></a>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9460"><a href="https://kims.org.uk/the-royal-tunbridge-wells-clinic/">The Royal Tunbridge Wells Clinic<span class="icon-chev-right"></span></a>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10017"><a href="https://kims.org.uk/the-gut-health-centre/">The Gut Health Centre<span class="icon-chev-right"></span></a></ul>
+<li class="has-submenu has-megamenu id-treatments-and-services menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-50"><a href="https://kims.org.uk/treatments/" class="js-megamenu-open js-submenu-open " data-megamenu-id="megamenu-treatments-and-services">Treatments and Services<span class="icon-list-ul"></span></a>
+
+            <ul class='sub-menu'>
+                <li class='menu-item menu-item-back'>
+                    <span class='js-submenu-close'>
+                        <span class='icon-chev-left'></span>
+                        Back
+                    </span>
+                </li>
+	<li class="has-subsubmenu menu-item menu-item-type-post_type menu-item-object-page menu-item-7417"><a href="https://kims.org.uk/treatments/" class="js-subsubmenu-open ">Treatments<span class="icon-chev-right"></span></a>
+	
+                        <ul class='subsub-menu'>
+	
+                                <li class='menu-item'>
+                                    <a href="https://kims.org.uk/treatments/">                                        
+                                        All Treatments
+                                        <span class='icon-chev-right'></span>
+                                    </a>
+                                </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/treatment/knee-replacement/">
+                                    Knee replacement surgery
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/treatment/hip-replacement/">
+                                    Hip replacement surgery
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/treatment/pacemaker/">
+                                    Pacemaker
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/treatment/cataract-surgery/">
+                                    Cataract Surgery
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>	</ul></li>
+	<li class="has-subsubmenu menu-item menu-item-type-post_type menu-item-object-page menu-item-48"><a href="https://kims.org.uk/scans-tests/" class="js-subsubmenu-open ">Scans &#038; Tests<span class="icon-chev-right"></span></a>
+	
+                        <ul class='subsub-menu'>
+	
+                                <li class='menu-item'>
+                                    <a href="https://kims.org.uk/scans-tests/">                                        
+                                        All Scans & Tests
+                                        <span class='icon-chev-right'></span>
+                                    </a>
+                                </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/scans-tests/mri-scan/">
+                                    MRI scan
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/scans-tests/ct-scan/">
+                                    CT scan
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/scans-tests/x-ray/">
+                                    X-ray
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/scans-tests/ecg-electrocardiogram/">
+                                    ECG test
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>	</ul></li>
+	<li class="has-subsubmenu menu-item menu-item-type-post_type menu-item-object-page menu-item-7418"><a href="https://kims.org.uk/services-specialties/" class="js-subsubmenu-open ">Other Services<span class="icon-chev-right"></span></a>
+	
+                        <ul class='subsub-menu'>
+	
+                                <li class='menu-item'>
+                                    <a href="https://kims.org.uk/services-specialties/">                                        
+                                        All Other Services
+                                        <span class='icon-chev-right'></span>
+                                    </a>
+                                </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/service/gut-health/">
+                                    Gut Health
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/service/menopause-hrt/">
+                                    Menopause &#038; HRT services
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/service/ear-nose-throat-ent/">
+                                    Ear, nose &#038; throat (ENT)
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/service/health-checks/">
+                                    Health Checks
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>
+	
+                            <li class='menu-item'>
+                                <a href="https://kims.org.uk/service/physiotherapy/">
+                                    Physiotherapy
+                                    <span class='icon-chev-right'></span>
+                                </a>
+                            </li>	</ul></li>
+</ul>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a href="https://kims.org.uk/services-specialties/">Specialties<span class="icon-chev-right"></span></a><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a href="https://kims.org.uk/consultants/">Find a Consultant<span class="icon-chev-right"></span></a><li class="has-submenu has-megamenu id-your-journey menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-51"><a href="https://kims.org.uk/your-journey/" class="js-megamenu-open js-submenu-open " data-megamenu-id="megamenu-your-journey">Your Journey<span class="icon-list-ul"></span></a>
+
+            <ul class='sub-menu'>
+                <li class='menu-item menu-item-back'>
+                    <span class='js-submenu-close'>
+                        <span class='icon-chev-left'></span>
+                        Back
+                    </span>
+                </li>
+	<li class="hide-in-megamenu menu-item menu-item-type-post_type menu-item-object-page menu-item-145"><a href="https://kims.org.uk/your-journey/">Your Journey<span class="icon-chev-right"></span></a>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-140"><a href="https://kims.org.uk/your-journey/seeing-your-consultant/">Seeing your consultant<span class="icon-chev-right"></span></a>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136"><a href="https://kims.org.uk/your-journey/scans-and-tests/">Scans &#038; tests<span class="icon-chev-right"></span></a>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139"><a href="https://kims.org.uk/your-journey/pre-operative-assessment/">Pre-operative assessment<span class="icon-chev-right"></span></a>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142"><a href="https://kims.org.uk/your-journey/your-arrival/">Your arrival<span class="icon-chev-right"></span></a>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="https://kims.org.uk/your-journey/your-room/">Your room<span class="icon-chev-right"></span></a>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="https://kims.org.uk/your-journey/your-meals/">Your meals<span class="icon-chev-right"></span></a>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141"><a href="https://kims.org.uk/your-journey/while-youre-with-us/">While you’re with us<span class="icon-chev-right"></span></a>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-138"><a href="https://kims.org.uk/your-journey/having-visitors/">Having visitors<span class="icon-chev-right"></span></a>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137"><a href="https://kims.org.uk/your-journey/discharge-aftercare/">Discharge &#038; aftercare<span class="icon-chev-right"></span></a></ul>
+<li class="has-submenu has-megamenu id-funding-your-care menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-46"><a href="https://kims.org.uk/funding-your-healthcare/" class="js-megamenu-open js-submenu-open " data-megamenu-id="megamenu-funding-your-care">Funding Your Care<span class="icon-list-ul"></span></a>
+
+            <ul class='sub-menu'>
+                <li class='menu-item menu-item-back'>
+                    <span class='js-submenu-close'>
+                        <span class='icon-chev-left'></span>
+                        Back
+                    </span>
+                </li>
+	<li class="hide-in-megamenu menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a href="https://kims.org.uk/funding-your-healthcare/">Funding Your Healthcare<span class="icon-chev-right"></span></a>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a href="https://kims.org.uk/funding-your-healthcare/insured-patients/">Using your private medical insurance<span class="icon-chev-right"></span></a>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2754"><a href="https://kims.org.uk/funding-your-healthcare/self-pay/">Self-pay patients<span class="icon-chev-right"></span></a>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6798"><a href="https://kims.org.uk/funding-your-healthcare/personal-medical-loans/">Spreading the cost of your treatment<span class="icon-chev-right"></span></a>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="https://kims.org.uk/funding-your-healthcare/prices/">Private treatment costs and self-pay prices<span class="icon-chev-right"></span></a>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5747"><a href="https://kims.org.uk/funding-your-healthcare/self-pay-step-by-step/">Step-by-step guide to self-pay<span class="icon-chev-right"></span></a>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-148"><a href="https://kims.org.uk/funding-your-healthcare/nhs-patients/">NHS patients<span class="icon-chev-right"></span></a>	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9232"><a href="https://kims.org.uk/funding-your-healthcare/nhs-patients-guide-step-by-step/">NHS Patients Guide: Step-by-step<span class="icon-chev-right"></span></a></ul>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7623"><a href="/careers/">Careers<span class="icon-chev-right"></span></a></ul>            </div>
+        </div>
+
+        <footer id="footer" class="footer" role="contentinfo">
+            <!-- Begin Brevo Form -->
+<section id="mailingListSignUp" class="sib-form-wrapper background--blue section-no-print" data-toc="Subscribe to our newsletter" >
+	<div class="container container-content">
+		<div class="sib-form">
+			<div id="sib-form-container" class="sib-form-container">        
+				<div id="sib-container" class="sib-container--large sib-container--vertical">
+					<form id="sib-form" method="POST" action="https://06ca58d0.sibforms.com/serve/MUIFAOly0RxUH47dCQWQ2f2j2bIAMhIClpp7Aqq_aiokm48bZ9WtSlvFTqP9YmObfgYm0ZhZ-h0TJ5G7FOqp2vCXorMu4DrxFfqRKx5LL1mWqz1kAhst2owlfbSJVJZAOUFgxRNALoL5XXsGCtZMKbTM7I5DxOstVmBgEp9uC1MiT0MCmyY9V2FEWBMqlIqPBQmkZ8v6XvHIixMx" data-type="subscription">
+						<div class="sib-input sib-form-block">
+							<div class="form__entry entry_block">
+								<div class="form__label-row ">
+										<label class="entry__label" for="EMAIL">Subscribe to our newsletter</label>
+										<div>
+												<div class="entry__field">
+														<input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="Your email address" data-required="true" required />
+												</div>
+												<button class="button sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit">
+														Subscribe
+														<svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
+																<path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+														</svg>
+												</button>
+										</div>
+								</div>
+								<label class="entry__error entry__error--primary"></label>
+							</div>
+						</div>
+						<input type="text" name="email_address_check" value="" class="input--hidden">
+						<input type="hidden" name="locale" value="en">
+					</form>
+				</div>
+				<div id="error-message" class="sib-form-message-panel">
+					<div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+						<svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon" xmlns="http://www.w3.org/2000/svg">
+							<path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+						</svg>
+						<span class="sib-form-message-panel__inner-text">Your subscription could not be saved. Please try again.</span>
+					</div>
+				</div>
+				<div id="success-message" class="sib-form-message-panel">
+					<div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+						<svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+							<path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+						</svg>
+						<span class="sib-form-message-panel__inner-text">Your subscription has been successful.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Brevo Form -->            <div class="footer-main">
+                <a href="#site-container" class="backtotop">Back to top <span class="icon icon-arrow-up"></span></a>                
+                <div class="container">
+                    <div class="footer-panel">
+                        <div class="footer-main-title">
+                            <h2>Location Information</h2>
+                            <select id="footer-locations-dropdown" class="footer-locations-dropdown" name="location" onchange="locationChange();">
+    <option value="" >Select a different location</option>
+    <option value="39" >KIMS Hospital</option><option value="268" >LycaHealth Orpington</option><option value="40" >Sevenoaks Medical Centre</option><option value="422" >The Gut Health Centre</option><option value="316" >The Royal Tunbridge Wells Clinic</option></select>
+<script>
+    function locationChange() {
+        // Trigger Tab Change
+        const tabTarget = "footer-tabpanel-id-" + document.getElementById('footer-locations-dropdown').value;
+        const tabTargetEl = document.querySelectorAll(`[data-tab="${tabTarget}"]`);
+        tabTargetEl[0].click();
+    }
+</script>                        </div>
+                        <div id="footer-location-tabs" class="tabs footer-tabs">
+                            <nav>
+    <ul class="footer-tabs-header">
+                        <li class="footer-tabs-header-item">
+                    <button
+                        class="tab-toggle js-tab-toggle active"
+                        data-tab="footer-tabpanel-id-39"
+                        role="tab" aria-selected="true" aria-controls="footer-tabpanel-id-39"
+                        id="footer-tab-id-39">
+                        KIMS Hospital                    </button>
+                </li>
+                            <li class="footer-tabs-header-item">
+                    <button
+                        class="tab-toggle js-tab-toggle "
+                        data-tab="footer-tabpanel-id-40"
+                        role="tab" aria-selected="true" aria-controls="footer-tabpanel-id-40"
+                        id="footer-tab-id-40">
+                        Sevenoaks Medical Centre                    </button>
+                </li>
+                            <li class="footer-tabs-header-item">
+                    <button
+                        class="tab-toggle js-tab-toggle "
+                        data-tab="footer-tabpanel-id-268"
+                        role="tab" aria-selected="true" aria-controls="footer-tabpanel-id-268"
+                        id="footer-tab-id-268">
+                        LycaHealth Orpington                    </button>
+                </li>
+                            <li class="footer-tabs-header-item">
+                    <button
+                        class="tab-toggle js-tab-toggle "
+                        data-tab="footer-tabpanel-id-316"
+                        role="tab" aria-selected="true" aria-controls="footer-tabpanel-id-316"
+                        id="footer-tab-id-316">
+                        The Royal Tunbridge Wells Clinic                    </button>
+                </li>
+                            <li class="footer-tabs-header-item">
+                    <button
+                        class="tab-toggle js-tab-toggle "
+                        data-tab="footer-tabpanel-id-422"
+                        role="tab" aria-selected="true" aria-controls="footer-tabpanel-id-422"
+                        id="footer-tab-id-422">
+                        The Gut Health Centre, Orpington                    </button>
+                </li>
+                </ul>
+</nav>                            <div class="tabs-panels">
+                                
+
+<div role="tab-panel" class="tab-panel active" id="footer-tabpanel-id-39">
+    <div class="footer-tab-columns">
+        <div class="footer-tab-background">
+            <div class="footer-contact">                
+                <div class="footer-menu">
+                    <h2 class="footer-title">About KIMS Hospital</h2>
+                    <nav class="footer-nav">                                        
+                        <ul id="menu-footer-kims" class="menu menu-nostyle"><li id="menu-item-9501" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9501"><a href="https://kims.org.uk/about-us/">About Us</a></li>
+<li id="menu-item-1615" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1615"><a href="https://kims.org.uk/contact/">Contact us</a></li>
+<li id="menu-item-8291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8291"><a href="https://kims.org.uk/frequently-asked-questions/">Frequently Asked Questions</a></li>
+<li id="menu-item-2408" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2408"><a href="https://kims.org.uk/latest-from-kims-hospital/">Latest news and updates</a></li>
+<li id="menu-item-1119" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1119"><a href="https://kims.org.uk/quality-governance/compliments-comments-complaints/">Leave us feedback</a></li>
+<li id="menu-item-1118" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1118"><a href="https://kims.org.uk/media-enquiries/">Media enquiries</a></li>
+<li id="menu-item-1120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1120"><a href="https://kims.org.uk/quality-governance/">Quality &#038; Governance</a></li>
+<li id="menu-item-2407" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2407"><a href="https://kims.org.uk/our-hospital/patient-stories/">Patient stories</a></li>
+</ul>                    </nav>
+                </div>
+
+                <div class="footer-contact-column">
+                    <h2 class="footer-title">Contact information</h2>
+                    <div class="footer-contact-grid">
+                        <address>
+                            KIMS Hospital <br />
+Newnham Court Way <br />
+Weavering<br />
+Maidstone <br />
+Kent<br />
+ME14 5FT                        </address>
+                        <div>
+                            <a href="tel:01622 237 500" class="footer-contact-option">01622 237 500</a>                                                            <a href="mailto:enquiries@kims.org.uk" class="footer-contact-option">enquiries@kims.org.uk</a>
+                                                    </div>
+                    </div>
+                </div>                                                
+            </div>
+        </div>
+        <div class="cqc-column">
+                        <div class="cqc-wrapper">
+                <script
+                    type="text/javascript"
+                    src="https://www.cqc.org.uk/sites/all/modules/custom/cqc_widget/widget.js?data-id=1-1285831303&data-host=https://www.cqc.org.uk&type=location">
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div role="tab-panel" class="tab-panel " id="footer-tabpanel-id-40">
+    <div class="footer-tab-columns">
+        <div class="footer-tab-background">
+            <div class="footer-contact">                
+                <div class="footer-menu">
+                    <h2 class="footer-title">About Sevenoaks Medical Centre</h2>
+                    <nav class="footer-nav">                                        
+                        <ul id="menu-footer-smc" class="menu menu-nostyle"><li id="menu-item-9502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9502"><a href="https://kims.org.uk/about-us/">About Us</a></li>
+<li id="menu-item-4382" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4382"><a href="https://kims.org.uk/contact-us-sevenoaks-medical-centre/">Contact us</a></li>
+<li id="menu-item-9503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9503"><a href="https://kims.org.uk/frequently-asked-questions/">Frequently Asked Questions</a></li>
+<li id="menu-item-9504" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9504"><a href="https://kims.org.uk/latest-from-kims-hospital/">Latest news and updates</a></li>
+<li id="menu-item-4375" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4375"><a href="https://kims.org.uk/quality-governance/compliments-comments-complaints/">Leave us Feedback</a></li>
+<li id="menu-item-4376" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4376"><a href="https://kims.org.uk/media-enquiries/">Media enquiries</a></li>
+<li id="menu-item-4374" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4374"><a href="https://kims.org.uk/quality-governance/">Quality &#038; Governance</a></li>
+</ul>                    </nav>
+                </div>
+
+                <div class="footer-contact-column">
+                    <h2 class="footer-title">Contact information</h2>
+                    <div class="footer-contact-grid">
+                        <address>
+                            Sevenoaks Medical Centre<br />
+Beadle House<br />
+London Rd<br />
+Sevenoaks<br />
+TN13 2JD                        </address>
+                        <div>
+                            <a href="tel:01622 237 500" class="footer-contact-option">01622 237 500</a>                                                            <a href="mailto:enquiries@kims.org.uk" class="footer-contact-option">enquiries@kims.org.uk</a>
+                                                    </div>
+                    </div>
+                </div>                                                
+            </div>
+        </div>
+        <div class="cqc-column">
+                        <div class="cqc-wrapper">
+                <script
+                    type="text/javascript"
+                    src="https://www.cqc.org.uk/sites/all/modules/custom/cqc_widget/widget.js?data-id=1-7963358910&data-host=https://www.cqc.org.uk&type=location">
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div role="tab-panel" class="tab-panel " id="footer-tabpanel-id-268">
+    <div class="footer-tab-columns">
+        <div class="footer-tab-background">
+            <div class="footer-contact">                
+                <div class="footer-menu">
+                    <h2 class="footer-title">About LycaHealth Orpington</h2>
+                    <nav class="footer-nav">                                        
+                        <ul id="menu-footer-lycahealth" class="menu menu-nostyle"><li id="menu-item-9505" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9505"><a href="https://kims.org.uk/about-us/">About Us</a></li>
+<li id="menu-item-9166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9166"><a href="https://kims.org.uk/contact-us-lycahealth-orpington/">Contact us</a></li>
+<li id="menu-item-9167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9167"><a href="https://kims.org.uk/media-enquiries/">Media enquiries</a></li>
+<li id="menu-item-9168" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9168"><a href="https://kims.org.uk/latest-from-kims-hospital/">Latest news and updates</a></li>
+</ul>                    </nav>
+                </div>
+
+                <div class="footer-contact-column">
+                    <h2 class="footer-title">Contact information</h2>
+                    <div class="footer-contact-grid">
+                        <address>
+                            LycaHealth Orpington<br />
+Crayfields Business Park<br />
+3 New Mill Rd<br />
+Orpington<br />
+BR5 3TW                        </address>
+                        <div>
+                            <a href="tel:01689 4﻿90 111" class="footer-contact-option">01689 4﻿90 111</a>                                                            <a href="mailto:enquiries.orpington@lycahealth.com" class="footer-contact-option">enquiries.orpington@lycahealth.com</a>
+                                                    </div>
+                    </div>
+                </div>                                                
+            </div>
+        </div>
+        <div class="cqc-column">
+                        <div class="cqc-wrapper">
+                <script
+                    type="text/javascript"
+                    src="https://www.cqc.org.uk/sites/all/modules/custom/cqc_widget/widget.js?data-id=1-2490334781&data-host=https://www.cqc.org.uk&type=location">
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div role="tab-panel" class="tab-panel " id="footer-tabpanel-id-316">
+    <div class="footer-tab-columns">
+        <div class="footer-tab-background">
+            <div class="footer-contact">                
+                <div class="footer-menu">
+                    <h2 class="footer-title">About The Royal Tunbridge Wells Clinic</h2>
+                    <nav class="footer-nav">                                        
+                        <ul id="menu-footer-tunbridge-wells" class="menu menu-nostyle"><li id="menu-item-9356" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9356"><a href="https://kims.org.uk/the-royal-tunbridge-wells-clinic/">About us</a></li>
+<li id="menu-item-9357" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9357"><a href="https://kims.org.uk/contact-us-tunbridge-wells-clinic/">Contact us</a></li>
+<li id="menu-item-9358" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9358"><a href="https://kims.org.uk/our-hospital/patient-stories/">Patient stories</a></li>
+<li id="menu-item-9360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9360"><a href="https://kims.org.uk/latest-from-kims-hospital/">Latest news and updates</a></li>
+<li id="menu-item-9361" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9361"><a href="https://kims.org.uk/frequently-asked-questions/">Frequently Asked Questions</a></li>
+<li id="menu-item-9359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9359"><a href="https://kims.org.uk/media-enquiries/">Media enquiries</a></li>
+<li id="menu-item-9362" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9362"><a href="https://kims.org.uk/new-compliments-comments-complaints/">Compliments, comments &#038; complaints</a></li>
+<li id="menu-item-9363" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9363"><a href="https://kims.org.uk/quality-governance/">Quality &#038; Governance</a></li>
+</ul>                    </nav>
+                </div>
+
+                <div class="footer-contact-column">
+                    <h2 class="footer-title">Contact information</h2>
+                    <div class="footer-contact-grid">
+                        <address>
+                            The Royal Tunbridge Wells Clinic<br />
+Pantiles House<br />
+2 Nevill Street<br />
+Tunbridge Wells<br />
+Kent<br />
+TN2 5TT                        </address>
+                        <div>
+                            <a href="tel:01892 572 952" class="footer-contact-option">01892 572 952</a>                                                            <a href="mailto:enquiries@kims.org.uk" class="footer-contact-option">enquiries@kims.org.uk</a>
+                                                    </div>
+                    </div>
+                </div>                                                
+            </div>
+        </div>
+        <div class="cqc-column">
+                        <div class="cqc-wrapper">
+                <script
+                    type="text/javascript"
+                    src="https://www.cqc.org.uk/sites/all/modules/custom/cqc_widget/widget.js?data-id=1-1285831303&data-host=https://www.cqc.org.uk&type=location">
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div role="tab-panel" class="tab-panel " id="footer-tabpanel-id-422">
+    <div class="footer-tab-columns">
+        <div class="footer-tab-background">
+            <div class="footer-contact">                
+                <div class="footer-menu">
+                    <h2 class="footer-title">About The Gut Health Centre, Orpington</h2>
+                    <nav class="footer-nav">                                        
+                        <ul id="menu-footer-lycahealth-1" class="menu menu-nostyle"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9505"><a href="https://kims.org.uk/about-us/">About Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9166"><a href="https://kims.org.uk/contact-us-lycahealth-orpington/">Contact us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9167"><a href="https://kims.org.uk/media-enquiries/">Media enquiries</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9168"><a href="https://kims.org.uk/latest-from-kims-hospital/">Latest news and updates</a></li>
+</ul>                    </nav>
+                </div>
+
+                <div class="footer-contact-column">
+                    <h2 class="footer-title">Contact information</h2>
+                    <div class="footer-contact-grid">
+                        <address>
+                            LycaHealth Orpington<br />
+Crayfields Business Park<br />
+3 New Mill Rd<br />
+Orpington<br />
+BR5 3TW                        </address>
+                        <div>
+                            <a href="tel:01689 4﻿90 111" class="footer-contact-option">01689 4﻿90 111</a>                                                            <a href="mailto:enquiries.orpington@lycahealth.com" class="footer-contact-option">enquiries.orpington@lycahealth.com</a>
+                                                    </div>
+                    </div>
+                </div>                                                
+            </div>
+        </div>
+        <div class="cqc-column">
+                        <div class="cqc-wrapper">
+                <script
+                    type="text/javascript"
+                    src="https://www.cqc.org.uk/sites/all/modules/custom/cqc_widget/widget.js?data-id=1-2490334781&data-host=https://www.cqc.org.uk&type=location">
+                </script>
+            </div>
+        </div>
+    </div>
+</div>                        
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-base">
+                <div class="container">
+                    <div class="footer-logo">
+                        <a href="/" class="logo" aria-label="Link to the homepage">
+                            
+<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 650 364">
+  <defs>
+    <clipPath id="a">
+      <path fill="none" d="M0 0h650v364H0z"/>
+    </clipPath>
+  </defs>
+  <g data-name="Layer 1">
+    <g clip-path="url(#a)">
+      <path fill="#9dc41a" d="M73.32 261.67c-.83 0-1.64-.34-2.22-1.03-1.04-1.23-.87-3.06.35-4.08 43.68-36.69 9.74-89.63-8.49-118.07l-1.28-2c-19.2-30.96-22.39-74.53 8.6-97.96 1.28-.97 3.1-.72 4.07.56.97 1.27.71 3.1-.56 4.06-28.22 21.34-24.99 61.54-7.2 90.24l1.25 1.95c19.2 29.93 54.93 85.66 7.34 125.65-.54.47-1.21.67-1.87.67"/>
+      <path fill="#ffffff" d="M67.39 173.41c-.86 0-1.71-.37-2.28-1.11l-3.5-4.45c-22.55-28.69-37.46-47.63-51.54-75.33C-5.5 61.91-.15 40.78 7.09 28.45 17.74 10.26 37.74 1.51 52.81.9 69.2.31 83.24 8.97 88.56 22.98c4.99 13.14.56 27.51-11.55 37.52-1.23 1.02-3.07.85-4.08-.4-1.03-1.22-.85-3.05.39-4.08 10.29-8.5 13.96-20.07 9.82-30.97-4.42-11.64-16.26-18.86-30.1-18.34-13.48.53-31.39 8.36-40.94 24.67-9.33 15.91-8.24 36.13 3.14 58.51 13.82 27.18 28.59 45.96 50.93 74.38l3.5 4.46c.99 1.26.77 3.08-.49 4.07-.53.42-1.17.61-1.79.61"/>
+    </g>
+    <path fill="#ffffff" d="M74.29 196.69c-.16 0-.32-.01-.49-.03-1.58-.28-2.64-1.77-2.38-3.34 6.58-39.21 29.02-57.71 48.81-74.02 6.49-5.34 12.62-10.38 18.14-15.99 30.15-30.67 29.45-61.19 16.03-76.56-16.45-18.86-43.97-12.25-63.93 2.66-1.28.96-3.1.69-4.06-.6-.96-1.28-.69-3.1.59-4.05 30.68-22.92 58.15-17.44 71.77-1.83 15.12 17.32 16.48 51.12-16.27 84.43-5.73 5.83-11.97 10.97-18.57 16.41-19.94 16.42-40.55 33.41-46.78 70.49-.23 1.42-1.45 2.42-2.85 2.42"/>
+    <path fill="#ffffff" d="M178.8 105.81h27.69v64.84h.69l51.91-64.84h32.3l-61.14 73.84 64.6 78.21h-33.92l-53.75-66.68h-.69v66.68H178.8V105.81z"/>
+    <path fill="#ffffff" d="M316.29 105.81h27.69v152.05h-27.69z"/>
+    <path fill="#ffffff" d="M372.38 105.81h25.14l39.92 57.45c5.31 7.84 9.22 13.61 12.68 19.62h.47c3.24-5.77 7.15-12.47 12.46-20.54l36.46-56.53h25.38v152.05h-27.92v-85.83c0-6.23 0-14.07.47-20.08h-.47c-2.07 4.39-7.62 12.92-10.39 17.08l-29.99 46.6H443.9l-33.23-47.76c-3.23-4.61-7.37-9.92-10.38-15.69h-.45c.22 6 .22 13.85.22 19.15v86.52h-27.68V105.81Z"/>
+    <path fill="#ffffff" d="M560.65 225.79c9 6.23 20.54 11.08 34.39 11.08 12.69 0 25.37-4.84 25.37-17.99 0-29.77-65.75-26.08-65.75-72.44 0-22.39 17.76-41.99 49.38-41.99 15.69 0 28.84 3.46 37.14 7.61v25.37c-12-6.22-24.22-9.69-36.24-9.69-10.6 0-20.74 4.16-20.74 16.38 0 27.92 65.74 24.23 65.74 72.46 0 26.99-23.07 43.6-54.22 43.6-17.77 0-34.37-5.06-45.92-13.15l10.84-21.23Z"/>
+    <path fill="#9dc41a" d="M227.27 362.01v-32.85h-38.64v32.85h-9.91v-73.38h9.91v31.74h38.64v-31.74h9.91v73.38h-9.91z"/>
+    <path fill="#9dc41a" d="M262.56 298.54c6.57-6.57 15.7-10.47 26.28-10.47 11.36 0 21.05 4.23 27.5 11.47 5.9 6.68 9.24 15.7 9.24 26.05 0 11.25-4.01 20.94-10.8 27.61-6.57 6.35-15.48 9.92-25.95 9.92s-18.71-3.23-25.17-9.14c-7.24-6.68-11.47-16.59-11.47-28.17s3.79-20.49 10.36-27.28m26.28-1.55c-15.81 0-26.05 11.14-26.05 28.73s10.24 28.73 26.05 28.73 26.06-11.13 26.06-28.73-9.35-28.73-26.06-28.73"/>
+    <path fill="#9dc41a" d="M358.01 363.13c-9.91 0-16.59-3.23-20.93-6.13l4.45-7.68c3.12 2.34 9.02 5.34 16.15 5.34 6.35 0 13.81-3 13.81-10.24 0-12.03-17.71-14.48-26.62-24.27-3.12-3.34-5.12-7.58-5.12-13.25 0-10.47 8.02-18.82 22.05-18.82 7.79 0 13.36 1.89 16.92 3.68l-.11 9.79c-4.45-2.78-10.36-4.89-16.37-4.89-6.79 0-12.47 2.78-12.47 9.24 0 15.36 32.3 15.26 32.3 37.52 0 11.91-10.47 19.72-24.06 19.72"/>
+    <path fill="#9dc41a" d="M414.49 335.62h-5.23v26.39h-9.91v-73.38h16.26c15.48 0 25.28 8.35 25.28 23.05 0 11.8-7.57 23.94-26.4 23.94m.22-38.19h-5.46v29.73h6.01c10.58 0 15.26-6.23 15.26-15.37 0-8.46-5.35-14.36-15.81-14.36"/>
+    <path fill="#9dc41a" d="M456.38 288.63h9.91v73.38h-9.91z"/>
+    <path fill="#9dc41a" d="M534.59 297.43h-20.48v64.58h-10.03v-64.58h-21.04v-8.8h54.56l-3.01 8.8z"/>
+    <path fill="#9dc41a" d="m588.28 362.01-7.46-19.16h-28.4l-6.9 19.16h-9.8l28.18-73.6h6.35l28.62 73.6h-10.58Zm-18.48-49.89c-1.33-3.67-2.23-6.68-2.78-9.13h-.11c-.67 2.67-1.56 5.45-2.9 9.02l-8.13 22.27h21.6l-7.69-22.16Z"/>
+    <path fill="#9dc41a" d="M612.8 362.01v-73.38h9.91v64.58H650v8.8h-37.2z"/>
+  </g>
+</svg>
+
+<!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-logo-ten-f" data-name="svg-logo-ten" viewBox="0 0 302.58 94.68">
+  <defs>
+    <linearGradient id="linear-gradient-f" x1="170.61" x2="233.13" y1="20.92" y2="72" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ae8625"/>
+      <stop offset=".08" stop-color="#c69f3e"/>
+      <stop offset=".16" stop-color="#dbb654"/>
+      <stop offset=".25" stop-color="#e8c462"/>
+      <stop offset=".32" stop-color="#edc967"/>
+      <stop offset=".75" stop-color="#d2ac47"/>
+      <stop offset="1" stop-color="#edc967"/>
+    </linearGradient>
+    <linearGradient xlink:href="#linear-gradient-f" id="linear-gradient-f-2" x1="221" x2="282.61" y1="3.13" y2="53.47"/>
+    <linearGradient xlink:href="#linear-gradient-f" id="linear-gradient-f-3" x1="222.87" x2="270.95" y1="52.59" y2="91.87"/>
+  </defs>
+  <path fill="#252f63" class="cls-1" stroke-width="0" d="M.03.5h10.14v23.73h.25L29.41.5h11.82L18.86 27.52 42.5 56.15H30.09L10.42 31.74h-.25v24.41H.03V.5zm50.32 0h10.14v55.64H50.35zm20.52 0h9.2l14.61 21.02c1.94 2.87 3.37 4.98 4.64 7.18h.17c1.18-2.11 2.62-4.56 4.56-7.52L117.4.5h9.29v55.64h-10.22V24.73c0-2.28 0-5.15.17-7.35h-.17c-.76 1.61-2.79 4.73-3.8 6.25l-10.98 17.05h-4.65L84.88 23.2c-1.18-1.69-2.7-3.63-3.8-5.74h-.17c.08 2.2.08 5.07.08 7.01v31.66H70.86V.5Zm68.9 43.91c3.29 2.28 7.52 4.05 12.59 4.05 4.65 0 9.28-1.77 9.28-6.58 0-10.89-24.06-9.54-24.06-26.51 0-8.19 6.5-15.37 18.07-15.37 5.74 0 10.55 1.27 13.59 2.78v9.29c-4.39-2.28-8.86-3.54-13.26-3.54-3.88 0-7.59 1.52-7.59 5.99 0 10.22 24.06 8.87 24.06 26.52 0 9.88-8.44 15.95-19.84 15.95-6.5 0-12.58-1.85-16.8-4.81l3.97-7.77Z"/>
+  <path fill="#b8b6d7" class="cls-2" stroke-width="0" d="M17.77 67.4v11.62H3.63V67.4H0v26.86h3.63V82.24h14.14v12.02h3.62V67.4h-3.62zm22.53 3.06c-5.79 0-9.54 4.07-9.54 10.51s3.75 10.51 9.54 10.51 9.53-4.07 9.53-10.51-3.42-10.51-9.53-10.51m-9.62.57c2.4-2.41 5.75-3.83 9.62-3.83 4.16 0 7.7 1.55 10.07 4.2 2.16 2.44 3.38 5.75 3.38 9.53 0 4.12-1.47 7.66-3.95 10.11-2.41 2.32-5.67 3.63-9.5 3.63s-6.85-1.18-9.21-3.34c-2.65-2.44-4.2-6.07-4.2-10.31s1.39-7.5 3.79-9.98m34.93 23.63c-3.63 0-6.07-1.18-7.66-2.24l1.63-2.81c1.14.86 3.3 1.96 5.91 1.96 2.32 0 5.05-1.1 5.05-3.75 0-4.4-6.48-5.3-9.74-8.88-1.14-1.22-1.87-2.77-1.87-4.85 0-3.83 2.93-6.89 8.07-6.89 2.85 0 4.89.69 6.19 1.34l-.04 3.59c-1.63-1.02-3.79-1.79-5.99-1.79-2.49 0-4.56 1.02-4.56 3.38 0 5.62 11.82 5.58 11.82 13.73 0 4.36-3.83 7.21-8.8 7.21m20.74-24.05h-2V81.5h2.2c3.87 0 5.58-2.28 5.58-5.62 0-3.1-1.96-5.25-5.78-5.25m-.08 13.97h-1.92v9.66h-3.63V67.41h5.95c5.67 0 9.25 3.05 9.25 8.43 0 4.32-2.77 8.76-9.66 8.76m15.34-17.2h3.63v26.85h-3.63zm9.76 0v3.23h7.7v23.63h3.66V70.63h7.5l1.1-3.23h-19.96zm31.74 8.6a29.48 29.48 0 0 1-1.02-3.34h-.04c-.25.98-.57 2-1.06 3.3l-2.97 8.15h7.9L143.11 76Zm6.77 18.26-2.73-7.01h-10.39l-2.52 7.01h-3.59l10.31-26.94h2.32l10.47 26.94h-3.87Zm8.97-26.86v26.86h13.61v-3.22h-9.98V67.4h-3.63z"/>
+  <path fill="url(#linear-gradient-f)" stroke-width="0" d="M192.09 1.47c-4.69 5.21-13.28 9.4-13.28 9.4l-.02 15.94h.02c2.73 0 13.36-4.45 16.42-6.59v74.46h15.94V.41h-18.13c-.3.35-.62.71-.95 1.07Z"/>
+  <path fill="url(#linear-gradient-f-2)" stroke-width="0" d="M243.66 16.36c14.61 0 26.89 10.11 30.25 23.7h16.27c-1.55-9.74-6.09-18.72-13.2-25.83-8.9-8.9-20.74-13.8-33.32-13.8-10.19 0-19.89 3.22-27.94 9.16v24.18c5.1-10.29 15.69-17.41 27.94-17.41Z"/>
+  <path fill="url(#linear-gradient-f-3)" stroke-width="0" d="M243.66 78.75c-12.25 0-22.84-7.11-27.94-17.41v24.18c8.05 5.95 17.75 9.16 27.94 9.16 12.59 0 24.42-4.9 33.32-13.8 4.3-4.3 7.65-9.28 9.98-14.7h-18.35c-5.69 7.61-14.75 12.57-24.96 12.57Z"/>
+  <path fill="#252f63" class="cls-1" stroke-width="0" d="M253.69 31.83c1.02-1.14 2.05-2.28 3.08-3.41l.04-.05c.6-.66 1.19-1.32 1.79-1.98.39-.44.78-.88 1.18-1.34.12-.14.24-.3.35-.45.31-.44.27-.99-.1-1.35a.93.93 0 0 0-1.22-.08l-.13.1c-.26.19-.56.41-.83.65-1.18 1.03-2.36 2.07-3.53 3.12l-1.48 1.33c-1.77 1.59-3.77 3.4-5.72 5.09-3.96 3.45-7.75 6.5-11.58 9.33-1.96 1.45-3.79 2.68-5.57 3.74-.93.56-1.88 1.07-2.82 1.5-.62.29-1.36.61-2.14.8-.45.11-.94.2-1.42.12-.46-.07-.74-.29-.93-.71-.16-.36-.24-.74-.26-1.18-.04-.87.1-1.73.23-2.39.26-1.3.67-2.68 1.25-4.21.73-1.89 1.68-3.82 2.91-5.91 1.54-2.61 3.28-4.77 5.32-6.59.12-.11.23-.22.34-.34.12-.13.2-.29.23-.44.02-.08.06-.38-.11-.64a.772.772 0 0 0-.65-.34h-.11c-.14.05-.32.1-.5.22-.58.39-1.14.85-1.7 1.41a24.616 24.616 0 0 0-2.65 3.07 40.003 40.003 0 0 0-4.58 8.26c-.88 2.14-1.44 4.08-1.73 5.93-.13.85-.15 1.74-.06 2.63.07.66.27 1.26.61 1.79.42.65 1 1.08 1.74 1.28.56.15 1.14.18 1.72.09.84-.13 1.69-.38 2.6-.77.86-.37 1.74-.8 2.6-1.28 1.62-.9 3.32-1.99 5.19-3.31 2.78-1.96 5.63-4.16 9.25-7.14 1.5-1.24 3.04-2.55 4.7-4-.79.94-1.55 1.86-2.28 2.78-2.72 3.4-5.4 7.07-7.95 10.88-3.39 5.07-6.52 10.29-9.3 15.52-.91 1.7-.45.82-1.07 2.21-.26.59-.6 1.37-.86 2.2-.09.27-.14.54-.2.81-.04.21 0 .4.02.53.13.55.81.87 1.27.47.31-.27.34-.69.45-1.06.09-.29.23-.56.35-.83.23-.54.5-1.15.78-1.71.63-1.26.31-.58 1.17-2.18 3.09-5.74 6.58-11.45 10.39-16.98 3.6-5.23 7.62-10.34 11.94-15.19Zm42.46 20.62s-.03-.02-.05-.02c-.3-.13-.63-.15-.96-.16-1.35-.05-2.7-.1-4.06-.1-1.89-.01-3.77-.03-5.66-.03h-.48c-1.13 0-2.16 0-3.22.09-.26-.15-.5-.33-.71-.54a.654.654 0 0 1-.2-.34c.14-.55.49-.99 1.11-1.38.13-.08.26-.17.39-.25a.92.92 0 0 0 .33-1.04.947.947 0 0 0-.89-.61h-.13l-.39.12c-1.12.39-2.25.79-3.37 1.18-.57.2-1.09.38-1.6.5-.3.07-.6.1-.91.08h-.07s-.02-.02-.05-.11c-.11-.29-.23-.58-.38-.87-.3-.57-.85-.84-1.51-.76-.3.04-.59.13-.85.29l-.13.07c-.37.22-.75.44-1.12.69-.19.14-.39.28-.58.42.03-.05.06-.1.09-.14.13-.21.1-.42.09-.48v-.27l-.19-.19a.782.782 0 0 0-1.09 0c-.6.52-1.29.99-2.1 1.45-1.48.83-2.96 1.66-4.44 2.48-.22.12-.44.22-.66.33l-.06.03c-.13.06-.26.12-.38.18-.22.11-.47.16-.74.22h-.07c-.15.05-.28.04-.39-.01-.01-.03-.03-.06-.03-.09-.11-.4-.12-.84-.03-1.32.09-.51.22-.9.5-1.19.17-.16.25-.36.3-.5.11-.27.08-.58-.08-.83-.19-.29-.51-.46-.84-.42-.27.02-.5.13-.67.32-.07.08-.14.16-.23.26-.27-.27-.57-.42-.8-.52-.34-.15-.71-.22-1.18-.24-.88-.04-1.75.2-2.68.72-.74.41-1.43.95-2.05 1.61-.14.15-.27.3-.41.44l-.09.1c-.82.43-1.72.85-2.81 1.32-1.1.48-2.24.89-3.37 1.24-.5.15-1.01.26-1.52.32-.27.03-.52.02-.78-.05-.54-.13-.8-.51-.78-1.14 0-.25.05-.49.14-.72.26.1.56.13.87.08 1.24-.2 2.25-.83 3.01-1.88.12-.16.2-.33.26-.47.11-.24.16-.51.13-.82a1.25 1.25 0 0 0-.44-.87c-.23-.19-.49-.31-.77-.34-.29-.03-.59 0-.89.09-1.53.46-2.73 1.4-3.57 2.79-.13.21-.24.45-.34.72-.23.64-.32 1.22-.27 1.77.13 1.58 1.18 2.4 2.12 2.65.56.15 1.11.18 1.64.1.67-.1 1.28-.24 1.86-.42 1.31-.41 2.69-.97 4.21-1.72-.1.45-.03.9.22 1.33.23.41.61.66 1.05.71.51.05 1-.01 1.44-.21.5-.22.9-.44 1.26-.68l.1-.07c.42-.28.95-.63 1.44-.99.59-.44 1.16-.88 1.74-1.33l.35-.27c.03.49.14.97.36 1.43.24.52.67.84 1.22.92.76.11 1.47.04 2.1-.22.51-.21 1.01-.42 1.49-.68l.61-.33a81.8 81.8 0 0 0 2.39-1.31c-.2.42-.41.87-.6 1.34-.17.42-.35.86-.41 1.37v.04l.02.22c.02.08.03.15.06.22.04.11.1.21.17.3.33.44.88.51 1.32.18.1-.07.23-.18.34-.33.17-.24.33-.5.48-.76.24-.41.55-.93.93-1.4.89-1.1 1.97-2.1 3.2-2.95.25-.17.53-.33.8-.48l.18-.1c.03.05.05.11.08.17.08.16.15.32.24.47.27.46.7.74 1.21.79.32.03.69.06 1.07.06.7 0 1.27-.1 1.81-.3.39-.15.78-.28 1.18-.42-.12.6 0 1.18.38 1.71h-.04c-.66.23-1.29.56-1.87 1.02-.5.39-.87.82-1.15 1.3-.13.23-.23.46-.3.69-.2.7.1 1.45.73 1.81.34.2.7.31 1.05.33.16 0 .32.01.48.01.49 0 .92-.05 1.33-.14.89-.2 1.66-.49 2.33-.87.4-.22.72-.48 1.01-.79.51-.56.68-1.25.47-1.96.04.13 2.8 0 3.08 0h3.24c1.77 0 3.55 0 5.32.02.35 0 .71 0 1.03-.13s.6-.44.59-.79c0-.31-.24-.57-.52-.71Zm-17.36 2.58c.38-.27.77-.46 1.16-.57l.15-.04c.37-.11.72-.2 1.08-.2.17.12.3.25.42.41v.04c-.15.2-.37.37-.71.55-.63.33-1.34.56-2.09.67-.24.04-.48.03-.72.02h-.15c.04-.07.08-.13.14-.19.23-.27.47-.5.74-.69Zm-20.54-4.34c-.28.23-.57.45-.86.67l-.16.12c-.76.58-1.53 1.16-2.31 1.72-.44.32-.89.59-1.28.82-.18.11-.39.19-.6.28.02-.07.04-.14.07-.21l.08-.18c.06-.12.11-.25.18-.36.7-1.14 1.63-2.02 2.77-2.6.45-.23.89-.35 1.33-.37h.09c.25 0 .47.04.68.11Z"/>
+</svg> -->
+                        </a>
+                    </div>
+                    <ul id="menu-legal-nav" class="menu menu-nostyle"><li id="menu-item-1121" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1121"><a href="https://kims.org.uk/terms-conditions/">Patient terms &#038; conditions</a></li>
+<li id="menu-item-2602" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2602"><a href="https://kims.org.uk/website-terms-conditions/">Website terms &#038; conditions</a></li>
+<li id="menu-item-2713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-2713"><a rel="privacy-policy" href="https://kims.org.uk/privacy-policy/">Privacy policy</a></li>
+<li id="menu-item-5505" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5505"><a href="https://kims.org.uk/cookie-policy/">Cookie Policy</a></li>
+</ul>                    <span class="credit">Website by <a href="https://majordigital.com">Major Digital</a></span>
+                    <span class="copyright">© Copyright 2026 KIMS Hospital.</span>
+                </div>
+            </div>
+        </footer>
+        
+    </div>
+
+    <script>
+        (function() {
+            if (typeof NodeList.prototype.forEach === 'function') return false;
+            NodeList.prototype.forEach = Array.prototype.forEach;
+        })();
+    </script>
+
+    <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/kims/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<div id="eventbrite-modal-container"></div><script>
+	var relevanssi_rt_regex = /(&|\?)_(rt|rt_nonce)=(\w+)/g
+	var newUrl = window.location.search.replace(relevanssi_rt_regex, '')
+	history.replaceState(null, null, window.location.pathname + newUrl + window.location.hash)
+</script>
+        <style>
+            .searchwp-live-search-results {
+                opacity: 0;
+                transition: opacity .25s ease-in-out;
+                -moz-transition: opacity .25s ease-in-out;
+                -webkit-transition: opacity .25s ease-in-out;
+                height: 0;
+                overflow: hidden;
+                z-index: 9999995; /* Exceed SearchWP Modal Search Form overlay. */
+                position: absolute;
+                display: none;
+            }
+
+            .searchwp-live-search-results-showing {
+                display: block;
+                opacity: 1;
+                height: auto;
+                overflow: auto;
+            }
+
+            .searchwp-live-search-no-results {
+                padding: 3em 2em 0;
+                text-align: center;
+            }
+
+            .searchwp-live-search-no-min-chars:after {
+                content: "Continue typing";
+                display: block;
+                text-align: center;
+                padding: 2em 2em 0;
+            }
+        </style>
+                <script>
+            var _SEARCHWP_LIVE_AJAX_SEARCH_BLOCKS = true;
+            var _SEARCHWP_LIVE_AJAX_SEARCH_ENGINE = 'default';
+            var _SEARCHWP_LIVE_AJAX_SEARCH_CONFIG = 'default';
+        </script>
+        <script id="dkpdf-frontend-js" src="https://kims.org.uk/wp-content/plugins/dk-pdf/build/frontend.js?ver=d65494565f5e29eda330"></script>
+<script id="kims-theme-vendor-js" src="https://kims.org.uk/wp-content/themes/kims/public/js/vendor.bundle.js?ver=202405231100"></script>
+<script id="kims-theme-global-js" src="https://kims.org.uk/wp-content/themes/kims/public/js/global.bundle.js?ver=202405231100"></script>
+<script id="kims-theme-main-js" src="https://kims.org.uk/wp-content/themes/kims/public/js/main.bundle.js?ver=202405231100"></script>
+<script id="swp-live-search-client-js-extra">
+var searchwp_live_search_params = [];
+searchwp_live_search_params = {"ajaxurl":"https:\/\/kims.org.uk\/wp-admin\/admin-ajax.php","origin_id":0,"config":{"default":{"engine":"default","input":{"delay":300,"min_chars":3},"results":{"position":"bottom","width":"auto","offset":{"x":0,"y":5}},"spinner":{"lines":12,"length":8,"width":3,"radius":8,"scale":1,"corners":1,"color":"#424242","fadeColor":"transparent","speed":1,"rotate":0,"animation":"searchwp-spinner-line-fade-quick","direction":1,"zIndex":2000000000,"className":"spinner","top":"50%","left":"50%","shadow":"0 0 1px transparent","position":"absolute"}}},"msg_no_config_found":"No valid SearchWP Live Search configuration found!","aria_instructions":"When autocomplete results are available use up and down arrows to review and enter to go to the desired page. Touch device users, explore by touch or with swipe gestures."};;
+//# sourceURL=swp-live-search-client-js-extra
+</script>
+<script id="swp-live-search-client-js" src="https://kims.org.uk/wp-content/plugins/searchwp-live-ajax-search/assets/javascript/dist/script.min.js?ver=1.8.7"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://kims.org.uk/wp-includes/js/wp-emoji-release.min.js?ver=7.0.1"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://kims.org.uk/wp-includes/js/wp-emoji-loader.min.js
+</script>
+</body>
+</html>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/?utm_source=w3tc&utm_medium=footer_comment&utm_campaign=free_plugin
+
+Page Caching using Disk: Enhanced (Page is 404) 
+Minified using Disk
+Database Caching 160/316 queries in 0.154 seconds using Disk
+
+Served from: kims.org.uk @ 2026-07-14 14:08:31 by W3 Total Cache
+-->

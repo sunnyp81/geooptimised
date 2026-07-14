@@ -1,0 +1,21 @@
+User-agent: *
+Disallow: /wp/wp-admin/
+Allow: /wp/wp-admin/admin-ajax.php
+
+# START ITINERIS BLOCK
+# ---------------------------
+User-agent: *
+Disallow: /*?_s=
+Disallow: /*?p=
+Disallow: */vcard/
+# ---------------------------
+# END ITINERIS BLOCK
+
+# START YOAST BLOCK
+# ---------------------------
+User-agent: *
+Disallow:
+
+Sitemap: https://www.frpadvisory.com/sitemap_index.xml
+# ---------------------------
+# END YOAST BLOCK

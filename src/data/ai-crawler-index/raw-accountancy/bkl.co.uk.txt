@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+Disallow: /wp-content/uploads/2025/10/Confirmation-of-Tax-Investigation-Service-37.pdf-1.pdf
+Disallow: /feed/
+Disallow: /comments/feed/
+Disallow: /trackback/
+Disallow: /?s=
+Disallow: /search/
+Disallow: /product/pay-invoice/
+
+Sitemap: https://bkl.co.uk/sitemap_index.xml

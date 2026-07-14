@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Block API endpoints
+Disallow: /api/
+
+# Block preview pages
+Disallow: /preview/
+
+# Sitemap location
+Sitemap: https://www.thelondonclinic.co.uk/sitemap-0.xml

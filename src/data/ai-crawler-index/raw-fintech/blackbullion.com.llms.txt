@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WK426JZ4FE"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+
+  gtag('config', 'G-WK426JZ4FE');
+</script>
+
+<!-- Google Tag Manager -->
+<script>
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MV4CRV');
+</script>
+<!-- End Google Tag Manager -->
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="csrf-token" content="JqYLmykMtcUvz7XPYRjiYBrwlm8OGaWHnWuIy79t" />
+        <meta name="theme-color" content="#0D0F11" />
+        
+        <meta name="apple-itunes-app" content="app-id=1596926462" />
+
+        <title>Blackbullion | Blackbullion</title>
+        <link rel="canonical" href="https://www.blackbullion.com/llms.txt" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="https://www.blackbullion.com/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.blackbullion.com/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.blackbullion.com/favicon-16x16.png" />
+<link rel="manifest" href="https://www.blackbullion.com/manifest.json" />
+<link rel="mask-icon" href="https://www.blackbullion.com/safari-pinned-tab.svg" color="#9f7bce" />
+<meta name="msapplication-TileColor" content="#9f7bce" />
+<meta name="msapplication-TileImage" content="https://www.blackbullion.com/mstile-144x144.png" />
+<meta name="theme-color" content="#ffffff" />
+        <meta property="og:type" content="website" />
+<meta property="og:site_name" content="Blackbullion" />
+<meta property="og:url" content="https://www.blackbullion.com/llms.txt" />
+
+<meta property="og:title" content="Blackbullion | Student Money Management and Student Funding" />
+<meta name="description" content="Learning platform for students who want to get in control of their money" />
+<meta
+    property="og:description"
+    content="Blackbullion is the all in one student money space where you can build your money management skills, gain financial confidence and apply for student funding."
+/>
+<meta property="og:image" content="https://www.blackbullion.com/assets/images/opengraph/meta.png" />
+<meta
+    property="og:image:alt"
+    content="Floating phone displaying the Blackbullion platform surrounded by two floating article cards."
+/>
+        <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@blackbullion" />
+
+        <link rel="preload" as="style" href="https://www.blackbullion.com/build/assets/style-DPpQtFQv.css" /><link rel="stylesheet" href="https://www.blackbullion.com/build/assets/style-DPpQtFQv.css" />
+        
+        <script>window.blackbullion = window.blackbullion || {};blackbullion.currentUserId = null;blackbullion.sessionId = "53492917-2e4f-4e0a-aa55-45501f91507a";blackbullion.config = {"environment":"production","sentry":{"release":"platform@cab102d0b83ff0a402401378886d8bcdbba4e615","debug":false,"traces_sample_rate":0.01},"pusher":{"key":"9ec79f83d4093b1bbf2f"},"mixpanel":{"token":"cb6d5071c8435dfd1eb3edbb9c895bd3","debug":false},"b2b_url":"https:\/\/business.blackbullion.com"};blackbullion.enums = {"detachFromOrgReasons":{"GRADUATED":0,"NON_CONTINUATION":1,"STUDENT_REQUEST":2,"OTHER":99},"userTypes":{"UNI_STUDENT":"Uni Student","UNI_STAFF":"Uni Staff","UNI_ADMIN":"Uni Admin","SUPERADMIN":"Superadmin","EMPLOYEE":"Employee","STAFF_USER_TYPES":["Uni Admin","Uni Staff","Superadmin"],"SYSTEM":"System"},"onboardingSituations":{"MAYBE":"maybe","APPLIED":"applied","ACCEPTED":"accepted","STUDENT":"student","GRADUATED":"graduated","RESPONSIBLE":"responsible","NON_STUDENT":"non_student","APPRENTICE":"apprentice","SCHOOL_STUDENT":"school_student"},"caseStatuses":{"PENDING":2,"ACTIVE":3,"CLOSED_CASE":5,"DISABLED":6},"fundEligibilityConfigFields":{"RESIDENCE_REGION":"residence_region","STUDY_REGION":"study_region","INSTITUTION":"study_organisation","LEVEL_OF_STUDY":"level_of_study","SUBJECT_AREA":"subject_area"},"countries":[{"id":"GB","name":"United Kingdom","shortName":"UK","segments":[{"id":"GB-ENG","name":"England"},{"id":"GB-NIR","name":"Northern Ireland"},{"id":"GB-WLS","name":"Wales"},{"id":"GB-SCT","name":"Scotland"}]},{"id":"IE","name":"Ireland","segments":[{"id":"IE","name":"Ireland"}]},{"id":"AU","name":"Australia","segments":[{"id":"AU","name":"Australia"}]},{"id":"NZ","name":"New Zealand","segments":[{"id":"NZ","name":"New Zealand"}]},{"id":"ZA","name":"South Africa","segments":[{"id":"ZA","name":"South Africa"}]}],"caseNoteCategories":{"APPLICANT_COMMUNICATION":{"id":1,"label":"Applicant communication"},"DECISION_MAKING":{"id":2,"label":"Decision making"},"CASE_ACTION":{"id":3,"label":"Actions taken on the case"},"CALCULATION":{"id":4,"label":"Calculation"},"OTHER":{"id":99,"label":"Other"}},"institutionOrgTypes":["University","College","School"],"fundEligibilityOrgTypes":["University"],"reportTypes":{"FUNDING":{"id":1,"label":"Funding report","permission":"funds.cases.management"},"LEARNING":{"id":2,"label":"Learning report"},"PAYMENTS":{"id":3,"label":"Instant payments report","permission":"funds.cases.management"}}};blackbullion.features = [];blackbullion.campaigns = {"easter":false,"nsmw":false,"national-scholarships-week":false,"unibattle":false,"sfofw":false,"pathway-promo":false,"money-week":false,"freshers-fest":false,"nsmw2025":false};blackbullion.permissions = [];blackbullion.hashedPaths = {"baseStyles":"https:\/\/www.blackbullion.com\/build\/assets\/style-DPpQtFQv.css"};blackbullion.policyPermissions = {"fund":{"viewAny":null}};blackbullion.appAvailable = false;</script>        
+        <script type="text/javascript">
+    (function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+    0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+    for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+    MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
+
+    mixpanel.init(
+        "cb6d5071c8435dfd1eb3edbb9c895bd3",
+        {
+          cross_subdomain_cookie: false,
+          secure_cookie: true,
+                  }
+    );
+
+    </script>
+        <meta name="sentry-trace" content="b6474324e4d34c0cbb9b982a8435c682-7ebe20dc1080450c"/>
+
+        <!-- Cookie Consent --><script src="https://www.blackbullion.com/cookie-consent/script?id=c8e71b7ee7ea521c2b8af528de784780" defer></script>        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.14.8/dist/cdn.min.js"></script>
+    </head>
+
+    <body x-data="{ darkMode: $persist(false) }" :class="{'dark': darkMode === true }" class="antialiased">
+        <!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MV4CRV"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+    ></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+        <div
+            id="react-app-first-bullion-modal"
+            data-show-app-related-tiles=""
+        ></div>
+        <div id="react-app-notifications"></div>
+        
+                            
+                            <nav class="navigation navigation--shrinkable navigation--unauth" data-reading-progress-container>
+    
+    <div class="content block">
+        <div class="homepage-container justify-between lg:gap-[70px] xl:flex">
+            <div class="nav-logo flex items-center justify-between">
+                <div class="flex items-center gap-4 md:gap-16">
+                    <a href="/">
+                        <img
+                            id="logo"
+                            src="https://www.blackbullion.com/assets/images/logos/blackbullion-full-lilac-asterisk.svg"
+                            alt="Blackbullion logo"
+                        />
+                    </a>
+                                    </div>
+
+                <button
+                    type="button"
+                    class="navigation--mobile js-dropdown btn--no-style md:hidden"
+                    data-toggle-target="js-dropdown--homepage"
+                >
+                    <span class="navigation--mobile-icon"></span>
+                </button>
+                <div class="hidden gap-8 pb-48 pt-16 md:flex md:p-0 xl:hidden">
+                    <li>
+                                                    <a
+                                href="https://www.blackbullion.com/login"
+                                class="btn-pop btn--login w-auto whitespace-nowrap px-24 py-8"
+                            >
+                                Log in
+                            </a>
+                                            </li>
+                    <li>
+                        <a href="https://www.blackbullion.com/register" class="btn-pop btn--register w-auto px-24 py-8">
+                            Register
+                        </a>
+                    </li>
+                </div>
+            </div>
+            <ul
+                class="navigation--homepage js-dropdown--homepage hidden items-center justify-between gap-[200px] md:flex md:w-full xl:w-[64%]"
+            >
+                <div class="flex flex-col gap-16 md:flex-row md:items-center">
+                                            <div class="nav-border border-neutral-70 py-8">
+                            <button
+    type="button"
+    class="title--3 dropdown-toggle js-dropdown flex w-full items-center justify-between rounded-none border-0 bg-transparent p-0 font-normal no-underline active:text-neutral-0"
+    data-toggle-target="js-dropdown--learn"
+    aria-haspopup="true"
+    aria-expanded="false"
+>
+    Learn
+</button>
+
+<ul class="dropdown js-dropdown--learn flex-col">
+    <li class="before:hidden md:px-24 md:py-16">
+        <a class="title--3 flex items-center" href="/register">Start learning</a>
+    </li>
+</ul>
+                        </div>
+                        <span class="separator hidden md:block md:text-neutral-0">|</span>
+                        <div class="nav-border border-neutral-70 py-8">
+                            <button
+    type="button"
+    class="title--3 dropdown-toggle js-dropdown flex w-full items-center justify-between rounded-none border-0 bg-transparent p-0 font-normal no-underline"
+    data-toggle-target="js-dropdown--find"
+    aria-haspopup="true"
+    aria-expanded="false"
+>
+    Find
+</button>
+
+<ul class="dropdown js-dropdown--find flex-col">
+    <li class="before:hidden md:px-24 md:py-16">
+        <a class="title--3 flex items-center" href="/funding-for-university-students">Find Funding</a>
+    </li>
+</ul>
+                        </div>
+                        <span class="separator hidden md:block md:text-neutral-0">|</span>
+                        <div class="nav-border border-neutral-70 py-8">
+                            <button
+    type="button"
+    class="title--3 dropdown-toggle js-dropdown flex w-full items-center justify-between rounded-none border-0 bg-transparent p-0 font-normal no-underline"
+    data-toggle-target="js-dropdown--manage"
+    aria-haspopup="true"
+    aria-expanded="false"
+>
+    Manage
+</button>
+
+<ul class="dropdown js-dropdown--manage flex-col">
+    <li class="before:hidden md:px-24 md:py-16">
+        <a class="title--3 flex items-center" href="/app?&utm_source=BBNav&utm_medium=Referral">Money Manager App</a>
+    </li>
+</ul>
+                        </div>
+                        <span class="separator hidden md:block md:text-neutral-0">|</span>
+                        <div class="nav-border border-neutral-70 pb-24 pt-16 md:py-8">
+                            <a class="title--3 flex items-center text-neutral-0" href="/blog">Blog</a>
+                        </div>
+                                    </div>
+
+                <div class="flex gap-8 pb-48 pt-16 md:hidden md:p-0 xl:flex">
+                    <li class="w-max">
+                                                    <a
+                                href="https://www.blackbullion.com/login"
+                                class="btn-pop btn--login w-auto whitespace-nowrap px-24 py-8"
+                            >
+                                Log in
+                            </a>
+                                            </li>
+                    <li>
+                        <a href="https://www.blackbullion.com/register" class="btn-pop btn--register w-auto px-24 py-8">
+                            Register
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+</nav>
+        
+        
+                    <div class="navigation--secondary-container ">
+                                                
+                            </div>
+        
+                <main id="main" class="">
+            
+            <div class="content">
+                
+                    <div class="container md:mt-52">
+        <div class="row items-center justify-center">
+            <div class="col-md-4 order-md-2">
+                <img src="https://www.blackbullion.com/assets/images/piggy-404.jpg" alt="404" />
+            </div>
+            <div class="header-hero-text col-md-6 order-md-1">
+                <h1 class="title--1">Oink! The page you were looking for cannot be found.</h1>
+                <p class="emphasis--2">Fear not, follow the link to find your way back.</p>
+                <a class="btn primary" href="/">Take me home!</a>
+            </div>
+        </div>
+    </div>
+            </div>
+
+                    </main>
+        
+                
+                            <footer id="footer--unauthed" class="z-10 bg-page-bg text-base-100">
+                        <div class="relative overflow-visible">
+    <div class="absolute inset-0 z-0 bg-neutral-90"></div>
+
+    <div
+        class="pointer-events-none absolute bottom-16 right-0 z-10 hidden w-[250px] translate-y-12 md:block md:w-[500px] lg:w-[500px] xl:w-[600px]"
+    >
+        <img
+            src="https://www.blackbullion.com/assets/images/home/footer/md-app.png"
+            class="block w-full object-contain xl:hidden"
+            alt="App Image"
+            loading="lazy"
+        />
+        <img
+            src="https://www.blackbullion.com/assets/images/home/footer/xl-app.png"
+            class="hidden w-full object-contain xl:block"
+            alt="App Image"
+            loading="lazy"
+        />
+
+        <img
+            src="https://www.blackbullion.com/assets/images/home/footer/qr.png"
+            class="absolute bottom-32 right-32 w-96"
+            alt="QR Code"
+            loading="lazy"
+        />
+    </div>
+
+    <div class="relative z-20 flex flex-col gap-8 px-0 pt-64 md:gap-64 md:px-32 md:py-72 lg:px-32 xl:px-80">
+        <h1 class="m-0 px-16 text-[40px]/[56px] text-primary-40 md:px-0 md:text-[72px]/[88px] xl:text-[120px]/[156px]">
+            Student Budgeting by Blackbullion
+        </h1>
+
+        <div class="mt-16 flex flex-col items-start gap-16 px-16 md:px-0 xl:flex-row">
+            <div class="flex gap-24">
+                <a
+                    href="https://apps.apple.com/gb/app/student-budgeting-blackbullion/id1596926462"
+                    class="contents basis-1/2"
+                >
+                    <img
+                        class="h-40 md:h-48"
+                        src="https://www.blackbullion.com/assets/images/app-store-badges/app-store-badge.svg"
+                        alt="App Store"
+                    />
+                </a>
+                <a
+                    href="https://play.google.com/store/apps/details?id=com.blackbullion.wallet&referrer=utm_source%3Dhomepage%26utm_medium%3Dwebsite%26utm_campaign%3Dappfooterbuttons"
+                    class="contents basis-1/2"
+                >
+                    <img
+                        class="h-40 md:h-48"
+                        src="https://www.blackbullion.com/assets/images/app-store-badges/google-play-badge.svg"
+                        alt="Google Play"
+                    />
+                </a>
+            </div>
+            <div class="xl:pl-56">
+                <p class="m-0 text-neutral-0">4.9 Rating</p>
+                <div>
+                    <span class="star text-2xl">&#9733;</span>
+                    <span class="star text-2xl">&#9733;</span>
+                    <span class="star text-2xl">&#9733;</span>
+                    <span class="star text-2xl">&#9733;</span>
+                    <span class="star text-2xl">&#9733;</span>
+                </div>
+                <p class="m-0 text-neutral-0">on App store</p>
+            </div>
+        </div>
+
+        <div class="mt-16 block md:hidden">
+            <img
+                src="https://www.blackbullion.com/assets/images/home/footer/sm-app.png"
+                class="w-full object-contain"
+                alt="App Image"
+                loading="lazy"
+            />
+        </div>
+    </div>
+</div>
+        
+        <div class="flex flex-col items-start justify-between px-16 md:px-32 lg:px-32 xl:flex-row xl:px-80">
+            <div class="flex w-full flex-col gap-32 pt-64 md:gap-48 xl:flex-row xl:gap-40 xl:pb-32">
+                <div class="flex w-full flex-col gap-8 md:gap-16 xl:w-2/5">
+                    <h2 class="m-0 text-featured-color">Don’t miss out on the latest updates</h2>
+                    <p class="m-0 text-base-100">
+                        Join thousands of students getting the latest funds, money tips and competitions - straight to
+                        their inbox.
+                    </p>
+                    <a
+                        href="https://mailchi.mp/blackbullion/student_newsletter"
+                        class="btn primary-light flex w-max items-center gap-8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Subscribe
+                    </a>
+                </div>
+                <div class="grid w-full grid-cols-1 gap-y-24 md:justify-between md:gap-x-32 lg:grid-cols-4">
+                    <div class="flex w-full flex-col gap-12 md:gap-20">
+                        <details class="group lg:hidden">
+                            <summary
+                                class="link__btn flex w-full cursor-pointer list-none items-center justify-between text-neutral-0 no-underline hover:text-primary-40"
+                            >
+                                <h4 class="m-0">Blackbullion</h4>
+
+                                <span class="transition-transform group-open:rotate-180">
+                                    <i class="icon icon-small icon-arrow-down--white mr-8"></i>
+                                </span>
+                            </summary>
+
+                            <div class="mt-12 flex flex-col gap-12">
+                                <a href="https://www.blackbullion.com/">Home</a>
+                                <a href="https://www.blackbullion.com/about">About us</a>
+                                <a href="https://apply.workable.com/blackbullion/">Careers</a>
+                                <a href="https://business.blackbullion.com/press/">Press</a>
+                                <a href="https://blackbullion.zendesk.com/">Help</a>
+                            </div>
+                        </details>
+                        <div class="hidden flex-col gap-12 md:gap-20 lg:flex">
+                            <h4 class="m-0">Blackbullion</h4>
+
+                            <a href="https://www.blackbullion.com/" class="hover:text-primary-40">Home</a>
+                            <a href="https://www.blackbullion.com/about" class="hover:text-primary-40">About us</a>
+                            <a href="https://apply.workable.com/blackbullion/" class="hover:text-primary-40">Careers</a>
+                            <a href="https://business.blackbullion.com/press/" class="hover:text-primary-40">Press</a>
+                            <a href="https://blackbullion.zendesk.com/" class="hover:text-primary-40">Help</a>
+                        </div>
+                    </div>
+                    <div class="flex w-full flex-col gap-12 md:gap-20">
+                        <details class="group lg:hidden">
+                            <summary
+                                class="link__btn flex w-full cursor-pointer list-none items-center justify-between text-neutral-0 no-underline hover:text-primary-40"
+                            >
+                                <h4 class="m-0">For students</h4>
+
+                                <span class="transition-transform group-open:rotate-180">
+                                    <i class="icon icon-small icon-arrow-down--white mr-8"></i>
+                                </span>
+                            </summary>
+
+                            <div class="mt-12 flex flex-col gap-12">
+                                <a
+                                    href="https://www.blackbullion.com/tools/money-mindset"
+                                    class="hover:text-primary-40"
+                                >
+                                    Money mindset
+                                </a>
+                                <a
+                                    href="https://www.blackbullion.com/funding-for-university-students"
+                                    class="hover:text-primary-40"
+                                >
+                                    Funding hub
+                                </a>
+                                <a href="https://www.blackbullion.com/register" class="hover:text-primary-40">
+                                    Learning
+                                </a>
+                                <a href="/app/" class="hover:text-primary-40">Budgeting app</a>
+                                <a href="https://www.blackbullion.com/blog" class="hover:text-primary-40">Blog</a>
+                            </div>
+                        </details>
+                        <div class="hidden flex-col gap-12 md:gap-20 lg:flex">
+                            <h4 class="m-0">For students</h4>
+
+                            <a href="https://www.blackbullion.com/tools/money-mindset" class="hover:text-primary-40">
+                                Money mindset
+                            </a>
+                            <a
+                                href="https://www.blackbullion.com/funding-for-university-students"
+                                class="hover:text-primary-40"
+                            >
+                                Funding hub
+                            </a>
+                            <a href="https://www.blackbullion.com/register" class="hover:text-primary-40">Learning</a>
+                            <a href="/app/" class="hover:text-primary-40">Budgeting app</a>
+                            <a href="https://www.blackbullion.com/blog" class="hover:text-primary-40">Blog</a>
+                        </div>
+                    </div>
+                    <div class="flex w-full flex-col gap-12 md:gap-20">
+                        <details class="group lg:hidden">
+                            <summary
+                                class="link__btn flex w-full cursor-pointer list-none items-center justify-between text-neutral-0 no-underline hover:text-primary-40"
+                            >
+                                <h4 class="m-0">For universities</h4>
+
+                                <span class="transition-transform group-open:rotate-180">
+                                    <i class="icon icon-small icon-arrow-down--white mr-8"></i>
+                                </span>
+                            </summary>
+
+                            <div class="mt-12 flex flex-col gap-12">
+                                <a
+                                    href="https://business.blackbullion.com/financial-education/"
+                                    class="hover:text-primary-40"
+                                >
+                                    Financial education
+                                </a>
+                                <a
+                                    href="https://www.blackbullion.com/funds-management-system"
+                                    class="hover:text-primary-40"
+                                >
+                                    Funds Management System
+                                </a>
+                                <a href="https://business.blackbullion.com/funding-hub/" class="hover:text-primary-40">
+                                    Funding Hub
+                                </a>
+                                <a
+                                    href="https://business.blackbullion.com/money-manager-app/"
+                                    class="hover:text-primary-40"
+                                >
+                                    Student budgeting app
+                                </a>
+                                <a href="https://www.blackbullion.com/retainiq" class="hover:text-primary-40">
+                                    RetainIQ
+                                </a>
+                                <a
+                                    href="https://business.blackbullion.com/success-stories/"
+                                    class="hover:text-primary-40"
+                                >
+                                    Success stories
+                                </a>
+                                <a href="https://business.blackbullion.com/downloads/" class="hover:text-primary-40">
+                                    Research & reports
+                                </a>
+                                <a href="https://business.blackbullion.com/blog/" class="hover:text-primary-40">Blog</a>
+                                <a
+                                    href="https://mailchi.mp/blackbullion/staff-newsletter"
+                                    class="hover:text-primary-40"
+                                >
+                                    Newsletter
+                                </a>
+                            </div>
+                        </details>
+                        <div class="hidden flex-col gap-12 md:gap-20 lg:flex">
+                            <h4 class="m-0">For universities</h4>
+
+                            <a
+                                href="https://business.blackbullion.com/financial-education/"
+                                class="hover:text-primary-40"
+                            >
+                                Financial education
+                            </a>
+                            <a
+                                href="https://www.blackbullion.com/funds-management-system"
+                                class="hover:text-primary-40"
+                            >
+                                Funds Management System
+                            </a>
+                            <a href="https://business.blackbullion.com/funding-hub/" class="hover:text-primary-40">
+                                Funding Hub
+                            </a>
+                            <a
+                                href="https://business.blackbullion.com/money-manager-app/"
+                                class="hover:text-primary-40"
+                            >
+                                Student budgeting app
+                            </a>
+                            <a href="https://www.blackbullion.com/retainiq" class="hover:text-primary-40">RetainIQ</a>
+                            <a href="https://business.blackbullion.com/success-stories/" class="hover:text-primary-40">
+                                Success stories
+                            </a>
+                            <a href="https://business.blackbullion.com/downloads/" class="hover:text-primary-40">
+                                Research & reports
+                            </a>
+                            <a href="https://business.blackbullion.com/blog/" class="hover:text-primary-40">Blog</a>
+                            <a href="https://mailchi.mp/blackbullion/staff-newsletter" class="hover:text-primary-40">
+                                Newsletter
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex w-full flex-col gap-12 md:gap-20">
+                        <details class="group lg:hidden">
+                            <summary
+                                class="link__btn flex w-full cursor-pointer list-none items-center justify-between text-neutral-0 no-underline hover:text-primary-40"
+                            >
+                                <h4 class="m-0">For businesses</h4>
+
+                                <span class="transition-transform group-open:rotate-180">
+                                    <i class="icon icon-small icon-arrow-down--white mr-8"></i>
+                                </span>
+                            </summary>
+
+                            <div class="mt-12 flex flex-col gap-12">
+                                <a
+                                    href="https://business.blackbullion.com/for-employers/"
+                                    class="hover:text-primary-40"
+                                >
+                                    Solutions
+                                </a>
+                                <a href="https://business.blackbullion.com/blog/" class="hover:text-primary-40">Blog</a>
+                                <a href="https://mailchi.mp/5b8784a16eec/sxov7iz4qj" class="hover:text-primary-40">
+                                    Newsletter
+                                </a>
+                            </div>
+                        </details>
+                        <div class="hidden flex-col gap-12 md:gap-20 lg:flex">
+                            <h4 class="m-0">For businesses</h4>
+
+                            <a href="https://business.blackbullion.com/for-employers/" class="hover:text-primary-40">
+                                Solutions
+                            </a>
+                            <a href="https://business.blackbullion.com/blog/" class="hover:text-primary-40">Blog</a>
+                            <a href="https://mailchi.mp/5b8784a16eec/sxov7iz4qj" class="hover:text-primary-40">
+                                Newsletter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-16 pt-24 xl:pt-64">
+                <a
+                    class="btn flex shrink-0 self-center border-none bg-transparent p-8 pl-0"
+                    target="_blank"
+                    href="https://instagram.com/blackbullion"
+                >
+                    <picture>
+                        <source
+                            srcset="https://www.blackbullion.com/assets/images/social/instagram.png"
+                            media="(prefers-color-scheme: dark)"
+                        />
+                        <img
+                            src="https://www.blackbullion.com/assets/images/social/instagram-light.png"
+                            title="Blackbullion Instagram"
+                            class="h-36 w-36 shrink-0"
+                        />
+                    </picture>
+                </a>
+                <a
+                    class="btn flex shrink-0 self-center border-none bg-transparent p-8 pl-0"
+                    target="_blank"
+                    href="https://www.linkedin.com/company/blackbullion/"
+                >
+                    <picture>
+                        <source
+                            srcset="https://www.blackbullion.com/assets/images/social/linkedin.png"
+                            media="(prefers-color-scheme: dark)"
+                        />
+                        <img
+                            src="https://www.blackbullion.com/assets/images/social/linkedin-light.png"
+                            title="Blackbullion LinkedIn"
+                            class="h-36 w-36 shrink-0"
+                        />
+                    </picture>
+                </a>
+                <a
+                    class="btn flex shrink-0 self-center border-none bg-transparent p-8 pl-0"
+                    target="_blank"
+                    href="https://www.tiktok.com/@blackbullionapp"
+                >
+                    <picture>
+                        <source
+                            srcset="https://www.blackbullion.com/assets/images/social/tiktok.png"
+                            media="(prefers-color-scheme: dark)"
+                        />
+                        <img
+                            src="https://www.blackbullion.com/assets/images/social/tiktok-light.png"
+                            title="Blackbullion TikTok"
+                            class="h-36 w-36 shrink-0"
+                        />
+                    </picture>
+                </a>
+            </div>
+        </div>
+    
+    <div
+        class="mx-16 mt-32 flex flex-col items-start justify-between border-x-0 border-b-0 border-t border-solid border-base-30 pt-32 md:mx-32 xl:mx-80 xl:flex-row"
+    >
+        <ul
+            class="text-body-md flex flex-col gap-16 px-0 md:flex-row lg:flex-row xl:col-start-1 xl:col-end-3 xl:row-start-3 xl:row-end-3 xl:flex-row"
+        >
+            <li class="mt-0">
+                <a href="/terms" class="hover:text-primary-40">Terms of use</a>
+            </li>
+            <li class="mt-0">
+                <a href="/privacy" class="hover:text-primary-40">Privacy notice</a>
+            </li>
+            <li class="mt-0">
+                <a href="/accessibility" class="hover:text-primary-40">Accessibility statement</a>
+            </li>
+            <li class="mt-0">
+                <a href="/partner-code-of-conduct" class="hover:text-primary-40">Partner code of conduct</a>
+            </li>
+        </ul>
+        <div id="powered-by" class="inline px-0 pt-16 xl:col-start-3 xl:col-end-3 xl:row-start-3 xl:row-end-3 xl:pt-0">
+            <p class="text-small inline text-base-100 md:pt-8">© Blackbullion Limited • Powered by</p>
+            <img
+                height="15"
+                width="15"
+                class="relative top-[3px] ml-8 inline-block h-[15px] w-[15px]"
+                src="https://www.blackbullion.com/assets/images/logos/blackbullion--asterisk.svg"
+                alt="Blackbullion logo"
+            />
+        </div>
+    </div>
+    <div class="flex flex-col px-16 pb-60 md:px-32 lg:px-32 xl:flex-row xl:px-80">
+        <p class="text-base-100">
+            We partner with Bud so they can help us connect you to your bank through their secure APIs. Bud is
+            authorised and regulated by the Financial Conduct Authority (FRN: 793327) to retrieve your account
+            information.
+        </p>
+    </div>
+</footer>
+                
+        <script
+    id="ze-snippet"
+    src="https://static.zdassets.com/ekr/snippet.js?key=8d10f692-ff02-4536-b7e5-3522d3ce3e18"
+    async
+    defer
+></script>
+
+        <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"
+></script>
+
+
+<link rel="preload" as="style" href="https://www.blackbullion.com/build/assets/app-BHH8rdGj.css" /><link rel="modulepreload" href="https://www.blackbullion.com/build/assets/app-Bv4SgjVG.js" /><link rel="stylesheet" href="https://www.blackbullion.com/build/assets/app-BHH8rdGj.css" /><script type="module" src="https://www.blackbullion.com/build/assets/app-Bv4SgjVG.js"></script>
+<script type="application/javascript">
+    $.ajaxSetup({ headers: { 'X-CSRF-TOKEN': 'JqYLmykMtcUvz7XPYRjiYBrwlm8OGaWHnWuIy79t' } });
+</script>
+
+        
+        <script type="application/javascript">
+            $(document).ready(function () {
+                if (document.getElementsByClassName('external-link').length > 0) {
+                    mixpanel.track_links('a.external-link', 'Clicked Link', function (elem) {
+                        return {
+                            'Link Target': elem.dataset.linkTarget,
+                            'Link Order': elem.dataset.linkOrder,
+                            'Link Type': elem.dataset.linkType,
+                        };
+                    });
+                }
+            });
+        </script>
+
+        <script>
+        (function (h, o, t, j, a, r) {
+            h.hj =
+                h.hj ||
+                function () {
+                    (h.hj.q = h.hj.q || []).push(arguments);
+                };
+            h._hjSettings = { hjid: 1726937, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+
+    <script>
+        const userId = '';
+        window.hj('identify', userId, {});
+    </script>
+
+                    <aside id="cookies-policy" class="cookies cookies--no-js" data-text="{&quot;more&quot;:&quot;More details&quot;,&quot;less&quot;:&quot;Less details&quot;}">
+    <div class="cookies__alert">
+        <div class="cookies__container">
+            <div class="cookies__wrapper">
+                <h2 class="cookies__title">We use cookies</h2>
+                <div class="cookies__intro">
+                    <p>Cookies are used to provide you with a better browsing experience. They help us understand our audience, make improvements and personalise our ads.</p>
+                                            <p>Here's our <a href="https://www.blackbullion.com/privacy">cookie policy</a> with full details.</p>
+                                    </div>
+                <div class="cookies__actions">
+                    <form action="https://www.blackbullion.com/cookie-consent/accept-essentials" method="post" data-cookie-action="accept.essentials" class="cookiesBtn cookiesBtn--essentials">
+    <input type="hidden" name="_token" value="JqYLmykMtcUvz7XPYRjiYBrwlm8OGaWHnWuIy79t" autocomplete="off">    <button type="submit" class="cookiesBtn__link">
+        <span class="cookiesBtn__label">Only essentials</span>
+    </button>
+</form>
+                    <form action="https://www.blackbullion.com/cookie-consent/accept-all" method="post" data-cookie-action="accept.all" class="cookiesBtn cookiesBtn--accept">
+    <input type="hidden" name="_token" value="JqYLmykMtcUvz7XPYRjiYBrwlm8OGaWHnWuIy79t" autocomplete="off">    <button type="submit" class="cookiesBtn__link">
+        <span class="cookiesBtn__label">Accept all</span>
+    </button>
+</form>
+                </div>
+            </div>
+        </div>
+            <a href="#cookies-policy-customize" class="cookies__btn cookies__btn--customize">
+                <span>Customize</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M14.7559 11.9782C15.0814 11.6527 15.0814 11.1251 14.7559 10.7996L10.5893 6.63297C10.433 6.47669 10.221 6.3889 10 6.38889C9.77899 6.38889 9.56703 6.47669 9.41075 6.63297L5.24408 10.7996C4.91864 11.1251 4.91864 11.6527 5.24408 11.9782C5.56951 12.3036 6.09715 12.3036 6.42259 11.9782L10 8.40074L13.5774 11.9782C13.9028 12.3036 14.4305 12.3036 14.7559 11.9782Z" fill="#2C2E30"/>
+                </svg>
+            </a>
+        <div class="cookies__expandable cookies__expandable--custom" id="cookies-policy-customize">
+            <form action="https://www.blackbullion.com/cookie-consent/configure" method="post" class="cookies__customize">
+                <input type="hidden" name="_token" value="JqYLmykMtcUvz7XPYRjiYBrwlm8OGaWHnWuIy79t" autocomplete="off">                <div class="cookies__sections">
+                                        <div class="cookies__section">
+                        <label for="cookies-policy-check-essentials" class="cookies__category">
+                                                            <input type="hidden" name="categories[]" value="essentials" />
+                                <input type="checkbox" name="categories[]" value="essentials" id="cookies-policy-check-essentials" checked="checked" disabled="disabled" />
+                                                        <span class="cookies__box">
+                                <strong class="cookies__label">Essential cookies</strong>
+                            </span>
+                                                            <p class="cookies__info">There are some cookies that we have to include in order for our site to function. For this reason, they do not require your consent.</p>
+                                                    </label>
+
+                        <div class="cookies__expandable" id="cookies-policy-essentials">
+                            <ul class="cookies__definitions">
+                                                                <li class="cookies__cookie">
+                                    <p class="cookies__name">_cookie_consent</p>
+                                    <p class="cookies__duration">1 year</p>
+                                                                            <p class="cookies__description">Used to store the user&#039;s cookie consent preferences.</p>
+                                                                    </li>
+                                                                <li class="cookies__cookie">
+                                    <p class="cookies__name">laravel_session</p>
+                                    <p class="cookies__duration">4 weeks</p>
+                                                                            <p class="cookies__description">Used to identify the user&#039;s browsing session.</p>
+                                                                    </li>
+                                                                <li class="cookies__cookie">
+                                    <p class="cookies__name">XSRF-TOKEN</p>
+                                    <p class="cookies__duration">4 weeks</p>
+                                                                            <p class="cookies__description">Used to secure both the user and our website against cross-site request forgery attacks.</p>
+                                                                    </li>
+                                                            </ul>
+                        </div>
+                        <a href="#cookies-policy-essentials" class="cookies__details">More details</a>
+                    </div>
+                                        <div class="cookies__section">
+                        <label for="cookies-policy-check-analytics" class="cookies__category">
+                                                            <input type="checkbox" name="categories[]" value="analytics" id="cookies-policy-check-analytics" />
+                                                        <span class="cookies__box">
+                                <strong class="cookies__label">Analytics cookies</strong>
+                            </span>
+                                                            <p class="cookies__info">We use these for internal research on how we can improve the service we provide for all our users. These cookies assess how you interact with our website.</p>
+                                                    </label>
+
+                        <div class="cookies__expandable" id="cookies-policy-analytics">
+                            <ul class="cookies__definitions">
+                                                                <li class="cookies__cookie">
+                                    <p class="cookies__name">_ga</p>
+                                    <p class="cookies__duration">1 year</p>
+                                                                            <p class="cookies__description">Main cookie used by Google Analytics, enables a service to distinguish one visitor from another.</p>
+                                                                    </li>
+                                                                <li class="cookies__cookie">
+                                    <p class="cookies__name">_ga_WK426JZ4FE</p>
+                                    <p class="cookies__duration">1 year</p>
+                                                                            <p class="cookies__description">Registers a unique ID that is used to generate statistical data on how the visitor uses the website.</p>
+                                                                    </li>
+                                                                <li class="cookies__cookie">
+                                    <p class="cookies__name">_gid</p>
+                                    <p class="cookies__duration">1 day</p>
+                                                                            <p class="cookies__description">Registers a unique ID that is used to generate statistical data on how the visitor uses the website.</p>
+                                                                    </li>
+                                                                <li class="cookies__cookie">
+                                    <p class="cookies__name">_gat</p>
+                                    <p class="cookies__duration">1 minute</p>
+                                                                            <p class="cookies__description">Used by Google Analytics to throttle the request rate.</p>
+                                                                    </li>
+                                                                <li class="cookies__cookie">
+                                    <p class="cookies__name">_hjSession_1726937</p>
+                                    <p class="cookies__duration">2 hours</p>
+                                                                            <p class="cookies__description">Collects statistics on the visitor&#039;s visits to the website, such as the number of visits, average time spent on the website and what pages have been read.</p>
+                                                                    </li>
+                                                                <li class="cookies__cookie">
+                                    <p class="cookies__name">_hjSessionUser_1726937</p>
+                                    <p class="cookies__duration">2 hours</p>
+                                                                            <p class="cookies__description">Collects statistics on the visitor&#039;s visits to the website, such as the number of visits, average time spent on the website and what pages have been read.</p>
+                                                                    </li>
+                                                            </ul>
+                        </div>
+                        <a href="#cookies-policy-analytics" class="cookies__details">More details</a>
+                    </div>
+                                        <div class="cookies__section">
+                        <label for="cookies-policy-check-socials" class="cookies__category">
+                                                            <input type="checkbox" name="categories[]" value="socials" id="cookies-policy-check-socials" />
+                                                        <span class="cookies__box">
+                                <strong class="cookies__label">Social cookies</strong>
+                            </span>
+                                                            <p class="cookies__info">We use these to integrate with external social platforms.</p>
+                                                    </label>
+
+                        <div class="cookies__expandable" id="cookies-policy-socials">
+                            <ul class="cookies__definitions">
+                                                                <li class="cookies__cookie">
+                                    <p class="cookies__name">_fbp</p>
+                                    <p class="cookies__duration">2 hours</p>
+                                                                            <p class="cookies__description">Used by Facebook to deliver a series of advertisement products such as real time bidding from third party advertisers.</p>
+                                                                    </li>
+                                                                <li class="cookies__cookie">
+                                    <p class="cookies__name">_tt_enable_cookie</p>
+                                    <p class="cookies__duration">2 hours</p>
+                                                                            <p class="cookies__description">Used by the social networking service, TikTok, for tracking the use of embedded services.</p>
+                                                                    </li>
+                                                                <li class="cookies__cookie">
+                                    <p class="cookies__name">_ttp</p>
+                                    <p class="cookies__duration">2 hours</p>
+                                                                            <p class="cookies__description">This cookie is used for analytics to improve TikTok remarketing and exclusions audiences.</p>
+                                                                    </li>
+                                                            </ul>
+                        </div>
+                        <a href="#cookies-policy-socials" class="cookies__details">More details</a>
+                    </div>
+                                    </div>
+                <div class="cookies__save">
+                    <button type="submit" class="cookiesBtn__link">Save settings</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</aside>
+
+
+
+<script data-cookie-consent>
+    (()=>{var e,t={148:()=>{var e=document.querySelector("#cookies-policy"),t=document.querySelector(".cookiereset");if(t&&t.addEventListener("submit",(function(e){return function(e){if(e.preventDefault(),document.querySelector("#cookies-policy"))return;window.LaravelCookieConsent.reset()}(e)})),e){var o=e.querySelector(".cookies__btn--customize"),n=e.querySelectorAll(".cookies__details"),i=e.querySelector(".cookiesBtn--accept"),r=e.querySelector(".cookiesBtn--essentials"),s=e.querySelector(".cookies__customize"),c=JSON.parse(e.getAttribute("data-text"));e.removeAttribute("data-text"),e.classList.remove("cookies--no-js"),e.classList.add("cookies--closing"),setTimeout((function(){e.classList.remove("cookies--closing")}),310);for(var u=0;u<n.length;u++)n[u].addEventListener("click",(function(e){return a(e,e.target,!1)}));o.addEventListener("click",(function(e){return a(e,o)})),i.addEventListener("submit",(function(e){return function(e){e.preventDefault(),window.LaravelCookieConsent.acceptAll(),l()}(e)})),r.addEventListener("submit",(function(e){return function(e){e.preventDefault(),window.LaravelCookieConsent.acceptEssentials(),l()}(e)})),s.addEventListener("submit",(function(e){return function(e){e.preventDefault(),window.LaravelCookieConsent.configure(new FormData(e.target)),l()}(e)})),window.addEventListener("resize",(function(t){window.innerHeight<=e.offsetHeight?e.querySelector(".cookies__sections").style.maxHeight="50vh":e.querySelector(".cookies__sections").removeAttribute("style")}))}function a(t,o){var n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];t.preventDefault(),t.target.blur();var i=e.querySelector(o.getAttribute("href")),r=i.firstElementChild.offsetHeight,s=i.classList.contains("cookies__expandable--open");i.setAttribute("style","height:"+(s?r:0)+"px"),function(e,t,o){if(e)return;o.target.textContent=t?c.more:c.less}(n,s,t),setTimeout((function(){i.classList.toggle("cookies__expandable--open"),i.setAttribute("style","height:"+(s?0:r)+"px"),setTimeout((function(){i.removeAttribute("style")}),310)}),10),function(t,o){if(!t)return;var n=e.querySelector(".cookies__container"),i=n.firstElementChild.offsetHeight;n.setAttribute("style","height:"+(o?0:i)+"px"),setTimeout(function(e){return function(){e.classList.toggle("cookies--show"),n.classList.toggle("cookies__container--hide"),n.setAttribute("style","height:"+(o?i:0)+"px"),setTimeout((function(){n.removeAttribute("style")}),320)}}(e),10)}(n,s)}function l(){e.classList.add("cookies--closing"),setTimeout(function(e){return function(){e.parentNode.querySelectorAll("[data-cookie-consent]").forEach((function(e){e.parentNode.removeChild(e)})),e.parentNode.removeChild(e)}}(e),210)}},985:()=>{}},o={};function n(e){var i=o[e];if(void 0!==i)return i.exports;var r=o[e]={exports:{}};return t[e](r,r.exports,n),r.exports}n.m=t,e=[],n.O=(t,o,i,r)=>{if(!o){var s=1/0;for(l=0;l<e.length;l++){for(var[o,i,r]=e[l],c=!0,u=0;u<o.length;u++)(!1&r||s>=r)&&Object.keys(n.O).every((e=>n.O[e](o[u])))?o.splice(u--,1):(c=!1,r<s&&(s=r));if(c){e.splice(l--,1);var a=i();void 0!==a&&(t=a)}}return t}r=r||0;for(var l=e.length;l>0&&e[l-1][2]>r;l--)e[l]=e[l-1];e[l]=[o,i,r]},n.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),(()=>{var e={879:0,314:0};n.O.j=t=>0===e[t];var t=(t,o)=>{var i,r,[s,c,u]=o,a=0;if(s.some((t=>0!==e[t]))){for(i in c)n.o(c,i)&&(n.m[i]=c[i]);if(u)var l=u(n)}for(t&&t(o);a<s.length;a++)r=s[a],n.o(e,r)&&e[r]&&e[r][0](),e[r]=0;return n.O(l)},o=self.webpackChunklaravel_cookie_consent=self.webpackChunklaravel_cookie_consent||[];o.forEach(t.bind(null,0)),o.push=t.bind(null,o.push.bind(o))})(),n.O(void 0,[314],(()=>n(148)));var i=n.O(void 0,[314],(()=>n(985)));i=n.O(i)})();
+</script>
+<style data-cookie-consent>
+    #cookies-policy.cookies{bottom:0;font-size:16px;max-height:100%;max-width:100%;overflow:auto;position:fixed;right:0;transition:transform .2s ease-out,opacity .2s ease-out;z-index:9999}#cookies-policy.cookies--closing{opacity:0;transform:translateY(10px)}#cookies-policy.cookies--show .cookies__btn--customize{border-bottom:1px solid #e7e8e9;border-top:none}#cookies-policy.cookies--show .cookies__btn svg{transform:rotate(180deg)}#cookies-policy.cookies--no-js .cookies__expandable:target,#cookies-policy.cookies--no-js .cookies__section .cookies__expandable{height:auto;opacity:1;transition:height .3s ease-out,opacity .3s ease-out;visibility:visible}#cookies-policy.cookies--no-js .cookies__details{display:none}#cookies-policy.cookies--no-js .cookies__sections{max-height:-moz-fit-content;max-height:fit-content}#cookies-policy.cookies--no-js svg{display:none}#cookies-policy .cookies__expandable{display:block;height:0;opacity:0;overflow:hidden;transition:height .3s ease-out,opacity .3s ease-out,visibility 0s linear .3s;visibility:hidden}#cookies-policy .cookies__expandable--open{height:auto;opacity:1;transition:height .3s ease-out,opacity .3s ease-out;visibility:visible}#cookies-policy .cookies__alert{background:#fff;border:1px solid #e7e8e9;border-radius:8px;box-shadow:0 12px 12px -8px rgba(0,0,0,.08),0 0 4px rgba(0,0,0,.04);margin:4%;max-height:90%;max-width:90%;width:22em}#cookies-policy .cookies__container{display:block;height:auto;opacity:1;overflow:hidden;transition:height .3s ease-out,opacity .3s ease-out,visibility 0s linear .1s;visibility:visible}#cookies-policy .cookies__container--hide{height:0;opacity:0;transition:height .3s ease-out,opacity .3s ease-out,visibility 0s linear .3s;visibility:hidden}#cookies-policy .cookies__wrapper{padding:1em 1.5em}#cookies-policy .cookies__title{color:#2c2e30;font-weight:700;line-height:1.4em;margin-bottom:.8em}#cookies-policy .cookies__intro{color:#2c2e30;font-size:.875em;font-weight:450;line-height:1.4em}#cookies-policy .cookies__intro p{margin-top:1em}#cookies-policy .cookies__intro p:first-child{margin-top:0}#cookies-policy .cookies__intro a{color:inherit;text-decoration:underline;transition:color .2s ease-out}#cookies-policy .cookies__intro a:focus,#cookies-policy .cookies__intro a:hover{color:#7959ef}#cookies-policy .cookies__actions{display:flex;flex-direction:column;gap:4px;justify-content:space-between;margin-top:1em}#cookies-policy .cookies__btn--customize{align-items:center;border-top:1px solid #e7e8e9;color:#2c2e30;display:flex;font-size:.875em;font-weight:600;justify-content:space-between;line-height:1em;padding:1.125em 24px;position:relative;text-decoration:none}#cookies-policy .cookies__btn svg{transition:transform .2s ease-out}#cookies-policy .cookies__sections{max-height:450px;overflow-y:scroll}#cookies-policy .cookies__section{padding:0 1.5em}#cookies-policy .cookies__section+.cookies__section{border-top:1px solid #eee}#cookies-policy .cookies__box,#cookies-policy .cookies__category{display:block;overflow:hidden;position:relative}#cookies-policy .cookies__category input{display:block;margin:0;padding:0;position:absolute;right:105%;top:0}#cookies-policy .cookies__box{cursor:pointer;line-height:1.4em;padding:1em 3em 1em 0}#cookies-policy .cookies__box:after,#cookies-policy .cookies__box:before{border-radius:1.4em;content:"";display:block;position:absolute;top:50%}#cookies-policy .cookies__box:after{background:#e7e8e9;height:1.4em;margin-top:-.7em;right:0;transition:background .2s ease-out,opacity .2s ease-out;width:2.5em;z-index:0}#cookies-policy .cookies__box:before{background:#fff;height:1em;margin-top:-.5em;right:.75em;transform:translateX(-.55em);transition:transform .2s ease-out;width:1em;z-index:1}#cookies-policy .cookies__category input:checked+.cookies__box:after{background:#7959ef;opacity:1}#cookies-policy .cookies__category input:disabled+.cookies__box:after{opacity:.6}#cookies-policy .cookies__category input:checked+.cookies__box:before{transform:translateX(.55em)}#cookies-policy .cookies__label{color:#2c2e30;font-size:.875em;font-weight:600}#cookies-policy .cookies__info{color:#2c2e30;font-size:.875em;font-weight:450;line-height:1.4em}#cookies-policy .cookies__details{color:#7959ef;display:block;font-size:.875em;margin:.625em 0 .9em;transition:color .2s ease-out}#cookies-policy .cookies__details:focus,#cookies-policy .cookies__details:hover{color:#7959ef}#cookies-policy .cookies__definitions{color:#676767;font-size:.875em;line-height:1.2em;padding-top:.8em}#cookies-policy .cookies__cookie+.cookies__cookie{margin-top:1em}#cookies-policy .cookies__name{color:#8a8e92;display:inline;font-weight:600;line-height:22px}#cookies-policy .cookies__duration{color:#8a8e92;display:inline;text-align:right}#cookies-policy .cookies__description{color:#8a8e92;display:block;line-height:120%;padding-top:.3em;text-align:left;width:100%}#cookies-policy .cookies__save{border-top:1px solid #e7e8e9;display:flex;justify-content:flex-end;margin-top:.4em;padding:.75em 1.5em}#cookies-policy .cookiesBtn{width:100%}#cookies-policy .cookiesBtn__link{background:#7959ef;border:1px solid #7959ef;border-radius:4px;color:#fff;cursor:pointer;display:block;font:inherit;font-size:14px;font-weight:600;line-height:1em;margin:0;overflow:hidden;padding:.86em 1em;text-align:center;text-decoration:none;text-overflow:ellipsis;transition:opacity .2s ease-out;white-space:nowrap;width:100%}#cookies-policy .cookiesBtn__link:focus,#cookies-policy .cookiesBtn__link:hover{opacity:.8}
+
+</style>
+            </body>
+</html>

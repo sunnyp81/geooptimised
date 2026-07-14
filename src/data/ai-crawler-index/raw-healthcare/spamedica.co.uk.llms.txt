@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en-GB" id="html" class="medium-font">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name='robots' content='noindex, follow' />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+
+	const gtm4wp_scrollerscript_debugmode         = false;
+	const gtm4wp_scrollerscript_callbacktime      = 100;
+	const gtm4wp_scrollerscript_readerlocation    = 150;
+	const gtm4wp_scrollerscript_contentelementid  = "content";
+	const gtm4wp_scrollerscript_scannertime       = 60;
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO plugin v27.9 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Page not found | SpaMedica</title>
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:title" content="Page not found | SpaMedica" />
+	<meta property="og:site_name" content="SpaMedica" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebSite","@id":"https:\/\/www.spamedica.co.uk\/#website","url":"https:\/\/www.spamedica.co.uk\/","name":"SpaMedica - Free NHS Cataract Surgery in four weeks","description":"NHS cataract surgery at no cost to you","publisher":{"@id":"https:\/\/www.spamedica.co.uk\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.spamedica.co.uk\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-GB"},{"@type":"Organization","@id":"https:\/\/www.spamedica.co.uk\/#organization","name":"SpaMedica - Free NHS Cataract Surgery in four weeks","url":"https:\/\/www.spamedica.co.uk\/","logo":{"@type":"ImageObject","inLanguage":"en-GB","@id":"https:\/\/www.spamedica.co.uk\/#\/schema\/logo\/image\/","url":"https:\/\/www.spamedica.co.uk\/wp-content\/uploads\/2022\/12\/Group-1.png","contentUrl":"https:\/\/www.spamedica.co.uk\/wp-content\/uploads\/2022\/12\/Group-1.png","width":1236,"height":669,"caption":"SpaMedica - Free NHS Cataract Surgery in four weeks"},"image":{"@id":"https:\/\/www.spamedica.co.uk\/#\/schema\/logo\/image\/"},"sameAs":["https:\/\/www.facebook.com\/SpaMedicaUK\/","https:\/\/x.com\/spamedica","https:\/\/www.linkedin.com\/company\/spamedica-clinic\/","https:\/\/www.youtube.com\/@spamedica2438"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//maps.google.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="SpaMedica &raquo; Feed" href="https://www.spamedica.co.uk/feed/" />
+<link rel="alternate" type="application/rss+xml" title="SpaMedica &raquo; Comments Feed" href="https://www.spamedica.co.uk/comments/feed/" />
+<link rel="alternate" type="text/calendar" title="SpaMedica &raquo; iCal Feed" href="https://www.spamedica.co.uk/events/?ical=1" />
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v10.2.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script src="//www.googletagmanager.com/gtag/js?id=G-D7HKPGDC61"  data-cfasync="false" data-wpfc-render="false" async></script>
+			<script data-cfasync="false" data-wpfc-render="false">
+				var mi_version = '10.2.2';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+								var MonsterInsightsDefaultLocations = {"page_location":"https:\/\/www.spamedica.co.uk\/llms.txt\/"};
+								if ( typeof MonsterInsightsPrivacyGuardFilter === 'function' ) {
+					var MonsterInsightsLocations = (typeof MonsterInsightsExcludeQuery === 'object') ? MonsterInsightsPrivacyGuardFilter( MonsterInsightsExcludeQuery ) : MonsterInsightsPrivacyGuardFilter( MonsterInsightsDefaultLocations );
+				} else {
+					var MonsterInsightsLocations = (typeof MonsterInsightsExcludeQuery === 'object') ? MonsterInsightsExcludeQuery : MonsterInsightsDefaultLocations;
+				}
+
+								var disableStrs = [
+										'ga-disable-G-D7HKPGDC61',
+									];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						if (document.cookie.indexOf(disableStrs[index] + '=true') > -1) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if (__gtagTrackerIsOptedOut()) {
+					for (var index = 0; index < disableStrs.length; index++) {
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						document.cookie = disableStrs[index] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				if ('undefined' === typeof gaOptout) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if (mi_track_user) {
+					function __gtagDataLayer() {
+						dataLayer.push(arguments);
+					}
+
+					function __gtagTracker(type, name, parameters) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply(null, arguments);
+							return;
+						}
+
+						if (type === 'event') {
+														parameters.send_to = monsterinsights_frontend.v4_id;
+							var hookName = name;
+							if (typeof parameters['event_category'] !== 'undefined') {
+								hookName = parameters['event_category'] + ':' + name;
+							}
+
+							if (typeof MonsterInsightsDualTracker.trackers[hookName] !== 'undefined') {
+								MonsterInsightsDualTracker.trackers[hookName](parameters);
+							} else {
+								__gtagDataLayer('event', name, parameters);
+							}
+							
+						} else {
+							__gtagDataLayer.apply(null, arguments);
+						}
+					}
+
+					__gtagTracker('js', new Date());
+					__gtagTracker('set', {
+						'developer_id.dZGIzZG': true,
+											});
+					if ( MonsterInsightsLocations.page_location ) {
+						__gtagTracker('set', MonsterInsightsLocations);
+					}
+										__gtagTracker('config', 'G-D7HKPGDC61', {"forceSSL":"true","link_attribution":"true","page_path":'\/404.html?page=' + document.location.pathname + document.location.search + '&from=' + document.referrer} );
+										window.gtag = __gtagTracker;										(function () {
+						/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+						/* ga and __gaTracker compatibility shim. */
+						var noopfn = function () {
+							return null;
+						};
+						var newtracker = function () {
+							return new Tracker();
+						};
+						var Tracker = function () {
+							return null;
+						};
+						var p = Tracker.prototype;
+						p.get = noopfn;
+						p.set = noopfn;
+						p.send = function () {
+							var args = Array.prototype.slice.call(arguments);
+							args.unshift('send');
+							__gaTracker.apply(null, args);
+						};
+						var __gaTracker = function () {
+							var len = arguments.length;
+							if (len === 0) {
+								return;
+							}
+							var f = arguments[len - 1];
+							if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
+								if ('send' === arguments[0]) {
+									var hitConverted, hitObject = false, action;
+									if ('event' === arguments[1]) {
+										if ('undefined' !== typeof arguments[3]) {
+											hitObject = {
+												'eventAction': arguments[3],
+												'eventCategory': arguments[2],
+												'eventLabel': arguments[4],
+												'value': arguments[5] ? arguments[5] : 1,
+											}
+										}
+									}
+									if ('pageview' === arguments[1]) {
+										if ('undefined' !== typeof arguments[2]) {
+											hitObject = {
+												'eventAction': 'page_view',
+												'page_path': arguments[2],
+											}
+										}
+									}
+									if (typeof arguments[2] === 'object') {
+										hitObject = arguments[2];
+									}
+									if (typeof arguments[5] === 'object') {
+										Object.assign(hitObject, arguments[5]);
+									}
+									if ('undefined' !== typeof arguments[1].hitType) {
+										hitObject = arguments[1];
+										if ('pageview' === hitObject.hitType) {
+											hitObject.eventAction = 'page_view';
+										}
+									}
+									if (hitObject) {
+										action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+										hitConverted = mapArgs(hitObject);
+										__gtagTracker('event', action, hitConverted);
+									}
+								}
+								return;
+							}
+
+							function mapArgs(args) {
+								var arg, hit = {};
+								var gaMap = {
+									'eventCategory': 'event_category',
+									'eventAction': 'event_action',
+									'eventLabel': 'event_label',
+									'eventValue': 'event_value',
+									'nonInteraction': 'non_interaction',
+									'timingCategory': 'event_category',
+									'timingVar': 'name',
+									'timingValue': 'value',
+									'timingLabel': 'event_label',
+									'page': 'page_path',
+									'location': 'page_location',
+									'title': 'page_title',
+									'referrer' : 'page_referrer',
+								};
+								for (arg in args) {
+																		if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) {
+										hit[gaMap[arg]] = args[arg];
+									} else {
+										hit[arg] = args[arg];
+									}
+								}
+								return hit;
+							}
+
+							try {
+								f.hitCallback();
+							} catch (ex) {
+							}
+						};
+						__gaTracker.create = newtracker;
+						__gaTracker.getByName = newtracker;
+						__gaTracker.getAll = function () {
+							return [];
+						};
+						__gaTracker.remove = noopfn;
+						__gaTracker.loaded = true;
+						window['__gaTracker'] = __gaTracker;
+					})();
+									} else {
+										console.log("");
+					(function () {
+						function __gtagTracker() {
+							return null;
+						}
+
+						window['__gtagTracker'] = __gtagTracker;
+						window['gtag'] = __gtagTracker;
+					})();
+									}
+			</script>
+							<!-- / Google Analytics by MonsterInsights -->
+		<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='tribe-events-pro-mini-calendar-block-styles-css' href='https://www.spamedica.co.uk/wp-content/plugins/events-calendar-pro/build/css/tribe-events-pro-mini-calendar-block.css?ver=7.7.16' media='all' />
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='dotdigital-for-wordpress-css' href='https://www.spamedica.co.uk/wp-content/plugins/dotmailer-sign-up-widget/public/css/dotdigital-wordpress-public.css?ver=7.4.0' media='all' />
+<link rel='stylesheet' id='h5ap-public-css' href='https://www.spamedica.co.uk/wp-content/plugins/html5-audio-player/assets/css/style.css?ver=2.7.3' media='all' />
+<link rel='stylesheet' id='google-fonts-css' href='https://fonts.googleapis.com/css2?family=Mulish:wght@700;900&#038;family=Roboto:wght@400;700;900&#038;display=swap' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='https://www.spamedica.co.uk/wp-content/themes/spamedica/include/css/bootstrap.min.css?ver=4.6.0' media='all' />
+<link rel='stylesheet' id='theme-style-css' href='https://www.spamedica.co.uk/wp-content/themes/spamedica/style.css?ver=99fa4560def637a07ed599782f08f38e' media='all' />
+<link rel='stylesheet' id='animate-css' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css?ver=3.5.2' media='all' />
+<link rel='stylesheet' id='dflip-style-css' href='https://www.spamedica.co.uk/wp-content/plugins/3d-flipbook-dflip-lite/assets/css/dflip.min.css?ver=2.4.30' media='all' />
+<script async data-wp-strategy="async" id="monsterinsights-frontend-script-js" src="https://www.spamedica.co.uk/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=10.2.2"></script>
+<script data-cfasync="false" data-wpfc-render="false" id='monsterinsights-frontend-script-js-extra'>var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/www.spamedica.co.uk","hash_tracking":"false","v4_id":"G-D7HKPGDC61"};</script>
+<script id="jquery-core-js-extra">
+var ajax_object = {"ajax_url":"https://www.spamedica.co.uk/wp-admin/admin-ajax.php","home_url":"https://www.spamedica.co.uk","news_url":"https://www.spamedica.co.uk/news/"};
+//# sourceURL=jquery-core-js-extra
+</script>
+<script id="jquery-core-js" src="https://www.spamedica.co.uk/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://www.spamedica.co.uk/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="jquery-js-after">
+var $ = jQuery.noConflict();
+//# sourceURL=jquery-js-after
+</script>
+<script id="dotdigital_for_wordpress_public_js-js-extra">
+var dotdigital_form_data = {"ajax_url":"https://www.spamedica.co.uk/wp-json/","nonce":"86deae1e38","generic_failure_message":"There was a problem signing you up."};
+//# sourceURL=dotdigital_for_wordpress_public_js-js-extra
+</script>
+<script id="dotdigital_for_wordpress_public_js-js" src="https://www.spamedica.co.uk/wp-content/plugins/dotmailer-sign-up-widget/public/js/dotdigital-for-wordpress-public.js?ver=7.4.0"></script>
+<script id="gtm4wp-scroll-tracking-js" src="https://www.spamedica.co.uk/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/analytics-talk-content-tracking.js?ver=1.22.3"></script>
+<script id="modernizr-js" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js?ver=2.8.3"></script>
+<link rel="https://api.w.org/" href="https://www.spamedica.co.uk/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.spamedica.co.uk/xmlrpc.php?rsd" />
+
+        <style>
+            .mejs-container:has(.plyr) {
+                height: auto;
+                background: transparent
+            }
+
+            .mejs-container:has(.plyr) .mejs-controls {
+                display: none
+            }
+
+            .h5ap_all {
+                --shadow-color: 197deg 32% 65%;
+                border-radius: 6px;
+                box-shadow: 0px 0px 9.6px hsl(var(--shadow-color)/.36), 0 1.7px 1.9px 0px hsl(var(--shadow-color)/.36), 0 4.3px 1.8px -1.7px hsl(var(--shadow-color)/.36), -0.1px 10.6px 11.9px -2.5px hsl(var(--shadow-color)/.36);
+                margin: 16px auto;
+            }
+
+            .h5ap_single_button {
+                height: 50px;
+            }
+        </style>
+    		<style>
+			span.h5ap_single_button {
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.h5ap_single_button span {
+				line-height: 0;
+			}
+
+			span#h5ap_single_button span svg {
+				cursor: pointer;
+			}
+
+			#skin_default .plyr__control,
+			#skin_default .plyr__time {
+				color: #4f5b5f			}
+
+			#skin_default .plyr__control:hover {
+				background: #1aafff;
+				color: #f5f5f5			}
+
+			#skin_default .plyr__controls {
+				background: #f5f5f5			}
+
+			#skin_default .plyr__controls__item input {
+				color: #1aafff			}
+
+			.plyr {
+				--plyr-color-main: #4f5b5f			}
+
+			/* Custom Css */
+					</style>
+<meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://www.spamedica.co.uk"><link rel="alternate" href="https://www.spamedica.co.uk/wp-json/tribe/events/v1/" />
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to automatic -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var dataLayer_content = {"pagePostType":"404-error"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T7DHRQZ');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><link rel="icon" href="https://www.spamedica.co.uk/wp-content/uploads/2022/11/favicon.png" sizes="32x32" />
+<link rel="icon" href="https://www.spamedica.co.uk/wp-content/uploads/2022/11/favicon.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.spamedica.co.uk/wp-content/uploads/2022/11/favicon.png" />
+<meta name="msapplication-TileImage" content="https://www.spamedica.co.uk/wp-content/uploads/2022/11/favicon.png" />
+<style id="wp-custom-css">
+ul.footer-nav li {
+	margin-bottom: 10px !important
+}
+
+.blog-single-main .alignleft {
+    float: left;
+    margin-right: 20px;
+}
+
+@media (max-width: 767px) {
+	.blog-single-main .alignleft {
+    float: none;
+    margin-right: 0px;
+	}
+}
+
+.rating-box {
+  font-size: 1.0rem;
+}
+.rating-star {
+	display: none;
+}
+
+
+
+@media (max-width: 764px) {
+  .text-image-video-container .media-box {
+        max-height: 100%;
+	}
+}
+
+</style>
+</head>
+<body class="error404 wp-embed-responsive wp-theme-spamedica tribe-no-js">
+
+<!-- GTM Container placement set to automatic -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7DHRQZ" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><!--============================== Header Start ==============================-->
+<header id="header">
+    <div class="header-upper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header-upper-content d-flex justify-content-between align-items-center">
+                        <div class="header-upper-left">
+                                                        <ul class="header-social-links d-flex">
+                                <li><a href="https://www.facebook.com/SpaMedicaUK/" aria-label="facebook Link" target="_blank" rel="noopener"><i class="fa-classic fa-brands fa-facebook-f" aria-hidden="true"></i></a></li><li><a href="https://www.instagram.com/spamedica_uk/" aria-label="instagram Link" target="_blank" rel="noopener"><i class="fa-classic fa-brands fa-instagram" aria-hidden="true"></i></a></li><li><a href="https://www.linkedin.com/company/spamedica-clinic/" aria-label="linkedin Link" target="_blank" rel="noopener"><i class="fa-classic fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li><li><a href="https://www.youtube.com/@spamedica_uk" aria-label="youtube Link" target="_blank" rel="noopener"><i class="fa-classic fa-brands fa-youtube" aria-hidden="true"></i></a></li>                            </ul>
+                                                    </div>
+                        <div class="header-upper-right">
+                            <nav class="navbar navbar-expand-xl top-menu">
+                                <div class="collapse navbar-collapse" id="topMenu">
+                                    <div class="navbar-inside d-flex ml-auto align-items-center">
+                                        <ul id="top-nav" class="navbar-nav" role="menu"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-87 nav-item" role="menuitem" aria-labelledby="header-upper-menu-about-us"><a title="About Us" href="https://www.spamedica.co.uk/about-us/" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="header-upper-menu-about-us">About Us</a>
+<ul class="dropdown-menu" aria-labelledby="header-upper-menu-about-us" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-482" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-482 nav-item" role="menuitem" aria-labelledby="header-upper-menu-who-we-are"><a title="Who we are" href="https://www.spamedica.co.uk/about-us/who-we-are/" class="dropdown-item" id="header-upper-menu-who-we-are"><b>Who we are</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-105" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-105 nav-item" role="menuitem" aria-labelledby="header-upper-menu-our-story"><a title="Our story" href="https://www.spamedica.co.uk/about-us/ourstory/" class="dropdown-item" id="header-upper-menu-our-story"><b>Our story</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-652" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-652 nav-item" role="menuitem" aria-labelledby="header-upper-menu-vision-and-values"><a title="Vision and values" href="https://www.spamedica.co.uk/about-us/vision-and-values/" class="dropdown-item" id="header-upper-menu-vision-and-values"><b>Vision and values</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-824" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-824 nav-item" role="menuitem" aria-labelledby="header-upper-menu-our-quality-of-care"><a title="Our quality of care" href="https://www.spamedica.co.uk/about-us/qualityofcare/" class="dropdown-item" id="header-upper-menu-our-quality-of-care"><b>Our quality of care</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-919 nav-item" role="menuitem" aria-labelledby="header-upper-menu-meet-our-team"><a title="Meet our team" href="https://www.spamedica.co.uk/about-us/meet-our-team/" class="dropdown-item" id="header-upper-menu-meet-our-team"><b>Meet our team</b></a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16185" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-16185 nav-item" role="menuitem" aria-labelledby="header-upper-menu-optometrists"><a title="Optometrists" href="https://www.spamedica.co.uk/optometrists/" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="header-upper-menu-optometrists">Optometrists</a>
+<ul class="dropdown-menu" aria-labelledby="header-upper-menu-optometrists" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-415 nav-item" role="menuitem" aria-labelledby="header-upper-menu-optometrists-nhs-referrals"><a title="Optometrists NHS referrals" href="https://www.spamedica.co.uk/optometrists-nhs-referrals/" class="dropdown-item" id="header-upper-menu-optometrists-nhs-referrals"><b>Optometrists NHS referrals</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-9376" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9376 nav-item" role="menuitem" aria-labelledby="header-upper-menu-post-op-accreditation"><a title="Post-op accreditation" href="https://www.spamedica.co.uk/post-op-accreditation/" class="dropdown-item" id="header-upper-menu-post-op-accreditation"><b>Post-op accreditation</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-9394" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9394 nav-item" role="menuitem" aria-labelledby="header-upper-menu-cpd-training"><a title="CPD training" href="https://www.spamedica.co.uk/cpd-training/" class="dropdown-item" id="header-upper-menu-cpd-training"><b>CPD training</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-9427" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9427 nav-item" role="menuitem" aria-labelledby="header-upper-menu-optometrists-patient-treatment-booklets"><a title="Optometrists patient treatment booklets" href="https://www.spamedica.co.uk/optometrists-patient-treatment-booklets/" class="dropdown-item" id="header-upper-menu-optometrists-patient-treatment-booklets"><b>Optometrists patient treatment booklets</b></a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-89 nav-item" role="menuitem" aria-labelledby="header-upper-menu-healthcare-professionals"><a title="Healthcare Professionals" href="https://www.spamedica.co.uk/healthcare-professionals/" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="header-upper-menu-healthcare-professionals">Healthcare Professionals</a>
+<ul class="dropdown-menu" aria-labelledby="header-upper-menu-healthcare-professionals" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-9542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9542 nav-item" role="menuitem" aria-labelledby="header-upper-menu-cataract-surgery-training"><a title="Cataract surgery training" href="https://www.spamedica.co.uk/healthcare-professionals/cataract-surgery-training/" class="dropdown-item" id="header-upper-menu-cataract-surgery-training"><b>Cataract surgery training</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-9586" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9586 nav-item" role="menuitem" aria-labelledby="header-upper-menu-healthcare-professionals-nhs-referrals"><a title="Healthcare Professionals NHS referrals" href="https://www.spamedica.co.uk/healthcare-professionals/nhs-referrals/" class="dropdown-item" id="header-upper-menu-healthcare-professionals-nhs-referrals"><b>Healthcare Professionals NHS referrals</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-9626" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9626 nav-item" role="menuitem" aria-labelledby="header-upper-menu-treatments-we-offer"><a title="Treatments we offer" href="https://www.spamedica.co.uk/healthcare-professionals/treatments-we-offer/" class="dropdown-item" id="header-upper-menu-treatments-we-offer"><b>Treatments we offer</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-9592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9592 nav-item" role="menuitem" aria-labelledby="header-upper-menu-healthcare-professionals-patient-treatment-booklets"><a title="Healthcare Professionals patient treatment booklets" href="https://www.spamedica.co.uk/healthcare-professionals/healthcare-professionals-patient-treatment-booklets/" class="dropdown-item" id="header-upper-menu-healthcare-professionals-patient-treatment-booklets"><b>Healthcare Professionals patient treatment booklets</b></a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-has-children dropdown menu-item-90 nav-item" role="menuitem" aria-labelledby="header-upper-menu-news"><a title="News" href="https://www.spamedica.co.uk/news/" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="header-upper-menu-news">News</a>
+<ul class="dropdown-menu" aria-labelledby="header-upper-menu-news" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-10350" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10350 nav-item" role="menuitem" aria-labelledby="header-upper-menu-eye-health"><a title="Eye Health" href="https://www.spamedica.co.uk/category/eye-health/" class="dropdown-item" id="header-upper-menu-eye-health"><b>Eye Health</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-10351" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10351 nav-item" role="menuitem" aria-labelledby="header-upper-menu-company-news"><a title="Company News" href="https://www.spamedica.co.uk/category/company-news/" class="dropdown-item" id="header-upper-menu-company-news"><b>Company News</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-10352" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10352 nav-item" role="menuitem" aria-labelledby="header-upper-menu-industry-news"><a title="Industry News" href="https://www.spamedica.co.uk/category/industry-news/" class="dropdown-item" id="header-upper-menu-industry-news"><b>Industry News</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-10353" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10353 nav-item" role="menuitem" aria-labelledby="header-upper-menu-patient-stories"><a title="Patient Stories" href="https://www.spamedica.co.uk/category/patient-stories/" class="dropdown-item" id="header-upper-menu-patient-stories"><b>Patient Stories</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-10354" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-10354 nav-item" role="menuitem" aria-labelledby="header-upper-menu-hospital-inspection-outcomes"><a title="Hospital Inspection Outcomes" href="https://www.spamedica.co.uk/category/hospital-inspection-outcomes/" class="dropdown-item" id="header-upper-menu-hospital-inspection-outcomes"><b>Hospital Inspection Outcomes</b></a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-11094" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11094 nav-item" role="menuitem" aria-labelledby="header-upper-menu-events"><a title="Events" href="https://www.spamedica.co.uk/events/" class="nav-link" id="header-upper-menu-events">Events</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-15744" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15744 nav-item" role="menuitem" aria-labelledby="header-upper-menu-careers"><a title="Careers" href="https://spamedicajobs.co.uk/" class="nav-link" id="header-upper-menu-careers">Careers</a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-92" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-92 nav-item" role="menuitem" aria-labelledby="header-upper-menu-contact"><a title="Contact" href="https://www.spamedica.co.uk/contact/" class="nav-link" id="header-upper-menu-contact">Contact</a></li>
+</ul>                                        <a href="https://www.spamedica.co.uk/search/" class="search-anchor d-none d-lg-block"><img src="https://www.spamedica.co.uk/wp-content/themes/spamedica/include/images/search-icon.svg" alt="Search our website" width="25" height="25"></a>
+                                        <button class="font-sizer"><span>A</span><span>A</span><span>A</span></button>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-lower d-flex align-items-center">
+        <nav class="navbar navbar-expand-xl">
+            <div class="container">
+                <a class="navbar-brand" href="https://www.spamedica.co.uk/"><img src="https://www.spamedica.co.uk/wp-content/uploads/2022/11/logo.svg" alt="SpaMedica Logo" width="247" height="53" /></a>                <a href="https://www.spamedica.co.uk/search/" class="search-anchor d-block d-lg-none"><img src="https://www.spamedica.co.uk/wp-content/themes/spamedica/include/images/search-icon.svg" alt="Search our website"></a>
+                <button id="trigger" class="navbar-toggler collapsed nav-icon" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainMenu">
+                    <div class="navbar-inside d-flex ml-auto align-items-center">
+                        <ul id="main-nav" class="navbar-nav" role="menu"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-93" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-93 nav-item" role="menuitem" aria-labelledby="header-menu-treatments"><a title="Treatments" href="https://www.spamedica.co.uk/treatments/" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="header-menu-treatments"><b>Treatments</b></a>
+<ul class="dropdown-menu" aria-labelledby="header-menu-treatments" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-859" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-859 nav-item" role="menuitem" aria-labelledby="header-menu-cataracts"><a title="Cataracts" href="https://www.spamedica.co.uk/treatments/cataracts/" class="dropdown-item" id="header-menu-cataracts"><b>Cataracts</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-17020" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17020 nav-item" role="menuitem" aria-labelledby="header-menu-cataracts-see-sooner-package"><a title="Cataracts: See Sooner Package" href="https://www.spamedica.co.uk/see-sooner/" class="dropdown-item" id="header-menu-cataracts-see-sooner-package"><b>Cataracts: See Sooner Package</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-872" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-872 nav-item" role="menuitem" aria-labelledby="header-menu-age-related-macular-degeneration-amd"><a title="Age-related Macular Degeneration (AMD)" href="https://www.spamedica.co.uk/treatments/age-related-macular-degeneration/" class="dropdown-item" id="header-menu-age-related-macular-degeneration-amd"><b>Age-related Macular Degeneration (AMD)</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-14659" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14659 nav-item" role="menuitem" aria-labelledby="header-menu-glaucoma"><a title="Glaucoma" href="https://www.spamedica.co.uk/treatments/glaucoma/" class="dropdown-item" id="header-menu-glaucoma"><b>Glaucoma</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13414" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13414 nav-item" role="menuitem" aria-labelledby="header-menu-diabetic-retinopathy-maculopathy"><a title="Diabetic Retinopathy &#038; Maculopathy" href="https://www.spamedica.co.uk/treatments/diabetic-retinopathy-maculopathy/" class="dropdown-item" id="header-menu-diabetic-retinopathy-maculopathy"><b>Diabetic Retinopathy &#038; Maculopathy</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-13413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13413 nav-item" role="menuitem" aria-labelledby="header-menu-retinal-vein-occlusion"><a title="Retinal Vein Occlusion" href="https://www.spamedica.co.uk/treatments/retinal-vein-occlusion/" class="dropdown-item" id="header-menu-retinal-vein-occlusion"><b>Retinal Vein Occlusion</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-880" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-880 nav-item" role="menuitem" aria-labelledby="header-menu-yag-laser-capsulotomy"><a title="YAG Laser Capsulotomy" href="https://www.spamedica.co.uk/treatments/yag-laser-capsulotomy/" class="dropdown-item" id="header-menu-yag-laser-capsulotomy"><b>YAG Laser Capsulotomy</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-15468" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15468 nav-item" role="menuitem" aria-labelledby="header-menu-oculoplastics"><a title="Oculoplastics" href="https://www.spamedica.co.uk/treatments/oculoplastics/" class="dropdown-item" id="header-menu-oculoplastics"><b>Oculoplastics</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-12454" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12454 nav-item" role="menuitem" aria-labelledby="header-menu-private-treatment"><a title="Private Treatment" href="https://www.spamedica.co.uk/treatments/freedom-vision/" class="dropdown-item" id="header-menu-private-treatment"><b>Private Treatment</b></a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-94 nav-item" role="menuitem" aria-labelledby="header-menu-patient-journey"><a title="Patient Journey" href="https://www.spamedica.co.uk/patient-journey/" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="header-menu-patient-journey"><b>Patient Journey</b></a>
+<ul class="dropdown-menu" aria-labelledby="header-menu-patient-journey" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-11432" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11432 nav-item" role="menuitem" aria-labelledby="header-menu-getting-a-referral-to-spamedica"><a title="Getting a referral to SpaMedica" href="https://www.spamedica.co.uk/patient-journey/getting-a-referral-to-spamedica/" class="dropdown-item" id="header-menu-getting-a-referral-to-spamedica"><b>Getting a referral to SpaMedica</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-864" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-864 nav-item" role="menuitem" aria-labelledby="header-menu-cataract-pre-op-appointment"><a title="Cataract pre-op appointment" href="https://www.spamedica.co.uk/patient-journey/pre-op-appointment/" class="dropdown-item" id="header-menu-cataract-pre-op-appointment"><b>Cataract pre-op appointment</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-372" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-372 nav-item" role="menuitem" aria-labelledby="header-menu-nhs-cataract-surgery"><a title="NHS Cataract surgery" href="https://www.spamedica.co.uk/patient-journey/cataractsurgery/" class="dropdown-item" id="header-menu-nhs-cataract-surgery"><b>NHS Cataract surgery</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-607" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-607 nav-item" role="menuitem" aria-labelledby="header-menu-after-cataract-surgery"><a title="After cataract surgery" href="https://www.spamedica.co.uk/patient-journey/aftercataractsurgery/" class="dropdown-item" id="header-menu-after-cataract-surgery"><b>After cataract surgery</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-893" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-893 nav-item" role="menuitem" aria-labelledby="header-menu-amd-patients"><a title="AMD patients" href="https://www.spamedica.co.uk/patient-journey/amd-patients/" class="dropdown-item" id="header-menu-amd-patients"><b>AMD patients</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-901" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-901 nav-item" role="menuitem" aria-labelledby="header-menu-yag-laser-patients"><a title="YAG laser patients" href="https://www.spamedica.co.uk/patient-journey/yag-laser-patients/" class="dropdown-item" id="header-menu-yag-laser-patients"><b>YAG laser patients</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-9772" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9772 nav-item" role="menuitem" aria-labelledby="header-menu-free-transport-service"><a title="Free transport service" href="https://www.spamedica.co.uk/patient-journey/free-transport-service/" class="dropdown-item" id="header-menu-free-transport-service"><b>Free transport service</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-9814" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9814 nav-item" role="menuitem" aria-labelledby="header-menu-our-consultants"><a title="Our consultants" href="https://www.spamedica.co.uk/patient-journey/our-consultants/" class="dropdown-item" id="header-menu-our-consultants"><b>Our consultants</b></a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-884" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-884 nav-item" role="menuitem" aria-labelledby="header-menu-patient-info"><a title="Patient Info" href="https://www.spamedica.co.uk/patient-information/" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="header-menu-patient-info"><b>Patient Info</b></a>
+<ul class="dropdown-menu" aria-labelledby="header-menu-patient-info" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-16774" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16774 nav-item" role="menuitem" aria-labelledby="header-menu-patient-resources"><a title="Patient Resources" href="https://www.spamedica.co.uk/patient-resources/" class="dropdown-item" id="header-menu-patient-resources"><b>Patient Resources</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-14344" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14344 nav-item" role="menuitem" aria-labelledby="header-menu-sight-support-service"><a title="Sight Support Service" href="https://www.spamedica.co.uk/sight-support-service/" class="dropdown-item" id="header-menu-sight-support-service"><b>Sight Support Service</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-611 nav-item" role="menuitem" aria-labelledby="header-menu-patient-outcomes"><a title="Patient outcomes" href="https://www.spamedica.co.uk/patient-information/patient-outcomes/" class="dropdown-item" id="header-menu-patient-outcomes"><b>Patient outcomes</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-630 nav-item" role="menuitem" aria-labelledby="header-menu-patient-stories"><a title="Patient stories" href="https://www.spamedica.co.uk/patient-information/patient-stories/" class="dropdown-item" id="header-menu-patient-stories"><b>Patient stories</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-609" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-609 nav-item" role="menuitem" aria-labelledby="header-menu-patient-feedback"><a title="Patient feedback" href="https://www.spamedica.co.uk/patient-information/patient-feedback/" class="dropdown-item" id="header-menu-patient-feedback"><b>Patient feedback</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-608" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-608 nav-item" role="menuitem" aria-labelledby="header-menu-privacy-notice"><a title="Privacy notice" href="https://www.spamedica.co.uk/patient-information/privacy-notice/" class="dropdown-item" id="header-menu-privacy-notice"><b>Privacy notice</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-610" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-610 nav-item" role="menuitem" aria-labelledby="header-menu-friends-family-support"><a title="Friends/Family support" href="https://www.spamedica.co.uk/patient-information/how-to-support/" class="dropdown-item" id="header-menu-friends-family-support"><b>Friends/Family support</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-10382" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10382 nav-item" role="menuitem" aria-labelledby="header-menu-covid-patient-guide"><a title="COVID patient guide" href="https://www.spamedica.co.uk/patient-information/covid-patient-guide/" class="dropdown-item" id="header-menu-covid-patient-guide"><b>COVID patient guide</b></a></li>
+</ul>
+</li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95 nav-item" role="menuitem" aria-labelledby="header-menu-locations"><a title="Locations" href="https://www.spamedica.co.uk/locations/" class="nav-link" id="header-menu-locations"><b>Locations</b></a></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-96" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-96 nav-item" role="menuitem" aria-labelledby="header-menu-cataracts-a-z"><a title="Cataracts A-Z" href="https://www.spamedica.co.uk/resources/" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="header-menu-cataracts-a-z"><b>Cataracts A-Z</b></a>
+<ul class="dropdown-menu" aria-labelledby="header-menu-cataracts-a-z" role="menu">
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-668 nav-item" role="menuitem" aria-labelledby="header-menu-a-z-resources"><a title="A-Z Resources" href="https://www.spamedica.co.uk/resources/a-z-resources/" class="dropdown-item" id="header-menu-a-z-resources"><b>A-Z Resources</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-667" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-667 nav-item" role="menuitem" aria-labelledby="header-menu-symptoms"><a title="Symptoms" href="https://www.spamedica.co.uk/resources/symptoms/" class="dropdown-item" id="header-menu-symptoms"><b>Symptoms</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-689" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-689 nav-item" role="menuitem" aria-labelledby="header-menu-diagnosis"><a title="Diagnosis" href="https://www.spamedica.co.uk/resources/diagnosis/" class="dropdown-item" id="header-menu-diagnosis"><b>Diagnosis</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-686" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-686 nav-item" role="menuitem" aria-labelledby="header-menu-cataract-treatment"><a title="Cataract treatment" href="https://www.spamedica.co.uk/resources/cataract-treatment/" class="dropdown-item" id="header-menu-cataract-treatment"><b>Cataract treatment</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-688" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-688 nav-item" role="menuitem" aria-labelledby="header-menu-recovery"><a title="Recovery" href="https://www.spamedica.co.uk/resources/recovery/" class="dropdown-item" id="header-menu-recovery"><b>Recovery</b></a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-687" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-687 nav-item" role="menuitem" aria-labelledby="header-menu-additional-support"><a title="Additional Support" href="https://www.spamedica.co.uk/resources/additionalsupport/" class="dropdown-item" id="header-menu-additional-support"><b>Additional Support</b></a></li>
+</ul>
+</li>
+</ul>                    </div>
+                </div>
+                                <div class="header-lower-social d-none d-md-flex d-lg-flex d-xl-none">
+                    <ul class="header-social-links d-flex">
+                        <li><a href="https://www.facebook.com/SpaMedicaUK/" aria-label="facebook Link" target="_blank" rel="noopener"><i class="fa-classic fa-brands fa-facebook-f" aria-hidden="true"></i></a></li><li><a href="https://www.instagram.com/spamedica_uk/" aria-label="instagram Link" target="_blank" rel="noopener"><i class="fa-classic fa-brands fa-instagram" aria-hidden="true"></i></a></li><li><a href="https://www.linkedin.com/company/spamedica-clinic/" aria-label="linkedin Link" target="_blank" rel="noopener"><i class="fa-classic fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li><li><a href="https://www.youtube.com/@spamedica_uk" aria-label="youtube Link" target="_blank" rel="noopener"><i class="fa-classic fa-brands fa-youtube" aria-hidden="true"></i></a></li>                    </ul>
+                </div>
+                            </div>
+        </nav>
+    </div>
+</header>
+<!--============================== Header End ==============================-->
+<!--============================== Mobile Nav Start ==============================-->
+<div class="mp-pusher d-xl-none" id="mp-pusher">
+    <nav id="mp-menu" class="mp-menu mp-cover">
+        <div class="mp-level" data-level="1">
+            <ul id="menu-mobile-menu" class="mobile-menu" role="menu">
+<li role='menuitem' class='has-submenu  menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children'><a href='https://www.spamedica.co.uk/treatments/' aria-label='Treatments'>Treatments</a>
+<div class='mp-level'><a class='mp-back' href='#' aria-label='back to parent menu'>Treatments</a><div class='menu-btn-parent'><a href='https://www.spamedica.co.uk/treatments/' class='btn btn-outline btn-block' aria-label='Treatments'>Section Overview</a></div>
+<ul class="sub-menu" role="menu">
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/treatments/cataracts/' aria-label='Cataracts'>Cataracts</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/see-sooner/' aria-label='Cataracts: See Sooner Package'>Cataracts: See Sooner Package</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/treatments/age-related-macular-degeneration/' aria-label='Age-related Macular Degeneration (AMD)'>Age-related Macular Degeneration (AMD)</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/treatments/glaucoma/' aria-label='Glaucoma'>Glaucoma</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/treatments/diabetic-retinopathy-maculopathy/' aria-label='Diabetic Retinopathy &#038; Maculopathy'>Diabetic Retinopathy &#038; Maculopathy</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/treatments/retinal-vein-occlusion/' aria-label='Retinal Vein Occlusion'>Retinal Vein Occlusion</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/treatments/yag-laser-capsulotomy/' aria-label='YAG Laser Capsulotomy'>YAG Laser Capsulotomy</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/treatments/oculoplastics/' aria-label='Oculoplastics'>Oculoplastics</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/treatments/freedom-vision/' aria-label='Private Treatment'>Private Treatment</a>
+</li>
+</ul>
+</li>
+
+<li role='menuitem' class='has-submenu  menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children'><a href='https://www.spamedica.co.uk/patient-journey/' aria-label='Patient Journey'>Patient Journey</a>
+<div class='mp-level'><a class='mp-back' href='#' aria-label='back to parent menu'>Patient Journey</a><div class='menu-btn-parent'><a href='https://www.spamedica.co.uk/patient-journey/' class='btn btn-outline btn-block' aria-label='Patient Journey'>Section Overview</a></div>
+<ul class="sub-menu" role="menu">
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/patient-journey/getting-a-referral-to-spamedica/' aria-label='Getting a referral to SpaMedica'>Getting a referral to SpaMedica</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/patient-journey/pre-op-appointment/' aria-label='Cataract pre-op appointment'>Cataract pre-op appointment</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/patient-journey/cataractsurgery/' aria-label='NHS Cataract surgery'>NHS Cataract surgery</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/patient-journey/aftercataractsurgery/' aria-label='After cataract surgery'>After cataract surgery</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/patient-journey/amd-patients/' aria-label='AMD patients'>AMD patients</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/patient-journey/yag-laser-patients/' aria-label='YAG laser patients'>YAG laser patients</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/patient-journey/free-transport-service/' aria-label='Free transport service'>Free transport service</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/patient-journey/our-consultants/' aria-label='Our consultants'>Our consultants</a>
+</li>
+</ul>
+</li>
+
+<li role='menuitem' class='has-submenu  menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children'><a href='https://www.spamedica.co.uk/patient-information/' aria-label='Patient Info'>Patient Info</a>
+<div class='mp-level'><a class='mp-back' href='#' aria-label='back to parent menu'>Patient Info</a><div class='menu-btn-parent'><a href='https://www.spamedica.co.uk/patient-information/' class='btn btn-outline btn-block' aria-label='Patient Info'>Section Overview</a></div>
+<ul class="sub-menu" role="menu">
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/patient-resources/' aria-label='Patient Resources'>Patient Resources</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/sight-support-service/' aria-label='Sight Support Service'>Sight Support Service</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/patient-information/patient-outcomes/' aria-label='Patient outcomes'>Patient outcomes</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/patient-information/patient-stories/' aria-label='Patient stories'>Patient stories</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/patient-information/patient-feedback/' aria-label='Patient feedback'>Patient feedback</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/patient-information/privacy-notice/' aria-label='Privacy notice'>Privacy notice</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/patient-information/how-to-support/' aria-label='Friends/Family support'>Friends/Family support</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/patient-information/covid-patient-guide/' aria-label='COVID patient guide'>COVID patient guide</a>
+</li>
+</ul>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/locations/' aria-label='Locations'>Locations</a>
+</li>
+
+<li role='menuitem' class='has-submenu  menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children'><a href='https://www.spamedica.co.uk/resources/' aria-label='Cataracts A-Z'>Cataracts A-Z</a>
+<div class='mp-level'><a class='mp-back' href='#' aria-label='back to parent menu'>Cataracts A-Z</a><div class='menu-btn-parent'><a href='https://www.spamedica.co.uk/resources/' class='btn btn-outline btn-block' aria-label='Cataracts A-Z'>Section Overview</a></div>
+<ul class="sub-menu" role="menu">
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/resources/a-z-resources/' aria-label='A-Z Resources'>A-Z Resources</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/resources/symptoms/' aria-label='Symptoms'>Symptoms</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/resources/diagnosis/' aria-label='Diagnosis'>Diagnosis</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/resources/cataract-treatment/' aria-label='Cataract treatment'>Cataract treatment</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/resources/recovery/' aria-label='Recovery'>Recovery</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/resources/additionalsupport/' aria-label='Additional Support'>Additional Support</a>
+</li>
+</ul>
+</li>
+</ul>            <ul id="menu-mobile-menu2" class="mobile-menu mobile-menu2" role="menu">
+<li role='menuitem' class='has-submenu  menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children'><a href='https://www.spamedica.co.uk/about-us/' aria-label='About Us'>About Us</a>
+<div class='mp-level'><a class='mp-back' href='#' aria-label='back to parent menu'>About Us</a><div class='menu-btn-parent'><a href='https://www.spamedica.co.uk/about-us/' class='btn btn-outline btn-block' aria-label='About Us'>Section Overview</a></div>
+<ul class="sub-menu" role="menu">
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/about-us/who-we-are/' aria-label='Who we are'>Who we are</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/about-us/ourstory/' aria-label='Our story'>Our story</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/about-us/vision-and-values/' aria-label='Vision and values'>Vision and values</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/about-us/qualityofcare/' aria-label='Our quality of care'>Our quality of care</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/about-us/meet-our-team/' aria-label='Meet our team'>Meet our team</a>
+</li>
+</ul>
+</li>
+
+<li role='menuitem' class='has-submenu  menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children'><a href='https://www.spamedica.co.uk/optometrists/' aria-label='Optometrists'>Optometrists</a>
+<div class='mp-level'><a class='mp-back' href='#' aria-label='back to parent menu'>Optometrists</a><div class='menu-btn-parent'><a href='https://www.spamedica.co.uk/optometrists/' class='btn btn-outline btn-block' aria-label='Optometrists'>Section Overview</a></div>
+<ul class="sub-menu" role="menu">
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/optometrists-nhs-referrals/' aria-label='Optometrists NHS referrals'>Optometrists NHS referrals</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/post-op-accreditation/' aria-label='Post-op accreditation'>Post-op accreditation</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/cpd-training/' aria-label='CPD training'>CPD training</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/optometrists-patient-treatment-booklets/' aria-label='Optometrists patient treatment booklets'>Optometrists patient treatment booklets</a>
+</li>
+</ul>
+</li>
+
+<li role='menuitem' class='has-submenu  menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children'><a href='https://www.spamedica.co.uk/healthcare-professionals/' aria-label='Healthcare Professionals'>Healthcare Professionals</a>
+<div class='mp-level'><a class='mp-back' href='#' aria-label='back to parent menu'>Healthcare Professionals</a><div class='menu-btn-parent'><a href='https://www.spamedica.co.uk/healthcare-professionals/' class='btn btn-outline btn-block' aria-label='Healthcare Professionals'>Section Overview</a></div>
+<ul class="sub-menu" role="menu">
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/healthcare-professionals/cataract-surgery-training/' aria-label='Cataract surgery training'>Cataract surgery training</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/healthcare-professionals/nhs-referrals/' aria-label='Healthcare Professionals NHS referrals'>Healthcare Professionals NHS referrals</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/healthcare-professionals/treatments-we-offer/' aria-label='Treatments we offer'>Treatments we offer</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/healthcare-professionals/healthcare-professionals-patient-treatment-booklets/' aria-label='Healthcare Professionals patient treatment booklets'>Healthcare Professionals patient treatment booklets</a>
+</li>
+</ul>
+</li>
+
+<li role='menuitem' class='has-submenu  menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-has-children'><a href='https://www.spamedica.co.uk/news/' aria-label='News'>News</a>
+<div class='mp-level'><a class='mp-back' href='#' aria-label='back to parent menu'>News</a><div class='menu-btn-parent'><a href='https://www.spamedica.co.uk/news/' class='btn btn-outline btn-block' aria-label='News'>Section Overview</a></div>
+<ul class="sub-menu" role="menu">
+
+<li role='menuitem' class='menu-item menu-item-type-taxonomy menu-item-object-category'><a href='https://www.spamedica.co.uk/category/eye-health/' aria-label='Eye Health'>Eye Health</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-taxonomy menu-item-object-category'><a href='https://www.spamedica.co.uk/category/company-news/' aria-label='Company News'>Company News</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-taxonomy menu-item-object-category'><a href='https://www.spamedica.co.uk/category/industry-news/' aria-label='Industry News'>Industry News</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-taxonomy menu-item-object-category'><a href='https://www.spamedica.co.uk/category/patient-stories/' aria-label='Patient Stories'>Patient Stories</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-taxonomy menu-item-object-category'><a href='https://www.spamedica.co.uk/category/hospital-inspection-outcomes/' aria-label='Hospital Inspection Outcomes'>Hospital Inspection Outcomes</a>
+</li>
+</ul>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-custom menu-item-object-custom'><a href='https://www.spamedica.co.uk/events/' aria-label='Events'>Events</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-custom menu-item-object-custom'><a href='https://spamedicajobs.co.uk/' aria-label='Careers'>Careers</a>
+</li>
+
+<li role='menuitem' class='menu-item menu-item-type-post_type menu-item-object-page'><a href='https://www.spamedica.co.uk/contact/' aria-label='Contact'>Contact</a>
+</li>
+</ul>        </div>
+    </nav>
+</div>
+<!--============================== Mobile Nav End ==============================-->
+<main><!-- =====================  Content Start  ===================== -->
+<div class="error-container content-container more-pad text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0.2s">
+            	<h1>Sorry! Page not found.</h1>
+                <h2><span>404</span></h2>
+                <a href="https://www.spamedica.co.uk/" class="btn btn-default">Return Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =====================  Content End  ===================== -->
+</main><!--============================== Footer Start ==============================-->
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-xl-3 logo-col">
+                <a class="footer-logo" href="https://www.spamedica.co.uk">
+                    <img loading="lazy" src="https://www.spamedica.co.uk/wp-content/uploads/2022/11/footer-logo.svg " alt="spamedica logo"/>
+                </a>
+                <div class="connections-container">
+                    <div class="row">
+                        <div class="veonet-logo footer-logo">
+                            <img width="150" height="150" src="https://www.spamedica.co.uk/wp-content/uploads/2024/02/Veonet_Endorsement_Logo_White_sRGB-1.svg" class="attachment-thumbnail size-thumbnail" alt="Veonet Endorsement Logo White sRGB 1" decoding="async" loading="lazy" />                        </div>
+                        <div class="cqc-logo footer-logo d-sm-none">
+                            <a href="/care-quality-commission/"><img src="/wp-content/themes/spamedica/include/images/cqc_logo.png" width="197" height="93" alt="CQC Regulated"></a>                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 menu-col">
+                <div class="footer-menu-container">
+                    <ul id="menu-footer-menu" class="footer-nav"><li id="menu-item-527" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-527"><a href="https://www.spamedica.co.uk/modern-slavery/">Modern Slavery</a></li>
+<li id="menu-item-12203" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12203"><a href="https://www.spamedica.co.uk/tax-strategy/">Tax Strategy</a></li>
+<li id="menu-item-529" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-529"><a href="https://www.spamedica.co.uk/gender-pay/">Gender Pay</a></li>
+<li id="menu-item-15661" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15661"><a href="https://www.spamedica.co.uk/carbon-reduction/">Carbon Reduction</a></li>
+<li id="menu-item-12050" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12050"><a href="https://www.spamedica.co.uk/medicine-formulary/">Medicine Formulary</a></li>
+<li id="menu-item-12288" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12288"><a href="https://www.spamedica.co.uk/whistleblowing-hotline/">Whistleblowing Hotline</a></li>
+<li id="menu-item-12289" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12289"><a href="https://www.spamedica.co.uk/supplier-code-of-conduct/">Supplier Code of Conduct</a></li>
+<li id="menu-item-13987" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13987"><a href="https://www.spamedica.co.uk/patient-safety-incident-response/">Patient Safety Incident Response</a></li>
+<li id="menu-item-531" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-531"><a href="https://www.spamedica.co.uk/sitemap/">Sitemap</a></li>
+<li id="menu-item-532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-532"><a href="https://www.spamedica.co.uk/terms-and-conditions/">T&#038;Cs</a></li>
+<li id="menu-item-14418" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14418"><a href="https://www.spamedica.co.uk/anti-bribery-and-corruption-management-statement/">Anti-Bribery and Corruption Management Statement</a></li>
+<li id="menu-item-16087" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16087"><a href="https://www.spamedica.co.uk/infection-prevention-annual-report/">Infection Prevention Annual Report</a></li>
+<li id="menu-item-97" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-97"><a rel="privacy-policy" href="https://www.spamedica.co.uk/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-14611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14611"><a href="https://www.spamedica.co.uk/website-accessibility/">Website Accessibility</a></li>
+<li id="menu-item-98" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-98"><a href="https://www.spamedica.co.uk/contact/">Contact</a></li>
+</ul>                </div>
+            </div>
+            <div class="col-12 d-sm-none">
+                                    <ul class="footer-social-links d-flex d-md-none flex-wrap">
+                        <li><a href="https://www.facebook.com/SpaMedicaUK/" aria-label="facebook Link" target="_blank" rel="noopener"><i class="fa-classic fa-brands fa-facebook-f" aria-hidden="true"></i></a></li><li><a href="https://www.instagram.com/spamedica_uk/" aria-label="instagram Link" target="_blank" rel="noopener"><i class="fa-classic fa-brands fa-instagram" aria-hidden="true"></i></a></li><li><a href="https://www.linkedin.com/company/spamedica-clinic/" aria-label="linkedin Link" target="_blank" rel="noopener"><i class="fa-classic fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li><li><a href="https://www.youtube.com/@spamedica_uk" aria-label="youtube Link" target="_blank" rel="noopener"><i class="fa-classic fa-brands fa-youtube" aria-hidden="true"></i></a></li>                    </ul>
+                            </div>
+            <div class="col-12 d-sm-none">
+                <div class="copyright-investors-container">
+                    <div class="footer-investor-logo">
+                        <img loading="lazy" src="https://www.spamedica.co.uk/wp-content/uploads/2022/11/IIP-Platinum.png" alt="investor in people logo">
+                    </div>
+                    <div class="copyright">
+                         <div>© 2026 SpaMedica. <br>Site by <a href="https://thinkeq.co.uk/" target="_blank" rel="noopenner">ThinkEQ</a>.</div>                     </div>
+                </div>
+            </div>
+            <div class="col-12 d-none d-sm-block d-xl-none tablet-footer-bottom">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="cqc-logo footer-logo">
+                            <a href="/care-quality-commission/"><img src="/wp-content/themes/spamedica/include/images/cqc_logo.png" width="197" height="93" alt="CQC Regulated"></a>                        </div>
+                        <div class="copyright">
+                             <div>© 2026 SpaMedica. <br>Site by <a href="https://thinkeq.co.uk/" target="_blank" rel="noopenner">ThinkEQ</a>.</div>                         </div>
+                    </div>
+                    <div class="col-6 d-flex flex-column">
+                                                    <ul class="footer-social-links d-flex flex-wrap">
+                                <li><a href="https://www.facebook.com/SpaMedicaUK/" aria-label="facebook Link" target="_blank" rel="noopener"><i class="fa-classic fa-brands fa-facebook-f" aria-hidden="true"></i></a></li><li><a href="https://www.instagram.com/spamedica_uk/" aria-label="instagram Link" target="_blank" rel="noopener"><i class="fa-classic fa-brands fa-instagram" aria-hidden="true"></i></a></li><li><a href="https://www.linkedin.com/company/spamedica-clinic/" aria-label="linkedin Link" target="_blank" rel="noopener"><i class="fa-classic fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li><li><a href="https://www.youtube.com/@spamedica_uk" aria-label="youtube Link" target="_blank" rel="noopener"><i class="fa-classic fa-brands fa-youtube" aria-hidden="true"></i></a></li>                            </ul>
+                                                <div class="footer-investor-logo">
+                            <img loading="lazy" src="https://www.spamedica.co.uk/wp-content/uploads/2022/11/IIP-Platinum.png" alt="investor in people logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 d-none d-xl-block">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="cqc-logo footer-logo">
+                            <a href="/care-quality-commission/"><img src="/wp-content/themes/spamedica/include/images/cqc_logo.png" width="197" height="93" alt="CQC Regulated"></a>                        </div>
+                    </div>
+                    <div class="col-12">
+                                                    <ul class="footer-social-links d-flex flex-wrap">
+                                <li><a href="https://www.facebook.com/SpaMedicaUK/" aria-label="facebook Link" target="_blank" rel="noopener"><i class="fa-classic fa-brands fa-facebook-f" aria-hidden="true"></i></a></li><li><a href="https://www.instagram.com/spamedica_uk/" aria-label="instagram Link" target="_blank" rel="noopener"><i class="fa-classic fa-brands fa-instagram" aria-hidden="true"></i></a></li><li><a href="https://www.linkedin.com/company/spamedica-clinic/" aria-label="linkedin Link" target="_blank" rel="noopener"><i class="fa-classic fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li><li><a href="https://www.youtube.com/@spamedica_uk" aria-label="youtube Link" target="_blank" rel="noopener"><i class="fa-classic fa-brands fa-youtube" aria-hidden="true"></i></a></li>                            </ul>
+                                            </div>
+                    <div class="col-12">
+                        <div class="footer-investor-logo">
+                            <img loading="lazy" src="https://www.spamedica.co.uk/wp-content/uploads/2022/11/IIP-Platinum.png" alt="investor in people logo">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="copyright">
+                             <div>© 2026 SpaMedica. <br>Site by <a href="https://thinkeq.co.uk/" target="_blank" rel="noopenner">ThinkEQ</a>.</div>                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--============================== Footer End ==============================-->
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/spamedica/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+        <script>
+            function isOldIOSDevice() {
+                const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+                // Check if it's an iOS device
+                const isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+
+                if (!isIOS) return false;
+
+                // Extract iOS version from userAgent
+                const match = userAgent.match(/OS (\d+)_/);
+                if (match && match.length > 1) {
+                    const majorVersion = parseInt(match[1], 10);
+
+                    // Example: Consider iOS 12 and below as old
+                    return majorVersion <= 12;
+                }
+
+                // If version not found, assume not old
+                return false;
+            }
+            if (isOldIOSDevice()) {
+                document.addEventListener('DOMContentLoaded', function() {
+                    setTimeout(() => {
+                        document.querySelectorAll('audio:not(.plyr audio)').forEach(function(audio, index) {
+                            audio.setAttribute('controls', '')
+                        });
+                    }, 3000);
+                });
+            }
+            // ios old devices
+        </script>
+		<svg width="0" height="0" class="h5ap_svg_hidden" style="display: none;">
+			<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.997 511.997" id="exchange">
+				<path d="M467.938 87.164L387.063 5.652c-7.438-7.495-19.531-7.54-27.02-.108s-7.54 19.525-.108 27.014l67.471 68.006-67.42 67.42c-7.464 7.457-7.464 19.557 0 27.014 3.732 3.732 8.616 5.598 13.507 5.598s9.781-1.866 13.513-5.591l80.876-80.876c7.443-7.44 7.463-19.495.056-26.965z"></path>
+				<path d="M455.005 81.509H56.995c-10.552 0-19.104 8.552-19.104 19.104v147.741c0 10.552 8.552 19.104 19.104 19.104s19.104-8.552 19.104-19.104V119.718h378.905c10.552 0 19.104-8.552 19.104-19.104.001-10.552-8.551-19.105-19.103-19.105zM83.964 411.431l67.42-67.413c7.457-7.457 7.464-19.55 0-27.014-7.463-7.464-19.563-7.464-27.02 0l-80.876 80.869c-7.444 7.438-7.47 19.493-.057 26.963l80.876 81.512a19.064 19.064 0 0013.564 5.649c4.865 0 9.731-1.847 13.456-5.54 7.489-7.432 7.54-19.525.108-27.02l-67.471-68.006z"></path>
+				<path d="M454.368 238.166c-10.552 0-19.104 8.552-19.104 19.104v135.005H56.995c-10.552 0-19.104 8.552-19.104 19.104s8.552 19.104 19.104 19.104h397.38c10.552 0 19.104-8.552 19.098-19.104V257.271c-.001-10.552-8.553-19.105-19.105-19.105z"></path>
+			</symbol>
+		</svg>
+		<svg width="0" height="0" class="h5ap_svg_hidden" style="display: none;">
+			<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.88 477.88" id="shuffle">
+				<path d="M472.897 124.269a.892.892 0 01-.03-.031l-.017.017-68.267-68.267c-6.78-6.548-17.584-6.36-24.132.42-6.388 6.614-6.388 17.099 0 23.713l39.151 39.151h-95.334c-65.948.075-119.391 53.518-119.467 119.467-.056 47.105-38.228 85.277-85.333 85.333h-102.4C7.641 324.072 0 331.713 0 341.139s7.641 17.067 17.067 17.067h102.4c65.948-.075 119.391-53.518 119.467-119.467.056-47.105 38.228-85.277 85.333-85.333h95.334l-39.134 39.134c-6.78 6.548-6.968 17.353-.419 24.132 6.548 6.78 17.353 6.968 24.132.419.142-.137.282-.277.419-.419l68.267-68.267c6.674-6.657 6.687-17.463.031-24.136z"></path>
+				<path d="M472.897 329.069l-.03-.03-.017.017-68.267-68.267c-6.78-6.548-17.584-6.36-24.132.42-6.388 6.614-6.388 17.099 0 23.712l39.151 39.151h-95.334a85.209 85.209 0 01-56.9-21.726c-7.081-6.222-17.864-5.525-24.086 1.555-6.14 6.988-5.553 17.605 1.319 23.874a119.28 119.28 0 0079.667 30.43h95.334l-39.134 39.134c-6.78 6.548-6.968 17.352-.42 24.132 6.548 6.78 17.352 6.968 24.132.42.142-.138.282-.277.42-.42l68.267-68.267c6.673-6.656 6.686-17.462.03-24.135zM199.134 149.702a119.28 119.28 0 00-79.667-30.43h-102.4C7.641 119.272 0 126.913 0 136.339s7.641 17.067 17.067 17.067h102.4a85.209 85.209 0 0156.9 21.726c7.081 6.222 17.864 5.525 24.086-1.555 6.14-6.989 5.553-17.606-1.319-23.875z"></path>
+			</symbol>
+		</svg>
+		<script>
+			const single_player = document.querySelectorAll(".h5ap_single_button");
+			single_player.forEach(item => {
+				const audio = item.querySelector("audio");
+				audio.volume = 0.6;
+				item.querySelector('.play').addEventListener("click", function() {
+					single_player.forEach(player => {
+						player.querySelector("audio")?.pause();
+					})
+					setTimeout(() => {
+						audio.currentTime = 0;
+						audio.play();
+					}, 0);
+
+				});
+
+				item.querySelector('.pause').style.display = 'none';
+				item.querySelector('.pause').addEventListener("click", function() {
+					audio.pause();
+				});
+
+				audio.addEventListener("ended", () => {
+					item.querySelector(".play").style.display = 'inline-block';
+					item.querySelector(".pause").style.display = 'none';
+				});
+
+				audio.addEventListener("pause", () => {
+					item.querySelector(".play").style.display = 'inline-block';
+					item.querySelector(".pause").style.display = 'none';
+				});
+				audio.addEventListener("play", () => {
+					item.querySelector(".play").style.display = 'none';
+					item.querySelector(".pause").style.display = 'inline-block';
+				});
+
+			})
+		</script>
+			<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/* ]]> */ </script>        <script data-cfasync="false">
+            window.dFlipLocation = 'https://www.spamedica.co.uk/wp-content/plugins/3d-flipbook-dflip-lite/assets/';
+            window.dFlipWPGlobal = {"text":{"toggleSound":"Turn on\/off Sound","toggleThumbnails":"Toggle Thumbnails","toggleOutline":"Toggle Outline\/Bookmark","previousPage":"Previous Page","nextPage":"Next Page","toggleFullscreen":"Toggle Fullscreen","zoomIn":"Zoom In","zoomOut":"Zoom Out","toggleHelp":"Toggle Help","singlePageMode":"Single Page Mode","doublePageMode":"Double Page Mode","downloadPDFFile":"Download PDF File","gotoFirstPage":"Go to First Page","gotoLastPage":"Go to Last Page","share":"Share","mailSubject":"I wanted you to see this FlipBook","mailBody":"Check out this site {{url}}","loading":"DearFlip: Loading "},"viewerType":"flipbook","moreControls":"download,pageMode,startPage,endPage,sound","hideControls":"","scrollWheel":"false","backgroundColor":"#777","backgroundImage":"","height":"auto","paddingLeft":"20","paddingRight":"20","controlsPosition":"bottom","duration":800,"soundEnable":"true","enableDownload":"true","showSearchControl":"false","showPrintControl":"false","enableAnnotation":false,"enableAnalytics":"false","webgl":"true","hard":"none","maxTextureSize":"1600","rangeChunkSize":"524288","zoomRatio":1.5,"stiffness":3,"pageMode":"0","singlePageMode":"0","pageSize":"0","autoPlay":"false","autoPlayDuration":5000,"autoPlayStart":"false","linkTarget":"2","sharePrefix":"flipbook-"};
+        </script>
+      <script id="tec-user-agent-js" src="https://www.spamedica.co.uk/wp-content/plugins/the-events-calendar/common/build/js/user-agent.js?ver=da75d0bdea6dde3898df"></script>
+<script id="gtm4wp-form-move-tracker-js" src="https://www.spamedica.co.uk/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1.22.3"></script>
+<script id="bootstrap-js" src="https://www.spamedica.co.uk/wp-content/themes/spamedica/include/js/bootstrap.min.js?ver=4.6.0"></script>
+<script id="theme-plugins-js" src="https://www.spamedica.co.uk/wp-content/themes/spamedica/include/js/main.js"></script>
+<script id="google-map-js" src="https://maps.google.com/maps/api/js?key=AIzaSyCe08f8acji-xKySnXw83ggk7LLych77vk"></script>
+<script id="theme-script-js" src="https://www.spamedica.co.uk/wp-content/themes/spamedica/include/js/custom.js?ver=1784034512"></script>
+<script id="dflip-script-js" src="https://www.spamedica.co.uk/wp-content/plugins/3d-flipbook-dflip-lite/assets/js/dflip.min.js?ver=2.4.30"></script>
+<script crossorigin="anonymous" id="acffa_font-awesome-kit-js" src="https://kit.fontawesome.com/759daa86e8.js?ver=99fa4560def637a07ed599782f08f38e"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.spamedica.co.uk/wp-includes/js/wp-emoji-release.min.js?ver=99fa4560def637a07ed599782f08f38e"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://www.spamedica.co.uk/wp-includes/js/wp-emoji-loader.min.js
+</script>
+<script>
+</script>
+</body>
+</html>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/?utm_source=w3tc&utm_medium=footer_comment&utm_campaign=free_plugin
+
+
+Served from: www.spamedica.co.uk @ 2026-07-14 14:08:32 by W3 Total Cache
+-->
