@@ -121,7 +121,19 @@ export async function onRequestGet(context) {
   const robotsUrl = `https://${domain}/robots.txt`;
   const llmsUrl = `https://${domain}/llms.txt`;
 
-  const [robotsRes, llmsRes] = await Promise.all([fetchCapped(robotsUrl), fetchCapped(llmsUrl)]);
+  let [robotsRes, llmsRes] = await Promise.all([fetchCapped(robotsUrl), fetchCapped(llmsUrl)]);
+
+  // Some sites answer only on their www host (the sector indices hit the same thing).
+  // If the apex did not respond at all, retry once on www before calling it unreadable.
+  if (robotsRes.status === 0 && !domain.startsWith('www.')) {
+    const wwwRobots = await fetchCapped(`https://www.${domain}/robots.txt`);
+    if (wwwRobots.status !== 0) {
+      robotsRes = wwwRobots;
+      if (llmsRes.status === 0) {
+        llmsRes = await fetchCapped(`https://www.${domain}/llms.txt`);
+      }
+    }
+  }
 
   const robotsState = classifyState(robotsRes.status, robotsRes.body, true);
   const robotsReadable = robotsState === 'readable';
