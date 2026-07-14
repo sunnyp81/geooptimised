@@ -1,0 +1,1798 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="preconnect" href="https://consentcdn.cookiebot.com" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-M3FXR9W');</script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/content/favicons/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" type="image/x-icon" href="/content/favicons/favicon.ico">
+    <title>404 : Clyde & Co</title>
+
+    
+
+
+
+
+    
+
+
+
+
+    
+<script type="text/javascript">
+    // Function to load Idio scripts after consent
+    function loadIdioScripts() {
+        // Check for Cookiebot consent
+        var hasStatisticsConsent = false;
+        var hasMarketingConsent = false;
+
+        if (typeof Cookiebot !== 'undefined' && Cookiebot.consent) {
+            hasStatisticsConsent = Cookiebot.consent.statistics;
+            hasMarketingConsent = Cookiebot.consent.marketing;
+        }
+
+        // Only load if user has given marketing/statistics consent
+        if (hasStatisticsConsent || hasMarketingConsent) {
+                
+                // Load Idio Analytics (ia.js) - Tracking
+                _iaq = [
+                    ['client', '7c0e512af9f04306ae4e1a650637f3ec'],
+                    ['delivery', 934],
+                    ['track', 'consume']
+                ];
+                !function (d, s) {
+                    var ia = d.createElement(s);
+                    ia.async = 1;
+                    ia.type = 'text/javascript';
+                    ia.setAttribute('data-cookieconsent', 'statistics');
+                    s = d.getElementsByTagName(s)[0];
+                    ia.src = '//s.emea01.idio.episerver.net/ia.js';
+                    s.parentNode.insertBefore(ia, s);
+                }(document, 'script');
+                
+
+            // Load Idio Personalization (ip.js)
+            !function (d, s) {
+                var ip = d.createElement(s);
+                ip.async = 1;
+                ip.type = 'text/javascript';
+                ip.setAttribute('data-cookieconsent', 'marketing');
+                s = d.getElementsByTagName(s)[0];
+                ip.src = '//s.emea01.idio.episerver.net/ip.js';
+                s.parentNode.insertBefore(ip, s);
+            }(document, 'script');
+        }
+    }
+
+    // Wait for Cookiebot to be ready
+    if (typeof Cookiebot !== 'undefined') {
+        // Listen for consent update
+        window.addEventListener('CookiebotOnAccept', function () {
+            loadIdioScripts();
+        }, false);
+
+        // Also listen for consent changes
+        window.addEventListener('CookiebotOnDecline', function () {
+            // User declined - scripts won't load
+        }, false);
+
+        // Check if consent already exists (returning user)
+        if (Cookiebot.consent && (Cookiebot.consent.statistics || Cookiebot.consent.marketing)) {
+            loadIdioScripts();
+        }
+    } else {
+        // Fallback: Wait for DOM to be ready, then check again
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                if (typeof Cookiebot !== 'undefined' && Cookiebot.consent && (Cookiebot.consent.statistics || Cookiebot.consent.marketing)) {
+                    loadIdioScripts();
+                }
+            }, 1000);
+        });
+    }
+</script>
+
+    <link rel="preload" href="/content/fonts/6baaf7d3-5d27-4ca9-bb46-0ab67dcaa099.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/content/fonts/5a5ad8a7-b00d-4df4-9d0c-bf6a185878f0.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="/content/fonts/e8ec1f73-c3ff-42d4-9a17-a53143007a7d.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="/content/fonts/fda83ffc-8862-49d5-8b5d-1c7ae136a6c0.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/content/fonts/eabe8012-9842-48e0-88da-9f8cc6c8ea10.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="/content/fonts/75f7b574-c42b-4d48-a8c0-41865ac72398.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="/content/fonts/6d68a02e-1ccf-48a4-a55c-94047dcd8efd.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/content/fonts/3819f343-025d-468a-b765-0611fe6273d0.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="/content/fonts/d1a34ce2-91f0-48fc-a7a0-e78bc48df983.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="/content/sass/font.css" media="none" onload="if(media!='all')media='all'">
+
+    <link rel="stylesheet" type="text/css" href="/content/sass/main.css?v=2">
+
+    <link rel="stylesheet" type="text/css" href="/content/sass/print.css" media="print">
+    <noscript><link rel="stylesheet" type="text/css" href="/content/sass/font.css"></noscript>
+
+    
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/content/js/mini/old-browsers.min.js"></script>
+    <![endif]-->
+        <link rel="canonical" href="https://www.clydeco.com/404">
+    
+
+</head>
+<body class="nojs">
+        <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M3FXR9W"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+ 
+
+    
+
+
+<header class="header header--dark ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                
+<div class="floatingNavigation d-none d-md-block">
+    
+    <div class="floatingNavigation__wrapper">
+        <a href="#" class="floatingNavigation__section floatingNavigation__hamburgerTrigger" tabindex="-1">
+            <div class="floatingNavigation__hamburger">
+                <i></i>
+                <span class="floatingNavigation__name">Menu</span>
+            </div>
+        </a>
+            <a href="#" class="floatingNavigation__section floatingNavigation__searchTrigger" tabindex="-1">
+                <div class="floatingNavigation__search">
+                    <i></i>
+                    <span class="floatingNavigation__name">Search</span>
+                </div>
+            </a>
+    </div>
+</div>
+
+<nav class="navigation" aria-label="main-nav" id="navigation-main">
+    <div class="navigation__wrap">
+        <div class="navigation__header">
+            <a href="#" class="navigation__close" tabindex="-1">Close</a>
+        </div>
+        <div class="navigation__lists">
+                <ul class="navigation__list" data-menu-id="1">
+                        <li>
+                            <div class="navigation__item ">
+                                    <a href="/en/about-us-clyde-co" class="navigation__link">Who we are</a>
+                                                                    <span data-show-menu="61726"></span>
+                            </div>
+
+
+
+
+
+<ul class="navigation__list navigation__list--children" data-menu-id="61726">
+    <li class="navigation__item navigation__item--back">
+        <span></span>
+        <a href="/en/about-us-clyde-co" class="navigation__link" tabindex="-1">Who we are</a>
+    </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/about-us-clyde-co" class="navigation__link navigation__link--level-2">About Us</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/about/awards" class="navigation__link navigation__link--level-2">Awards</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/about/responsible-business" class="navigation__link navigation__link--level-2">Responsible Business</a>
+                                    </div>
+
+            </li>
+</ul>
+                        </li>
+                        <li>
+                            <div class="navigation__item ">
+                                    <a href="/en/expertise" class="navigation__link">What we do</a>
+                                                                    <span data-show-menu="31357"></span>
+                            </div>
+
+
+
+
+
+<ul class="navigation__list navigation__list--children" data-menu-id="31357">
+    <li class="navigation__item navigation__item--back">
+        <span></span>
+        <a href="/en/expertise" class="navigation__link" tabindex="-1">What we do</a>
+    </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <p class="navigation__link navigation__link--noLink">Global Practice Areas</p>
+                                            <span data-show-menu="85771"></span>
+                </div>
+
+
+
+
+
+<ul class="navigation__list navigation__list--children" data-menu-id="85771">
+    <li class="navigation__item navigation__item--back">
+        <span></span>
+        <a href="" class="navigation__link" tabindex="-1">Global Practice Areas</a>
+    </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/aviation" class="navigation__link navigation__link--level-3">Aviation &amp; Aerospace</a>
+                                            <span data-show-menu="85772"></span>
+                </div>
+
+
+
+
+
+<ul class="navigation__list navigation__list--children" data-menu-id="85772">
+    <li class="navigation__item navigation__item--back">
+        <span></span>
+        <a href="/en/expertise/sectors/aviation" class="navigation__link" tabindex="-1">Aviation &amp; Aerospace</a>
+    </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/aviation/business-jets" class="navigation__link navigation__link--level-4">Business Jets</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/aviation/carrier-liability" class="navigation__link navigation__link--level-4">Carrier Liability</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/aviation/commercial-dispute-resolution" class="navigation__link navigation__link--level-4">Commerical Dispute Resolution</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/aviation/debt-recovery" class="navigation__link navigation__link--level-4">Debt Recovery</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/aviation/emergency-response-and-crisis-management" class="navigation__link navigation__link--level-4">Emergency Response &amp; Crisis Management</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/aviation/finance-leasing" class="navigation__link navigation__link--level-4">Finance &amp; Leasing</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/aviation/fleet-procurement" class="navigation__link navigation__link--level-4">Fleet Procurement</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/aviation/insurance-coverage" class="navigation__link navigation__link--level-4">Insurance Coverage</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/aviation/mro-maintenance-repair-overhaul" class="navigation__link navigation__link--level-4">MRO (Maintenance, Repair &amp; Overhaul)</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/aviation/non-contentious-commercial-aviation" class="navigation__link navigation__link--level-4">Non-Contentious Commercial Aviation</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/aviation/regulatory" class="navigation__link navigation__link--level-4">Regulatory</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/aviation/satellite-space" class="navigation__link navigation__link--level-4">Satellite &amp; Space</a>
+                                    </div>
+
+            </li>
+</ul>
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/corporate-advisory" class="navigation__link navigation__link--level-3">Corporate &amp; Advisory</a>
+                                            <span data-show-menu="85773"></span>
+                </div>
+
+
+
+
+
+<ul class="navigation__list navigation__list--children" data-menu-id="85773">
+    <li class="navigation__item navigation__item--back">
+        <span></span>
+        <a href="/en/expertise/services/corporate-advisory" class="navigation__link" tabindex="-1">Corporate &amp; Advisory</a>
+    </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/commercial" class="navigation__link navigation__link--level-4">Commercial</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/corporate" class="navigation__link navigation__link--level-4">Corporate</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/insurance-reinsurance/corporate-commercial-compliance-insurance" class="navigation__link navigation__link--level-4">Corporate, Commercial and Compliance Insurance</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/data-protection-privacy" class="navigation__link navigation__link--level-4">Data Protection &amp; Privacy</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/employment-pensions-immigration" class="navigation__link navigation__link--level-4">Employment, Pensions &amp; Immigration</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/finance" class="navigation__link navigation__link--level-4">Finance</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/intellectual-property" class="navigation__link navigation__link--level-4">Intellectual Property</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/technology-outsourcing-data" class="navigation__link navigation__link--level-4">Technology, Outsourcing &amp; Data</a>
+                                    </div>
+
+            </li>
+</ul>
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/dispute-resolution" class="navigation__link navigation__link--level-3">Dispute Resolution</a>
+                                            <span data-show-menu="85774"></span>
+                </div>
+
+
+
+
+
+<ul class="navigation__list navigation__list--children" data-menu-id="85774">
+    <li class="navigation__item navigation__item--back">
+        <span></span>
+        <a href="/en/expertise/services/dispute-resolution" class="navigation__link" tabindex="-1">Dispute Resolution</a>
+    </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/international-arbitration" class="navigation__link navigation__link--level-4">International Arbitration</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/commercial-disputes" class="navigation__link navigation__link--level-4">Commercial Disputes</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/dispute-resolution/commercial-litigation" class="navigation__link navigation__link--level-4">Commercial Litigation</a>
+                                    </div>
+
+            </li>
+</ul>
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/energy-marine-trade" class="navigation__link navigation__link--level-3">Energy, Marine &amp; Trade</a>
+                                            <span data-show-menu="85775"></span>
+                </div>
+
+
+
+
+
+<ul class="navigation__list navigation__list--children" data-menu-id="85775">
+    <li class="navigation__item navigation__item--back">
+        <span></span>
+        <a href="/en/expertise/sectors/energy-marine-trade" class="navigation__link" tabindex="-1">Energy, Marine &amp; Trade</a>
+    </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/energy-and-natural-resources" class="navigation__link navigation__link--level-4">Energy &amp; Natural Resources</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/marine" class="navigation__link navigation__link--level-4">Marine</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/trade-and-commodities" class="navigation__link navigation__link--level-4">Trade &amp; Commodities</a>
+                                    </div>
+
+            </li>
+</ul>
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/insurance-reinsurance" class="navigation__link navigation__link--level-3">Insurance</a>
+                                            <span data-show-menu="85776"></span>
+                </div>
+
+
+
+
+
+<ul class="navigation__list navigation__list--children" data-menu-id="85776">
+    <li class="navigation__item navigation__item--back">
+        <span></span>
+        <a href="/en/expertise/sectors/insurance-reinsurance" class="navigation__link" tabindex="-1">Insurance</a>
+    </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/insurance-reinsurance/insurance-specialty/bermuda-form" class="navigation__link navigation__link--level-4">Bermuda Form</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/insurance-reinsurance/casualty" class="navigation__link navigation__link--level-4">Casualty</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/insurance-reinsurance/corporate-commercial-compliance-insurance" class="navigation__link navigation__link--level-4">Corporate, Commercial &amp; Compliance Insurance</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/cyber-risk" class="navigation__link navigation__link--level-4">Cyber Risk</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/insurance-reinsurance/casualty/employers-public-liability" class="navigation__link navigation__link--level-4">Employers&#39; &amp; Public Liability</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/insurance-reinsurance/insurance-employment-practices-liability" class="navigation__link navigation__link--level-4">Employment Practices Liability</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/insurance-reinsurance/energy" class="navigation__link navigation__link--level-4">Energy</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/insurance-reinsurance/insurance-financial-institutions-d-o" class="navigation__link navigation__link--level-4">Financial Institutions, Directors &amp; Officers</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/healthcare" class="navigation__link navigation__link--level-4">Healthcare</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/aviation/insurance-coverage" class="navigation__link navigation__link--level-4">Insurance Coverage</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/marine" class="navigation__link navigation__link--level-4">Marine</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/insurance-reinsurance/insurance-specialty/insurance-specialty-political-risk-trade-credit" class="navigation__link navigation__link--level-4">Political Risk &amp; Trade Credit</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/insurance-reinsurance/insurance-product-liability-recall" class="navigation__link navigation__link--level-4">Product Liability &amp; Recall</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/insurance-reinsurance/insurance-property" class="navigation__link navigation__link--level-4">Property</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/insurance-reinsurance/insurance-reinsurance-claims" class="navigation__link navigation__link--level-4">Reinsurance</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/insurance-reinsurance/insurance-specialty" class="navigation__link navigation__link--level-4">Specialty</a>
+                                    </div>
+
+            </li>
+</ul>
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/projects-and-construction" class="navigation__link navigation__link--level-3">Projects &amp; Construction</a>
+                                            <span data-show-menu="85777"></span>
+                </div>
+
+
+
+
+
+<ul class="navigation__list navigation__list--children" data-menu-id="85777">
+    <li class="navigation__item navigation__item--back">
+        <span></span>
+        <a href="/en/expertise/services/projects-and-construction" class="navigation__link" tabindex="-1">Projects &amp; Construction</a>
+    </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/projects-and-construction/construction-disputes" class="navigation__link navigation__link--level-4">Construction Disputes</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/environmental-law" class="navigation__link navigation__link--level-4">Environmental Law</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/sectors/infrastructure" class="navigation__link navigation__link--level-4">Infrastructure</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/projects-and-construction/projects-and-construction-ppp-pfi" class="navigation__link navigation__link--level-4">PPP/PFI</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/projects-and-construction/public-procurement" class="navigation__link navigation__link--level-4">Public Procurement</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/real-estate" class="navigation__link navigation__link--level-4">Real Estate</a>
+                                    </div>
+
+            </li>
+</ul>
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/regulatory-investigation" class="navigation__link navigation__link--level-3">Regulatory &amp; Investigations</a>
+                                            <span data-show-menu="85778"></span>
+                </div>
+
+
+
+
+
+<ul class="navigation__list navigation__list--children" data-menu-id="85778">
+    <li class="navigation__item navigation__item--back">
+        <span></span>
+        <a href="/en/expertise/services/regulatory-investigation" class="navigation__link" tabindex="-1">Regulatory &amp; Investigations</a>
+    </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/regulatory-investigation/anti-bribery-corruption" class="navigation__link navigation__link--level-4">Anti-Bribery &amp; Corruption</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/regulatory-investigation/compliance" class="navigation__link navigation__link--level-4">Compliance</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/regulatory-investigation/external-investigations" class="navigation__link navigation__link--level-4">External Investigations</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/regulatory-investigation/financial-services" class="navigation__link navigation__link--level-4">Financial Services</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/regulatory-investigation/fraud-white-collar-crime" class="navigation__link navigation__link--level-4">Fraud &amp; White-Collar Crime</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/regulatory-investigation/internal-investigations" class="navigation__link navigation__link--level-4">Internal Investigations</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/regulatory-investigation/professional-services" class="navigation__link navigation__link--level-4">Professional Services</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/services/regulatory-investigation/safety-security-health-environment" class="navigation__link navigation__link--level-4">Safety, Security, Health &amp; Environment</a>
+                                    </div>
+
+            </li>
+</ul>
+            </li>
+</ul>
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise" class="navigation__link navigation__link--level-2">Services</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <p class="navigation__link navigation__link--noLink">Products</p>
+                                            <span data-show-menu="61703"></span>
+                </div>
+
+
+
+
+
+<ul class="navigation__list navigation__list--children" data-menu-id="61703">
+    <li class="navigation__item navigation__item--back">
+        <span></span>
+        <a href="" class="navigation__link" tabindex="-1">Products</a>
+    </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/products/climate-change-quarterly" class="navigation__link navigation__link--level-3">Climate Change Quarterly</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/products/clyde-code" class="navigation__link navigation__link--level-3">Clyde Code</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/products/casualty-innovation" class="navigation__link navigation__link--level-3">Clyde &amp; Co Newton</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/products/disputes-funding" class="navigation__link navigation__link--level-3">Disputes Funding </a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/expertise/products/hr-eco-audit" class="navigation__link navigation__link--level-3">HR Eco Audit</a>
+                                    </div>
+
+            </li>
+</ul>
+            </li>
+</ul>
+                        </li>
+                        <li>
+                            <div class="navigation__item ">
+                                    <a href="/en/insights" class="navigation__link">Insights</a>
+                                                                    <span data-show-menu="31358"></span>
+                            </div>
+
+
+
+
+
+<ul class="navigation__list navigation__list--children" data-menu-id="31358">
+    <li class="navigation__item navigation__item--back">
+        <span></span>
+        <a href="/en/insights" class="navigation__link" tabindex="-1">Insights</a>
+    </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/insights" class="navigation__link navigation__link--level-2">Insights Listing</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/insights/geopolitical-risk-sanctions" class="navigation__link navigation__link--level-2">Geopolitical risk &amp; sanctions</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://connectedworld.clydeco.com/" class="navigation__link navigation__link--level-2">Connected World Blog</a>
+                                    </div>
+
+            </li>
+</ul>
+                        </li>
+                        <li>
+                            <div class="navigation__item ">
+                                    <a href="/en/people" class="navigation__link">Our People</a>
+                                                            </div>
+
+                        </li>
+                        <li>
+                            <div class="navigation__item ">
+                                    <a href="/en/locations" class="navigation__link">Our Locations</a>
+                                                                    <span data-show-menu="31356"></span>
+                            </div>
+
+
+
+
+
+<ul class="navigation__list navigation__list--children" data-menu-id="31356">
+    <li class="navigation__item navigation__item--back">
+        <span></span>
+        <a href="/en/locations" class="navigation__link" tabindex="-1">Our Locations</a>
+    </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/africa" class="navigation__link navigation__link--level-2">Africa</a>
+                                            <span data-show-menu="61697"></span>
+                </div>
+
+
+
+
+
+<ul class="navigation__list navigation__list--children" data-menu-id="61697">
+    <li class="navigation__item navigation__item--back">
+        <span></span>
+        <a href="/en/locations/africa" class="navigation__link" tabindex="-1">Africa</a>
+    </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/africa/accra-associated-office" class="navigation__link navigation__link--level-3">Accra</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/africa/cairo" class="navigation__link navigation__link--level-3">Cairo</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/africa/cape-town" class="navigation__link navigation__link--level-3">Cape Town</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/africa/dar-es-salaam" class="navigation__link navigation__link--level-3">Dar es Salaam</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/africa/johannesburg" class="navigation__link navigation__link--level-3">Johannesburg</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/africa/kumasi-associated-office" class="navigation__link navigation__link--level-3">Kumasi</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/africa/nairobi-associated-office" class="navigation__link navigation__link--level-3">Nairobi</a>
+                                    </div>
+
+            </li>
+</ul>
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/asia-pacific" class="navigation__link navigation__link--level-2">Asia Pacific</a>
+                                            <span data-show-menu="61698"></span>
+                </div>
+
+
+
+
+
+<ul class="navigation__list navigation__list--children" data-menu-id="61698">
+    <li class="navigation__item navigation__item--back">
+        <span></span>
+        <a href="/en/locations/asia-pacific" class="navigation__link" tabindex="-1">Asia Pacific</a>
+    </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/asia-pacific/bangkok" class="navigation__link navigation__link--level-3">Bangkok</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/asia-pacific/beijing" class="navigation__link navigation__link--level-3">Beijing</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/asia-pacific/brisbane" class="navigation__link navigation__link--level-3">Brisbane</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/asia-pacific/chongqing" class="navigation__link navigation__link--level-3">Chongqing</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/asia-pacific/hong-kong" class="navigation__link navigation__link--level-3">Hong Kong</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/asia-pacific/kuala-lumpur-associated-office" class="navigation__link navigation__link--level-3">Kuala Lumpur</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/asia-pacific/melbourne" class="navigation__link navigation__link--level-3">Melbourne</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/asia-pacific/new-delhi" class="navigation__link navigation__link--level-3">New Delhi</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/asia-pacific/perth" class="navigation__link navigation__link--level-3">Perth</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/asia-pacific/shanghai" class="navigation__link navigation__link--level-3">Shanghai</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/asia-pacific/singapore" class="navigation__link navigation__link--level-3">Singapore</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/asia-pacific/sydney" class="navigation__link navigation__link--level-3">Sydney</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/asia-pacific/ulaanbaatar" class="navigation__link navigation__link--level-3">Ulaanbaatar </a>
+                                    </div>
+
+            </li>
+</ul>
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/latin-america" class="navigation__link navigation__link--level-2">Latin America</a>
+                                            <span data-show-menu="84690"></span>
+                </div>
+
+
+
+
+
+<ul class="navigation__list navigation__list--children" data-menu-id="84690">
+    <li class="navigation__item navigation__item--back">
+        <span></span>
+        <a href="/en/locations/latin-america" class="navigation__link" tabindex="-1">Latin America</a>
+    </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/americas/caracas" class="navigation__link navigation__link--level-3">Caracas</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/americas/mexico-city" class="navigation__link navigation__link--level-3">Mexico City</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/latin-america/rio-de-janeiro" class="navigation__link navigation__link--level-3">Rio de Janeiro</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/americas/santiago" class="navigation__link navigation__link--level-3">Santiago</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/americas/sao-paulo" class="navigation__link navigation__link--level-3">Sao Paulo</a>
+                                    </div>
+
+            </li>
+</ul>
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/middle-east" class="navigation__link navigation__link--level-2">Middle East</a>
+                                            <span data-show-menu="61699"></span>
+                </div>
+
+
+
+
+
+<ul class="navigation__list navigation__list--children" data-menu-id="61699">
+    <li class="navigation__item navigation__item--back">
+        <span></span>
+        <a href="/en/locations/middle-east" class="navigation__link" tabindex="-1">Middle East</a>
+    </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/middle-east/abu-dhabi" class="navigation__link navigation__link--level-3">Abu Dhabi</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/middle-east/cairo" class="navigation__link navigation__link--level-3">Cairo</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/middle-east/doha" class="navigation__link navigation__link--level-3">Doha</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/middle-east/dubai" class="navigation__link navigation__link--level-3">Dubai</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/middle-east/jeddah" class="navigation__link navigation__link--level-3">Jeddah</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/middle-east/riyadh" class="navigation__link navigation__link--level-3">Riyadh</a>
+                                    </div>
+
+            </li>
+</ul>
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america" class="navigation__link navigation__link--level-2">North America</a>
+                                            <span data-show-menu="61716"></span>
+                </div>
+
+
+
+
+
+<ul class="navigation__list navigation__list--children" data-menu-id="61716">
+    <li class="navigation__item navigation__item--back">
+        <span></span>
+        <a href="/en/locations/north-america" class="navigation__link" tabindex="-1">North America</a>
+    </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america/atlanta" class="navigation__link navigation__link--level-3">Atlanta</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america/boston" class="navigation__link navigation__link--level-3">Boston </a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america/calgary" class="navigation__link navigation__link--level-3">Calgary</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america/chicago" class="navigation__link navigation__link--level-3">Chicago</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america/dallas" class="navigation__link navigation__link--level-3">Dallas</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america/denver" class="navigation__link navigation__link--level-3">Denver</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america/kansas-city" class="navigation__link navigation__link--level-3">Kansas City</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america/las-vegas" class="navigation__link navigation__link--level-3">Las Vegas</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america/los-angeles" class="navigation__link navigation__link--level-3">Los Angeles</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america/miami" class="navigation__link navigation__link--level-3">Miami</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america/montreal" class="navigation__link navigation__link--level-3">Montr&#233;al</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america/new-jersey" class="navigation__link navigation__link--level-3">New Jersey</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america/new-york" class="navigation__link navigation__link--level-3">New York</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america/northwest-indiana" class="navigation__link navigation__link--level-3">Indianapolis/Northwest Indiana</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america/orange-county" class="navigation__link navigation__link--level-3">Orange County</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america/phoenix" class="navigation__link navigation__link--level-3">Phoenix</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america/san-francisco" class="navigation__link navigation__link--level-3">San Francisco</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america/seattle" class="navigation__link navigation__link--level-3">Seattle</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america/toronto" class="navigation__link navigation__link--level-3">Toronto</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america/vancouver" class="navigation__link navigation__link--level-3">Vancouver</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/north-america/washington-dc" class="navigation__link navigation__link--level-3">Washington, DC</a>
+                                    </div>
+
+            </li>
+</ul>
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe" class="navigation__link navigation__link--level-2">UK &amp; Europe</a>
+                                            <span data-show-menu="61700"></span>
+                </div>
+
+
+
+
+
+<ul class="navigation__list navigation__list--children" data-menu-id="61700">
+    <li class="navigation__item navigation__item--back">
+        <span></span>
+        <a href="/en/locations/uk-europe" class="navigation__link" tabindex="-1">UK &amp; Europe</a>
+    </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/aberdeen" class="navigation__link navigation__link--level-3">Aberdeen</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/belfast" class="navigation__link navigation__link--level-3">Belfast</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/birmingham" class="navigation__link navigation__link--level-3">Birmingham</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/bristol" class="navigation__link navigation__link--level-3">Bristol</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/derry" class="navigation__link navigation__link--level-3">Derry</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/dublin-st-stephens-green" class="navigation__link navigation__link--level-3">Dublin, St Stephens Green House</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/dusseldorf" class="navigation__link navigation__link--level-3">Dusseldorf</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/edinburgh" class="navigation__link navigation__link--level-3">Edinburgh</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/glasgow-george-square" class="navigation__link navigation__link--level-3">Glasgow, G1 Building</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/guildford" class="navigation__link navigation__link--level-3">Guildford</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/hamburg" class="navigation__link navigation__link--level-3">Hamburg</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/liverpool" class="navigation__link navigation__link--level-3">Liverpool</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/london" class="navigation__link navigation__link--level-3">London, The St Botolph Building</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/madrid" class="navigation__link navigation__link--level-3">Madrid</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/manchester-new-bailey" class="navigation__link navigation__link--level-3">Manchester,  2 New Bailey</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/milan" class="navigation__link navigation__link--level-3">Milan</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/munich" class="navigation__link navigation__link--level-3">Munich</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/newcastle" class="navigation__link navigation__link--level-3">Newcastle</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/paris" class="navigation__link navigation__link--level-3">Paris</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/rotterdam" class="navigation__link navigation__link--level-3">Rotterdam</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/southampton" class="navigation__link navigation__link--level-3">Southampton</a>
+                                    </div>
+
+            </li>
+            <li>
+                <div class="navigation__item navigation__item--small">
+                        <a href="https://www.clydeco.com/en/locations/uk-europe/warsaw" class="navigation__link navigation__link--level-3">Warsaw</a>
+                                    </div>
+
+            </li>
+</ul>
+            </li>
+</ul>
+                        </li>
+                        <li>
+                            <div class="navigation__item ">
+                                    <a href="/en/events" class="navigation__link">Events &amp; Webinars</a>
+                                                            </div>
+
+                        </li>
+                        <li>
+                            <div class="navigation__item ">
+                                    <a href="https://careers.clydeco.com/en/" class="navigation__link">Join Clyde &amp; Co</a>
+                                                            </div>
+
+                        </li>
+                        <li>
+                            <div class="navigation__item ">
+                                    <a href="/en/news" class="navigation__link">News</a>
+                                                            </div>
+
+                        </li>
+                        <li>
+                            <div class="navigation__item ">
+                                    <a href="/en/contact-us" class="navigation__link">Contact Us</a>
+                                                            </div>
+
+                        </li>
+                        <li>
+                            <div class="navigation__item ">
+                                    <a href="https://www.linkedin.com/company/clydeco/posts/?feedview=all" class="navigation__link">Join our LinkedIn Community</a>
+                                                            </div>
+
+                        </li>
+                </ul>
+        </div>
+        <div class="navigation__footer d-lg-none">
+<form action="/layout/changeregion" method="get"><input id="regionCurrentPath" name="regionCurrentPath" type="hidden" value="/404?404;https://app-clydeco-web-prod-uksouth-001__594b:80/llms.txt" />                <div class="navigation__selector">
+                    <label for="regionSelectorNavigation" class="navigation__selectorLabel">Choose Region</label>
+                    <select id="regionSelectorNavigation" name="newRegion" class="navigation__selectorInput" onchange="this.form.submit()">
+                        <option >Global</option>
+                            <option selected=&#39;selected&#39; value="dd7c4c3a-ddb4-41dd-b990-6e367db36173">Global</option>
+                            <option  value="252e038f-46a9-46ee-b981-3062de92b75d">Africa</option>
+                            <option  value="d8752d99-efad-4ad6-9138-d4cc257b01f5">Asia Pacific</option>
+                            <option  value="4884ab6d-d9ea-4a55-b9e4-aa6274a45d1d">Latin America</option>
+                            <option  value="0399fa0d-c2ff-42df-b038-4f7c03a1940e">Middle East</option>
+                            <option  value="424c4ac3-9681-4e21-a550-c97c21a6e1ad">North America</option>
+                            <option  value="c6e42d59-1621-4402-9401-27c39755f11d">UK &amp; Europe</option>
+                    </select>
+                </div>
+</form>            <form action="/layout/changelanguage" method="get"><input id="langCurrentPath" name="langCurrentPath" type="hidden" value="/404?404;https://app-clydeco-web-prod-uksouth-001__594b:80/llms.txt" />                    <div class="navigation__selector">
+                        <label for="languageSelectorNavigation" class="navigation__selectorLabel">Choose Language</label>
+                        <select id="languageSelectorNavigation" name="newCultureCode" class="navigation__selectorInput" onchange="this.form.submit()">
+                                <option  value="/zh">中文</option>
+                                <option selected=&#39;selected&#39; value="/en">English</option>
+                                <option  value="/fr">Fran&#231;ais</option>
+                        </select>
+                    </div>
+</form>        </div>
+    </div>
+        <div class="navigation__image" data-bg-src="[{&quot;bp&quot;:0,&quot;url&quot;:&quot;/getmedia/d8d421bf-dd1f-42e8-8a24-62af60dfbf88/7317965-Corporate-Risk-Radar-2026-webpage-homepage-banner-with-framer-1.jpg?width=1920&amp;height=1080&amp;ext=.jpg&quot;}]">
+            <article class="navigation__article">
+                    <p class="navigation__articleCategory">Navigating Risk Without Respite</p>
+                <p class="navigation__articleTitle">Corporate Risk Radar 2026</p>
+                <a href="https://www.clydeco.com/en/reports/2026/06/corporate-risk-radar-2026-navigating-risk-without" class="navigation__articleCta">Read the report</a>
+            </article>
+        </div>
+
+</nav>
+
+<div class="search">
+    <div class="search__wrap">
+        <form method="GET" class="search__header" action="/search-results" id="search">
+            <a href="#" class="navigation__close">Close</a>
+            <input aria-label="Search through site content" class="search__input js-autocomplete main-search" data-culture="en-GB" data-endpoint="/searchinline" id="search" name="search" placeholder="What are you looking for?" type="search" value="" />
+            <input type="submit" class="search__searchIcon js-search-button" value="Search" />
+        </form>
+
+            <ul class="search__list">
+                <li class="search__item">
+                    <h3 class="search__link">Popular search terms</h3>
+                    <p class="search__copy">Click each term to find out more</p>
+                </li>
+                    <li class="search__item">
+                        <a href="/en/insights/risk-quarterly" class="search__link search__link--small">Discover Risk Quarterly</a>
+                    </li>
+                    <li class="search__item">
+                        <a href="https://www.clydeco.com/en/insights/global-risk-insight" class="search__link search__link--small">View our global risk insight</a>
+                    </li>
+                    <li class="search__item">
+                        <a href="https://www.clydeco.com/en/insights/emerging-risks" class="search__link search__link--small">Emerging risk insurance</a>
+                    </li>
+                    <li class="search__item">
+                        <a href="https://www.clydeco.com/en/expertise" class="search__link search__link--small">Our expertise</a>
+                    </li>
+                    <li class="search__item">
+                        <a href="https://www.clydeco.com/en/people" class="search__link search__link--small">Find a Lawyer</a>
+                    </li>
+            </ul>
+    </div>
+    
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-3">
+                <div class="footer__logo" aria-label="Footer logo"></div>
+                <div class="footer__legalText d-none d-lg-block">
+                    <p>Clyde &amp; Co LLP is a limited liability partnership registered in England and Wales. Authorised and regulated by the Solicitors Regulation Authority.<br />
+&copy; Clyde &amp; Co LLP&nbsp;</p>
+
+                </div>
+                <div class="footer__legalText print-only"><p><a href="https://www.clydeco.com/en" target="_blank">clydeco.com</a></p>
+</div>
+                
+
+                    <ul class="footer__socialList d-none d-lg-block hide-print">
+
+                                <li class="footer__socialItem">
+                                    <a href="https://www.linkedin.com/company/clydeco/posts/?feedview=all" class="footer__socialLink">
+                                        <img src="/getattachment/3de64ddc-3cbe-4e1b-bc6e-438d0f8411bb/Linkedin-Icon-Gray-1.png" />
+                                        <span class="sr-only">LinkedIn</span>
+                                    </a>
+                                </li>
+                                <li class="footer__socialItem">
+                                    <a href="https://www.youtube.com/@ClydeCoLaw" class="footer__socialLink">
+                                        <img src="/getattachment/700ef663-7fc2-45cf-8484-9cd6083b7853/Youtube-Icon-Gray-Option-01.png" />
+                                        <span class="sr-only">YouTube</span>
+                                    </a>
+                                </li>
+                    </ul>
+
+                <a href="/en/citrix-login" target="_blank" class="footer__login d-none d-lg-inline-block hide-print">Remote Desktop Services</a>
+            </div>
+
+
+
+                <div class="col-12 col-lg-3 hide-print">
+                    
+                    <ul class="footer__linkList ">
+                        <li class="footer__linkItem">
+                            <h4 class="footer__link footer__link--header" id="footerColumnlink0">Who we are</h4>
+                                <button class="footer__accordionButton" aria-labelledby="footerColumnlink0" type="button" data-toggle="collapse" data-target="#footerColumn0" aria-expanded="false" aria-controls="footerColumn0"></button>
+                                <ul class="footer__linkList footer__linkList--sub collapse" id="footerColumn0">
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/about-us-clyde-co" class="footer__link ">Who we are</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/about/awards" class="footer__link ">Awards</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/about/news" class="footer__link ">News</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/about/responsible-business" class="footer__link ">Responsible Business</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://careers.clydeco.com/en/ " class="footer__link ">Join Clyde &amp; Co</a>
+                                        </li>
+                                </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-3 hide-print">
+                    
+                    <ul class="footer__linkList ">
+                        <li class="footer__linkItem">
+                            <h4 class="footer__link footer__link--header" id="footerColumnlink1">Contact Us</h4>
+                                <button class="footer__accordionButton" aria-labelledby="footerColumnlink1" type="button" data-toggle="collapse" data-target="#footerColumn1" aria-expanded="false" aria-controls="footerColumn1"></button>
+                                <ul class="footer__linkList footer__linkList--sub collapse" id="footerColumn1">
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/emergency" class="footer__link footer__link--alert">Emergencies</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://sites-clydeco.vuturevx.com/13/10005/landing-pages/subscribe.asp" class="footer__link ">Subscribe</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/contact-us" class="footer__link ">Contact us</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/events" class="footer__link ">Events</a>
+                                        </li>
+                                </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-3 hide-print">
+                    
+                    <ul class="footer__linkList footer__linkList--last">
+                        <li class="footer__linkItem">
+                            <h4 class="footer__link footer__link--header" id="footerColumnlink2">Notices</h4>
+                                <button class="footer__accordionButton" aria-labelledby="footerColumnlink2" type="button" data-toggle="collapse" data-target="#footerColumn2" aria-expanded="false" aria-controls="footerColumn2"></button>
+                                <ul class="footer__linkList footer__linkList--sub collapse" id="footerColumn2">
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/legal-and-privacy/legal-notice" class="footer__link ">Legal notices</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/legal-and-privacy/privacy" class="footer__link ">Privacy notice</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/legal-and-privacy/cookies-policy" class="footer__link ">Cookies policy</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/legal-and-privacy/modern-slavery" class="footer__link ">Modern slavery</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/legal-and-privacy/scam-emails" class="footer__link ">Scam emails</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/legal-and-privacy/accessibility" class="footer__link ">Accessibility</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/legal-and-privacy/service-by-email" class="footer__link ">Service by email</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="javascript: Cookiebot.renew()" class="footer__link ">Change your consent</a>
+                                        </li>
+                                </ul>
+                        </li>
+                    </ul>
+                </div>
+            <div class="col-12 d-lg-none hide-print">
+
+                <div class="text-center footer__bottomLinks">
+                        <a href="https://www.clydeco.com/en/#" class="footer__emergencies footer__link--alert">Emergencies</a>
+                    <a href="/en/citrix-login" target="_blank" class="footer__login">Remote Desktop Services</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+
+                <a href="#" class="header__hamburger" aria-controls="navigation-main" tabindex="-1">
+                    <i></i> 
+                    <span class="sr-only">Menu</span>
+                </a>
+                <div class="header__center">
+                    <div class="header__centerContent">
+                        <a href="/en" class="header__logo " title="Clyde &amp; Co." alt="Clyde &amp; Co.">
+                            <span class="sr-only">Clyde &amp; Co.</span>
+                        </a>
+                        <div class="header__divider"></div>
+                    </div>
+                </div>
+                    <a href="#" class="header__search">
+                        <span class="sr-only">Search through site content</span>
+                        <span class="header__searchLabel">What are you looking for?</span>
+                    </a>
+
+                    <div class="float-right dropdown">
+<form action="/layout/changeregion" method="get"><input id="regionCurrentPath" name="regionCurrentPath" type="hidden" value="/404?404;https://app-clydeco-web-prod-uksouth-001__594b:80/llms.txt" />                                <select name="newRegion" class="header__dropdown d-none d-lg-block" onchange="this.form.submit()" aria-label="Change region">
+                                            <option selected=&#39;selected&#39; value="00000000-0000-0000-0000-000000000000">Global</option>
+                                            <option  value="252e038f-46a9-46ee-b981-3062de92b75d">Africa</option>
+                                            <option  value="d8752d99-efad-4ad6-9138-d4cc257b01f5">Asia Pacific</option>
+                                            <option  value="4884ab6d-d9ea-4a55-b9e4-aa6274a45d1d">Latin America</option>
+                                            <option  value="0399fa0d-c2ff-42df-b038-4f7c03a1940e">Middle East</option>
+                                            <option  value="424c4ac3-9681-4e21-a550-c97c21a6e1ad">North America</option>
+                                            <option  value="c6e42d59-1621-4402-9401-27c39755f11d">UK &amp; Europe</option>
+                                </select>
+</form>
+
+<form action="/layout/changelanguage" method="get"><input id="langCurrentPath" name="langCurrentPath" type="hidden" value="/404?404;https://app-clydeco-web-prod-uksouth-001__594b:80/llms.txt" />                                <select class="header__dropdown d-none d-lg-block" name="newCultureCode" onchange="this.form.submit()" aria-label="Change language">
+                                        <option  value="/zh">中文</option>
+                                        <option selected=&#39;selected&#39; value="/en">English</option>
+                                        <option  value="/fr">Fran&#231;ais</option>
+                                </select>
+</form>                    </div>
+                            </div>
+        </div>
+    </div>
+</header>
+
+    
+
+<div class="page-body" role="main">
+
+    <div class="error d-flex align-items-center " data-bg-src="[{&quot;bp&quot;:0,&quot;url&quot;:&quot;/getattachment/3dbee3da-018d-4834-b351-0480274ce510/404?variant=IntroBannerMobileVariant&quot;},{&quot;bp&quot;:991,&quot;url&quot;:&quot;/getattachment/3dbee3da-018d-4834-b351-0480274ce510/404?variant=IntroBannerDesktopVarient&quot;}]">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 offset-lg-2">
+                    <div class="frosted-content  ">
+                        <h4 class="error__heading">404 error</h4>
+                        <h1 class="error__title">Something is missing. </h1>
+                        <div class="error__copy"><p>We&#39;re sorry, the page you are looking for can&#39;t be found. Try using the search bar above to find what you are looking for&nbsp;or click below to return to the&nbsp;Clyde &amp; Co homepage.</p>
+</div>
+                        <a href="/en" class="error__cta button--orange">Go to homepage</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+    
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-3">
+                <div class="footer__logo" aria-label="Footer logo"></div>
+                <div class="footer__legalText d-none d-lg-block">
+                    <p>Clyde &amp; Co LLP is a limited liability partnership registered in England and Wales. Authorised and regulated by the Solicitors Regulation Authority.<br />
+&copy; Clyde &amp; Co LLP&nbsp;</p>
+
+                </div>
+                <div class="footer__legalText print-only"><p><a href="https://www.clydeco.com/en" target="_blank">clydeco.com</a></p>
+</div>
+                
+
+                    <ul class="footer__socialList d-none d-lg-block hide-print">
+
+                                <li class="footer__socialItem">
+                                    <a href="https://www.linkedin.com/company/clydeco/posts/?feedview=all" class="footer__socialLink">
+                                        <img src="/getattachment/3de64ddc-3cbe-4e1b-bc6e-438d0f8411bb/Linkedin-Icon-Gray-1.png" />
+                                        <span class="sr-only">LinkedIn</span>
+                                    </a>
+                                </li>
+                                <li class="footer__socialItem">
+                                    <a href="https://www.youtube.com/@ClydeCoLaw" class="footer__socialLink">
+                                        <img src="/getattachment/700ef663-7fc2-45cf-8484-9cd6083b7853/Youtube-Icon-Gray-Option-01.png" />
+                                        <span class="sr-only">YouTube</span>
+                                    </a>
+                                </li>
+                    </ul>
+
+                <a href="/en/citrix-login" target="_blank" class="footer__login d-none d-lg-inline-block hide-print">Remote Desktop Services</a>
+            </div>
+
+
+
+                <div class="col-12 col-lg-3 hide-print">
+                    
+                    <ul class="footer__linkList ">
+                        <li class="footer__linkItem">
+                            <h4 class="footer__link footer__link--header" id="footerColumnlink0">Who we are</h4>
+                                <button class="footer__accordionButton" aria-labelledby="footerColumnlink0" type="button" data-toggle="collapse" data-target="#footerColumn0" aria-expanded="false" aria-controls="footerColumn0"></button>
+                                <ul class="footer__linkList footer__linkList--sub collapse" id="footerColumn0">
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/about-us-clyde-co" class="footer__link ">Who we are</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/about/awards" class="footer__link ">Awards</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/about/news" class="footer__link ">News</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/about/responsible-business" class="footer__link ">Responsible Business</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://careers.clydeco.com/en/ " class="footer__link ">Join Clyde &amp; Co</a>
+                                        </li>
+                                </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-3 hide-print">
+                    
+                    <ul class="footer__linkList ">
+                        <li class="footer__linkItem">
+                            <h4 class="footer__link footer__link--header" id="footerColumnlink1">Contact Us</h4>
+                                <button class="footer__accordionButton" aria-labelledby="footerColumnlink1" type="button" data-toggle="collapse" data-target="#footerColumn1" aria-expanded="false" aria-controls="footerColumn1"></button>
+                                <ul class="footer__linkList footer__linkList--sub collapse" id="footerColumn1">
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/emergency" class="footer__link footer__link--alert">Emergencies</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://sites-clydeco.vuturevx.com/13/10005/landing-pages/subscribe.asp" class="footer__link ">Subscribe</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/contact-us" class="footer__link ">Contact us</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/events" class="footer__link ">Events</a>
+                                        </li>
+                                </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-3 hide-print">
+                    
+                    <ul class="footer__linkList footer__linkList--last">
+                        <li class="footer__linkItem">
+                            <h4 class="footer__link footer__link--header" id="footerColumnlink2">Notices</h4>
+                                <button class="footer__accordionButton" aria-labelledby="footerColumnlink2" type="button" data-toggle="collapse" data-target="#footerColumn2" aria-expanded="false" aria-controls="footerColumn2"></button>
+                                <ul class="footer__linkList footer__linkList--sub collapse" id="footerColumn2">
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/legal-and-privacy/legal-notice" class="footer__link ">Legal notices</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/legal-and-privacy/privacy" class="footer__link ">Privacy notice</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/legal-and-privacy/cookies-policy" class="footer__link ">Cookies policy</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/legal-and-privacy/modern-slavery" class="footer__link ">Modern slavery</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/legal-and-privacy/scam-emails" class="footer__link ">Scam emails</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/legal-and-privacy/accessibility" class="footer__link ">Accessibility</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="https://www.clydeco.com/en/legal-and-privacy/service-by-email" class="footer__link ">Service by email</a>
+                                        </li>
+                                        <li class="footer__linkItem">
+                                            <a href="javascript: Cookiebot.renew()" class="footer__link ">Change your consent</a>
+                                        </li>
+                                </ul>
+                        </li>
+                    </ul>
+                </div>
+            <div class="col-12 d-lg-none hide-print">
+
+                <div class="text-center footer__bottomLinks">
+                        <a href="https://www.clydeco.com/en/#" class="footer__emergencies footer__link--alert">Emergencies</a>
+                    <a href="/en/citrix-login" target="_blank" class="footer__login">Remote Desktop Services</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+
+
+    <script type="text/javascript" src="/kentico.resource/activities/kenticoactivitylogger/logger.js?pageIdentifier=30593" async></script>
+
+    
+
+    
+        <script type="text/javascript" src="/content/js/mini/vendor.min.js"></script>
+
+    <input name="__Kentico_DC_Page" type="hidden" value="gFU+ISFHmVuMsOU0x+cZMl4m/EqgccHOPsLXiN5q86eQ5mZtkhfIAob2l82e61gnR2Bm72NOsbmhLJNk+GKjeA==" />
+
+    <script type="text/javascript" src="/content/js/mini/main.min.js"></script>
+    
+    <script type="text/javascript" src="/content/js/cookie-consent-iframes.js?v=2"></script>
+    <script type="text/javascript" src="/content/js/iframe-guard.js"></script>
+    <link type="text/css" rel="stylesheet" href="/content/css/cookie-consent.css" />
+</body>
+</html>

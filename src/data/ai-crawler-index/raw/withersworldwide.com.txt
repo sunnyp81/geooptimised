@@ -1,0 +1,26 @@
+User-agent: *
+Disallow: /api/
+
+User-agent: bytespider
+Disallow: /
+
+Sitemap: https://www.withersworldwide.com/sitemap.xml
+
+# Block AhrefsBot and AhrefsSiteAudit
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: AhrefsSiteAudit
+Disallow: /
+
+Disallow: /person/generatevcard*
+
+# ---- ALLOWED PDFs (explicit allow-list) ----
+
+Allow: /getattachment/9149ee9b-d2d6-4c24-b663-11e7239cedd7/Hong-Kong-Com-RE-inv-bro-A4-DIGITAL-4mar2026.pdf
+Allow: /getattachment/9395426c-9355-4096-9f1d-d90db480a854/Jap-Com-RE-inv-masthead-A4-DIGITAL-4mar2026.pdf
+Allow: /getattachment/ef04b8c7-6b49-4018-97c5-4cb33774ab8b/China-Com-RE-inv-bro-A4-DIGITAL-3mar2026.pdf
+
+# ---- BLOCK ALL OTHER PDFs ----
+Disallow: /*.pdf$
+``

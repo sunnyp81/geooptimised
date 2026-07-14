@@ -1,0 +1,4 @@
+Sitemap: https://www.freeths.co.uk/support-pages/site-map/xml/
+User-agent: *
+Disallow: * /search-results/*
+Disallow: */people/*=*

@@ -430,6 +430,72 @@
         "note": "We fetched the Capgemini release and confirmed the 58% wording, the up-from-25% comparison, the 12,000-consumer sample, the countries and the dates. Graded MISLEADING because the claim as circulated attributes the number to the wrong company and presents a stated-preference survey as measured behaviour. The underlying Capgemini number is real."
       },
       "tags": ["market", "misattribution", "survey"]
+    },
+    {
+      "id": "gptbot-blocking-2023",
+      "claim": "A large and growing share of the biggest websites block AI crawlers such as GPTBot via robots.txt.",
+      "grade": "DIRECTIONAL",
+      "flags": ["VENDOR-INTERESTED"],
+      "verdict": "True and measured once, in September 2023. We could not reproduce a current figure; the live dashboard behind it is not a citable static source.",
+      "source": {
+        "publisher": "Search Engine Land (Danny Goodwin), citing Originality.ai",
+        "title": "26% of the top 100 websites are now blocking GPTBot",
+        "url": "https://searchengineland.com/more-popular-websites-blocking-gptbot-432531",
+        "published": "2023-09-27",
+        "sample": "Top 1,000 most popular websites by traffic; 67 robots.txt files could not be inspected"
+      },
+      "quote": "242 of the top 1,000 websites are now blocking GPTBot, a 250% increase since last month, when just 69 of the top 1,000 websites had blocked GPTBot.",
+      "whatTheSourceActuallySays": "As of 27 September 2023, 26% of the top 100 websites and roughly 24% (242 of 1,000) of the top 1,000 websites blocked OpenAI's GPTBot in robots.txt, up from 69 sites (about 7%) the previous month. Pinterest, The Washington Post and NPR were among sites that added the block that month. This is a single dated snapshot, not a running series we can update ourselves: Originality.ai now presents the current figure on a live, JavaScript-rendered dashboard rather than a dated static report, so we cannot fetch and verify a current percentage the way we verified this one. Treat this as evidence that meaningful blocking exists and grew fast in the crawler's first two months, not as today's number.",
+      "reproduction": {
+        "status": "reproduced",
+        "checkedOn": "2026-07-14",
+        "note": "We fetched the Search Engine Land article and confirmed the 26% (top 100), the 242-of-1,000 figure, the prior month's 69-site count, the named sites and the 27 September 2023 date. Graded DIRECTIONAL rather than VERIFIED because the number is nearly three years stale by the site's own admission and later Originality.ai figures we found only in AI-generated search summaries (not a page we could fetch and check ourselves) claim considerably higher percentages by 2024 to 2026, which we are not willing to print without reading them off a primary page directly. Originality.ai sells AI-detection and monitoring tools, so the underlying research is vendor-interested."
+      },
+      "tags": ["technical", "crawlability", "stale-snapshot"]
+    },
+    {
+      "id": "seo-term-origin-contested",
+      "claim": "The term 'search engine optimization' was coined in 1997, generally credited to Bruce Clay or John Audette.",
+      "grade": "MISLEADING",
+      "flags": [],
+      "verdict": "That 1997 date is what circulates. A separate, named, first-hand account puts the coining two years earlier, and the two versions have never been reconciled.",
+      "source": {
+        "publisher": "Search Engine Land (Bob Heyman)",
+        "title": "Who Coined The Term SEO?",
+        "url": "https://searchengineland.com/who-coined-the-term-seo-14916",
+        "published": "2008-10-02",
+        "sample": "first-hand account, corroborated by the 1997 book Net Results (Heyman and Harden)"
+      },
+      "quote": "Bob and Leland Harden called this new field Search Engine Optimization and soon thereafter hired the first SEOM (Search Engine Optimization Manager). And so SEO was born.",
+      "whatTheSourceActuallySays": "Bob Heyman, writing in his own name, states that he and Leland Harden coined the term while working on the Jefferson Starship website in the summer of 1995, and documented it in their 1997 book Net Results. This directly contradicts the more commonly repeated story, popularised by Danny Sullivan in 2004, that credits Bruce Clay or John Audette around 1997. Heyman's piece was written partly to rebut a third, separate 2008 trademark claim by Jason Gambert, who wrongly asserted he invented the term in 2007. Three named parties, three dates, and no independent adjudicator: this is a live, unresolved attribution dispute, not a settled fact with one accepted answer.",
+      "reproduction": {
+        "status": "partial",
+        "checkedOn": "2026-07-14",
+        "note": "We fetched the Search Engine Land piece and confirmed Heyman's 1995 claim, the Net Results citation and the Gambert rebuttal exactly as stated. We did not independently verify Danny Sullivan's competing 1997 Bruce Clay and John Audette attribution against its own primary source, so we cannot say which account is correct, only that more than one credible, named account exists and popular retellings pick one without disclosing the dispute."
+      },
+      "tags": ["terminology", "contested-history"]
+    },
+    {
+      "id": "aeo-term-coined-2018",
+      "claim": "Answer engine optimisation (AEO) was coined by Jason Barnard in a Trustpilot white paper in January 2018.",
+      "grade": "UNREPRODUCED",
+      "flags": ["VENDOR-INTERESTED"],
+      "verdict": "The self-published source describing this contradicts its own headline on the date, and does not itself state that Barnard coined the term.",
+      "source": {
+        "publisher": "Jason Barnard / Kalicube",
+        "title": "The Trustpilot White Paper that Started Answer Engine Optimization",
+        "url": "https://jasonbarnard.com/digital-marketing/conferences/offline/the-trustpilot-white-paper-that-started-answer-engine-optimization/",
+        "published": "2017-04-01 (page date; text references 2018 events, unreconciled)",
+        "sample": "single self-published retrospective article"
+      },
+      "quote": "",
+      "whatTheSourceActuallySays": "The article credits a Barnard-Trustpilot collaboration with laying 'the intellectual foundation of what would later become Answer Engine Optimization (AEO)', and references a BrightonSEO 2018 talk titled 'A Universal Strategy for Answer Engine Optimisation (Beyond Position 0)'. It does not explicitly state that Barnard or Trustpilot coined the phrase, only that the underlying research preceded the label's later use. The page itself carries a 1 April 2017 publish date while its body text places the events in 'early 2018', a contradiction we could not resolve from the page. We found no independent, non-Kalicube source corroborating January 2018 as the coining date.",
+      "reproduction": {
+        "status": "failed",
+        "checkedOn": "2026-07-14",
+        "note": "We fetched the primary self-published source directly. It does not support the specific claim as it circulates in secondary write-ups (that Barnard 'coined' AEO in January 2018 via a named white paper), and it contains an internal date inconsistency we could not reconcile. Kalicube sells AEO and entity-optimisation consulting services, so the attribution is vendor-interested. We grade UNREPRODUCED rather than UNTRACEABLE because a named, dated, self-published source does exist; it just does not say what is claimed of it."
+      },
+      "tags": ["terminology", "contested-history"]
     }
   ]
 }

@@ -1,0 +1,17 @@
+User-agent: *
+Sitemap: https://www.freshfields.com/sitemapindex.xml
+Disallow: /Ui/CMS/
+Disallow: /Util/
+Disallow: *search-page/
+Disallow: /en/blogs/
+Disallow: /de/blogs/
+Disallow: /ja/blogs/
+Disallow: /zh/blogs/
+Disallow: /globalassets/about-us/rb/freshfields-stephen-lawrence-scholarship/assets/
+Disallow: /globalassets/noindex/
+
+User-agent: SemrushBot
+Allow: /
+
+User-agent: SemrushBot-SA
+Allow: /

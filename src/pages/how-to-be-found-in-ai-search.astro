@@ -1,0 +1,195 @@
+---
+import Base from '../layouts/Base.astro';
+import ClaimCard from '../components/ClaimCard.astro';
+import claimsData from '../data/claims.json';
+
+const byId = (id: string) => claimsData.claims.find(c => c.id === id);
+
+const evidenced = ['citations-outside-top-10', 'mentions-beat-backlinks', 'ghost-citations'].map(byId).filter(Boolean);
+const refuted = ['schema-boosts-citations', 'long-form-cited-more'].map(byId).filter(Boolean);
+
+const title = 'How to be found in AI search: what is evidenced, what is guessed, what is refuted';
+const description = 'What actually determines whether ChatGPT, Perplexity, Google AI Overviews or Claude mention or cite a brand, sorted strictly into what large studies show, what is plausible but unproven, and what is popular but contradicted by the source it cites.';
+
+const faq = [
+  {
+    q: 'What actually determines whether AI assistants mention a brand?',
+    a: 'Three things with real, sourced evidence behind them: whether a source is already mentioned across the web independent of your own site (mentions correlate with AI Overview visibility more strongly than backlinks, Ahrefs found, at Spearman 0.664 versus 0.218), whether it is cited at all regardless of whether the brand is named in the answer text (Semrush found 61.7% of citations name no brand), and whether it sits in the retrieval surface AI systems now draw from, which Ahrefs found has moved away from Google\'s organic top 10. None of these are levers you pull once. They describe a position you are already in or are not.',
+  },
+  {
+    q: 'Does adding schema markup help AI assistants cite a page?',
+    a: 'Ahrefs tested this directly on 1,885 pages against 4,000 matched controls and found no meaningful uplift on any platform measured, and a small, statistically significant decline on Google AI Overviews. Schema is not evidenced to increase citation. It remains useful for other reasons, principally that it helps machines parse a page correctly, but "add schema to get cited more" does not survive the study that tested it.',
+  },
+  {
+    q: 'Does long-form content get cited more often?',
+    a: 'No. Ahrefs analysed 560,346 AI Overviews and 1,677,876 cited URLs and found a Spearman correlation of 0.04 between word count and citation, effectively zero. Over half of cited pages were under 1,000 words. The belief that AI systems reward exhaustive long-form guides is not supported by the largest dataset we could find that tested it.',
+  },
+  {
+    q: 'Is there a reliable way to measure whether it is working?',
+    a: 'Not yet, and this is the honest caveat that belongs on every page in this cluster. The same prompt returns the same list of brands under 1 time in 100 across repeated runs, and only 2.37% of cited URLs appear across all three major AI engines. A single "AI visibility" score is measuring something close to noise. See the full treatment on the measurement page linked below.',
+  },
+];
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'How to be found in AI search', item: 'https://geooptimised.com/how-to-be-found-in-ai-search/' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    datePublished: '2026-07-14',
+    dateModified: '2026-07-14',
+    author: { '@type': 'Person', '@id': 'https://geooptimised.com/#sunny-patel', name: 'Sunny Patel' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  },
+];
+---
+<Base title={title} description={description} schema={schema} ogType="article">
+  <article>
+    <header class="wrap pt-14 pb-8">
+      <nav aria-label="Breadcrumb" class="data text-[0.7rem] uppercase tracking-widest mb-6" style="color: var(--muted);">
+        <a href="/">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text);">How to be found in AI search</span>
+      </nav>
+      <h1 class="font-display font-bold text-[2.2rem] sm:text-[3rem] leading-[1.06] max-w-[22ch]">
+        How to be found in AI search
+      </h1>
+      <p class="mt-4 data text-[0.72rem]" style="color: var(--muted);">
+        By Sunny Patel &middot; 14 July 2026 &middot; Every statistic below is graded and sourced
+      </p>
+    </header>
+
+    <!-- Extractable answer, first screen, engineered to be lifted whole. -->
+    <section class="wrap pb-10">
+      <div class="border-l-4 pl-6 py-1 max-w-[66ch]" style="border-color: var(--accent);">
+        <p class="font-display text-[1.32rem] leading-snug" style="color: var(--text);">
+          What determines whether an AI assistant mentions or cites a brand splits into three unequal piles: a
+          small set of things measured in large studies, a larger set of things that sound plausible and are
+          repeated constantly with no study behind them, and a set of popular tactics that a real study tested
+          and found did not work. Most guides do not tell you which pile a claim is in. This page sorts them.
+        </p>
+      </div>
+    </section>
+
+    <section class="prose-wrap pb-16 copy">
+      <h2>What is evidenced</h2>
+      <p>
+        Three findings survive contact with their own primary sources, each from a large, disclosed sample. None
+        of them is a switch you flip. They describe a position, built over time, that either exists or does not.
+      </p>
+    </section>
+
+    <section class="wrap pb-16">
+      <div class="grid gap-6 lg:grid-cols-1 max-w-[46rem]">
+        {evidenced.map(c => c && <div class="fade-up"><ClaimCard claim={c} compact={true} /></div>)}
+      </div>
+    </section>
+
+    <section class="prose-wrap pb-16 copy">
+      <p>
+        Read together, these three studies point at the same underlying position: being <strong>mentioned</strong>
+        by third parties, independent of anything you publish yourself, correlates with AI visibility more than
+        classic ranking signals like backlinks do; being <strong>cited</strong> as a source does not guarantee your
+        <strong>brand name</strong> appears in the answer text, so citation and mention are not the same outcome
+        and both matter; and the retrieval surface AI systems draw from has moved measurably away from Google's
+        organic top 10, which means ranking for your target query addresses a shrinking share of where citations
+        now originate.
+      </p>
+
+      <h2>What is plausible but unproven</h2>
+      <p>
+        These ideas are repeated constantly, sound reasonable, and have no traceable study behind the specific
+        claim. That does not make them false. It means nobody, including this site, has evidence that they are
+        true, and anyone stating them as settled fact is going beyond what is known.
+      </p>
+      <ul>
+        <li>
+          <strong>Adding an llms.txt file improves citation odds.</strong> No study we can find demonstrates this.
+          Google's John Mueller has said no AI service has confirmed using the file at all.
+          <a class="link" href="/evidence/#llms-txt-helps">Graded UNTRACEABLE</a>.
+        </li>
+        <li>
+          <strong>Entity presence in a knowledge base helps beyond what mentions already measure.</strong> Plausible
+          given how these systems retrieve information, but we found no controlled study isolating a knowledge-graph
+          or entity-database effect separate from the general web-mentions correlation Ahrefs measured. Treat this
+          as a reasonable hypothesis, not a finding.
+        </li>
+        <li>
+          <strong>A 40% visibility boost from generative engine optimisation.</strong> This is the field's most
+          quoted statistic, from a real, peer-reviewed paper. It measured a research benchmark the same authors
+          built, not a commercial AI assistant. Read the
+          <a class="link" href="/the-40-percent-claim/">full anatomy of the claim</a>.
+          <a class="link" href="/evidence/#forty-percent">Graded MISLEADING</a>.
+        </li>
+      </ul>
+
+      <h2>What is repeated but refuted</h2>
+      <p>
+        These are the tactics where someone actually ran the experiment, and the result contradicts the popular
+        advice. This is the most useful pile on this page, because it is where following common guidance costs
+        you effort for no measured benefit.
+      </p>
+    </section>
+
+    <section class="wrap pb-16">
+      <div class="grid gap-6 lg:grid-cols-2 max-w-[70rem]">
+        {refuted.map(c => c && <div class="fade-up"><ClaimCard claim={c} compact={true} /></div>)}
+      </div>
+    </section>
+
+    <section class="prose-wrap pb-24 copy">
+      <p>
+        Neither study was published by a party with an incentive to find a null result. Ahrefs sells rank tracking,
+        not schema tooling or a word-count optimiser, and if anything stood to gain from a tidy positive finding on
+        either question, it was Ahrefs. It did not find one, on 1,885 treated pages for schema and 1.68 million
+        cited URLs for word count.
+      </p>
+
+      <h2>The honest summary</h2>
+      <p>
+        The evidenced factors are about being independently corroborated across the web and sitting inside a
+        retrieval surface that has moved beyond top-10 organic rank. The unproven factors are mostly technical
+        tactics (a file, a schema tag, a markup change) that are easy to sell as a discrete deliverable and easy to
+        implement without evidence they matter. The refuted factors are exactly the tactics that look like classic
+        SEO homework carried over unchanged. If a recommendation in this field is easy to bill for and hard to
+        measure, that correlation is itself worth noticing.
+      </p>
+      <p>
+        If your brand is not being mentioned at all, start with
+        <a class="link" href="/why-ai-doesnt-mention-your-brand/">the diagnostic walkthrough</a>, which grades each
+        possible cause by evidence strength rather than guessing. For the vocabulary this page uses, see
+        <a class="link" href="/ai-visibility-explained/">AI visibility, GEO, AEO and SEO, explained</a>. For why a
+        single visibility score cannot currently be trusted, see
+        <a class="link" href="/can-you-measure-ai-visibility/">can you measure AI visibility?</a>.
+      </p>
+
+      <h2>Common questions</h2>
+      {faq.map(f => (
+        <>
+          <h3>{f.q}</h3>
+          <p>{f.a}</p>
+        </>
+      ))}
+
+      <div class="rule mt-12 pt-8">
+        <p class="text-[0.95rem]" style="color: var(--muted);">
+          Every statistic on this page is graded against its primary source in the
+          <a class="link" href="/evidence/">evidence ledger</a>, including the ones that did not hold up. We sell no
+          GEO services. Our commercial interest in every tool we name is published on
+          <a class="link" href="/who-pays-us/">who pays us</a>.
+        </p>
+      </div>
+    </section>
+  </article>
+</Base>

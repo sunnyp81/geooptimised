@@ -1,0 +1,85 @@
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /404
+Disallow: /500
+Disallow: /page-not-found
+Disallow: /internal-server-error
+Disallow: /en/services/indigenous-law
+Disallow: /pleasedonotpublish
+Disallow: /copy-of-newservices1
+Disallow: /marketplaceapps/incrementalindexing
+Disallow: /_next/
+ 
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /404
+Disallow: /500
+Disallow: /page-not-found
+Disallow: /internal-server-error
+Disallow: /pleasedonotpublish
+Disallow: /copy-of-newservices1
+Disallow: /marketplaceapps/incrementalindexing
+Disallow: /_next/
+
+ 
+# Block non-essential bots entirely
+User-agent: AhrefsBot
+Disallow: /
+ 
+User-agent: DataForSeoBot
+Disallow: /
+ 
+User-agent: Bytespider
+Disallow: /
+ 
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+Disallow: /404
+Disallow: /500
+Disallow: /page-not-found
+Disallow: /internal-server-error
+Disallow: /pleasedonotpublish
+Disallow: /copy-of-newservices1
+Disallow: /marketplaceapps/incrementalindexing
+Disallow: /_next/
+ 
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+Disallow: /404
+Disallow: /500
+Disallow: /page-not-found
+Disallow: /internal-server-error
+Disallow: /pleasedonotpublish
+Disallow: /copy-of-newservices1
+Disallow: /marketplaceapps/incrementalindexing
+Disallow: /_next/
+ 
+User-agent: SemrushBot
+Allow: /
+Disallow: /api/
+Disallow: /404
+Disallow: /500
+Disallow: /page-not-found
+Disallow: /internal-server-error
+Disallow: /pleasedonotpublish
+Disallow: /copy-of-newservices1
+Disallow: /marketplaceapps/incrementalindexing
+Disallow: /_next/
+ 
+# Default for all other bots
+User-agent: *
+Disallow: /api/
+Disallow: /_next/
+Disallow: /404
+Disallow: /500
+Disallow: /page-not-found
+Disallow: /internal-server-error
+Disallow: /pleasedonotpublish
+Disallow: /copy-of-newservices1
+Disallow: /marketplaceapps/incrementalindexing
+Crawl-delay: 10
+Sitemap: https://gowlingwlg.com/sitemap.xml

@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /admin
+Disallow: /search
+Disallow: /*?*
+Disallow: /*.vcf$
+Crawl-delay: 3
+
+Host: https://gateleyplc.com
+Sitemap: https://gateleyplc.com/sitemap.xml
+

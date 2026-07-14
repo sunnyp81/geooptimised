@@ -1,0 +1,1052 @@
+ 
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head prefix="my_namespace: http://ogp.me/ns/website#">
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="context-country-code" content="" />
+
+    <title>404 Not Found | Taylor Wessing</title>
+
+
+    <meta property="og:title" content="404 Not Found | Taylor Wessing" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.taylorwessing.com/en/errorpages/404"/>
+<meta name="Description" content="" />
+<meta name="Keywords" content="" />
+<meta name="referrer" content="no-referrer-when-downgrade" />        <meta name="robots" content="noindex">
+    <link rel="canonical" href="https://www.taylorwessing.com/en/errorpages/404" />
+
+
+    <link href="https://www.taylorwessing.com/assets/dist/css/app.min.css?ver=3BD7C2EED810DA02C661C92077D87D0277D7E93DFCD3385A4A6B07B6110105A5" rel="stylesheet" media="screen" />
+<link href="https://www.taylorwessing.com/assets/dist/css/print.min.css?ver=30FBA76DE9DACB38CD7F215E87E79D82C3DACC3D5C066DCDCFF834525E942559" rel="stylesheet" media="print" />
+
+    <script src="https://www.taylorwessing.com/assets/dist/js/jquery.tw.min.js?ver=374025833772D94F5555A7904B82C9AA5ADB33D5022353C93D9F109E0E73D441" type="text/javascript"></script>
+
+    
+
+    <!--Manually adding sitecore form js (instead of RenderFormScripts) due to jQuery conflict-->
+    
+    <script src="/sitecore%20modules/Web/ExperienceForms/scripts/jquery.validate.min.js"></script>
+
+        <script src="/sitecore%20modules/Web/ExperienceForms/scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="b20939b7-db60-460b-b2ee-441938ed143a" data-blockingmode="auto" type="text/javascript" defer></script>
+<script type="text/plain" data-cookieconsent="marketing" src="https://cdn.optimizely.com/js/27617570016.js"></script>
+<!-- Google Tag Manager -->
+<script type="text/plain" data-cookieconsent="statistics">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5HS35NL');</script>
+<!-- End Google Tag Manager -->
+<meta name="google-site-verification" content="XaixqBUbP46q4c36UXTqHpHuJDTaxe4NjqCWjbP4NFg" />
+    
+    <script type="text/javascript">
+        !(function (cfg){function e(){cfg.onInit&&cfg.onInit(n)}var x,w,D,t,E,n,C=window,O=document,b=C.location,q="script",I="ingestionendpoint",L="disableExceptionTracking",j="ai.device.";"instrumentationKey"[x="toLowerCase"](),w="crossOrigin",D="POST",t="appInsightsSDK",E=cfg.name||"appInsights",(cfg.name||C[t])&&(C[t]=E),n=C[E]||function(g){var f=!1,m=!1,h={initialize:!0,queue:[],sv:"8",version:2,config:g};function v(e,t){var n={},i="Browser";function a(e){e=""+e;return 1===e.length?"0"+e:e}return n[j+"id"]=i[x](),n[j+"type"]=i,n["ai.operation.name"]=b&&b.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(h.sv||h.version),{time:(i=new Date).getUTCFullYear()+"-"+a(1+i.getUTCMonth())+"-"+a(i.getUTCDate())+"T"+a(i.getUTCHours())+":"+a(i.getUTCMinutes())+":"+a(i.getUTCSeconds())+"."+(i.getUTCMilliseconds()/1e3).toFixed(3).slice(2,5)+"Z",iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}},ver:undefined,seq:"1",aiDataContract:undefined}}var n,i,t,a,y=-1,T=0,S=["js.monitor.azure.com","js.cdn.applicationinsights.io","js.cdn.monitor.azure.com","js0.cdn.applicationinsights.io","js0.cdn.monitor.azure.com","js2.cdn.applicationinsights.io","js2.cdn.monitor.azure.com","az416426.vo.msecnd.net"],o=g.url||cfg.src,r=function(){return s(o,null)};function s(d,t){if((n=navigator)&&(~(n=(n.userAgent||"").toLowerCase()).indexOf("msie")||~n.indexOf("trident/"))&&~d.indexOf("ai.3")&&(d=d.replace(/(\/)(ai\.3\.)([^\d]*)$/,function(e,t,n){return t+"ai.2"+n})),!1!==cfg.cr)for(var e=0;e<S.length;e++)if(0<d.indexOf(S[e])){y=e;break}var n,i=function(e){var a,t,n,i,o,r,s,c,u,l;h.queue=[],m||(0<=y&&T+1<S.length?(a=(y+T+1)%S.length,p(d.replace(/^(.*\/\/)([\w\.]*)(\/.*)$/,function(e,t,n,i){return t+S[a]+i})),T+=1):(f=m=!0,s=d,!0!==cfg.dle&&(c=(t=function(){var e,t={},n=g.connectionString;if(n)for(var i=n.split(";"),a=0;a<i.length;a++){var o=i[a].split("=");2===o.length&&(t[o[0][x]()]=o[1])}return t[I]||(e=(n=t.endpointsuffix)?t.location:null,t[I]="https://"+(e?e+".":"")+"dc."+(n||"services.visualstudio.com")),t}()).instrumentationkey||g.instrumentationKey||"",t=(t=(t=t[I])&&"/"===t.slice(-1)?t.slice(0,-1):t)?t+"/v2/track":g.endpointUrl,t=g.userOverrideEndpointUrl||t,(n=[]).push((i="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",o=s,u=t,(l=(r=v(c,"Exception")).data).baseType="ExceptionData",l.baseData.exceptions=[{typeName:"SDKLoadFailed",message:i.replace(/\./g,"-"),hasFullStack:!1,stack:i+"\nSnippet failed to load ["+o+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(b&&b.pathname||"_unknown_")+"\nEndpoint: "+u,parsedStack:[]}],r)),n.push((l=s,i=t,(u=(o=v(c,"Message")).data).baseType="MessageData",(r=u.baseData).message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+l+")").replace(/\"/g,"")+'"',r.properties={endpoint:i},o)),s=n,c=t,JSON&&((u=C.fetch)&&!cfg.useXhr?u(c,{method:D,body:JSON.stringify(s),mode:"cors"}):XMLHttpRequest&&((l=new XMLHttpRequest).open(D,c),l.setRequestHeader("Content-type","application/json"),l.send(JSON.stringify(s)))))))},a=function(e,t){m||setTimeout(function(){!t&&h.core||i()},500),f=!1},p=function(e){var n=O.createElement(q),e=(n.src=e,t&&(n.integrity=t),n.setAttribute("data-ai-name",E),cfg[w]);return!e&&""!==e||"undefined"==n[w]||(n[w]=e),n.onload=a,n.onerror=i,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||a(0,t)},cfg.ld&&cfg.ld<0?O.getElementsByTagName("head")[0].appendChild(n):setTimeout(function(){O.getElementsByTagName(q)[0].parentNode.appendChild(n)},cfg.ld||0),n};p(d)}cfg.sri&&(n=o.match(/^((http[s]?:\/\/.*\/)\w+(\.\d+){1,5})\.(([\w]+\.){0,2}js)$/))&&6===n.length?(d="".concat(n[1],".integrity.json"),i="@".concat(n[4]),l=window.fetch,t=function(e){if(!e.ext||!e.ext[i]||!e.ext[i].file)throw Error("Error Loading JSON response");var t=e.ext[i].integrity||null;s(o=n[2]+e.ext[i].file,t)},l&&!cfg.useXhr?l(d,{method:"GET",mode:"cors"}).then(function(e){return e.json()["catch"](function(){return{}})}).then(t)["catch"](r):XMLHttpRequest&&((a=new XMLHttpRequest).open("GET",d),a.onreadystatechange=function(){if(a.readyState===XMLHttpRequest.DONE)if(200===a.status)try{t(JSON.parse(a.responseText))}catch(e){r()}else r()},a.send())):o&&r();try{h.cookie=O.cookie}catch(k){}function e(e){for(;e.length;)!function(t){h[t]=function(){var e=arguments;f||h.queue.push(function(){h[t].apply(h,e)})}}(e.pop())}var c,u,l="track",d="TrackPage",p="TrackEvent",l=(e([l+"Event",l+"PageView",l+"Exception",l+"Trace",l+"DependencyData",l+"Metric",l+"PageViewPerformance","start"+d,"stop"+d,"start"+p,"stop"+p,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),h.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4},(g.extensionConfig||{}).ApplicationInsightsAnalytics||{});return!0!==g[L]&&!0!==l[L]&&(e(["_"+(c="onerror")]),u=C[c],C[c]=function(e,t,n,i,a){var o=u&&u(e,t,n,i,a);return!0!==o&&h["_"+c]({message:e,url:t,lineNumber:n,columnNumber:i,error:a,evt:C.event}),o},g.autoExceptionInstrumented=!0),h}(cfg.cfg),(C[E]=n).queue&&0===n.queue.length?(n.queue.push(e),n.trackPageView({})):e();})({
+          src: "https://js.monitor.azure.com/scripts/b/ai.3.gbl.min.js",
+          // name: "appInsights", // Global SDK Instance name defaults to "appInsights" when not supplied
+          // ld: 0, // Defines the load delay (in ms) before attempting to load the sdk. -1 = block page load and add to head. (default) = 0ms load after timeout,
+          // useXhr: 1, // Use XHR instead of fetch to report failures (if available),
+          // dle: true, // Prevent the SDK from reporting load failure log
+          crossOrigin: "anonymous", // When supplied this will add the provided value as the cross origin attribute on the script tag
+          // onInit: null, // Once the application insights instance has loaded and initialized this callback function will be called with 1 argument -- the sdk instance (DON'T ADD anything to the sdk.queue -- As they won't get called)
+          // sri: false, // Custom optional value to specify whether fetching the snippet from integrity file and do integrity check
+          cfg: { // Application Insights Configuration
+              instrumentationKey: "83307743-97f5-4c6e-9188-58a442f5bc4a"
+            }});
+    </script>
+
+    <!-- Favicons - Generic -->
+    <link rel="icon" href="/Assets/dist/favicons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" href="/Assets/dist/favicons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="/Assets/dist/favicons/favicon-57x57.png" sizes="57x57" />
+    <link rel="icon" href="/Assets/dist/favicons/favicon-70x70.png" sizes="70x70" />
+    <link rel="icon" href="/Assets/dist/favicons/favicon-72x72.png" sizes="72x72" />
+    <link rel="icon" href="/Assets/dist/favicons/favicon-76x76.png" sizes="76x76" />
+    <link rel="icon" href="/Assets/dist/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" href="/Assets/dist/favicons/favicon-152x152.png" sizes="152x152" />
+    <link rel="icon" href="/Assets/dist/favicons/favicon-310x310.png" sizes="310x310" />
+
+    <!-- Favicons - Android -->
+    <link rel="shortcut icon" href="/Assets/dist/favicons/favicon-310x310.png" sizes="310x310" />
+
+    <!-- Favicon - iOS -->
+    <link rel="apple-touch-icon" href="/Assets/dist/favicons/favicon-120x120.png" sizes="120x120" />
+    <link rel="apple-touch-icon" href="/Assets/dist/favicons/favicon-152x152.png" sizes="152x152" />
+    <link rel="apple-touch-icon" href="/Assets/dist/favicons/favicon-310x310.png" sizes="310x310" />
+
+    <!-- Favicon - Windows 8 IE 10-->
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="/Assets/dist/favicons/favicon-144x144.png" />
+
+    <!-- Windows 8.1 + IE11 and above -->
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Organization","name":"Taylor Wessing","url":"https://www.taylorwessing.com","logo":{"@type":"ImageObject","url":"https://www.taylorwessing.com/-/media/taylor-wessing/images/identity/logo.svg?as=0\u0026dmc=0\u0026iar=0\u0026thn=0\u0026udi=0","caption":"Taylor Wessing Company Logo"}}; 
+</script> 
+
+
+    <body class="" 
+          data-page-type="General 404 Page" 
+          >
+        
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe data-cookieblock-src="https://www.googletagmanager.com/ns.html?id=GTM-5HS35NL" data-cookieconsent="statistics"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->        <div class="section section--main-wrapper">
+            <nav class="section section--navbar">
+    <div class="container">
+        
+<a class="navbar--brand" aria-label="Taylor Wessing" href="/en/">
+    <svg xmlns="http://www.w3.org/2000/svg" width="172" height="33" viewBox="0 0 172 33">
+  <defs>
+    <filter id="a" width="101.7%" height="126.1%" x="0" y="0" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1" />
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2" />
+      <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+      <feMerge>
+        <feMergeNode in="shadowMatrixOuter1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <path fill="#0F1C44" fill-rule="evenodd" d="M124.279 19.488c-3.642 0-5.647-1.693-5.647-4.77v-.309l.156-.154h2.725l.157.154v.31c0 1.317.908 2.037 2.609 2.037 2.24 0 2.609-.838 2.609-1.498 0-1.174-.722-1.42-3.463-1.961-3.126-.617-4.521-1.92-4.521-4.226 0-.93.387-3.96 5.375-3.96 3.317 0 5.377 1.62 5.377 4.228v.309l-.158.155h-2.723l-.157-.155v-.309c0-.928-.862-1.499-2.34-1.499-1.998 0-2.336.695-2.336 1.23 0 1.179 1.022 1.425 3.74 1.962 2.976.588 4.247 1.851 4.247 4.226 0 2.044-1.484 4.23-5.65 4.23zm-96.79 4.706h-.858l-.158-.154v-2.5l.158-.155h.818c1.325 0 2.07-.231 2.582-1.493l.241-.596v-.277L25.657 7.763V5.535l.157-.155h2.155l.159.156 3.686 9.615h.345l3.685-9.616L36 5.38h2.156l.157.155v2.227l-.014.035-4.632 11.434c-1.636 4.036-2.79 4.963-6.178 4.963zm84.332-4.706c-3.641 0-5.647-1.693-5.647-4.77v-.309l.157-.154h2.723l.158.154v.31c0 1.317.908 2.037 2.609 2.037 2.24 0 2.61-.838 2.61-1.498 0-1.174-.723-1.42-3.465-1.961-3.125-.617-4.52-1.92-4.52-4.226 0-.93.388-3.96 5.375-3.96 3.317 0 5.378 1.62 5.378 4.228v.309l-.158.155h-2.723l-.158-.155v-.309c0-.928-.862-1.499-2.34-1.499-1.998 0-2.335.695-2.335 1.23 0 1.179 1.02 1.425 3.738 1.962 2.978.588 4.248 1.851 4.248 4.226 0 2.044-1.484 4.23-5.65 4.23zm37.413-.269h-2.805l-.158-.155v-8.11c0-1.413-.287-3.034-2.526-3.034-2.347 0-3.348 1.31-3.348 4.378v6.766l-.157.155h-2.946l-.157-.155V5.534l.157-.154h2.947l.156.155v1.202h.252c.397-.56 1.674-1.626 3.368-1.626 3.517 0 5.375 2.02 5.375 5.842v8.11l-.158.156zm-61.386 0h-2.922l-.158-.155-3.957-13.725h-.299L76.56 19.064l-.158.155H73.48l-.156-.155-.073-.26-4.367-16.353V.155L69.04 0h2.187l.158.156 3.404 13.184h.33L79.05.155 79.207 0h2.91l.157.156.076.253 3.854 12.931h.332L89.886.363l.053-.208.158-.155h2.185l.158.156-.006 2.32-4.428 16.588-.158.155zm-25.094 0H59.95l-.157-.155V5.534l.157-.154h2.804l.158.155v1.202h.302c.71-.672 1.598-1.357 3.315-1.357h1.403l.157.155v2.499l-.157.155h-1.675c-2.008 0-3.345.653-3.345 3.84v7.035l-.158.155zm-19.782 0h-2.804l-.158-.155V.154L40.167 0h2.805l.158.156v18.908l-.158.155zm-33.742 0H6.425l-.157-.155V3.194l-.389-.385H.157L0 2.655v-2.5L.157 0h15.339l.158.157v2.497l-.156.155H9.775l-.387.384v15.87l-.158.156zm148.206 5.649c-3.175 0-5.337-1.51-5.645-3.937l-.041-.307.186-.182h2.695l.138.136c.015.046.118.241.118.241.468.924 1.112 1.316 2.549 1.316 2.21 0 3.305-1.459 3.345-4.295-.319.41-1.46 1.648-3.618 1.648-3.761 0-6.193-2.822-6.193-7.19 0-4.366 2.432-7.187 6.193-7.187 1.783 0 2.97 1.137 3.375 1.626h.244V5.535l.157-.155h2.805l.158.155v11.874c0 6.732-4.523 7.459-6.466 7.459zm0-16.948c-2.126 0-3.345 1.595-3.345 4.378 0 2.783 1.219 4.377 3.345 4.377 2.22 0 3.346-1.471 3.346-4.377 0-2.691-1.126-4.378-3.346-4.378zM51.46 19.488c-4.156 0-6.736-2.755-6.736-7.19 0-4.433 2.58-7.187 6.736-7.187S58.2 7.865 58.2 12.298c0 4.435-2.582 7.19-6.738 7.19zm0-11.648c-2.333 0-3.618 1.635-3.618 4.458 0 2.823 1.285 4.458 3.618 4.458 2.332 0 3.617-1.635 3.617-4.458 0-2.823-1.285-4.458-3.617-4.458zM17.445 19.488c-3.07 0-4.831-1.64-4.831-4.5 0-2.86 2.258-4.499 6.193-4.499.92 0 1.782.132 2.216.214l.31-.308v-.248c0-1.686-.612-2.307-2.526-2.307-2.24 0-2.527.839-2.527 1.5v.308l-.158.155h-2.805l-.157-.155v-.309c0-2.044 1.483-4.228 5.647-4.228 4.011 0 5.647 1.77 5.647 6.112v7.84l-.157.156h-2.683l-.158-.155v-1.187h-.203c-.32.407-1.415 1.61-3.808 1.61zm1.634-6.457c-2.22 0-3.345.66-3.345 1.957 0 1.183.674 1.687 2.255 1.687 2.032 0 3.345-.978 3.345-2.495v-.628l-.312-.309c-.303-.075-.988-.212-1.943-.212zm79.765 6.457c-2.13 0-3.878-.71-5.054-2.052-1.102-1.256-1.684-3.033-1.684-5.138 0-2.03.533-3.769 1.542-5.03 1.13-1.412 2.831-2.157 4.923-2.157 2.091 0 3.794.745 4.925 2.158 1.007 1.26 1.54 3 1.54 5.03v1.035l-.238.236h-9.142l-.155.153c.024.485.296 3.033 3.343 3.033.902 0 2.006-.25 2.54-1.57l.098-.237.158-.156h2.733l.158.156-.042.332c-.265 2.095-2.113 4.207-5.645 4.207zm-3.147-8.46h5.75l.196-.194c-.018-.791-.32-2.994-3.072-2.994-2.526 0-2.988 1.902-3.06 2.813.002-.02-.01.077-.012.18l.198.195zm41.44 7.564v.472-.472zm-5.317.627h2.805l.158-.155V5.534l-.158-.154h-2.806l-.157.155v13.529l.158.155zm-.158-15.756l.158.154h2.805l.158-.154V.693l-.158-.155h-2.806l-.157.155v2.77zm20.114 17.356c-.006-.033-.01-.066-.014-.1l-.012-.095.026.195z" filter="url(#a)" transform="translate(4 2)" />
+</svg>
+</a>
+
+        
+    <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar--nav">
+                        <li class="navbar--item">
+                            <a class="navbar--link navbar--top" href="/en/about-us" target="">
+                                About us
+                            </a>
+                        </li>
+                        <li class="navbar--item">
+                            <a class="navbar--link navbar--top" href="/en/people" target="">
+                                People
+                            </a>
+                        </li>
+                        <li class="navbar--item">
+                            <a class="navbar--link navbar--submenu" href="#" id="Expertise-button" aria-controls="Expertise-menu" aria-expanded="false">Expertise</a>
+
+                                <ul class="navbar--dropdown__primary" id="Expertise-menu" aria-labelledby="Expertise-button">
+                                            <li class="navbar--section">
+                                                <a class="navbar--link" href="#">Sectors</a>
+                                                <ul>
+                                                    
+
+                                                        <li>
+                                                                <ul class="navbar--dropdown__tertiary">
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/sectors/technology-media-and-communications" target="">
+                                                                                    <img src="/-/media/taylor-wessing/images/navigation/icon-tmc.svg?" alt="Technology, media &amp; communications" loading="lazy" />
+                                                                                <span class="navbar--link__text">Technology, media & communications</span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/sectors/private-wealth" target="">
+                                                                                    <img src="/-/media/taylor-wessing/images/navigation/2206_pw-icon_blue_rgb.svg?" alt="Private Wealth" loading="lazy" />
+                                                                                <span class="navbar--link__text">Private wealth</span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/sectors/real-estate-infrastructure-and-energy" target="">
+                                                                                    <img src="/-/media/taylor-wessing/images/navigation/icon-reie.svg?" alt="" loading="lazy" />
+                                                                                <span class="navbar--link__text">Real estate, infrastructure & energy</span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/sectors/life-sciences-and-healthcare" target="">
+                                                                                    <img src="/-/media/taylor-wessing/images/navigation/life-sciences-and-healthcare-icon.svg?" alt="Life sciences &amp; healthcare icon" loading="lazy" />
+                                                                                <span class="navbar--link__text">Life sciences & healthcare</span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/sectors/private-equity" target="">
+                                                                                    <img src="/-/media/taylor-wessing/images/navigation/tw_private_equity_icon_rev_new.svg?" alt="" loading="lazy" />
+                                                                                <span class="navbar--link__text">Private equity</span>
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                                                                                            <ul class="navbar--dropdown__secondary">
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/sectors/aerospace-and-defence" target="">
+                                                                                Aerospace & defence
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/sectors/automotive" target="">
+                                                                                Automotive & mobility
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/sectors/business-and-professional-services" target="">
+                                                                                Business & professional services
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/sectors/chemicals" target="">
+                                                                                Chemicals
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/sectors/consumer-and-retail" target="">
+                                                                                Consumer & retail
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/sectors/financial-institutions" target="">
+                                                                                Financial institutions & insurance
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/sectors/hotels-and-leisure" target="">
+                                                                                Hotels, hospitality & leisure
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/sectors/logistics-and-transport" target="">
+                                                                                Logistics & transport
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/sectors/manufacturing-and-industrials" target="">
+                                                                                Manufacturing & industrials
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/sectors/public-services-and-education" target="">
+                                                                                Public services & education
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                                                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="navbar--section">
+                                                <a class="navbar--link" href="#">Legal services</a>
+                                                <ul>
+                                                    
+
+                                                        <li>
+                                                                                                                            <ul class="navbar--dropdown__secondary">
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/artificial-intelligence" target="">
+                                                                                Artificial intelligence
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/banking-and-finance" target="">
+                                                                                Banking & finance
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/brands-and-advertising" target="">
+                                                                                Brands & advertising
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/commercial-and-consumer-contracts" target="">
+                                                                                Commercial & consumer contracts
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/competition-eu-and-trade" target="">
+                                                                                Competition, EU & trade
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/copyright-and-media-law" target="">
+                                                                                Copyright & media law
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/corporate-crime-and-compliance" target="">
+                                                                                Corporate crime & compliance
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/corporate-m-a-and-capital-markets" target="">
+                                                                                Corporate/M&A & capital markets
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/data-and-cyber" target="">
+                                                                                Data & cyber
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/disputes-and-investigations" target="">
+                                                                                Disputes & investigations
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/employment-pensions-and-mobility" target="">
+                                                                                Employment, pensions & mobility
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/environmental-planning-and-regulatory" target="">
+                                                                                Environmental, planning & regulatory
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/esg" target="">
+                                                                                Environmental, social & governance (ESG)
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/intellectual-property" target="">
+                                                                                Intellectual property
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/information-technology" target="">
+                                                                                Information technology
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/patents-and-innovation" target="">
+                                                                                Patents & innovation
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/private-client" target="">
+                                                                                Private client
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/projects-energy-and-infrastructure" target="">
+                                                                                Projects, energy & infrastructure
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/real-estate-and-construction" target="">
+                                                                                Real estate & construction
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/regulation" target="">
+                                                                                Regulation
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/restructuring-and-insolvency" target="">
+                                                                                Restructuring & insolvency
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/tax" target="">
+                                                                                Tax
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/expertise/services/venture-capital" target="">
+                                                                                Venture capital
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                                                                                    </li>
+                                                </ul>
+                                            </li>
+                                </ul>
+                        </li>
+                        <li class="navbar--item">
+                            <a class="navbar--link navbar--submenu" href="#" id="Locations-button" aria-controls="Locations-menu" aria-expanded="false">Locations</a>
+
+                                <ul class="navbar--dropdown__primary" id="Locations-menu" aria-labelledby="Locations-button">
+                                            <li class="navbar--section">
+                                                <a class="navbar--link" href="#">Europe</a>
+                                                <ul>
+                                                    
+
+                                                        <li class="">
+
+                                                                    <ul class="navbar--dropdown__quarternary">
+                                                                        <span class="tag">Our locations and our partner firm&#39;s locations</span>
+
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/austria" target="">
+                                                                                        Austria
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/belgium" target="">
+                                                                                        Belgium
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/czech-republic" target="">
+                                                                                        Czech Republic
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/france" target="">
+                                                                                        France
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/germany" target="">
+                                                                                        Germany
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/hungary" target="">
+                                                                                        Hungary
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/italy" target="">
+                                                                                        Italy
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/netherlands" target="">
+                                                                                        Netherlands
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/poland" target="">
+                                                                                        Poland
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/portugal" target="">
+                                                                                        Portugal
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/ireland" target="">
+                                                                                        Ireland
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/slovakia" target="">
+                                                                                        Slovakia
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/spain" target="">
+                                                                                        Spain
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/united-kingdom" target="">
+                                                                                        United Kingdom
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/ukraine" target="">
+                                                                                        Ukraine
+                                                                                    </a>
+                                                                                </li>
+                                                                    </ul>
+                                                                    <ul class="navbar--dropdown__quarternary">
+                                                                        <span class="tag">Groups &amp; regions</span>
+
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/groups/international-turkish-desk" target="">
+                                                                                        Turkish Desk
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/groups/german-french" target="">
+                                                                                        French German group
+                                                                                    </a>
+                                                                                </li>
+                                                                    </ul>
+
+
+                                                                <ul class="navbar--dropdown__secondary">
+                                                                    <li class="navbar--item">
+                                                                        <a class="btn btn--primary" href="/en/contact-us" target="">
+                                                                            Overview
+                                                                        </a>
+
+                                                                    </li>
+                                                                </ul>
+                                                        </li>
+                                                </ul>
+                                            </li>
+                                            <li class="navbar--section">
+                                                <a class="navbar--link" href="#">Middle East &amp; Africa</a>
+                                                <ul>
+                                                    
+
+                                                        <li class="">
+
+                                                                    <ul class="navbar--dropdown__quarternary">
+                                                                        <span class="tag">Our locations and our partner firm&#39;s locations</span>
+
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/middle-east" target="">
+                                                                                        Middle East
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/uae" target="">
+                                                                                        UAE
+                                                                                    </a>
+                                                                                </li>
+                                                                    </ul>
+                                                                    <ul class="navbar--dropdown__quarternary">
+                                                                        <span class="tag">Groups</span>
+
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/groups/africa" target="">
+                                                                                        Africa group
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/groups/israel-group" target="">
+                                                                                        Israel group
+                                                                                    </a>
+                                                                                </li>
+                                                                    </ul>
+
+
+                                                                <ul class="navbar--dropdown__secondary">
+                                                                    <li class="navbar--item">
+                                                                        <a class="btn btn--primary" href="/en/contact-us" target="">
+                                                                            Overview
+                                                                        </a>
+
+                                                                    </li>
+                                                                </ul>
+                                                        </li>
+                                                </ul>
+                                            </li>
+                                            <li class="navbar--section">
+                                                <a class="navbar--link" href="#">Americas</a>
+                                                <ul>
+                                                    
+
+                                                        <li class="">
+
+                                                                    <ul class="navbar--dropdown__quarternary">
+                                                                        <span class="tag">Our locations and our partner firm&#39;s locations</span>
+
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/latin-america" target="">
+                                                                                        Latin America
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/usa" target="">
+                                                                                        USA
+                                                                                    </a>
+                                                                                </li>
+                                                                    </ul>
+                                                                    <ul class="navbar--dropdown__quarternary">
+                                                                        <span class="tag">Groups</span>
+
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/groups/brazil" target="">
+                                                                                        Brazil group
+                                                                                    </a>
+                                                                                </li>
+                                                                    </ul>
+
+
+                                                                <ul class="navbar--dropdown__secondary">
+                                                                    <li class="navbar--item">
+                                                                        <a class="btn btn--primary" href="/en/contact-us" target="">
+                                                                            Overview
+                                                                        </a>
+
+                                                                    </li>
+                                                                </ul>
+                                                        </li>
+                                                </ul>
+                                            </li>
+                                            <li class="navbar--section">
+                                                <a class="navbar--link" href="#">Asia</a>
+                                                <ul>
+                                                    
+
+                                                        <li class="">
+
+                                                                    <ul class="navbar--dropdown__quarternary">
+                                                                        <span class="tag">Locations</span>
+
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/asia" target="">
+                                                                                        Asia
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/china" target="">
+                                                                                        China
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/countries/south-korea" target="">
+                                                                                        South Korea
+                                                                                    </a>
+                                                                                </li>
+                                                                    </ul>
+                                                                    <ul class="navbar--dropdown__quarternary">
+                                                                        <span class="tag">Groups</span>
+
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/groups/india" target="">
+                                                                                        India group
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-reach/groups/japan" target="">
+                                                                                        Japan group
+                                                                                    </a>
+                                                                                </li>
+                                                                    </ul>
+
+
+                                                                <ul class="navbar--dropdown__secondary">
+                                                                    <li class="navbar--item">
+                                                                        <a class="btn btn--primary" href="/en/contact-us" target="">
+                                                                            Our offices
+                                                                        </a>
+
+                                                                    </li>
+                                                                </ul>
+                                                        </li>
+                                                </ul>
+                                            </li>
+                                </ul>
+                        </li>
+                        <li class="navbar--item">
+                            <a class="navbar--link navbar--submenu" href="#" id="Insights-button" aria-controls="Insights-menu" aria-expanded="false">Insights</a>
+
+                                <ul class="navbar--dropdown__primary" id="Insights-menu" aria-labelledby="Insights-button">
+                                            <li class="navbar--section">
+                                                <a class="navbar--link" href="#">Insights</a>
+                                                <ul>
+                                                    
+
+                                                        <li class="navbar--topic navbar--item">
+
+                                                                    <ul class="navbar--dropdown__quarternary">
+                                                                        <span class="tag">Featured Topics</span>
+
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/expertise/services/artificial-intelligence" target="">
+                                                                                        Artificial intelligence
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/expertise/services/data-and-cyber" target="">
+                                                                                        Data Centre Expertise
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/insights-and-events/insights/whistleblowing" target="">
+                                                                                        The EU Whistleblower Directive
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/insights-and-events/insights/supply-chain-act" target="">
+                                                                                        German Supply Chain Act
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/insights-and-events/insights/upc" target="">
+                                                                                        Unified Patent Court
+                                                                                    </a>
+                                                                                </li>
+                                                                    </ul>
+                                                                    <ul class="navbar--dropdown__quarternary">
+                                                                        <span class="tag">Content hub</span>
+
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/global-data-hub" target="">
+                                                                                        Global Data Hub
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/interface" target="">
+                                                                                        Interface: tech, IP and media law 
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/podcasts?utm_source=quote&amp;utm_medium=web&amp;utm_content=nav&amp;utm_campaign=podcasthub" target="">
+                                                                                        Podcasts
+                                                                                    </a>
+                                                                                </li>
+                                                                                <li class="navbar--item">
+                                                                                    <a class="navbar--link" href="/en/synapse" target="">
+                                                                                        Synapse
+                                                                                    </a>
+                                                                                </li>
+                                                                    </ul>
+
+
+                                                                <ul class="navbar--dropdown__secondary">
+                                                                    <li class="navbar--item">
+                                                                        <a class="btn btn--primary" href="/en/insights-and-events/insights" target="">
+                                                                            Browse all insights
+                                                                        </a>
+
+                                                                    </li>
+                                                                </ul>
+                                                        </li>
+                                                </ul>
+                                            </li>
+                                            <li class="navbar--section">
+                                                <a class="navbar--link" href="#">In focus</a>
+                                                <ul>
+                                                    
+
+                                                        <li>
+                                                                                                                            <ul class="navbar--dropdown__secondary">
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/in-focus/ai-in-focus" target="">
+                                                                                AI
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/in-focus/dealonomics-in-focus" target="">
+                                                                                Dealonomics 
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/in-focus/disputes-reimagined" target="">
+                                                                                Disputes
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/in-focus/intellectual-property" target="">
+                                                                                Intellectual property
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/in-focus/mena-in-focus" target="">
+                                                                                MENA
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/in-focus/regulation-in-focus" target="">
+                                                                                Regulation
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                                                                                            <ul class="navbar--dropdown__secondary">
+                                                                    <li class="navbar--item">
+                                                                        <a class="btn btn--primary" href="/en/in-focus" target="">
+                                                                            Browse in focus
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                        </li>
+                                                </ul>
+                                            </li>
+                                            <li class="navbar--section">
+                                                <a class="navbar--link" href="#">Events</a>
+                                                <ul>
+                                                    
+
+                                                        <li>
+                                                                                                                            <ul class="navbar--dropdown__secondary">
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/insights-and-events/events/in-person" target="">
+                                                                                In person
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/insights-and-events/events/online" target="">
+                                                                                Online
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                                                                                            <ul class="navbar--dropdown__secondary">
+                                                                    <li class="navbar--item">
+                                                                        <a class="btn btn--primary" href="/en/insights-and-events/events" target="">
+                                                                            Browse all events
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                        </li>
+                                                </ul>
+                                            </li>
+                                            <li class="navbar--section">
+                                                <a class="navbar--link" href="#">News</a>
+                                                <ul>
+                                                    
+
+                                                        <li>
+                                                                                                                            <ul class="navbar--dropdown__secondary">
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/insights-and-events/news/media-centre" target="">
+                                                                                Media centre
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/insights-and-events/news/media-centre/press-releases?press_release_type=d312fac7-e763-438d-b72b-817c527aafd1" target="">
+                                                                                Work highlights
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="navbar--item">
+                                                                            <a class="navbar--link" href="/en/insights-and-events/news/media-centre/press-releases?press_release_type=506ea9d6-4f87-48a9-9657-fa3819e953f4" target="">
+                                                                                Firm news
+                                                                            </a>
+                                                                        </li>
+                                                                </ul>
+                                                                                                                            <ul class="navbar--dropdown__secondary">
+                                                                    <li class="navbar--item">
+                                                                        <a class="btn btn--primary" href="/en/insights-and-events/news" target="">
+                                                                            Browse all news
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                        </li>
+                                                </ul>
+                                            </li>
+                                </ul>
+                        </li>
+                        <li class="navbar--item">
+                            <a class="navbar--link navbar--top" href="/en/careers" target="">
+                                Careers
+                            </a>
+                        </li>
+            </ul>
+    </div>
+
+
+        <ul class="navbar--nav__secondary">
+            
+
+
+<li class="navbar--search">
+    <a href="#" id="site-search-button" class="navbar--search__toggler" aria-label="Toggle search" aria-expanded="false" aria-controls="site-search">
+        <span class="fas fa-search open" aria-label="open search" role="button"></span>
+        <span id="search-icon-spinner" class="fas fa-spinner fa-spin fa-lg close"></span>
+        <span id="search-icon-close" class="close" aria-label="hide-search">
+            <span class="navbar--toggler__icon"></span>
+            <span class="navbar--toggler__icon"></span>
+            <span class="navbar--toggler__icon"></span>
+        </span>
+    </a>
+
+    <form action="https://www.taylorwessing.com/en/search" id="site-search" class="navbar--search__input-container" aria-labelledby="site-search-button">
+        <input id="search-header-input"
+               class="navbar--search__input"
+               name="term"
+               type="text"
+               placeholder="Type to search"
+               autocomplete="off" maxlength=100 />
+    </form>
+</li>    <li  class="navbar--language parent">
+        <a id="language-button"
+           href="#"
+           aria-expanded="false"
+           aria-haspopup="true"
+           aria-controls="language-menu"
+           aria-label="Current language: English">
+            EN
+        </a>
+        
+        <ul id="language-menu" class="navbar--dropdown__language" role="menu" aria-labelledby="current-language">
+                <li class="open" role="none">
+                    <a class="navbar--link" 
+                       href="/en/errorpages/404"
+                       role="menuitem"
+                       aria-current="page"
+                       onclick="return SwitchToLanguage('en', 'en', '/en/errorpages/404')">
+                        English
+                    </a>
+                </li>
+                <li class="" role="none">
+                    <a class="navbar--link" 
+                       href="/zh-hant/errorpages/404"
+                       role="menuitem"
+                       onclick="return SwitchToLanguage('en', 'zh-Hant', '/zh-hant/errorpages/404')">
+                        中文(简体)
+                    </a>
+                </li>
+                <li class="" role="none">
+                    <a class="navbar--link" 
+                       href="/fr/errorpages/404"
+                       role="menuitem"
+                       onclick="return SwitchToLanguage('en', 'fr', '/fr/errorpages/404')">
+                        Fran&#231;ais
+                    </a>
+                </li>
+                <li class="" role="none">
+                    <a class="navbar--link" 
+                       href="/de/errorpages/404"
+                       role="menuitem"
+                       onclick="return SwitchToLanguage('en', 'de', '/de/errorpages/404')">
+                        Deutsch
+                    </a>
+                </li>
+        </ul>
+    </li>
+
+        </ul>
+         <!-- moved for tabbed order -->
+        <button class="navbar--toggler navbar-toggler-right border-0 pull-right hidden-xl-up" tabindex="0" type="button" data-toggle="show" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar--toggler__icon"></span>
+            <span class="navbar--toggler__icon"></span>
+            <span class="navbar--toggler__icon"></span>
+        </button>
+    </div>
+</nav>
+            
+
+
+    <div class="section--hero-banner hero-error">
+        <div class="hero-banner__image">
+
+                <picture>
+                    <!-- 1440-1920 banner image -->
+                    <source srcset="https://www.taylorwessing.com/-/media/taylor-wessing/images/banners/large-desktop/error-desktop-large.png?as=0&amp;dmc=0&amp;iar=0&amp;thn=0&amp;udi=0?&amp;hash=E30346B42F0C5FFEAF7A821F0BB29516" media="(min-width: 1440px)">
+                    <!-- 991-1439 banner image -->
+                    <source srcset="/-/media/taylor-wessing/images/banners/small-desktop/error-desktop-small.png?" media="(min-width: 991px)">
+                    <!-- 480-990 banner image -->
+                    <source srcset="/-/media/taylor-wessing/images/banners/tablet-991-x-557/error-tablet.png?" media="(min-width: 480px)">
+                    <!-- 0-479 banner image -->
+                    <img src="/-/media/taylor-wessing/images/banners/mobile-479-x-269/error-mobile.png?" alt="Error background image" />
+                </picture>
+
+        </div>
+        <div>
+                <div class="hero-error__content">
+                        <div class="hero-error__title">
+                            <div>
+                                <h1>We're sorry we couldn't find what you were looking for</h1>
+<p>This page either no longer exists or has been moved elsewhere</p>
+<a href="/en/" class="btn bg--hollow-green-border text--dark-blue arrow--dark-blue" >Return to the homepage</a>                            </div>
+                            <span class="error-code" aria-label="error code">404</span>
+                        </div>
+                </div>
+        </div>
+    </div>
+
+            <div class="section section--footer">
+    <div class="container">
+        
+    <a class="btn btn--subscribe" href="/en/subscribe" target="">
+        Subscribe to our latest insights
+    </a>
+
+        
+
+
+
+    <div class="footer--navigation__primary">
+        <ul>
+                    <li>
+<a href="/en/about-us" target="" >About us</a>                    </li>
+                    <li>
+<a href="/en/online-services" target="" >Campaigns and online tools</a>                    </li>
+                    <li>
+<a href="/en/insights-and-events/news" target="" >News</a>                    </li>
+                    <li>
+<a href="/en/people" target="" >People</a>                    </li>
+                    <li>
+<a href="/en/expertise" target="" >Expertise</a>                    </li>
+                    <li>
+<a href="/en/global-reach" target="" >Locations</a>                    </li>
+                    <li>
+<a href="/en/insights-and-events/insights" target="" >Insights</a>                    </li>
+                    <li>
+<a href="/en/insights-and-events/events" target="" >Events</a>                    </li>
+                    <li>
+<a href="/en/insights-and-events/news/media-centre" target="" >Media centre</a>                    </li>
+                    <li>
+<a href="/en/contact-us" target="" >Contact</a>                    </li>
+                    <li>
+<a href="/en/careers" target="" >Careers</a>                    </li>
+        </ul>
+    </div>
+
+        
+    <div class="footer--social__icons">
+
+                <a href="/en/social-media" target="" aria-label="fa-instagram">
+                    <span class="fab fa-instagram">
+                        
+                    </span>
+                </a>
+                <a href="/en/social-media" target="" aria-label="fa-linkedin">
+                    <span class="fab fa-linkedin">
+                        
+                    </span>
+                </a>
+                <a href="/en/social-media" target="" aria-label="fa-youtube">
+                    <span class="fab fa-youtube">
+                        
+                    </span>
+                </a>
+                <a href="/en/social-media" target="" aria-label="fa-xing">
+                    <span class="fab fa-xing">
+                        
+                    </span>
+                </a>
+    </div>
+
+        
+    <div class="footer--navigation__secondary">
+
+            <ul>
+                    <li>
+                        <a href="/en/legal/data-protection-privacy-policy" target="">
+                            Data protection & privacy policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/en/legal/cookie-policy" target="">
+                            Cookie policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/en/legal/regulatory-information" target="">
+                            Legal and regulatory information
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/en/legal/terms-of-use" target="">
+                            Terms of use
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/en/legal/fraudulent-scam-and-phishing-emails" target="">
+                            Scam emails
+                        </a>
+                    </li>
+            </ul>
+    </div>
+
+        
+    <p class="copyright">&#169; Taylor Wessing</p>
+
+    </div>
+</div>
+
+        </div>
+
+
+
+        <script src="https://www.taylorwessing.com/assets/dist/js/app.min.js?ver=53E5C568A169E98E762FF2E89C385EF1C4F6349A6762542905589D5E4E8981E9" type="text/javascript"></script>
+
+        <!-- pd1ldwk000PF4 - W - v1.3.7.132 -->
+
+
+
+            <script src="/sitecore%20modules/Web/ExperienceForms/scripts/jquery.unobtrusive-ajax.min.js"></script>
+            <script src="/sitecore%20modules/Web/ExperienceForms/scripts/form.validate.js"></script>
+            <script src="/sitecore%20modules/Web/ExperienceForms/scripts/form.tracking.js"></script>
+            <script src="/sitecore%20modules/Web/ExperienceForms/scripts/form.conditions.js"></script>
+            <script src="/sitecore%20modules/Web/ExperienceForms/scripts/formsextensions.validate.js"></script>
+        <div id="contextMenu" class="custom-context-menu" role="menu">
+            <button id="copyEmail" role="menuitem"></button>
+        </div>
+        <input type="hidden" id="emailInput">
+    </body>
+</html>

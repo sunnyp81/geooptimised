@@ -1,0 +1,20 @@
+﻿User-agent: *
+
+Disallow: /sitecore/
+Disallow: /sitecore_files/
+Disallow: /sitecore modules/
+Disallow: /App_Browsers/
+Disallow: /App_config/
+Disallow: /App_Data/
+Disallow: /temp/
+Disallow: /upload/
+Disallow: /xsl/
+Disallow: /search/
+Disallow: /people?search=*
+Disallow: /accounts/*
+Disallow: /-/media/V-cards/
+Disallow: /~/media/V-cards/
+Disallow: /vcard/
+
+# Sitemap Url
+Sitemap: https://www.trowers.com/sitemap.xml

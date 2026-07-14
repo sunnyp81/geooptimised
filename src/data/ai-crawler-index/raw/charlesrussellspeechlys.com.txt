@@ -1,0 +1,20 @@
+User-agent: *
+Disallow: /*?*SortBy=
+Disallow: /*?*sectors=
+Disallow: /*?*Sectors=
+Disallow: /*?*Offices=
+Disallow: /*?*Services=
+Disallow: /*?*query=
+Disallow: /*?*sort=
+Disallow: /*?*utm_source=
+Disallow: /*?*LinkSource=PassleApp
+Disallow: /*?*altLanding=
+Disallow: /*VCard
+
+Allow: /*?page=
+Allow: /*?pageNo=
+
+Disallow: /episerver/
+Disallow: /utils/
+Disallow: /*?ite=
+Sitemap: https://www.charlesrussellspeechlys.com/sitemap.xml

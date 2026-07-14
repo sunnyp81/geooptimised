@@ -1,0 +1,209 @@
+---
+import Base from '../layouts/Base.astro';
+import ClaimCard from '../components/ClaimCard.astro';
+import claimsData from '../data/claims.json';
+
+const byId = (id: string) => claimsData.claims.find(c => c.id === id);
+const instability = byId('answer-instability');
+const consensus = byId('consensus-gap');
+const zeroPointOne = byId('zero-point-one-percent');
+
+const title = 'Can you measure AI visibility? The honest state of it';
+const description = 'AI assistant outputs are stochastic, the same prompt returns different brand lists on repeated runs, and different tools measuring the same brand disagree with each other. What that means for any AI visibility score you are shown, and what the tools can and cannot actually see.';
+
+const faq = [
+  {
+    q: 'Can you measure AI visibility reliably?',
+    a: 'Not with a single number, no. Asked the same brand-recommendation prompt up to 100 times, ChatGPT or Google\'s AI returns the same list of brands under 1 time in 100, and the same list in the same order roughly 1 time in 1,000. A one-off check of your brand\'s position, run once, is measuring noise, not a stable state. What can be measured honestly is a distribution across many runs, with a stated run count and interval, not a single score.',
+  },
+  {
+    q: 'Why do different AI visibility tools give different answers for the same brand?',
+    a: 'Because each tool samples a different, small set of prompts, against different engines, on different days, and treats the resulting one-off answers as though they were stable measurements. Paul Dyer, chief executive of the AI-native agency /prompt, told Digiday plainly: "If you use three different tools and give them the same prompts, you get three different answers." That is consistent with what the underlying research shows about how unstable individual runs are.',
+  },
+  {
+    q: 'What can AI visibility tools actually see?',
+    a: 'It depends entirely on which engine, and the honest answer is less than most dashboards imply. Two of the largest AI engines contractually restrict the kind of measurement this requires: Google\'s Grounding with Google Search terms forbid using search results to build an index, and Microsoft\'s Grounding with Bing Search terms forbid creating a database of output. Tools that measure citations lawfully are therefore typically limited to engines like Perplexity, OpenAI and Anthropic\'s own APIs, and their coverage of Google, the largest AI answer surface there is, understates reality rather than capturing it.',
+  },
+  {
+    q: 'Why is a single-run AI visibility number meaningless?',
+    a: 'Because a single run is one draw from a highly variable process, not a measurement of an underlying stable rank. Kevin Indig\'s analysis of 3.7 million citations found only 2.37% of cited URLs appear across all three major AI engines for the same prompt, and 91.07% appear in exactly one. A number from one engine, from one run, cannot represent "AI visibility" as a single quantity, because the thing it is trying to summarise does not behave like one.',
+  },
+];
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Can you measure AI visibility?', item: 'https://geooptimised.com/can-you-measure-ai-visibility/' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    datePublished: '2026-07-14',
+    dateModified: '2026-07-14',
+    author: { '@type': 'Person', '@id': 'https://geooptimised.com/#sunny-patel', name: 'Sunny Patel' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  },
+];
+---
+<Base title={title} description={description} schema={schema} ogType="article">
+  <article>
+    <header class="wrap pt-14 pb-8">
+      <nav aria-label="Breadcrumb" class="data text-[0.7rem] uppercase tracking-widest mb-6" style="color: var(--muted);">
+        <a href="/">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text);">Can you measure AI visibility?</span>
+      </nav>
+      <h1 class="font-display font-bold text-[2.2rem] sm:text-[3rem] leading-[1.06] max-w-[22ch]">
+        Can you measure AI visibility?
+      </h1>
+      <p class="mt-4 data text-[0.72rem]" style="color: var(--muted);">
+        By Sunny Patel &middot; 14 July 2026 &middot; Every statistic below is graded and sourced
+      </p>
+    </header>
+
+    <section class="wrap pb-10">
+      <div class="border-l-4 pl-6 py-1 max-w-[66ch]" style="border-color: var(--accent);">
+        <p class="font-display text-[1.32rem] leading-snug" style="color: var(--text);">
+          Not with a single score, currently. AI assistant outputs are stochastic: the same prompt, asked
+          repeatedly, returns different brand lists most of the time, and different tools measuring the same
+          brand routinely disagree. A single-run "AI visibility" number is not a weak measurement of a real
+          quantity. It is closer to a snapshot of noise, reported with false precision.
+        </p>
+      </div>
+    </section>
+
+    <section class="prose-wrap pb-16 copy">
+      <h2>Outputs are stochastic, and this is measured, not theoretical</h2>
+      <p>
+        This is not a hedge or a caveat borrowed from statistics textbooks. It is a directly measured property of
+        the systems being discussed.
+      </p>
+    </section>
+
+    <section class="wrap pb-12">
+      <div class="max-w-[46rem]">
+        {instability && <div class="fade-up"><ClaimCard claim={instability} compact={true} /></div>}
+      </div>
+    </section>
+
+    <section class="prose-wrap pb-16 copy">
+      <p>
+        SparkToro and Gumshoe deliberately ran these prompts on default, personalised settings rather than pinned
+        temperature or a fixed seed, because that is what a real user experiences. This means the instability is
+        not a lab artefact that disappears under careful measurement. It is the condition a marketer, or a
+        monitoring tool, actually operates under.
+      </p>
+
+      <h2>Two different figures get conflated constantly, and the conflation is itself instructive</h2>
+      <p>
+        Same brand list, any order: under 1 in 100. Same brand list, same order: roughly 1 in 1,000. These get
+        swapped for each other across secondary coverage so often that we made the error ourselves before
+        catching it against the primary source.
+      </p>
+    </section>
+
+    <section class="wrap pb-12">
+      <div class="max-w-[46rem]">
+        {zeroPointOne && <div class="fade-up"><ClaimCard claim={zeroPointOne} compact={true} /></div>}
+      </div>
+    </section>
+
+    <section class="prose-wrap pb-16 copy">
+      <p>
+        If a headline figure this size and this well-sourced can drift by a factor of ten in one retelling, treat
+        every unsourced "X% of the time" statistic in this field with active suspicion, including, and especially,
+        the ones that sound authoritative because of how precisely they are stated.
+      </p>
+
+      <h2>Why single-run numbers are meaningless: a second, independent measurement agrees</h2>
+      <p>
+        Instability within one engine is one problem. Disagreement between engines is a second, separate problem,
+        and it is at least as large.
+      </p>
+    </section>
+
+    <section class="wrap pb-16">
+      <div class="max-w-[46rem]">
+        {consensus && <div class="fade-up"><ClaimCard claim={consensus} compact={true} /></div>}
+      </div>
+    </section>
+
+    <section class="prose-wrap pb-16 copy">
+      <p>
+        Only 2.37% of cited URLs appear across ChatGPT, Perplexity and Google AI Overviews for the same prompt.
+        91.07% appear in exactly one engine. A blended "AI visibility" score across engines is therefore averaging
+        three populations that barely overlap, and it can move because a single engine changed something, while
+        telling you nothing about the other two. Note the sample skews European (Spain-heavy, plus UK, Nordic and
+        EU markets), so treat the exact percentages as regional rather than global, while the underlying finding,
+        that engines disagree structurally rather than by noise alone, does not depend on the geography.
+      </p>
+      <p>
+        Paul Dyer, chief executive of /prompt, described the practical consequence to Digiday plainly: give three
+        different AI visibility tools the same prompts and you get three different answers. That is not a
+        maturity problem that better software fixes. It follows directly from the two findings above: each tool is
+        sampling a small, noisy, engine-specific slice of a fragmented system and presenting the sample as though
+        it were the whole.
+      </p>
+
+      <h2>What the tools can see, and what they contractually cannot</h2>
+      <p>
+        Measurement is not just noisy, it is also legally bounded on the largest engines. Google's Grounding with
+        Google Search terms forbid "using Links to build an index", and Microsoft's Grounding with Bing Search
+        terms forbid "creating a database of Output". A citation-tracking tool operating lawfully cannot build
+        the kind of persistent database of Google or Bing AI answers that a clean measurement would require. Full
+        detail, with both clauses quoted verbatim and their effective dates, is on
+        <a class="link" href="/the-grounding-clause/">the grounding clause</a>, and the same limitation is disclosed
+        on <a class="link" href="/methodology/">our own methodology page</a>: where we measure citations at all, our
+        coverage of Google, the largest AI answer surface there is, understates reality by construction, not by
+        oversight.
+      </p>
+      <p>
+        The practical result is that any tool reporting a clean, confident Google AI Overviews citation share is
+        either working from a much smaller, indirect signal than it implies, or is not being fully transparent
+        about how it obtained the number. Neither is a reason to ignore Google's AI surface. It is a reason to ask,
+        specifically, how a tool claims to see it.
+      </p>
+
+      <h2>What a defensible measurement practice looks like</h2>
+      <ul>
+        <li><strong>Report a distribution, not a score.</strong> Multiple runs, a stated run count, and an interval, not one number presented as a position.</li>
+        <li><strong>Report per-engine, never blended.</strong> A single cross-engine percentage hides which engine actually moved.</li>
+        <li><strong>State what the tool cannot see.</strong> If Google or Bing grounding data is not lawfully obtainable, say so, rather than presenting a partial sample as complete coverage.</li>
+        <li><strong>Measure what you can bank.</strong> Referral traffic, branded search volume and conversions are real, checkable signals. Citation share, as currently measurable, is not yet one of them.</li>
+      </ul>
+      <p>
+        None of this means AI visibility is unmeasurable forever, only that it is not reliably measurable as a
+        single score today. For the wider evidence behind what does and does not move citation in the first place,
+        see <a class="link" href="/how-to-be-found-in-ai-search/">how to be found in AI search</a>. If your own
+        brand is not appearing at all, work through
+        <a class="link" href="/why-ai-doesnt-mention-your-brand/">the diagnostic walkthrough</a> before spending on
+        a measurement tool: there is no point measuring a citation rate for a page a crawler cannot reach.
+      </p>
+
+      <h2>Common questions</h2>
+      {faq.map(f => (
+        <>
+          <h3>{f.q}</h3>
+          <p>{f.a}</p>
+        </>
+      ))}
+
+      <div class="rule mt-12 pt-8">
+        <p class="text-[0.95rem]" style="color: var(--muted);">
+          Every statistic on this page is graded against its primary source in the
+          <a class="link" href="/evidence/">evidence ledger</a>. We sell no GEO services. Our commercial interest in
+          every tool we name is published on <a class="link" href="/who-pays-us/">who pays us</a>.
+        </p>
+      </div>
+    </section>
+  </article>
+</Base>

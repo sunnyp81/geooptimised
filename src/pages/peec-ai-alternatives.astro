@@ -1,0 +1,187 @@
+---
+import Base from '../layouts/Base.astro';
+import toolsData from '../data/tools.json';
+
+const tools = toolsData.tools;
+const byId = (slug: string) => tools.find(t => t.slug === slug)!;
+const peec = byId('peec-ai');
+const otterly = byId('otterly');
+const rankscale = byId('rankscale');
+const nightwatch = byId('nightwatch');
+
+// Ordering rule, stated on the page: entry price ascending, verified prices first,
+// unverified or unpublished prices last. Never affiliate rate. See /who-pays-us/.
+const alternatives = [otterly, rankscale, nightwatch];
+
+const checkedOn = '2026-07-14';
+
+const title = 'Peec AI alternatives: verified pricing and what each pays us';
+const description = 'Peec AI reviewed against Otterly.ai, Rankscale and Nightwatch, the AI visibility trackers people actually shortlist against it. Peec pays this site nothing.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Peec AI alternatives', item: 'https://geooptimised.com/peec-ai-alternatives/' },
+    ],
+  },
+];
+---
+<Base title={title} description={description} schema={schema}>
+  <section class="wrap pt-14 pb-8">
+    <nav aria-label="Breadcrumb" class="data text-[0.7rem] uppercase tracking-widest mb-6" style="color: var(--muted);">
+      <a href="/">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text);">Peec AI alternatives</span>
+    </nav>
+    <h1 class="font-display font-bold text-[2.2rem] sm:text-[2.9rem] leading-[1.08] max-w-[22ch]">
+      Peec AI alternatives, with the one fact every other list leaves out
+    </h1>
+    <p class="mt-6 max-w-[64ch] text-[1.08rem]" style="color: var(--text-soft);">
+      Peec AI cannot pay this site a penny. We checked <span class="data">peec.ai/affiliate</span> ourselves on
+      {checkedOn} and it returns a 404. There is no referral link anywhere in this article, for Peec or for
+      anything it competes with, because we are not enrolled in any affiliate programme today. That is what
+      makes the ordering below worth reading: nothing here can move for money.
+    </p>
+    <p class="mt-4 data text-[0.75rem]" style="color: var(--muted);">
+      Checked {checkedOn} &middot; <a class="link" href="/who-pays-us/">our commercial interest in every tool named on this site</a>
+    </p>
+  </section>
+
+  <section class="wrap pb-12">
+    <div class="border p-6 sm:p-8" style="border-color: var(--line-strong); background: var(--surface);">
+      <p class="data text-[0.62rem] uppercase tracking-[0.14em] mb-3" style="color: var(--muted);">What Peec AI is</p>
+      <p class="text-[1rem] mb-4" style="color: var(--text);">
+        Peec AI is an AI visibility tracker covering ChatGPT, Perplexity, Gemini and Google AI Mode. It reports
+        on three things: whether a brand appears in an answer ("visibility"), where it appears relative to
+        competitors ("position"), and how it is framed ("sentiment"). It separately surfaces "key sources", the
+        domains an engine cited to build the answer. That is both measurement types in one product, and the two
+        are not the same quantity: see the note below.
+      </p>
+      <dl class="grid gap-x-6 gap-y-2 text-[0.9rem]" style="grid-template-columns: max-content 1fr;">
+        <dt class="data text-[0.62rem] uppercase tracking-[0.1em] pt-0.5" style="color: var(--muted);">Entry price</dt>
+        <dd class="data" style="color: var(--g-unreproduced);">{peec.entryPrice}, per third-party review sites</dd>
+        <dt class="data text-[0.62rem] uppercase tracking-[0.1em] pt-0.5" style="color: var(--muted);">On peec.ai itself</dt>
+        <dd style="color: var(--text-soft);">
+          We fetched peec.ai/pricing ourselves on {checkedOn}. It names four tiers, Starter, Pro, Advanced and
+          Enterprise, and states none of their prices. Peec does not publish a price ladder on its own site as of
+          this check.
+        </dd>
+        <dt class="data text-[0.62rem] uppercase tracking-[0.1em] pt-0.5" style="color: var(--muted);">Affiliate programme</dt>
+        <dd style="color: var(--g-verified);">
+          None found. <span class="data">peec.ai/affiliate</span> returns 404 (re-checked {checkedOn}). We also
+          checked its Partnerships pages for agencies, creators and media; none describe a commission.
+        </dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="wrap pb-14">
+    <h2 class="font-display text-[1.6rem] font-bold mb-2">The real alternatives</h2>
+    <p class="max-w-[64ch] mb-6 text-[0.98rem]" style="color: var(--text-soft);">
+      Ordered by verified entry price, lowest first. That is the whole ordering rule, stated so you can check it:
+      not by what pays us, since nothing here does today, and not by which one we like. A tool with no verifiable
+      published price sits last regardless of what it might cost, because we will not rank on a number we cannot
+      check.
+    </p>
+
+    <div class="table-scroll border" style="border-color: var(--line-strong); background: var(--surface);">
+      <table class="ledger-table !my-0">
+        <caption class="sr-only">Peec AI and its alternatives, verified pricing, measurement and what each pays this site</caption>
+        <thead>
+          <tr>
+            <th scope="col">Tool</th>
+            <th scope="col">Entry price</th>
+            <th scope="col">Measures</th>
+            <th scope="col">Pays us</th>
+            <th scope="col">Enrolled?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="!font-semibold !text-[0.95rem]" style="color: var(--text);">
+              <a class="link" href={peec.url} rel="noopener nofollow">Peec AI</a>
+            </td>
+            <td class="data text-[0.82rem]" style="color: var(--g-unreproduced);">{peec.entryPrice} (third-party; no price on peec.ai itself)</td>
+            <td class="text-[0.85rem]">Brand mentions, position and sentiment; separately lists cited source domains</td>
+            <td class="data !font-semibold text-[0.85rem]" style="color: var(--g-verified);">NOTHING (no programme exists)</td>
+            <td class="data text-[0.8rem]" style="color: var(--muted);">No</td>
+          </tr>
+          <tr>
+            <td class="!font-semibold !text-[0.95rem]" style="color: var(--text);">
+              <a class="link" href={otterly.url} rel="noopener nofollow">Otterly.ai</a>
+            </td>
+            <td class="data text-[0.82rem]">{otterly.entryPrice}</td>
+            <td class="text-[0.85rem]">Brand mentions across AI engines; separately tracks which links are referenced</td>
+            <td class="data !font-semibold text-[0.85rem]" style="color: var(--text);">{otterly.affiliate.rate}, {otterly.affiliate.model} (programme exists; we are not enrolled)</td>
+            <td class="data text-[0.8rem]" style="color: var(--muted);">No</td>
+          </tr>
+          <tr>
+            <td class="!font-semibold !text-[0.95rem]" style="color: var(--text);">
+              <a class="link" href={rankscale.url} rel="noopener nofollow">Rankscale</a>
+            </td>
+            <td class="data text-[0.82rem]">{rankscale.entryPrice}</td>
+            <td class="text-[0.85rem]">Brand mentions and share of voice; connects source URLs to visibility gaps</td>
+            <td class="data !font-semibold text-[0.85rem]" style="color: var(--text);">{rankscale.affiliate.rate}, {rankscale.affiliate.model} (programme exists; we are not enrolled)</td>
+            <td class="data text-[0.8rem]" style="color: var(--muted);">No</td>
+          </tr>
+          <tr>
+            <td class="!font-semibold !text-[0.95rem]" style="color: var(--text);">
+              <a class="link" href={nightwatch.url} rel="noopener nofollow">Nightwatch</a>
+            </td>
+            <td class="data text-[0.82rem]">{nightwatch.entryPrice}</td>
+            <td class="text-[0.85rem]">Brand mentions ("AI Visibility Score") and cited sources ("Active Citations"), plus share of voice</td>
+            <td class="data !font-semibold text-[0.85rem]" style="color: var(--text);">{nightwatch.affiliate.rate}, {nightwatch.affiliate.model} (programme exists; we are not enrolled, and it would be our best-paying option if we joined one)</td>
+            <td class="data text-[0.8rem]" style="color: var(--muted);">No</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-[0.85rem]" style="color: var(--muted);">
+      Full terms, cookie windows and provenance for every row: <a class="link" href="/who-pays-us/">who pays us</a>.
+      Rankscale note: a third-party site claims 15% lifetime; the vendor's own affiliate page states 10% for up to
+      12 months. We publish the vendor's own figure.
+    </p>
+  </section>
+
+  <section class="prose-wrap pb-24 copy">
+    <div class="rule pt-10">
+      <h2>Brand mentions and citations are not the same measurement</h2>
+      <p>
+        All four tools above report a "visibility" number, and all four also surface a list of cited domains.
+        Those are two different things, and every one of these products blends them into a single dashboard
+        without always labelling which is which.
+      </p>
+      <p>
+        A brand mention is the model saying your name in the text of an answer. A citation is a source link the
+        model used to build that answer. Semrush's Ghost Citations study, run across 3,981 domain appearances on
+        ChatGPT, Gemini, Google AI Overviews and Google AI Mode, found that 61.7% of the time a page was cited as
+        a source, the brand name never appeared in the answer text. A tool that only counts mentions misses the
+        majority of your actual citation footprint. A tool that only counts citations will show you sources that
+        never translate into anyone hearing your name.
+      </p>
+      <p>
+        There is a second reason to treat any single "visibility score" with suspicion: it rarely holds still.
+        SparkToro and Gumshoe.ai ran 2,961 prompts across ChatGPT, Claude and Google AI Overviews and found under
+        a 1-in-100 chance of the same brand list appearing twice for the identical prompt. A tracker sampling a
+        handful of prompts on a schedule is measuring a number that moves for reasons that have nothing to do
+        with your marketing. Full grading and sourcing: <a class="link" href="/evidence/#answer-instability">the
+        evidence ledger</a>.
+      </p>
+      <h2>Why Peec cannot pay us</h2>
+      <p>
+        We looked for a programme three ways: the vendor's dedicated affiliate path, its partnerships pages for
+        agencies, creators and media, and a general search for any mention of a commission or referral scheme.
+        None exist as of {checkedOn}. That is not a criticism of Peec. It means an article ranking Peec against
+        its competitors can be written with nothing riding on where Peec lands, which is rarer in this niche than
+        it should be.
+      </p>
+      <p class="text-[0.9rem]">
+        See the full landscape, including suites with AI visibility add-ons, at
+        <a class="link" href="/ai-visibility-tools-compared/">every AI visibility tool compared</a>, or the
+        specific three-way shortlist at
+        <a class="link" href="/otterly-vs-peec-vs-scrunch/">Otterly vs Peec vs Scrunch</a>.
+      </p>
+    </div>
+  </section>
+</Base>

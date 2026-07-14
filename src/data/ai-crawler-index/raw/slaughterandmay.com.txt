@@ -1,0 +1,18 @@
+
+User-agent: *
+Allow: /
+Disallow: /app_plugins/
+Disallow: /app_data/
+Disallow: /uSync/
+Disallow: /bin/
+Disallow: /config/
+Disallow: /data/
+Disallow: /install/
+Disallow: /views/
+Disallow: /umbraco/
+Disallow: /xslt/
+Disallow: /vcards/
+Disallow: /media/zv2d5vsn/
+Disallow: /media/ih2l5fwk/
+Disallow: /media/0zrnw3ig/
+Sitemap: https://www.slaughterandmay.com/sitemap.xml

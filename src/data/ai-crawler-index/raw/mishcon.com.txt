@@ -1,0 +1,15 @@
+Sitemap: https://www.mishcon.com/google_sitemap.xml
+
+User-agent: *
+Allow: *
+Disallow: /bcp
+Disallow: /join_us/trainee_opportunities
+Disallow: /join_us/trainee_opportunities/challenge
+Disallow: /join_us/trainee_opportunities/trainee_application_form
+Disallow: /join_us/trainee_opportunities/trainee_recruitment_faqs
+Disallow: /userfiles/file/
+Disallow: /upload/files/
+Disallow: /assets/managed/docs/
+
+User-agent: URLpulse
+Disallow: /

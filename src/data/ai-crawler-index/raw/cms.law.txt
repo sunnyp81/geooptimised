@@ -1,0 +1,6 @@
+User-Agent: *
+Sitemap: https://cms.law/sitemap.xml
+Disallow: */dpcms-search/*
+Disallow: */vcard/*
+Disallow: */ical/*
+Disallow: */admin/*

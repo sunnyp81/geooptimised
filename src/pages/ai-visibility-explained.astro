@@ -1,0 +1,206 @@
+---
+import Base from '../layouts/Base.astro';
+import ClaimCard from '../components/ClaimCard.astro';
+import claimsData from '../data/claims.json';
+
+const byId = (id: string) => claimsData.claims.find(c => c.id === id);
+const seoOrigin = byId('seo-term-origin-contested');
+const aeoOrigin = byId('aeo-term-coined-2018');
+const termDecline = byId('geo-term-decline');
+
+const title = 'AI visibility explained: vs GEO, AEO and SEO, who coined what';
+const description = 'A plain-English definition of AI visibility, how it differs from GEO, AEO and SEO, and the dated, sourced origin of each term, including the two that are genuinely contested rather than settled.';
+
+const faq = [
+  {
+    q: 'What is AI visibility?',
+    a: 'AI visibility is how often, and how prominently, a brand or source is mentioned or cited when AI assistants such as ChatGPT, Perplexity, Claude or Google AI Overviews answer a question related to it. It is descriptive, not a technique: it names an outcome you can try to observe, not a method for achieving it. GEO, AEO and SEO are the names given to methods aimed at improving it.',
+  },
+  {
+    q: 'What is the difference between GEO and AEO?',
+    a: 'Almost none in practice. Generative engine optimisation (GEO) comes from a 2023 academic paper and emphasises the generated answer. Answer engine optimisation (AEO) is the older, marketing-originated term and emphasises the answer being given. Rankability\'s analysis of 3,751 keywords across 48 months of Google Keyword Planner data found GEO carries roughly twice AEO\'s search volume, while practitioners increasingly converge on AEO as the label. No meaningful methodological difference separates the two disciplines.',
+  },
+  {
+    q: 'Is AI visibility the same as SEO?',
+    a: 'Overlapping but not identical. Classic SEO optimises primarily for ranking in a search engine results page. AI visibility concerns whether a source is drawn on inside a generated answer, which increasingly happens independent of that source\'s organic ranking position. Ahrefs found the share of AI Overview citations drawn from the organic top 10 fell from about 76% to 37.9% in six months, which is the measurable gap between the two.',
+  },
+  {
+    q: 'Who coined the term "AI visibility"?',
+    a: 'We could not find a documented coining event or a first named use, unlike GEO and AEO, both of which trace to a specific paper or talk. "AI visibility" reads as a plain descriptive phrase that emerged gradually as vendors needed a category name broader than GEO or AEO, sometime around 2024 to 2025, rather than a term one person or paper introduced. If a reader can point us to a documented first use, we will grade and publish it.',
+  },
+];
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'AI visibility explained', item: 'https://geooptimised.com/ai-visibility-explained/' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    datePublished: '2026-07-14',
+    dateModified: '2026-07-14',
+    author: { '@type': 'Person', '@id': 'https://geooptimised.com/#sunny-patel', name: 'Sunny Patel' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' },
+    about: {
+      '@type': 'DefinedTerm',
+      name: 'AI visibility',
+      alternateName: ['Generative engine optimisation', 'GEO', 'Answer engine optimisation', 'AEO'],
+      description: 'How often and how prominently a brand or source is mentioned or cited when AI assistants generate an answer.',
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  },
+];
+---
+<Base title={title} description={description} schema={schema} ogType="article">
+  <article>
+    <header class="wrap pt-14 pb-8">
+      <nav aria-label="Breadcrumb" class="data text-[0.7rem] uppercase tracking-widest mb-6" style="color: var(--muted);">
+        <a href="/">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text);">AI visibility explained</span>
+      </nav>
+      <h1 class="font-display font-bold text-[2.2rem] sm:text-[3rem] leading-[1.06] max-w-[22ch]">
+        AI visibility explained
+      </h1>
+      <p class="mt-4 data text-[0.72rem]" style="color: var(--muted);">
+        By Sunny Patel &middot; 14 July 2026 &middot; Every statistic below is graded and sourced
+      </p>
+    </header>
+
+    <section class="wrap pb-10">
+      <div class="border-l-4 pl-6 py-1 max-w-[66ch]" style="border-color: var(--accent);">
+        <p class="font-display text-[1.32rem] leading-snug" style="color: var(--text);">
+          AI visibility is how often and how prominently a brand is mentioned or cited when an AI assistant answers
+          a question. GEO, AEO and SEO are three names for methods aimed at improving it, with overlapping practice
+          and separate, dated origins. Two of those three origins turn out to be more contested than the tidy
+          histories usually printed about them.
+        </p>
+      </div>
+    </section>
+
+    <section class="prose-wrap pb-16 copy">
+      <h2>AI visibility: the outcome, not the method</h2>
+      <p>
+        AI visibility names a result you can try to observe, not a technique. It asks whether, and how, a source
+        shows up inside a generated answer from a system like ChatGPT, Perplexity, Claude or Google AI Overviews.
+        GEO, AEO and (in the AI-search context) SEO are the labels given to the practice of trying to improve that
+        outcome. Confusing the outcome with the method is where a lot of the field's overclaiming starts: a vendor
+        sells "AI visibility" as a deliverable, when what is actually being sold is a set of tactics with uneven
+        evidence behind them, covered in full on
+        <a class="link" href="/how-to-be-found-in-ai-search/">how to be found in AI search</a>.
+      </p>
+
+      <h2>GEO: generative engine optimisation</h2>
+      <p>
+        GEO traces to a specific, dated, checkable source: <cite>GEO: Generative Engine Optimization</cite> by
+        Pranjal Aggarwal, Vishvak Murahari, Tanmay Rajpurohit, Ashwin Kalyan, Karthik Narasimhan and Ameet
+        Deshpande, first submitted to arXiv on 16 November 2023 and accepted to KDD 2024. This is the one clean
+        origin story in this cluster: an academic paper, a named set of authors, a specific date. The paper's
+        headline 40% figure is separately, and extensively, misused; see
+        <a class="link" href="/the-40-percent-claim/">the anatomy of that claim</a>. The origin of the term itself
+        is not in dispute, only what the paper's numbers are later claimed to show.
+      </p>
+
+      <h2>AEO: answer engine optimisation</h2>
+      <p>
+        AEO's origin is less clean than the summaries in most guides suggest. The commonly repeated story credits
+        Jason Barnard of Kalicube with coining the term via a Trustpilot white paper in January 2018, later
+        presented at BrightonSEO as "A Universal Strategy for Answer Engine Optimisation (Beyond Position 0)". We
+        went to Barnard's own account directly.
+      </p>
+    </section>
+
+    <section class="wrap pb-12">
+      <div class="max-w-[46rem]">
+        {aeoOrigin && <div class="fade-up"><ClaimCard claim={aeoOrigin} compact={true} /></div>}
+      </div>
+    </section>
+
+    <section class="prose-wrap pb-16 copy">
+      <p>
+        The source describing this is self-published, carries an internal date contradiction between its own page
+        date and the events it describes, and does not itself state in so many words that Barnard coined the
+        phrase, only that his research with Trustpilot preceded it. That is not the same as the term being
+        undocumented; a named person, a named collaborator and an approximate date all exist. It falls short of
+        the clean, single-source-verified origin GEO has.
+      </p>
+
+      <h2>SEO: search engine optimisation</h2>
+      <p>
+        SEO is the oldest term in this set and, on investigation, the most contested. The version that circulates
+        widely credits the term to 1997, usually naming Bruce Clay or John Audette. A separate, named, first-hand
+        account puts it two years earlier.
+      </p>
+    </section>
+
+    <section class="wrap pb-12">
+      <div class="max-w-[46rem]">
+        {seoOrigin && <div class="fade-up"><ClaimCard claim={seoOrigin} compact={true} /></div>}
+      </div>
+    </section>
+
+    <section class="prose-wrap pb-16 copy">
+      <p>
+        Bob Heyman's account, naming himself and Leland Harden, and citing their own 1997 book <cite>Net Results</cite>
+        as documentation, dates the coining to the summer of 1995, working on the Jefferson Starship website. It
+        directly conflicts with the 1997 date attached to Bruce Clay and John Audette that most retrospectives
+        repeat. A third party, Jason Gambert, separately and wrongly claimed to have invented the term in 2007,
+        prompting Heyman's account in the first place. Three named claimants, no independent adjudicator: treat "SEO
+        was coined in 1997" as the popular version of a genuinely unsettled question, not a settled fact.
+      </p>
+
+      <h2>Where the terms sit relative to each other</h2>
+      <p>
+        Interest in the terms themselves has already peaked and is not growing in a straight line, which matters
+        for anyone deciding which label to build a strategy or a website around.
+      </p>
+    </section>
+
+    <section class="wrap pb-16">
+      <div class="max-w-[46rem]">
+        {termDecline && <div class="fade-up"><ClaimCard claim={termDecline} compact={true} /></div>}
+      </div>
+    </section>
+
+    <section class="prose-wrap pb-24 copy">
+      <p>
+        GEO carries roughly double AEO's search volume, according to that same analysis, yet the report observes
+        practitioners converging on AEO as the standard label going forward. This site uses GEO in its name and
+        covers both terms, because a reader searching for one usually wants the other, and the underlying practice
+        is the same regardless of which acronym wins.
+      </p>
+      <p>
+        None of this terminology history changes what is actually evidenced to work. For that, see
+        <a class="link" href="/how-to-be-found-in-ai-search/">how to be found in AI search</a>, and for the
+        strongest case that the entire category is overbuilt, see
+        <a class="link" href="/is-geo-a-scam/">is GEO a scam?</a>.
+      </p>
+
+      <h2>Common questions</h2>
+      {faq.map(f => (
+        <>
+          <h3>{f.q}</h3>
+          <p>{f.a}</p>
+        </>
+      ))}
+
+      <div class="rule mt-12 pt-8">
+        <p class="text-[0.95rem]" style="color: var(--muted);">
+          Every statistic on this page is graded against its primary source in the
+          <a class="link" href="/evidence/">evidence ledger</a>, including the two term-origin claims we could only
+          partly or could not reproduce. We sell no GEO services. Our commercial interest in every tool we name is
+          published on <a class="link" href="/who-pays-us/">who pays us</a>.
+        </p>
+      </div>
+    </section>
+  </article>
+</Base>

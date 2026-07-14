@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /en/people-search
+Disallow: /en/search
+Disallow: /search
+Disallow: /en/people/2024
+Disallow: /people/2024
+Sitemap: https://www.aoshearman.com/sitemap.xml

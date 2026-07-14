@@ -1,0 +1,11 @@
+User-agent: *
+Allow: 
+Crawl-delay: 10
+Allow: /home.html
+Allow: /about_us.hmtml
+Disallow: /client-portal/*
+Allow: /content/dam/cliffordchance/*
+Allow: /content/dam*.jpg$
+Allow: /content/dam/cliffordchance/logos/CC_Logo_Main.png
+Allow: /content/dam/cliffordchance/icons/cc-Favicon.png
+Sitemap: https://www.cliffordchance.com/sitemap-index.xml

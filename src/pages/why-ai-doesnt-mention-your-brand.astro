@@ -1,0 +1,207 @@
+---
+import Base from '../layouts/Base.astro';
+import ClaimCard from '../components/ClaimCard.astro';
+import claimsData from '../data/claims.json';
+
+const byId = (id: string) => claimsData.claims.find(c => c.id === id);
+const gptbot = byId('gptbot-blocking-2023');
+const mentions = byId('mentions-beat-backlinks');
+const ghosts = byId('ghost-citations');
+
+const title = 'Why AI doesn’t mention your brand: a diagnostic walkthrough';
+const description = 'Four possible causes, checked in order: crawler access, indexation, entity presence and third-party corroboration. Each step is graded by how strong the evidence behind it actually is, not by how confidently it is usually stated.';
+
+const faq = [
+  {
+    q: 'Why does ChatGPT or Google AI Overviews never mention my brand?',
+    a: 'Work through four checks in order. First, can AI crawlers reach your site at all, meaning is GPTBot, PerplexityBot or a similar agent blocked in robots.txt. Second, is the page actually indexed by the search engines these systems draw from. Third, does your brand exist as a recognisable entity independent of your own website, meaning do other sources describe who you are. Fourth, is your brand corroborated by third parties the AI system already trusts, since being cited as a source and having your brand named in the answer are measurably different things.',
+  },
+  {
+    q: 'Could blocking AI crawlers be the reason?',
+    a: 'It is possible and checkable in minutes: look at your own robots.txt for Disallow rules against GPTBot, ChatGPT-User, PerplexityBot, ClaudeBot or Google-Extended. A dated study of the top 1,000 websites found roughly a quarter blocking GPTBot within two months of the crawler launching, so this is a real and common cause, not a theoretical one. It is also the easiest to fix and the first thing to rule out.',
+  },
+  {
+    q: 'If my page ranks on Google, will AI Overviews cite it?',
+    a: 'Decreasingly. Ahrefs found the share of AI Overview citations drawn from the organic top 10 fell from about 76% in July 2025 to 37.9% in January 2026 across 863,000 keyword SERPs. Ranking well is no longer a reliable proxy for being in the citation pool, because AI Overviews increasingly cite pages that rank for fan-out sub-queries the searcher never typed, not the original query.',
+  },
+  {
+    q: 'My page is cited as a source but my brand is never named. Why?',
+    a: 'This is a distinct, measured phenomenon called a ghost citation. Semrush’s study of 3,981 domain appearances across 115 prompts found 61.7% were cited as a source link without the brand being named anywhere in the answer text. If this is happening to you, the fix is not visibility, you already have that; it is whether your brand name is attached to the content strongly enough that an AI system reaching for it in a summary chooses to say it.',
+  },
+];
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Why AI doesn’t mention your brand', item: 'https://geooptimised.com/why-ai-doesnt-mention-your-brand/' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    datePublished: '2026-07-14',
+    dateModified: '2026-07-14',
+    author: { '@type': 'Person', '@id': 'https://geooptimised.com/#sunny-patel', name: 'Sunny Patel' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  },
+];
+---
+<Base title={title} description={description} schema={schema} ogType="article">
+  <article>
+    <header class="wrap pt-14 pb-8">
+      <nav aria-label="Breadcrumb" class="data text-[0.7rem] uppercase tracking-widest mb-6" style="color: var(--muted);">
+        <a href="/">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text);">Why AI doesn&rsquo;t mention your brand</span>
+      </nav>
+      <h1 class="font-display font-bold text-[2.2rem] sm:text-[3rem] leading-[1.06] max-w-[22ch]">
+        Why AI doesn&rsquo;t mention your brand
+      </h1>
+      <p class="mt-4 data text-[0.72rem]" style="color: var(--muted);">
+        By Sunny Patel &middot; 14 July 2026 &middot; Every statistic below is graded and sourced
+      </p>
+    </header>
+
+    <section class="wrap pb-10">
+      <div class="border-l-4 pl-6 py-1 max-w-[66ch]" style="border-color: var(--accent);">
+        <p class="font-display text-[1.32rem] leading-snug" style="color: var(--text);">
+          There are four checkable reasons an AI assistant might not mention a brand, in the order to rule them
+          out: crawler access, indexation, entity presence, and third-party corroboration. Most guides skip
+          straight to the fourth and most difficult one. Check the first three first, because they are faster to
+          confirm and easier to fix.
+        </p>
+      </div>
+    </section>
+
+    <section class="prose-wrap pb-12 copy">
+      <h2>Step 1: Crawler access</h2>
+      <p>
+        Can the AI system's crawler reach your site at all? Check robots.txt for a Disallow rule against GPTBot,
+        ChatGPT-User, OAI-SearchBot, PerplexityBot, ClaudeBot or Google-Extended. If any of these are blocked, your
+        content is removed from consideration before anything else on this page is relevant.
+      </p>
+    </section>
+
+    <section class="wrap pb-12">
+      <div class="max-w-[46rem]">
+        {gptbot && <div class="fade-up"><ClaimCard claim={gptbot} compact={true} /></div>}
+      </div>
+    </section>
+
+    <section class="prose-wrap pb-12 copy">
+      <p>
+        That figure is nearly three years old and blocking has almost certainly grown since, not shrunk; we could
+        not fetch a current, static, independently checkable percentage to replace it, and say so plainly rather
+        than repeat an unsourced current-day number. The direction is not in doubt: deliberately blocking AI
+        crawlers, whether for training-data or licensing reasons, is common and growing, and it is a binary,
+        checkable cause. Test it before anything else.
+      </p>
+
+      <h2>Step 2: Indexation</h2>
+      <p>
+        If crawlers can reach the page, is it actually indexed by the engines these AI systems draw retrieval from,
+        principally Google and Bing? A page can be fully crawlable and still sit outside the index, or be indexed
+        with no ranking signal strong enough to surface for any query. This step is evidenced indirectly rather
+        than directly: no study we found measures "not indexed" as a discrete cause of AI invisibility, because
+        by definition an unindexed page cannot appear in any citation dataset a researcher could sample from. The
+        practical test is the same one that predates AI search: search <code>site:yourdomain.com/the-page</code>
+        on Google. If it does not appear, nothing past this step matters yet.
+      </p>
+      <p>
+        Assuming the page is indexed, do not assume ranking position then does the rest of the work. Ahrefs found
+        the proportion of AI Overview citations drawn from the organic top 10 fell from roughly 76% in July 2025 to
+        37.9% in January 2026, and that most citations now originate outside it.
+        <a class="link" href="/evidence/#citations-outside-top-10">Graded VERIFIED</a>.
+      </p>
+
+      <h2>Step 3: Entity presence</h2>
+      <p>
+        Does your brand exist as a recognisable entity independent of your own site, meaning do other sources
+        describe who you are, what you do and how you relate to your industry, in language a machine can parse
+        without visiting your homepage? This is the step where the evidence gets thinner. Ahrefs' correlation study
+        is the strongest thing we found that touches it directly.
+      </p>
+    </section>
+
+    <section class="wrap pb-12">
+      <div class="max-w-[46rem]">
+        {mentions && <div class="fade-up"><ClaimCard claim={mentions} compact={true} /></div>}
+      </div>
+    </section>
+
+    <section class="prose-wrap pb-12 copy">
+      <p>
+        Read precisely: web mentions correlate with AI Overview visibility roughly three times more strongly than
+        backlinks do, but the study's own authors describe both correlations as "moderate to very weak" in absolute
+        terms, and they measured correlation, not causation, on Google AI Overviews specifically, not AI search
+        generally. This supports "being mentioned matters more than being linked to" as a direction. It does not
+        support a confident claim about exactly how much it matters, or that a specific entity-optimisation tactic
+        (a Wikipedia page, a Knowledge Panel, a structured entity home) causes a measurable lift. We found no study
+        that isolates those tactics from the general mentions effect.
+      </p>
+
+      <h2>Step 4: Third-party corroboration</h2>
+      <p>
+        Is your brand named in places the AI system already treats as trustworthy, independent of anything you
+        publish yourself? This overlaps with entity presence but is the step where citation and mention become
+        measurably different outcomes, which is the finding most diagnostic guides skip past.
+      </p>
+    </section>
+
+    <section class="wrap pb-16">
+      <div class="max-w-[46rem]">
+        {ghosts && <div class="fade-up"><ClaimCard claim={ghosts} compact={true} /></div>}
+      </div>
+    </section>
+
+    <section class="prose-wrap pb-24 copy">
+      <p>
+        In Semrush's sample, 61.7% of the time a page was used as a cited source, the brand behind it was never
+        named in the answer text a user actually reads. If your analytics show AI referral traffic (a real, bankable
+        signal) but you never see your brand mentioned when you test the same prompts yourself, this is the likely
+        explanation, not a crawling or indexation problem. The sample is modest, 115 prompts, and Perplexity was not
+        included, so treat the exact 61.7% as indicative rather than universal, while treating the underlying
+        distinction (cited as a source is not the same as named in the answer) as well established.
+      </p>
+
+      <h2>Reading the four steps together</h2>
+      <p>
+        Steps 1 and 2 are binary and checkable in minutes: either the crawler can reach you and the page is indexed,
+        or it is not. Steps 3 and 4 are graded, not binary, and the evidence behind them is real but thinner, mostly
+        one or two large correlational studies rather than a body of controlled experiments. Work down the list in
+        order. Spending on entity optimisation while GPTBot is disallowed in robots.txt is the single most common
+        version of this mistake we encounter.
+      </p>
+      <p>
+        For the wider evidence behind what does and does not move AI citation, see
+        <a class="link" href="/how-to-be-found-in-ai-search/">how to be found in AI search</a>. For why a single
+        visibility number will not confirm any of these steps worked, see
+        <a class="link" href="/can-you-measure-ai-visibility/">can you measure AI visibility?</a>.
+      </p>
+
+      <h2>Common questions</h2>
+      {faq.map(f => (
+        <>
+          <h3>{f.q}</h3>
+          <p>{f.a}</p>
+        </>
+      ))}
+
+      <div class="rule mt-12 pt-8">
+        <p class="text-[0.95rem]" style="color: var(--muted);">
+          Every statistic on this page is graded against its primary source in the
+          <a class="link" href="/evidence/">evidence ledger</a>. We sell no GEO services. Our commercial interest in
+          every tool we name is published on <a class="link" href="/who-pays-us/">who pays us</a>.
+        </p>
+      </div>
+    </section>
+  </article>
+</Base>

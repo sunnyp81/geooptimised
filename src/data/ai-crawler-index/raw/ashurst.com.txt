@@ -1,0 +1,26 @@
+User-agent: *
+Disallow: /xsl/
+Disallow: /api/*
+Disallow: /temp/
+Disallow: /design*
+Disallow: /upload/
+Disallow: *office=*
+Disallow: *region=*
+Disallow: /sitecore
+Disallow: /Sitecore
+Disallow: */search/*
+Disallow: /App_Data/
+Disallow: /App_config/
+Disallow: */people/?q=*
+Disallow: /App_Browsers/
+Disallow: /sitecore_files/
+Disallow: /sitecore/api/ssc/*
+Disallow: /sitecore modules/debug/
+Disallow: /sitecore modules/items/
+Disallow: /sitecore modules/Shell/
+Disallow: /sitecore modules/Web/EXM
+Disallow: /sitecore modules/PowerShell/
+Disallow: /sitecore modules/localization/
+Disallow: /sitecore modules/Web/ExperienceExplorer
+
+Sitemap: https://www.ashurstperkinscoie.com/sitemap.xml

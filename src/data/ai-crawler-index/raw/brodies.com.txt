@@ -1,0 +1,69 @@
+User-agent: HTTrack
+Disallow: /
+
+User-agent: Twitterbot
+Disallow:
+
+User-agent: *
+Allow: /
+Disallow: /404
+Disallow: /privacy/scottish-widows-privacy-policy/
+Disallow: /events/checkout
+Disallow: /events/academy
+Disallow: /traineeship-application-form
+Disallow: /traineeship-application-form/*
+Disallow: /summer-placement-application-form
+Disallow: /summer-placement-application-form/*
+Disallow: /cdn-cgi/
+Disallow: /*.pdf$
+
+# People Directory Parameter Control
+Disallow: /people/?*
+Allow: /people/?page=
+Allow: /people/?expertise=
+Disallow: /people/?expertise=*&*
+Allow: /people/?expertise=*&page=
+
+
+# Block all other query parameters in other directories
+Disallow: /insights/?*
+Disallow: /news/?*
+Disallow: /case-studies/?*
+Disallow: /vacancies/?*
+Disallow: /events/?*
+
+# Allow pagination and expertise parameters for insights
+Allow: /insights/?page=
+Allow: /insights/?expertise=
+Disallow: /insights/?expertise=*&*
+Allow: /insights/?expertise=*&page=
+
+# Allow pagination only for other directories
+Allow: /news/?page=
+Allow: /case-studies/?page=
+Allow: /vacancies/?page=
+Allow: /events/?page=
+
+# ---------------------------
+
+User-agent: Swiftbot
+Allow: /
+Disallow: /404
+Disallow: /events/checkout
+Disallow: /events/academy
+Disallow: /traineeship-application-form
+Disallow: /traineeship-application-form/*
+Disallow: /summer-placement-application-form
+Disallow: /summer-placement-application-form/*
+Disallow: /cdn-cgi/
+# Paths (no clean URLs)
+Disallow: /*?*q=
+Disallow: */people/?
+Disallow: */insights/?
+Disallow: */news/?
+Disallow: */case-studies/?
+Disallow: */vacancies/?
+Disallow: */events/?
+
+Sitemap: https://www.brodies.com/sitemap-index.xml
+

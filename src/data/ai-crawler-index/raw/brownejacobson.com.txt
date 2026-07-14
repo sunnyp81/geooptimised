@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: */search?
+Disallow: /api/
+Sitemap: https://www.brownejacobson.com/sitemap1.xml 
+Sitemap: https://www.brownejacobson.com/sitemap-articles.xml
+# Block AhrefsBot and AhrefsSiteAudit
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: AhrefsSiteAudit
+Disallow: /

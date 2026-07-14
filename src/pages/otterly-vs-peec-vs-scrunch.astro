@@ -1,0 +1,190 @@
+---
+import Base from '../layouts/Base.astro';
+import toolsData from '../data/tools.json';
+
+const tools = toolsData.tools;
+const otterly = tools.find(t => t.slug === 'otterly')!;
+const peec = tools.find(t => t.slug === 'peec-ai')!;
+
+const checkedOn = '2026-07-14';
+
+// Scrunch is not in src/data/tools.json (out of scope for this task to add it).
+// Everything below was fetched by us directly from scrunch.com on checkedOn; treat
+// it with the same provenance discipline as the ledger, just not yet folded into it.
+const scrunch = {
+  name: 'Scrunch',
+  url: 'https://scrunch.com/',
+  entryPrice: '$250/mo (Starter, billed annually) or $300/mo month-to-month',
+  affiliateFound: false,
+};
+
+const ordering = [
+  { name: 'Otterly.ai', price: 29, note: '' },
+  { name: 'Peec AI', price: null, note: 'third-party estimate only, about €89/mo; not published on peec.ai itself' },
+  { name: 'Scrunch', price: 250, note: '' },
+];
+
+const title = 'Otterly vs Peec vs Scrunch: the three-way AI visibility shortlist compared';
+const description = 'Otterly.ai, Peec AI and Scrunch compared on verified pricing, what each measures, and what each pays this site. None do today.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Otterly vs Peec vs Scrunch', item: 'https://geooptimised.com/otterly-vs-peec-vs-scrunch/' },
+    ],
+  },
+];
+---
+<Base title={title} description={description} schema={schema}>
+  <section class="wrap pt-14 pb-8">
+    <nav aria-label="Breadcrumb" class="data text-[0.7rem] uppercase tracking-widest mb-6" style="color: var(--muted);">
+      <a href="/">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text);">Otterly vs Peec vs Scrunch</span>
+    </nav>
+    <h1 class="font-display font-bold text-[2.2rem] sm:text-[2.9rem] leading-[1.08] max-w-[24ch]">
+      Otterly vs Peec vs Scrunch
+    </h1>
+    <p class="mt-6 max-w-[64ch] text-[1.08rem]" style="color: var(--text-soft);">
+      These are the three AI visibility trackers people shortlist against each other most, judging by what
+      brings readers to this site. They sit at three different price points and, since June 2026, three
+      different ownership structures: one independent budget tool, one independent mid-market tool with no
+      public price list, and one now owned by a public company for about $225 million. Only one of the three
+      can pay us anything, and we are not enrolled in it.
+    </p>
+    <p class="mt-4 data text-[0.75rem]" style="color: var(--muted);">
+      Checked {checkedOn} &middot; <a class="link" href="/who-pays-us/">our commercial interest in every tool named on this site</a>
+    </p>
+  </section>
+
+  <section class="wrap pb-14">
+    <h2 class="font-display text-[1.6rem] font-bold mb-2">Verified pricing, side by side</h2>
+    <p class="max-w-[64ch] mb-6 text-[0.98rem]" style="color: var(--text-soft);">
+      Ordered by verified entry price, lowest first. Peec sits second by a third-party estimate only, because
+      peec.ai does not itself publish a figure; treat its position as provisional, not as a ranking of quality.
+    </p>
+
+    <div class="table-scroll border" style="border-color: var(--line-strong); background: var(--surface);">
+      <table class="ledger-table !my-0">
+        <caption class="sr-only">Otterly, Peec AI and Scrunch, verified pricing and payout to this site</caption>
+        <thead>
+          <tr>
+            <th scope="col">Tool</th>
+            <th scope="col">Entry price</th>
+            <th scope="col">Source of price</th>
+            <th scope="col">Affiliate programme</th>
+            <th scope="col">Pays us</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="!font-semibold !text-[0.95rem]" style="color: var(--text);">
+              <a class="link" href={otterly.url} rel="noopener nofollow">Otterly.ai</a>
+            </td>
+            <td class="data text-[0.82rem]">{otterly.entryPrice}</td>
+            <td class="data text-[0.78rem]" style="color: var(--muted);">{otterly.pricingProvenance}, otterly.ai FAQ, re-checked {checkedOn}</td>
+            <td class="data text-[0.82rem]">{otterly.affiliate.rate}, {otterly.affiliate.model}, {otterly.affiliate.cookie} grace period</td>
+            <td class="data !font-semibold text-[0.85rem]" style="color: var(--g-verified);">NOTHING (not enrolled)</td>
+          </tr>
+          <tr>
+            <td class="!font-semibold !text-[0.95rem]" style="color: var(--text);">
+              <a class="link" href={peec.url} rel="noopener nofollow">Peec AI</a>
+            </td>
+            <td class="data text-[0.82rem]" style="color: var(--g-unreproduced);">{peec.entryPrice}</td>
+            <td class="data text-[0.78rem]" style="color: var(--muted);">{peec.pricingProvenance}; peec.ai/pricing shows tier names only, no amounts, checked {checkedOn}</td>
+            <td class="data text-[0.82rem]" style="color: var(--muted);">None found; peec.ai/affiliate returns 404</td>
+            <td class="data !font-semibold text-[0.85rem]" style="color: var(--g-verified);">NOTHING (no programme exists)</td>
+          </tr>
+          <tr>
+            <td class="!font-semibold !text-[0.95rem]" style="color: var(--text);">
+              <a class="link" href={scrunch.url} rel="noopener nofollow">Scrunch</a>
+            </td>
+            <td class="data text-[0.82rem]">{scrunch.entryPrice}</td>
+            <td class="data text-[0.78rem]" style="color: var(--muted);">we-fetched, scrunch.com/pricing, {checkedOn}</td>
+            <td class="data text-[0.82rem]" style="color: var(--muted);">None found on scrunch.com</td>
+            <td class="data !font-semibold text-[0.85rem]" style="color: var(--g-verified);">NOTHING (no programme exists)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-[0.85rem]" style="color: var(--muted);">
+      Otterly and Peec are recorded in our permanent ledger at <a class="link" href="/who-pays-us/">who pays us</a>.
+      Scrunch is not yet in that ledger; the figures here were fetched directly by us on {checkedOn} and carry
+      the same sourcing discipline, they are simply not folded into the site-wide table yet.
+    </p>
+  </section>
+
+  <section class="wrap pb-14">
+    <h2 class="font-display text-[1.6rem] font-bold mb-2">What each one actually measures</h2>
+    <p class="max-w-[64ch] mb-6 text-[0.98rem]" style="color: var(--text-soft);">
+      All three blend two different quantities into one dashboard. We separate them here because the industry
+      rarely does (see rule 8 of our methodology): a brand mention is your name appearing in an answer's text; a
+      citation is a source link the model drew on. They diverge more than marketing pages admit.
+    </p>
+    <div class="grid gap-5 lg:grid-cols-3">
+      <article class="border p-5" style="border-color: var(--line); background: var(--surface);">
+        <h3 class="font-display text-[1.1rem] font-bold mb-3">Otterly.ai</h3>
+        <p class="text-[0.9rem]" style="color: var(--text-soft);">
+          Tracks brand mentions across ChatGPT, Perplexity and Google AI Overviews, and separately reports which
+          links are referenced in the same answers. Otterly's own research (an experiment on llms.txt adoption)
+          is graded UNREPRODUCED in our ledger, not because the direction is wrong but because we could not pull
+          its headline sample size and date range off the page it is attributed to. See
+          <a class="link" href="/evidence/#llms-txt-ignored">that entry</a>.
+        </p>
+      </article>
+      <article class="border p-5" style="border-color: var(--line); background: var(--surface);">
+        <h3 class="font-display text-[1.1rem] font-bold mb-3">Peec AI</h3>
+        <p class="text-[0.9rem]" style="color: var(--text-soft);">
+          Reports "visibility, position and sentiment" for mentions across ChatGPT, Perplexity, Gemini and Google
+          AI Mode, and separately lists "key sources", the cited domains behind an answer. The mention side and
+          the citation side sit in the same dashboard but are not the same number.
+        </p>
+      </article>
+      <article class="border p-5" style="border-color: var(--line); background: var(--surface);">
+        <h3 class="font-display text-[1.1rem] font-bold mb-3">Scrunch</h3>
+        <p class="text-[0.9rem]" style="color: var(--text-soft);">
+          Markets itself as an "AI Customer Experience Platform" rather than a pure tracker: brand-mention
+          monitoring and citation analysis, plus an "Agent Experience Platform" that serves AI-optimised content
+          to crawlers, and crawl observability. That third piece, feeding an optimised version of your pages to
+          bots, is a different product category from the other two, priced accordingly.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="prose-wrap pb-24 copy">
+    <div class="rule pt-10">
+      <h2>Scrunch is no longer independent</h2>
+      <p>
+        Sitecore announced on 3 June 2026 that it had acquired Scrunch for approximately $225 million. Scrunch's
+        marketing site has since moved from scrunchai.com, which now 301-redirects, to scrunch.com. This matters
+        for a shortlist decision: you are no longer buying a standalone AI-visibility startup, you are buying a
+        feature of Sitecore's digital experience platform, priced and packaged as before for now, but subject to
+        Sitecore's roadmap going forward.
+      </p>
+      <p>
+        This is not an isolated data point. Our evidence ledger already carries the Lorelight shutdown, in which
+        founder Benjamin Houy closed a GEO tracking startup after seven months and concluded: "GEO makes more
+        sense as a feature within existing SEO platforms, not as a standalone category." Adobe separately agreed
+        to acquire Semrush for about $1.9 billion. The Scrunch acquisition is a second, larger data point in the
+        same direction. Full grading: <a class="link" href="/evidence/#geo-is-a-category">the evidence ledger</a>.
+      </p>
+      <h2>A single blended score is measuring three different populations</h2>
+      <p>
+        Kevin Indig's Consensus Gap study, 3.7 million URL citations across a 20,000-prompt sample on ChatGPT,
+        Perplexity and Google AI Overviews, found that only 2.37% of cited URLs appear across all three engines;
+        91.07% appear in exactly one. Any tracker, including all three above, that reports one number for "AI
+        visibility" is averaging near-disjoint populations. Ask which engines a plan actually covers before
+        comparing headline prices. Full grading:
+        <a class="link" href="/evidence/#consensus-gap">the evidence ledger</a>.
+      </p>
+      <p class="text-[0.9rem]">
+        A wider view, including suites with AI visibility add-ons and content tools, is at
+        <a class="link" href="/ai-visibility-tools-compared/">every AI visibility tool compared</a>. If Peec is
+        your starting point, see <a class="link" href="/peec-ai-alternatives/">Peec AI alternatives</a> for the
+        full field it competes with.
+      </p>
+    </div>
+  </section>
+</Base>

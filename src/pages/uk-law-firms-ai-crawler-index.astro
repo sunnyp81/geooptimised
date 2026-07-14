@@ -1,0 +1,487 @@
+---
+import Base from '../layouts/Base.astro';
+import data from '../data/ai-crawler-index.json';
+
+const recs = data.records;
+const N = recs.length;
+const AGENTS = data.agentsChecked as string[];
+const src = data.firmListSource;
+const round = (x: number) => Math.round(x);
+const pct = (n: number, d: number) => round((n / d) * 100);
+
+// --- Every headline is derived from the dataset at build time. Never hardcode a count. ---
+const readable = recs.filter(r => r.robots.readable);
+const absent = recs.filter(r => r.robots.state === 'absent');            // 404: no robots.txt at all
+const gated = recs.filter(r => ['blocked_by_bot_protection', 'unreadable_challenge', 'unreachable', 'other_status_502'].includes(r.robots.state));
+
+// A firm "addresses" an AI crawler if any target token is explicitly allowed, blocked or partly limited.
+// NOTE: these per-token statuses describe the file's SYNTAX SHAPE only. The judgement about whether a
+// firm actually restricts AI is aiSpecificStance, derived against the Googlebot benchmark.
+const addressed = (r: any) => AGENTS.some(a => ['allowed', 'blocked', 'partial'].includes(r.crawlers[a].status));
+const addressesAI = readable.filter(addressed);
+const silentOnAI = readable.filter(r => !addressed(r));       // readable file, names no AI token
+
+// The headline judgement: AI token held to stricter effective rules than the same file gives Googlebot.
+const aiSpecific = recs.filter(r => r.aiSpecificStance === 'restricts_ai_specifically');
+const aiNoRestriction = recs.filter(r => r.aiSpecificStance === 'no_ai_specific_restriction');
+const aiIndeterminate = recs.filter(r => r.aiSpecificStance === 'indeterminate');
+
+// llms.txt
+const llmsPresent = recs.filter(r => r.llms.genuine);
+const llmsAbsent = recs.filter(r => r.llms.state === 'absent');
+const llmsSoft = recs.filter(r => r.llms.state === 'soft404_html');
+
+// Per-crawler summary across the readable files only (the only ones whose stance we can read).
+const perAgent = AGENTS.map(a => {
+  const c: Record<string, number> = { allowed: 0, blocked: 0, partial: 0, not_listed: 0, indeterminate: 0 };
+  for (const r of readable) c[r.crawlers[a].status] = (c[r.crawlers[a].status] || 0) + 1;
+  return { agent: a, ...c, mentioned: c.allowed + c.blocked + c.partial };
+});
+
+const fetchedOn = data.fetchedOn;
+
+// Presentation maps for the status cells. Never colour-alone: each cell carries a text token.
+const cellMap: Record<string, { label: string; tone: string; title: string }> = {
+  allowed:       { label: 'allow', tone: '--g-verified',     title: 'The token is named and not disallowed.' },
+  blocked:       { label: 'block', tone: '--g-refuted',      title: 'The token is named with Disallow: / and no Allow override: a full block request.' },
+  partial:       { label: 'part',  tone: '--g-unreproduced', title: 'The token is named with some paths disallowed, or an allowlist (Disallow: / plus Allow overrides).' },
+  not_listed:    { label: 'n/m',   tone: '--muted',          title: 'Not mentioned. The token does not appear in this robots.txt. This is not a block.' },
+  indeterminate: { label: 'n/a',   tone: '--muted',          title: 'We could not read this file (bot protection or unreachable), so its stance is unknown.' },
+};
+
+const robotsStateMap: Record<string, { label: string; tone: string }> = {
+  readable:                  { label: 'read', tone: '--g-verified' },
+  absent:                    { label: '404',  tone: '--muted' },
+  blocked_by_bot_protection: { label: 'WAF',  tone: '--g-refuted' },
+  unreadable_challenge:      { label: 'WAF',  tone: '--g-refuted' },
+  unreachable:               { label: 'down', tone: '--g-refuted' },
+  other_status_502:          { label: 'down', tone: '--g-refuted' },
+};
+
+const llmsStateMap: Record<string, { label: string; tone: string; title: string }> = {
+  present:                   { label: 'yes',  tone: '--g-verified',     title: 'A genuine llms.txt (markdown) was served.' },
+  absent:                    { label: '404',  tone: '--muted',          title: 'No llms.txt (HTTP 404).' },
+  soft404_html:              { label: 'soft', tone: '--g-unreproduced', title: 'HTTP 200 but the body is an HTML page, not a genuine llms.txt. A soft-404.' },
+  blocked_by_bot_protection: { label: 'WAF',  tone: '--g-refuted',      title: 'Request answered by a bot-protection challenge.' },
+  unreachable:               { label: 'down', tone: '--g-refuted',      title: 'The host did not respond.' },
+  other_status_502:          { label: 'down', tone: '--g-refuted',      title: 'The host returned a server error.' },
+  empty_200:                 { label: 'empty',tone: '--muted',          title: 'HTTP 200 with an empty body.' },
+};
+
+const title = 'UK law firms AI crawler access index: what the top 50 robots.txt files actually say';
+const description = `We fetched robots.txt and llms.txt for each of the UK's top 50 law firms by revenue on ${fetchedOn}. ${silentOnAI.length} of ${readable.length} readable files name no AI crawler at all. ${aiSpecific.length} of ${N} holds an AI crawler to stricter rules than it gives Googlebot. ${llmsPresent.length} publish a genuine llms.txt. Raw responses saved for every firm.`;
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'UK law firms AI crawler access index', item: 'https://geooptimised.com/uk-law-firms-ai-crawler-index/' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: 'UK Law Firms AI Crawler Access Index',
+    description: `Per-firm robots.txt and llms.txt directives for AI crawlers across the UK's top ${N} law firms by revenue, fetched ${fetchedOn}. Records whether each of ${AGENTS.length} AI user-agent tokens is allowed, blocked, partly limited or not mentioned (the file's syntax shape), plus a derived AI-specific stance judged against each file's effective rules for Googlebot, with every raw response retained.`,
+    creator: { '@id': 'https://geooptimised.com/#organization' },
+    dateModified: fetchedOn,
+    datePublished: fetchedOn,
+    url: 'https://geooptimised.com/uk-law-firms-ai-crawler-index/',
+    isAccessibleForFree: true,
+    measurementTechnique: 'Direct HTTP fetch of /robots.txt and /llms.txt per domain, followed by user-agent group parsing.',
+    variableMeasured: ['robots.txt directive per AI user-agent', 'AI-specific stance versus Googlebot benchmark', 'robots.txt readability state', 'llms.txt presence and genuineness', 'HTTP status', 'fetch date'],
+    citation: src.url,
+    creativeWorkStatus: 'Published',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    datePublished: fetchedOn,
+    dateModified: fetchedOn,
+    author: { '@type': 'Person', '@id': 'https://geooptimised.com/#sunny-patel', name: 'Sunny Patel' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' },
+  },
+];
+---
+<Base title={title} description={description} schema={schema} ogType="article">
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid" aria-hidden="true"></div>
+    <div class="absolute inset-0 hero-fade" aria-hidden="true"></div>
+    <div class="wrap relative pt-14 pb-16">
+      <nav aria-label="Breadcrumb" class="eyebrow mb-6">
+        <a href="/">Home</a> <span aria-hidden="true">/</span> UK law firms AI crawler index
+      </nav>
+      <p class="eyebrow mb-5">Original data &middot; {N} firms &middot; Fetched {fetchedOn}</p>
+
+      <h1 class="font-display font-bold text-[2.2rem] leading-[1.07] sm:text-[3.1rem] max-w-[24ch] grad-text">
+        We read the robots.txt of every top-50 UK law firm. Almost none say anything about AI crawlers.
+      </h1>
+
+      <p class="mt-7 max-w-[66ch] text-[1.1rem]" style="color: var(--text-soft);">
+        For each firm in a published revenue ranking we fetched <code>/robots.txt</code> and
+        <code>/llms.txt</code> ourselves, saved every raw response, and parsed each file for the
+        {AGENTS.length} AI user-agent tokens that OpenAI, Anthropic, Perplexity, Google, Microsoft, Apple and
+        Common Crawl publish. This is what the files say, and, just as important, what they do not say.
+      </p>
+
+      <div class="mt-12 grid gap-4 sm:grid-cols-3">
+        <div class="card p-6">
+          <p class="data text-5xl font-bold" style="color: var(--g-untraceable);">{silentOnAI.length}<span class="text-2xl" style="color: var(--muted);">/{readable.length}</span></p>
+          <p class="mt-3 text-[0.95rem]" style="color: var(--text-soft);">readable robots.txt files <strong style="color:var(--text)">name no AI crawler at all</strong>. Silence is the default posture.</p>
+        </div>
+        <div class="card p-6">
+          <p class="data text-5xl font-bold" style="color: var(--g-refuted);">{aiSpecific.length}<span class="text-2xl" style="color: var(--muted);">/{N}</span></p>
+          <p class="mt-3 text-[0.95rem]" style="color: var(--text-soft);">holds an AI crawler to <strong style="color:var(--text)">stricter rules than it gives Googlebot</strong>: the only reading of robots.txt that counts as an AI-specific restriction.</p>
+        </div>
+        <div class="card p-6">
+          <p class="data text-5xl font-bold" style="color: var(--g-verified);">{llmsPresent.length}<span class="text-2xl" style="color: var(--muted);">/{N}</span></p>
+          <p class="mt-3 text-[0.95rem]" style="color: var(--text-soft);">serve a <strong style="color:var(--text)">genuine <code>llms.txt</code></strong>. {llmsSoft.length} more return a 200 that is really an HTML soft-404.</p>
+        </div>
+      </div>
+
+      <p class="mt-6 data text-[0.72rem]" style="color: var(--muted);">
+        n = {N} firms &middot; {aiIndeterminate.length} indeterminate: behind bot protection or unreachable, so their stance cannot be read &middot;
+        firm list from a published ranking (<a class="link" href={src.url} rel="nofollow">source</a>) &middot; every raw file retained
+      </p>
+    </div>
+  </section>
+
+  <!-- What we actually found -->
+  <section class="wrap py-16">
+    <div class="rule pt-10">
+      <h2 class="font-display text-[1.8rem] font-bold mb-6">What the files actually show</h2>
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="card p-5">
+          <h3 class="font-display text-[1.1rem] font-semibold mb-2">Silence, not blocking, is the norm</h3>
+          <p class="text-[0.95rem]" style="color: var(--text-soft);">
+            Of {readable.length} firms whose robots.txt we could read, {silentOnAI.length} ({pct(silentOnAI.length, readable.length)}%)
+            mention none of the {AGENTS.length} AI tokens. {addressesAI.length} name an AI crawler at all, and in
+            {aiSpecific.length} of {N} files an AI crawler is held to stricter rules than Googlebot. The dominant
+            stance is not a decision either way.
+          </p>
+        </div>
+        <div class="card p-5">
+          <h3 class="font-display text-[1.1rem] font-semibold mb-2">Naming an AI crawler is not restricting it</h3>
+          <p class="text-[0.95rem]" style="color: var(--text-soft);">
+            Most firms that name AI tokens treat them exactly like mainstream crawlers. In one file the AI tokens
+            sit in the same directive group as Googlebot and Bingbot, so the policy applies to all named crawlers
+            alike; in others the AI tokens get <code>Allow: /</code> with only the same housekeeping exclusions as
+            the default group, which is explicit permission. Per-firm notes appear under the table.
+          </p>
+        </div>
+        <div class="card p-5">
+          <h3 class="font-display text-[1.1rem] font-semibold mb-2">Bot protection reads more like a gate than robots.txt does</h3>
+          <p class="text-[0.95rem]" style="color: var(--text-soft);">
+            {gated.length} of {N} firms answered our request for a plain text file with a WAF challenge
+            (Cloudflare, Vercel, Azure, Incapsula) or did not respond. That gate can turn away a compliant AI
+            fetcher regardless of what the robots.txt would have said, and it is not a robots directive.
+          </p>
+        </div>
+        <div class="card p-5">
+          <h3 class="font-display text-[1.1rem] font-semibold mb-2">The search and on-demand tokens are untouched</h3>
+          <p class="text-[0.95rem]" style="color: var(--text-soft);">
+            Where firms name AI tokens at all, they name the training crawlers (GPTBot, ClaudeBot,
+            Google-Extended, CCBot). The tokens that power live answers, OAI-SearchBot, ChatGPT-User,
+            PerplexityBot and Perplexity-User, are almost entirely unaddressed. A rule on a training crawler
+            does not touch retrieval.
+          </p>
+        </div>
+        <div class="card p-5">
+          <h3 class="font-display text-[1.1rem] font-semibold mb-2"><code>llms.txt</code> is barely used, and easy to fake by accident</h3>
+          <p class="text-[0.95rem]" style="color: var(--text-soft);">
+            {llmsPresent.length} firms serve a genuine <code>llms.txt</code>; {llmsAbsent.length} return a clean 404.
+            {llmsSoft.length} return HTTP 200 for <code>/llms.txt</code> but the body is an ordinary HTML page, a
+            soft-404 that a careless audit would count as present. We do not.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Per-crawler summary -->
+  <section class="wrap pb-4">
+    <div class="rule pt-10">
+      <h2 class="font-display text-[1.6rem] font-bold mb-3">Per-crawler summary</h2>
+      <p class="max-w-[66ch] mb-6" style="color: var(--text-soft);">
+        Counted across the {readable.length} readable robots.txt files only. These counts describe the files'
+        syntax shape, token by token; they are not a judgement that a firm restricts AI. "Not mentioned" is not
+        a block; it means the token does not appear, so the site's general rules (or none) apply to it. And a
+        token that is named is usually being permitted, not limited; the stance column in the full table below
+        carries the actual judgement, made against what each file gives Googlebot.
+      </p>
+      <div class="table-scroll card">
+        <table class="ledger-table !my-0">
+          <caption class="sr-only">AI crawler directive counts across readable robots.txt files</caption>
+          <thead>
+            <tr>
+              <th scope="col">AI user-agent</th>
+              <th scope="col">Allow</th>
+              <th scope="col">Block</th>
+              <th scope="col">Partial</th>
+              <th scope="col">Not mentioned</th>
+              <th scope="col">Named at all</th>
+            </tr>
+          </thead>
+          <tbody>
+            {perAgent.map(p => (
+              <tr>
+                <td class="data !text-[0.85rem]" style="color: var(--text);">{p.agent}</td>
+                <td class="data" style={`color: ${p.allowed ? 'var(--g-verified)' : 'var(--muted)'};`}>{p.allowed}</td>
+                <td class="data" style={`color: ${p.blocked ? 'var(--g-refuted)' : 'var(--muted)'};`}>{p.blocked}</td>
+                <td class="data" style={`color: ${p.partial ? 'var(--g-unreproduced)' : 'var(--muted)'};`}>{p.partial}</td>
+                <td class="data" style="color: var(--muted);">{p.not_listed}</td>
+                <td class="data" style="color: var(--text-soft);">{p.mentioned}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- What a block actually prevents: the honesty section -->
+  <section class="prose-wrap py-12 copy">
+    <div class="rule pt-10">
+      <h2>What a block actually prevents</h2>
+      <p>
+        A blocked user-agent token restricts one specific fetch. It does not make a brand "invisible in AI".
+        Models retain what they were trained on before the rule existed, retrieval and training use different
+        tokens, and one assistant often rides another's index. Precise, per-token, this is what each directive
+        in the table above does and does not do.
+      </p>
+      <ul>
+        <li><strong>GPTBot</strong> is OpenAI's crawler for model training and for GPTBot-driven browsing. Blocking it
+          asks OpenAI not to collect the site for those uses. It does <em>not</em> remove the firm from ChatGPT's
+          existing knowledge, and it does not stop ChatGPT's search feature, which uses <strong>OAI-SearchBot</strong>.</li>
+        <li><strong>OAI-SearchBot</strong> powers results in ChatGPT search. A firm that blocks GPTBot but leaves
+          OAI-SearchBot unmentioned, which is the common pattern here, can still be fetched and cited by ChatGPT search.</li>
+        <li><strong>ChatGPT-User</strong> is the live fetch made when a user asks ChatGPT to open a specific link.
+          Blocking it affects on-demand visits, not training.</li>
+        <li><strong>ClaudeBot</strong> is Anthropic's active crawler. <strong>Claude-Web</strong> and
+          <strong>anthropic-ai</strong> are older tokens Anthropic has published; naming ClaudeBot alone is the current control.</li>
+        <li><strong>PerplexityBot</strong> is Perplexity's index crawler; <strong>Perplexity-User</strong> is its
+          on-demand fetch when a user's question requires opening a page. They are separate decisions.</li>
+        <li><strong>Google-Extended</strong> controls use of content for Google's Gemini and Vertex AI, including
+          grounding and training. It does <em>not</em> affect Google Search indexing or eligibility for AI
+          Overviews, both of which follow <strong>Googlebot</strong>. Blocking Google-Extended does not remove a
+          firm from AI Overviews.</li>
+        <li><strong>Bingbot</strong> is Bing's search crawler. Microsoft Copilot draws on the Bing index, so a
+          Bingbot rule reaches Copilot indirectly; there is no separate Copilot opt-out token to set.</li>
+        <li><strong>CCBot</strong> is Common Crawl, an open corpus that many models train from at one remove.
+          Blocking it limits that indirect route, not any single assistant.</li>
+        <li><strong>Applebot-Extended</strong> opts content out of Apple Intelligence training. Apple's search
+          crawler, <strong>Applebot</strong>, is a separate token and is not in scope here.</li>
+      </ul>
+      <p>
+        And the rule that sits under all of them: <strong>robots.txt is a request, not enforcement.</strong> It
+        expresses a preference that a crawler operator may honour or ignore, and honouring it is voluntary and
+        varies by operator. Nothing on this page measures traffic, lost visibility or citation outcomes, and no
+        causal claim of that kind is made. We report the directives as fetched, and only that.
+      </p>
+    </div>
+  </section>
+
+  <!-- Full sortable table -->
+  <section class="wrap pb-8">
+    <div class="rule pt-10">
+      <h2 class="font-display text-[1.6rem] font-bold mb-3">Every firm, every token</h2>
+      <p class="max-w-[66ch] mb-4" style="color: var(--text-soft);">
+        All {N} firms in ranked order. Click a column header to sort. The per-token cells describe the file's
+        syntax shape only, not a judgement that the firm restricts AI: <span class="data" style="color:var(--g-verified)">allow</span> (named, nothing disallowed),
+        <span class="data" style="color:var(--g-refuted)">block</span> (named, full disallow),
+        <span class="data" style="color:var(--g-unreproduced)">part</span> (named with path rules or an allowlist),
+        <span class="data" style="color:var(--muted)">n/m</span> (not mentioned), <span class="data" style="color:var(--muted)">n/a</span> (file unreadable).
+        The judgement is the <strong style="color:var(--text)">AI stance</strong> column: whether any AI token is
+        held to stricter effective rules than the same file gives Googlebot.
+      </p>
+      <div class="table-scroll card">
+        <table id="firm-table" class="ledger-table !my-0 text-[0.8rem]">
+          <caption class="sr-only">AI crawler directives for all {N} firms</caption>
+          <thead>
+            <tr>
+              <th scope="col" data-sort="num" class="cursor-pointer">#</th>
+              <th scope="col" data-sort="str" class="cursor-pointer">Firm</th>
+              <th scope="col" data-sort="str" class="cursor-pointer">robots</th>
+              <th scope="col" data-sort="str" class="cursor-pointer">AI stance</th>
+              {AGENTS.map(a => <th scope="col" data-sort="str" class="cursor-pointer !text-[0.62rem]">{a}</th>)}
+              <th scope="col" data-sort="str" class="cursor-pointer">llms</th>
+            </tr>
+          </thead>
+          <tbody>
+            {recs.map(r => {
+              const rs = robotsStateMap[r.robots.state] ?? { label: r.robots.state, tone: '--muted' };
+              const ls = llmsStateMap[r.llms.state] ?? { label: r.llms.state, tone: '--muted', title: '' };
+              return (
+                <tr>
+                  <td class="data" data-val={r.rank} style="color: var(--muted);">{r.rank}</td>
+                  <td style="color: var(--text); white-space: nowrap;" data-val={r.firm}>
+                    {r.firm}
+                    <span class="block data text-[0.66rem]" style="color: var(--muted);">{r.domain}</span>
+                  </td>
+                  <td data-val={r.robots.state}>
+                    <span class="data text-[0.62rem] font-semibold uppercase tracking-wide" style={`color: var(${rs.tone});`} title={`HTTP ${r.robots.httpStatus}, ${r.robots.state}`}>{rs.label}</span>
+                  </td>
+                  <td data-val={r.aiSpecificStance}>
+                    <span
+                      class="data text-[0.62rem] font-semibold uppercase tracking-wide"
+                      style={`color: var(${r.aiSpecificStance === 'restricts_ai_specifically' ? '--g-refuted' : r.aiSpecificStance === 'indeterminate' ? '--g-unreproduced' : '--muted'});`}
+                      title={r.aiSpecificNote}
+                    >{r.aiSpecificStance === 'restricts_ai_specifically' ? 'AI-specific' : r.aiSpecificStance === 'indeterminate' ? 'n/a' : 'none'}</span>
+                  </td>
+                  {AGENTS.map(a => {
+                    const cm = cellMap[r.crawlers[a].status] ?? cellMap.not_listed;
+                    return (
+                      <td data-val={r.crawlers[a].status}>
+                        <span class="data text-[0.66rem] font-semibold" style={`color: var(${cm.tone});`} title={cm.title}>{cm.label}</span>
+                      </td>
+                    );
+                  })}
+                  <td data-val={r.llms.state}>
+                    <span class="data text-[0.62rem] font-semibold uppercase tracking-wide" style={`color: var(${ls.tone});`} title={ls.title}>{ls.label}</span>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-6 card p-5">
+        <h3 class="font-display text-[1.05rem] font-semibold mb-3">Notes on every firm that names an AI token</h3>
+        <ul class="space-y-2">
+          {recs.filter(r => addressed(r)).map(r => (
+            <li class="text-[0.9rem]" style="color: var(--text-soft);">
+              <strong style="color: var(--text);">{r.firm}</strong>
+              <span class="data text-[0.62rem] font-semibold uppercase tracking-wide ml-2" style={`color: var(${r.aiSpecificStance === 'restricts_ai_specifically' ? '--g-refuted' : '--muted'});`}>
+                {r.aiSpecificStance === 'restricts_ai_specifically' ? 'AI-specific restriction' : 'no AI-specific restriction'}
+              </span>
+              <span class="block mt-0.5">{r.aiSpecificNote}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="mt-4 text-[0.85rem]" style="color: var(--muted);">
+          The {aiIndeterminate.length} firms marked n/a ({aiIndeterminate.map(r => r.firm).join(', ')}) answered our
+          request with a bot-protection challenge or did not respond, so their robots.txt stance is unknown, not inferred.
+        </p>
+      </div>
+
+      <p class="mt-4 data text-[0.7rem]" style="color: var(--muted);">
+        Raw responses for every firm are retained at <code>src/data/ai-crawler-index/raw/</code> in the site
+        repository, and the parsed dataset is <code>src/data/ai-crawler-index.json</code>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Methodology -->
+  <section class="prose-wrap pb-24 copy">
+    <div class="rule pt-10">
+      <h2>Methodology</h2>
+
+      <h3>The firm list</h3>
+      <p>
+        The population is the top {N} firms from <a class="link" href={src.url} rel="nofollow">{src.publisher}, "{src.title}"</a>:
+        {src.ranking} We fetched that ranking on {src.fetchedOn}. {src.caveat} The two primary
+        rankings in this field, The Lawyer UK 200 and the Legal Business LB100, are the stronger sources but sit
+        behind paywalls, so we used a freely accessible published compilation and state that plainly. The list
+        orders firms by revenue; it is not a ranking of AI readiness, and nothing here should be read as one.
+      </p>
+
+      <h3>The fetch</h3>
+      <p>
+        On {fetchedOn} we requested <code>https://&lt;domain&gt;/robots.txt</code> and
+        <code>https://&lt;domain&gt;/llms.txt</code> for each firm with curl, following redirects, and saved the
+        exact response body for every firm as provenance. Three firms answered only on their <code>www</code>
+        host, so we recorded the effective URL. Each firm's primary domain was mapped by inspection; a wrong
+        domain would appear below as unreachable, never as a false directive.
+      </p>
+
+      <h3>Reading a file, and refusing to read a fake one</h3>
+      <p>
+        A response counts as a readable robots.txt only when its body is genuinely a robots file, that is, plain
+        text carrying <code>User-agent</code>, <code>Allow</code> or <code>Disallow</code> lines. Several firms
+        returned HTTP 200, 403 or 429 whose body was an HTML bot-protection challenge (Vercel, Cloudflare, Azure
+        WAF, Incapsula). We record those as unreadable and never parse them for directives, because a challenge
+        page is not a policy. The same discipline applies to <code>llms.txt</code>: a 200 whose body is an
+        ordinary HTML page is a soft-404 and is marked as such, not counted as a genuine file.
+      </p>
+
+      <h3>How each token was classified</h3>
+      <p>
+        robots.txt was parsed with standard user-agent grouping: consecutive <code>User-agent</code> lines share
+        the rules that follow them, until the next group. For each of the {AGENTS.length} AI tokens we then recorded:
+      </p>
+      <ul>
+        <li><strong>allow</strong>: the token is named and nothing disallows it.</li>
+        <li><strong>block</strong>: the token is named with <code>Disallow: /</code> and no <code>Allow</code> override, a full-site block request.</li>
+        <li><strong>partial</strong>: the token is named with some paths disallowed, or an allowlist pattern (<code>Disallow: /</code> alongside <code>Allow:</code> rules that re-permit specific sections).</li>
+        <li><strong>not mentioned</strong>: the token does not appear. The catch-all <code>User-agent: *</code> group, if any, still applies to it, but no AI-specific rule was set. This is not a block.</li>
+      </ul>
+      <p>
+        Those four labels describe syntax, deliberately. A token can be "partial" because it receives an
+        allowlist, or because it shares the site's ordinary housekeeping exclusions; neither is evidence that the
+        firm singled out AI. The judgement lives in a separate, derived field.
+      </p>
+
+      <h3>The stance judgement: stricter than Googlebot, or not</h3>
+      <p>
+        For each firm we derived one field, the AI-specific stance, computed from the archived raw files. The
+        benchmark is Googlebot, the mainstream crawler every firm plainly wants. Following RFC 9309 semantics,
+        each token obeys the group or groups naming it exactly; a token that is not named falls back to the
+        <code>User-agent: *</code> group. We then ask one question: is any AI token's effective rule set clearly
+        stricter than the same file's effective rule set for Googlebot? Bingbot sits in the per-token table
+        because Copilot rides its index, but it is a mainstream search crawler, so it is not part of the
+        AI-specific test.
+      </p>
+      <ul>
+        <li><strong>Restricts AI specifically</strong>: at least one AI token is fully disallowed while Googlebot is not equally disallowed. This is the only pattern we label a restriction.</li>
+        <li><strong>No AI-specific restriction</strong>: the AI tokens are unnamed (they inherit the same generic rules as every other unnamed crawler), or named with rules identical to or more permissive than Googlebot's. A restriction shared equally with Googlebot, or inherited from <code>*</code>, is a general crawling policy, not an AI decision.</li>
+        <li><strong>Indeterminate</strong>: we could not read the file, or the differences were neither clearly stricter nor clearly equal. Ambiguity is graded conservatively, never as a restriction.</li>
+      </ul>
+
+      <h3>Limitations</h3>
+      <ul>
+        <li>This is a single snapshot on {fetchedOn}. robots.txt and llms.txt change; the retained raw files fix what we saw on that date.</li>
+        <li>The population is a revenue ranking, not a random or complete sample of UK firms. It says nothing about firms outside the top {N}.</li>
+        <li>Firms behind bot protection ({gated.length} of {N}) have an unreadable stance here. That is a finding about access, not evidence that they block or permit any crawler.</li>
+        <li>robots.txt and llms.txt are voluntary requests. Compliance is at the operator's discretion, so a directive is a stated preference, not an enforced outcome, and we measure no outcome.</li>
+        <li>We checked {AGENTS.length} named AI tokens. Other agents exist (for example Amazonbot, Bytespider, meta-externalagent, which appear in some of these files); they are out of scope and not counted.</li>
+      </ul>
+
+      <p>
+        The dataset behind this page is public: <code>src/data/ai-crawler-index.json</code> plus one raw file per
+        firm. Anyone can refetch a domain and check our reading against the saved response. If a firm's file has
+        changed since {fetchedOn}, that is expected, and a fresh fetch is the way to confirm it. See also
+        <a class="link" href="/methodology/">how we grade</a> and the <a class="link" href="/reproduction/">reproduction study</a>.
+      </p>
+    </div>
+  </section>
+
+  <script is:inline>
+    // Progressive-enhancement column sort. Works on the rendered table; no dependency.
+    (function () {
+      const table = document.getElementById('firm-table');
+      if (!table) return;
+      const tbody = table.querySelector('tbody');
+      const headers = Array.from(table.querySelectorAll('thead th'));
+      headers.forEach((th, idx) => {
+        let asc = true;
+        th.addEventListener('click', () => {
+          const type = th.getAttribute('data-sort') || 'str';
+          const rows = Array.from(tbody.querySelectorAll('tr'));
+          rows.sort((a, b) => {
+            const av = (a.children[idx].getAttribute('data-val') || a.children[idx].textContent || '').trim();
+            const bv = (b.children[idx].getAttribute('data-val') || b.children[idx].textContent || '').trim();
+            if (type === 'num') return (asc ? 1 : -1) * (parseFloat(av) - parseFloat(bv));
+            return (asc ? 1 : -1) * av.localeCompare(bv);
+          });
+          rows.forEach(r => tbody.appendChild(r));
+          asc = !asc;
+        });
+      });
+    })();
+  </script>
+</Base>

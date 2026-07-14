@@ -1,0 +1,36 @@
+User-agent: *
+Allow: *people*
+Disallow: /sitecore/
+Disallow: /sitecore modules/
+Disallow: /sitecore_files/
+Disallow: /App_config/
+Disallow: /App_Data/
+Disallow: /App_Browsers/
+Disallow: */search?term=*
+Disallow: *?Locale=*
+Disallow: *?emailType=*
+Disallow: *?da=*
+Disallow: *?country=*
+Disallow: *?L=*
+Disallow: *?la=*
+Disallow: *?item=*
+Disallow: *?tms-rechtsbereich=*
+Disallow: *?sc_itemid=*
+Disallow: *?token=*
+Disallow: *?term=*
+Disallow: *?authors=*
+Disallow: *?page=*
+Disallow: *?sectors=*
+Disallow: *?locations=*
+Disallow: *?services=*
+Disallow: *?sub-services=*
+Disallow: *?show_on_screen*
+Disallow: *?hot_topics=*
+Disallow: *?news_id=*
+Disallow: *?press_release_type=*
+Disallow: *?search=*
+Disallow: *?preview_id=*
+
+Sitemap: https://www.taylorwessing.com/sitemapindex.ashx
+
+

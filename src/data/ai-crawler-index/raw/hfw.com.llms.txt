@@ -1,0 +1,1553 @@
+<!doctype html>
+<html lang="en-GB" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+    <script type="text/javascript">
+	window.dataLayer = window.dataLayer || [];
+
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+
+	gtag("consent", "default", {
+		ad_personalization: "denied",
+		ad_storage: "denied",
+		ad_user_data: "denied",
+		analytics_storage: "denied",
+		functionality_storage: "denied",
+		personalization_storage: "denied",
+		security_storage: "granted",
+		wait_for_update: 500,
+	});
+	gtag("set", "ads_data_redaction", true);
+	</script>
+<script type="text/javascript">
+		(function (w, d, s, l, i) {
+		w[l] = w[l] || [];
+		w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+		var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l !== 'dataLayer' ? '&l=' + l : '';
+		j.async = true;
+		j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+		f.parentNode.insertBefore(j, f);
+	})(
+		window,
+		document,
+		'script',
+		'dataLayer',
+		'GTM-M74VZH3'
+	);
+</script>
+<script type="text/javascript"
+		id="Cookiebot"
+		src="https://consent.cookiebot.com/uc.js"
+		data-implementation="wp"
+		data-cbid="759436eb-ba99-46e5-b405-3283cc0f86ae"
+							async	></script>
+<meta name='robots' content='noindex, follow' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v28.0 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Page not found | HFW</title>
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:title" content="Page not found | HFW" />
+	<meta property="og:site_name" content="HFW" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebSite","@id":"https:\/\/www.hfw.com\/#website","url":"https:\/\/www.hfw.com\/","name":"HFW","description":"Global Sector-Focused Law Firm","publisher":{"@id":"https:\/\/www.hfw.com\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.hfw.com\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-GB"},{"@type":"Organization","@id":"https:\/\/www.hfw.com\/#organization","name":"HFW","url":"https:\/\/www.hfw.com\/","logo":{"@type":"ImageObject","inLanguage":"en-GB","@id":"https:\/\/www.hfw.com\/#\/schema\/logo\/image\/","url":"https:\/\/hfw.com\/app\/uploads\/2024\/01\/open-graph-logo.png","contentUrl":"https:\/\/hfw.com\/app\/uploads\/2024\/01\/open-graph-logo.png","width":685,"height":517,"caption":"HFW"},"image":{"@id":"https:\/\/www.hfw.com\/#\/schema\/logo\/image\/"},"sameAs":["https:\/\/x.com\/hfw_law","https:\/\/uk.linkedin.com\/company\/hfw","https:\/\/www.youtube.com\/c\/HFWVideos-Channel"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.hfw.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='preconnect' href='https://www.googletagmanager.com' />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-block-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the block styles printed at wp_footer." }
+/*# sourceURL=wp-block-styles-placeholder-inline-css */
+</style>
+<style id="wp-global-styles-placeholder-inline-css">
+:root { --wp-internal-comment: "Placeholder for wp_hoist_late_printed_styles() to replace with the global-styles printed at wp_footer." }
+/*# sourceURL=wp-global-styles-placeholder-inline-css */
+</style>
+<link rel='stylesheet' id='sage/fonts/google-css' onload="this.media='all';" href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&#038;display=swap' media='print' />
+<link rel='stylesheet' id='app/0-css' href='https://www.hfw.com/app/themes/hfw/public/css/app.9365b9.css' media='all' />
+<link rel="https://api.w.org/" href="https://www.hfw.com/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.hfw.com/wp/xmlrpc.php?rsd" />
+
+<!-- Stream WordPress user activity plugin v4.2.2 -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<style id="kirki-inline-styles"></style>  <meta name="apple-mobile-web-app-title" content="HFW">
+  <link rel="icon" type="image/png" href="https://www.hfw.com/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="https://www.hfw.com/favicon.svg" />
+  <link rel="shortcut icon" href="https://www.hfw.com/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.hfw.com/apple-touch-icon.png" />
+  <link rel="manifest" href="https://www.hfw.com/site.webmanifest" />
+</head>
+
+<body class="error404 wp-embed-responsive wp-theme-hfw text-primary-dark-grey font-montserrat antialiased text-sm lg:text-15px leading-normal header-sticky js-header-sticky-enabled">
+  
+<!--BEGIN: TRACKING CODE MANAGER (v2.6.0) BY INTELLYWP.COM IN BODY//-->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M74VZH3" height="0" width="0" style="display:none"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!--END: https://wordpress.org/plugins/tracking-code-manager IN BODY//-->
+  <div id="app">
+    <a
+      class="sr-only focus:not-sr-only"
+      href="#main"
+    >
+      Skip to content
+    </a>
+
+    <div class="header-watcher"></div>
+<header
+  id="main-header"
+  class="group top-0 lg:[.header-sticky.admin-bar_&]:top-8 relative w-full ease-in transition-all z-50 [.header-sticky_&]:sticky header-mode-white bg-white mobile-menu-open:bg-utility-neutral-grey max-lg:search-opened:bg-utility-neutral-grey"
+>
+  <div class="container">
+    <div class="header-content flex h-18 items-center lg:h-24">
+      <a
+    class="header-logo mr-auto flex h-full items-center"
+    href="https://www.hfw.com/"
+  >
+    <span class="sr-only">
+      Home Link Logo
+    </span>
+    <img width="149" height="92" src="https://www.hfw.com/app/uploads/2024/05/HFW-dark-logo-new.svg" class="logo--main h-9 w-auto lg:h-12 xl:pr-0 block" alt="" loading="eager" fetchpriority="high" decoding="async" />
+      </a>
+      <nav class="desktop-nav hidden lg:flex" aria-label="Primary navigation">
+    <ul class="prevent-default flex items-center">
+                      <li class="prevent-default desktop-nav-item xl:mr-8 last:mr-0">
+                      <button
+              type="button"
+              class="desktop-nav-link desktop-nav-link--depth-0 prevent-default flex gap-x-2 text-primary-dark-grey group-dark:text-white no-underline justify-center items-center h-auto py-2 px-3 xl:px-4 text-15px border-b-transparent border-b transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange group-active-base:border-primary-orange [.is-sticky_&]:!text-primary-dark-grey has-dropdown !ml-0"
+            >
+              Expertise
+
+                              <svg aria-hidden="true" focusable="false" role="presentation" class="transition-all ease-in text-current w-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M267.3 395.3c-6.2 6.2-16.4 6.2-22.6 0l-192-192c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L256 361.4 436.7 180.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-192 192z"/></svg>                          </button>
+                    <div class="desktop-submenu mega-submenu mega-submenu--style-1 w-full absolute left-0 before:h-7 before:bg-transparent before:left-0 before:absolute before:top-0 before:w-full before:-translate-y-full bg-utility-neutral-grey top-full hidden">
+    <div class="bg-utility-neutral-grey">
+      <div class="preserve-default container flex flex-col gap-y-8 py-12">
+        <div class="flex flex-col gap-y-6">
+          <div class="flex items-center justify-between gap-x-6">
+                                          <a
+                  href="https://www.hfw.com/expertise/"
+                  class="!font-normal text-3.2xl decoration-transparent decoration-1 hover:decoration-primary-orange focus-visible:decoration-primary-orange group-dark:text-primary-dark-grey"
+                                  >
+                  Expertise
+                </a>
+                                      <button type="button" class="btn btn-primary mega-menu-close-btn text-15px !font-normal py-3 px-4">
+  <span class="btn-inner">
+    Close
+              <svg aria-hidden="true" focusable="false" role="presentation" class="w-3 h-auto ml-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M324.5 411.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L214.6 256 347.1 123.5c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L192 233.4 59.5 100.9c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L169.4 256 36.9 388.5c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L192 278.6 324.5 411.1z"/></svg>
+  </span>
+</button>
+          </div>
+                      <div class="text-base text-primary-dark-grey">
+              <p>Deep industry insight across a wide range of legal services.</p>
+            </div>
+                  </div>
+        <div class="grid grid-cols-3 gap-x-4 gap-y-8">
+                                  <a
+              href="https://www.hfw.com/expertise/sectors/aerospace/"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                              <img width="600" height="600" src="https://www.hfw.com/app/uploads/2026/04/Aerospace-Thumb.svg" class="w-16 h-full min-h-16 object-cover shrink-0" alt="" loading="lazy" decoding="async" />
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Aerospace
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                                  <a
+              href="https://www.hfw.com/expertise/sectors/commodities/"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                              <img width="600" height="600" src="https://www.hfw.com/app/uploads/2026/04/Commodities-Thumb.svg" class="w-16 h-full min-h-16 object-cover shrink-0" alt="" loading="lazy" decoding="async" />
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Commodities
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                                  <a
+              href="https://www.hfw.com/expertise/sectors/construction/"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                              <img width="600" height="600" src="https://www.hfw.com/app/uploads/2026/04/Construction-thumb.svg" class="w-16 h-full min-h-16 object-cover shrink-0" alt="" loading="lazy" decoding="async" />
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Construction
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                                  <a
+              href="https://www.hfw.com/expertise/sectors/energy/"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                              <img width="600" height="600" src="https://www.hfw.com/app/uploads/2026/04/Energy-Thumb.svg" class="w-16 h-full min-h-16 object-cover shrink-0" alt="" loading="lazy" decoding="async" />
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Energy
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                                  <a
+              href="https://www.hfw.com/expertise/sectors/insurance-reinsurance/"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                              <img width="600" height="600" src="https://www.hfw.com/app/uploads/2026/04/Insurance-Thumb.svg" class="w-16 h-full min-h-16 object-cover shrink-0" alt="" loading="lazy" decoding="async" />
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Insurance &amp; Reinsurance
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                                  <a
+              href="https://www.hfw.com/expertise/sectors/shipping/"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                              <img width="600" height="600" src="https://www.hfw.com/app/uploads/2026/04/Shipping-Thumb.svg" class="w-16 h-full min-h-16 object-cover shrink-0" alt="" loading="lazy" decoding="async" />
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Shipping
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                  </div>
+                  <div class="flex gap-y-8">
+            <div class='gap-8 flex w-full flex-col flex-wrap gap-4 lg:flex-row'>
+                      <a
+    href="https://hfw.com/expertise/sectors/"
+    class="btn prevent-default btn-primary"
+              target="_self"
+                  >
+  <span class="btn-inner flex-row flex items-center">
+  <span class="txt">
+          See all sectors
+      </span>
+      <span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="ml-2 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M305 239c9.4 9.4 9.4 24.6 0 33.9L113 465c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l175-175L79 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L305 239z"/></svg>    </span>
+  </span>
+  </a>
+                      <a
+    href="https://hfw.com/expertise/services/"
+    class="btn prevent-default btn-primary"
+              target="_self"
+                  >
+  <span class="btn-inner flex-row flex items-center">
+  <span class="txt">
+          See all practice areas
+      </span>
+      <span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="ml-2 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M305 239c9.4 9.4 9.4 24.6 0 33.9L113 465c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l175-175L79 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L305 239z"/></svg>    </span>
+  </span>
+  </a>
+                      <a
+    href="https://hfw.com/expertise/hfw-hubs/"
+    class="btn prevent-default btn-primary"
+              target="_self"
+                  >
+  <span class="btn-inner flex-row flex items-center">
+  <span class="txt">
+          See all hubs
+      </span>
+      <span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="ml-2 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M305 239c9.4 9.4 9.4 24.6 0 33.9L113 465c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l175-175L79 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L305 239z"/></svg>    </span>
+  </span>
+  </a>
+      </div>
+          </div>
+              </div>
+    </div>
+  </div>
+        </li>
+                      <li class="prevent-default desktop-nav-item xl:mr-8 last:mr-0">
+                      <button
+              type="button"
+              class="desktop-nav-link desktop-nav-link--depth-0 prevent-default flex gap-x-2 text-primary-dark-grey group-dark:text-white no-underline justify-center items-center h-auto py-2 px-3 xl:px-4 text-15px border-b-transparent border-b transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange group-active-base:border-primary-orange [.is-sticky_&]:!text-primary-dark-grey has-dropdown"
+            >
+              People
+
+                              <svg aria-hidden="true" focusable="false" role="presentation" class="transition-all ease-in text-current w-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M267.3 395.3c-6.2 6.2-16.4 6.2-22.6 0l-192-192c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L256 361.4 436.7 180.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-192 192z"/></svg>                          </button>
+                    <div class="desktop-submenu mega-submenu mega-submenu--style-1 w-full absolute left-0 before:h-7 before:bg-transparent before:left-0 before:absolute before:top-0 before:w-full before:-translate-y-full bg-utility-neutral-grey top-full hidden">
+    <div class="bg-utility-neutral-grey">
+      <div class="preserve-default container flex flex-col gap-y-8 py-12">
+        <div class="flex flex-col gap-y-6">
+          <div class="flex items-center justify-between gap-x-6">
+                                          <a
+                  href="https://www.hfw.com/people/"
+                  class="!font-normal text-3.2xl decoration-transparent decoration-1 hover:decoration-primary-orange focus-visible:decoration-primary-orange group-dark:text-primary-dark-grey"
+                                  >
+                  People
+                </a>
+                                      <button type="button" class="btn btn-primary mega-menu-close-btn text-15px !font-normal py-3 px-4">
+  <span class="btn-inner">
+    Close
+              <svg aria-hidden="true" focusable="false" role="presentation" class="w-3 h-auto ml-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M324.5 411.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L214.6 256 347.1 123.5c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L192 233.4 59.5 100.9c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L169.4 256 36.9 388.5c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L192 278.6 324.5 411.1z"/></svg>
+  </span>
+</button>
+          </div>
+                      <div class="text-base text-primary-dark-grey">
+              <p>We have more than 700 lawyers across our international network.</p>
+            </div>
+                  </div>
+        <div class="grid grid-cols-3 gap-x-4 gap-y-8">
+                                  <a
+              href="https://www.hfw.com/people/?_people_type_archive=partner"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Partners
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                                  <a
+              href="https://www.hfw.com/people/"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Lawyers
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                  </div>
+                  <div class="flex gap-y-8">
+            <div class='gap-8 flex w-full flex-col flex-wrap gap-4 lg:flex-row'>
+                      <a
+    href="https://hfw.com/people/"
+    class="btn prevent-default btn-primary"
+              target="_self"
+                  >
+  <span class="btn-inner flex-row flex items-center">
+  <span class="txt">
+          See all people
+      </span>
+      <span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="ml-2 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M305 239c9.4 9.4 9.4 24.6 0 33.9L113 465c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l175-175L79 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L305 239z"/></svg>    </span>
+  </span>
+  </a>
+      </div>
+          </div>
+              </div>
+    </div>
+  </div>
+        </li>
+                      <li class="prevent-default desktop-nav-item xl:mr-8 last:mr-0">
+                      <button
+              type="button"
+              class="desktop-nav-link desktop-nav-link--depth-0 prevent-default flex gap-x-2 text-primary-dark-grey group-dark:text-white no-underline justify-center items-center h-auto py-2 px-3 xl:px-4 text-15px border-b-transparent border-b transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange group-active-base:border-primary-orange [.is-sticky_&]:!text-primary-dark-grey has-dropdown"
+            >
+              Insights
+
+                              <svg aria-hidden="true" focusable="false" role="presentation" class="transition-all ease-in text-current w-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M267.3 395.3c-6.2 6.2-16.4 6.2-22.6 0l-192-192c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L256 361.4 436.7 180.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-192 192z"/></svg>                          </button>
+                    <div class="desktop-submenu mega-submenu mega-submenu--style-1 w-full absolute left-0 before:h-7 before:bg-transparent before:left-0 before:absolute before:top-0 before:w-full before:-translate-y-full bg-utility-neutral-grey top-full hidden">
+    <div class="bg-utility-neutral-grey">
+      <div class="preserve-default container flex flex-col gap-y-8 py-12">
+        <div class="flex flex-col gap-y-6">
+          <div class="flex items-center justify-between gap-x-6">
+                                          <a
+                  href="https://www.hfw.com/insights/"
+                  class="!font-normal text-3.2xl decoration-transparent decoration-1 hover:decoration-primary-orange focus-visible:decoration-primary-orange group-dark:text-primary-dark-grey"
+                                  >
+                  Insights
+                </a>
+                                      <button type="button" class="btn btn-primary mega-menu-close-btn text-15px !font-normal py-3 px-4">
+  <span class="btn-inner">
+    Close
+              <svg aria-hidden="true" focusable="false" role="presentation" class="w-3 h-auto ml-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M324.5 411.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L214.6 256 347.1 123.5c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L192 233.4 59.5 100.9c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L169.4 256 36.9 388.5c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L192 278.6 324.5 411.1z"/></svg>
+  </span>
+</button>
+          </div>
+                      <div class="text-base text-primary-dark-grey">
+              <p>Expert perspectives on the latest developments across our sectors and services.</p>
+            </div>
+                  </div>
+        <div class="grid grid-cols-3 gap-x-4 gap-y-8">
+                                  <a
+              href="https://www.hfw.com/featured-insights/"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Featured insights
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                                  <a
+              href="https://www.hfw.com/insights/?_insight_category=briefing%2Cbulletin"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Briefings &amp; Bulletins
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                                  <a
+              href="https://www.hfw.com/insights/events/"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Events
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                                  <a
+              href="https://www.hfw.com/insights/?_insight_category=guide"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Guides
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                                  <a
+              href="https://www.hfw.com/insights/?_insight_category=market-insight"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Market insights
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                                  <a
+              href="https://www.hfw.com/insights/?_insight_category=publication"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Publications
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                  </div>
+                  <div class="flex gap-y-8">
+            <div class='gap-8 flex w-full flex-col flex-wrap gap-4 lg:flex-row'>
+                      <a
+    href="https://hfw.com/insights/"
+    class="btn prevent-default btn-primary"
+              target="_self"
+                  >
+  <span class="btn-inner flex-row flex items-center">
+  <span class="txt">
+          View all insights
+      </span>
+      <span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="ml-2 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>    </span>
+  </span>
+  </a>
+                      <a
+    href="https://hfw.com/insights-mailing-lists/"
+    class="btn prevent-default btn-primary"
+              target="_self"
+                  >
+  <span class="btn-inner flex-row flex items-center">
+  <span class="txt">
+          Subscribe to our insights
+      </span>
+      <span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="ml-2 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>    </span>
+  </span>
+  </a>
+      </div>
+          </div>
+              </div>
+    </div>
+  </div>
+        </li>
+                      <li class="prevent-default desktop-nav-item xl:mr-8 last:mr-0">
+                      <button
+              type="button"
+              class="desktop-nav-link desktop-nav-link--depth-0 prevent-default flex gap-x-2 text-primary-dark-grey group-dark:text-white no-underline justify-center items-center h-auto py-2 px-3 xl:px-4 text-15px border-b-transparent border-b transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange group-active-base:border-primary-orange [.is-sticky_&]:!text-primary-dark-grey has-dropdown"
+            >
+              Careers
+
+                              <svg aria-hidden="true" focusable="false" role="presentation" class="transition-all ease-in text-current w-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M267.3 395.3c-6.2 6.2-16.4 6.2-22.6 0l-192-192c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L256 361.4 436.7 180.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-192 192z"/></svg>                          </button>
+                    <div class="desktop-submenu mega-submenu mega-submenu--style-1 w-full absolute left-0 before:h-7 before:bg-transparent before:left-0 before:absolute before:top-0 before:w-full before:-translate-y-full bg-utility-neutral-grey top-full hidden">
+    <div class="bg-utility-neutral-grey">
+      <div class="preserve-default container flex flex-col gap-y-8 py-12">
+        <div class="flex flex-col gap-y-6">
+          <div class="flex items-center justify-between gap-x-6">
+                                          <a
+                  href="https://www.hfw.com/careers/"
+                  class="!font-normal text-3.2xl decoration-transparent decoration-1 hover:decoration-primary-orange focus-visible:decoration-primary-orange group-dark:text-primary-dark-grey"
+                                  >
+                  Careers
+                </a>
+                                      <button type="button" class="btn btn-primary mega-menu-close-btn text-15px !font-normal py-3 px-4">
+  <span class="btn-inner">
+    Close
+              <svg aria-hidden="true" focusable="false" role="presentation" class="w-3 h-auto ml-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M324.5 411.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L214.6 256 347.1 123.5c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L192 233.4 59.5 100.9c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L169.4 256 36.9 388.5c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L192 278.6 324.5 411.1z"/></svg>
+  </span>
+</button>
+          </div>
+                      <div class="text-base text-primary-dark-grey">
+              <p>Join a global, truly sector‑focused firm and shape your own career at HFW.</p>
+            </div>
+                  </div>
+        <div class="grid grid-cols-3 gap-x-4 gap-y-8">
+                                  <a
+              href="https://www.hfw.com/careers/"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Careers at HFW
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                                  <a
+              href="https://www.hfw.com/careers/legal-careers/"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Legal Careers
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                                  <a
+              href="https://www.hfw.com/careers/business-services-careers/"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Business Services Careers
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                                  <a
+              href="https://www.hfw.com/careers/early-careers/"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Early Careers
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                                  <a
+              href="https://www.hfw.com/careers/life-at-hfw/"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Life at HFW
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                                  <a
+              href="https://www.hfw.com/careers/how-we-develop-people/"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                How we develop people
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                  </div>
+                  <div class="flex gap-y-8">
+            <div class='gap-8 flex w-full flex-col flex-wrap gap-4 lg:flex-row'>
+                      <a
+    href="https://hfw.com/careers/vacancies/"
+    class="btn prevent-default btn-primary"
+              target="_self"
+                  >
+  <span class="btn-inner flex-row flex items-center">
+  <span class="txt">
+          View all vacancies
+      </span>
+      <span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="ml-2 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>    </span>
+  </span>
+  </a>
+      </div>
+          </div>
+              </div>
+    </div>
+  </div>
+        </li>
+                      <li class="prevent-default desktop-nav-item xl:mr-8 last:mr-0">
+                      <button
+              type="button"
+              class="desktop-nav-link desktop-nav-link--depth-0 prevent-default flex gap-x-2 text-primary-dark-grey group-dark:text-white no-underline justify-center items-center h-auto py-2 px-3 xl:px-4 text-15px border-b-transparent border-b transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange group-active-base:border-primary-orange [.is-sticky_&]:!text-primary-dark-grey has-dropdown !mr-0"
+            >
+              About us
+
+                              <svg aria-hidden="true" focusable="false" role="presentation" class="transition-all ease-in text-current w-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M267.3 395.3c-6.2 6.2-16.4 6.2-22.6 0l-192-192c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L256 361.4 436.7 180.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-192 192z"/></svg>                          </button>
+                    <div class="desktop-submenu mega-submenu mega-submenu--style-1 w-full absolute left-0 before:h-7 before:bg-transparent before:left-0 before:absolute before:top-0 before:w-full before:-translate-y-full bg-utility-neutral-grey top-full hidden">
+    <div class="bg-utility-neutral-grey">
+      <div class="preserve-default container flex flex-col gap-y-8 py-12">
+        <div class="flex flex-col gap-y-6">
+          <div class="flex items-center justify-between gap-x-6">
+                                          <a
+                  href="https://www.hfw.com/about-us/"
+                  class="!font-normal text-3.2xl decoration-transparent decoration-1 hover:decoration-primary-orange focus-visible:decoration-primary-orange group-dark:text-primary-dark-grey"
+                                  >
+                  About us
+                </a>
+                                      <button type="button" class="btn btn-primary mega-menu-close-btn text-15px !font-normal py-3 px-4">
+  <span class="btn-inner">
+    Close
+              <svg aria-hidden="true" focusable="false" role="presentation" class="w-3 h-auto ml-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M324.5 411.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L214.6 256 347.1 123.5c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L192 233.4 59.5 100.9c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L169.4 256 36.9 388.5c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L192 278.6 324.5 411.1z"/></svg>
+  </span>
+</button>
+          </div>
+                      <div class="text-base text-primary-dark-grey">
+              <p>A leading global law firm in the aerospace, commodities, construction, energy, insurance, and shipping sectors.</p>
+            </div>
+                  </div>
+        <div class="grid grid-cols-3 gap-x-4 gap-y-8">
+                                  <a
+              href="https://www.hfw.com/about-us/"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                About us
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                                  <a
+              href="https://www.hfw.com/about-us/our-locations/"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Locations
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                                  <a
+              href="https://www.hfw.com/about-us/news/"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                News
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                                  <a
+              href="https://www.hfw.com/about-us/our-alumni/"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Alumni
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                                  <a
+              href="https://www.hfw.com/about-us/our-story/"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Our story
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                                  <a
+              href="https://www.hfw.com/about-us/responsible-business-strategy/"
+              class="mega-submenu-item prevent-default relative bg-white text-primary-dark-grey min-h-16 font-normal text-lg flex no-underline items-center after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-primary-orange hover:after:w-full focus-visible:after:w-full after:transition-all after:duration-300"
+                          >
+                            <span class="flex w-full items-center justify-between gap-x-2 px-6 py-4">
+                Responsible Business Strategy
+                <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>              </span>
+            </a>
+                  </div>
+                  <div class="flex gap-y-8">
+            <div class='gap-8 flex w-full flex-col flex-wrap gap-4 lg:flex-row'>
+                      <a
+    href="https://hfw.com/about-us/contact-us/"
+    class="btn prevent-default btn-primary"
+              target="_self"
+                  >
+  <span class="btn-inner flex-row flex items-center">
+  <span class="txt">
+          Contact us
+      </span>
+      <span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="ml-2 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>    </span>
+  </span>
+  </a>
+                      <a
+    href="https://hfw.com/about-us/contact-us/emergency-response/"
+    class="btn prevent-default btn-primary"
+              target="_self"
+                  >
+  <span class="btn-inner flex-row flex items-center">
+  <span class="txt">
+          Emergency response
+      </span>
+      <span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="ml-2 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>    </span>
+  </span>
+  </a>
+      </div>
+          </div>
+              </div>
+    </div>
+  </div>
+        </li>
+                 </ul>
+  </nav>
+      <div class="header-button-row flex items-center justify-end">
+  
+      <div
+    class="header-search flex min-w-6 items-center justify-end lg:relative lg:ml-12"
+    id="header-search"
+  >
+
+    <button
+      id="search-opener"
+      type="button"
+      aria-expanded="false"
+      aria-controls="search-form"
+      class="btn-search search-opener flex items-center justify-center lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 group-dark:text-white mobile-menu-open:group-dark:text-primary-dark-grey search-opened:group-dark:text-primary-dark-grey [.is-sticky_&]:!text-primary-dark-grey"
+    >
+      <span class="sr-only">Search</span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="w-4 text-current search-opened:hidden" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M384 208A176 176 0 1 0 32 208a176 176 0 1 0 352 0zM343.3 366C307 397.2 259.7 416 208 416C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208c0 51.7-18.8 99-50 135.3L507.3 484.7c6.2 6.2 6.2 16.4 0 22.6s-16.4 6.2-22.6 0L343.3 366z"/></svg>      <svg aria-hidden="true" focusable="false" role="presentation" class="w-4 text-black search-opened:block hidden" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M324.5 411.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L214.6 256 347.1 123.5c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L192 233.4 59.5 100.9c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L169.4 256 36.9 388.5c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L192 278.6 324.5 411.1z"/></svg>    </button>
+    <div
+      id="search-form"
+      class="header-search-form flex justify-end whitespace-nowrap opacity-0 lg:w-0 lg:h-12 pointer-events-none bg-white z-10 transition-all duration-300 search-opened:opacity-100 lg:search-opened:w-75 search-opened:pointer-events-auto max-lg:absolute max-lg:right-0 max-lg:top-full max-lg:w-full max-lg:bg-utility-neutral-grey [&_.sa-search-wrapper]:!pt-0 [&_.sa-submit-btn-wrapper]:absolute [&_.sa-submit-btn-wrapper]:right-0 [&_.sa-submit-btn-wrapper]:top-0 [&_.sa-submit-btn-wrapper]:z-20 [&_.sa-submit-btn-wrapper]:flex [&_.sa-submit-btn-wrapper]:h-full [&_.sa-submit-btn-wrapper]:w-12 [&_.sa-submit-btn-wrapper]:items-center [&_.sa-submit-btn-wrapper]:justify-center [&_.sa-submit-btn]:!border-0 [&_.sa-submit-btn]:hover:bg-transparent [&_.sa-submit-btn]:hover:text-primary-dark-grey [&_.sa-search-input]:pr-12 [&_.sa-submit-btn-text]:hidden"
+    >
+      <form id="header-search-form" class="w-full" method="get" action="https://www.hfw.com/search/" role="search">
+        <div class="sa-search-wrapper mx-auto flex relative w-full flex-col gap-x-3 lg:flex-row lg:pt-8">
+          <label class="sr-only" for="header-search-input">
+            Search by keyword
+          </label>
+          <div class="relative w-full">
+            <input
+              id="header-search-input"
+              type="search"
+              name="_s"
+                            class="site-search-input sa-search-input [&.only-tabbing]:focus-outline-auto w-full grow border border-primary-dark-grey bg-utility-neutral-grey px-5 py-3 mb-0 text-base text-primary-dark-grey placeholder:text-current [&.only-tabbing]:focus:border-current [&.only-tabbing]:focus:border-b-0 [&.only-tabbing]:focus:outline-1 [&.only-tabbing]:focus:outline-br-focus-color focus:border-current focus:ring-0"
+              autocomplete="off"
+              aria-autocomplete="list"
+              placeholder="Search"
+            >
+            <div aria-label="Header search input results"  data-input-id="header-search-input" class="search-autocomplete-results overflow-x-hidden hidden absolute left-0 right-0 top-full bg-white border border-t-0 border-primary-dark-grey z-10 max-h-60 overflow-y-auto" role="listbox"></div>
+          </div>
+          <div class="sa-submit-btn-wrapper flex shrink-0 gap-x-2.5 lg:gap-x-3">
+            <button type="submit" class="btn btn-primary sa-submit-btn [&_*]:pointer-events-none" type="submit" aria-label="Search">
+  <span class="btn-inner">
+    <span class="sa-submit-btn-text">
+                Search
+              </span>
+              <span>
+                <svg aria-hidden="true" focusable="false" role="presentation" class="w-4 ml-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>              </span>
+  </span>
+</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <button
+  type="button"
+  class="mobile-menu-toggles overflow-hidden ml-7 w-7.5 h-5 lg:hidden relative flex items-center justify-end"
+>
+  <span class="sr-only">
+    Mobile menu button
+  </span>
+
+  <div class="relative flex justify-end w-full">
+    <span
+      class="transition-width relative block h-2.5 w-full origin-center ease-in mobile-menu-open:h-0 mobile-menu-open:w-0"
+    >
+      <!-- top bar -->
+      <span class="top-0 w-full absolute right-0 block h-0.5 bg-current group-dark:bg-white [.is-sticky_&]:!bg-primary-dark-grey mobile-menu-open:group-dark:bg-primary-dark-grey search-opened:group-dark:bg-primary-dark-grey"></span>
+
+      <!-- bottom bar -->
+      <span class="bottom-0 w-5 absolute right-0 block h-0.5 bg-current group-dark:bg-white [.is-sticky_&]:!bg-primary-dark-grey mobile-menu-open:group-dark:bg-primary-dark-grey search-opened:group-dark:bg-primary-dark-grey"></span>
+    </span>
+
+    <svg aria-hidden="true" focusable="false" role="presentation" class="transition-width ease-in w-0 mobile-menu-open:w-4 origin-center" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M324.5 411.1c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L214.6 256 347.1 123.5c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L192 233.4 59.5 100.9c-6.2-6.2-16.4-6.2-22.6 0s-6.2 16.4 0 22.6L169.4 256 36.9 388.5c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L192 278.6 324.5 411.1z"/></svg>  </div>
+</button>
+</div>
+    </div>
+  </div>
+  <div class="mobile-nav-wrapper absolute z-50 invisible opacity-0 transition-all duration-300 h-[calc(100vh-72px)] w-full flex-col overflow-y-auto bg-utility-neutral-grey mobile-menu-open:visible mobile-menu-open:opacity-100 lg:mobile-menu-open:invisible py-4.5 border-none">
+   <div class="container">
+            <nav class="mobile-nav">
+         <ul class="prevent-default">
+                                     <li
+               class="mobile-nav-item flex w-full flex-row opacity-0 transition-all ease-in mobile-menu-open:opacity-100"
+               style="transition-delay: 100ms"
+             >
+               <a
+                 class="mobile-nav-link prevent-default w-full py-2 text-lg text-primary-dark-grey no-underline"
+                 href="https://www.hfw.com/expertise/"
+                                >
+                 Expertise
+               </a>
+                                <button
+                   class="mobile-nav-drawer-btn ml-auto w-1/10 flex justify-end"
+                   type="button"
+                 >
+                   <span class="sr-only">
+                     Mobile navigation dropdown
+                   </span>
+                   <svg aria-hidden="true" focusable="false" role="presentation" class="transition-all ease-out text-current w-4 inline-block nav-item-arrow--mobile" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M267.3 395.3c-6.2 6.2-16.4 6.2-22.6 0l-192-192c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L256 361.4 436.7 180.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-192 192z"/></svg>                 </button>
+                            </li>
+
+             <li>
+     <div class="mobile-submenu mobile-submenu--depth-1 prevent-default hidden">
+       <div class="flex flex-col gap-y-4 w-full border-b border-primary-orange pb-4 mb-2">
+         <div class="flex flex-col gap-y-4">
+                                     <a
+               href="https://www.hfw.com/expertise/sectors/aerospace/"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                                <img width="600" height="600" src="https://www.hfw.com/app/uploads/2026/04/Aerospace-Thumb.svg" class="w-16 h-full min-h-16 object-cover shrink-0" alt="" loading="lazy" decoding="async" />
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Aerospace
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                                     <a
+               href="https://www.hfw.com/expertise/sectors/commodities/"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                                <img width="600" height="600" src="https://www.hfw.com/app/uploads/2026/04/Commodities-Thumb.svg" class="w-16 h-full min-h-16 object-cover shrink-0" alt="" loading="lazy" decoding="async" />
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Commodities
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                                     <a
+               href="https://www.hfw.com/expertise/sectors/construction/"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                                <img width="600" height="600" src="https://www.hfw.com/app/uploads/2026/04/Construction-thumb.svg" class="w-16 h-full min-h-16 object-cover shrink-0" alt="" loading="lazy" decoding="async" />
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Construction
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                                     <a
+               href="https://www.hfw.com/expertise/sectors/energy/"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                                <img width="600" height="600" src="https://www.hfw.com/app/uploads/2026/04/Energy-Thumb.svg" class="w-16 h-full min-h-16 object-cover shrink-0" alt="" loading="lazy" decoding="async" />
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Energy
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                                     <a
+               href="https://www.hfw.com/expertise/sectors/insurance-reinsurance/"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                                <img width="600" height="600" src="https://www.hfw.com/app/uploads/2026/04/Insurance-Thumb.svg" class="w-16 h-full min-h-16 object-cover shrink-0" alt="" loading="lazy" decoding="async" />
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Insurance &amp; Reinsurance
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                                     <a
+               href="https://www.hfw.com/expertise/sectors/shipping/"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                                <img width="600" height="600" src="https://www.hfw.com/app/uploads/2026/04/Shipping-Thumb.svg" class="w-16 h-full min-h-16 object-cover shrink-0" alt="" loading="lazy" decoding="async" />
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Shipping
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                    </div>
+                      <div class='!flex-row gap-x-2 flex w-full flex-col flex-wrap gap-4 lg:flex-row'>
+                      <a
+    href="https://hfw.com/expertise/sectors/"
+    class="btn prevent-default btn-primary !w-auto text-15px !font-normal py-3 px-4"
+              target="_self"
+                  >
+  <span class="btn-inner flex-row flex items-center">
+  <span class="txt">
+          See all sectors
+      </span>
+      <span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="ml-2 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M305 239c9.4 9.4 9.4 24.6 0 33.9L113 465c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l175-175L79 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L305 239z"/></svg>    </span>
+  </span>
+  </a>
+                      <a
+    href="https://hfw.com/expertise/services/"
+    class="btn prevent-default btn-primary !w-auto text-15px !font-normal py-3 px-4"
+              target="_self"
+                  >
+  <span class="btn-inner flex-row flex items-center">
+  <span class="txt">
+          See all practice areas
+      </span>
+      <span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="ml-2 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M305 239c9.4 9.4 9.4 24.6 0 33.9L113 465c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l175-175L79 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L305 239z"/></svg>    </span>
+  </span>
+  </a>
+                      <a
+    href="https://hfw.com/expertise/hfw-hubs/"
+    class="btn prevent-default btn-primary !w-auto text-15px !font-normal py-3 px-4"
+              target="_self"
+                  >
+  <span class="btn-inner flex-row flex items-center">
+  <span class="txt">
+          See all hubs
+      </span>
+      <span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="ml-2 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M305 239c9.4 9.4 9.4 24.6 0 33.9L113 465c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l175-175L79 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L305 239z"/></svg>    </span>
+  </span>
+  </a>
+      </div>
+                </div>
+     </div>
+   </li>
+                                      <li
+               class="mobile-nav-item flex w-full flex-row opacity-0 transition-all ease-in mobile-menu-open:opacity-100"
+               style="transition-delay: 200ms"
+             >
+               <a
+                 class="mobile-nav-link prevent-default w-full py-2 text-lg text-primary-dark-grey no-underline"
+                 href="https://www.hfw.com/people/"
+                                >
+                 People
+               </a>
+                                <button
+                   class="mobile-nav-drawer-btn ml-auto w-1/10 flex justify-end"
+                   type="button"
+                 >
+                   <span class="sr-only">
+                     Mobile navigation dropdown
+                   </span>
+                   <svg aria-hidden="true" focusable="false" role="presentation" class="transition-all ease-out text-current w-4 inline-block nav-item-arrow--mobile" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M267.3 395.3c-6.2 6.2-16.4 6.2-22.6 0l-192-192c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L256 361.4 436.7 180.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-192 192z"/></svg>                 </button>
+                            </li>
+
+             <li>
+     <div class="mobile-submenu mobile-submenu--depth-1 prevent-default hidden">
+       <div class="flex flex-col gap-y-4 w-full border-b border-primary-orange pb-4 mb-2">
+         <div class="flex flex-col gap-y-4">
+                                     <a
+               href="https://www.hfw.com/people/?_people_type_archive=partner"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Partners
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                                     <a
+               href="https://www.hfw.com/people/"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Lawyers
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                    </div>
+                      <div class='!flex-row gap-x-2 flex w-full flex-col flex-wrap gap-4 lg:flex-row'>
+                      <a
+    href="https://hfw.com/people/"
+    class="btn prevent-default btn-primary !w-auto text-15px !font-normal py-3 px-4"
+              target="_self"
+                  >
+  <span class="btn-inner flex-row flex items-center">
+  <span class="txt">
+          See all people
+      </span>
+      <span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="ml-2 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M305 239c9.4 9.4 9.4 24.6 0 33.9L113 465c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l175-175L79 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L305 239z"/></svg>    </span>
+  </span>
+  </a>
+      </div>
+                </div>
+     </div>
+   </li>
+                                      <li
+               class="mobile-nav-item flex w-full flex-row opacity-0 transition-all ease-in mobile-menu-open:opacity-100"
+               style="transition-delay: 300ms"
+             >
+               <a
+                 class="mobile-nav-link prevent-default w-full py-2 text-lg text-primary-dark-grey no-underline"
+                 href="https://www.hfw.com/insights/"
+                                >
+                 Insights
+               </a>
+                                <button
+                   class="mobile-nav-drawer-btn ml-auto w-1/10 flex justify-end"
+                   type="button"
+                 >
+                   <span class="sr-only">
+                     Mobile navigation dropdown
+                   </span>
+                   <svg aria-hidden="true" focusable="false" role="presentation" class="transition-all ease-out text-current w-4 inline-block nav-item-arrow--mobile" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M267.3 395.3c-6.2 6.2-16.4 6.2-22.6 0l-192-192c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L256 361.4 436.7 180.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-192 192z"/></svg>                 </button>
+                            </li>
+
+             <li>
+     <div class="mobile-submenu mobile-submenu--depth-1 prevent-default hidden">
+       <div class="flex flex-col gap-y-4 w-full border-b border-primary-orange pb-4 mb-2">
+         <div class="flex flex-col gap-y-4">
+                                     <a
+               href="https://www.hfw.com/featured-insights/"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Featured insights
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                                     <a
+               href="https://www.hfw.com/insights/?_insight_category=briefing%2Cbulletin"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Briefings &amp; Bulletins
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                                     <a
+               href="https://www.hfw.com/insights/events/"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Events
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                                     <a
+               href="https://www.hfw.com/insights/?_insight_category=guide"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Guides
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                                     <a
+               href="https://www.hfw.com/insights/?_insight_category=market-insight"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Market insights
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                                     <a
+               href="https://www.hfw.com/insights/?_insight_category=publication"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Publications
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                    </div>
+                      <div class='!flex-row gap-x-2 flex w-full flex-col flex-wrap gap-4 lg:flex-row'>
+                      <a
+    href="https://hfw.com/insights/"
+    class="btn prevent-default btn-primary !w-auto text-15px !font-normal py-3 px-4"
+              target="_self"
+                  >
+  <span class="btn-inner flex-row flex items-center">
+  <span class="txt">
+          View all insights
+      </span>
+      <span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="ml-2 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>    </span>
+  </span>
+  </a>
+                      <a
+    href="https://hfw.com/insights-mailing-lists/"
+    class="btn prevent-default btn-primary !w-auto text-15px !font-normal py-3 px-4"
+              target="_self"
+                  >
+  <span class="btn-inner flex-row flex items-center">
+  <span class="txt">
+          Subscribe to our insights
+      </span>
+      <span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="ml-2 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>    </span>
+  </span>
+  </a>
+      </div>
+                </div>
+     </div>
+   </li>
+                                      <li
+               class="mobile-nav-item flex w-full flex-row opacity-0 transition-all ease-in mobile-menu-open:opacity-100"
+               style="transition-delay: 400ms"
+             >
+               <a
+                 class="mobile-nav-link prevent-default w-full py-2 text-lg text-primary-dark-grey no-underline"
+                 href="https://www.hfw.com/careers/"
+                                >
+                 Careers
+               </a>
+                                <button
+                   class="mobile-nav-drawer-btn ml-auto w-1/10 flex justify-end"
+                   type="button"
+                 >
+                   <span class="sr-only">
+                     Mobile navigation dropdown
+                   </span>
+                   <svg aria-hidden="true" focusable="false" role="presentation" class="transition-all ease-out text-current w-4 inline-block nav-item-arrow--mobile" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M267.3 395.3c-6.2 6.2-16.4 6.2-22.6 0l-192-192c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L256 361.4 436.7 180.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-192 192z"/></svg>                 </button>
+                            </li>
+
+             <li>
+     <div class="mobile-submenu mobile-submenu--depth-1 prevent-default hidden">
+       <div class="flex flex-col gap-y-4 w-full border-b border-primary-orange pb-4 mb-2">
+         <div class="flex flex-col gap-y-4">
+                                     <a
+               href="https://www.hfw.com/careers/"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Careers at HFW
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                                     <a
+               href="https://www.hfw.com/careers/legal-careers/"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Legal Careers
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                                     <a
+               href="https://www.hfw.com/careers/business-services-careers/"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Business Services Careers
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                                     <a
+               href="https://www.hfw.com/careers/early-careers/"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Early Careers
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                                     <a
+               href="https://www.hfw.com/careers/life-at-hfw/"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Life at HFW
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                                     <a
+               href="https://www.hfw.com/careers/how-we-develop-people/"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 How we develop people
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                    </div>
+                      <div class='!flex-row gap-x-2 flex w-full flex-col flex-wrap gap-4 lg:flex-row'>
+                      <a
+    href="https://hfw.com/careers/vacancies/"
+    class="btn prevent-default btn-primary !w-auto text-15px !font-normal py-3 px-4"
+              target="_self"
+                  >
+  <span class="btn-inner flex-row flex items-center">
+  <span class="txt">
+          View all vacancies
+      </span>
+      <span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="ml-2 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>    </span>
+  </span>
+  </a>
+      </div>
+                </div>
+     </div>
+   </li>
+                                      <li
+               class="mobile-nav-item flex w-full flex-row opacity-0 transition-all ease-in mobile-menu-open:opacity-100"
+               style="transition-delay: 500ms"
+             >
+               <a
+                 class="mobile-nav-link prevent-default w-full py-2 text-lg text-primary-dark-grey no-underline"
+                 href="https://www.hfw.com/about-us/"
+                                >
+                 About us
+               </a>
+                                <button
+                   class="mobile-nav-drawer-btn ml-auto w-1/10 flex justify-end"
+                   type="button"
+                 >
+                   <span class="sr-only">
+                     Mobile navigation dropdown
+                   </span>
+                   <svg aria-hidden="true" focusable="false" role="presentation" class="transition-all ease-out text-current w-4 inline-block nav-item-arrow--mobile" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M267.3 395.3c-6.2 6.2-16.4 6.2-22.6 0l-192-192c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L256 361.4 436.7 180.7c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6l-192 192z"/></svg>                 </button>
+                            </li>
+
+             <li>
+     <div class="mobile-submenu mobile-submenu--depth-1 prevent-default hidden">
+       <div class="flex flex-col gap-y-4 w-full border-b border-primary-orange pb-4 mb-2">
+         <div class="flex flex-col gap-y-4">
+                                     <a
+               href="https://www.hfw.com/about-us/"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 About us
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                                     <a
+               href="https://www.hfw.com/about-us/our-locations/"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Locations
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                                     <a
+               href="https://www.hfw.com/about-us/news/"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 News
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                                     <a
+               href="https://www.hfw.com/about-us/our-alumni/"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Alumni
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                                     <a
+               href="https://www.hfw.com/about-us/our-story/"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Our story
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                                     <a
+               href="https://www.hfw.com/about-us/responsible-business-strategy/"
+               class="mega-submenu-item prevent-default bg-white text-primary-dark-grey min-h-16 transition-colors ease-in font-normal text-sm flex no-underline items-center border-b border-b-transparent transition-colors duration-300 hover:border-primary-orange focus-visible:border-primary-orange"
+                            >
+                              <span class="flex w-full items-center justify-between gap-x-2 p-4">
+                 Responsible Business Strategy
+                 <svg aria-hidden="true" focusable="false" role="presentation" class="shrink-0 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>               </span>
+             </a>
+                    </div>
+                      <div class='!flex-row gap-x-2 flex w-full flex-col flex-wrap gap-4 lg:flex-row'>
+                      <a
+    href="https://hfw.com/about-us/contact-us/"
+    class="btn prevent-default btn-primary !w-auto text-15px !font-normal py-3 px-4"
+              target="_self"
+                  >
+  <span class="btn-inner flex-row flex items-center">
+  <span class="txt">
+          Contact us
+      </span>
+      <span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="ml-2 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>    </span>
+  </span>
+  </a>
+                      <a
+    href="https://hfw.com/about-us/contact-us/emergency-response/"
+    class="btn prevent-default btn-primary !w-auto text-15px !font-normal py-3 px-4"
+              target="_self"
+                  >
+  <span class="btn-inner flex-row flex items-center">
+  <span class="txt">
+          Emergency response
+      </span>
+      <span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="ml-2 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>    </span>
+  </span>
+  </a>
+      </div>
+                </div>
+     </div>
+   </li>
+                     </ul>
+       </nav>
+     
+     
+   </div>
+ </div>
+</header>
+<div
+  class="js-nav-backdrop bg-primary-dark-grey/20 fixed left-0 top-0 z-40 hidden h-screen w-screen lg:top-24 [.admin-bar_&]:top-32"
+>
+</div>
+
+
+    <main
+      class="main"
+      id="main"
+    >
+          <section
+  class="alignfull is-light block-banner404 group has-primary-dark-grey-color relative flex w-full items-center overflow-hidden py-32 lg:min-h-screen"
+  id="block_77d07715ae750769ed0f45ae158b95ef"
+>
+  <div
+    class="absolute inset-0 h-full w-full"
+    lite-video-background-container-id="block_77d07715ae750769ed0f45ae158b95ef_video_container"
+  >
+          <picture  class="block w-full h-full" >
+          <source
+        srcset="https://www.hfw.com/app/uploads/2026/03/Dark-Grey-3-Large.svg"
+        media="(min-width: 1025px)"
+         width="1920"          height="740"       >
+    
+          <source
+        srcset="https://www.hfw.com/app/uploads/2026/03/Dark-Grey-3-Large.svg"
+        media="(min-width: 413px)"
+         width="1920"          height="740"       >
+    
+    <img
+      class="w-full h-full object-cover"
+      src="https://www.hfw.com/app/uploads/2026/03/Dark-Grey-3-Large.svg"
+      alt=""
+      loading="lazy"
+            decoding="async"
+       width="1920"        height="740"     />
+  </picture>
+          </div>
+
+  <div class="flex items-center justify-start w-full lg:min-h-80 z-10">
+  <div class="absolute left-0 top-0 h-full w-full bg-hero-radial-gradient"></div>
+  <div class="container relative py-6 lg:py-0">
+    <div class="flex flex-col gap-y-4 text-primary-dark-grey group-dark:text-white lg:gap-y-6">
+            <div class="mx-auto flex w-full max-w-205 flex-col items-center justify-center gap-y-4 lg:gap-y-6 text-center [&#038;_.btn-group]:justify-center">
+                <h1
+          class="m-0 text-primary-dark-grey group-dark:text-white has-white-color  "
+      >
+    404 error<br>Page not found
+    </h1>
+  <span class="mb-0 text-primary-dark-grey group-dark:text-white text-15px leading-1/3 entry-content block max-w-full keep-words">
+          <p><span style="color: #ffffff">Sorry, the content you&#8217;re looking for doesn&#8217;t exist. Either it was removed or you mistyped the link.</span></p>
+      </span>
+<div class='btn-group flex w-full flex-col flex-wrap gap-4 lg:flex-row'>
+                      <a
+    href="/"
+    class="btn prevent-default btn-primary-inverse w-full lg:w-fit"
+              target="_self"
+                  >
+  <span class="btn-inner flex-row flex items-center">
+  <span class="txt">
+          Go to homepage
+      </span>
+      <span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="ml-2 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M305 239c9.4 9.4 9.4 24.6 0 33.9L113 465c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l175-175L79 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L305 239z"/></svg>    </span>
+  </span>
+  </a>
+                      <a
+    href="/people/"
+    class="btn prevent-default btn-primary-inverse w-full lg:w-fit"
+              target="_self"
+                  >
+  <span class="btn-inner flex-row flex items-center">
+  <span class="txt">
+          Find a lawyer
+      </span>
+      <span>
+      <svg aria-hidden="true" focusable="false" role="presentation" class="ml-2 w-2.5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M305 239c9.4 9.4 9.4 24.6 0 33.9L113 465c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l175-175L79 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L305 239z"/></svg>    </span>
+  </span>
+  </a>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+    </main>
+
+    
+    <footer class="content-info border-t border-primary-dark-grey/30 bg-white text-primary-dark-grey">
+  <div class="container">
+    <div class="flex flex-col gap-y-16 py-15 lg:py-25">
+      <div class="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2 lg:grid-cols-4">
+                <a
+        href="https://hfw.com/people/"
+        class="prevent-default no-underline group relative flex flex-col gap-y-6 w-full pb-12"
+              >
+                  <div class="flex items-center justify-between gap-x-4 text-lg capitalize">
+            people
+            <svg aria-hidden="true" focusable="false" role="presentation" class="w-2.5 text-current opacity-0 group-hover:opacity-100 transition-all duration-300" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>          </div>
+                          <span class="[&_p]:text-sm">
+            <p>Discover our network of more than 700 lawyers globally.</p>
+          </span>
+        
+        <span
+          class="pointer-events-none absolute bottom-0 left-0 block h-px w-11 rounded bg-primary-orange transition-all duration-300 group-focus-within:w-full group-hover:w-full"
+        ></span>
+
+      </a>
+                <a
+        href="https://hfw.com/about-us/our-locations/"
+        class="prevent-default no-underline group relative flex flex-col gap-y-6 w-full pb-12"
+              >
+                  <div class="flex items-center justify-between gap-x-4 text-lg capitalize">
+            Locations
+            <svg aria-hidden="true" focusable="false" role="presentation" class="w-2.5 text-current opacity-0 group-hover:opacity-100 transition-all duration-300" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>          </div>
+                          <span class="[&_p]:text-sm">
+            <p>See our international network of offices and their services. </p>
+          </span>
+        
+        <span
+          class="pointer-events-none absolute bottom-0 left-0 block h-px w-11 rounded bg-primary-orange transition-all duration-300 group-focus-within:w-full group-hover:w-full"
+        ></span>
+
+      </a>
+                <a
+        href="https://hfw.com/insights/"
+        class="prevent-default no-underline group relative flex flex-col gap-y-6 w-full pb-12"
+              >
+                  <div class="flex items-center justify-between gap-x-4 text-lg capitalize">
+            Insights
+            <svg aria-hidden="true" focusable="false" role="presentation" class="w-2.5 text-current opacity-0 group-hover:opacity-100 transition-all duration-300" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>          </div>
+                          <span class="[&_p]:text-sm">
+            <p>Read our latest insight pieces by our team of legal experts. </p>
+          </span>
+        
+        <span
+          class="pointer-events-none absolute bottom-0 left-0 block h-px w-11 rounded bg-primary-orange transition-all duration-300 group-focus-within:w-full group-hover:w-full"
+        ></span>
+
+      </a>
+                <a
+        href="https://hfw.com/about-us/contact-us/"
+        class="prevent-default no-underline group relative flex flex-col gap-y-6 w-full pb-12"
+              >
+                  <div class="flex items-center justify-between gap-x-4 text-lg capitalize">
+            Contact
+            <svg aria-hidden="true" focusable="false" role="presentation" class="w-2.5 text-current opacity-0 group-hover:opacity-100 transition-all duration-300" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M299.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-192 192c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L265.4 256 84.7 75.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l192 192z"/></svg>          </div>
+                          <span class="[&_p]:text-sm">
+            <p>Contact us for more information or with any enquiries.</p>
+          </span>
+        
+        <span
+          class="pointer-events-none absolute bottom-0 left-0 block h-px w-11 rounded bg-primary-orange transition-all duration-300 group-focus-within:w-full group-hover:w-full"
+        ></span>
+
+      </a>
+      </div>
+      <div class="flex flex-col gap-y-6">
+      <div class="flex flex-col gap-y-6 gap-x-4 lg:flex-row lg:items-center">
+              <div class="flex flex-wrap gap-4 max-md:flex-col lg:items-center lg:justify-start">
+                                  <a
+              class="prevent-default inline text-sm underline decoration-transparent underline-offset-2 hover:decoration-current"
+              href="https://hfw.com/privacy-notice/"
+              target="_self"
+                          >
+              Privacy Notice
+            </a>
+                                  <a
+              class="prevent-default inline text-sm underline decoration-transparent underline-offset-2 hover:decoration-current"
+              href="https://hfw.com/accessibility/"
+              target="_self"
+                          >
+              Accessibility
+            </a>
+                                  <a
+              class="prevent-default inline text-sm underline decoration-transparent underline-offset-2 hover:decoration-current"
+              href="https://hfw.com/disaster-recovery/"
+              target="_self"
+                          >
+              Disaster Recovery
+            </a>
+                                  <a
+              class="prevent-default inline text-sm underline decoration-transparent underline-offset-2 hover:decoration-current"
+              href="https://hfw.com/legal-notices/"
+              target="_self"
+                          >
+              Legal Notices
+            </a>
+                                  <a
+              class="prevent-default inline text-sm underline decoration-transparent underline-offset-2 hover:decoration-current"
+              href="https://hfw.com/app/uploads/2025/09/HFW-Anti-Modern-Slavery-Statement-Sep-25.pdf"
+              target="_blank"
+               rel="nofollow noopener noreferrer"             >
+              Anti-Modern Slavery Statement
+            </a>
+                  </div>
+      
+              <div class="flex items-center justify-start gap-x-4">
+                      <div class="relative text-sm lg:pl-4 before:absolute before:top-1/2 before:-left-0.5 before:block before:h-0.5 before:w-0.5 before:bg-primary-dark-grey max-lg:before:hidden">
+              <p>Follow us</p>
+            </div>
+                    <div class="!gap-4 flex w-max flex-row flex-wrap items-center gap-6">
+          
+      
+      <a
+        class="text-primary-dark-grey group-dark:text-white hover:opacity-75 focus-visible:opacity-75  prevent-default"
+                  href="https://uk.linkedin.com/company/hfw"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+              >
+        <span class="sr-only">LinkedIn</span>
+        <svg aria-hidden="true" focusable="false" role="presentation" class="w-5 h-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>        </a>
+          
+      
+      <a
+        class="text-primary-dark-grey group-dark:text-white hover:opacity-75 focus-visible:opacity-75  prevent-default"
+                  href="https://twitter.com/hfw_law"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+              >
+        <span class="sr-only">X</span>
+        <svg aria-hidden="true" focusable="false" role="presentation" class="w-5 h-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>        </a>
+          
+      
+      <a
+        class="text-primary-dark-grey group-dark:text-white hover:opacity-75 focus-visible:opacity-75  prevent-default"
+                  href="https://www.youtube.com/c/HFWVideos-Channel"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+              >
+        <span class="sr-only">YouTube</span>
+        <svg aria-hidden="true" focusable="false" role="presentation" class="w-5 h-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>        </a>
+          
+      
+      <a
+        class="text-primary-dark-grey group-dark:text-white hover:opacity-75 focus-visible:opacity-75  prevent-default"
+                  href="https://www.hfw.com/wechat/"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+              >
+        <span class="sr-only">WeChat</span>
+        <svg aria-hidden="true" focusable="false" role="presentation" class="w-5 h-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M385.2 167.6c6.4 0 12.6.3 18.8 1.1C387.4 90.3 303.3 32 207.7 32 100.5 32 13 104.8 13 197.4c0 53.4 29.3 97.5 77.9 131.6l-19.3 58.6 68-34.1c24.4 4.8 43.8 9.7 68.2 9.7 6.2 0 12.1-.3 18.3-.8-4-12.9-6.2-26.6-6.2-40.8-.1-84.9 72.9-154 165.3-154zm-104.5-52.9c14.5 0 24.2 9.7 24.2 24.4 0 14.5-9.7 24.2-24.2 24.2-14.8 0-29.3-9.7-29.3-24.2.1-14.7 14.6-24.4 29.3-24.4zm-136.4 48.6c-14.5 0-29.3-9.7-29.3-24.2 0-14.8 14.8-24.4 29.3-24.4 14.8 0 24.4 9.7 24.4 24.4 0 14.6-9.6 24.2-24.4 24.2zM563 319.4c0-77.9-77.9-141.3-165.4-141.3-92.7 0-165.4 63.4-165.4 141.3S305 460.7 397.6 460.7c19.3 0 38.9-5.1 58.6-9.9l53.4 29.3-14.8-48.6C534 402.1 563 363.2 563 319.4zm-219.1-24.5c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.8 0 24.4 9.7 24.4 19.3 0 10-9.7 19.6-24.4 19.6zm107.1 0c-9.7 0-19.3-9.7-19.3-19.6 0-9.7 9.7-19.3 19.3-19.3 14.5 0 24.4 9.7 24.4 19.3.1 10-9.9 19.6-24.4 19.6z"/></svg>        </a>
+      </div>
+        </div>
+          </div>
+  
+      <span class="text-sm">
+      © Holman Fenwick Willan LLP 2026  |  Authorised and regulated by the Solicitors Regulation Authority (No. 509977)
+    </span>
+  </div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center max-lg:justify-items-center">
+      <a
+      class="max-w-16"
+      href="https://www.hfw.com/"
+    >
+      <span class="sr-only">Company Logo</span>
+      <img width="149" height="92" src="https://www.hfw.com/app/uploads/2024/05/HFW-dark-logo-new.svg" class="w-full max-h-32" alt="" decoding="async" loading="lazy" />    </a>
+    </div>
+    </div>
+  </div>
+</footer>
+  </div>
+
+    <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp/wp-*.php","/wp/wp-admin/*","/app/uploads/*","/app/*","/app/plugins/*","/app/themes/hfw/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="acorn-socials/native-js-module" src="https://www.hfw.com/app/plugins/acorn-socials/public/build/assets/native-CtKoBLpH.js" type="module"></script>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--transparent: transparent;--wp--preset--color--primary-dark-green: #00685e;--wp--preset--color--primary-orange: #fb671c;--wp--preset--color--primary-dark-grey: #2f2f2f;--wp--preset--color--primary-teal: #009aa6;--wp--preset--color--utility-neutral-grey: #f9f5f4;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--xs: 0.75rem;--wp--preset--font-size--sm: 0.875rem;--wp--preset--font-size--base: 1rem;--wp--preset--font-size--lg: 1.125rem;--wp--preset--font-size--xl: 1.25rem;--wp--preset--font-size--2-xl: 1.5rem;--wp--preset--font-size--3-xl: 1.875rem;--wp--preset--font-size--4-xl: 2.25rem;--wp--preset--font-size--5-xl: 3rem;--wp--preset--font-size--6-xl: 3.75rem;--wp--preset--font-size--7-xl: 4.5rem;--wp--preset--font-size--8-xl: 6rem;--wp--preset--font-size--9-xl: 8rem;--wp--preset--font-size--15-px: 0.9375rem;--wp--preset--font-size--22-px: 1.375rem;--wp--preset--font-size--3-2-xl: 2rem;--wp--preset--font-size--3-5-xl: 2.125rem;--wp--preset--font-size--4-2-xl: 2.375rem;--wp--preset--font-size--4-5-xl: 2.5rem;--wp--preset--font-size--7-3-xl: 5rem;--wp--preset--font-family--sans: Montserrat,system-ui,-apple-system,"Segoe UI","Helvetica Neue",Arial,sans-serif;--wp--preset--font-family--serif: ui-serif,Georgia,Cambria,"Times New Roman",Times,serif;--wp--preset--font-family--mono: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--wp--preset--font-family--montserrat: Montserrat,system-ui,-apple-system,"Segoe UI","Helvetica Neue",Arial,sans-serif;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){margin-left: auto !important;margin-right: auto !important;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-transparent-color{color: var(--wp--preset--color--transparent) !important;}.has-primary-dark-green-color{color: var(--wp--preset--color--primary-dark-green) !important;}.has-primary-orange-color{color: var(--wp--preset--color--primary-orange) !important;}.has-primary-dark-grey-color{color: var(--wp--preset--color--primary-dark-grey) !important;}.has-primary-teal-color{color: var(--wp--preset--color--primary-teal) !important;}.has-utility-neutral-grey-color{color: var(--wp--preset--color--utility-neutral-grey) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-transparent-background-color{background-color: var(--wp--preset--color--transparent) !important;}.has-primary-dark-green-background-color{background-color: var(--wp--preset--color--primary-dark-green) !important;}.has-primary-orange-background-color{background-color: var(--wp--preset--color--primary-orange) !important;}.has-primary-dark-grey-background-color{background-color: var(--wp--preset--color--primary-dark-grey) !important;}.has-primary-teal-background-color{background-color: var(--wp--preset--color--primary-teal) !important;}.has-utility-neutral-grey-background-color{background-color: var(--wp--preset--color--utility-neutral-grey) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-transparent-border-color{border-color: var(--wp--preset--color--transparent) !important;}.has-primary-dark-green-border-color{border-color: var(--wp--preset--color--primary-dark-green) !important;}.has-primary-orange-border-color{border-color: var(--wp--preset--color--primary-orange) !important;}.has-primary-dark-grey-border-color{border-color: var(--wp--preset--color--primary-dark-grey) !important;}.has-primary-teal-border-color{border-color: var(--wp--preset--color--primary-teal) !important;}.has-utility-neutral-grey-border-color{border-color: var(--wp--preset--color--utility-neutral-grey) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-xs-font-size{font-size: var(--wp--preset--font-size--xs) !important;}.has-sm-font-size{font-size: var(--wp--preset--font-size--sm) !important;}.has-base-font-size{font-size: var(--wp--preset--font-size--base) !important;}.has-lg-font-size{font-size: var(--wp--preset--font-size--lg) !important;}.has-xl-font-size{font-size: var(--wp--preset--font-size--xl) !important;}.has-2-xl-font-size{font-size: var(--wp--preset--font-size--2-xl) !important;}.has-3-xl-font-size{font-size: var(--wp--preset--font-size--3-xl) !important;}.has-4-xl-font-size{font-size: var(--wp--preset--font-size--4-xl) !important;}.has-5-xl-font-size{font-size: var(--wp--preset--font-size--5-xl) !important;}.has-6-xl-font-size{font-size: var(--wp--preset--font-size--6-xl) !important;}.has-7-xl-font-size{font-size: var(--wp--preset--font-size--7-xl) !important;}.has-8-xl-font-size{font-size: var(--wp--preset--font-size--8-xl) !important;}.has-9-xl-font-size{font-size: var(--wp--preset--font-size--9-xl) !important;}.has-15-px-font-size{font-size: var(--wp--preset--font-size--15-px) !important;}.has-22-px-font-size{font-size: var(--wp--preset--font-size--22-px) !important;}.has-3-2-xl-font-size{font-size: var(--wp--preset--font-size--3-2-xl) !important;}.has-3-5-xl-font-size{font-size: var(--wp--preset--font-size--3-5-xl) !important;}.has-4-2-xl-font-size{font-size: var(--wp--preset--font-size--4-2-xl) !important;}.has-4-5-xl-font-size{font-size: var(--wp--preset--font-size--4-5-xl) !important;}.has-7-3-xl-font-size{font-size: var(--wp--preset--font-size--7-3-xl) !important;}.has-sans-font-family{font-family: var(--wp--preset--font-family--sans) !important;}.has-serif-font-family{font-family: var(--wp--preset--font-family--serif) !important;}.has-mono-font-family{font-family: var(--wp--preset--font-family--mono) !important;}.has-montserrat-font-family{font-family: var(--wp--preset--font-family--montserrat) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<script id="app/0-js-extra">
+var theme = {"texts":{"read_more":"Read more","read_less":"Read less","view_less":"View less"}};
+//# sourceURL=app%2F0-js-extra
+</script>
+<script id="app/0-js-before">
+!function(){"use strict";var e,t,r,n={},o={};function i(e){var t=o[e];if(void 0!==t)return t.exports;var r=o[e]={exports:{}};return n[e](r,r.exports,i),r.exports}i.m=n,e=[],i.O=function(t,r,n,o){if(!r){var u=1/0;for(d=0;d<e.length;d++){r=e[d][0],n=e[d][1],o=e[d][2];for(var a=!0,c=0;c<r.length;c++)(!1&o||u>=o)&&Object.keys(i.O).every((function(e){return i.O[e](r[c])}))?r.splice(c--,1):(a=!1,o<u&&(u=o));if(a){e.splice(d--,1);var f=n();void 0!==f&&(t=f)}}return t}o=o||0;for(var d=e.length;d>0&&e[d-1][2]>o;d--)e[d]=e[d-1];e[d]=[r,n,o]},i.d=function(e,t){for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=function(e){return Promise.all(Object.keys(i.f).reduce((function(t,r){return i.f[r](e,t),t}),[]))},i.u=function(e){return"js/"+e+"."+{920:"c3590b",1134:"4c02f3",2033:"96a694",2062:"643fb2",2686:"aec13d",2709:"3b55b8",2749:"185a38",3065:"394a68",3530:"555063",3539:"17b993",4615:"b238e4",4674:"554859",5369:"c47f3f",5456:"750b2f",6527:"e04a23",8142:"259fe2",8435:"f96482",9022:"fe40c3",9116:"1f4503"}[e]+".js"},i.miniCssF=function(e){},i.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t={},r="@roots/bud/sage:",i.l=function(e,n,o,u){if(t[e])t[e].push(n);else{var a,c;if(void 0!==o)for(var f=document.getElementsByTagName("script"),d=0;d<f.length;d++){var s=f[d];if(s.getAttribute("src")==e||s.getAttribute("data-webpack")==r+o){a=s;break}}a||(c=!0,(a=document.createElement("script")).charset="utf-8",a.timeout=120,i.nc&&a.setAttribute("nonce",i.nc),a.setAttribute("data-webpack",r+o),a.src=e),t[e]=[n];var l=function(r,n){a.onerror=a.onload=null,clearTimeout(p);var o=t[e];if(delete t[e],a.parentNode&&a.parentNode.removeChild(a),o&&o.forEach((function(e){return e(n)})),r)return r(n)},p=setTimeout(l.bind(null,void 0,{type:"timeout",target:a}),12e4);a.onerror=l.bind(null,a.onerror),a.onload=l.bind(null,a.onload),c&&document.head.appendChild(a)}},i.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="/app/themes/hfw/public/",function(){var e={9121:0};i.f.j=function(t,r){var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else if(9121!=t){var o=new Promise((function(r,o){n=e[t]=[r,o]}));r.push(n[2]=o);var u=i.p+i.u(t),a=new Error;i.l(u,(function(r){if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),u=r&&r.target&&r.target.src;a.message="Loading chunk "+t+" failed.\n("+o+": "+u+")",a.name="ChunkLoadError",a.type=o,a.request=u,n[1](a)}}),"chunk-"+t,t)}else e[t]=0},i.O.j=function(t){return 0===e[t]};var t=function(t,r){var n,o,u=r[0],a=r[1],c=r[2],f=0;if(u.some((function(t){return 0!==e[t]}))){for(n in a)i.o(a,n)&&(i.m[n]=a[n]);if(c)var d=c(i)}for(t&&t(r);f<u.length;f++)o=u[f],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0;return i.O(d)},r=self.webpackChunk_roots_bud_sage=self.webpackChunk_roots_bud_sage||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))}()}();
+//# sourceURL=app%2F0-js-before
+</script>
+<script id="app/0-js" defer src="https://www.hfw.com/app/themes/hfw/public/js/app.430879.js"></script>
+<script id="app/0-js-after">
+(()=>{
+    let isTabbing = false;
+    document.addEventListener('keydown', (event) => {
+        isTabbing = 'Tab' === event.key;
+    });
+    document.addEventListener('mousedown', () => {
+        isTabbing = false;
+    });
+    document.addEventListener('focusin', (event) => {
+        const target = event.target;
+        if (!isTabbing) {
+            return;
+        }
+        if (target instanceof HTMLInputElement && ('search' === target.type || target.classList?.contains('facetwp-search'))) {
+            if(target.classList?.contains('facetwp-search')){
+                const facet = target.closest('.facetwp-facet-s');
+                if(facet instanceof HTMLElement){
+                    facet.classList.add('only-tabbing');
+                }
+            } else {
+                target.classList.add('only-tabbing');
+            }
+        }
+    });
+    document.addEventListener('click', (event) => {
+        document.querySelectorAll('.only-tabbing').forEach((input) => input.classList.remove('only-tabbing'));
+    });
+})();
+    window.ItinerisPredeterminedSearchTerms = ["About HFW","Sectors","Practice areas","Careers at HFW","Abu Dhabi","Accessibility","Acquisition & Leveraged Finance","Admiralty & Crisis Management","Aerospace","Alternative Dispute Resolution","Alumni","Anti-bribery & Anti-corruption","Antitrust & Competition","Asset Finance","Asset Recovery","Aviation","Aviation Commercial & Regulatory Advice","Aviation Commercial Dispute Resolution","Aviation Finance & Leasing","Aviation Liability","Briefings","Brisbane","British Virgin Islands","Brussels","Bulletins","Capital Markets","Carbon & Climate Finance","Client Guides","Commercial Contracts","Commercial Litigation","Commodities","Commodity Finance","Commodity Trading & Derivatives","Complex Environments","Compliance","Construction","Contact us","Corporate","Corporate Governance","Corporate Litigation","Corporate Restructuring & Simplification","Crisis Management","Customs","Cyber Security","CyberOwl","Data Protection","Digital Trade","Dispute Resolution","Diversity & Inclusion","Dry Shipping","Dubai","Early Careers","Early Careers Australia","Early Careers France","Early Careers Hong Kong","Early Careers UK","ED&I","Emergency response","Employment","Energy","Events","Expertise","Export Finance","Finance","Financial Services Regulation","Food & Agribusiness","Fraud, Insolvency & Asset recovery","Geneva","Government & Public Sector","Helicopters & Jets","Hong Kong","Houston","Hubs","Infrastructure Finance","Insights","Insolvency","Insolvency Litigation","Insurance & Reinsurance","International Arbitration","International Trade Regulation","Investment Funds","Islamic Finance","Jets & Helicopters","Jobs at HFW","Joint Ventures","Kuwait","Lawyers","Legal notices","Life at HFW","Litigation","Litigation Passport","Locations","Logistics","London","Marine Insurance","Maritime Sustainability","Market insight","Melbourne","Merger Control","Mergers & Acquisitions","Mining & Metals","Monaco","News","Offices","Offshore Construction","Offshore Wind","Oil & Gas","Paris","Partners","People","Perth","Piraeus","Ports & Terminals","Privacy Notice","Private Wealth","Project & Infrastructure Finance","Projects","Publications","Real Estate","Regulatory","Responsible Business Strategy","Rio de Janeiro","Riyadh","Sanctions","Sao Paulo","Shanghai","Shenzhen","Shipping","Singapore","Solicitors Apprenticeships","Sustainability","Sydney","Technology","Thought leadership","Trade & Commodity Finance","Trade Compliance","Training Contracts","Travel, Cruise & Leisure","Tunnelling","Vacancies","Vacation Schemes","White Collar Defence & Investigations","Yachts","Shipping & Maritime Transactions"];
+//# sourceURL=app%2F0-js-after
+</script>
+<script id="header/0-js" defer src="https://www.hfw.com/app/themes/hfw/public/js/header.6e06b6.js"></script>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+           document.querySelectorAll("ul.nav-menu").forEach(
+               ulist => { 
+                    if (ulist.querySelectorAll("li").length == 0) {
+                        ulist.style.display = "none";
+
+                                            } 
+                }
+           );
+            /* ]]> */
+        </script>
+        </body>
+
+</html>

@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Disallow: */insights/?
+Disallow: */insights?
+Disallow: */news/?
+Disallow: */news?
+Disallow: */people/?
+Disallow: */people?
+Disallow: */profile$
+Disallow: */profile/
+Disallow: */search$
+Disallow: */search/
+Disallow: */search?
+Sitemap: https://api.simmons-simmons.com/marketing/sitemap

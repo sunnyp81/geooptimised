@@ -1,0 +1,10 @@
+User-agent: rogerbot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: *
+Disallow: */sitecore/*
+
+Sitemap: https://dwfgroup.com/en/sitemap.xml

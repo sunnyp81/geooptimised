@@ -1,0 +1,14 @@
+﻿# Production robots
+User-agent: *
+
+Disallow: /members-portal/
+Disallow: /sign-in/
+Disallow: /register/
+Disallow: /my-account/
+
+Sitemap: https://www.weightmans.com/sitemap.xml
+Sitemap: https://www.weightmans.com/sitemap/en/
+Sitemap: https://www.weightmans.com/sitemap/fr/
+Sitemap: https://www.weightmans.com/sitemap/es/
+
+EntityMap: https://www.weightmans.com/entitymap.json

@@ -1,0 +1,4291 @@
+{
+  "$comment": "UK Law Firms AI Crawler Access Index. Each record is one firm's robots.txt and llms.txt as WE fetched them. 'state' records whether the file was genuinely readable or was gated by bot protection / returned a soft-404. Per-crawler 'status' describes the file's syntax shape only: 'not_listed' means the token does not appear (NOT a block); 'partial' means named with path-level or allowlist rules (NOT a judgement that the firm restricts AI); 'indeterminate' means we could not read the file. 'aiSpecificStance' is the derived judgement: 'restricts_ai_specifically' only when an AI token's effective directives (RFC 9309 grouping, most specific match wins) are clearly stricter than the same file's effective directives for Googlebot; restriction inherited from 'User-agent: *' or shared with Googlebot's own group is never AI-specific. robots.txt is a request, not enforcement.",
+  "study": "UK Law Firms AI Crawler Access Index",
+  "firmListSource": {
+    "publisher": "Lawyer Mag (lawyermag.co.uk)",
+    "title": "Law Firm Rankings: 100 Leading Law Firms in UK in 2025",
+    "url": "https://lawyermag.co.uk/law-firm-rankings-leading-law-firms-in-uk/",
+    "ranking": "the top 100 UK law firms ranked primarily by revenue for 2025, of which we take the top 50.",
+    "compiledFrom": "Stated by the source as compiled from Law Gazette, Legal Business, The University of Law, Non-Billable, Legal IT Insider, PwC, The Legal 500 and Wikipedia.",
+    "fetchedOn": "2026-07-14",
+    "caveat": "This is a secondary compilation, not a primary revenue audit. The Lawyer UK 200 and Legal Business LB100 are the primary rankings but are paywalled. Firm-to-domain mapping was done by inspection; a wrong domain would surface below as unreachable, not as a false directive."
+  },
+  "agentsChecked": [
+    "GPTBot",
+    "OAI-SearchBot",
+    "ChatGPT-User",
+    "ClaudeBot",
+    "Claude-Web",
+    "anthropic-ai",
+    "PerplexityBot",
+    "Perplexity-User",
+    "Google-Extended",
+    "Bingbot",
+    "CCBot",
+    "Applebot-Extended"
+  ],
+  "fetchedOn": "2026-07-14",
+  "method": "For each firm's primary domain we fetched https://<domain>/robots.txt and https://<domain>/llms.txt ourselves with curl, following redirects, and saved every raw response verbatim under raw/. Three firms answered only on their www host (recorded in effectiveUrl). robots.txt was parsed with standard user-agent grouping. A response was only parsed for directives when its body was a genuine robots.txt; HTML bot-challenge pages (Vercel, Cloudflare, Azure WAF, Incapsula) returning 200/403/429 were recorded as unreadable, never parsed.",
+  "records": [
+    {
+      "rank": 1,
+      "firm": "DLA Piper",
+      "domain": "dlapiper.com",
+      "aiSpecificStance": "indeterminate",
+      "aiSpecificNote": "robots.txt could not be read (bot protection or no response), so its stance is unknown.",
+      "robots": {
+        "httpStatus": 429,
+        "effectiveUrl": "https://dlapiper.com/robots.txt",
+        "state": "blocked_by_bot_protection",
+        "readable": false,
+        "wildcardDisallowsRoot": null,
+        "fetchedAt": "2026-07-14T11:32:08Z",
+        "rawFile": "raw/dlapiper.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 429,
+        "effectiveUrl": "https://dlapiper.com/llms.txt",
+        "state": "blocked_by_bot_protection",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:32:08Z",
+        "rawFile": "raw/dlapiper.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 2,
+      "firm": "Clifford Chance",
+      "domain": "cliffordchance.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.cliffordchance.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/cliffordchance.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.cliffordchance.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/cliffordchance.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 3,
+      "firm": "A&O Shearman (Allen & Overy)",
+      "domain": "aoshearman.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.aoshearman.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/aoshearman.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.aoshearman.com/en/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/aoshearman.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 4,
+      "firm": "Freshfields Bruckhaus Deringer",
+      "domain": "freshfields.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.freshfields.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/freshfields.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.freshfields.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/freshfields.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 5,
+      "firm": "Linklaters",
+      "domain": "linklaters.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.linklaters.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/linklaters.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.linklaters.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/linklaters.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 6,
+      "firm": "CMS",
+      "domain": "cms.law",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://cms.law/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/cms.law.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://cms.law/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/cms.law.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 7,
+      "firm": "Herbert Smith Freehills",
+      "domain": "herbertsmithfreehills.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.hsfkramer.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/herbertsmithfreehills.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.hsfkramer.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/herbertsmithfreehills.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 8,
+      "firm": "Eversheds Sutherland",
+      "domain": "eversheds-sutherland.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "Named AI tokens (Applebot-Extended, ClaudeBot, GPTBot, Google-Extended, PerplexityBot) sit in the same directive group as Googlebot; the policy applies to all named crawlers alike. Nothing AI-specific.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.eversheds-sutherland.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": true,
+        "fetchedAt": "2026-07-14T11:37:26Z",
+        "rawFile": "raw/eversheds-sutherland.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.eversheds-sutherland.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:37:26Z",
+        "rawFile": "raw/eversheds-sutherland.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "partial",
+          "disallow": [
+            "/",
+            "/$",
+            "/*.xml",
+            "/*/about/news*",
+            "/*/capabilities*",
+            "/*/careers*",
+            "/*/global*",
+            "/*/resources*",
+            "/About-Us/Locations*",
+            "/People*",
+            "/bg/bulgaria*",
+            "/cs/czech-republic*",
+            "/de/austria*",
+            "/de/czech-republic*",
+            "/de/germany*",
+            "/de/slovakia*",
+            "/de/switzerland*",
+            "/en/angola*",
+            "/en/asia*",
+            "/en/austria*",
+            "/en/belgium*",
+            "/en/bulgaria*",
+            "/en/czech-republic*",
+            "/en/estonia*",
+            "/en/finland*",
+            "/en/france*",
+            "/en/germany*",
+            "/en/hungary*",
+            "/en/iraq*",
+            "/en/ireland*",
+            "/en/italy*",
+            "/en/jordan*",
+            "/en/latvia*",
+            "/en/lithuania*",
+            "/en/luxembourg*",
+            "/en/mauritius*",
+            "/en/mozambique*",
+            "/en/netherlands*",
+            "/en/poland*",
+            "/en/portugal*",
+            "/en/qatar*",
+            "/en/romania*",
+            "/en/saudi-arabia*",
+            "/en/slovakia*",
+            "/en/south-africa*",
+            "/en/spain*",
+            "/en/sweden*",
+            "/en/switzerland*",
+            "/en/tunisia*",
+            "/en/united-arab-emirates*",
+            "/en/united-kingdom*",
+            "/en/united-states*",
+            "/es/spain*",
+            "/et/estonia*",
+            "/fi/finland*",
+            "/fr/france*",
+            "/fr/switzerland*",
+            "/fr/tunisia*",
+            "/global/en*",
+            "/global/en/where*",
+            "/hu/hungary*",
+            "/it/italy*",
+            "/lt/lithuania*",
+            "/lv/latvia*",
+            "/nl/netherlands*",
+            "/pl/poland*",
+            "/pt/portugal*",
+            "/se/sweden*",
+            "/sk/slovakia*"
+          ]
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "partial",
+          "disallow": [
+            "/",
+            "/$",
+            "/*.xml",
+            "/*/about/news*",
+            "/*/capabilities*",
+            "/*/careers*",
+            "/*/global*",
+            "/*/resources*",
+            "/About-Us/Locations*",
+            "/People*",
+            "/bg/bulgaria*",
+            "/cs/czech-republic*",
+            "/de/austria*",
+            "/de/czech-republic*",
+            "/de/germany*",
+            "/de/slovakia*",
+            "/de/switzerland*",
+            "/en/angola*",
+            "/en/asia*",
+            "/en/austria*",
+            "/en/belgium*",
+            "/en/bulgaria*",
+            "/en/czech-republic*",
+            "/en/estonia*",
+            "/en/finland*",
+            "/en/france*",
+            "/en/germany*",
+            "/en/hungary*",
+            "/en/iraq*",
+            "/en/ireland*",
+            "/en/italy*",
+            "/en/jordan*",
+            "/en/latvia*",
+            "/en/lithuania*",
+            "/en/luxembourg*",
+            "/en/mauritius*",
+            "/en/mozambique*",
+            "/en/netherlands*",
+            "/en/poland*",
+            "/en/portugal*",
+            "/en/qatar*",
+            "/en/romania*",
+            "/en/saudi-arabia*",
+            "/en/slovakia*",
+            "/en/south-africa*",
+            "/en/spain*",
+            "/en/sweden*",
+            "/en/switzerland*",
+            "/en/tunisia*",
+            "/en/united-arab-emirates*",
+            "/en/united-kingdom*",
+            "/en/united-states*",
+            "/es/spain*",
+            "/et/estonia*",
+            "/fi/finland*",
+            "/fr/france*",
+            "/fr/switzerland*",
+            "/fr/tunisia*",
+            "/global/en*",
+            "/global/en/where*",
+            "/hu/hungary*",
+            "/it/italy*",
+            "/lt/lithuania*",
+            "/lv/latvia*",
+            "/nl/netherlands*",
+            "/pl/poland*",
+            "/pt/portugal*",
+            "/se/sweden*",
+            "/sk/slovakia*"
+          ]
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "partial",
+          "disallow": [
+            "/",
+            "/$",
+            "/*.xml",
+            "/*/about/news*",
+            "/*/capabilities*",
+            "/*/careers*",
+            "/*/global*",
+            "/*/resources*",
+            "/About-Us/Locations*",
+            "/People*",
+            "/bg/bulgaria*",
+            "/cs/czech-republic*",
+            "/de/austria*",
+            "/de/czech-republic*",
+            "/de/germany*",
+            "/de/slovakia*",
+            "/de/switzerland*",
+            "/en/angola*",
+            "/en/asia*",
+            "/en/austria*",
+            "/en/belgium*",
+            "/en/bulgaria*",
+            "/en/czech-republic*",
+            "/en/estonia*",
+            "/en/finland*",
+            "/en/france*",
+            "/en/germany*",
+            "/en/hungary*",
+            "/en/iraq*",
+            "/en/ireland*",
+            "/en/italy*",
+            "/en/jordan*",
+            "/en/latvia*",
+            "/en/lithuania*",
+            "/en/luxembourg*",
+            "/en/mauritius*",
+            "/en/mozambique*",
+            "/en/netherlands*",
+            "/en/poland*",
+            "/en/portugal*",
+            "/en/qatar*",
+            "/en/romania*",
+            "/en/saudi-arabia*",
+            "/en/slovakia*",
+            "/en/south-africa*",
+            "/en/spain*",
+            "/en/sweden*",
+            "/en/switzerland*",
+            "/en/tunisia*",
+            "/en/united-arab-emirates*",
+            "/en/united-kingdom*",
+            "/en/united-states*",
+            "/es/spain*",
+            "/et/estonia*",
+            "/fi/finland*",
+            "/fr/france*",
+            "/fr/switzerland*",
+            "/fr/tunisia*",
+            "/global/en*",
+            "/global/en/where*",
+            "/hu/hungary*",
+            "/it/italy*",
+            "/lt/lithuania*",
+            "/lv/latvia*",
+            "/nl/netherlands*",
+            "/pl/poland*",
+            "/pt/portugal*",
+            "/se/sweden*",
+            "/sk/slovakia*"
+          ]
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/",
+            "/$",
+            "/*.xml",
+            "/*/about/news*",
+            "/*/capabilities*",
+            "/*/careers*",
+            "/*/global*",
+            "/*/resources*",
+            "/About-Us/Locations*",
+            "/People*",
+            "/bg/bulgaria*",
+            "/cs/czech-republic*",
+            "/de/austria*",
+            "/de/czech-republic*",
+            "/de/germany*",
+            "/de/slovakia*",
+            "/de/switzerland*",
+            "/en/angola*",
+            "/en/asia*",
+            "/en/austria*",
+            "/en/belgium*",
+            "/en/bulgaria*",
+            "/en/czech-republic*",
+            "/en/estonia*",
+            "/en/finland*",
+            "/en/france*",
+            "/en/germany*",
+            "/en/hungary*",
+            "/en/iraq*",
+            "/en/ireland*",
+            "/en/italy*",
+            "/en/jordan*",
+            "/en/latvia*",
+            "/en/lithuania*",
+            "/en/luxembourg*",
+            "/en/mauritius*",
+            "/en/mozambique*",
+            "/en/netherlands*",
+            "/en/poland*",
+            "/en/portugal*",
+            "/en/qatar*",
+            "/en/romania*",
+            "/en/saudi-arabia*",
+            "/en/slovakia*",
+            "/en/south-africa*",
+            "/en/spain*",
+            "/en/sweden*",
+            "/en/switzerland*",
+            "/en/tunisia*",
+            "/en/united-arab-emirates*",
+            "/en/united-kingdom*",
+            "/en/united-states*",
+            "/es/spain*",
+            "/et/estonia*",
+            "/fi/finland*",
+            "/fr/france*",
+            "/fr/switzerland*",
+            "/fr/tunisia*",
+            "/global/en*",
+            "/global/en/where*",
+            "/hu/hungary*",
+            "/it/italy*",
+            "/lt/lithuania*",
+            "/lv/latvia*",
+            "/nl/netherlands*",
+            "/pl/poland*",
+            "/pt/portugal*",
+            "/se/sweden*",
+            "/sk/slovakia*"
+          ]
+        },
+        "Bingbot": {
+          "status": "partial",
+          "disallow": [
+            "/",
+            "/$",
+            "/*.xml",
+            "/*/about/news*",
+            "/*/capabilities*",
+            "/*/careers*",
+            "/*/global*",
+            "/*/resources*",
+            "/About-Us/Locations*",
+            "/People*",
+            "/bg/bulgaria*",
+            "/cs/czech-republic*",
+            "/de/austria*",
+            "/de/czech-republic*",
+            "/de/germany*",
+            "/de/slovakia*",
+            "/de/switzerland*",
+            "/en/angola*",
+            "/en/asia*",
+            "/en/austria*",
+            "/en/belgium*",
+            "/en/bulgaria*",
+            "/en/czech-republic*",
+            "/en/estonia*",
+            "/en/finland*",
+            "/en/france*",
+            "/en/germany*",
+            "/en/hungary*",
+            "/en/iraq*",
+            "/en/ireland*",
+            "/en/italy*",
+            "/en/jordan*",
+            "/en/latvia*",
+            "/en/lithuania*",
+            "/en/luxembourg*",
+            "/en/mauritius*",
+            "/en/mozambique*",
+            "/en/netherlands*",
+            "/en/poland*",
+            "/en/portugal*",
+            "/en/qatar*",
+            "/en/romania*",
+            "/en/saudi-arabia*",
+            "/en/slovakia*",
+            "/en/south-africa*",
+            "/en/spain*",
+            "/en/sweden*",
+            "/en/switzerland*",
+            "/en/tunisia*",
+            "/en/united-arab-emirates*",
+            "/en/united-kingdom*",
+            "/en/united-states*",
+            "/es/spain*",
+            "/et/estonia*",
+            "/fi/finland*",
+            "/fr/france*",
+            "/fr/switzerland*",
+            "/fr/tunisia*",
+            "/global/en*",
+            "/global/en/where*",
+            "/hu/hungary*",
+            "/it/italy*",
+            "/lt/lithuania*",
+            "/lv/latvia*",
+            "/nl/netherlands*",
+            "/pl/poland*",
+            "/pt/portugal*",
+            "/se/sweden*",
+            "/sk/slovakia*"
+          ]
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "partial",
+          "disallow": [
+            "/",
+            "/$",
+            "/*.xml",
+            "/*/about/news*",
+            "/*/capabilities*",
+            "/*/careers*",
+            "/*/global*",
+            "/*/resources*",
+            "/About-Us/Locations*",
+            "/People*",
+            "/bg/bulgaria*",
+            "/cs/czech-republic*",
+            "/de/austria*",
+            "/de/czech-republic*",
+            "/de/germany*",
+            "/de/slovakia*",
+            "/de/switzerland*",
+            "/en/angola*",
+            "/en/asia*",
+            "/en/austria*",
+            "/en/belgium*",
+            "/en/bulgaria*",
+            "/en/czech-republic*",
+            "/en/estonia*",
+            "/en/finland*",
+            "/en/france*",
+            "/en/germany*",
+            "/en/hungary*",
+            "/en/iraq*",
+            "/en/ireland*",
+            "/en/italy*",
+            "/en/jordan*",
+            "/en/latvia*",
+            "/en/lithuania*",
+            "/en/luxembourg*",
+            "/en/mauritius*",
+            "/en/mozambique*",
+            "/en/netherlands*",
+            "/en/poland*",
+            "/en/portugal*",
+            "/en/qatar*",
+            "/en/romania*",
+            "/en/saudi-arabia*",
+            "/en/slovakia*",
+            "/en/south-africa*",
+            "/en/spain*",
+            "/en/sweden*",
+            "/en/switzerland*",
+            "/en/tunisia*",
+            "/en/united-arab-emirates*",
+            "/en/united-kingdom*",
+            "/en/united-states*",
+            "/es/spain*",
+            "/et/estonia*",
+            "/fi/finland*",
+            "/fr/france*",
+            "/fr/switzerland*",
+            "/fr/tunisia*",
+            "/global/en*",
+            "/global/en/where*",
+            "/hu/hungary*",
+            "/it/italy*",
+            "/lt/lithuania*",
+            "/lv/latvia*",
+            "/nl/netherlands*",
+            "/pl/poland*",
+            "/pt/portugal*",
+            "/se/sweden*",
+            "/sk/slovakia*"
+          ]
+        }
+      }
+    },
+    {
+      "rank": 9,
+      "firm": "Clyde & Co",
+      "domain": "clydeco.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.clydeco.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/clydeco.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.clydeco.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/clydeco.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 10,
+      "firm": "Pinsent Masons",
+      "domain": "pinsentmasons.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.pinsentmasons.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/pinsentmasons.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.pinsentmasons.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/pinsentmasons.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 11,
+      "firm": "Slaughter and May",
+      "domain": "slaughterandmay.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.slaughterandmay.com/robots",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/slaughterandmay.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.slaughterandmay.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/slaughterandmay.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 12,
+      "firm": "Ashurst",
+      "domain": "ashurst.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.ashurstperkinscoie.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/ashurst.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.ashurstperkinscoie.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/ashurst.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 13,
+      "firm": "Gowling WLG",
+      "domain": "gowlingwlg.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "Named AI tokens (ClaudeBot, GPTBot) receive rules equal to or more permissive than Googlebot's (explicit permission, not restriction).",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://gowlingwlg.com/en-gb/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/gowlingwlg.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://gowlingwlg.com/en-gb/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/gowlingwlg.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "partial",
+          "disallow": [
+            "/404",
+            "/500",
+            "/_next/",
+            "/api/",
+            "/copy-of-newservices1",
+            "/internal-server-error",
+            "/marketplaceapps/incrementalindexing",
+            "/page-not-found",
+            "/pleasedonotpublish"
+          ]
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "partial",
+          "disallow": [
+            "/404",
+            "/500",
+            "/_next/",
+            "/api/",
+            "/copy-of-newservices1",
+            "/internal-server-error",
+            "/marketplaceapps/incrementalindexing",
+            "/page-not-found",
+            "/pleasedonotpublish"
+          ]
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "partial",
+          "disallow": [
+            "/404",
+            "/500",
+            "/_next/",
+            "/api/",
+            "/copy-of-newservices1",
+            "/internal-server-error",
+            "/marketplaceapps/incrementalindexing",
+            "/page-not-found",
+            "/pleasedonotpublish"
+          ]
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 14,
+      "firm": "Bryan Cave Leighton Paisner (BCLP)",
+      "domain": "bclplaw.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.bclplaw.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/bclplaw.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.bclplaw.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/bclplaw.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 15,
+      "firm": "Addleshaw Goddard",
+      "domain": "addleshawgoddard.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://addleshawgoddard.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/addleshawgoddard.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.addleshawgoddard.com/en/page-not-found/?404;https://addleshawgoddard.com:443/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/addleshawgoddard.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 16,
+      "firm": "DWF",
+      "domain": "dwfgroup.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://dwfgroup.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/dwfgroup.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://dwfgroup.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/dwfgroup.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 17,
+      "firm": "Simmons & Simmons",
+      "domain": "simmons-simmons.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.simmons-simmons.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/simmons-simmons.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.simmons-simmons.com/llms.txt",
+        "state": "soft404_html",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/simmons-simmons.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 18,
+      "firm": "Bird & Bird",
+      "domain": "twobirds.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.twobirds.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/twobirds.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.twobirds.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/twobirds.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 19,
+      "firm": "Taylor Wessing",
+      "domain": "taylorwessing.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.taylorwessing.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/taylorwessing.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.taylorwessing.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/taylorwessing.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 20,
+      "firm": "Womble Bond Dickinson",
+      "domain": "womblebonddickinson.com",
+      "aiSpecificStance": "indeterminate",
+      "aiSpecificNote": "robots.txt could not be read (bot protection or no response), so its stance is unknown.",
+      "robots": {
+        "httpStatus": 403,
+        "effectiveUrl": "https://womblebonddickinson.com/robots.txt",
+        "state": "blocked_by_bot_protection",
+        "readable": false,
+        "wildcardDisallowsRoot": null,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/womblebonddickinson.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 403,
+        "effectiveUrl": "https://womblebonddickinson.com/llms.txt",
+        "state": "blocked_by_bot_protection",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/womblebonddickinson.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 21,
+      "firm": "Osborne Clarke",
+      "domain": "osborneclarke.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "Named AI tokens (CCBot, ClaudeBot, GPTBot, Google-Extended, PerplexityBot) receive rules equal to or more permissive than Googlebot's (explicit permission, not restriction).",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.osborneclarke.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/osborneclarke.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.osborneclarke.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/osborneclarke.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "allowed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 22,
+      "firm": "Fieldfisher",
+      "domain": "fieldfisher.com",
+      "aiSpecificStance": "restricts_ai_specifically",
+      "aiSpecificNote": "Applebot-Extended, CCBot, ClaudeBot, GPTBot, Google-Extended held to stricter rules than this file gives Googlebot (full disallow while Googlebot is not equally disallowed).",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.fieldfisher.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:34:35Z",
+        "rawFile": "raw/fieldfisher.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.fieldfisher.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:34:35Z",
+        "rawFile": "raw/fieldfisher.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "blocked",
+          "disallow": [
+            "/"
+          ]
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "blocked",
+          "disallow": [
+            "/"
+          ]
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "blocked",
+          "disallow": [
+            "/"
+          ]
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "blocked",
+          "disallow": [
+            "/"
+          ]
+        },
+        "Applebot-Extended": {
+          "status": "blocked",
+          "disallow": [
+            "/"
+          ]
+        }
+      }
+    },
+    {
+      "rank": 23,
+      "firm": "Macfarlanes",
+      "domain": "macfarlanes.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.macfarlanes.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/macfarlanes.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.macfarlanes.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/macfarlanes.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 24,
+      "firm": "Kennedys",
+      "domain": "kennedyslaw.com",
+      "aiSpecificStance": "indeterminate",
+      "aiSpecificNote": "robots.txt could not be read (bot protection or no response), so its stance is unknown.",
+      "robots": {
+        "httpStatus": 403,
+        "effectiveUrl": "https://www.kennedyslaw.com/robots.txt",
+        "state": "blocked_by_bot_protection",
+        "readable": false,
+        "wildcardDisallowsRoot": null,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/kennedyslaw.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 403,
+        "effectiveUrl": "https://www.kennedyslaw.com/llms.txt",
+        "state": "blocked_by_bot_protection",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/kennedyslaw.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 25,
+      "firm": "DAC Beachcroft",
+      "domain": "dacbeachcroft.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.dacbeachcroft.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/dacbeachcroft.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.dacbeachcroft.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/dacbeachcroft.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 26,
+      "firm": "Irwin Mitchell",
+      "domain": "irwinmitchell.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.irwinmitchell.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/irwinmitchell.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.irwinmitchell.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/irwinmitchell.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 27,
+      "firm": "Withers",
+      "domain": "withersworldwide.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.withersworldwide.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/withersworldwide.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.withersworldwide.com/en-gb/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/withersworldwide.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 28,
+      "firm": "Mishcon de Reya",
+      "domain": "mishcon.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.mishcon.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/mishcon.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.mishcon.com/llms.txt",
+        "state": "present",
+        "genuine": true,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/mishcon.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 29,
+      "firm": "Stephenson Harwood",
+      "domain": "shlegal.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://shlegal.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/shlegal.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://shlegal.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/shlegal.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 30,
+      "firm": "HFW (Holman Fenwick Willan)",
+      "domain": "hfw.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.hfw.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/hfw.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.hfw.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/hfw.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 31,
+      "firm": "Travers Smith",
+      "domain": "traverssmith.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.traverssmith.com/robotstxt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/traverssmith.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.traverssmith.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/traverssmith.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 32,
+      "firm": "Watson Farley & Williams",
+      "domain": "wfw.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://wfw.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/wfw.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.wfw.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/wfw.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 33,
+      "firm": "Shoosmiths",
+      "domain": "shoosmiths.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://shoosmiths.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/shoosmiths.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://shoosmiths.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/shoosmiths.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 34,
+      "firm": "Charles Russell Speechlys",
+      "domain": "charlesrussellspeechlys.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.charlesrussellspeechlys.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/charlesrussellspeechlys.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.charlesrussellspeechlys.com/llms.txt/",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/charlesrussellspeechlys.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 35,
+      "firm": "RPC",
+      "domain": "rpclegal.com",
+      "aiSpecificStance": "indeterminate",
+      "aiSpecificNote": "robots.txt could not be read (bot protection or no response), so its stance is unknown.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://rpclegal.com/robots.txt",
+        "state": "unreadable_challenge",
+        "readable": false,
+        "wildcardDisallowsRoot": null,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/rpclegal.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://rpclegal.com/llms.txt",
+        "state": "soft404_html",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/rpclegal.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 36,
+      "firm": "TLT",
+      "domain": "tltsolicitors.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No robots.txt is served (HTTP 404), so no crawler, AI or otherwise, is restricted by it.",
+      "robots": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://tltsolicitors.com/robots.txt",
+        "state": "absent",
+        "readable": false,
+        "wildcardDisallowsRoot": null,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/tltsolicitors.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://tltsolicitors.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/tltsolicitors.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 37,
+      "firm": "Gateley",
+      "domain": "gateleyplc.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://gateleyplc.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/gateleyplc.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://gateleyplc.com/llms.txt",
+        "state": "present",
+        "genuine": true,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/gateleyplc.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 38,
+      "firm": "Mills & Reeve",
+      "domain": "mills-reeve.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.mills-reeve.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/mills-reeve.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.mills-reeve.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/mills-reeve.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 39,
+      "firm": "Trowers & Hamlins",
+      "domain": "trowers.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.trowers.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/trowers.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.trowers.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/trowers.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 40,
+      "firm": "Knights",
+      "domain": "knightsplc.com",
+      "aiSpecificStance": "indeterminate",
+      "aiSpecificNote": "robots.txt could not be read (bot protection or no response), so its stance is unknown.",
+      "robots": {
+        "httpStatus": 0,
+        "effectiveUrl": "https://knightsplc.com/robots.txt",
+        "state": "unreachable",
+        "readable": false,
+        "wildcardDisallowsRoot": null,
+        "fetchedAt": "2026-07-14T11:32:08Z",
+        "rawFile": "raw/knightsplc.com.txt",
+        "error": "curl: (28) Operation timed out after 30005 milliseconds with 0 bytes received"
+      },
+      "llms": {
+        "httpStatus": 502,
+        "effectiveUrl": "https://knightsplc.com/llms.txt",
+        "state": "other_status_502",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:32:08Z",
+        "rawFile": "raw/knightsplc.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "indeterminate",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "indeterminate",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 41,
+      "firm": "Hill Dickinson",
+      "domain": "hilldickinson.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.hilldickinson.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/hilldickinson.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.hilldickinson.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/hilldickinson.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 42,
+      "firm": "Burges Salmon",
+      "domain": "burges-salmon.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://burges-salmon.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/burges-salmon.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://burges-salmon.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/burges-salmon.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 43,
+      "firm": "Stewarts Law",
+      "domain": "stewartslaw.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://stewartslaw.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/stewartslaw.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.stewartslaw.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/stewartslaw.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 44,
+      "firm": "Freeths",
+      "domain": "freeths.co.uk",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://freeths.co.uk/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/freeths.co.uk.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.freeths.co.uk/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/freeths.co.uk.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 45,
+      "firm": "Keoghs",
+      "domain": "keoghs.co.uk",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://keoghs.co.uk/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/keoghs.co.uk.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://keoghs.co.uk/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/keoghs.co.uk.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 46,
+      "firm": "Weightmans",
+      "domain": "weightmans.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.weightmans.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/weightmans.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.weightmans.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/weightmans.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 47,
+      "firm": "Penningtons Manches Cooper",
+      "domain": "penningtonslaw.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.penningtonslaw.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/penningtonslaw.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.penningtonslaw.com/llms.txt",
+        "state": "present",
+        "genuine": true,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/penningtonslaw.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 48,
+      "firm": "Brodies",
+      "domain": "brodies.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://brodies.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/brodies.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://brodies.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/brodies.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 49,
+      "firm": "Foot Anstey",
+      "domain": "footanstey.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.footanstey.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/footanstey.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.footanstey.com/llms.txt/",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/footanstey.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    },
+    {
+      "rank": 50,
+      "firm": "Browne Jacobson",
+      "domain": "brownejacobson.com",
+      "aiSpecificStance": "no_ai_specific_restriction",
+      "aiSpecificNote": "No AI token is named; AI crawlers inherit the same generic rules as every other unnamed crawler.",
+      "robots": {
+        "httpStatus": 200,
+        "effectiveUrl": "https://www.brownejacobson.com/robots.txt",
+        "state": "readable",
+        "readable": true,
+        "wildcardDisallowsRoot": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/brownejacobson.com.txt",
+        "error": null
+      },
+      "llms": {
+        "httpStatus": 404,
+        "effectiveUrl": "https://www.brownejacobson.com/llms.txt",
+        "state": "absent",
+        "genuine": false,
+        "fetchedAt": "2026-07-14T11:28:12Z",
+        "rawFile": "raw/brownejacobson.com.llms.txt",
+        "error": null
+      },
+      "crawlers": {
+        "GPTBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "OAI-SearchBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ChatGPT-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "ClaudeBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Claude-Web": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "anthropic-ai": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "PerplexityBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Perplexity-User": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Google-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Bingbot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "CCBot": {
+          "status": "not_listed",
+          "disallow": []
+        },
+        "Applebot-Extended": {
+          "status": "not_listed",
+          "disallow": []
+        }
+      }
+    }
+  ]
+}

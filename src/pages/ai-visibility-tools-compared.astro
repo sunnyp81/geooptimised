@@ -1,0 +1,253 @@
+---
+import Base from '../layouts/Base.astro';
+import toolsData from '../data/tools.json';
+
+const tools = toolsData.tools;
+const checkedOn = '2026-07-14';
+
+const byId = (slug: string) => tools.find(t => t.slug === slug)!;
+
+// Every dedicated AI-visibility tracker in the ledger, plus suites and content tools
+// carrying an AI-visibility feature. Ordering rule, stated on the page: verified entry
+// price ascending; unpublished or third-party-only prices sort last within their group.
+// Never affiliate rate. See rule 3 of the site's methodology.
+const trackers = ['otterly', 'rankscale', 'nightwatch', 'peec-ai', 'profound'].map(byId);
+const suites = ['ahrefs', 'semrush', 'frase'].map(byId);
+
+// Scrunch and Gumshoe are not in src/data/tools.json (out of scope for this task to add
+// them). Fetched directly by us on checkedOn; carries the same sourcing discipline as
+// the ledger but is not yet folded into it or into who-pays-us.
+const extended = [
+  {
+    name: 'Scrunch',
+    url: 'https://scrunch.com/',
+    entryPrice: '$250/mo (Starter, annual) or $300/mo month-to-month',
+    measures: 'brand mentions, citation analysis, plus an "Agent Experience Platform" serving optimised content to crawlers',
+    affiliate: 'None found on scrunch.com',
+    note: 'Acquired by Sitecore for about $225M, announced 3 June 2026. Formerly scrunchai.com, which now redirects.',
+  },
+  {
+    name: 'Gumshoe.ai',
+    url: 'https://gumshoe.ai/',
+    entryPrice: 'usage-based, $0.10 per model-prompt "conversation"; first 3 report runs free',
+    measures: 'brand mentions across 11 models, plus a "Citation Sources" feature for cited domains',
+    affiliate: 'None found on the homepage or navigation',
+    note: 'Co-authored the SparkToro study on answer instability that this site cites (see below).',
+  },
+];
+
+const title = 'AI visibility tools compared: verified pricing and what each actually measures';
+const description = `Every dedicated AI visibility tracker and every suite add-on we could verify, ${checkedOn}: what each measures, what it costs, and what it pays this site. Currently enrolled in none.`;
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'AI visibility tools compared', item: 'https://geooptimised.com/ai-visibility-tools-compared/' },
+    ],
+  },
+];
+---
+<Base title={title} description={description} schema={schema}>
+  <section class="wrap pt-14 pb-8">
+    <nav aria-label="Breadcrumb" class="data text-[0.7rem] uppercase tracking-widest mb-6" style="color: var(--muted);">
+      <a href="/">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text);">AI visibility tools compared</span>
+    </nav>
+    <h1 class="font-display font-bold text-[2.2rem] sm:text-[2.9rem] leading-[1.08] max-w-[24ch]">
+      AI visibility tools, what each one measures, and what each pays us
+    </h1>
+    <p class="mt-6 max-w-[64ch] text-[1.08rem]" style="color: var(--text-soft);">
+      The full landscape people searching for individual tool names end up piecing together from separate,
+      commission-funded listicles. Here it is in one place: dedicated trackers, SEO suites with an AI-visibility
+      bolt-on, and two tools outside our formal ledger that we verified specifically for this page. We are
+      enrolled in no affiliate programme, so nothing below is ordered to favour anything we earn from.
+    </p>
+    <p class="mt-4 data text-[0.75rem]" style="color: var(--muted);">
+      Checked {checkedOn} &middot; <a class="link" href="/who-pays-us/">full disclosure ledger</a> &middot;
+      <a class="link" href="/tools/">the site's standing tools table</a>
+    </p>
+  </section>
+
+  <section class="wrap pb-12">
+    <div class="border-l-4 pl-6 py-2 max-w-[64ch]" style="border-color: var(--g-unreproduced);">
+      <p class="font-display text-[1.35rem] leading-snug mb-3" style="color: var(--text);">
+        Every one of these tools reports "AI visibility" as a single number. None of them are measuring the same
+        thing when they say it.
+      </p>
+      <p class="text-[0.98rem]" style="color: var(--text-soft);">
+        A brand mention is your name in the text of an answer. A citation is a source link the model drew on to
+        write it. Semrush's own Ghost Citations study found 61.7% of cited pages never got their brand named in
+        the answer text. Treat "brand mentions" and "cited domains" as two columns, not one, in every table
+        below.
+      </p>
+    </div>
+  </section>
+
+  <section class="wrap pb-14">
+    <h2 class="font-display text-[1.6rem] font-bold mb-2">Dedicated AI visibility trackers</h2>
+    <p class="max-w-[64ch] mb-6 text-[0.98rem]" style="color: var(--text-soft);">
+      Ordered by verified entry price, lowest first. Tools with no published price ladder sort last within this
+      group regardless of size or funding.
+    </p>
+    <div class="table-scroll border" style="border-color: var(--line-strong); background: var(--surface);">
+      <table class="ledger-table !my-0">
+        <caption class="sr-only">Dedicated AI visibility trackers: pricing, measurement and payout to this site</caption>
+        <thead>
+          <tr>
+            <th scope="col">Tool</th>
+            <th scope="col">Entry price</th>
+            <th scope="col">Measures</th>
+            <th scope="col">Affiliate programme</th>
+            <th scope="col">Pays us</th>
+          </tr>
+        </thead>
+        <tbody>
+          {trackers.map(t => (
+            <tr>
+              <td class="!font-semibold !text-[0.95rem]" style="color: var(--text);">
+                <a class="link" href={t.url} rel="noopener nofollow">{t.name}</a>
+              </td>
+              <td class="data text-[0.8rem]" style={`color: ${t.pricingProvenance === 'not-published' || t.pricingProvenance === 'third-party' ? 'var(--g-unreproduced)' : 'var(--text-soft)'}`}>
+                {t.entryPrice}
+              </td>
+              <td class="text-[0.82rem]">
+                {t.slug === 'otterly' && 'Brand mentions across engines; separately tracks referenced links'}
+                {t.slug === 'rankscale' && 'Brand mentions, share of voice, and citation frequency by source URL'}
+                {t.slug === 'nightwatch' && 'Brand mentions ("AI Visibility Score") and cited sources ("Active Citations")'}
+                {t.slug === 'peec-ai' && 'Visibility, position and sentiment for mentions; separately lists key cited sources'}
+                {t.slug === 'profound' && 'Large-scale citation dataset (680M+ citations analysed); enterprise-tier reporting'}
+              </td>
+              <td class="data text-[0.78rem]" style="color: var(--muted);">
+                {t.affiliate.hasProgram ? `${t.affiliate.rate}, ${t.affiliate.model}` : t.affiliate.rate === 'none found' ? 'None found' : t.affiliate.rate}
+              </td>
+              <td class="data !font-semibold text-[0.85rem]" style={`color: ${t.ourEnrolment === 'enrolled' ? 'var(--g-unreproduced)' : 'var(--g-verified)'}`}>
+                {t.ourEnrolment === 'enrolled' ? 'YES' : 'NOTHING'}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="wrap pb-14">
+    <h2 class="font-display text-[1.6rem] font-bold mb-2">Two more, verified for this page but outside our ledger</h2>
+    <p class="max-w-[64ch] mb-6 text-[0.98rem]" style="color: var(--text-soft);">
+      Scrunch and Gumshoe.ai are not yet in <span class="data">src/data/tools.json</span>, so they do not appear
+      on <a class="link" href="/who-pays-us/">who pays us</a> or <a class="link" href="/tools/">the standing
+      tools table</a>. We fetched both directly on {checkedOn} to answer this page honestly, and hold them to the
+      same rule: no number without a source and a date.
+    </p>
+    <div class="grid gap-5 lg:grid-cols-2">
+      {extended.map(t => (
+        <article class="border p-5" style="border-color: var(--line); background: var(--surface);">
+          <div class="flex items-start justify-between gap-4 mb-3">
+            <h3 class="font-display text-[1.2rem] font-bold">
+              <a class="link" href={t.url} rel="noopener nofollow">{t.name}</a>
+            </h3>
+            <span class="data text-[0.6rem] uppercase tracking-[0.1em] px-1.5 py-0.5 border shrink-0" style="color: var(--g-verified); border-color: var(--line-strong);">
+              pays us nothing
+            </span>
+          </div>
+          <dl class="grid gap-x-4 gap-y-1.5 text-[0.85rem] mb-3" style="grid-template-columns: max-content 1fr;">
+            <dt class="data text-[0.62rem] uppercase tracking-[0.1em] pt-0.5" style="color: var(--muted);">Price</dt>
+            <dd class="data text-[0.8rem]" style="color: var(--text-soft);">{t.entryPrice}</dd>
+            <dt class="data text-[0.62rem] uppercase tracking-[0.1em] pt-0.5" style="color: var(--muted);">Measures</dt>
+            <dd class="text-[0.82rem]" style="color: var(--text-soft);">{t.measures}</dd>
+            <dt class="data text-[0.62rem] uppercase tracking-[0.1em] pt-0.5" style="color: var(--muted);">Affiliate</dt>
+            <dd class="text-[0.82rem]" style="color: var(--text-soft);">{t.affiliate}</dd>
+          </dl>
+          <p class="text-[0.85rem]" style="color: var(--muted);">{t.note}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="wrap pb-16">
+    <h2 class="font-display text-[1.6rem] font-bold mb-2">Suites with an AI visibility add-on</h2>
+    <p class="max-w-[64ch] mb-6 text-[0.98rem]" style="color: var(--text-soft);">
+      Established SEO and content platforms that bolted AI visibility onto an existing product, rather than
+      building a tracker as the whole business. Ordered by verified entry price, lowest first.
+    </p>
+    <div class="table-scroll border" style="border-color: var(--line-strong); background: var(--surface);">
+      <table class="ledger-table !my-0">
+        <caption class="sr-only">SEO suites with AI visibility add-ons: pricing and payout to this site</caption>
+        <thead>
+          <tr>
+            <th scope="col">Tool</th>
+            <th scope="col">What it is</th>
+            <th scope="col">Affiliate programme</th>
+            <th scope="col">Pays us</th>
+          </tr>
+        </thead>
+        <tbody>
+          {suites.map(t => (
+            <tr>
+              <td class="!font-semibold !text-[0.95rem]" style="color: var(--text);">
+                <a class="link" href={t.url} rel="noopener nofollow">{t.name}</a>
+              </td>
+              <td class="text-[0.85rem]">{t.category}</td>
+              <td class="data text-[0.78rem]" style="color: var(--muted);">
+                {t.affiliate.hasProgram ? `${t.affiliate.rate}, ${t.affiliate.model}` : 'None (Ahrefs closed its programme in 2019)'}
+              </td>
+              <td class="data !font-semibold text-[0.85rem]" style="color: var(--g-verified);">NOTHING</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-[0.85rem]" style="color: var(--muted);">
+      Ahrefs cannot pay any site, ever, and separately publishes some of the largest, most methodologically
+      transparent AI-citation research in this field, including two studies graded on
+      <a class="link" href="/evidence/">the evidence ledger</a>. Notice how rarely it tops a "best AI visibility
+      tools" listicle.
+    </p>
+  </section>
+
+  <section class="prose-wrap pb-24 copy">
+    <div class="rule pt-10">
+      <h2>The ordering rule, stated plainly</h2>
+      <p>
+        Every table on this page is sorted by verified entry price, ascending, within its group. Tools with no
+        published price, or a price we could source only from a third party, sort last within that group. That
+        rule is stated here so you can check it against the tables above: nowhere does a higher-paying affiliate
+        arrangement move a row up. Today that check is trivial, since we are enrolled in no programme at all and
+        every "pays us" cell reads NOTHING. The day that changes, this paragraph and every affected cell change
+        with it, and the change is logged permanently at <a class="link" href="/corrections/">corrections</a>.
+      </p>
+      <h2>Why "brand mentions" and "citations" keep getting conflated</h2>
+      <p>
+        Every tool in the first table blends both into one dashboard, several under a single "visibility" score.
+        The distinction is not academic. Ahrefs found that branded web mentions correlate with Google AI Overview
+        visibility at Spearman 0.664, against 0.218 for backlinks, roughly three times stronger, across a 75,000
+        brand sample. But the same study calls both correlations "moderate to very weak" in absolute terms, a
+        caveat the marketing version of this stat routinely drops. Full grading:
+        <a class="link" href="/evidence/#mentions-beat-backlinks">the evidence ledger</a>.
+      </p>
+      <p>
+        Reddit is a clean example of how badly a blended score can mislead. Profound's 680-million-citation
+        dataset shows Reddit is the top-cited source on Google AI Overviews (2.2%) and Perplexity (6.6%), but
+        second to Wikipedia on ChatGPT, the largest engine, at 1.8%. "Reddit is the most-cited source in AI
+        answers" is true for two engines and false for the one with the most users. Full grading:
+        <a class="link" href="/evidence/#reddit-most-cited">the evidence ledger</a>.
+      </p>
+      <h2>What we would actually do with a budget</h2>
+      <p>
+        Buy the cheapest tool that names its methodology and treat the number it gives you as a weather vane, not
+        a speedometer. Do not buy a second one to "cross-check" the first: Kevin Indig's Consensus Gap study
+        found only 2.37% overlap in cited URLs across ChatGPT, Perplexity and Google AI Overviews, so two trackers
+        covering different engines will disagree by construction, not by error. Full grading:
+        <a class="link" href="/evidence/#consensus-gap">the evidence ledger</a>.
+      </p>
+      <p class="text-[0.9rem]">
+        Narrower comparisons if you have already shortlisted:
+        <a class="link" href="/peec-ai-alternatives/">Peec AI alternatives</a> and
+        <a class="link" href="/otterly-vs-peec-vs-scrunch/">Otterly vs Peec vs Scrunch</a>. Every claim above is
+        graded and sourced in the <a class="link" href="/evidence/">evidence ledger</a>. Our commercial interest
+        in each tool named here is published on <a class="link" href="/who-pays-us/">who pays us</a>.
+      </p>
+    </div>
+  </section>
+</Base>
