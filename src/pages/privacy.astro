@@ -1,0 +1,86 @@
+---
+import Base from '../layouts/Base.astro';
+
+const title = 'Privacy: what this site collects, and why';
+const description = 'GEOoptimised collects Google Analytics data only if you accept the cookie banner, and stores nothing else about you unless you email us. No tracking pixels, no ad networks, no data sold.';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Privacy', item: 'https://geooptimised.com/privacy/' },
+  ],
+};
+---
+<Base title={title} description={description} schema={schema}>
+  <section class="wrap pt-14 pb-8 max-w-[46rem]">
+    <nav aria-label="Breadcrumb" class="data text-[0.7rem] uppercase tracking-widest mb-6" style="color: var(--muted);">
+      <a href="/">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text);">Privacy</span>
+    </nav>
+    <h1 class="font-display font-bold text-[2.2rem] sm:text-[2.9rem] leading-[1.08] max-w-[20ch] mb-6">
+      What this site collects, and why
+    </h1>
+    <p class="text-[1.05rem] mb-4" style="color: var(--text-soft);">
+      This is a short policy because there is not much to collect. GEOoptimised runs no ad network, no
+      tracking pixel from any third party other than the one named below, and does not sell or share data
+      with anyone.
+    </p>
+  </section>
+
+  <section class="prose-wrap pb-16 copy">
+    <div class="rule pt-10">
+      <h2>Analytics</h2>
+      <p>
+        We use Google Analytics 4 to see which pages get read. It does not load until you click "Accept
+        analytics" on the cookie banner shown on your first visit. If you click "Necessary only", or close
+        the banner without choosing, Google Analytics never loads and no analytics cookie is set. You can
+        change your choice at any time by clearing your browser's site data for geooptimised.com and
+        revisiting.
+      </p>
+      <p>
+        When accepted, Google Analytics sets its own cookies and processes standard analytics data (pages
+        viewed, approximate location from IP, device and browser type) under Google's own privacy terms.
+        We do not combine this with any other data source, and we do not use it to identify you personally.
+      </p>
+
+      <h2>Email</h2>
+      <p>
+        If you email <a class="link" href="mailto:hello@geooptimised.com">hello@geooptimised.com</a>, we
+        keep that email to act on it (usually: check a source you sent us and regrade a claim). We do not
+        add your address to a mailing list, and this site does not currently send any newsletter or
+        marketing email.
+      </p>
+
+      <h2>Affiliate links</h2>
+      <p>
+        Some outbound links to tools we review carry an affiliate tag, disclosed per tool on
+        <a class="link" href="/who-pays-us/">who pays us</a>. Clicking one may set a cookie on the vendor's
+        own site, controlled by that vendor, not by us. We do not track which links you click.
+      </p>
+
+      <h2>What we do not do</h2>
+      <ul>
+        <li>No display advertising, and no ad-network tracking scripts.</li>
+        <li>No fingerprinting, no cross-site tracking, no data broker relationships.</li>
+        <li>No account system, so nothing is stored against a login because there is no login.</li>
+      </ul>
+
+      <h2>Your rights</h2>
+      <p>
+        Under UK GDPR you can ask what we hold on you, ask us to correct or delete it, or object to
+        processing. Given the above, in practice that means: any email you sent us, and nothing else. Email
+        <a class="link" href="mailto:hello@geooptimised.com">hello@geooptimised.com</a> to exercise any of
+        these rights.
+      </p>
+
+      <h2>Changes</h2>
+      <p>
+        If this policy changes, the date below changes with it. We do not silently edit past claims about
+        what we collect, the same rule that governs every other claim on this site: see
+        <a class="link" href="/corrections/">corrections</a>.
+      </p>
+      <p class="data text-[0.8rem]" style="color: var(--muted);">Last updated 2026-07-14.</p>
+    </div>
+  </section>
+</Base>

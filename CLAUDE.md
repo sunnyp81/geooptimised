@@ -94,10 +94,25 @@ a markup rewrite. Note `--font-serif` is deliberately mapped to Space Grotesk so
 headings resolve to the display face. Evidence grades are retuned for the dark ground and are **never
 colour-alone**: every badge carries its text label.
 
-## Live routes (11 + 404)
+## Live routes (26 + 404)
 
-`/`, `/evidence/`, `/generative-engine-optimisation/`, `/tools/`, `/who-pays-us/`, `/methodology/`,
-`/corrections/`, `/the-40-percent-claim/`, `/is-geo-a-scam/`, `/about/`, `/contact/`, plus `404.astro`.
+Core: `/`, `/evidence/`, `/generative-engine-optimisation/`, `/tools/`, `/who-pays-us/`, `/methodology/`,
+`/corrections/`, `/the-40-percent-claim/`, `/is-geo-a-scam/`, `/about/`, `/contact/`, `/privacy/`,
+`/the-grounding-clause/`, `/reproduction/`.
+
+Evidence cluster (added 2026-07-14): `/how-to-be-found-in-ai-search/`, `/why-ai-doesnt-mention-your-brand/`,
+`/ai-visibility-explained/`, `/can-you-measure-ai-visibility/`.
+
+Tool comparisons (added 2026-07-14): `/peec-ai-alternatives/`, `/otterly-vs-peec-vs-scrunch/`,
+`/ai-visibility-tools-compared/`.
+
+Sector indices (added 2026-07-14, see "The AI crawler access indices" below): `/uk-law-firms-ai-crawler-index/`,
+`/uk-fintechs-ai-crawler-index/`, `/uk-private-healthcare-ai-crawler-index/`,
+`/uk-accountancy-firms-ai-crawler-index/`, `/ai-crawler-check/` (live per-domain checker, same methodology).
+
+Plus `404.astro`. This list is generated from `src/pages/*.astro`; regenerate with
+`ls src/pages/*.astro | xargs -n1 basename | sed 's/\.astro$//'` rather than hand-maintaining it, since it has
+drifted before.
 
 Twelve old pages are in `_retired/` with 301s in `public/_redirects`. Seven were commercial; five were
 informational but carried unverified claims. **They get rewritten to the evidence standard, never
@@ -154,6 +169,33 @@ that point. It does not change the decision above, and `sourcedbyai` is not bein
 **Duplicate-content hazard:** `sourcedbyai` contains a near-identical article to `/the-grounding-clause/`.
 It is not deployed, so nothing is duplicated today. Both sites must never publish it. If `sourcedbyai` is
 ever launched, that article comes down there first.
+
+## The AI crawler access indices (added 2026-07-14)
+
+A second, unrelated original-data engine, also key-free. For each of four UK sectors, `robots.txt` and
+`llms.txt` are fetched live for a published list of named companies, every raw response archived verbatim,
+and each firm judged `restricts_ai_specifically` / `no_ai_specific_restriction` / `indeterminate` by
+comparing its AI-token rules against its own Googlebot rule in the same file (never inferred when the file
+could not be read, e.g. WAF challenge pages).
+
+Shared logic lives in `src/lib/robots-parse.mjs`, imported by both `scripts/crawler-index-run.mjs` (the
+batch collector behind the four sector datasets) and `functions/api/check.js` (the live single-domain
+Cloudflare Pages Function behind `/ai-crawler-check/`), so a domain checked interactively and the same
+domain in a sector index can never disagree. Regression test: `scripts/check-tool-test.mjs`, asserting known
+verdicts against archived raw files.
+
+Datasets: `src/data/ai-crawler-index.json` (law, N=50), `-fintech.json` (N=30), `-healthcare.json` (N=30),
+`-accountancy.json` (N=50), each with a `firmListSource` field recording the exact published ranking used
+and its fetch date. Raw archives: `src/data/ai-crawler-index/raw*/`.
+
+To refresh a sector or add a new one: `node scripts/crawler-index-run.mjs` against a `{rank, firm, domain}`
+list; do not hand-run the fetch loop again, the script is the canonical implementation.
+
+**Known gap (E-E-A-T audit, 2026-07-14):** `hello@geooptimised.com`, the site's sole correction-intake
+channel, has **no MX records at all** (confirmed via DNS lookup, not just "unverified"). Mail sent to it
+cannot be received. This undermines the site's core promise ("send us a source, we regrade in public").
+`[MANUAL]` Sunny needs to add MX records (Cloudflare Email Routing is the easy path since DNS is already on
+Cloudflare) before this address is trustworthy.
 
 ## Blocked on Sunny
 

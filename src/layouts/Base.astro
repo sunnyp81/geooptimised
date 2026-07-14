@@ -23,6 +23,7 @@ const siteName = 'GEOoptimised';
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonicalUrl} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="theme-color" content="#0A0F1E" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
@@ -43,13 +44,23 @@ const siteName = 'GEOoptimised';
       ? schema.map(s => <script type="application/ld+json" set:html={JSON.stringify(s)} />)
       : <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   )}
-    <!-- GA4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8XDLBZ372Q"></script>
+    <!-- GA4, consent-gated: loaded only after an explicit accept via the banner below. See /privacy/. -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-8XDLBZ372Q');
+      window.__loadAnalytics = function () {
+        if (window.__analyticsLoaded) return;
+        window.__analyticsLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-8XDLBZ372Q';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-8XDLBZ372Q');
+      };
+      if (localStorage.getItem('cookie-consent') === 'accepted') {
+        window.__loadAnalytics();
+      }
     </script>
   </head>
 <body>
@@ -58,6 +69,36 @@ const siteName = 'GEOoptimised';
   <main id="main">
     <slot />
   </main>
+  <div id="cookie-banner" hidden class="fixed inset-x-0 bottom-0 z-50 border-t" style="border-color: var(--line-strong); background: var(--bg-2);">
+    <div class="wrap py-4 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+      <p class="text-[0.85rem] max-w-[52ch]" style="color: var(--text-soft);">
+        We use Google Analytics to see which pages get read. It only runs if you accept.
+        <a class="link" href="/privacy/">Privacy</a>.
+      </p>
+      <div class="flex gap-3 shrink-0">
+        <button id="cookie-reject" class="btn btn-ghost text-[0.85rem]">Necessary only</button>
+        <button id="cookie-accept" class="btn btn-primary text-[0.85rem]">Accept analytics</button>
+      </div>
+    </div>
+  </div>
+  <script is:inline>
+    (function () {
+      var choice = localStorage.getItem('cookie-consent');
+      var banner = document.getElementById('cookie-banner');
+      if (!choice && banner) {
+        banner.hidden = false;
+        document.getElementById('cookie-accept').addEventListener('click', function () {
+          localStorage.setItem('cookie-consent', 'accepted');
+          banner.hidden = true;
+          window.__loadAnalytics();
+        });
+        document.getElementById('cookie-reject').addEventListener('click', function () {
+          localStorage.setItem('cookie-consent', 'rejected');
+          banner.hidden = true;
+        });
+      }
+    })();
+  </script>
   <Footer />
 
   <script>
