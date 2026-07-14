@@ -1,0 +1,269 @@
+---
+import Base from '../layouts/Base.astro';
+import indexData from '../data/ai-crawler-index.json';
+
+const AGENTS = indexData.agentsChecked as string[];
+
+const title = 'Does your site block AI crawlers? Free instant checker';
+const description = 'Enter a domain and we fetch its robots.txt and llms.txt live, right now, and tell you exactly what each of the 12 major AI crawler tokens is allowed to do, judged against the same benchmark used in our sector indices: the site\'s own Googlebot rule.';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'AI crawler check', item: 'https://geooptimised.com/ai-crawler-check/' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'AI Crawler Check',
+    applicationCategory: 'UtilitiesApplication',
+    operatingSystem: 'Any (browser-based)',
+    url: 'https://geooptimised.com/ai-crawler-check/',
+    description,
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'GBP' },
+    isAccessibleForFree: true,
+  },
+];
+---
+<Base title={title} description={description} schema={schema}>
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid" aria-hidden="true"></div>
+    <div class="absolute inset-0 hero-fade" aria-hidden="true"></div>
+    <div class="wrap relative pt-14 pb-12">
+      <nav aria-label="Breadcrumb" class="eyebrow mb-6">
+        <a href="/">Home</a> <span aria-hidden="true">/</span> AI crawler check
+      </nav>
+      <p class="eyebrow mb-5">Free tool &middot; no signup &middot; live fetch</p>
+
+      <h1 class="font-display font-bold text-[2.2rem] leading-[1.07] sm:text-[3rem] max-w-[24ch] grad-text">
+        Does your site block AI crawlers?
+      </h1>
+
+      <p class="mt-7 max-w-[62ch] text-[1.1rem]" style="color: var(--text-soft);">
+        Enter a domain. We fetch its <code>robots.txt</code> and <code>llms.txt</code> live, the same way we
+        fetched them for every firm in our <a class="link" href="/uk-law-firms-ai-crawler-index/">sector
+        indices</a>, and check the same {AGENTS.length} AI crawler tokens against the same benchmark: whether the
+        file holds any of them to stricter rules than it gives Googlebot. Nothing is stored.
+      </p>
+
+      <form id="check-form" class="mt-10 flex flex-col sm:flex-row gap-3 max-w-[38rem]" autocomplete="off">
+        <label for="domain-input" class="sr-only">Domain</label>
+        <input
+          id="domain-input"
+          name="domain"
+          type="text"
+          inputmode="url"
+          placeholder="example.com"
+          required
+          class="flex-1 px-4 py-3 data text-[0.95rem]"
+          style="background: var(--surface); border: 1px solid var(--line-strong); color: var(--text); border-radius: 4px;"
+        />
+        <button type="submit" class="btn-primary" id="check-submit">Check crawler access</button>
+      </form>
+      <p id="check-hint" class="mt-3 data text-[0.72rem]" style="color: var(--muted);">
+        Plain domain only, for example <code>example.com</code>. No scheme, path or port.
+      </p>
+    </div>
+  </section>
+
+  <!-- Result -->
+  <section class="wrap pb-4">
+    <div id="result-wrap" hidden>
+      <div class="rule pt-10"></div>
+    </div>
+  </section>
+
+  <!-- What this checks / cannot tell you -->
+  <section class="prose-wrap py-12 copy">
+    <div class="rule pt-10">
+      <h2>What this checks, and what it cannot tell you</h2>
+      <p>
+        This tool reads exactly two files, live, at the moment you press the button: <code>/robots.txt</code>
+        and <code>/llms.txt</code>. It parses <code>robots.txt</code> with standard user-agent grouping (RFC
+        9309) and derives one judgement, <strong>AI-specific stance</strong>, by comparing each of the
+        {AGENTS.length} AI tokens' effective rules against the same file's effective rules for Googlebot. A
+        token is only marked as an AI-specific restriction when it is fully disallowed while Googlebot is not
+        equally disallowed in the same file. That is the whole methodology, and it is the same code
+        (<code>src/lib/robots-parse.mjs</code>) that produced our <a class="link" href="/uk-law-firms-ai-crawler-index/">four
+        sector indices</a>, so a domain checked here and a domain in an index can never disagree.
+      </p>
+      <ul>
+        <li><strong>robots.txt is a request, not enforcement.</strong> A crawler operator may honour it or ignore
+          it. Nothing here measures whether a crawler actually complied, only what the file asked for.</li>
+        <li><strong>Naming a token is not restricting it.</strong> Most sites that name an AI crawler give it
+          <code>Allow: /</code>, explicit permission, not a limit. Read the per-token status, not just whether a
+          row exists.</li>
+        <li><strong>Per-token precision matters.</strong> GPTBot (training) and OAI-SearchBot (ChatGPT search) are
+          different decisions in the same file; blocking one says nothing about the other. The same split applies
+          to ClaudeBot vs Claude-Web/anthropic-ai, and PerplexityBot vs Perplexity-User.</li>
+        <li><strong>A block does not erase existing knowledge.</strong> Models retain what they were trained on
+          before a rule existed. This tool cannot tell you whether a domain is "in" any model, only what its
+          files currently request.</li>
+        <li><strong>Bot protection can look like a block but is not one.</strong> A WAF challenge page
+          (Cloudflare, Vercel, Azure) served instead of the real file is reported as "unreadable, stance
+          unknown", never parsed as if it were a policy.</li>
+        <li><strong>This is a single snapshot.</strong> Files change. Refetch any time; nothing is cached beyond
+          a short edge cache to keep the tool responsive under repeat load.</li>
+      </ul>
+      <p>
+        For the full write-up of every rule in the table, including what GPTBot, OAI-SearchBot, ChatGPT-User,
+        ClaudeBot, Claude-Web, anthropic-ai, PerplexityBot, Perplexity-User, Google-Extended, Bingbot, CCBot and
+        Applebot-Extended each actually control, see "what a block actually prevents" on the
+        <a class="link" href="/uk-law-firms-ai-crawler-index/">law firms index</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sector indices -->
+  <section class="wrap pb-4">
+    <div class="rule pt-10 card p-5">
+      <h3 class="font-display text-[1.05rem] font-semibold mb-2">The same methodology, run at scale</h3>
+      <p class="text-[0.9rem]" style="color: var(--text-soft);">
+        This tool checks one domain at a time. We have already run the identical fetch-and-parse across four UK
+        sectors: <a class="link" href="/uk-law-firms-ai-crawler-index/">law firms</a>,
+        <a class="link" href="/uk-fintechs-ai-crawler-index/">fintech companies</a>,
+        <a class="link" href="/uk-private-healthcare-ai-crawler-index/">private healthcare providers</a> and
+        <a class="link" href="/uk-accountancy-firms-ai-crawler-index/">accountancy firms</a>, with every raw
+        response retained.
+      </p>
+    </div>
+  </section>
+
+  <script type="application/json" id="agents-data" set:html={JSON.stringify(AGENTS)}></script>
+
+  <script is:inline>
+    (function () {
+      const AGENTS = JSON.parse(document.getElementById('agents-data').textContent);
+
+      const form = document.getElementById('check-form');
+      const input = document.getElementById('domain-input');
+      const submitBtn = document.getElementById('check-submit');
+      const hint = document.getElementById('check-hint');
+      const resultWrap = document.getElementById('result-wrap');
+
+      const cellMap = {
+        allowed:       { label: 'allow', tone: '--g-verified',     title: 'The token is named and not disallowed.' },
+        blocked:       { label: 'block', tone: '--g-refuted',      title: 'The token is named with Disallow: / and no Allow override: a full block request.' },
+        partial:       { label: 'part',  tone: '--g-unreproduced', title: 'The token is named with some paths disallowed, or an allowlist.' },
+        not_listed:    { label: 'n/m',   tone: '--muted',          title: 'Not mentioned. The token does not appear in this robots.txt. This is not a block.' },
+        indeterminate: { label: 'n/a',   tone: '--muted',          title: 'The file could not be read, so this token\'s stance is unknown.' },
+      };
+
+      const robotsStateMap = {
+        readable:                  { label: 'Readable', tone: '--g-verified', desc: 'robots.txt was fetched and genuinely parseable.' },
+        absent:                    { label: 'No file (404)', tone: '--muted', desc: 'No robots.txt at all. By default, this means all crawlers are unrestricted: nothing is asking them to stay away from anything.' },
+        blocked_by_bot_protection: { label: 'Unreadable: bot protection', tone: '--g-refuted', desc: 'The request was answered by a WAF/bot-protection challenge page (Cloudflare, Vercel, Azure, Incapsula), not a real robots.txt. Stance unknown, not a block.' },
+        unreachable:               { label: 'Unreachable', tone: '--g-refuted', desc: 'The domain did not respond. Check the domain is correct and the site is live.' },
+        other_status_502:         { label: 'Server error', tone: '--g-refuted', desc: 'The host returned a server error while serving this file.' },
+      };
+
+      const llmsStateMap = {
+        present:                   { label: 'Present, genuine', tone: '--g-verified', desc: 'A genuine llms.txt (plain text/markdown) was served.' },
+        absent:                    { label: 'No file (404)', tone: '--muted', desc: 'No llms.txt.' },
+        soft404_html:              { label: 'Fake: HTML soft-404', tone: '--g-unreproduced', desc: 'HTTP 200, but the body is an ordinary HTML page, not a genuine llms.txt. Many sites accidentally serve this.' },
+        blocked_by_bot_protection: { label: 'Unreadable: bot protection', tone: '--g-refuted', desc: 'A WAF challenge answered instead of the file.' },
+        unreachable:               { label: 'Unreachable', tone: '--g-refuted', desc: 'The domain did not respond.' },
+        other_status_502:         { label: 'Server error', tone: '--g-refuted', desc: 'The host returned a server error.' },
+        empty_200:                 { label: 'Empty file', tone: '--muted', desc: 'HTTP 200 with an empty body.' },
+      };
+
+      const stanceMap = {
+        restricts_ai_specifically: { label: 'Restricts AI specifically', tone: '--g-refuted' },
+        no_ai_specific_restriction: { label: 'No AI-specific restriction', tone: '--g-verified' },
+        indeterminate: { label: 'Indeterminate', tone: '--g-unreproduced' },
+      };
+
+      function escapeHtml(s) {
+        return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+      }
+
+      function render(state) {
+        resultWrap.hidden = false;
+        const inner = resultWrap.querySelector('.rule');
+
+        if (state.loading) {
+          inner.innerHTML = '<p class="data" style="color: var(--muted);">Fetching robots.txt and llms.txt for ' + escapeHtml(state.domain) + ' …</p>';
+          return;
+        }
+        if (state.error) {
+          inner.innerHTML = '<div class="card p-6"><p style="color: var(--g-refuted);">' + escapeHtml(state.error) + '</p></div>';
+          return;
+        }
+
+        const d = state.data;
+        const rs = robotsStateMap[d.robots.state] || { label: d.robots.state, tone: '--muted', desc: '' };
+        const ls = llmsStateMap[d.llms.state] || { label: d.llms.state, tone: '--muted', desc: '' };
+        const st = stanceMap[d.aiSpecificStance] || { label: d.aiSpecificStance, tone: '--muted' };
+
+        let html = '';
+        html += '<h2 class="font-display text-[1.6rem] font-bold mb-1">Results for <span class="data">' + escapeHtml(d.domain) + '</span></h2>';
+        html += '<p class="data text-[0.72rem] mb-6" style="color: var(--muted);">Fetched just now &middot; ' + AGENTS.length + ' AI tokens checked</p>';
+
+        html += '<div class="grid gap-4 sm:grid-cols-3 mb-8">';
+        html += '<div class="card p-5"><p class="data text-[0.62rem] uppercase tracking-[0.14em] mb-2" style="color: var(--muted);">robots.txt</p>' +
+          '<p class="font-display text-[1.15rem] font-semibold" style="color: var(' + rs.tone + ');">' + rs.label + '</p>' +
+          '<p class="mt-2 text-[0.85rem]" style="color: var(--text-soft);">' + rs.desc + '</p></div>';
+        html += '<div class="card p-5"><p class="data text-[0.62rem] uppercase tracking-[0.14em] mb-2" style="color: var(--muted);">AI-specific stance</p>' +
+          '<p class="font-display text-[1.15rem] font-semibold" style="color: var(' + st.tone + ');">' + st.label + '</p>' +
+          '<p class="mt-2 text-[0.85rem]" style="color: var(--text-soft);">' + escapeHtml(d.aiSpecificNote) + '</p></div>';
+        html += '<div class="card p-5"><p class="data text-[0.62rem] uppercase tracking-[0.14em] mb-2" style="color: var(--muted);">llms.txt</p>' +
+          '<p class="font-display text-[1.15rem] font-semibold" style="color: var(' + ls.tone + ');">' + ls.label + '</p>' +
+          '<p class="mt-2 text-[0.85rem]" style="color: var(--text-soft);">' + ls.desc + '</p></div>';
+        html += '</div>';
+
+        if (d.robots.readable) {
+          html += '<div class="table-scroll card mb-6"><table class="ledger-table !my-0 text-[0.82rem]">' +
+            '<caption class="sr-only">Per-AI-token robots.txt status for ' + escapeHtml(d.domain) + '</caption>' +
+            '<thead><tr><th scope="col">AI user-agent</th><th scope="col">Status</th></tr></thead><tbody>';
+          for (const a of AGENTS) {
+            const c = d.crawlers[a] || { status: 'not_listed' };
+            const cm = cellMap[c.status] || cellMap.not_listed;
+            html += '<tr><td class="data !text-[0.85rem]" style="color: var(--text);">' + escapeHtml(a) + '</td>' +
+              '<td><span class="data text-[0.7rem] font-semibold uppercase tracking-wide" style="color: var(' + cm.tone + ');" title="' + escapeHtml(cm.title) + '">' + cm.label + (c.disallow && c.disallow.length ? ' &middot; ' + escapeHtml(c.disallow.join(', ')) : '') + '</span></td></tr>';
+          }
+          html += '</tbody></table></div>';
+        } else {
+          html += '<div class="card p-5 mb-6"><p style="color: var(--text-soft);">robots.txt could not be read (' + escapeHtml(rs.label) + '), so per-token status is unknown for every AI crawler, not just some.</p></div>';
+        }
+
+        html += '<p class="data text-[0.7rem]" style="color: var(--muted);">' +
+          'HTTP ' + d.robots.httpStatus + ' on robots.txt' + (d.robots.effectiveUrl && d.robots.effectiveUrl !== ('https://' + d.domain + '/robots.txt') ? ' (redirected to ' + escapeHtml(d.robots.effectiveUrl) + ')' : '') +
+          ' &middot; HTTP ' + d.llms.httpStatus + ' on llms.txt' +
+          (d.robots.truncated ? ' &middot; robots.txt truncated at 512KB' : '') +
+          '</p>';
+
+        inner.innerHTML = html;
+      }
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const raw = input.value.trim();
+        if (!raw) return;
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Checking…';
+        render({ loading: true, domain: raw });
+
+        try {
+          const res = await fetch('/api/check?domain=' + encodeURIComponent(raw), { method: 'GET' });
+          const data = await res.json();
+          if (!res.ok) {
+            render({ error: data && data.message ? data.message : 'Could not check that domain. Enter a plain domain such as example.com.' });
+          } else {
+            render({ data });
+          }
+        } catch (err) {
+          render({ error: 'The check failed to run. Try again in a moment.' });
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Check crawler access';
+        }
+      });
+    })();
+  </script>
+</Base>
