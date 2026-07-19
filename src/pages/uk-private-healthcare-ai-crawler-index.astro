@@ -68,8 +68,8 @@ const llmsStateMap: Record<string, { label: string; tone: string; title: string 
   empty_200:                 { label: 'empty',tone: '--muted',          title: 'HTTP 200 with an empty body.' },
 };
 
-const title = `UK private healthcare providers AI crawler access index: what ${N} robots.txt files actually say`;
-const description = `We fetched robots.txt and llms.txt for ${N} UK private healthcare providers on ${fetchedOn}. ${silentOnAI.length} of ${readable.length} readable files name no AI crawler at all. ${aiSpecific.length} of ${N} holds an AI crawler to stricter rules than it gives Googlebot. ${llmsPresent.length} publish a genuine llms.txt. Raw responses saved for every provider.`;
+const title = `UK healthcare AI crawler index: ${N} robots.txt checked`;
+const description = `${N} UK healthcare firms: robots.txt analysis of AI crawler rules. ${silentOnAI.length} of ${readable.length} say nothing about AI. Raw data included.`;
 
 const schema = [
   {
