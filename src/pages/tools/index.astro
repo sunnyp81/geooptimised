@@ -7,8 +7,8 @@ const noPrice = tools.filter(t => t.pricingProvenance === 'not-published' || t.e
 const trackers = tools.filter(t => t.category.includes('tracker'));
 const others = tools.filter(t => !t.category.includes('tracker'));
 
-const title = 'AI visibility tools: verified pricing, and what each pays us';
-const description = `Pricing and affiliate terms for ${tools.length} AI search and SEO tools, with the provenance of every fact. ${noPrice.length} of them publish no price at all.`;
+const title = 'AI visibility tools: pricing and affiliate terms';
+const description = `Compare ${tools.length} AI visibility tools: real pricing, affiliate rates, and transparency. Nightwatch, Gumshoe, Profound reviewed. Which pay us, which don't.`;
 
 const schema = [
   {
