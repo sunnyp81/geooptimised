@@ -506,6 +506,11 @@ const schema = [
         <li>We checked {AGENTS.length} named AI tokens. Other agents exist (for example Amazonbot, Bytespider, meta-externalagent, which appear in some of these files); they are out of scope and not counted.</li>
       </ul>
 
+      <h3>Why this index matters for competitive positioning</h3>
+      <p>
+        Law firm brand visibility in AI assistants is increasingly a client acquisition and business development channel. When in-house counsel, procurement teams, or prospective clients query ChatGPT or Perplexity for firm recommendations, recommendations, or case law analysis, firms that appear in those results gain an advantage over competitors who do not. This index reveals that {N - aiSpecific.length} of the top {N} law firms by revenue are either not restricting AI access at all, or are doing so generically alongside other crawlers. Only {aiSpecific.length} enforce AI-specific restrictions. For firms competing on thought leadership and visibility, this means most market leaders remain indexed and citable. A firm that restricts AI crawlers while all its peers remain visible is potentially disadvantaging itself, while a firm that remains citable while competitors block gains a structural advantage. The most credible law firms (those featured in Legal500, Chambers, The Lawyer) are already cited by AI systems regardless of robots.txt, because those rankings are licensed data sources. The real risk for mid-market and smaller firms is invisibility, not over-citation. This index is a tool for assessing your own competitive positioning: if you are not in the top {N} by revenue but aspire to be visible to AI-driven searches, audit your third-party presence before you audit your robots.txt.
+      </p>
+
       <p>
         The dataset behind this page is public: <code>src/data/ai-crawler-index.json</code> plus one raw file per
         firm. Anyone can refetch a domain and check our reading against the saved response. If a firm's file has
