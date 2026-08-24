@@ -192,6 +192,32 @@ const Row = 'tr';
         Tools vary wildly in their stability across runs. Nightwatch publishes confidence intervals on every citation count, acknowledging that the number moves with the same prompt across different days. Profound offers a single blended score with no interval and no run-to-run variance, which is either remarkable stability or remarkable opacity. Gumshoe samples hundreds of queries; Peec samples far fewer. The cost difference is meaningful: Profound costs more than Nightwatch but offers less transparency. This creates a perverse incentive structure: the more expensive your tool, the less likely it is to tell you its methodology. When evaluating a tool, the published interval (if any) is more honest than the point estimate. A tool that says "you have 47% citation share ±8%, across 20 runs" is admitting uncertainty. One that says "you have 51% citation share" is either lying or measuring something different each time without telling you.
       </p>
 
+      <h2>Contract terms and hidden costs nobody discloses upfront</h2>
+      <p>
+        Tool vendors publish pricing on their landing pages, but the actual cost of a contract contains terms that are never mentioned until you talk to sales. Understanding these before you talk to a vendor puts you in a much stronger negotiating position.
+      </p>
+      <p>
+        Minimum contract length is the first hidden variable. Entry-level tools like Peec AI and Rankscale operate month-to-month with no minimums. Mid-tier tools like Gumshoe and Nightwatch typically require three to six month commitments, with annual contracts at a 15 to 20 per cent discount. Premium vendors like Profound require minimum two-year contracts, sometimes with minimum monthly spend floors. If a vendor will not quote you for three months or less, they are not confident you will stick around at renewal—a bad signal about the product.
+      </p>
+      <p>
+        Overage fees are the second trap. A tool quoting £299 monthly for "unlimited keywords" will fine-print that "unlimited" means up to 500 tracked keywords, and 501 to 1,000 keywords cost an extra 50 per cent per month. A tool saying "daily updates" might mean weekdays only, with weekend data lagging by 24 hours. Read the terms carefully. Many vendors design pricing to make the headline number look cheap, then penalise you when you use features the vendor assumed you would not.
+      </p>
+      <p>
+        Renewal price escalation is a third hidden cost. A vendor might quote £299 in year one and 115 per cent of year-one renewal price (£344) in year two, regardless of your usage. By year three, that £299/month price has become £395 or more purely through escalation clauses in the contract. On a three-year contract, ask the vendor upfront: is renewal pricing locked to the year-one price, or does it escalate? If it escalates, what is the escalation percentage and can it be capped? A vendor that will not commit to a cap is hiding their true cost.
+      </p>
+      <p>
+        Refund and cancellation policies rarely appear in published terms. A vendor offering a 30-day free trial might legally have the right to charge you immediately when the trial ends even if you did not explicitly accept a paid subscription (the "negative option" problem). Check whether there is a money-back guarantee if you are unsatisfied within the first 30 days. Most SaaS vendors offer none—payment is non-refundable once the month begins, even if you cancel on day two. This is legal and standard, but knowing it ahead of time changes how you evaluate the product. A tool offering 30-day money-back guarantee is so confident it is useful that it can afford to refund you. A tool offering none is less confident.
+      </p>
+      <p>
+        Data export and portability are contractual questions most teams forget to ask. If you decide to switch vendors in month six, can you export your historical data? Many tools make data export require a separate data-export fee (50 to 200 per cent of monthly price), or they limit what you can export (summary statistics only, not raw prompts and responses). If you think you might switch vendors, understand the switching cost up front. A vendor that charges £100 to export a year of data is discouraging you from leaving. A vendor that includes free, easy data export is secure enough in their product to assume you will come back.
+      </p>
+      <p>
+        Seat licenses are often not what they seem. A vendor quoting "£299 per seat per month" might mean five people can view the tool dashboard. But "editing saved searches" might require a higher tier seat at £399/month, and running custom analysis might require a £499/month "analyst" seat. If you need five people to view dashboards, three people to run custom queries, and one person to manage integrations, you are paying 5 × £299 + 3 × £399 + 1 × £499 = £2,916/month, not £299. Ask vendors to spell out what tier each role requires and whether you can mix seat types.
+      </p>
+      <p>
+        Finally, API pricing and integration costs are almost never included in the headline. A vendor charging £299/month for the tool might charge an additional £100 to £200 monthly (or one-time £500 to £1,000 setup) to enable API access so you can connect their data to your own reporting systems. If you need to integrate their output into Salesforce, Tableau, or Looker, there are often additional fees. Budget for these separately and negotiate them into the contract. A vendor that builds API access into the base plan is saving you money; a vendor that adds it as a line item is extracting more revenue from you than the headline price suggests.
+      </p>
+
       <h2>Pricing transparency and what to actually expect to pay</h2>
       <p>
         The most critical missing data in the AI visibility market is pricing. Of the {noPrice.length} tools listed here, {noPrice.length} do not publish entry-level pricing anywhere on their website. Profound, the billion-dollar market leader, publishes nothing. Peec AI's lowest-tier pricing appears only on aggregator sites like Capterra and G2 reviews, not on their own domain, which means you cannot verify it without leaving Peec's site and trusting a third party. When a category leader hides pricing, it sends a signal: custom sales conversations, minimum annual commitments, and enterprise-only tiers. This is not necessarily bad—it reflects their customer base—but it means a small business or startup will not get a price quote without weeks of sales cycles.
