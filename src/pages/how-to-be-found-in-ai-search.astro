@@ -201,6 +201,40 @@ const schema = [
         </>
       ))}
 
+      <h2>Measuring and validating results: how to know if it is working</h2>
+      <p>
+        The honest signal that your brand is being cited in AI is not a tool dashboard. It is referrer traffic. If your
+        analytics platform can parse HTTP referer headers, you can see exact traffic from ChatGPT, Perplexity, and Google AI
+        Overviews with zero tool cost. A brand seeing zero referrals this month and fifty next month has objectively become
+        more visible in AI answers. A brand whose tool dashboard shows "citation share improved from 8% to 12%" while referrer
+        traffic remains at zero or two per week is looking at noise. Tools measure citation share by sampling prompts; those
+        samples are small and volatile. Referrer logs measure actual human traffic. One is stochastic, the other is behaviour.
+        After implementing any of the tactics above—publication placement, community participation, Wikipedia inclusion—measure
+        by running the same five queries weekly in ChatGPT and Perplexity for a month. Record which ones name your brand. This is
+        free, repeatable, and gives you a baseline. Then, after six weeks of sustained visibility work, re-run those queries and
+        compare. If you moved from zero mentions to two or three, something moved. If you stayed at zero, your brand is not in the
+        retrieval surface yet, or the sources you targeted are not weighted heavily. The six-week window matters: citing you takes
+        four to six weeks after you appear in a publication, because AI models do not retrain continuously. Too short a window and
+        you measure too early; too long and you cannot isolate which tactic moved the needle. The manual method is primitive, but
+        it is also honest: you are measuring what you care about (your brand appearing in an AI answer) without the noise floor of
+        statistical estimation.
+      </p>
+      <p>
+        For larger organisations tracking this continuously, the implementation approach is straightforward. Add a UTM parameter
+        or parse referer headers in your analytics platform (GA4 with server-side tracking, Mixpanel, Amplitude, or custom logs)
+        to capture traffic sourced from ChatGPT, Perplexity and Google AI Overviews separately. Monitor weekly. A brand that moves
+        from zero to ten to fifty weekly referrals from Perplexity over three months is compounding visibility and should maintain
+        the tactics that drove it. A brand stuck at two to three referrals weekly despite months of effort has hit a ceiling: either
+        the sources you are targeting are too low-authority for AI systems to weight them heavily, or the visibility work needs to
+        shift to higher-signal channels. Ahrefs found web mentions (citations across the web, not backlinks) predict AI citation at
+        0.664 Spearman correlation. If your brand has fifty web mentions across relevant sources but zero AI referral traffic,
+        something is broken—likely that the sources are not being crawled or are behind authentication. If your brand has five hundred
+        web mentions and still zero referral traffic, the problem may be entity resolution: the models have not learned that your
+        brand name and your entity are the same thing. Wikipedia inclusion solves this faster than anything else because models
+        train directly on Wikipedia and learn entity equivalence there. The measurement framework matters because without it, tool
+        dashboards become the source of truth, and tool dashboards move because of randomness, not because of your work.
+      </p>
+
       <h2>Minimum viable spend: starting with less than £200 monthly</h2>
       <p>
         The most expensive error is waiting until you have a big budget to start. A brand with £100 monthly to allocate can move the needle faster than a brand with £5,000 that allocates it to tools instead of the work that creates citations. The minimum viable spend breaks down this way: £20/month to monitor one industry subreddit where your target audience hangs out (/r/litigationpractice for legal tech, /r/accountancy for finance, /r/health for health startups) via Reddit Pro. £50/month on a publication syndication service like Hone or Substack Pro, which puts one founder essay per month into 30-50 publications at no additional effort beyond writing. £20/month on a Crunchbase or LinkedIn Premium upgrade to stay on top of analyst reports and ensure your company data is up to date (AI crawlers index these). That is £90 monthly. Spend the remaining £10 as a contingency buffer. You will not see dramatic citation movement from this spend level because you are operating at the margin of attention. What you will see is consistency: if you appear in five Reddit discussions monthly discussing your category, you will gradually build presence in those communities where AI systems look. If you have one essay syndicated monthly, you accumulate a backlog of attributed content that builds your web mentions. Within three months, this compounds enough that analytical tools (if you run them) will show movement. Within six months, it is measurable. The key is that £90 buys you no tool at all and no consultant fees; it buys you infrastructure (platforms that distribute your work) plus monitoring (Reddit to stay attuned to what your audience cares about). The work itself—writing the essay, answering the subreddit questions, updating company data—is unpaid. This only works if you have unfunded time. For a bootstrapped founder, that is true. For a marketing team at an agency working on client retainers, it is not, which is why most agencies cannot execute this playbook and default to buying tools instead.

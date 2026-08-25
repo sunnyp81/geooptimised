@@ -534,6 +534,33 @@ const schema = [
         <a class="link" href="/methodology/">how we grade</a> and the <a class="link" href="/reproduction/">reproduction study</a>.
       </p>
 
+      <h3>Competitive positioning: the structural advantage of not restricting AI</h3>
+      <p>
+        Among the top {N} law firms by revenue, {N - aiSpecific.length} either permit AI crawlers or are silent on them,
+        while only {aiSpecific.length} impose AI-specific blocks. This asymmetry creates a measurable competitive dynamic
+        that most firms overlook. Assuming all firms are equally visible in third-party sources (Chambers, Legal500), the
+        {N - aiSpecific.length} unrestricted firms gain a disproportionate share of referrals from ChatGPT, Perplexity and
+        Google AI Overviews simply by virtue of being crawlable. A prospective client asking ChatGPT "recommend corporate law
+        firms for cross-border M&A" will see citation links from the firms that permit GPTBot and OAI-SearchBot, not from those
+        that block them. If two firms are equally featured in Chambers & Partners, the one with a readable robots.txt receives
+        more AI-driven inquiries. That is not a technical victory—both firms are licensed data sources—but an operational one.
+        For firms that have not yet achieved Chambers inclusion, the calculation is different. Being blocked or unrestricted
+        matters only if you would have been cited anyway. If you are invisible in AI because you lack third-party coverage, your
+        robots.txt is irrelevant. The visibility problem is editorial, not technical.
+      </p>
+      <p>
+        The strategic implication for mid-market firms is that permitting AI crawlers costs nothing and may have modest upside.
+        The risk is real but quantifiable: if a firm publishes legal analysis or case commentary on its website and has not
+        secured it in third-party publications first, blocking GPTBot prevents direct theft of that analysis by AI models. But
+        the analysis was already not being cited if it was not published in a licensed source. A firm that writes original research
+        and publishes it in Legal Cheek, Law.com or a legal journal first, then republishes it on the firm website, loses nothing
+        by permitting crawlers—the journal citation takes precedence in AI training. The firm publishing the same analysis only on
+        its website is invisible in AI regardless of its robots.txt stance. The cost of blocking is lost referral traffic; the
+        benefit is protection against a threat (direct model training) that only matters if the content was worth stealing in the first
+        place. Most firm websites contain templated service descriptions, not unique analysis. Blocking GPTBot for templated content
+        is security theatre.
+      </p>
+
       <h3>Regional variations: London and regional firms see different AI visibility patterns</h3>
       <p>
         The data shows a geographical pattern that deserves attention. London-based magic circle and elite firms (those in the top 20 by revenue) achieve higher AI citation rates because they benefit from cumulative coverage in Legal500, Chambers & Partners, The Lawyer, and international legal databases. These firms are cited not because of their robots.txt policies, but because AI systems have licensed access to directories that automatically include them. Regional mid-market and boutique firms face a different visibility challenge: they may be ranked by revenue but overlooked by the publications that train AI systems. A top-100 regional employment law firm might rank highly in Chambers Associates regionally, but that does not guarantee citation in ChatGPT if Chambers' training data in the model is weighted toward national firms. For regional firms competing against London peers, the visibility block is not technical—it is editorial. Building relationships with legal editors at practice-area-specific publications (Legal Cheek for employment law, Construction Law Journal for construction specialists, Pensions Aspects for pension law specialists) is more valuable than any robots.txt strategy.
