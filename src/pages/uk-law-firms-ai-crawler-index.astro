@@ -539,19 +539,12 @@ const schema = [
         <a class="link" href="/methodology/">how we grade</a> and the <a class="link" href="/reproduction/">reproduction study</a>.
       </p>
 
-      <h3>Competitive positioning: the structural advantage of not restricting AI</h3>
+      <h3>If your firm is restricting AI crawlers: the cost of changing your policy</h3>
       <p>
-        Among the top {N} law firms by revenue, {N - aiSpecific.length} either permit AI crawlers or are silent on them,
-        while only {aiSpecific.length} impose AI-specific blocks. This asymmetry creates a measurable competitive dynamic
-        that most firms overlook. Assuming all firms are equally visible in third-party sources (Chambers, Legal500), the
-        {N - aiSpecific.length} unrestricted firms gain a disproportionate share of referrals from ChatGPT, Perplexity and
-        Google AI Overviews simply by virtue of being crawlable. A prospective client asking ChatGPT "recommend corporate law
-        firms for cross-border M&A" will see citation links from the firms that permit GPTBot and OAI-SearchBot, not from those
-        that block them. If two firms are equally featured in Chambers & Partners, the one with a readable robots.txt receives
-        more AI-driven inquiries. That is not a technical victory—both firms are licensed data sources—but an operational one.
-        For firms that have not yet achieved Chambers inclusion, the calculation is different. Being blocked or unrestricted
-        matters only if you would have been cited anyway. If you are invisible in AI because you lack third-party coverage, your
-        robots.txt is irrelevant. The visibility problem is editorial, not technical.
+        Among the {aiSpecific.length} firms in this index that hold AI crawlers to stricter rules than Googlebot, most did so preemptively out of caution rather than deliberate strategy. For a firm realising that the restriction is costing visibility, reversing it is straightforward. The operational cost of updating robots.txt is zero: edit the file, remove or relax the AI-specific directives (Disallow: /GPTBot, Disallow: /ClaudeBot, etc.), and republish. The search engines and AI model operators will rescan your robots.txt within 48 to 72 hours, and crawlers will resume access. If your firm has not published your robots.txt file before, creating one with no AI restrictions takes one hour for a competent developer (DNS verification, HTTPS confirmation, syntax validation). The business cost is also zero: unlike removing a directory from Google's index, which can take months to recover from, permitting AI crawlers has no negative rank effects for traditional search. Googlebot was already crawling your site (most law firm sites receive 40-60% of their organic traffic from Google), and if it was indexed, AI model crawlers were never the blocker. The real cost—if any—is if your firm's website contains sensitive information (pending litigation strategy, confidential client models, internal client lists) that you do not want in AI training data. For firms in this situation, the answer is not to block AI crawlers site-wide; it is to block specific sensitive directories while permitting access to public-facing practice area descriptions, news and publications. This is a fine-grained approach that costs 2-4 hours of configuration but delivers the same privacy protection without the visibility loss. Most law firm websites do not contain secrets; they contain marketing, practice descriptions, and published thought leadership—exactly the content you want cited by AI systems.
+      </p>
+      <p>
+        The timing matters. If a firm has blocked AI crawlers for six months or longer, Google's index of the site is not stale, but AI model training is. The models that most recently trained (Gemini 2.0, GPT-4 in late 2024 / early 2025, Claude in Q1 2025) may not have access to your content if you blocked their crawlers during their training window. Reversing the block today will allow new content crawlers to access your site, but backfilling older content requires publishing a sitemap or manual outreach to model operators (most do not accept sitemaps, so the practical option is to focus on new content). The implication for mid-market firms is that the longer you delay reversing a restriction, the longer your site is effectively invisible in model training. A firm that has been blocked for twelve months and reverses the block today will not see new citations from pre-existing content for months; only new articles published after the block lift will be available to crawlers. This reinforces the recommendation: decide now whether the caution was justified. If not, reverse it. If yes, implement fine-grained blocking (allow public site access, block /confidential/ or /client-work/).
       </p>
       <p>
         The strategic implication for mid-market firms is that permitting AI crawlers costs nothing and may have modest upside.
