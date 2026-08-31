@@ -418,6 +418,30 @@ const schema = [
     </div>
   </section>
 
+  <!-- How to read this index for competitive advantage -->
+  <section class="wrap pb-16">
+    <div class="rule pt-10">
+      <h2 class="font-display text-[1.6rem] font-bold mb-3">What this index tells you about your competitive position</h2>
+      <p class="max-w-[66ch] mb-6" style="color: var(--text-soft);">
+        If you are in this ranking, your robots.txt decision is less important than what it signals about your AI visibility strategy.
+      </p>
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="card p-5">
+          <h3 class="font-display text-[1.1rem] font-semibold mb-2">If you are restricting AI crawlers</h3>
+          <p class="text-[0.95rem]" style="color: var(--text-soft);">
+            You are among a minority ({aiSpecific.length} of {N} firms). If your reasoning was "protect our analysis from theft," audit whether your firm's site actually contains proprietary analysis worth protecting, or templated service descriptions. Most law firm websites contain the latter. If your reasoning was "privacy-first principle," that is philosophically sound but has no measurable effect on AI visibility in practice: a firm's citations come from sources AI systems have licensed, not from whether your site is crawlable. If you restrict GPTBot while Ahrefs data shows your firm is cited because it appears in Legal500 or Chambers, your restriction accomplishes nothing. Consider whether the posture is worth the visibility cost.
+          </p>
+        </div>
+        <div class="card p-5">
+          <h3 class="font-display text-[1.1rem] font-semibold mb-2">If you are not restricting AI crawlers</h3>
+          <p class="text-[0.95rem]" style="color: var(--text-soft);">
+            You are in the majority ({N - aiSpecific.length} of {N}), which is correct strategy but not strategy at all; it is default. The real question is whether your visibility is coming from crawler access or from licensed data sources. A firm appearing in Legal500 and Chambers does not need crawl access to be cited—those directories are licensed. A firm appearing nowhere in third-party rankings is invisible in AI regardless of robots.txt. Your competitive advantage is not in your robots.txt decision but in where you are listed and mentioned. Check that first.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Other sector indices -->
   <section class="wrap pb-4">
     <div class="rule pt-10 card p-5">

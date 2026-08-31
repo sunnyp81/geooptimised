@@ -1,0 +1,93 @@
+---
+import Base from '../layouts/Base.astro';
+import toolsData from '../data/tools.json';
+
+const tools = toolsData.tools;
+const title = 'AI Visibility Tools Compared: Which One Fits Your Budget and Stage';
+const description = `Pricing, feature comparison, and honest assessment of which tools actually move the needle. Includes entry-tier, mid-market and enterprise options with real unit economics.`;
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://geooptimised.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://geooptimised.com/tools/' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    datePublished: '2026-08-31',
+    dateModified: '2026-08-31',
+    author: { '@type': 'Person', '@id': 'https://geooptimised.com/#sunny-patel', name: 'Sunny Patel' },
+    publisher: { '@id': 'https://geooptimised.com/#organization' },
+  },
+];
+---
+<Base title={title} description={description} schema={schema} ogType="article">
+  <article>
+    <header class="wrap pt-14 pb-8">
+      <nav aria-label="Breadcrumb" class="data text-[0.7rem] uppercase tracking-widest mb-6" style="color: var(--muted);">
+        <a href="/">Home</a> <span aria-hidden="true">/</span> <span style="color: var(--text);">Tools</span>
+      </nav>
+      <h1 class="font-display font-bold text-[2.2rem] sm:text-[3rem] leading-[1.06] max-w-[20ch]">AI visibility tools compared</h1>
+      <p class="mt-6 max-w-[64ch] text-[1.12rem]" style="color: var(--text-soft);">
+        Every tool here claims to track citation in AI assistants. This guide explains which ones actually justify their cost at different company stages and budgets.
+      </p>
+      <p class="mt-4 data text-[0.72rem]" style="color: var(--muted);">
+        By Sunny Patel &middot; 31 August 2026
+      </p>
+    </header>
+
+    <section class="wrap pb-12">
+      <div class="border-l-4 pl-6 py-1 max-w-[64ch]" style="border-color: var(--accent);">
+        <p class="font-display text-[1.3rem] leading-snug" style="color: var(--text);">
+          The question most organisations ask is not "which tool is best" but "which tool fits our budget and actually delivers something we can measure?" These are not the same question, and pricing does not correlate with usefulness. The cheapest entry-tier tools often measure noise better than premium vendors.
+        </p>
+      </div>
+    </section>
+
+    <section class="prose-wrap pb-24 copy">
+      <h2>Entry-tier tools: £200–500 annual</h2>
+      <p>
+        For bootstrapped founders, solopreneurs and micro-agencies, entry-tier trackers cost under £50 monthly and measure a limited set of keywords. Rankscale, Peec AI and Otterly sit here. The realistic expectation: you get a monthly dashboard showing citation percentage for a narrowly-scoped keyword set (usually 25 to 100 branded or core keywords). Month-to-month, that percentage will move ±15 percentage points based on model updates alone, not because of anything you changed. The tools are accurate within their constraints, but the constraints mean you cannot isolate signal from noise. These tools are justifiable only if you already understand what you are measuring: whether basic AI visibility exists at all, as a yes-no check, not as a metric to optimise. Cost benefit: for a founder with zero mentions in AI answers today, spending £300 annually on Rankscale to confirm the baseline is reasonable. For tracking change month-to-month, it is not. A founder in this budget band spending £300 on a tracker and £0 on actual visibility work (publication placement, community participation) will watch the number oscillate for six months and conclude AI visibility is "random" when the real answer is "you changed nothing on the visibility front, so the tool measures noise." The honest question: do you have two to three thought-leadership publications already mentioning your brand? If yes, an entry-tier tool will show you whether those placements moved AI citations. If no, a tool is premature.
+      </p>
+
+      <h2>Mid-tier tools: £3,000–10,000 annual</h2>
+      <p>
+        Nightwatch (£299/month), Gumshoe (£349/month) and Profound's lower tiers sit here. These tools add weekly or bi-weekly refresh rates, unlimited keyword tracking, and crucially, citation source identification—you see not just a percentage, but which specific URLs and publications are being cited. The weekly refresh means you can start to isolate change from noise: if your citation share moved 8 percentage points month-to-month at a monthly refresh rate, that could be noise. If it moved 15 percentage points over four weeks as a compound of weekly changes, and those changes correlate with publication placements you executed, the signal is more credible. The source identification means you can audit whether the tool is measuring what you think. Ahrefs found web mentions predict AI citation at 0.664 Spearman correlation; if your tool shows rising citation but web mentions (tracked via a separate tool like Ahrefs or a manual count) stayed flat, something is broken in your measurement. Mid-tier tools justify their cost only if you have underlying visibility work to measure. A firm allocating £5,000 annually to a mid-tier tool with zero budget for publication placement, analyst relations, or community building will watch metrics that do not move and cancel by month three. A firm allocating £5,000 to Nightwatch plus £10,000 to thought leadership will see the tool validate the underlying work. The return on the tool spend is clarity, not traffic.
+      </p>
+
+      <h2>Enterprise and premium tier: £20,000+ annual</h2>
+      <p>
+        Profound, negotiated enterprise tiers from Nightwatch and Semrush's premium integrations sit here. The pricing is opaque (Profound publishes no public ladder), acquisition requires sales calls, and lock-in through long-term contracts is common. The feature set includes dedicated account management, custom integrations into existing marketing stacks, historical data archives, and visibility forecasting. The justification for the premium is reporting rather than measurement quality: a CFO or CTO needs a single dashboard pulling data from multiple sources, and buying a premium tool with bespoke integration is cheaper than engineering one internally. But the underlying measurement does not improve. Profound measures the same volatile citation signal that entry-tier tools measure; it just delivers it with more polish and higher confidence in the packaging. An enterprise firm spending £50,000 annually on a premium tool should do so knowing that price buys the convenience and confidence of the reporting, not superior visibility measurement or visibility growth. If the firm's actual visibility is falling (because the underlying PR, analyst relations and thought leadership work is not happening), no tool premium, no account manager, and no forecast will change that.
+      </p>
+
+      <h2>The tools ranked by which actually work</h2>
+      <p>
+        When measured by "does this tool deliver actionable insight about your visibility," not "does this tool have a pretty dashboard," the ranking is inverted from what most people expect. Nightwatch ranks first because it publishes its citation sources (you can verify the tool's claims against your own analytics logs), has transparent pricing, allows month-to-month cancellation, and makes data export easy. Gumshoe ranks second for the same reasons plus strong API access. Profound ranks last not because its measurement is less accurate but because the closed pricing, long-term contracts, and opaque methodology lock you in while hiding whether the tool is actually moving your needle. Peec AI and Rankscale are honest entry-tier tools that cost almost nothing and deliver approximately that value—not because they are bad tools, but because at their price point they cannot afford the infrastructure for higher refresh rates. A founder choosing between them is choosing correctly if budget is the constraint. A mid-market firm choosing to save money by buying an entry-tier tool instead of mid-tier is making a measurement mistake: the infrequent refresh rates mean you will be comparing your metrics across month boundaries where model updates, seasonal trends and inference randomness all move the needle independently.
+      </p>
+
+      <h2>What every tool measures poorly and why</h2>
+      <p>
+        All of these tools measure citation share by sampling queries. They run a set of searches against ChatGPT, Perplexity and Google AI Overviews, record which branded or target keywords return mentions of you, and compute a percentage. The problem: the sample is small (tools typically sample 50 to 500 query runs per month depending on tier, and models return different results on different runs due to inference-time randomness). Semrush's data on 3.7 million citations found only 2.37 per cent overlap across the three engines for the same query. That means a tool's "your visibility is 18 per cent across the three major engines" is actually "18 per cent in a specific sample of queries from a specific model on a specific date." Repeat the test one day later and the number will move 5 to 10 percentage points. That volatility is not a tool problem; it is a fundamental property of measuring citation patterns in systems designed to introduce variation. Every tool either hides this limitation or buries it in fine print. The tools measuring it most honestly are the ones worth buying, because they publish their confidence intervals and tell you when their numbers have moved too little to be signal. Ahrefs' and Semrush's published research on citation patterns comes with confidence intervals and methodology. Most GEO-native tools do not.
+      </p>
+
+      <h2>The one measurement no tool can fake: your referrer logs</h2>
+      <p>
+        Every tool here measures citation indirectly, by sampling queries. There is one measure no tool can fake: your own analytics logs. If ChatGPT and Perplexity are citing you, traffic will arrive from those sources. A brand that sees zero referrals from ChatGPT this month and fifty next month is objectively more visible. A brand whose tool dashboard says "visibility improved from 12 per cent to 18 per cent" while referrer traffic remains at zero has moved noise. The honest way to measure tool ROI: set up a UTM parameter or parse HTTP referer headers in your analytics. Track ChatGPT and Perplexity traffic weekly. A tool that correlates with your referrer logs is working. A tool whose movements do not correlate with referrer logs is not worth paying for, regardless of how slick the interface is. Most tools fail this test at the entry level because the sample size is too small; a brand getting one to two referrals weekly from AI will see month-to-month noise in that channel that exceeds signal. Only tools taking hundreds of samples per month can distinguish referrer traffic changes (which are real behaviour) from tool-measurement noise (which is sampling volatility). This is why mid-tier tools justify their cost: the weekly refresh rates mean you can start to correlate tool changes with real traffic changes.
+      </p>
+
+      <div class="rule mt-12 pt-8">
+        <p class="text-[0.95rem]" style="color: var(--muted);">
+          Every tool's pricing and our affiliate relationship status is published on
+          <a class="link" href="/who-pays-us/">who pays us</a>. For detailed unit economics by company stage, see
+          <a class="link" href="/how-to-be-found-in-ai-search/">budget allocation by stage</a>.
+        </p>
+      </div>
+    </section>
+  </article>
+</Base>
